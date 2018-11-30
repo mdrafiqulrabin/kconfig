@@ -27,3 +27,16 @@
     #Step-03: [$]
 
     $ creduce ./csmith_bug1.sh csmith_bug1.c
+
+[Install CSmith on MAXWELL]
+
+Run on Local Terminal:
+$ scp /Users/mdrafiqulrabin/Downloads/csmith-2.3.0.tar.gz mrabin@cusco.hpcc.uh.edu:/home/mrabin/bin
+
+Run on Maxwell Terminal:
+$ cd /home/mrabin/bin
+$ tar -xvzf csmith-2.3.0.tar.gz
+$ cd csmith-2.3.0
+$ ./configure --prefix=/home/mrabin/bin/CSmith230
+$ make
+$ make install
