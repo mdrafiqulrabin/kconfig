@@ -4,7 +4,7 @@
 # $? to check the cmd succeed status
 # return 1 to discard the current tc.c
 
-m_timeout=5
+m_timeout=10
 
 m_cs=0 # CSmith
 m_tc=0 # TestCase
