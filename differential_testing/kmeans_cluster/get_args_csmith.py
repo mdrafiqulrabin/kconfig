@@ -2,7 +2,7 @@
 
 ### params ###
 centroids = [[1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0],
-            [1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0],
+             [1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0],
              [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
 
 #ignore: --global-variables (by default), --nomain (-c not executable), max_ary_dim (?), int16-64 (N/A)
@@ -45,6 +45,7 @@ def getArgForCSmith(centroids):
             val = 1 - val #main-inverse
             arg_list += " " + args_csmith[idx][val]
         print arg_list
+        print
 
 ### main ###
 getArgForCSmith(centroids)
