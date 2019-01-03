@@ -8,9 +8,9 @@ m_timeout=10
 
 m_cs=0 # CSmith
 m_tc=0 # TestCase
-m_wo=0 # gcc -w -O3
-m_to=0 # gtimeout
-m_df=0 # diff
+m_cb=0 # CrashBug
+m_to=0 # TimeOut
+m_mc=0 # MissCompilation
 
 function remove_temp_files() {
     rm -rf *.c *.o *.txt *.info 2> /dev/null
@@ -38,8 +38,8 @@ function exec_csmith_default() {
     gcc -w -O3 tc.c -o out421.o -I ~/bin/csmith230-bin/include/csmith-2.3.0 2> /dev/null
     if [ $? -ne 0 ]
         then
-            m_wo=$((m_wo+1))
-            save_tc "wo"
+            m_cb=$((m_cb+1))
+            save_tc "cb"
             return 1
     fi
     gtimeout $m_timeout ./out421.o > out421.txt
@@ -54,8 +54,8 @@ function exec_csmith_default() {
     ~/bin/gcc480-bin/bin/gcc -w -O3 tc.c -o out480.o -I ~/bin/csmith230-bin/include/csmith-2.3.0 2> /dev/null
     if [ $? -ne 0 ]
         then
-            m_wo=$((m_wo+1))
-            save_tc "wo"
+            m_cb=$((m_cb+1))
+            save_tc "cb"
             return 1
     fi
     gtimeout $m_timeout ./out480.o > out480.txt
@@ -70,8 +70,8 @@ function exec_csmith_default() {
     diff out421.txt out480.txt
     if [ $? -ne 0 ]
         then
-            m_df=$((m_df+1))
-            save_tc "df"
+            m_mc=$((m_mc+1))
+            save_tc "mc"
             return 1
     fi
 }
@@ -81,6 +81,6 @@ START=$(date +%s)
 limit=1*60*60*6
 while [ $(($(date +%s) - limit)) -lt $START ]; do
     exec_csmith_default
-    echo m_cs=$m_cs m_tc=$m_tc m_wo=$m_wo m_to=$m_to m_df=$m_df
+    echo m_cs=$m_cs m_tc=$m_tc m_cb=$m_cb m_to=$m_to m_mc=$m_mc
     remove_temp_files
 done
