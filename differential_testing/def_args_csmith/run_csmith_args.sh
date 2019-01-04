@@ -12,13 +12,20 @@ m_cb=0 # CrashBug
 m_to=0 # TimeOut
 m_mc=0 # MissCompilation
 
-k3_1=" --comma-operators --no-argc --no-bitfields --no-arrays --no-pointers --no-structs --no-unions --no-packed-struct --no-divs --no-muls --no-pre-incr-operator --no-pre-decr-operator --no-post-incr-operator --no-post-decr-operator --no-unary-plus-operator --no-longlong --no-float --jumps --no-volatiles --compound-assignment --no-consts --no-inline-function --no-volatile-pointers --no-const-pointers     --no-builtins --no-int8 --no-uint8"
+o_k3_1=" --comma-operators --no-argc --no-bitfields --no-arrays --no-pointers --no-structs --no-unions --no-packed-struct --no-divs --no-muls --no-pre-incr-operator --no-pre-decr-operator --no-post-incr-operator --no-post-decr-operator --no-unary-plus-operator --no-longlong --no-float --jumps --no-volatiles --compound-assignment --no-consts --no-inline-function --no-volatile-pointers --no-const-pointers     --no-builtins --no-int8 --no-uint8"
 
-k3_2=" --comma-operators --no-argc --no-bitfields --no-arrays --pointers --no-structs --no-unions --no-packed-struct --no-divs --no-muls --no-pre-incr-operator --no-pre-decr-operator --no-post-incr-operator --no-post-decr-operator --no-unary-plus-operator --no-longlong --no-float --no-jumps --no-volatiles --compound-assignment --no-consts --no-inline-function --no-volatile-pointers --no-const-pointers     --no-builtins --no-int8 --no-uint8"
+o_k3_2=" --comma-operators --no-argc --no-bitfields --no-arrays --pointers --no-structs --no-unions --no-packed-struct --no-divs --no-muls --no-pre-incr-operator --no-pre-decr-operator --no-post-incr-operator --no-post-decr-operator --no-unary-plus-operator --no-longlong --no-float --no-jumps --no-volatiles --compound-assignment --no-consts --no-inline-function --no-volatile-pointers --no-const-pointers     --no-builtins --no-int8 --no-uint8"
 
-k3_3=" --no-comma-operators --no-argc --no-bitfields --no-arrays --no-pointers --no-structs --no-unions --no-packed-struct --no-divs --no-muls --no-pre-incr-operator --no-pre-decr-operator --no-post-incr-operator --no-post-decr-operator --no-unary-plus-operator --no-longlong --no-float --jumps --no-volatiles --no-compound-assignment --no-consts --no-inline-function --no-volatile-pointers --no-const-pointers --no-global-variables --no-builtins --no-int8 --no-uint8"
+o_k3_3=" --no-comma-operators --no-argc --no-bitfields --no-arrays --no-pointers --no-structs --no-unions --no-packed-struct --no-divs --no-muls --no-pre-incr-operator --no-pre-decr-operator --no-post-incr-operator --no-post-decr-operator --no-unary-plus-operator --no-longlong --no-float --jumps --no-volatiles --no-compound-assignment --no-consts --no-inline-function --no-volatile-pointers --no-const-pointers --no-global-variables --no-builtins --no-int8 --no-uint8"
 
-k3=$k3_1 #TODO
+r_k3_1=" --no-comma-operators --argc --bitfields --arrays --pointers --structs --unions --packed-struct --divs --muls --pre-incr-operator --pre-decr-operator --post-incr-operator --post-decr-operator --unary-plus-operator --longlong --float --no-jumps --volatiles --no-compound-assignment --consts --inline-function --volatile-pointers --const-pointers --no-global-variables --builtins --int8 --uint8"
+
+r_k3_2=" --no-comma-operators --argc --bitfields --arrays --no-pointers --structs --unions --packed-struct --divs --muls --pre-incr-operator --pre-decr-operator --post-incr-operator --post-decr-operator --unary-plus-operator --longlong --float --jumps --volatiles --no-compound-assignment --consts --inline-function --volatile-pointers --const-pointers --no-global-variables --builtins --int8 --uint8"
+
+r_k3_3=" --comma-operators --argc --bitfields --arrays --pointers --structs --unions --packed-struct --divs --muls --pre-incr-operator --pre-decr-operator --post-incr-operator --post-decr-operator --unary-plus-operator --longlong --float --no-jumps --volatiles --compound-assignment --consts --inline-function --volatile-pointers --const-pointers     --builtins --int8 --uint8"
+
+
+k3=$r_k3_1 #TODO
 
 function remove_temp_files() {
     rm -rf *.c *.o *.txt *.info 2> /dev/null
