@@ -8,7 +8,7 @@ from sklearn.cluster import KMeans
 fin_arg_stats = "gcc_reg_arg_stats_binary.csv"
 
 # Number of clusters
-no_of_clus = 3
+no_of_clus = 10
 
 # Importing the dataset
 data_args = pd.read_csv(fin_arg_stats)
