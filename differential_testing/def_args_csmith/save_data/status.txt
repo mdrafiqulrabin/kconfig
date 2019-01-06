@@ -1,0 +1,20 @@
+deft: m_cs=0 m_tc=6768 m_cb=0 m_to=836 m_mc=0
+
+k=3
+
+Original:
+k3_1_o: m_cs=0 m_tc=2142 m_cb=0 m_to=478  m_mc=0
+K3_2_o: m_cs=0 m_tc=7717 m_cb=0 m_to=456  m_mc=0
+K3_3_o: m_cs=0 m_tc=5980 m_cb=0 m_to=1328 m_mc=0
+
+Reverse:
+k3_1_r: m_cs=0 m_tc=19609 m_cb=10712 m_to=292 m_mc=0
+k3_2_r: m_cs=0 m_tc=49452 m_cb=38825 m_to=385 m_mc=0
+k3_3_r: m_cs=0 m_tc=4376  m_cb=1872  m_to=46  m_mc=48
+
+
+k=10
+
+01 -> m_cs=0 m_tc=8496 m_cb=0 m_to=1301 m_mc=0
+02 -> m_cs=0 m_tc=7232 m_cb=0 m_to=1525 m_mc=0
+03 -> 
