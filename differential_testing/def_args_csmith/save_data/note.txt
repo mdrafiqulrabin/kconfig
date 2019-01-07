@@ -1,1 +1,0 @@
-m_cs=0 m_tc=6768 m_wo=0 m_to=836 m_df=0
