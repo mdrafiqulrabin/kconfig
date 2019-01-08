@@ -24,4 +24,6 @@ k=10
 05 -> m_cs=0 m_tc=59827 m_cb=44189 m_to=846  m_mc=142
 06 -> m_cs=0 m_tc=6799  m_cb=0     m_to=1560 m_mc=0
 07 -> m_cs=0 m_tc=5334  m_cb=0     m_to=951  m_mc=0
-08 -> 
+08 -> m_cs=0 m_tc=11442 m_cb=0     m_to=644  m_mc=0
+09 -> m_cs=0 m_tc=21896 m_cb=8280  m_to=1253 m_mc=213
+10 -> 
