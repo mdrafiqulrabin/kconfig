@@ -1,5 +1,6 @@
 #!/bin/bash
-#PBS -N csmith
+#SBATCH -J csmith
+#SBATCH -t 06:01:01
 
 # Note:
 # output is 'checksum = ???', so $c -ne 3
@@ -95,7 +96,7 @@ function exec_csmith {
 
 function run_tc_timer {
     START=$(date +%s)
-    limit=1*60*60
+    limit=1*60
     while [ $(($(date +%s) - limit)) -lt $START ]; do
         exec_csmith
         remove_temp
