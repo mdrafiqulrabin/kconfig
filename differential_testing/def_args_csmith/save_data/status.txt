@@ -1,6 +1,9 @@
 Default:
 
 01 -> m_cs=0 m_tc=6768 m_cb=0 m_to=836  m_mc=0
+02 -> m_cs=0 m_tc=5468 m_cb=0 m_to=666  m_mc=0
+03 -> m_cs=0 m_tc=6296 m_cb=0 m_to=792  m_mc=0
+
 
 k=3
 
