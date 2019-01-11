@@ -5,12 +5,19 @@ Default:
 03 -> m_cs=0 m_tc=6296 m_cb=0 m_to=792  m_mc=0
 
 
-k=3
+[k=3]
 
 Original:
-01 -> m_cs=0 m_tc=2142  m_cb=0  m_to=478  m_mc=0
-02 -> m_cs=0 m_tc=7717  m_cb=0  m_to=456  m_mc=0
-03 -> m_cs=0 m_tc=5980  m_cb=0  m_to=1328 m_mc=0
+01 -> 
+	m_cs=0 m_tc=2142  m_cb=0  m_to=478  m_mc=0
+	m_cs=0 m_tc=4832  m_cb=0  m_to=1065 m_mc=0
+02 -> 
+	m_cs=0 m_tc=7717  m_cb=0  m_to=456  m_mc=0
+	m_cs=0 m_tc=10768 m_cb=0  m_to=683  m_mc=0
+
+03 -> 
+	m_cs=0 m_tc=5980  m_cb=0  m_to=1328 m_mc=0
+	m_cs=0 m_tc=7530  m_cb=0  m_to=1633 m_mc=0
 
 Reverse:
 01 -> m_cs=0 m_tc=19609 m_cb=10712 m_to=292 m_mc=0
@@ -18,11 +25,15 @@ Reverse:
 03 -> m_cs=0 m_tc=4376  m_cb=1872  m_to=46  m_mc=48
 
 
-k=10
+[k=10]
 
 01 -> m_cs=0 m_tc=8496  m_cb=0     m_to=1301 m_mc=0
 02 -> m_cs=0 m_tc=7232  m_cb=0     m_to=1525 m_mc=0
-03 -> m_cs=0 m_tc=12739 m_cb=4130  m_to=637  m_mc=56
+
+03 -> 
+	m_cs=0 m_tc=12739 m_cb=4130  m_to=637  m_mc=56
+	m_cs=0 m_tc=11793 m_cb=3906  m_to=607  m_mc=68
+
 04 -> m_cs=0 m_tc=7681  m_cb=5484  m_to=133  m_mc=19
 05 -> m_cs=0 m_tc=59827 m_cb=44189 m_to=846  m_mc=142
 06 -> m_cs=0 m_tc=6799  m_cb=0     m_to=1560 m_mc=0
