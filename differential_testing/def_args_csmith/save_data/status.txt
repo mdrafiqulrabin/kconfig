@@ -32,7 +32,10 @@ Default:
 	m_cs=0 m_tc=7681  m_cb=5484  m_to=133  m_mc=19
 	m_cs=0 m_tc=13353 m_cb=9553  m_to=227  m_mc=44
 
-05 -> m_cs=0 m_tc=59827 m_cb=44189 m_to=846  m_mc=142
+05 -> 
+	m_cs=0 m_tc=59827 m_cb=44189 m_to=846  m_mc=142
+	m_cs=0 m_tc=62625 m_cb=46389 m_to=929  m_mc=137
+
 06 -> m_cs=0 m_tc=6799  m_cb=0     m_to=1560 m_mc=0
 07 -> m_cs=0 m_tc=5334  m_cb=0     m_to=951  m_mc=0
 08 -> m_cs=0 m_tc=11442 m_cb=0     m_to=644  m_mc=0
