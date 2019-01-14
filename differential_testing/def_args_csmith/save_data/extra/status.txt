@@ -1,0 +1,6 @@
+
+k3-reverse:
+
+01 -> m_cs=0 m_tc=19609 m_cb=10712 m_to=292 m_mc=0
+02 -> m_cs=0 m_tc=49452 m_cb=38825 m_to=385 m_mc=0
+03 -> m_cs=0 m_tc=4376  m_cb=1872  m_to=46  m_mc=48
