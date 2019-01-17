@@ -20,8 +20,8 @@ def m_replace(file_path, pattern, subst):
     move(abs_path, file_path)
 
 
-#root = "/Users/mdrafiqulrabin/Documents/mw/r"
-root = "/sample/"
+#Use full path
+root = "/Users/mdrafiqulrabin/Desktop/GitHub/Doctoral-Research/differential_testing/maxwell_csmith/scripts/sample/"
 pattern = "*.sh"
 
 for path, subdirs, files in os.walk(root):
