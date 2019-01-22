@@ -1,9 +1,10 @@
 #!/bin/bash
 #SBATCH -J sb_csmith
+#SBATCH -o sb_csmith.o%j
 #SBATCH -t 06:00:01
 
 # Note:
-# output is 'checksum = ???', so $c -ne 3
+# run1: gcc 4.8.2 with -O3
 
 tout1=5
 tout2=10
@@ -50,26 +51,16 @@ ary_centroids_k10=(
 
 kc=${ary_centroids_k10[9]} #TODO
 
-function remove_temp {
-    rm -rf *.c *.out *.txt *.info 2> /dev/null
-}
-
-function save_tc {
-    src=$1
-    dist="data_tc/$1"
-    cp -- $src $dist
-}
-
 function compile_tc {
     tc=$1
     vn=$2
     ol=$3
 
-    out=$tc-$vn-3.out
+    out=$tc-$vn-$ol.out
     timeout $tout1 /project/alipour/rabin/bin/gcc482-bin/bin/gcc -O$ol -I /project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0 -w $tc -o $out 2> /dev/null
     if [ $? -ne 0 ]; then
         timeout $tout2 /project/alipour/rabin/bin/gcc482-bin/bin/gcc -O$ol -I /project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0 -w $tc -o $out 2> /dev/null
-            if [ $? -ne 0 ]; then m_cb=$((m_cb+1)); echo > $out; echo $out > CrashBug.txt;  fi
+            if [ $? -ne 0 ]; then m_cb=$((m_cb+1)); echo > $out; echo $out > CrashBug.txt; return 1;  fi
     fi
 }
 
@@ -78,7 +69,7 @@ function dump_output {
         timeout $tout1 ./$i > $i.txt 2> /dev/null
         if [ $? -ne 0 ]; then
             timeout $tout2 ./$i > $i.txt 2> /dev/null
-            if [ $? -ne 0 ]; then m_to=$((m_to+1)); echo > $i.txt; echo $i > TimeOut.txt; fi
+            if [ $? -ne 0 ]; then m_to=$((m_to+1)); echo > $i.txt; echo $i > TimeOut.txt; return 1; fi
         fi
     done
 }
@@ -111,10 +102,5 @@ function run_tc_one {
 }
 
 cd /project/alipour/rabin/main/run
-mkdir data_tc
-touch data_tc/CrashBug.txt
-touch data_tc/TimeOut.txt
-#touch data_tc/WrongCode.txt
-run_tc_one #run_tc_one
+run_tc_timer #run_tc_one
 echo; echo m_cs=$m_cs m_tc=$m_tc m_cb=$m_cb m_to=$m_to m_wc=$m_wc; echo
-
