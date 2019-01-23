@@ -4,9 +4,6 @@ from shutil import move
 from os import fdopen, remove
 from fnmatch import fnmatch
 
-old  = "kc=${ary_centroids_k10[8]} #TODO"
-new  = "kc=${ary_centroids_k10[10]} #TODO"
-
 def m_replace(file_path, pattern, subst):
     #Create temp file
     fh, abs_path = mkstemp()
@@ -20,15 +17,24 @@ def m_replace(file_path, pattern, subst):
     move(abs_path, file_path)
 
 
+
+
+vn=["4.8.2", "4.9.2", "5.2.0", "5.4.0"]
+fn=["v482", "v492", "v520", "v540"]
+
 #Use full path
-root = "/Users/mdrafiqulrabin/Desktop/GitHub/Doctoral-Research/differential_testing/maxwell_csmith/scripts/sample/"
+pre_root = "/Users/mdrafiqulrabin/Desktop/GitHub/Doctoral-Research/differential_testing/maxwell_csmith/scripts/run/"
 pattern = "*.sh"
 
-for path, subdirs, files in os.walk(root):
-    for name in files:
-        if fnmatch(name, pattern):
-            file = os.path.join(path, name)
-            m_replace(file, old, new)
+for i in range(0,len(vn)):
+    root = pre_root + fn[i]
+    for path, subdirs, files in os.walk(root):
+        for name in files:
+            if fnmatch(name, pattern):
+                file = os.path.join(path, name)
+                #m_replace(file, old, new)
+                m_replace(file, "gcc_vn=(4.8.2)", "gcc_vn=("+vn[i]+")")
+                m_replace(file, "run/v482", "run/"+fn[i])
 
 
 #Refs:
