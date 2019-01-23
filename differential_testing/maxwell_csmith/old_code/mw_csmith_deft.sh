@@ -33,9 +33,9 @@ function compile_tc {
     fi
     for i in {1..3}; do
         out=$tc-$ver-$i.out
-        timeout $tout1 gcc -I /home/mrabin/bin/CSmith230/include/csmith-2.3.0 -w $tc -o $out 2> /dev/null
+        timeout $tout1 gcc -O$i -I /home/mrabin/bin/CSmith230/include/csmith-2.3.0 -w $tc -o $out 2> /dev/null
         if [ $? -ne 0 ]; then
-            timeout $tout2 gcc -I /home/mrabin/bin/CSmith230/include/csmith-2.3.0 -w $tc -o $out 2> /dev/null
+            timeout $tout2 gcc -O$i -I /home/mrabin/bin/CSmith230/include/csmith-2.3.0 -w $tc -o $out 2> /dev/null
             if [ $? -ne 0 ]; then echo > $out; fi
         fi
     done
