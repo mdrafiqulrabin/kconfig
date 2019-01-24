@@ -1,10 +1,7 @@
 macpc/maxwell/sabine:
 
-v1:
-* create tc -> for each gcc -> compile-all,output-all,diff-all 
-* no count for crashbug and timeout
+mw-v1: 3x hrs flaky testing with GCC(4.8.2, 4.9.2, 5.2.0, and 5.4.0) on -O0.
+mw-v1: 2x hrs optimization level testing with GCC(4.8.2) between -O0 and -O*.
 
-v2
-* create tc -> single gcc (*4) -> (compile,output)-all,diff-all 
-* count for crashbug and timeout
-
+sb-v1: 06 hrs optimization level testing with GCC(4.8.2) between -O0 and -O3. [2 runs]
+sb-v2: 12 hrs optimization level testing with GCC(4.8.2) between -O0 and -O3. [1 run]
