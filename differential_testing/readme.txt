@@ -1,4 +1,4 @@
-Code Info:
+macpc/maxwell/sabine:
 
 v1:
 * create tc -> for each gcc -> compile-all,output-all,diff-all 
