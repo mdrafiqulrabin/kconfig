@@ -1,19 +1,16 @@
 #!/bin/bash
-#SBATCH -J sb_csmith_k10_cb
-#SBATCH -o sb_csmith_k10_cb.o%j.txt
+#SBATCH -J gcc_crash_k10
+#SBATCH -o gcc_crash_k10.o%j
 #SBATCH -t 12:01:01
 #SBATCH -p alipour
 
-# Note: gcc 4.8.2 -O0 vs -O3
+# Note: gcc 7.1.0 -O0 vs -O3
 
 tout=10
 
 m_cs=0 # CSmith
 m_tc=0 # TestCase
 m_cb=0 # CrashBug
-m_to=0 # TimeOut
-m_ct=0 # CrashBug or TimeOut
-m_wc=0 # WrongCode
 
 ary_centroids_k10=(
 " --comma-operators --no-argc --no-bitfields --no-arrays --pointers --structs --no-unions --no-packed-struct --no-divs --no-muls --no-pre-incr-operator --no-pre-decr-operator --no-post-incr-operator --no-post-decr-operator --no-unary-plus-operator --no-longlong --no-float --jumps --no-volatiles --compound-assignment --no-consts --no-inline-function --no-volatile-pointers --no-const-pointers     --no-builtins --no-int8 --no-uint8"
@@ -53,16 +50,22 @@ function dump_tc {
 function compile_tc {
     tc=$1
     vn=$2
+
     for ol in {0..3}; do
         out=$tc-$vn-$ol.out
-        timeout $tout /project/alipour/rabin/bin/gcc482-bin/bin/gcc -O$ol -I /project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0 -w $tc -msse4.2 -o $out
-            if [ $? -ne 0 ]; then echo "gcc$vn-$ol"; echo; m_cb=$((m_cb+1)); dump_tc $tc; echo $m_cb >> save_st/WrongCode.txt; fi
+        timeout $tout /project/alipour/rabin/bin/gcc710-bin/bin/gcc -O$ol -I /project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0 -w $tc -msse4.2 -o $out 2> cb.txt
+        if [ `cat cb.txt|wc -w` -ne 0 ]; then
+            m_cb=$((m_cb+1));
+            echo "Crash Bug #$m_cb [GCC$vn-O$ol]:";
+            cat cb.txt;
+            echo;echo;
+            dump_tc $tc;
+        fi
     done
 }
 
 function experiment_tc {
-    v="4.8.2"
-    o="3"
+    v="7.1.0"
     compile_tc $1 $v
 }
 
@@ -89,9 +92,8 @@ function run_tc_one {
     exec_csmith
 }
 
-cd /project/alipour/rabin/main/k10/
-mkdir save_st save_tc
-touch save_st/WrongCode.txt
+cd /project/alipour/rabin/check/cb/
+mkdir save_tc
 #run_tc_one
 run_tc_timer
-echo; echo m_cs=$m_cs m_tc=$m_tc m_cb=$m_cb m_to=$m_to m_ct=$m_ct m_wc=$m_wc; echo
+echo; echo m_cs=$m_cs m_tc=$m_tc m_cb=$m_cb; echo
