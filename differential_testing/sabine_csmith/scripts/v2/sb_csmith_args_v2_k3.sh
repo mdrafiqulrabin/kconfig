@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH -J sb_csmith_k3
-#SBATCH -o sb_csmith_k3.o%j
+#SBATCH -o sb_csmith_k3.o%j.txt
 #SBATCH -t 12:01:01
 #SBATCH -p alipour
 
@@ -32,29 +32,31 @@ function remove_temp {
 
 function dump_tc {
     src=$1
-    dst=save_tc/$1
+    dst=save_tc/$2/$1
     cp -- $src $dst
 }
 
 function compile_tc {
     tc=$1
     vn=$2
+    ol=$3
 
     #ground-truth (-O0)
     out=$tc-$vn.out
-    timeout $tout /project/alipour/rabin/bin/gcc482-bin/bin/gcc -I /project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0 -w $tc -o $out 2> /dev/null
-    if [ $? -ne 0 ]; then m_cb=$((m_cb+1)); return 1; fi
+    timeout $tout /project/alipour/rabin/bin/gcc482-bin/bin/gcc -I /project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0 -w -msse4.2 $tc -o $out 2> /dev/null
+    if [ $? -ne 0 ]; then m_cb=$((m_cb+1)); dump_tc $1 "cb"; return 1; fi
     timeout $tout ./$out > $out.txt 2> /dev/null
     if [ $? -ne 0 ]; then m_to=$((m_to+1)); return 1; fi
 
-    #optimization-level (only -O3)
-    for ol in {3..3}; do
-        out=$tc-$vn-$ol.out
-        timeout $tout /project/alipour/rabin/bin/gcc482-bin/bin/gcc -O$ol -I /project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0 -w $tc -o $out 2> /dev/null
-        if [ $? -ne 0 ]; then echo > $out; fi
+    #optimization-level (-O3)
+    out=$tc-$vn-$ol.out
+    timeout $tout /project/alipour/rabin/bin/gcc482-bin/bin/gcc -O$ol -I /project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0 -w -msse4.2 $tc -o $out 2> /dev/null
+    if [ $? -ne 0 ]; then
+        echo "CrashBug" > $out.txt
+    else
         timeout $tout ./$out > $out.txt 2> /dev/null
-        if [ $? -ne 0 ]; then echo > $out.txt; fi
-    done
+        if [ $? -ne 0 ]; then echo "TimeOut" > $out.txt; fi
+    fi
 
     #dump_diff
     dump_diff $1 $2
@@ -62,8 +64,6 @@ function compile_tc {
 
 function dump_diff {
     for i in `ls $1-$2.out.txt`; do
-	    c=$(cat $i | wc -w) #Output is 'checksum = ???', so break if [$c -ne 3]
-        if [ $c -ne 3 ]; then echo "Ex: $i -> `cat $i`"; m_ct=$((m_ct+1)); break; fi
         for j in `ls $1-$2-*.out.txt`; do
             if [ "$i" != "$j" ]; then
                 diff $i $j &> /dev/null
@@ -71,7 +71,7 @@ function dump_diff {
                     k="$i -> `cat $i` : $j -> `cat $j`"
                     echo $k >> save_st/WrongCode.txt
                     m_wc=$((m_wc+1));
-                    dump_tc $1 #save_tc
+                    dump_tc $1 "wc"
                 fi
             fi
         done
@@ -109,7 +109,8 @@ function run_tc_one {
 
 cd /project/alipour/rabin/main/k3/
 mkdir save_st save_tc
+mkdir save_tc/cb save_tc/wc
 touch save_st/WrongCode.txt
 #run_tc_one
 run_tc_timer
-echo; echo m_cs=$m_cs m_tc=$m_tc m_cb=$m_cb m_to=$m_to m_ct=$m_ct m_wc=$m_wc; echo
+echo; echo m_cs=$m_cs m_tc=$m_tc m_cb=$m_cb m_to=$m_to m_wc=$m_wc; echo
