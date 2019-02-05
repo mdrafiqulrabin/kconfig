@@ -4,7 +4,7 @@
 #SBATCH -t 12:01:01
 #SBATCH -p alipour
 
-# Note: gcc 7.1.0 -O0 vs -O3
+# Note: gcc 6.1.0 -O0 vs -O3
 
 tout=10
 
@@ -53,7 +53,7 @@ function compile_tc {
 
     for ol in {0..3}; do
         out=$tc-$vn-$ol.out
-        timeout $tout /project/alipour/rabin/bin/gcc710-bin/bin/gcc -O$ol -I /project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0 -w $tc -msse4.2 -o $out 2> cb.txt
+        timeout $tout /project/alipour/rabin/bin/gcc610-bin/bin/gcc -O$ol -I /project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0 -w $tc -msse4.2 -o $out 2> cb.txt
         if [ `cat cb.txt|wc -w` -ne 0 ]; then
             m_cb=$((m_cb+1));
             echo "Crash Bug #$m_cb [GCC$vn-O$ol]:";
@@ -65,7 +65,7 @@ function compile_tc {
 }
 
 function experiment_tc {
-    v="7.1.0"
+    v="6.1.0"
     compile_tc $1 $v
 }
 
