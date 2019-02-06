@@ -1,0 +1,4 @@
+/var/spool/slurm/slurmd/job681520/slurm_script: line 98: cd: /project/alipour/rabin/main/run/gcc482/: No such file or directory
+
+m_cs=0 m_tc=16914 m_cb=151 m_to=2189 m_wc=156
+
