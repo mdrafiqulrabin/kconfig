@@ -1,9 +1,10 @@
 #!/bin/bash
-#SBATCH -J sb_chk_gcc_reg
-#SBATCH -o sb_chk_gcc_reg.o%j.txt
+#SBATCH -J sb_chk_gcc_reg_gcc540
+#SBATCH -o sb_chk_gcc_reg_gcc540.o%j.txt
+#SBATCH -t 12:01:01
 #SBATCH -p alipour
 
-# Note: gcc 4.8.2 -O0 vs -O3
+# Note: gcc 5.4.0 -O0 vs -O3
 
 path_tc="/project/alipour/rabin/bin/gcc_regression_tc"
 path_file="${path_tc}/gcc_regression_tc.txt"
@@ -33,14 +34,14 @@ function compile_tc {
 
     #ground-truth (-O0)
     out=$tc-$vn.out
-    timeout $tout /project/alipour/rabin/bin/gcc482-bin/bin/gcc -I /project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0 -w -msse4.2 $tc -o $out 2> /dev/null
+    timeout $tout /project/alipour/rabin/bin/gcc540-bin/bin/gcc -I /project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0 -w -msse4.2 $tc -o $out 2> /dev/null
     if [ $? -ne 0 ]; then m_cb=$((m_cb+1)); dump_tc $1 "cb"; return 1; fi
     timeout $tout ./$out > $out.txt 2> /dev/null
     if [ $? -ne 0 ]; then m_to=$((m_to+1)); return 1; fi
 
     #optimization-level (-O3)
     out=$tc-$vn-$ol.out
-    timeout $tout /project/alipour/rabin/bin/gcc482-bin/bin/gcc -O$ol -I /project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0 -w -msse4.2 $tc -o $out 2> /dev/null
+    timeout $tout /project/alipour/rabin/bin/gcc540-bin/bin/gcc -O$ol -I /project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0 -w -msse4.2 $tc -o $out 2> /dev/null
     if [ $? -ne 0 ]; then
         echo "CrashBug" > $out.txt
     else
@@ -69,7 +70,7 @@ function dump_diff {
 }
 
 function experiment_tc {
-    v="4.8.2"
+    v="5.4.0"
     o="3"
     compile_tc $1 $v $o
 }
@@ -85,6 +86,7 @@ function exec_gcc_reg {
 }
 
 cd /project/alipour/rabin/chk-gcc-reg
+mkdir gcc540; cd gcc540
 mkdir save_st save_tc
 mkdir save_tc/cb save_tc/wc
 touch save_st/WrongCode.txt
