@@ -1,0 +1,8 @@
+pr35751.c: In function ‘foo’:
+pr35751.c:8:14: error: object with variably modified type must have no linkage
+   extern int a[i];  
+              ^
+pr35751.c:8:14: error: storage size of ‘a’ isn’t constant
+pr35751.c:9:14: error: storage size of ‘b’ isn’t constant
+   static int b[i];  
+              ^

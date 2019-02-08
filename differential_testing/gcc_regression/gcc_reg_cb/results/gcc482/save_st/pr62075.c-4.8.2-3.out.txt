@@ -1,0 +1,20 @@
+pr62075.c: In function ‘foo’:
+pr62075.c:11:1: internal compiler error: in vect_get_vec_def_for_operand, at tree-vect-stmts.c:1423
+ foo (struct A *x)
+ ^
+0xf8ea4b vect_get_vec_def_for_operand(tree_node*, gimple_statement_d*, tree_node**)
+	../../gcc/tree-vect-stmts.c:1423
+0xfa04b3 vectorizable_condition(gimple_statement_d*, gimple_stmt_iterator*, gimple_statement_d**, tree_node*, int, _slp_tree*)
+	../../gcc/tree-vect-stmts.c:5401
+0xfa2a1f vect_transform_stmt(gimple_statement_d*, gimple_stmt_iterator*, bool*, _slp_tree*, _slp_instance*)
+	../../gcc/tree-vect-stmts.c:5798
+0xfc253e vect_transform_loop(_loop_vec_info*)
+	../../gcc/tree-vect-loop.c:5727
+0xfe0130 vectorize_loops()
+	../../gcc/tree-vectorizer.c:123
+0xe8d334 tree_vectorize
+	../../gcc/tree-ssa-loop.c:222
+Please submit a full bug report,
+with preprocessed source if appropriate.
+Please include the complete backtrace with any bug report.
+See <http://gcc.gnu.org/bugs.html> for instructions.

@@ -1,0 +1,24 @@
+pr64417.c:11:26: error: initialization of flexible array member in a nested context
+ struct foo b1[] = { { 1, "abc" } };  
+                          ^
+pr64417.c:11:26: note: (near initialization for ‘b1[0]’)
+pr64417.c:12:26: error: initialization of flexible array member in a nested context
+ struct foo b2[] = { { 1, { "abc" } } };  
+                          ^
+pr64417.c:12:26: note: (near initialization for ‘b2[0]’)
+pr64417.c:13:28: error: initialization of flexible array member in a nested context
+ struct bar c1[] = { { { 1, "abc" } } };  
+                            ^
+pr64417.c:13:28: note: (near initialization for ‘c1[0].f’)
+pr64417.c:14:28: error: initialization of flexible array member in a nested context
+ struct bar c2[] = { { { 1, { "abc" } } } };  
+                            ^
+pr64417.c:14:28: note: (near initialization for ‘c2[0].f’)
+pr64417.c:15:30: error: initialization of flexible array member in a nested context
+ struct baz d1[] = { { { { 1, "abc" } } } };  
+                              ^
+pr64417.c:15:30: note: (near initialization for ‘d1[0].b.f’)
+pr64417.c:16:30: error: initialization of flexible array member in a nested context
+ struct baz d2[] = { { { { 1, { "abc" } } } } };  
+                              ^
+pr64417.c:16:30: note: (near initialization for ‘d2[0].b.f’)

@@ -1,0 +1,47 @@
+pr63326.c: In function ‘f4’:
+pr63326.c:160:3: error: expected ‘while’ before ‘}’ token
+   }  
+   ^
+pr63326.c:165:3: error: expected ‘while’ before ‘}’ token
+   }  
+   ^
+pr63326.c:170:3: error: expected ‘while’ before ‘}’ token
+   }  
+   ^
+pr63326.c:175:3: error: expected ‘while’ before ‘}’ token
+   }  
+   ^
+pr63326.c:181:3: error: expected ‘while’ before ‘}’ token
+   }  
+   ^
+pr63326.c:187:3: error: expected ‘while’ before ‘}’ token
+   }  
+   ^
+pr63326.c:195:7: error: expected ‘while’ before ‘}’ token
+       }  
+       ^
+pr63326.c:200:7: error: expected ‘while’ before ‘}’ token
+       }  
+       ^
+pr63326.c:206:3: error: expected ‘while’ before ‘}’ token
+   }  
+   ^
+pr63326.c:211:3: error: expected ‘while’ before ‘}’ token
+   }  
+   ^
+pr63326.c:216:3: error: expected ‘while’ before ‘}’ token
+   }  
+   ^
+pr63326.c:479:1: error: expected declaration or statement at end of input
+ }
+ ^
+pr63326.c:479:1: error: expected declaration or statement at end of input
+pr63326.c:479:1: error: expected declaration or statement at end of input
+pr63326.c:479:1: error: expected declaration or statement at end of input
+pr63326.c:479:1: error: expected declaration or statement at end of input
+pr63326.c:479:1: error: expected declaration or statement at end of input
+pr63326.c:479:1: error: expected declaration or statement at end of input
+pr63326.c:479:1: error: expected declaration or statement at end of input
+pr63326.c:479:1: error: expected declaration or statement at end of input
+pr63326.c:479:1: error: expected declaration or statement at end of input
+pr63326.c:479:1: error: expected declaration or statement at end of input

@@ -1,0 +1,12 @@
+pr28865.c:10:8: error: initialization of flexible array member in a nested context
+   { 1, "Long exposure noise reduction" },  
+        ^
+pr28865.c:10:8: note: (near initialization for ‘var_array[0]’)
+pr28865.c:11:8: error: initialization of flexible array member in a nested context
+   { 2, "Shutter/AE lock buttons" },  
+        ^
+pr28865.c:11:8: note: (near initialization for ‘var_array[1]’)
+pr28865.c:12:8: error: initialization of flexible array member in a nested context
+   { 3, "Mirror lockup" }  
+        ^
+pr28865.c:12:8: note: (near initialization for ‘var_array[2]’)

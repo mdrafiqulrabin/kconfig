@@ -1,0 +1,14 @@
+pr29330.c: In function ‘f’:
+pr29330.c:10:3: error: ‘for’ loop initial declarations are only allowed in C99 mode
+   for (int a = 0; a < 2; ++a)
+   ^
+pr29330.c:10:3: note: use option -std=c99 or -std=gnu99 to compile your code
+pr29330.c:11:5: error: ‘for’ loop initial declarations are only allowed in C99 mode
+     for (int b = 0; b < 2; ++b)
+     ^
+pr29330.c:12:7: error: ‘for’ loop initial declarations are only allowed in C99 mode
+       for (int c = 0; c < 2; ++c)
+       ^
+pr29330.c:13:2: error: ‘for’ loop initial declarations are only allowed in C99 mode
+  for (int d = 0; d < 2; ++d)
+  ^

@@ -1,0 +1,42 @@
+pr81695.c: In function ‘main’:
+pr81695.c:10:20: internal compiler error: in size_binop_loc, at fold-const.c:1454
+   __builtin_printf ("%d\n", *(z + 1));
+                    ^
+0x89257b size_binop_loc(unsigned int, tree_code, tree_node*, tree_node*)
+	../../gcc/fold-const.c:1453
+0x8f82e5 fold_indirect_ref_1(unsigned int, tree_node*, tree_node*)
+	../../gcc/fold-const.c:16614
+0x8f8616 fold_indirect_ref_loc(unsigned int, tree_node*)
+	../../gcc/fold-const.c:16663
+0x987b98 gimplify_expr(tree_node**, gimple_statement_d**, gimple_statement_d**, bool (*)(tree_node*), int)
+	../../gcc/gimplify.c:7283
+0x973639 gimplify_arg
+	../../gcc/gimplify.c:2499
+0x97468d gimplify_call_expr
+	../../gcc/gimplify.c:2669
+0x9873e7 gimplify_expr(tree_node**, gimple_statement_d**, gimple_statement_d**, bool (*)(tree_node*), int)
+	../../gcc/gimplify.c:7164
+0x981e22 gimplify_stmt(tree_node**, gimple_statement_d**)
+	../../gcc/gimplify.c:5725
+0x96ef7b gimplify_bind_expr
+	../../gcc/gimplify.c:1253
+0x98801f gimplify_expr(tree_node**, gimple_statement_d**, gimple_statement_d**, bool (*)(tree_node*), int)
+	../../gcc/gimplify.c:7364
+0x981e22 gimplify_stmt(tree_node**, gimple_statement_d**)
+	../../gcc/gimplify.c:5725
+0x98b33b gimplify_body(tree_node*, bool)
+	../../gcc/gimplify.c:8226
+0x98bbd6 gimplify_function_tree(tree_node*)
+	../../gcc/gimplify.c:8358
+0x72107a cgraph_analyze_function
+	../../gcc/cgraphunit.c:658
+0x7225e7 cgraph_analyze_functions
+	../../gcc/cgraphunit.c:964
+0x726e95 finalize_compilation_unit()
+	../../gcc/cgraphunit.c:2110
+0x53a1b6 c_write_global_declarations()
+	../../gcc/c/c-decl.c:10118
+Please submit a full bug report,
+with preprocessed source if appropriate.
+Please include the complete backtrace with any bug report.
+See <http://gcc.gnu.org/bugs.html> for instructions.

@@ -1,0 +1,8 @@
+pr80907.c: In function ‘foo’:
+pr80907.c:10:5: error: ‘for’ loop initial declarations are only allowed in C99 mode
+     for(int i=0;i<n;i++) for(int j=0;j<=i;j++) x[i+j]++;
+     ^
+pr80907.c:10:5: note: use option -std=c99 or -std=gnu99 to compile your code
+pr80907.c:10:26: error: ‘for’ loop initial declarations are only allowed in C99 mode
+     for(int i=0;i<n;i++) for(int j=0;j<=i;j++) x[i+j]++;
+                          ^

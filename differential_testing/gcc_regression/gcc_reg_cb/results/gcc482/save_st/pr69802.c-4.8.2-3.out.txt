@@ -1,0 +1,28 @@
+pr69802.c: In function ‘foo’:
+pr69802.c:9:1: internal compiler error: Segmentation fault
+ foo (void)
+ ^
+0xcb745c crash_signal
+	../../gcc/toplev.c:332
+0x93f8c1 bb_seq_addr
+	../../gcc/gimple.h:1131
+0x94018a gsi_start_bb
+	../../gcc/gimple.h:5010
+0x9425a9 gsi_for_stmt(gimple_statement_d*)
+	../../gcc/gimple-iterator.c:608
+0xedd6ff update_range_test
+	../../gcc/tree-ssa-reassoc.c:1982
+0xede84b optimize_range_tests
+	../../gcc/tree-ssa-reassoc.c:2169
+0xee76d1 reassociate_bb
+	../../gcc/tree-ssa-reassoc.c:4095
+0xee7cab reassociate_bb
+	../../gcc/tree-ssa-reassoc.c:4158
+0xee7e6d do_reassoc
+	../../gcc/tree-ssa-reassoc.c:4191
+0xee8354 execute_reassoc
+	../../gcc/tree-ssa-reassoc.c:4273
+Please submit a full bug report,
+with preprocessed source if appropriate.
+Please include the complete backtrace with any bug report.
+See <http://gcc.gnu.org/bugs.html> for instructions.

@@ -1,0 +1,7 @@
+pr49696.c: In function ‘foo’:
+pr49696.c:19:3: note: ‘__sync_fetch_and_nand’ changed semantics in GCC 4.4
+   __sync_fetch_and_nand (x, 0);
+   ^
+pr49696.c:28:3: note: ‘__sync_nand_and_fetch’ changed semantics in GCC 4.4
+   __sync_nand_and_fetch (x, 0);
+   ^

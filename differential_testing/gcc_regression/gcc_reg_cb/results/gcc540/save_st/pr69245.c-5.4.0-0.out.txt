@@ -1,0 +1,6 @@
+pr69245.c:9:9: error: attribute(target("fpu=vfp")) is unknown
+ #pragma GCC target "fpu=vfp"
+         ^
+pr69245.c:12:9: error: attribute(target("fpu=neon-vfpv4")) is unknown
+ #pragma GCC target "fpu=neon-vfpv4"
+         ^

@@ -1,0 +1,4 @@
+pr63549.c:7:1: error: ‘e’ has an incomplete type
+ int i = a[e];  
+ ^
+pr63549.c:7: confused by earlier errors, bailing out

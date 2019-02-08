@@ -1,0 +1,22 @@
+pr60508.c: In function ‘fn1’:
+pr60508.c:31:1: internal compiler error: in subreg_get_info, at rtlanal.c:3278
+ }
+ ^
+0xc13ccf subreg_get_info(unsigned int, machine_mode, unsigned int, machine_mode, subreg_info*)
+	../../gcc/rtlanal.c:3278
+0xa65d98 true_regnum(rtx_def const*)
+	../../gcc/jump.c:1886
+0xb4f83d reload_cse_simplify_set
+	../../gcc/postreload.c:258
+0xb4ef86 reload_cse_simplify
+	../../gcc/postreload.c:106
+0xb4f654 reload_cse_regs_1
+	../../gcc/postreload.c:220
+0xb4edac reload_cse_regs
+	../../gcc/postreload.c:68
+0xb574b6 rest_of_handle_postreload
+	../../gcc/postreload.c:2287
+Please submit a full bug report,
+with preprocessed source if appropriate.
+Please include the complete backtrace with any bug report.
+See <http://gcc.gnu.org/bugs.html> for instructions.

@@ -1,0 +1,20 @@
+pr58970-2.c: In function ‘foo’:
+pr58970-2.c:10:15: internal compiler error: in get_bit_range, at expr.c:4562
+     s->t[x].b = 0;
+               ^
+0x855e5a get_bit_range
+	../../gcc/expr.c:4562
+0x856761 expand_assignment(tree_node*, tree_node*, bool)
+	../../gcc/expr.c:4703
+0x6d4df1 expand_gimple_stmt_1
+	../../gcc/cfgexpand.c:2208
+0x6d5412 expand_gimple_stmt
+	../../gcc/cfgexpand.c:2304
+0x6de027 expand_gimple_basic_block
+	../../gcc/cfgexpand.c:4138
+0x6e0863 gimple_expand_cfg
+	../../gcc/cfgexpand.c:4657
+Please submit a full bug report,
+with preprocessed source if appropriate.
+Please include the complete backtrace with any bug report.
+See <http://gcc.gnu.org/bugs.html> for instructions.

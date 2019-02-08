@@ -1,0 +1,3 @@
+pr17730-1.c:5:11: error: lvalue required as unary ‘&’ operand
+ char *p = &'C';  
+           ^

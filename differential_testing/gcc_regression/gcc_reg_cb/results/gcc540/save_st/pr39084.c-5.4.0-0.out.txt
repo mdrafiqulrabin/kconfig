@@ -1,0 +1,6 @@
+pr39084.c:11:8: error: redefinition of ‘struct color’
+ struct color { int j; };  
+        ^
+pr39084.c:4:8: note: originally defined here
+ struct color { int i; };  
+        ^

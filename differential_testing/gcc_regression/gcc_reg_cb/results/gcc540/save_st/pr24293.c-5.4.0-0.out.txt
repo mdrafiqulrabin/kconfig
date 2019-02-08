@@ -1,0 +1,12 @@
+pr24293.c:4:19: error: storage size of ‘x’ isn’t known
+ static struct foo x;   
+                   ^
+pr24293.c:5:18: error: storage size of ‘y’ isn’t known
+ static union bar y;   
+                  ^
+pr24293.c:8:10: error: storage size of ‘p_obj’ isn’t known
+ static p p_obj;   
+          ^
+pr24293.c:10:15: error: storage size of ‘e_var’ isn’t known
+ static enum e e_var;  
+               ^

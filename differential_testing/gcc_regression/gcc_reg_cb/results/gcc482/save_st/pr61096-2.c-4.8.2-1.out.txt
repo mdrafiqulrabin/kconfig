@@ -1,0 +1,4 @@
+pr61096-2.c: In function ‘bar’:
+pr61096-2.c:9:3: error: invalid use of non-lvalue array
+   char *t = (foo ()).c;  
+   ^

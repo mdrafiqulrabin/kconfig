@@ -1,0 +1,24 @@
+pr69554-1.c: In function ‘test_1’:
+pr69554-1.c:9:18: error: invalid operands to binary + (have ‘const char *’ and ‘const char *’)
+   return (p + 1) + (q + 1);  
+                  ^
+pr69554-1.c: In function ‘test_2’:
+pr69554-1.c:18:12: error: invalid operands to binary + (have ‘const char *’ and ‘const char *’)
+            +   
+            ^
+pr69554-1.c: In function ‘test_3’:
+pr69554-1.c:29:12: error: invalid operands to binary + (have ‘const char *’ and ‘const char *’)
+            +   
+            ^
+pr69554-1.c: In function ‘test_4’:
+pr69554-1.c:41:12: error: invalid operands to binary + (have ‘const char *’ and ‘const char *’)
+            +   
+            ^
+pr69554-1.c: In function ‘test_5’:
+pr69554-1.c:54:12: error: invalid operands to binary + (have ‘const char *’ and ‘const char *’)
+            +   
+            ^
+pr69554-1.c: In function ‘test_6’:
+pr69554-1.c:69:12: error: invalid operands to binary + (have ‘const char *’ and ‘const char *’)
+            +   
+            ^

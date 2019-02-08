@@ -1,0 +1,5 @@
+pr80846-1.c: In function ‘sumint’:
+pr80846-1.c:7:5: error: ‘for’ loop initial declarations are only allowed in C99 mode
+     for (int i=0 ; i<1024 ; i++)
+     ^
+pr80846-1.c:7:5: note: use option -std=c99 or -std=gnu99 to compile your code

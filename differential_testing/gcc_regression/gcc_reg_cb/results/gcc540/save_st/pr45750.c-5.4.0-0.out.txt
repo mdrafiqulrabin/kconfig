@@ -1,0 +1,8 @@
+pr45750.c:9:17: error: invalid initializer
+ int invalid[] = 0;  
+                 ^
+pr45750.c: In function ‘foo’:
+pr45750.c:13:20: error: ‘undeclared’ undeclared (first use in this function)
+   if (((struct S *)undeclared)->i);  
+                    ^
+pr45750.c:13:20: note: each undeclared identifier is reported only once for each function it appears in

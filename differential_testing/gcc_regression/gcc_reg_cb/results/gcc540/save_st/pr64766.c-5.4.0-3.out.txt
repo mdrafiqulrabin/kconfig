@@ -1,0 +1,6 @@
+pr64766.c:9:1: error: function ‘foo’ is initialized like a variable
+ void foo () = 0;  
+ ^
+pr64766.c:9:15: error: invalid initializer
+ void foo () = 0;  
+               ^

@@ -1,0 +1,4 @@
+pr66618.c: In function ‘foo’:
+pr66618.c:9:18: error: initializer element is not constant
+   static int b = a;  
+                  ^

@@ -1,0 +1,20 @@
+pr63543.c: In function ‘f1’:
+pr63543.c:10:11: error: dereferencing pointer to incomplete type
+   return s->a  
+           ^
+pr63543.c:11:6: error: dereferencing pointer to incomplete type
+   + s->b
+      ^
+pr63543.c:12:6: error: dereferencing pointer to incomplete type
+   + s->c;
+      ^
+pr63543.c: In function ‘f2’:
+pr63543.c:18:11: error: dereferencing pointer to incomplete type
+   return u->a  
+           ^
+pr63543.c:19:6: error: dereferencing pointer to incomplete type
+   + u->a
+      ^
+pr63543.c:20:6: error: dereferencing pointer to incomplete type
+   + u->a;
+      ^

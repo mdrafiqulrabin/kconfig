@@ -1,0 +1,36 @@
+pr58997.c: In function ‘foo’:
+pr58997.c:19:1: internal compiler error: in simplify_subreg, at simplify-rtx.c:5732
+ }
+ ^
+0xc912d8 simplify_subreg(machine_mode, rtx_def*, machine_mode, unsigned int)
+	../../gcc/simplify-rtx.c:5731
+0xc9219b simplify_gen_subreg(machine_mode, rtx_def*, machine_mode, unsigned int)
+	../../gcc/simplify-rtx.c:5952
+0xa75add lowpart_subreg(machine_mode, rtx_def*, machine_mode)
+	../../gcc/loop-iv.c:183
+0xa767de iv_subreg
+	../../gcc/loop-iv.c:428
+0xa7959f iv_analyze_op
+	../../gcc/loop-iv.c:1154
+0xa787ef iv_analyze_expr(rtx_def*, rtx_def*, machine_mode, rtx_iv*)
+	../../gcc/loop-iv.c:961
+0xa79249 iv_analyze_def
+	../../gcc/loop-iv.c:1112
+0xa7979f iv_analyze_op
+	../../gcc/loop-iv.c:1183
+0xa798be iv_analyze(rtx_def*, rtx_def*, rtx_iv*)
+	../../gcc/loop-iv.c:1208
+0xa8bc6b may_unswitch_on
+	../../gcc/loop-unswitch.c:201
+0xa8c409 unswitch_single_loop
+	../../gcc/loop-unswitch.c:324
+0xa8c9b5 unswitch_single_loop
+	../../gcc/loop-unswitch.c:379
+0xa8b8e7 unswitch_loops()
+	../../gcc/loop-unswitch.c:148
+0xa6c7de rtl_unswitch
+	../../gcc/loop-init.c:453
+Please submit a full bug report,
+with preprocessed source if appropriate.
+Please include the complete backtrace with any bug report.
+See <http://gcc.gnu.org/bugs.html> for instructions.

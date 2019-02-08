@@ -1,0 +1,5 @@
+pr68090.c: In function ‘fn’:
+pr68090.c:8:3: error: compound literal has variable size
+   (int[(0, 1)]) { 0 };  
+   ^
+pr68090.c:8: confused by earlier errors, bailing out

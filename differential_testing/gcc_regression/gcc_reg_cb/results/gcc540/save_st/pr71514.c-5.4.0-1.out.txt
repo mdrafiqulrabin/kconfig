@@ -1,0 +1,5 @@
+pr71514.c: In function ‘fn1’:
+pr71514.c:15:3: error: size mismatch in argument 2 of ‘__atomic_exchange’
+   __atomic_exchange (&a, &foo, &b, __ATOMIC_RELAXED);  
+   ^
+pr71514.c:22: confused by earlier errors, bailing out

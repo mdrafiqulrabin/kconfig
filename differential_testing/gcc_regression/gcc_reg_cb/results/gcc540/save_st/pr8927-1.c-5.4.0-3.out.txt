@@ -1,0 +1,5 @@
+pr8927-1.c: In function ‘foo’:
+pr8927-1.c:8:3: error: ‘bar’ undeclared (first use in this function)
+   bar  
+   ^
+pr8927-1.c:8:3: note: each undeclared identifier is reported only once for each function it appears in

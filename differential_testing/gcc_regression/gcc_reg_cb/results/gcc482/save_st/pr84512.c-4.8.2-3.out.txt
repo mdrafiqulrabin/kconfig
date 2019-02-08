@@ -1,0 +1,14 @@
+pr84512.c: In function ‘foo’:
+pr84512.c:7:3: error: ‘for’ loop initial declarations are only allowed in C99 mode
+   for(int i = 0; i < 10; ++i)
+   ^
+pr84512.c:7:3: note: use option -std=c99 or -std=gnu99 to compile your code
+pr84512.c:10:11: error: redefinition of ‘i’
+   for(int i = 0; i < 10; ++i)
+           ^
+pr84512.c:7:11: note: previous definition of ‘i’ was here
+   for(int i = 0; i < 10; ++i)
+           ^
+pr84512.c:10:3: error: ‘for’ loop initial declarations are only allowed in C99 mode
+   for(int i = 0; i < 10; ++i)
+   ^

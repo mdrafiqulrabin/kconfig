@@ -1,0 +1,4 @@
+pr52177.c: In function ‘bar’:
+pr52177.c:16:10: error: non-constant argument 1 to __atomic_always_lock_free
+   return __atomic_always_lock_free (foo (), s);
+          ^

@@ -1,0 +1,4 @@
+pr69801.c: In function ‘fn1’:
+pr69801.c:9:32: error: non-lvalue array in conditional expression
+ void fn1() { e ? (d ? b : c).c : (d ? b : c).c; }
+                                ^

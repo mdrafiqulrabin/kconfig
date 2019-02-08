@@ -1,0 +1,3 @@
+pr57351.c:24:39: error: expected ‘;’, ‘,’ or ‘)’ before ‘retarray’
+ all_l8 (gfc_array_l8 * const restrict retarray,
+                                       ^

@@ -1,0 +1,4 @@
+pr66810.c: In function ‘i’:
+pr66810.c:9:14: error: storage size of ‘a’ isn’t constant
+   static int a[vv];  
+              ^

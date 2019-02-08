@@ -1,0 +1,30 @@
+pr59164.c: In function ‘fn2’:
+pr59164.c:12:6: internal compiler error: Segmentation fault
+ void fn2(void)
+      ^
+0xcb745c crash_signal
+	../../gcc/toplev.c:332
+0x176cbe7 htab_find_slot_with_hash
+	../../libiberty/hashtab.c:650
+0xd687b4 get_var_info
+	../../gcc/tree-into-ssa.c:345
+0xd688f6 get_common_info
+	../../gcc/tree-into-ssa.c:378
+0xd68938 get_current_def(tree_node*)
+	../../gcc/tree-into-ssa.c:387
+0xfc6e3a slpeel_update_phi_nodes_for_guard1
+	../../gcc/tree-vect-loop-manip.c:463
+0xfc9ee4 slpeel_tree_peel_loop_to_edge
+	../../gcc/tree-vect-loop-manip.c:1289
+0xfcbbf4 vect_do_peeling_for_loop_bound(_loop_vec_info*, tree_node**, unsigned int, bool)
+	../../gcc/tree-vect-loop-manip.c:1797
+0xfc1457 vect_transform_loop(_loop_vec_info*)
+	../../gcc/tree-vect-loop.c:5524
+0xfe0130 vectorize_loops()
+	../../gcc/tree-vectorizer.c:123
+0xe8d334 tree_vectorize
+	../../gcc/tree-ssa-loop.c:222
+Please submit a full bug report,
+with preprocessed source if appropriate.
+Please include the complete backtrace with any bug report.
+See <http://gcc.gnu.org/bugs.html> for instructions.

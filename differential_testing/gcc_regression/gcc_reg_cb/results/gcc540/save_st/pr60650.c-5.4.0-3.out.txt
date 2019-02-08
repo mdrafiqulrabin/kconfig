@@ -1,0 +1,2 @@
+pr60650.c: Assembler messages:
+pr60650.c:42: Error: junk at end of line, first unrecognized character is `1'

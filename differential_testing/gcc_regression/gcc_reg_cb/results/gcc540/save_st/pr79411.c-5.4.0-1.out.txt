@@ -1,0 +1,23 @@
+
+Unable to coalesce ssa_names 2 and 3 which are marked as MUST COALESCE.
+d_2(ab) and  d_3(ab)
+pr79411.c: In function ‘foo’:
+pr79411.c:10:1: internal compiler error: SSA corruption
+ foo (struct C *x, const int *y, unsigned int *z, unsigned int e, unsigned int g)
+ ^
+0x12ae198 fail_abnormal_edge_coalesce
+	../../gcc/tree-ssa-coalesce.c:927
+0x12afaa5 coalesce_partitions
+	../../gcc/tree-ssa-coalesce.c:1230
+0x12b059b coalesce_ssa_name()
+	../../gcc/tree-ssa-coalesce.c:1375
+0x11f8d98 remove_ssa_form
+	../../gcc/tree-outof-ssa.c:1018
+0x11f9def rewrite_out_of_ssa(ssaexpand*)
+	../../gcc/tree-outof-ssa.c:1252
+0x8d201d execute
+	../../gcc/cfgexpand.c:5957
+Please submit a full bug report,
+with preprocessed source if appropriate.
+Please include the complete backtrace with any bug report.
+See <http://gcc.gnu.org/bugs.html> for instructions.

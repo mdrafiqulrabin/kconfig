@@ -1,0 +1,6 @@
+pr26449.c: In function ‘matmul_i4’:
+pr26449.c:8:18: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘dest_y’
+   int * restrict dest_y;
+                  ^
+pr26449.c:8:18: error: ‘dest_y’ undeclared (first use in this function)
+pr26449.c:8:18: note: each undeclared identifier is reported only once for each function it appears in

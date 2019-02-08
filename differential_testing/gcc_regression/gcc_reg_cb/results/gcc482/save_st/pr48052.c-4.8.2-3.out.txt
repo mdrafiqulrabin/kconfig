@@ -1,0 +1,9 @@
+pr48052.c: In function ‘foo’:
+pr48052.c:7:3: error: ‘for’ loop initial declarations are only allowed in C99 mode
+   for (unsigned k = start;  k < start + BS; k++)
+   ^
+pr48052.c:7:3: note: use option -std=c99 or -std=gnu99 to compile your code
+pr48052.c: In function ‘bar’:
+pr48052.c:18:3: error: ‘for’ loop initial declarations are only allowed in C99 mode
+   for (unsigned k = 0;  k < BS; k++)
+   ^

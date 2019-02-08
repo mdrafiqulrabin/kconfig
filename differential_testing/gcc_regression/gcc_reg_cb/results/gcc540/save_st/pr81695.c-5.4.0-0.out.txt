@@ -1,0 +1,48 @@
+pr81695.c: In function ‘main’:
+pr81695.c:10:3: internal compiler error: in size_binop_loc, at fold-const.c:1787
+   __builtin_printf ("%d\n", *(z + 1));
+   ^
+0xaeb2d2 size_binop_loc(unsigned int, tree_code, tree_node*, tree_node*)
+	../../gcc/fold-const.c:1786
+0xb37066 fold_indirect_ref_1(unsigned int, tree_node*, tree_node*)
+	../../gcc/fold-const.c:15972
+0xb37397 fold_indirect_ref_loc(unsigned int, tree_node*)
+	../../gcc/fold-const.c:16021
+0xc948a7 gimplify_expr(tree_node**, gimple_statement_base**, gimple_statement_base**, bool (*)(tree_node*), int)
+	../../gcc/gimplify.c:8238
+0xc7ab02 gimplify_arg(tree_node**, gimple_statement_base**, unsigned int)
+	../../gcc/gimplify.c:2271
+0xc7be12 gimplify_call_expr
+	../../gcc/gimplify.c:2477
+0xc93ea4 gimplify_expr(tree_node**, gimple_statement_base**, gimple_statement_base**, bool (*)(tree_node*), int)
+	../../gcc/gimplify.c:8097
+0xc8980f gimplify_stmt(tree_node**, gimple_statement_base**)
+	../../gcc/gimplify.c:5545
+0xc76b4b gimplify_bind_expr
+	../../gcc/gimplify.c:1136
+0xc94db6 gimplify_expr(tree_node**, gimple_statement_base**, gimple_statement_base**, bool (*)(tree_node*), int)
+	../../gcc/gimplify.c:8323
+0xc8980f gimplify_stmt(tree_node**, gimple_statement_base**)
+	../../gcc/gimplify.c:5545
+0xc78042 gimplify_statement_list
+	../../gcc/gimplify.c:1487
+0xc95f74 gimplify_expr(tree_node**, gimple_statement_base**, gimple_statement_base**, bool (*)(tree_node*), int)
+	../../gcc/gimplify.c:8541
+0xc8980f gimplify_stmt(tree_node**, gimple_statement_base**)
+	../../gcc/gimplify.c:5545
+0xc98734 gimplify_body(tree_node*, bool)
+	../../gcc/gimplify.c:9260
+0xc991a5 gimplify_function_tree(tree_node*)
+	../../gcc/gimplify.c:9414
+0x939df4 cgraph_node::analyze()
+	../../gcc/cgraphunit.c:634
+0x93ba52 analyze_functions
+	../../gcc/cgraphunit.c:1024
+0x941b57 symbol_table::finalize_compilation_unit()
+	../../gcc/cgraphunit.c:2453
+0x6d920c c_write_global_declarations()
+	../../gcc/c/c-decl.c:10857
+Please submit a full bug report,
+with preprocessed source if appropriate.
+Please include the complete backtrace with any bug report.
+See <http://gcc.gnu.org/bugs.html> for instructions.

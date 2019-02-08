@@ -1,0 +1,16 @@
+pr59903.c: In function ‘main’:
+pr59903.c:47:1: internal compiler error: Segmentation fault
+ main ()
+ ^
+0xcb745c crash_signal
+	../../gcc/toplev.c:332
+0xfc178d vect_transform_loop(_loop_vec_info*)
+	../../gcc/tree-vect-loop.c:5567
+0xfe0130 vectorize_loops()
+	../../gcc/tree-vectorizer.c:123
+0xe8d334 tree_vectorize
+	../../gcc/tree-ssa-loop.c:222
+Please submit a full bug report,
+with preprocessed source if appropriate.
+Please include the complete backtrace with any bug report.
+See <http://gcc.gnu.org/bugs.html> for instructions.

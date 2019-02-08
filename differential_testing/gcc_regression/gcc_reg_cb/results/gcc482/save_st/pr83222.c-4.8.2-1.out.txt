@@ -1,0 +1,34 @@
+pr83222.c:4:1: error: initializer element is not constant
+ const double b = (double) a;
+ ^
+pr83222.c:5:1: error: initializer element is not constant
+ const double c = a;
+ ^
+pr83222.c:6:1: error: initializer element is not constant
+ double d = (double) a;
+ ^
+pr83222.c:7:1: error: initializer element is not constant
+ double e = a;
+ ^
+pr83222.c:8:1: error: initializer element is not constant
+ const double f = 1 + (double) a;
+ ^
+pr83222.c:9:1: error: initializer element is not constant
+ const double g = 1 + a;
+ ^
+pr83222.c:10:1: error: initializer element is not constant
+ double h = 1 + (double) a;
+ ^
+pr83222.c:11:1: error: initializer element is not constant
+ double i = 1 + a;
+ ^
+pr83222.c:12:1: error: initializer element is not constant
+ double j[] = { (double) a, a, 1 + (double) a, 1 + a };
+ ^
+pr83222.c:12:1: error: (near initialization for ‘j[0]’)
+pr83222.c:12:1: error: initializer element is not constant
+pr83222.c:12:1: error: (near initialization for ‘j[1]’)
+pr83222.c:12:1: error: initializer element is not constant
+pr83222.c:12:1: error: (near initialization for ‘j[2]’)
+pr83222.c:12:1: error: initializer element is not constant
+pr83222.c:12:1: error: (near initialization for ‘j[3]’)

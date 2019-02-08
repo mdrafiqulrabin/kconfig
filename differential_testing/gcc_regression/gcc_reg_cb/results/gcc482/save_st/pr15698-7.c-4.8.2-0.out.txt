@@ -1,0 +1,7 @@
+pr15698-7.c: In function ‘strchr’:
+pr15698-7.c:7:1: error: number of arguments doesn’t match prototype
+ char *strchr(a) const char *a; { return 0; }  
+ ^
+pr15698-7.c:6:7: error: prototype declaration
+ char *strchr(const char *, int);  
+       ^

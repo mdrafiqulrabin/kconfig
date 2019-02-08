@@ -1,0 +1,3 @@
+pr18809-1.c:6:17: error: parameter 1 (‘e’) has incomplete type
+ void foo(enum E e) {}    
+                 ^

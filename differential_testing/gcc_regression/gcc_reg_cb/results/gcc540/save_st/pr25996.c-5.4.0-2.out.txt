@@ -1,0 +1,17 @@
+pr25996.c: In function ‘test1’:
+pr25996.c:7:8: error: ‘i’ undeclared (first use in this function)
+   for (i = 0; i < 1; ++i);  
+        ^
+pr25996.c:7:8: note: each undeclared identifier is reported only once for each function it appears in
+pr25996.c: In function ‘test2’:
+pr25996.c:15:12: error: ‘j’ undeclared (first use in this function)
+   for (i = j; i < 1; ++i);  
+            ^
+pr25996.c: In function ‘test3’:
+pr25996.c:23:19: error: ‘j’ undeclared (first use in this function)
+   for (i = 0; i < j; ++i);  
+                   ^
+pr25996.c: In function ‘test4’:
+pr25996.c:31:28: error: ‘j’ undeclared (first use in this function)
+   for (i = 0; i < 10; i += j);  
+                            ^

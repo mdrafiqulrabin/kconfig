@@ -1,0 +1,44 @@
+In function ‘ID’:
+cc1: internal compiler error: Segmentation fault
+0xcb745c crash_signal
+	../../gcc/toplev.c:332
+0x516885 bind
+	../../gcc/c/c-decl.c:636
+0x520eef c_make_fname_decl
+	../../gcc/c/c-decl.c:3589
+0x5a9817 fname_decl(unsigned int, unsigned int, tree_node*)
+	../../gcc/c-family/c-common.c:907
+0x597843 c_parser_postfix_expression
+	../../gcc/c/c-parser.c:6376
+0x595db2 c_parser_unary_expression
+	../../gcc/c/c-parser.c:5966
+0x594dc8 c_parser_cast_expression
+	../../gcc/c/c-parser.c:5821
+0x59396e c_parser_binary_expression
+	../../gcc/c/c-parser.c:5632
+0x593101 c_parser_conditional_expression
+	../../gcc/c/c-parser.c:5427
+0x592ce5 c_parser_expr_no_commas
+	../../gcc/c/c-parser.c:5347
+0x589eef c_parser_direct_declarator_inner
+	../../gcc/c/c-parser.c:3087
+0x58968f c_parser_direct_declarator
+	../../gcc/c/c-parser.c:2960
+0x58947b c_parser_declarator
+	../../gcc/c/c-parser.c:2904
+0x584baa c_parser_declaration_or_fndef
+	../../gcc/c/c-parser.c:1608
+0x5855f6 c_parser_declaration_or_fndef
+	../../gcc/c/c-parser.c:1752
+0x583ffd c_parser_external_declaration
+	../../gcc/c/c-parser.c:1361
+0x5838b5 c_parser_translation_unit
+	../../gcc/c/c-parser.c:1249
+0x5a7fa0 c_parse_file()
+	../../gcc/c/c-parser.c:10880
+0x61a64b c_common_parse_file()
+	../../gcc/c-family/c-opts.c:1046
+Please submit a full bug report,
+with preprocessed source if appropriate.
+Please include the complete backtrace with any bug report.
+See <http://gcc.gnu.org/bugs.html> for instructions.

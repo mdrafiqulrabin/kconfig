@@ -1,0 +1,10 @@
+pr34965.c: In function ‘bar’:
+pr34965.c:10:3: error: called object is not a function or function pointer
+   foo (i && j) ();  
+   ^
+pr34965.c:11:3: error: called object is not a function or function pointer
+   foo (!i || !j) ();  
+   ^
+pr34965.c:12:3: error: called object is not a function or function pointer
+   foo (!i == !j) ();  
+   ^

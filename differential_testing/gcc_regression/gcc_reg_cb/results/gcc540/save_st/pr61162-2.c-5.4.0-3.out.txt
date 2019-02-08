@@ -1,0 +1,4 @@
+pr61162-2.c: In function ‘fn2’:
+pr61162-2.c:17:10: error: incompatible types when returning type ‘struct s’ but ‘int’ was expected
+   return s;  
+          ^

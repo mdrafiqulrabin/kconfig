@@ -1,0 +1,20 @@
+pr59139.c: In function ‘fn2’:
+pr59139.c:6:6: internal compiler error: in get_val_for, at tree-ssa-loop-niter.c:2183
+ void fn2()
+      ^
+0xe851dc get_val_for
+	../../gcc/tree-ssa-loop-niter.c:2183
+0xe85583 loop_niter_by_eval(loop*, edge_def*)
+	../../gcc/tree-ssa-loop-niter.c:2251
+0xe85956 find_loop_niter_by_eval(loop*, edge_def**)
+	../../gcc/tree-ssa-loop-niter.c:2310
+0x16beaed canonicalize_loop_induction_variables
+	../../gcc/tree-ssa-loop-ivcanon.c:933
+0x16bf05a canonicalize_induction_variables()
+	../../gcc/tree-ssa-loop-ivcanon.c:1002
+0xe8d58d tree_ssa_loop_ivcanon
+	../../gcc/tree-ssa-loop.c:368
+Please submit a full bug report,
+with preprocessed source if appropriate.
+Please include the complete backtrace with any bug report.
+See <http://gcc.gnu.org/bugs.html> for instructions.

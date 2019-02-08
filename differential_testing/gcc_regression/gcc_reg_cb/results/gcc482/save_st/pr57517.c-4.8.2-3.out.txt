@@ -1,0 +1,16 @@
+pr57517.c: In function ‘foo’:
+pr57517.c:4:6: internal compiler error: in eliminate_temp_copies, at tree-predcom.c:1913
+ void foo (void)
+      ^
+0x16a558c eliminate_temp_copies
+	../../gcc/tree-predcom.c:1913
+0x16a7f0f tree_predictive_commoning_loop
+	../../gcc/tree-predcom.c:2519
+0x16a813e tree_predictive_commoning()
+	../../gcc/tree-predcom.c:2554
+0xe8d2a6 run_tree_predictive_commoning
+	../../gcc/tree-ssa-loop.c:185
+Please submit a full bug report,
+with preprocessed source if appropriate.
+Please include the complete backtrace with any bug report.
+See <http://gcc.gnu.org/bugs.html> for instructions.

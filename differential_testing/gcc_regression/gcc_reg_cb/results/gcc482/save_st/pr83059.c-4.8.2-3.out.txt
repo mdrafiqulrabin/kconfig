@@ -1,0 +1,48 @@
+pr83059.c: In function ‘foo’:
+pr83059.c:7:3: internal compiler error: in tree_low_cst, at tree.c:6594
+   __atomic_compare_exchange (p, q, r, 0, 0, -1);  
+   ^
+0x100f58f tree_low_cst(tree_node const*, int)
+	../../gcc/tree.c:6594
+0x5f53ab get_atomic_generic_size
+	../../gcc/c-family/c-common.c:10157
+0x5f5aa2 resolve_overloaded_atomic_compare_exchange
+	../../gcc/c-family/c-common.c:10295
+0x5f65ea resolve_overloaded_builtin(unsigned int, tree_node*, vec<tree_node*, va_gc, vl_embed>*)
+	../../gcc/c-family/c-common.c:10531
+0x55a9ef build_function_call_vec(unsigned int, tree_node*, vec<tree_node*, va_gc, vl_embed>*, vec<tree_node*, va_gc, vl_embed>*)
+	../../gcc/c/c-typeck.c:2712
+0x59a096 c_parser_postfix_expression_after_primary
+	../../gcc/c/c-parser.c:6908
+0x59988c c_parser_postfix_expression
+	../../gcc/c/c-parser.c:6770
+0x595deb c_parser_unary_expression
+	../../gcc/c/c-parser.c:5969
+0x594dc8 c_parser_cast_expression
+	../../gcc/c/c-parser.c:5821
+0x59396e c_parser_binary_expression
+	../../gcc/c/c-parser.c:5632
+0x593101 c_parser_conditional_expression
+	../../gcc/c/c-parser.c:5427
+0x592ce5 c_parser_expr_no_commas
+	../../gcc/c/c-parser.c:5347
+0x59a868 c_parser_expression
+	../../gcc/c/c-parser.c:7019
+0x59ab5c c_parser_expression_conv
+	../../gcc/c/c-parser.c:7050
+0x58fad6 c_parser_statement_after_labels
+	../../gcc/c/c-parser.c:4574
+0x58e77c c_parser_compound_statement_nostart
+	../../gcc/c/c-parser.c:4236
+0x58daf5 c_parser_compound_statement
+	../../gcc/c/c-parser.c:4073
+0x5856f2 c_parser_declaration_or_fndef
+	../../gcc/c/c-parser.c:1756
+0x583ffd c_parser_external_declaration
+	../../gcc/c/c-parser.c:1361
+0x5838b5 c_parser_translation_unit
+	../../gcc/c/c-parser.c:1249
+Please submit a full bug report,
+with preprocessed source if appropriate.
+Please include the complete backtrace with any bug report.
+See <http://gcc.gnu.org/bugs.html> for instructions.

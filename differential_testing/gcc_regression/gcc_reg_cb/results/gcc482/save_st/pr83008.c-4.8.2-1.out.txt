@@ -1,0 +1,14 @@
+pr83008.c: In function ‘pr83008’:
+pr83008.c:12:3: error: ‘for’ loop initial declarations are only allowed in C99 mode
+   for (int i = 0; i < 4; i++, pix1 += i_pix1, pix2 += i_pix2)
+   ^
+pr83008.c:12:3: note: use option -std=c99 or -std=gnu99 to compile your code
+pr83008.c:27:12: error: redefinition of ‘i’
+   for (int i = 0; i < 4; i++)
+            ^
+pr83008.c:12:12: note: previous definition of ‘i’ was here
+   for (int i = 0; i < 4; i++, pix1 += i_pix1, pix2 += i_pix2)
+            ^
+pr83008.c:27:3: error: ‘for’ loop initial declarations are only allowed in C99 mode
+   for (int i = 0; i < 4; i++)
+   ^

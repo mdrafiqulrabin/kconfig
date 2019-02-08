@@ -1,0 +1,7 @@
+pr15698-2.c: In function ‘g’:
+pr15698-2.c:7:1: error: number of arguments doesn’t match prototype
+ void g(a) int a; {}  
+ ^
+pr15698-2.c:6:17: error: prototype declaration
+ void f() { void g(void); }  
+                 ^

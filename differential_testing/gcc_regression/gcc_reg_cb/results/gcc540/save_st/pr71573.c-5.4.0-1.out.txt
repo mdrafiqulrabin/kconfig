@@ -1,0 +1,7 @@
+pr71573.c: In function ‘f2’:
+pr71573.c:13:3: error: incompatible implicit declaration of function ‘t’
+   t (0);  
+   ^
+pr71573.c:7:14: note: previous implicit declaration of ‘t’ was here
+   extern int t;
+              ^

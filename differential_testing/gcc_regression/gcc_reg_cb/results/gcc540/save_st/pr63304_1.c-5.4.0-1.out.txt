@@ -1,0 +1,7 @@
+pr63304_1.c:4:9: error: attribute(target("+nothing+simd")) is unknown
+ #pragma GCC target ("+nothing+simd, cmodel=small")
+         ^
+pr63304_1.c:4:9: error: attribute(target(" cmodel=small")) is unknown
+pr63304_1.c:19:9: error: attribute(target("cmodel=large")) is unknown
+ #pragma GCC target ("cmodel=large")
+         ^

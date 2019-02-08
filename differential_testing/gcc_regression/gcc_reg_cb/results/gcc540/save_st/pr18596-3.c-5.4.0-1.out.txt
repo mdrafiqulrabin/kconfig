@@ -1,0 +1,19 @@
+pr18596-3.c: In function ‘foo’:
+pr18596-3.c:6:10: error: invalid storage class for function ‘g’
+   static g () = 0;  
+          ^
+pr18596-3.c:7:14: error: invalid storage class for function ‘f’
+   static int f () = 1;  
+              ^
+pr18596-3.c:8:3: error: function ‘h’ is initialized like a variable
+   auto int h () = 0;  
+   ^
+pr18596-3.c:10:14: error: invalid storage class for function ‘i’
+   static int i () = { 0 };  
+              ^
+pr18596-3.c:11:14: error: invalid storage class for function ‘j’
+   static int j () =  
+              ^
+pr18596-3.c:8:12: error: nested function ‘h’ declared but never defined
+   auto int h () = 0;  
+            ^

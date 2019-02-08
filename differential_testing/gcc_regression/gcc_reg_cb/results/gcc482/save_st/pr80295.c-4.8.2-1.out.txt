@@ -1,0 +1,4 @@
+pr80295.c: In function ‘f’:
+pr80295.c:6:3: error: too few arguments to function ‘__builtin_update_setjmp_buf’
+   __builtin_update_setjmp_buf (b); 
+   ^

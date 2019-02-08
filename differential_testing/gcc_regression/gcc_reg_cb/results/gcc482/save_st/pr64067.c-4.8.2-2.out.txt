@@ -1,0 +1,46 @@
+pr64067.c: In function ‘foo’:
+pr64067.c:9:3: internal compiler error: in expand_expr_real_1, at expr.c:10514
+   return v[0];
+   ^
+0x873076 expand_expr_real_1(tree_node*, rtx_def*, machine_mode, expand_modifier, rtx_def**)
+	../../gcc/expr.c:10514
+0x864aca expand_expr_real(tree_node*, rtx_def*, machine_mode, expand_modifier, rtx_def**)
+	../../gcc/expr.c:7872
+0x842aa2 expand_expr
+	../../gcc/expr.h:444
+0x863a52 expand_expr_addr_expr_1
+	../../gcc/expr.c:7589
+0x863de8 expand_expr_addr_expr_1
+	../../gcc/expr.c:7641
+0x8642ad expand_expr_addr_expr
+	../../gcc/expr.c:7712
+0x872f35 expand_expr_real_1(tree_node*, rtx_def*, machine_mode, expand_modifier, rtx_def**)
+	../../gcc/expr.c:10472
+0x864aca expand_expr_real(tree_node*, rtx_def*, machine_mode, expand_modifier, rtx_def**)
+	../../gcc/expr.c:7872
+0x842aa2 expand_expr
+	../../gcc/expr.h:444
+0x86f475 expand_expr_real_1(tree_node*, rtx_def*, machine_mode, expand_modifier, rtx_def**)
+	../../gcc/expr.c:9793
+0x864aca expand_expr_real(tree_node*, rtx_def*, machine_mode, expand_modifier, rtx_def**)
+	../../gcc/expr.c:7872
+0x86caed expand_expr_real_1(tree_node*, rtx_def*, machine_mode, expand_modifier, rtx_def**)
+	../../gcc/expr.c:9311
+0x864aca expand_expr_real(tree_node*, rtx_def*, machine_mode, expand_modifier, rtx_def**)
+	../../gcc/expr.c:7872
+0xc95cdf expand_expr
+	../../gcc/expr.h:444
+0xc9c169 expand_return(tree_node*)
+	../../gcc/stmt.c:1572
+0x6d4b29 expand_gimple_stmt_1
+	../../gcc/cfgexpand.c:2182
+0x6d5412 expand_gimple_stmt
+	../../gcc/cfgexpand.c:2304
+0x6de027 expand_gimple_basic_block
+	../../gcc/cfgexpand.c:4138
+0x6e0863 gimple_expand_cfg
+	../../gcc/cfgexpand.c:4657
+Please submit a full bug report,
+with preprocessed source if appropriate.
+Please include the complete backtrace with any bug report.
+See <http://gcc.gnu.org/bugs.html> for instructions.

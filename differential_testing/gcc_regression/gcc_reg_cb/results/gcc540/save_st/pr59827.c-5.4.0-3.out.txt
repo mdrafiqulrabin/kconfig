@@ -1,0 +1,7 @@
+pr59827.c:5:10: error: array type has incomplete element type ‘int[]’
+ foo (int p[2][])  
+          ^
+pr59827.c: In function ‘bar’:
+pr59827.c:14:8: error: type of formal parameter 1 is incomplete
+   foo (p);  
+        ^

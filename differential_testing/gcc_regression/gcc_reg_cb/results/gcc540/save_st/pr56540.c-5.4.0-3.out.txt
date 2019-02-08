@@ -1,0 +1,6 @@
+pr56540.c:4:14: error: ‘__SIZEOF_FPREG__’ undeclared here (not in a function)
+ extern int a[__SIZEOF_FPREG__ != sizeof (__fpreg) ? -1 : 1];
+              ^
+pr56540.c:4:42: error: ‘__fpreg’ undeclared here (not in a function)
+ extern int a[__SIZEOF_FPREG__ != sizeof (__fpreg) ? -1 : 1];
+                                          ^

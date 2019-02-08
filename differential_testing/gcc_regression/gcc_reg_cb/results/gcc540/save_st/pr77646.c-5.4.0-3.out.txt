@@ -1,0 +1,36 @@
+pr77646.c: In function ‘m’:
+pr77646.c:12:6: internal compiler error: Segmentation fault
+ void m()
+      ^
+0x10be381 crash_signal
+	../../gcc/toplev.c:383
+0x13d1093 vuse_ssa_val
+	../../gcc/tree-ssa-sccvn.c:365
+0x13d5ef7 vn_reference_lookup_2
+	../../gcc/tree-ssa-sccvn.c:1590
+0x1292f65 walk_non_aliased_vuses(ao_ref*, tree_node*, void* (*)(ao_ref*, tree_node*, unsigned int, void*), void* (*)(ao_ref*, tree_node*, void*, bool), tree_node* (*)(tree_node*), void*)
+	../../gcc/tree-ssa-alias.c:2689
+0x13d9ca4 vn_reference_lookup(tree_node*, tree_node*, vn_lookup_kind, vn_reference_s**, bool)
+	../../gcc/tree-ssa-sccvn.c:2244
+0x13dcf5e visit_reference_op_load
+	../../gcc/tree-ssa-sccvn.c:3036
+0x13e02bc visit_use
+	../../gcc/tree-ssa-sccvn.c:3691
+0x13e17a9 process_scc
+	../../gcc/tree-ssa-sccvn.c:3963
+0x13e1e6c extract_and_process_scc_for_name
+	../../gcc/tree-ssa-sccvn.c:4019
+0x13e21b2 DFS
+	../../gcc/tree-ssa-sccvn.c:4071
+0x13e3be9 cond_dom_walker::before_dom_children(basic_block_def*)
+	../../gcc/tree-ssa-sccvn.c:4351
+0x1e5905d dom_walker::walk(basic_block_def*)
+	../../gcc/domwalk.c:188
+0x13e42c9 run_scc_vn(vn_lookup_kind)
+	../../gcc/tree-ssa-sccvn.c:4442
+0x13a064a execute
+	../../gcc/tree-ssa-pre.c:4864
+Please submit a full bug report,
+with preprocessed source if appropriate.
+Please include the complete backtrace with any bug report.
+See <http://gcc.gnu.org/bugs.html> for instructions.

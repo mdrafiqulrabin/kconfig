@@ -1,0 +1,38 @@
+pr54760-3.c: In function ‘test00’:
+pr54760-3.c:8:8: error: __builtin_thread_pointer is not supported on this target
+   int* tcb = (int*)__builtin_thread_pointer ();
+        ^
+pr54760-3.c:11:3: error: __builtin_set_thread_pointer is not supported on this target
+   __builtin_set_thread_pointer (p);
+   ^
+pr54760-3.c:13:7: error: __builtin_thread_pointer is not supported on this target
+   tcb = (int*)__builtin_thread_pointer ();
+       ^
+pr54760-3.c: In function ‘test01’:
+pr54760-3.c:20:19: error: __builtin_thread_pointer is not supported on this target
+   unsigned short* tcb = (unsigned short*)__builtin_thread_pointer ();
+                   ^
+pr54760-3.c: In function ‘test02’:
+pr54760-3.c:27:8: error: __builtin_thread_pointer is not supported on this target
+   int* tcb = (int*)__builtin_thread_pointer ();
+        ^
+pr54760-3.c:30:3: error: __builtin_set_thread_pointer is not supported on this target
+   __builtin_set_thread_pointer (x);
+   ^
+pr54760-3.c:32:7: error: __builtin_thread_pointer is not supported on this target
+   tcb = (int*)__builtin_thread_pointer ();
+       ^
+pr54760-3.c: In function ‘test03’:
+pr54760-3.c:39:17: error: __builtin_thread_pointer is not supported on this target
+   volatile int* tcb = (volatile int*)__builtin_thread_pointer ();
+                 ^
+pr54760-3.c: In function ‘test04’:
+pr54760-3.c:56:19: error: __builtin_thread_pointer is not supported on this target
+     volatile int* tcb = (volatile int*)__builtin_thread_pointer ();
+                   ^
+pr54760-3.c:59:4: error: __builtin_set_thread_pointer is not supported on this target
+    __builtin_set_thread_pointer (xx[i]);
+    ^
+pr54760-3.c:61:9: error: __builtin_thread_pointer is not supported on this target
+     tcb = (volatile int*)__builtin_thread_pointer ();
+         ^

@@ -1,0 +1,19 @@
+pr79983.c:7:8: error: redefinition of ‘struct S’
+ struct S { int i, j; };  
+        ^
+pr79983.c:5:8: note: originally defined here
+ struct S;
+        ^
+pr79983.c:11:6: error: nested redefinition of ‘enum E’
+ enum E { D, F };  
+      ^
+pr79983.c:11:6: error: redeclaration of ‘enum E’
+pr79983.c:9:6: note: originally defined here
+ enum E;
+      ^
+pr79983.c:15:7: error: redefinition of ‘union U’
+ union U { int i; double d; };  
+       ^
+pr79983.c:13:7: note: originally defined here
+ union U;
+       ^

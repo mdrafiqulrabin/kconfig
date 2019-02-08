@@ -1,0 +1,6 @@
+pr65066.c:5:54: error: redefinition of parameter ‘restrict’
+ extern int sscanf (const char *restrict, const char *restrict, ...);
+                                                      ^
+pr65066.c:5:32: note: previous definition of ‘restrict’ was here
+ extern int sscanf (const char *restrict, const char *restrict, ...);
+                                ^

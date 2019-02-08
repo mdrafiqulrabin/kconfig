@@ -1,0 +1,11 @@
+pr71261.c: In function ‘fn1’:
+pr71261.c:7:3: error: ‘for’ loop initial declarations are only allowed in C99 mode
+   for (int g = 0; g < d; g = 1)
+   ^
+pr71261.c:7:3: note: use option -std=c99 or -std=gnu99 to compile your code
+pr71261.c:8:5: error: ‘for’ loop initial declarations are only allowed in C99 mode
+     for (int h = 0; h < 8; h = h + 2)
+     ^
+pr71261.c:9:7: error: ‘for’ loop initial declarations are only allowed in C99 mode
+       for (int i = h; i < h + 2; i = i + 1)
+       ^

@@ -1,0 +1,7 @@
+pr56989.c: In function ‘f’:
+pr56989.c:11:7: error: void value not ignored as it ought to be
+       || voidf () < 0)  
+       ^
+pr56989.c:15:7: error: void value not ignored as it ought to be
+       || intf () < 0)
+       ^

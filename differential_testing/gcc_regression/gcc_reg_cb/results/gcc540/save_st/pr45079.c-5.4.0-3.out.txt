@@ -1,0 +1,4 @@
+pr45079.c: In function ‘foo’:
+pr45079.c:7:19: error: assignment of read-only location ‘*(p + (sizetype)(((cond) != 0 ? (long unsigned int)a : (long unsigned int)b) * 1ul))’
+   p[cond ? a : b] = '\0';  
+                   ^

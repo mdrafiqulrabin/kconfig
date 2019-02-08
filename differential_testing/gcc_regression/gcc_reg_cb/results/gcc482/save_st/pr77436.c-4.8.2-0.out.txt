@@ -1,0 +1,5 @@
+pr77436.c: In function ‘main’:
+pr77436.c:6:3: error: ‘for’ loop initial declarations are only allowed in C99 mode
+   for (short x = -(__SHRT_MAX__ -1); x <= (__SHRT_MAX__ -1); x++)
+   ^
+pr77436.c:6:3: note: use option -std=c99 or -std=gnu99 to compile your code

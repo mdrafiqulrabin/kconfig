@@ -1,0 +1,4 @@
+pr37908.c: In function ‘main’:
+pr37908.c:19:10: note: ‘__sync_nand_and_fetch’ changed semantics in GCC 4.4
+   xOut = __sync_nand_and_fetch (&xLoc, 0x7F);  
+          ^

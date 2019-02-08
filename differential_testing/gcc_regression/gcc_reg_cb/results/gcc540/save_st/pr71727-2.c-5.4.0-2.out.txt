@@ -1,0 +1,3 @@
+pr71727-2.c:4:9: error: attribute(target("+nosve")) is unknown
+ #pragma GCC target "+nosve"
+         ^

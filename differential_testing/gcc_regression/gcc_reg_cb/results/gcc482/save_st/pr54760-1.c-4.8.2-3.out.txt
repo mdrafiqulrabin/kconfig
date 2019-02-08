@@ -1,0 +1,8 @@
+pr54760-1.c: In function ‘test00’:
+pr54760-1.c:11:3: error: __builtin_thread_pointer is not supported on this target
+   return __builtin_thread_pointer ();
+   ^
+pr54760-1.c: In function ‘test01’:
+pr54760-1.c:17:32: error: __builtin_set_thread_pointer is not supported on this target
+   __builtin_set_thread_pointer (p);
+                                ^

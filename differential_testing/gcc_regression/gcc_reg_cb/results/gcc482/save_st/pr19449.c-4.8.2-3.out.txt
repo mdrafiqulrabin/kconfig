@@ -1,0 +1,4 @@
+pr19449.c: In function ‘foo’:
+pr19449.c:11:10: error: first argument to ‘__builtin_choose_expr’ not a constant
+   return __builtin_choose_expr (!__builtin_constant_p (x), 3, y++);
+          ^

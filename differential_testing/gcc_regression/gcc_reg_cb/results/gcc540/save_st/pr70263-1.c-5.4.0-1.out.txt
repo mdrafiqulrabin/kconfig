@@ -1,0 +1,18 @@
+pr70263-1.c: In function ‘fn1’:
+pr70263-1.c:10:1: internal compiler error: Segmentation fault
+ }
+ ^
+0x10be381 crash_signal
+	../../gcc/toplev.c:383
+0xd80268 memref_used_between_p
+	../../gcc/ira.c:3267
+0xd8233e update_equiv_regs
+	../../gcc/ira.c:3684
+0xd8a3e2 ira
+	../../gcc/ira.c:5253
+0xd8b4fc execute
+	../../gcc/ira.c:5570
+Please submit a full bug report,
+with preprocessed source if appropriate.
+Please include the complete backtrace with any bug report.
+See <http://gcc.gnu.org/bugs.html> for instructions.

@@ -1,0 +1,20 @@
+pr61634.c: In function ‘fn1’:
+pr61634.c:5:6: internal compiler error: in vect_get_vec_def_for_operand, at tree-vect-stmts.c:1423
+ void fn1 (int p1[], int p2, int p3[], int p4[], int p5[], int *p6)
+      ^
+0xf8ea4b vect_get_vec_def_for_operand(tree_node*, gimple_statement_d*, tree_node**)
+	../../gcc/tree-vect-stmts.c:1423
+0xfbf732 vectorizable_reduction(gimple_statement_d*, gimple_stmt_iterator*, gimple_statement_d**, _slp_tree*)
+	../../gcc/tree-vect-loop.c:5093
+0xfa2b29 vect_transform_stmt(gimple_statement_d*, gimple_stmt_iterator*, bool*, _slp_tree*, _slp_instance*)
+	../../gcc/tree-vect-stmts.c:5808
+0xfc253e vect_transform_loop(_loop_vec_info*)
+	../../gcc/tree-vect-loop.c:5727
+0xfe0130 vectorize_loops()
+	../../gcc/tree-vectorizer.c:123
+0xe8d334 tree_vectorize
+	../../gcc/tree-ssa-loop.c:222
+Please submit a full bug report,
+with preprocessed source if appropriate.
+Please include the complete backtrace with any bug report.
+See <http://gcc.gnu.org/bugs.html> for instructions.

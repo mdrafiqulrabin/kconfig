@@ -1,0 +1,24 @@
+pr65050.c:5:21: error: array type has incomplete element type
+ struct S { int i; A a[5]; } s;  
+                     ^
+pr65050.c:6:22: error: array type has incomplete element type
+ extern void foo (int p[2][]);  
+                      ^
+pr65050.c:7:20: error: array type has incomplete element type
+ extern void bar (A p[2]);  
+                    ^
+pr65050.c:10:10: error: array type has incomplete element type
+ foo (int p[2][])  
+          ^
+pr65050.c:15:8: error: array type has incomplete element type
+ bar (A p[2])  
+        ^
+pr65050.c:20:10: error: array type has incomplete element type
+ struct T t[5];  
+          ^
+pr65050.c:21:10: error: array type has incomplete element type
+ struct U u[] = { { "abc" } };  
+          ^
+pr65050.c:23:4: error: array type has incomplete element type
+ TT tt[5];  
+    ^

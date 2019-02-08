@@ -1,0 +1,7 @@
+pr15698-3.c: In function ‘f’:
+pr15698-3.c:9:16: error: argument ‘a’ doesn’t match prototype
+ void f(a) long a; {}  
+                ^
+pr15698-3.c:7:6: error: prototype declaration
+ void f(int);  
+      ^

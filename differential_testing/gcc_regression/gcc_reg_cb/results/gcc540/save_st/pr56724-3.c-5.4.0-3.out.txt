@@ -1,0 +1,7 @@
+pr56724-3.c: In function ‘call’:
+pr56724-3.c:13:15: error: incompatible type for argument 3 of ‘xfer’
+   xfer (x, y, t);  
+               ^
+pr56724-3.c:5:13: note: expected ‘unsigned char *’ but argument is of type ‘struct T’
+ extern void xfer (int, int, unsigned char *);
+             ^

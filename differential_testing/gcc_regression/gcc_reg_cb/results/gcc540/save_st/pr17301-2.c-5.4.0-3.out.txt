@@ -1,0 +1,4 @@
+pr17301-2.c: In function ‘foo’:
+pr17301-2.c:7:3: error: too few arguments to function ‘__builtin_va_start’
+   __builtin_va_start ();  
+   ^

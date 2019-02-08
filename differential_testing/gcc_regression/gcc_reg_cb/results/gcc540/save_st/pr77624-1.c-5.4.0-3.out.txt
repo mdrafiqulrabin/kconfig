@@ -1,0 +1,42 @@
+pr77624-1.c: In function ‘foo’:
+pr77624-1.c:7:3: internal compiler error: in fold_builtin_atomic_always_lock_free, at builtins.c:5727
+   return __atomic_is_lock_free (2, a);   
+   ^
+0x86a405 fold_builtin_atomic_always_lock_free
+	../../gcc/builtins.c:5727
+0x86a5dc fold_builtin_atomic_is_lock_free
+	../../gcc/builtins.c:5784
+0x88265d fold_builtin_2
+	../../gcc/builtins.c:10569
+0x882b60 fold_builtin_n(unsigned int, tree_node*, tree_node**, int, bool)
+	../../gcc/builtins.c:10665
+0x88322e fold_call_expr(unsigned int, tree_node*, bool)
+	../../gcc/builtins.c:10769
+0xb30cd3 fold(tree_node*)
+	../../gcc/fold-const.c:13990
+0x77a534 c_fully_fold_internal
+	../../gcc/c-family/c-common.c:1201
+0x77a30b c_fully_fold(tree_node*, bool, bool*)
+	../../gcc/c-family/c-common.c:1151
+0x71b52a c_finish_return(unsigned int, tree_node*, tree_node*)
+	../../gcc/c/c-typeck.c:9410
+0x7415f6 c_parser_statement_after_labels
+	../../gcc/c/c-parser.c:5053
+0x74041c c_parser_compound_statement_nostart
+	../../gcc/c/c-parser.c:4707
+0x73f747 c_parser_compound_statement
+	../../gcc/c/c-parser.c:4544
+0x73633b c_parser_declaration_or_fndef
+	../../gcc/c/c-parser.c:1983
+0x733fa0 c_parser_external_declaration
+	../../gcc/c/c-parser.c:1453
+0x7337c3 c_parser_translation_unit
+	../../gcc/c/c-parser.c:1340
+0x76b8db c_parse_file()
+	../../gcc/c/c-parser.c:15461
+0x7fccf5 c_common_parse_file()
+	../../gcc/c-family/c-opts.c:1057
+Please submit a full bug report,
+with preprocessed source if appropriate.
+Please include the complete backtrace with any bug report.
+See <http://gcc.gnu.org/bugs.html> for instructions.

@@ -1,0 +1,7 @@
+pr84945.c: In function ‘main’:
+pr84945.c:10:7: error: Parameter to builtin not valid: avx512vnni
+       && (__builtin_cpu_supports ("avx512vnni")
+       ^
+pr84945.c:11:4: error: Parameter to builtin not valid: avx512bitalg
+    || __builtin_cpu_supports ("avx512bitalg")))
+    ^

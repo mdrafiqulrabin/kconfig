@@ -1,0 +1,5 @@
+pr41842.c: In function ‘f’:
+pr41842.c:7:13: error: ‘h’ undeclared (first use in this function)
+   char x[g (h)];  
+             ^
+pr41842.c:7:13: note: each undeclared identifier is reported only once for each function it appears in

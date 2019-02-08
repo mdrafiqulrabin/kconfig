@@ -1,0 +1,4 @@
+pr61553.c: In function ‘foo’:
+pr61553.c:7:3: error: size mismatch in argument 2 of ‘__atomic_store’
+   __atomic_store (s, (void *) 0, __ATOMIC_SEQ_CST);  
+   ^

@@ -1,0 +1,3 @@
+pr79428-3.c:3:9: error: ‘#pragma GCC pch_preprocess’ must be first before ‘#pragma’
+ #pragma GCC pch_preprocess  
+         ^

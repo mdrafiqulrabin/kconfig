@@ -1,0 +1,14 @@
+pr69245_1.c:4:9: error: bad value (armv8-a+nofp) for option("arch=") attribute
+ #pragma GCC target "arch=armv8-a+nofp"
+         ^
+pr69245_1.c:8:1: error: bad value (armv8-a+nofp) for option("arch=") attribute
+ {
+ ^
+pr69245_1.c:8:1: error: bad value (armv8-a+nofp) for option("arch=") attribute
+pr69245_1.c:11:9: error: bad value (armv8-a+fp) for option("arch=") attribute
+ #pragma GCC target "arch=armv8-a+fp"
+         ^
+pr69245_1.c:14:1: error: bad value (armv8-a+fp) for option("arch=") attribute
+ {
+ ^
+pr69245_1.c:14:1: error: bad value (armv8-a+fp) for option("arch=") attribute

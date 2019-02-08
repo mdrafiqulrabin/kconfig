@@ -1,0 +1,3 @@
+pr69483.c:5:10: error: storage size of ‘b’ isn’t known
+ struct S b;  
+          ^

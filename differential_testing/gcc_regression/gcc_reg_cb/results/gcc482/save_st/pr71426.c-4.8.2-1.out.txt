@@ -1,0 +1,4 @@
+pr71426.c:5:14: error: ‘x’ undeclared here (not in a function)
+ int f (int x[x - x ()]);  
+              ^
+pr71426.c:5: confused by earlier errors, bailing out

@@ -1,0 +1,48 @@
+pr80539.c: In function ‘fn1’:
+pr80539.c:22:1: internal compiler error: in chrec_fold_plus_poly_poly, at tree-chrec.c:170
+ }
+ ^
+0x1fc2ecb chrec_fold_plus_poly_poly
+	../../gcc/tree-chrec.c:170
+0x1fc379e chrec_fold_plus_1
+	../../gcc/tree-chrec.c:303
+0x1fc410f chrec_fold_minus(tree_node*, tree_node*, tree_node*)
+	../../gcc/tree-chrec.c:414
+0x125611f interpret_rhs_expr
+	../../gcc/tree-scalar-evolution.c:1855
+0x1256e6c interpret_gimple_assign
+	../../gcc/tree-scalar-evolution.c:1977
+0x12572ef analyze_scalar_evolution_1
+	../../gcc/tree-scalar-evolution.c:2059
+0x1257641 analyze_scalar_evolution(loop*, tree_node*)
+	../../gcc/tree-scalar-evolution.c:2114
+0x1256bc1 interpret_rhs_expr
+	../../gcc/tree-scalar-evolution.c:1934
+0x1256e6c interpret_gimple_assign
+	../../gcc/tree-scalar-evolution.c:1977
+0x12572ef analyze_scalar_evolution_1
+	../../gcc/tree-scalar-evolution.c:2059
+0x1257641 analyze_scalar_evolution(loop*, tree_node*)
+	../../gcc/tree-scalar-evolution.c:2114
+0x134e8fd infer_loop_bounds_from_signedness
+	../../gcc/tree-ssa-loop-niter.c:3055
+0x134ecc9 infer_loop_bounds_from_undefined
+	../../gcc/tree-ssa-loop-niter.c:3112
+0x135092c estimate_numbers_of_iterations_loop
+	../../gcc/tree-ssa-loop-niter.c:3478
+0x1350d02 max_loop_iterations(loop*, generic_wide_int<fixed_wide_int_storage<192> >*)
+	../../gcc/tree-ssa-loop-niter.c:3551
+0x1349e95 finite_loop_p(loop*)
+	../../gcc/tree-ssa-loop-niter.c:2166
+0x12bce1b find_obviously_necessary_stmts
+	../../gcc/tree-ssa-dce.c:452
+0x12c24b7 perform_tree_ssa_dce
+	../../gcc/tree-ssa-dce.c:1660
+0x12c27cf tree_ssa_cd_dce
+	../../gcc/tree-ssa-dce.c:1714
+0x12c2a9a execute
+	../../gcc/tree-ssa-dce.c:1779
+Please submit a full bug report,
+with preprocessed source if appropriate.
+Please include the complete backtrace with any bug report.
+See <http://gcc.gnu.org/bugs.html> for instructions.

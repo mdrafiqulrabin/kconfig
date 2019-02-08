@@ -1,0 +1,30 @@
+pr69824.c: In function ‘baz’:
+pr69824.c:4:6: internal compiler error: Segmentation fault
+ void baz(int c[foo()]) { return; }
+      ^
+0x10be381 crash_signal
+	../../gcc/toplev.c:383
+0x15693e2 walk_tree_1(tree_node**, tree_node* (*)(tree_node**, int*, void*), void*, hash_set<tree_node*, default_hashset_traits>*, tree_node* (*)(tree_node**, int*, tree_node* (*)(tree_node**, int*, void*), void*, hash_set<tree_node*, default_hashset_traits>*))
+	../../gcc/tree.c:11082
+0xc75a7a copy_if_shared
+	../../gcc/gimplify.c:857
+0xc75b87 unshare_body
+	../../gcc/gimplify.c:873
+0xc75c66 unshare_body
+	../../gcc/gimplify.c:880
+0xc985f4 gimplify_body(tree_node*, bool)
+	../../gcc/gimplify.c:9244
+0xc991a5 gimplify_function_tree(tree_node*)
+	../../gcc/gimplify.c:9414
+0x939df4 cgraph_node::analyze()
+	../../gcc/cgraphunit.c:634
+0x93ba52 analyze_functions
+	../../gcc/cgraphunit.c:1024
+0x941b57 symbol_table::finalize_compilation_unit()
+	../../gcc/cgraphunit.c:2453
+0x6d920c c_write_global_declarations()
+	../../gcc/c/c-decl.c:10857
+Please submit a full bug report,
+with preprocessed source if appropriate.
+Please include the complete backtrace with any bug report.
+See <http://gcc.gnu.org/bugs.html> for instructions.

@@ -1,0 +1,7 @@
+pr15698-8.c: In function ‘f’:
+pr15698-8.c:8:16: error: argument ‘a’ doesn’t match prototype
+ int f(a) int (*a)[3]; { return 0; }  
+                ^
+pr15698-8.c:7:15: error: prototype declaration
+ int g() { int f(int (*)[2]); }  
+               ^

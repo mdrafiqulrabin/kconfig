@@ -1,0 +1,5 @@
+pr82285.c: In function ‘main’:
+pr82285.c:10:3: error: ‘for’ loop initial declarations are only allowed in C99 mode
+   for (unsigned i = 0; i < 16; i++)
+   ^
+pr82285.c:10:3: note: use option -std=c99 or -std=gnu99 to compile your code

@@ -1,0 +1,6 @@
+pr35445.c:6:5: error: conflicting types for ‘i’
+ int i[] = { 0 };  
+     ^
+pr35445.c:5:12: note: previous declaration of ‘i’ was here
+ extern int i;  
+            ^

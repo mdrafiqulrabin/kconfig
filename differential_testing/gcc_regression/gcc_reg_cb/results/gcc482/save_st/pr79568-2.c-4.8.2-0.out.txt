@@ -1,0 +1,4 @@
+pr79568-2.c: In function ‘bar’:
+pr79568-2.c:17:27: error: ‘__builtin_ia32_lwpval64’ needs isa option -m32 -mlwp
+   __builtin_ia32_lwpval64 (x, y, 1);   
+                           ^

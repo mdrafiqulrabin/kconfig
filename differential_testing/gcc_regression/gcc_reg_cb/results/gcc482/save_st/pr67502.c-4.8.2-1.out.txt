@@ -1,0 +1,8 @@
+pr67502.c: In function ‘foo’:
+pr67502.c:13:3: error: ‘for’ loop initial declarations are only allowed in C99 mode
+   for (int i = 0; i < 16; ++i)
+   ^
+pr67502.c:13:3: note: use option -std=c99 or -std=gnu99 to compile your code
+pr67502.c:14:5: error: ‘for’ loop initial declarations are only allowed in C99 mode
+     for (int j = 0; j < 16; ++j)
+     ^
