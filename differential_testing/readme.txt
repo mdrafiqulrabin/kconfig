@@ -6,3 +6,4 @@ mw-v1: 2x hrs optimization level testing with GCC(4.8.2) between -O0 and -O* for
 sb-v1: 06 hrs optimization level testing with GCC(4.8.2) between -O0 and -O3 for default and k10-c9 by 2 runs.
 sb-v2: 12 hrs optimization level testing with GCC(4.8.2) between -O0 and -O3 with round-robin selection of arguments for default, k3 and k10.
 sb-v3: 12 hrs optimization level testing with GCC(4.8.2/5.4.0) between -O0 and -O3 with swarm arguments.
+sb-v4: 12 hrs optimization level testing with GCC(4.8.2/5.4.0) between -O0 and -O3 by adding probability to round-robin selection of arguments for k10.
