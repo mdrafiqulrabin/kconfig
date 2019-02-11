@@ -1,6 +1,6 @@
 #!/bin/bash
-#SBATCH -J sb_v4_r1
-#SBATCH -o sb_v4_probability_gcc482_r1.o%j.txt
+#SBATCH -J sb_v4_probability_gcc482
+#SBATCH -o sb_v4_probability_gcc482.o%j.txt
 #SBATCH -t 13:01:01
 #SBATCH -p alipour
 
