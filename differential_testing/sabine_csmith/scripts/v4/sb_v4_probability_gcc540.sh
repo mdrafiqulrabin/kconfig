@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH -J sb_v4_probability_gcc540_r1
+#SBATCH -J sb_v4_r1
 #SBATCH -o sb_v4_probability_gcc540_r1.o%j.txt
 #SBATCH -t 13:01:01
 #SBATCH -p alipour
@@ -14,6 +14,9 @@ m_cb=0 # CrashBug
 m_to=0 # TimeOut
 m_ct=0 # CrashBug or TimeOut
 m_wc=0 # WrongCode
+
+kc=-1 #k-means centroids
+n=10 #k=10
 
 function remove_temp {
     rm -rf *.c *.out *.txt *.info 2> /dev/null
@@ -74,7 +77,8 @@ function experiment_tc {
 }
 
 function exec_csmith {
-    args=`python /project/alipour/rabin/scripts/probability_csmith_args.py`
+    kc=$((((kc+1))%n))
+    args=`python /project/alipour/rabin/scripts/probability_csmith_args.py $kc`
     TCNAME=$(date +%Y%m%d%H%M%S%N).c
     /project/alipour/rabin/scripts/csmith.sh $args > $TCNAME
     if [ $? -ne 0 ]; then m_cs=$((m_cs+1)); return 1; fi
