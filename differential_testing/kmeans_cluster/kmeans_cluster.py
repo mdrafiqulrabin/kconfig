@@ -8,7 +8,7 @@ from sklearn.cluster import KMeans
 fin_arg_stats = "gcc_reg_arg_stats_binary.csv"
 
 # Number of clusters
-no_of_clus = 10
+no_of_clus = 16
 
 # Importing the dataset
 data_args = pd.read_csv(fin_arg_stats)
@@ -29,4 +29,4 @@ print(centroids)
 centroids = [[0 if (x < 0.5) else 1 for x in y] for y in centroids]
 
 #Print scikit-learn centroids
-for c in centroids: print c 
+for c in centroids: print c
