@@ -27,4 +27,4 @@ for path, subdirs, files in os.walk(target):
         if fnmatch(name, pattern):
             thisfile = os.path.join(path, name)
             #m_rename(thisfile,"482","540")
-            m_replace(thisfile, "&$to3&$to&$wc", "&$to3&$to&$wc  \\\\")
+            m_replace(thisfile, "(r1)", "(r3)")
