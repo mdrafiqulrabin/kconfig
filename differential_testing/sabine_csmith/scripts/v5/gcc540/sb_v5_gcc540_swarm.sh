@@ -132,8 +132,8 @@ function save_result {
     to3=`cat save_st/to3.txt | wc -l`
     to=$((to1+to2+to3))
     wc=`cat save_st/wc.txt | wc -l`
-    r="swarm(r1)&$m_tc&$cb1&$cb2&$cb3&$cb&$to1&$to2&$to3&$to&$wc"
-    echo "$r" >> /project/alipour/rabin/main/result.txt
+    r="swarm(r1)&$m_tc&$cb1&$cb2&$cb3&$cb&$to1&$to2&$to3&$to&$wc  \\"
+    echo "$r" >> /project/alipour/rabin/main/result540.txt
     echo "$r"
 }
 
