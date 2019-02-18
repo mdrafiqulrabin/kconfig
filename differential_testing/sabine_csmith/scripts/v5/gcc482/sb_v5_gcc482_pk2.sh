@@ -6,7 +6,7 @@
 
 # Note: gcc 4.8.2 -O0 vs -O3
 
-tout=30 # Timeout
+tout=10 # Timeout
 m_tc=0  # TestCase
 
 k=1  #2^k 2-means
