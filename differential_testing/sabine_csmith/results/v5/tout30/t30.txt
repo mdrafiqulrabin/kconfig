@@ -1,0 +1,82 @@
+
+\begin{table}
+\begin{center}
+\caption{13 hrs: GCC 4.8.2 (timeout=30)}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+\textbf{Setting of Csmith} & \textbf{Test cases} & \textbf{Crash(0)} & \textbf{Crash(3)} & \textbf{Crash(both)} & \textbf{Total Crash} & \textbf{Timeout(0)} & \textbf{Timeout(3)} & \textbf{Timeout(both)} & \textbf{Total Timeout} & \textbf{Wrong Output} \\
+\hline \hline
+def(r1)&4400&0&0&0&0&3&0&552&555&0 \\
+def(r2)&4832&0&0&0&0&4&0&609&613&0 \\
+def(r3)&4316&0&0&0&0&6&0&540&546&0 \\
+\hline
+pk1(r1)&4516&19&38&3&60&9&4&620&633&7 \\
+pk1(r2)&4637&25&49&2&76&11&2&685&698&12 \\
+pk1(r3)&4361&32&45&1&78&17&6&606&629&12 \\
+\hline
+pk2(r1)&4252&29&26&4&59&4&4&633&641&12 \\
+pk2(r2)&4550&23&37&1&61&6&4&688&698&12 \\
+pk2(r3)&4221&19&26&3&48&8&3&618&629&12 \\
+\hline
+pk4(r1)&4786&19&30&3&52&7&5&616&628&13 \\
+pk4(r2)&4944&26&26&1&53&12&6&677&695&18 \\
+pk4(r3)&4406&19&34&4&57&10&4&607&621&13 \\
+\hline
+pk8(r1)&4456&19&37&2&58&15&4&627&646&10 \\
+pk8(r2)&4370&16&27&2&45&5&5&695&705&11 \\
+pk8(r3)&4232&25&33&2&60&5&4&623&632&15 \\
+\hline
+pk16(r1)&4372&26&39&3&68&16&3&618&637&12 \\
+pk16(r2)&5140&19&49&0&68&15&4&674&693&21 \\
+pk16(r3)&4219&21&34&3&58&13&7&611&631&15 \\
+\hline
+swarm(r1)&4895&38&33&2&73&12&6&593&611&20 \\
+swarm(r2)&5067&39&33&3&75&13&9&655&677&26 \\
+swarm(r3)&4694&24&35&4&63&10&4&588&602&25 \\
+\hline
+\end{tabular}%
+}
+\end{center}
+\end{table}
+
+\begin{table}
+\begin{center}
+\caption{13 hrs: GCC 5.4.0 (timeout=30)}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+\textbf{Setting of Csmith} & \textbf{Test cases} & \textbf{Crash(0)} & \textbf{Crash(3)} & \textbf{Crash(both)} & \textbf{Total Crash} & \textbf{Timeout(0)} & \textbf{Timeout(3)} & \textbf{Timeout(both)} & \textbf{Total Timeout} & \textbf{Wrong Output} \\
+\hline \hline
+def(r1)&4110&0&0&0&0&5&0&515&520&0 \\
+def(r2)&4587&0&0&0&0&2&0&573&575&0 \\
+def(r3)&4270&0&0&0&0&5&0&505&510&0  \\
+\hline
+pk1(r1)&4189&0&0&0&0&1&0&614&615&15 \\
+pk1(r2)&4648&0&0&0&0&4&0&667&671&15 \\
+pk1(r3)&4062&0&0&0&0&1&0&609&610&5  \\
+\hline
+pk2(r1)&4132&0&0&0&0&0&0&615&615&23 \\
+pk2(r2)&4385&0&0&0&0&2&0&676&678&14 \\
+pk2(r3)&4273&0&0&0&0&0&0&597&597&10  \\
+\hline
+pk4(r1)&4333&0&0&0&0&2&0&605&607&16 \\
+pk4(r2)&4603&0&0&0&0&1&0&669&670&16 \\
+pk4(r3)&4420&0&0&0&0&0&0&594&594&26  \\
+\hline
+pk8(r1)&3949&0&0&0&0&1&0&616&617&17 \\
+pk8(r2)&4090&0&0&0&0&1&0&683&684&11 \\
+pk8(r3)&4114&0&0&0&0&4&0&602&606&19  \\
+\hline
+pk16(r1)&4198&0&0&0&0&0&0&615&615&25 \\
+pk16(r2)&4707&0&0&0&0&2&0&663&665&19 \\
+pk16(r3)&4003&0&0&0&0&1&0&599&600&21  \\
+\hline
+swarm(r1)&4364&0&0&0&0&6&0&575&581&33 \\
+swarm(r2)&4773&0&0&0&0&5&1&632&638&30 \\
+swarm(r3)&4312&0&0&0&0&2&0&576&578&30  \\
+\hline
+\end{tabular}%
+}
+\end{center}
+\end{table}
