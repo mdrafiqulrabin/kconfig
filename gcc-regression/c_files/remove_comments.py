@@ -1,10 +1,11 @@
 import sys, os, re
 
+# Refs: https://stackoverflow.com/a/241506/4784634
 def comment_remover(text):
     def replacer(match):
         s = match.group(0)
         if s.startswith('/'):
-            return " " # note: a space and not an empty string
+            return " " #space
         else:
             return s
     pattern = re.compile(
