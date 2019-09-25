@@ -1,0 +1,190 @@
+c_files/pr48596.c:21:13: warning: implicit declaration of function '_nrrdCenter' is invalid in C99 [-Wimplicit-function-declaration]
+          center = _nrrdCenter(nin->axis[d].center);
+                   ^
+1 warning generated.
+TranslationUnitDecl 0x7f9b440264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9b44026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9b44026740 '__int128'
+|-TypedefDecl 0x7f9b44026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9b44026760 'unsigned __int128'
+|-TypedefDecl 0x7f9b44026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9b44026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9b44026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9b44026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9b44026dc0 'char *'
+|   `-BuiltinType 0x7f9b44026560 'char'
+|-TypedefDecl 0x7f9b440270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9b44027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9b44026ee0 'struct __va_list_tag'
+|     `-Record 0x7f9b44026e58 '__va_list_tag'
+|-EnumDecl 0x7f9b44027120 <c_files/pr48596.c:2:1, col:74> col:1
+| |-EnumConstantDecl 0x7f9b44825a00 <col:8> col:8 nrrdCenterUnknown 'int'
+| |-EnumConstantDecl 0x7f9b44825a48 <col:27> col:27 nrrdCenterNode 'int'
+| |-EnumConstantDecl 0x7f9b44825a90 <col:43> col:43 referenced nrrdCenterCell 'int'
+| `-EnumConstantDecl 0x7f9b44825ad8 <col:59> col:59 nrrdCenterLast 'int'
+|-RecordDecl 0x7f9b44825b20 <line:3:9, col:40> col:9 struct definition
+| |-FieldDecl 0x7f9b44825be8 <col:18, col:22> col:22 referenced size 'int'
+| `-FieldDecl 0x7f9b44825c48 <col:28, col:32> col:32 referenced center 'int'
+|-TypedefDecl 0x7f9b44825ce0 <col:1, col:43> col:43 referenced NrrdAxis 'struct NrrdAxis':'NrrdAxis'
+| `-ElaboratedType 0x7f9b44825c90 'struct NrrdAxis' sugar
+|   `-RecordType 0x7f9b44825bb0 'NrrdAxis'
+|     `-Record 0x7f9b44825b20 ''
+|-RecordDecl 0x7f9b44825d50 <line:4:9, col:46> col:9 struct definition
+| |-FieldDecl 0x7f9b44825e18 <col:18, col:22> col:22 referenced dim 'int'
+| `-FieldDecl 0x7f9b44825f88 <col:27, col:43> col:36 referenced axis 'NrrdAxis [10]'
+|-TypedefDecl 0x7f9b44826020 <col:1, col:48> col:48 referenced Nrrd 'struct Nrrd':'Nrrd'
+| `-ElaboratedType 0x7f9b44825fd0 'struct Nrrd' sugar
+|   `-RecordType 0x7f9b44825de0 'Nrrd'
+|     `-Record 0x7f9b44825d50 ''
+|-RecordDecl 0x7f9b44826090 <line:5:9, col:18> col:9 struct definition
+|-TypedefDecl 0x7f9b44826190 <col:1, col:20> col:20 referenced NrrdKernel 'struct NrrdKernel':'NrrdKernel'
+| `-ElaboratedType 0x7f9b44826140 'struct NrrdKernel' sugar
+|   `-RecordType 0x7f9b44826120 'NrrdKernel'
+|     `-Record 0x7f9b44826090 ''
+|-RecordDecl 0x7f9b44826200 <line:6:9, col:65> col:9 struct definition
+| |-FieldDecl 0x7f9b448263e8 <col:18, col:45> col:36 referenced kernel 'const NrrdKernel *[10]'
+| `-FieldDecl 0x7f9b448264b0 <col:48, col:62> col:52 referenced samples 'int [10]'
+|-TypedefDecl 0x7f9b44826550 <col:1, col:67> col:67 referenced Info 'struct Info':'Info'
+| `-ElaboratedType 0x7f9b44826500 'struct Info' sugar
+|   `-RecordType 0x7f9b44826290 'Info'
+|     `-Record 0x7f9b44826200 ''
+|-FunctionDecl 0x7f9b44826a50 <line:8:1, line:28:1> line:9:1 foo 'void (Nrrd *, Nrrd *, const NrrdKernel *, const double *, const int *, const double *)'
+| |-ParmVarDecl 0x7f9b44826648 <col:6, col:12> col:12 nout 'Nrrd *'
+| |-ParmVarDecl 0x7f9b448266b8 <col:18, col:24> col:24 used nin 'Nrrd *'
+| |-ParmVarDecl 0x7f9b44826728 <col:29, col:47> col:47 used kernel 'const NrrdKernel *'
+| |-ParmVarDecl 0x7f9b448267d0 <col:55, col:69> col:69 parm 'const double *'
+| |-ParmVarDecl 0x7f9b44826848 <line:10:6, col:17> col:17 used samples 'const int *'
+| |-ParmVarDecl 0x7f9b448268c0 <col:26, col:40> col:40 used scalings 'const double *'
+| `-CompoundStmt 0x7f9b44828110 <line:11:1, line:28:1>
+|   |-DeclStmt 0x7f9b44826c48 <line:12:3, col:13>
+|   | `-VarDecl 0x7f9b44826be8 <col:3, col:9> col:9 used info 'Info *'
+|   |-DeclStmt 0x7f9b44826e68 <line:13:3, col:23>
+|   | |-VarDecl 0x7f9b44826c78 <col:3, col:7> col:7 used d 'int'
+|   | |-VarDecl 0x7f9b44826cf0 <col:3, col:10> col:10 p 'int'
+|   | |-VarDecl 0x7f9b44826d68 <col:3, col:13> col:13 np 'int'
+|   | `-VarDecl 0x7f9b44826de0 <col:3, col:17> col:17 used center 'int'
+|   `-ForStmt 0x7f9b448280d8 <line:14:3, line:27:5>
+|     |-BinaryOperator 0x7f9b44826ec8 <line:14:8, col:10> 'int' '='
+|     | |-DeclRefExpr 0x7f9b44826e80 <col:8> 'int' lvalue Var 0x7f9b44826c78 'd' 'int'
+|     | `-IntegerLiteral 0x7f9b44826ea8 <col:10> 'int' 0
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7f9b44826fc0 <col:13, col:20> 'int' '<'
+|     | |-ImplicitCastExpr 0x7f9b44826f90 <col:13> 'int' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7f9b44826ef0 <col:13> 'int' lvalue Var 0x7f9b44826c78 'd' 'int'
+|     | `-ImplicitCastExpr 0x7f9b44826fa8 <col:15, col:20> 'int' <LValueToRValue>
+|     |   `-MemberExpr 0x7f9b44826f58 <col:15, col:20> 'int' lvalue ->dim 0x7f9b44825e18
+|     |     `-ImplicitCastExpr 0x7f9b44826f40 <col:15> 'Nrrd *' <LValueToRValue>
+|     |       `-DeclRefExpr 0x7f9b44826f18 <col:15> 'Nrrd *' lvalue ParmVar 0x7f9b448266b8 'nin' 'Nrrd *'
+|     |-UnaryOperator 0x7f9b44827010 <col:25, col:26> 'int' postfix '++'
+|     | `-DeclRefExpr 0x7f9b44826fe8 <col:25> 'int' lvalue Var 0x7f9b44826c78 'd' 'int'
+|     `-CompoundStmt 0x7f9b448280b0 <line:15:5, line:27:5>
+|       |-BinaryOperator 0x7f9b448271c0 <line:16:7, col:25> 'const NrrdKernel *' '='
+|       | |-ArraySubscriptExpr 0x7f9b44827158 <col:7, col:21> 'const NrrdKernel *' lvalue
+|       | | |-ImplicitCastExpr 0x7f9b44827128 <col:7, col:13> 'const NrrdKernel **' <ArrayToPointerDecay>
+|       | | | `-MemberExpr 0x7f9b44827070 <col:7, col:13> 'const NrrdKernel *[10]' lvalue ->kernel 0x7f9b448263e8
+|       | | |   `-ImplicitCastExpr 0x7f9b44827058 <col:7> 'Info *' <LValueToRValue>
+|       | | |     `-DeclRefExpr 0x7f9b44827030 <col:7> 'Info *' lvalue Var 0x7f9b44826be8 'info' 'Info *'
+|       | | `-ImplicitCastExpr 0x7f9b44827140 <col:20> 'int' <LValueToRValue>
+|       | |   `-DeclRefExpr 0x7f9b448270a8 <col:20> 'int' lvalue Var 0x7f9b44826c78 'd' 'int'
+|       | `-ImplicitCastExpr 0x7f9b448271a8 <col:25> 'const NrrdKernel *' <LValueToRValue>
+|       |   `-DeclRefExpr 0x7f9b44827180 <col:25> 'const NrrdKernel *' lvalue ParmVar 0x7f9b44826728 'kernel' 'const NrrdKernel *'
+|       `-IfStmt 0x7f9b44828078 <line:17:7, line:26:2>
+|         |-<<<NULL>>>
+|         |-<<<NULL>>>
+|         |-ImplicitCastExpr 0x7f9b44827210 <line:17:11> 'const int *' <LValueToRValue>
+|         | `-DeclRefExpr 0x7f9b448271e8 <col:11> 'const int *' lvalue ParmVar 0x7f9b44826848 'samples' 'const int *'
+|         |-BinaryOperator 0x7f9b44827410 <line:18:2, col:30> 'int' '='
+|         | |-ArraySubscriptExpr 0x7f9b44827328 <col:2, col:17> 'int' lvalue
+|         | | |-ImplicitCastExpr 0x7f9b448272f8 <col:2, col:8> 'int *' <ArrayToPointerDecay>
+|         | | | `-MemberExpr 0x7f9b44827268 <col:2, col:8> 'int [10]' lvalue ->samples 0x7f9b448264b0
+|         | | |   `-ImplicitCastExpr 0x7f9b44827250 <col:2> 'Info *' <LValueToRValue>
+|         | | |     `-DeclRefExpr 0x7f9b44827228 <col:2> 'Info *' lvalue Var 0x7f9b44826be8 'info' 'Info *'
+|         | | `-ImplicitCastExpr 0x7f9b44827310 <col:16> 'int' <LValueToRValue>
+|         | |   `-DeclRefExpr 0x7f9b448272a0 <col:16> 'int' lvalue Var 0x7f9b44826c78 'd' 'int'
+|         | `-ImplicitCastExpr 0x7f9b448273f8 <col:21, col:30> 'int' <LValueToRValue>
+|         |   `-ArraySubscriptExpr 0x7f9b448273d0 <col:21, col:30> 'const int' lvalue
+|         |     |-ImplicitCastExpr 0x7f9b448273a0 <col:21> 'const int *' <LValueToRValue>
+|         |     | `-DeclRefExpr 0x7f9b44827350 <col:21> 'const int *' lvalue ParmVar 0x7f9b44826848 'samples' 'const int *'
+|         |     `-ImplicitCastExpr 0x7f9b448273b8 <col:29> 'int' <LValueToRValue>
+|         |       `-DeclRefExpr 0x7f9b44827378 <col:29> 'int' lvalue Var 0x7f9b44826c78 'd' 'int'
+|         `-CompoundStmt 0x7f9b44828050 <line:20:2, line:26:2>
+|           |-BinaryOperator 0x7f9b44827788 <line:21:4, col:44> 'int' '='
+|           | |-DeclRefExpr 0x7f9b44827438 <col:4> 'int' lvalue Var 0x7f9b44826de0 'center' 'int'
+|           | `-CallExpr 0x7f9b44827740 <col:13, col:44> 'int'
+|           |   |-ImplicitCastExpr 0x7f9b44827728 <col:13> 'int (*)()' <FunctionToPointerDecay>
+|           |   | `-DeclRefExpr 0x7f9b44827548 <col:13> 'int ()' Function 0x7f9b448274b0 '_nrrdCenter' 'int ()'
+|           |   `-ImplicitCastExpr 0x7f9b44827770 <col:25, col:38> 'int' <LValueToRValue>
+|           |     `-MemberExpr 0x7f9b448276c0 <col:25, col:38> 'int' lvalue .center 0x7f9b44825c48
+|           |       `-ArraySubscriptExpr 0x7f9b44827698 <col:25, col:36> 'NrrdAxis':'NrrdAxis' lvalue
+|           |         |-ImplicitCastExpr 0x7f9b44827668 <col:25, col:30> 'NrrdAxis *' <ArrayToPointerDecay>
+|           |         | `-MemberExpr 0x7f9b448275b0 <col:25, col:30> 'NrrdAxis [10]' lvalue ->axis 0x7f9b44825f88
+|           |         |   `-ImplicitCastExpr 0x7f9b44827598 <col:25> 'Nrrd *' <LValueToRValue>
+|           |         |     `-DeclRefExpr 0x7f9b44827570 <col:25> 'Nrrd *' lvalue ParmVar 0x7f9b448266b8 'nin' 'Nrrd *'
+|           |         `-ImplicitCastExpr 0x7f9b44827680 <col:35> 'int' <LValueToRValue>
+|           |           `-DeclRefExpr 0x7f9b448275e8 <col:35> 'int' lvalue Var 0x7f9b44826c78 'd' 'int'
+|           `-IfStmt 0x7f9b44828018 <line:22:4, line:25:63>
+|             |-<<<NULL>>>
+|             |-<<<NULL>>>
+|             |-BinaryOperator 0x7f9b44827818 <line:22:8, col:26> 'int' '=='
+|             | |-DeclRefExpr 0x7f9b448277b0 <col:8> 'int' EnumConstant 0x7f9b44825a90 'nrrdCenterCell' 'int'
+|             | `-ImplicitCastExpr 0x7f9b44827800 <col:26> 'int' <LValueToRValue>
+|             |   `-DeclRefExpr 0x7f9b448277d8 <col:26> 'int' lvalue Var 0x7f9b44826de0 'center' 'int'
+|             |-BinaryOperator 0x7f9b44827ba8 <line:23:6, col:53> 'int' '='
+|             | |-ArraySubscriptExpr 0x7f9b44827910 <col:6, col:21> 'int' lvalue
+|             | | |-ImplicitCastExpr 0x7f9b448278e0 <col:6, col:12> 'int *' <ArrayToPointerDecay>
+|             | | | `-MemberExpr 0x7f9b44827880 <col:6, col:12> 'int [10]' lvalue ->samples 0x7f9b448264b0
+|             | | |   `-ImplicitCastExpr 0x7f9b44827868 <col:6> 'Info *' <LValueToRValue>
+|             | | |     `-DeclRefExpr 0x7f9b44827840 <col:6> 'Info *' lvalue Var 0x7f9b44826be8 'info' 'Info *'
+|             | | `-ImplicitCastExpr 0x7f9b448278f8 <col:20> 'int' <LValueToRValue>
+|             | |   `-DeclRefExpr 0x7f9b448278b8 <col:20> 'int' lvalue Var 0x7f9b44826c78 'd' 'int'
+|             | `-ImplicitCastExpr 0x7f9b44827b90 <col:25, col:53> 'int' <FloatingToIntegral>
+|             |   `-BinaryOperator 0x7f9b44827b68 <col:25, col:53> 'double' '*'
+|             |     |-ImplicitCastExpr 0x7f9b44827b50 <col:25, col:38> 'double' <IntegralToFloating>
+|             |     | `-ImplicitCastExpr 0x7f9b44827b20 <col:25, col:38> 'int' <LValueToRValue>
+|             |     |   `-MemberExpr 0x7f9b44827a40 <col:25, col:38> 'int' lvalue .size 0x7f9b44825be8
+|             |     |     `-ArraySubscriptExpr 0x7f9b44827a18 <col:25, col:36> 'NrrdAxis':'NrrdAxis' lvalue
+|             |     |       |-ImplicitCastExpr 0x7f9b448279d8 <col:25, col:30> 'NrrdAxis *' <ArrayToPointerDecay>
+|             |     |       | `-MemberExpr 0x7f9b44827978 <col:25, col:30> 'NrrdAxis [10]' lvalue ->axis 0x7f9b44825f88
+|             |     |       |   `-ImplicitCastExpr 0x7f9b44827960 <col:25> 'Nrrd *' <LValueToRValue>
+|             |     |       |     `-DeclRefExpr 0x7f9b44827938 <col:25> 'Nrrd *' lvalue ParmVar 0x7f9b448266b8 'nin' 'Nrrd *'
+|             |     |       `-ImplicitCastExpr 0x7f9b44827a00 <col:35> 'int' <LValueToRValue>
+|             |     |         `-DeclRefExpr 0x7f9b448279b0 <col:35> 'int' lvalue Var 0x7f9b44826c78 'd' 'int'
+|             |     `-ImplicitCastExpr 0x7f9b44827b38 <col:43, col:53> 'double' <LValueToRValue>
+|             |       `-ArraySubscriptExpr 0x7f9b44827af8 <col:43, col:53> 'const double' lvalue
+|             |         |-ImplicitCastExpr 0x7f9b44827ac8 <col:43> 'const double *' <LValueToRValue>
+|             |         | `-DeclRefExpr 0x7f9b44827a78 <col:43> 'const double *' lvalue ParmVar 0x7f9b448268c0 'scalings' 'const double *'
+|             |         `-ImplicitCastExpr 0x7f9b44827ae0 <col:52> 'int' <LValueToRValue>
+|             |           `-DeclRefExpr 0x7f9b44827aa0 <col:52> 'int' lvalue Var 0x7f9b44826c78 'd' 'int'
+|             `-BinaryOperator 0x7f9b44827ff0 <line:25:6, col:63> 'int' '='
+|               |-ArraySubscriptExpr 0x7f9b44827ca0 <col:6, col:21> 'int' lvalue
+|               | |-ImplicitCastExpr 0x7f9b44827c70 <col:6, col:12> 'int *' <ArrayToPointerDecay>
+|               | | `-MemberExpr 0x7f9b44827c10 <col:6, col:12> 'int [10]' lvalue ->samples 0x7f9b448264b0
+|               | |   `-ImplicitCastExpr 0x7f9b44827bf8 <col:6> 'Info *' <LValueToRValue>
+|               | |     `-DeclRefExpr 0x7f9b44827bd0 <col:6> 'Info *' lvalue Var 0x7f9b44826be8 'info' 'Info *'
+|               | `-ImplicitCastExpr 0x7f9b44827c88 <col:20> 'int' <LValueToRValue>
+|               |   `-DeclRefExpr 0x7f9b44827c48 <col:20> 'int' lvalue Var 0x7f9b44826c78 'd' 'int'
+|               `-ImplicitCastExpr 0x7f9b44827fd8 <col:25, col:63> 'int' <FloatingToIntegral>
+|                 `-BinaryOperator 0x7f9b44827fb0 <col:25, col:63> 'double' '+'
+|                   |-BinaryOperator 0x7f9b44827f50 <col:25, col:59> 'double' '*'
+|                   | |-ImplicitCastExpr 0x7f9b44827f38 <col:25, col:47> 'double' <IntegralToFloating>
+|                   | | `-ParenExpr 0x7f9b44827e58 <col:25, col:47> 'int'
+|                   | |   `-BinaryOperator 0x7f9b44827e30 <col:26, col:46> 'int' '-'
+|                   | |     |-ImplicitCastExpr 0x7f9b44827e18 <col:26, col:39> 'int' <LValueToRValue>
+|                   | |     | `-MemberExpr 0x7f9b44827dc0 <col:26, col:39> 'int' lvalue .size 0x7f9b44825be8
+|                   | |     |   `-ArraySubscriptExpr 0x7f9b44827d98 <col:26, col:37> 'NrrdAxis':'NrrdAxis' lvalue
+|                   | |     |     |-ImplicitCastExpr 0x7f9b44827d68 <col:26, col:31> 'NrrdAxis *' <ArrayToPointerDecay>
+|                   | |     |     | `-MemberExpr 0x7f9b44827d08 <col:26, col:31> 'NrrdAxis [10]' lvalue ->axis 0x7f9b44825f88
+|                   | |     |     |   `-ImplicitCastExpr 0x7f9b44827cf0 <col:26> 'Nrrd *' <LValueToRValue>
+|                   | |     |     |     `-DeclRefExpr 0x7f9b44827cc8 <col:26> 'Nrrd *' lvalue ParmVar 0x7f9b448266b8 'nin' 'Nrrd *'
+|                   | |     |     `-ImplicitCastExpr 0x7f9b44827d80 <col:36> 'int' <LValueToRValue>
+|                   | |     |       `-DeclRefExpr 0x7f9b44827d40 <col:36> 'int' lvalue Var 0x7f9b44826c78 'd' 'int'
+|                   | |     `-IntegerLiteral 0x7f9b44827df8 <col:46> 'int' 1
+|                   | `-ImplicitCastExpr 0x7f9b44827f20 <col:49, col:59> 'double' <LValueToRValue>
+|                   |   `-ArraySubscriptExpr 0x7f9b44827ef8 <col:49, col:59> 'const double' lvalue
+|                   |     |-ImplicitCastExpr 0x7f9b44827ec8 <col:49> 'const double *' <LValueToRValue>
+|                   |     | `-DeclRefExpr 0x7f9b44827e78 <col:49> 'const double *' lvalue ParmVar 0x7f9b448268c0 'scalings' 'const double *'
+|                   |     `-ImplicitCastExpr 0x7f9b44827ee0 <col:58> 'int' <LValueToRValue>
+|                   |       `-DeclRefExpr 0x7f9b44827ea0 <col:58> 'int' lvalue Var 0x7f9b44826c78 'd' 'int'
+|                   `-ImplicitCastExpr 0x7f9b44827f98 <col:63> 'double' <IntegralToFloating>
+|                     `-IntegerLiteral 0x7f9b44827f78 <col:63> 'int' 1
+`-FunctionDecl 0x7f9b448274b0 <<invalid sloc>> line:21:13 implicit used _nrrdCenter 'int ()'

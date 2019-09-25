@@ -1,0 +1,107 @@
+TranslationUnitDecl 0x7f9ef10264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9ef1026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9ef1026740 '__int128'
+|-TypedefDecl 0x7f9ef1026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9ef1026760 'unsigned __int128'
+|-TypedefDecl 0x7f9ef1026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9ef1026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9ef1026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9ef1026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9ef1026dc0 'char *'
+|   `-BuiltinType 0x7f9ef1026560 'char'
+|-TypedefDecl 0x7f9ef10270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9ef1027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9ef1026ee0 'struct __va_list_tag'
+|     `-Record 0x7f9ef1026e58 '__va_list_tag'
+|-RecordDecl 0x7f9ef1027120 <c_files/pr59924.c:5:1, col:48> col:8 struct S definition
+| |-RecordDecl 0x7f9ef1825a00 parent 0x7f9ef10264d0 <col:12, col:19> col:19 struct T
+| |-FieldDecl 0x7f9ef1825b70 <col:12, col:22> col:22 referenced a 'struct T *'
+| |-FieldDecl 0x7f9ef1825bd0 <col:25, col:32> col:32 referenced b 'double'
+| `-FieldDecl 0x7f9ef1825cd0 <col:35, col:45> col:45 referenced c 'struct S *'
+|-RecordDecl 0x7f9ef1825d18 prev 0x7f9ef1825a00 <line:6:1, col:25> col:8 struct T definition
+| `-FieldDecl 0x7f9ef1825dc8 <col:12, col:22> col:22 referenced d 'struct S *'
+|-FunctionDecl 0x7f9ef1825ef0 <line:7:1, col:24> col:13 used bar 'void (double)' extern
+| `-ParmVarDecl 0x7f9ef1825e28 <col:18> col:24 'double'
+`-FunctionDecl 0x7f9ef18262a0 <line:9:1, line:27:1> line:10:1 foo 'void (struct S *, int, int, int)'
+  |-ParmVarDecl 0x7f9ef1825ff8 <col:6, col:17> col:17 used x 'struct S *'
+  |-ParmVarDecl 0x7f9ef1826070 <col:20, col:24> col:24 used y 'int'
+  |-ParmVarDecl 0x7f9ef18260e8 <col:27, col:31> col:31 used z 'int'
+  |-ParmVarDecl 0x7f9ef1826160 <col:34, col:38> col:38 used w 'int'
+  `-CompoundStmt 0x7f9ef1826ec0 <line:11:1, line:27:1>
+    |-DeclStmt 0x7f9ef18263d0 <line:12:3, col:8>
+    | `-VarDecl 0x7f9ef1826370 <col:3, col:7> col:7 used e 'int'
+    |-DeclStmt 0x7f9ef1826470 <line:13:3, col:14>
+    | `-VarDecl 0x7f9ef1826410 <col:3, col:13> col:13 used f 'struct S *'
+    |-ForStmt 0x7f9ef1826920 <line:14:3, line:21:5>
+    | |-BinaryOperator 0x7f9ef1826590 <line:14:8, col:18> 'struct S *' '='
+    | | |-DeclRefExpr 0x7f9ef1826488 <col:8> 'struct S *' lvalue Var 0x7f9ef1826410 'f' 'struct S *'
+    | | `-ImplicitCastExpr 0x7f9ef1826578 <col:12, col:18> 'struct S *' <LValueToRValue>
+    | |   `-MemberExpr 0x7f9ef1826540 <col:12, col:18> 'struct S *' lvalue ->d 0x7f9ef1825dc8
+    | |     `-ImplicitCastExpr 0x7f9ef1826528 <col:12, col:15> 'struct T *' <LValueToRValue>
+    | |       `-MemberExpr 0x7f9ef18264f0 <col:12, col:15> 'struct T *' lvalue ->a 0x7f9ef1825b70
+    | |         `-ImplicitCastExpr 0x7f9ef18264d8 <col:12> 'struct S *' <LValueToRValue>
+    | |           `-DeclRefExpr 0x7f9ef18264b0 <col:12> 'struct S *' lvalue ParmVar 0x7f9ef1825ff8 'x' 'struct S *'
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7f9ef18265e0 <col:21> 'struct S *' <LValueToRValue>
+    | | `-DeclRefExpr 0x7f9ef18265b8 <col:21> 'struct S *' lvalue Var 0x7f9ef1826410 'f' 'struct S *'
+    | |-BinaryOperator 0x7f9ef18266b0 <col:24, col:31> 'struct S *' '='
+    | | |-DeclRefExpr 0x7f9ef18265f8 <col:24> 'struct S *' lvalue Var 0x7f9ef1826410 'f' 'struct S *'
+    | | `-ImplicitCastExpr 0x7f9ef1826698 <col:28, col:31> 'struct S *' <LValueToRValue>
+    | |   `-MemberExpr 0x7f9ef1826660 <col:28, col:31> 'struct S *' lvalue ->c 0x7f9ef1825cd0
+    | |     `-ImplicitCastExpr 0x7f9ef1826648 <col:28> 'struct S *' <LValueToRValue>
+    | |       `-DeclRefExpr 0x7f9ef1826620 <col:28> 'struct S *' lvalue Var 0x7f9ef1826410 'f' 'struct S *'
+    | `-CompoundStmt 0x7f9ef1826900 <line:15:5, line:21:5>
+    |   `-IfStmt 0x7f9ef18268c8 <line:16:7, line:20:2>
+    |     |-<<<NULL>>>
+    |     |-<<<NULL>>>
+    |     |-BinaryOperator 0x7f9ef1826738 <line:16:11, col:15> 'int' '<'
+    |     | |-IntegerLiteral 0x7f9ef18266d8 <col:11> 'int' 5
+    |     | `-ImplicitCastExpr 0x7f9ef1826720 <col:15> 'int' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x7f9ef18266f8 <col:15> 'int' lvalue ParmVar 0x7f9ef1826160 'w' 'int'
+    |     |-CompoundStmt 0x7f9ef18268a0 <line:17:2, line:20:2>
+    |     | |-BinaryOperator 0x7f9ef18267e8 <line:18:4, col:9> 'int' '='
+    |     | | |-DeclRefExpr 0x7f9ef1826760 <col:4> 'int' lvalue Var 0x7f9ef1826370 'e' 'int'
+    |     | | `-UnaryOperator 0x7f9ef18267c8 <col:8, col:9> 'int' prefix '-'
+    |     | |   `-ImplicitCastExpr 0x7f9ef18267b0 <col:9> 'int' <LValueToRValue>
+    |     | |     `-DeclRefExpr 0x7f9ef1826788 <col:9> 'int' lvalue ParmVar 0x7f9ef1826160 'w' 'int'
+    |     | `-BinaryOperator 0x7f9ef1826878 <line:19:4, col:8> 'int' '='
+    |     |   |-DeclRefExpr 0x7f9ef1826810 <col:4> 'int' lvalue ParmVar 0x7f9ef18260e8 'z' 'int'
+    |     |   `-ImplicitCastExpr 0x7f9ef1826860 <col:8> 'int' <LValueToRValue>
+    |     |     `-DeclRefExpr 0x7f9ef1826838 <col:8> 'int' lvalue ParmVar 0x7f9ef1826160 'w' 'int'
+    |     `-<<<NULL>>>
+    `-IfStmt 0x7f9ef1826e88 <line:22:3, line:26:5>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7f9ef1826a88 <line:22:7, col:22> 'int' '||'
+      | |-BinaryOperator 0x7f9ef18269b8 <col:7, col:12> 'int' '!='
+      | | |-ImplicitCastExpr 0x7f9ef18269a0 <col:7> 'int' <LValueToRValue>
+      | | | `-DeclRefExpr 0x7f9ef1826958 <col:7> 'int' lvalue ParmVar 0x7f9ef1826070 'y' 'int'
+      | | `-IntegerLiteral 0x7f9ef1826980 <col:12> 'int' 0
+      | `-BinaryOperator 0x7f9ef1826a60 <col:17, col:22> 'int' '!='
+      |   |-ImplicitCastExpr 0x7f9ef1826a48 <col:17> 'int' <LValueToRValue>
+      |   | `-DeclRefExpr 0x7f9ef1826a00 <col:17> 'int' lvalue ParmVar 0x7f9ef18260e8 'z' 'int'
+      |   `-IntegerLiteral 0x7f9ef1826a28 <col:22> 'int' 0
+      |-CompoundStmt 0x7f9ef1826e60 <line:23:5, line:26:5>
+      | |-DeclStmt 0x7f9ef1826d08 <line:24:7, col:48>
+      | | `-VarDecl 0x7f9ef1826ac8 <col:7, col:47> col:14 used g 'double' cinit
+      | |   `-BinaryOperator 0x7f9ef1826ce0 <col:18, col:47> 'double' '+'
+      | |     |-ImplicitCastExpr 0x7f9ef1826cc8 <col:18, col:21> 'double' <LValueToRValue>
+      | |     | `-MemberExpr 0x7f9ef1826b68 <col:18, col:21> 'double' lvalue ->b 0x7f9ef1825bd0
+      | |     |   `-ImplicitCastExpr 0x7f9ef1826b50 <col:18> 'struct S *' <LValueToRValue>
+      | |     |     `-DeclRefExpr 0x7f9ef1826b28 <col:18> 'struct S *' lvalue ParmVar 0x7f9ef1825ff8 'x' 'struct S *'
+      | |     `-BinaryOperator 0x7f9ef1826ca0 <col:25, col:47> 'double' '*'
+      | |       |-CStyleCastExpr 0x7f9ef1826bf8 <col:25, col:34> 'double' <IntegralToFloating>
+      | |       | `-ImplicitCastExpr 0x7f9ef1826be0 <col:34> 'int' <LValueToRValue>
+      | |       |   `-DeclRefExpr 0x7f9ef1826ba0 <col:34> 'int' lvalue Var 0x7f9ef1826370 'e' 'int'
+      | |       `-CStyleCastExpr 0x7f9ef1826c78 <col:38, col:47> 'double' <IntegralToFloating>
+      | |         `-ImplicitCastExpr 0x7f9ef1826c60 <col:47> 'int' <LValueToRValue>
+      | |           `-DeclRefExpr 0x7f9ef1826c20 <col:47> 'int' lvalue ParmVar 0x7f9ef1826070 'y' 'int'
+      | `-CallExpr 0x7f9ef1826e30 <line:25:7, col:17> 'void'
+      |   |-ImplicitCastExpr 0x7f9ef1826e18 <col:7> 'void (*)(double)' <FunctionToPointerDecay>
+      |   | `-DeclRefExpr 0x7f9ef1826d20 <col:7> 'void (double)' Function 0x7f9ef1825ef0 'bar' 'void (double)'
+      |   `-BinaryOperator 0x7f9ef1826dc8 <col:12, col:16> 'double' '*'
+      |     |-ImplicitCastExpr 0x7f9ef1826d98 <col:12> 'double' <LValueToRValue>
+      |     | `-DeclRefExpr 0x7f9ef1826d48 <col:12> 'double' lvalue Var 0x7f9ef1826ac8 'g' 'double'
+      |     `-ImplicitCastExpr 0x7f9ef1826db0 <col:16> 'double' <LValueToRValue>
+      |       `-DeclRefExpr 0x7f9ef1826d70 <col:16> 'double' lvalue Var 0x7f9ef1826ac8 'g' 'double'
+      `-<<<NULL>>>

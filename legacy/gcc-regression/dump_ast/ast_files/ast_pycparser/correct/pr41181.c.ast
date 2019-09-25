@@ -1,0 +1,59 @@
+FileAST: 
+  Decl: paths, [], [], []
+    ArrayDecl: []
+      TypeDecl: paths, []
+        IdentifierType: ['char']
+      Constant: int, 1024
+  FuncDef: 
+    Decl: x264_slicetype_path, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: best_paths, [], [], []
+            PtrDecl: []
+              ArrayDecl: []
+                TypeDecl: best_paths, []
+                  IdentifierType: ['char']
+                Constant: int, 250
+          Decl: n, [], [], []
+            TypeDecl: n, []
+              IdentifierType: ['int']
+          Decl: length, [], [], []
+            TypeDecl: length, []
+              IdentifierType: ['int']
+        TypeDecl: x264_slicetype_path, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: __builtin_memcpy
+        ExprList: 
+          ArrayRef: 
+            ID: best_paths
+            ID: n
+          ID: paths
+          ID: length
+  FuncDef: 
+    Decl: x264_slicetype_analyse, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: n, [], [], []
+            TypeDecl: n, []
+              IdentifierType: ['int']
+          Decl: length, [], [], []
+            TypeDecl: length, []
+              IdentifierType: ['int']
+        TypeDecl: x264_slicetype_analyse, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: best_paths, [], [], []
+        ArrayDecl: []
+          ArrayDecl: []
+            TypeDecl: best_paths, []
+              IdentifierType: ['char']
+            Constant: int, 250
+          Constant: int, 250
+      FuncCall: 
+        ID: x264_slicetype_path
+        ExprList: 
+          ID: best_paths
+          ID: n
+          ID: length

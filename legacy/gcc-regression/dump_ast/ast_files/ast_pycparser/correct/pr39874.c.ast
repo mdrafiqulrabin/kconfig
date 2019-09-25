@@ -1,0 +1,69 @@
+FileAST: 
+  Decl: func, [], ['extern'], []
+    FuncDecl: 
+      TypeDecl: func, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: test1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: signature, [], [], []
+            PtrDecl: []
+              TypeDecl: signature, []
+                IdentifierType: ['char']
+        TypeDecl: test1, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: ch, [], [], []
+        TypeDecl: ch, []
+          IdentifierType: ['char']
+        ArrayRef: 
+          ID: signature
+          Constant: int, 0
+      If: 
+        BinaryOp: ||
+          BinaryOp: ==
+            ID: ch
+            Constant: int, 15
+          BinaryOp: ==
+            ID: ch
+            Constant: int, 3
+        Compound: 
+          If: 
+            BinaryOp: ==
+              ID: ch
+              Constant: int, 15
+            FuncCall: 
+              ID: func
+  FuncDef: 
+    Decl: test2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: signature, [], [], []
+            PtrDecl: []
+              TypeDecl: signature, []
+                IdentifierType: ['char']
+        TypeDecl: test2, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: ch, [], [], []
+        TypeDecl: ch, []
+          IdentifierType: ['char']
+        ArrayRef: 
+          ID: signature
+          Constant: int, 0
+      If: 
+        BinaryOp: ||
+          BinaryOp: ==
+            ID: ch
+            Constant: int, 15
+          BinaryOp: ==
+            ID: ch
+            Constant: int, 3
+        Compound: 
+          If: 
+            BinaryOp: >
+              ID: ch
+              Constant: int, 14
+            FuncCall: 
+              ID: func

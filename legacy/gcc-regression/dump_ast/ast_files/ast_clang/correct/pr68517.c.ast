@@ -1,0 +1,51 @@
+TranslationUnitDecl 0x7ff88e0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff88e026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff88e026740 '__int128'
+|-TypedefDecl 0x7ff88e026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff88e026760 'unsigned __int128'
+|-TypedefDecl 0x7ff88e026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff88e026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff88e026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff88e026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff88e026dc0 'char *'
+|   `-BuiltinType 0x7ff88e026560 'char'
+|-TypedefDecl 0x7ff88e0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff88e027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff88e026ee0 'struct __va_list_tag'
+|     `-Record 0x7ff88e026e58 '__va_list_tag'
+|-RecordDecl 0x7ff88e027120 <c_files/pr68517.c:3:9, line:5:1> line:3:9 struct definition
+|-TypedefDecl 0x7ff88e077420 <col:1, line:5:3> col:3 referenced st1 'struct st1':'st1'
+| `-ElaboratedType 0x7ff88e0271d0 'struct st1' sugar
+|   `-RecordType 0x7ff88e0271b0 'st1'
+|     `-Record 0x7ff88e027120 ''
+|-RecordDecl 0x7ff88e077490 <line:7:9, line:10:1> line:7:9 struct definition
+| |-AlignedAttr 0x7ff88e0775c0 <line:10:19, col:29> aligned
+| | `-IntegerLiteral 0x7ff88e0775a0 <col:28> 'int' 4
+| `-FieldDecl 0x7ff88e077558 <line:9:3, col:16> col:16 c 'volatile int'
+|-TypedefDecl 0x7ff88e077660 <line:7:1, line:10:33> col:33 referenced st2 'struct st2':'st2'
+| `-ElaboratedType 0x7ff88e077610 'struct st2' sugar
+|   `-RecordType 0x7ff88e077520 'st2'
+|     `-Record 0x7ff88e077490 ''
+|-RecordDecl 0x7ff88e0776d0 <line:12:1, line:17:1> line:12:8 struct s4 definition
+| |-FieldDecl 0x7ff88e0777b0 <line:14:3, col:7> col:7 referenced f1 'st1':'st1'
+| |-FieldDecl 0x7ff88e077830 <line:15:3, col:7> col:7 f2 'st2':'st2'
+| `-FieldDecl 0x7ff88e077888 <line:16:3, col:7> col:7 referenced f3 'st1':'st1'
+|-RecordDecl 0x7ff88e077958 <line:19:1, col:8> col:8 struct s3
+`-FunctionDecl 0x7ff88e077cd0 <line:21:1, line:26:1> line:22:1 foo 'void (struct s3 *, struct s4 *)'
+  |-ParmVarDecl 0x7ff88e077ab0 <col:6, col:17> col:17 arg 'struct s3 *'
+  |-ParmVarDecl 0x7ff88e077bc0 <col:22, col:33> col:33 used arg1 'struct s4 *'
+  `-CompoundStmt 0x7ff88e078098 <line:23:1, line:26:1>
+    |-BinaryOperator 0x7ff88e077f00 <line:24:3, col:22> 'st1':'st1' '='
+    | |-MemberExpr 0x7ff88e077df8 <col:3, col:9> 'st1':'st1' lvalue ->f1 0x7ff88e0777b0
+    | | `-ImplicitCastExpr 0x7ff88e077de0 <col:3> 'struct s4 *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7ff88e077db8 <col:3> 'struct s4 *' lvalue ParmVar 0x7ff88e077bc0 'arg1' 'struct s4 *'
+    | `-ImplicitCastExpr 0x7ff88e077ee8 <col:14, col:22> 'st1':'st1' <LValueToRValue>
+    |   `-CompoundLiteralExpr 0x7ff88e077ec0 <col:14, col:22> 'st1':'st1' lvalue
+    |     `-InitListExpr 0x7ff88e077e80 <col:20, col:22> 'st1':'st1'
+    `-BinaryOperator 0x7ff88e078070 <line:25:3, col:22> 'st1':'st1' '='
+      |-MemberExpr 0x7ff88e077f68 <col:3, col:9> 'st1':'st1' lvalue ->f3 0x7ff88e077888
+      | `-ImplicitCastExpr 0x7ff88e077f50 <col:3> 'struct s4 *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7ff88e077f28 <col:3> 'struct s4 *' lvalue ParmVar 0x7ff88e077bc0 'arg1' 'struct s4 *'
+      `-ImplicitCastExpr 0x7ff88e078058 <col:14, col:22> 'st1':'st1' <LValueToRValue>
+        `-CompoundLiteralExpr 0x7ff88e078030 <col:14, col:22> 'st1':'st1' lvalue
+          `-InitListExpr 0x7ff88e077ff0 <col:20, col:22> 'st1':'st1'

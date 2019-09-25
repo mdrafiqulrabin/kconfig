@@ -1,0 +1,28 @@
+FileAST: 
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: f, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: c, [], [], []
+        PtrDecl: []
+          TypeDecl: c, []
+            IdentifierType: ['char']
+      DoWhile: 
+        Constant: int, 1
+        Compound: 
+          If: 
+            ID: c
+            Break: 
+      If: 
+        UnaryOp: !
+          ID: c
+        While: 
+          Constant: int, 1
+          FuncCall: 
+            ID: f

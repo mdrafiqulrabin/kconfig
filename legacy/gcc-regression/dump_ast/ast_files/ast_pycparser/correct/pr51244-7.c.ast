@@ -1,0 +1,37 @@
+FileAST: 
+  Decl: other_func, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['long', 'long']
+      TypeDecl: other_func, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: test_00, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['unsigned', 'long', 'long']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['unsigned', 'long', 'long']
+        TypeDecl: test_00, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: >
+          BinaryOp: -
+            ID: a
+            ID: b
+          Constant: int, 0xFFFFFFFFLL
+        Return: 
+          FuncCall: 
+            ID: other_func
+            ExprList: 
+              BinaryOp: -
+                ID: a
+                ID: b
+      Return: 
+        Constant: int, 20

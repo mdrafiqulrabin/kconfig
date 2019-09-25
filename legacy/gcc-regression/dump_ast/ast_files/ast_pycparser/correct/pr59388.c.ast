@@ -1,0 +1,30 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      Struct: S
+        Decl: f, [], [], []
+          TypeDecl: f, []
+            IdentifierType: ['unsigned', 'int']
+          Constant: int, 1
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Assignment: =
+        ID: a
+        BinaryOp: |
+          BinaryOp: <
+            Constant: int, 0
+            StructRef: .
+              ID: b
+              ID: f
+          StructRef: .
+            ID: b
+            ID: f
+      Return: 
+        ID: a

@@ -1,0 +1,51 @@
+c_files/pr70876.c:8:17: error: fields must have a constant size: 'variable length array in structure' extension will never be supported
+  struct { char a[z]; } x;
+                ^
+c_files/pr70876.c:12:3: warning: implicit declaration of function 'foo' is invalid in C99 [-Wimplicit-function-declaration]
+  foo (x, x);
+  ^
+1 warning and 1 error generated.
+TranslationUnitDecl 0x7fe54480a8d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe54480ae20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe54480ab40 '__int128'
+|-TypedefDecl 0x7fe54480ae90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe54480ab60 'unsigned __int128'
+|-TypedefDecl 0x7fe54480b168 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe54480af70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe54480aee8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe54480b200 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe54480b1c0 'char *'
+|   `-BuiltinType 0x7fe54480a960 'char'
+|-TypedefDecl 0x7fe54480b4c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe54480b470 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe54480b2e0 'struct __va_list_tag'
+|     `-Record 0x7fe54480b258 '__va_list_tag'
+|-FunctionDecl 0x7fe54483ced0 <c_files/pr70876.c:4:1, line:13:1> line:4:6 f 'void (char *, char *)'
+| |-ParmVarDecl 0x7fe54480b538 <col:9, col:15> col:15 used s1 'char *'
+| |-ParmVarDecl 0x7fe54483ce00 <col:19, col:25> col:25 used s2 'char *'
+| `-CompoundStmt 0x7fe54483d628 <line:5:1, line:13:1>
+|   |-DeclStmt 0x7fe54483d050 <line:6:3, col:12>
+|   | `-VarDecl 0x7fe54483cfd0 <col:3, col:11> col:7 used z 'int' cinit
+|   |   `-IntegerLiteral 0x7fe54483d030 <col:11> 'int' 5
+|   |-DeclStmt 0x7fe54483d2b8 <line:8:3, col:26>
+|   | |-RecordDecl 0x7fe54483d068 <col:3, col:23> col:3 invalid struct definition
+|   | | `-FieldDecl 0x7fe54483d1a8 <col:12, col:20> col:17 invalid a 'char [z]'
+|   | `-VarDecl 0x7fe54483d240 <col:3, col:25> col:25 used x 'struct (anonymous struct at c_files/pr70876.c:8:3)':'struct (anonymous at c_files/pr70876.c:8:3)'
+|   |-BinaryOperator 0x7fe54483d3f8 <line:10:3, col:15> 'char' '='
+|   | |-ArraySubscriptExpr 0x7fe54483d330 <col:3, col:7> 'char' lvalue
+|   | | |-ImplicitCastExpr 0x7fe54483d318 <col:3> 'char *' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fe54483d2d0 <col:3> 'char *' lvalue ParmVar 0x7fe54480b538 's1' 'char *'
+|   | | `-IntegerLiteral 0x7fe54483d2f8 <col:6> 'int' 0
+|   | `-ImplicitCastExpr 0x7fe54483d3e0 <col:11, col:15> 'char' <LValueToRValue>
+|   |   `-ArraySubscriptExpr 0x7fe54483d3b8 <col:11, col:15> 'char' lvalue
+|   |     |-ImplicitCastExpr 0x7fe54483d3a0 <col:11> 'char *' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7fe54483d358 <col:11> 'char *' lvalue ParmVar 0x7fe54483ce00 's2' 'char *'
+|   |     `-IntegerLiteral 0x7fe54483d380 <col:14> 'int' 0
+|   `-CallExpr 0x7fe54483d5c0 <line:12:3, col:12> 'int'
+|     |-ImplicitCastExpr 0x7fe54483d5a8 <col:3> 'int (*)()' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fe54483d508 <col:3> 'int ()' Function 0x7fe54483d470 'foo' 'int ()'
+|     |-ImplicitCastExpr 0x7fe54483d5f8 <col:8> 'struct (anonymous struct at c_files/pr70876.c:8:3)':'struct (anonymous at c_files/pr70876.c:8:3)' <LValueToRValue>
+|     | `-DeclRefExpr 0x7fe54483d530 <col:8> 'struct (anonymous struct at c_files/pr70876.c:8:3)':'struct (anonymous at c_files/pr70876.c:8:3)' lvalue Var 0x7fe54483d240 'x' 'struct (anonymous struct at c_files/pr70876.c:8:3)':'struct (anonymous at c_files/pr70876.c:8:3)'
+|     `-ImplicitCastExpr 0x7fe54483d610 <col:11> 'struct (anonymous struct at c_files/pr70876.c:8:3)':'struct (anonymous at c_files/pr70876.c:8:3)' <LValueToRValue>
+|       `-DeclRefExpr 0x7fe54483d558 <col:11> 'struct (anonymous struct at c_files/pr70876.c:8:3)':'struct (anonymous at c_files/pr70876.c:8:3)' lvalue Var 0x7fe54483d240 'x' 'struct (anonymous struct at c_files/pr70876.c:8:3)':'struct (anonymous at c_files/pr70876.c:8:3)'
+`-FunctionDecl 0x7fe54483d470 <<invalid sloc>> col:3 implicit used foo 'int ()'

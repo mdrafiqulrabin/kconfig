@@ -1,0 +1,30 @@
+TranslationUnitDecl 0x7fa20c8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa20c826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa20c826740 '__int128'
+|-TypedefDecl 0x7fa20c826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa20c826760 'unsigned __int128'
+|-TypedefDecl 0x7fa20c826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa20c826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa20c826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa20c826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa20c826dc0 'char *'
+|   `-BuiltinType 0x7fa20c826560 'char'
+|-TypedefDecl 0x7fa20c8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa20c827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa20c826ee0 'struct __va_list_tag'
+|     `-Record 0x7fa20c826e58 '__va_list_tag'
+|-FunctionDecl 0x7fa20d025a60 <c_files/pr17529.c:2:1, line:6:1> line:3:1 used bar 'void (const int *const)' static inline
+| |-ParmVarDecl 0x7fa20c827138 <col:6, col:24> col:24 used x 'const int *const'
+| `-CompoundStmt 0x7fa20d025cc8 <line:4:1, line:6:1>
+|   `-GCCAsmStmt 0x7fa20d025c68 <line:5:3, col:37>
+|     `-UnaryOperator 0x7fa20d025c48 <col:34, col:35> 'const int' lvalue prefix '*'
+|       `-ImplicitCastExpr 0x7fa20d025c30 <col:35> 'const int *' <LValueToRValue>
+|         `-DeclRefExpr 0x7fa20d025c08 <col:35> 'const int *const' lvalue ParmVar 0x7fa20c827138 'x' 'const int *const'
+|-VarDecl 0x7fa20d025db0 <line:8:1, col:21> col:18 used y 'const int [1]' static
+`-FunctionDecl 0x7fa20d025ed0 <line:10:1, line:14:1> line:11:1 foo 'void (void)'
+  `-CompoundStmt 0x7fa20d026078 <line:12:1, line:14:1>
+    `-CallExpr 0x7fa20d026030 <line:13:3, col:9> 'void'
+      |-ImplicitCastExpr 0x7fa20d026018 <col:3> 'void (*)(const int *const)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fa20d025f68 <col:3> 'void (const int *const)' Function 0x7fa20d025a60 'bar' 'void (const int *const)'
+      `-ImplicitCastExpr 0x7fa20d026060 <col:8> 'const int *' <ArrayToPointerDecay>
+        `-DeclRefExpr 0x7fa20d025f90 <col:8> 'const int [1]' lvalue Var 0x7fa20d025db0 'y' 'const int [1]'

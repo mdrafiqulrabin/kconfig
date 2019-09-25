@@ -1,0 +1,55 @@
+TranslationUnitDecl 0x7f82798264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8279826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8279826740 '__int128'
+|-TypedefDecl 0x7f8279826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8279826760 'unsigned __int128'
+|-TypedefDecl 0x7f8279826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8279826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8279826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8279826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8279826dc0 'char *'
+|   `-BuiltinType 0x7f8279826560 'char'
+|-TypedefDecl 0x7f82798270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8279827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8279826ee0 'struct __va_list_tag'
+|     `-Record 0x7f8279826e58 '__va_list_tag'
+|-TypedefDecl 0x7f8279827138 <c_files/pr69574.c:3:1, col:18> col:18 referenced mytype 'unsigned int'
+| `-BuiltinType 0x7f8279826660 'unsigned int'
+|-RecordDecl 0x7f827a025a00 <line:5:1, line:7:1> line:5:8 struct S definition
+| `-FieldDecl 0x7f827a025b38 <line:6:5, col:13> col:13 referenced pu 'mytype *'
+|-FunctionDecl 0x7f827a025d30 <line:9:1, line:15:1> line:9:8 f 'mytype (struct S *)'
+| |-ParmVarDecl 0x7f827a025c30 <col:10, col:20> col:20 used e 'struct S *'
+| `-CompoundStmt 0x7f827a0264c8 <line:10:1, line:15:1>
+|   |-DeclStmt 0x7f827a025e80 <line:11:3, col:11>
+|   | `-VarDecl 0x7f827a025e20 <col:3, col:10> col:10 used x 'mytype':'unsigned int'
+|   |-IfStmt 0x7f827a026438 <line:12:3, line:13:49>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f827a025f70 <line:12:6, col:15> 'int' '!='
+|   | | |-UnaryOperator 0x7f827a025ec0 <col:6, col:7> 'mytype *' prefix '&'
+|   | | | `-DeclRefExpr 0x7f827a025e98 <col:7> 'mytype':'unsigned int' lvalue Var 0x7f827a025e20 'x' 'mytype':'unsigned int'
+|   | | `-ImplicitCastExpr 0x7f827a025f58 <col:12, col:15> 'mytype *' <LValueToRValue>
+|   | |   `-MemberExpr 0x7f827a025f20 <col:12, col:15> 'mytype *' lvalue ->pu 0x7f827a025b38
+|   | |     `-ImplicitCastExpr 0x7f827a025f08 <col:12> 'struct S *' <LValueToRValue>
+|   | |       `-DeclRefExpr 0x7f827a025ee0 <col:12> 'struct S *' lvalue ParmVar 0x7f827a025c30 'e' 'struct S *'
+|   | |-CallExpr 0x7f827a0263b0 <line:13:5, col:49> 'void *'
+|   | | |-ImplicitCastExpr 0x7f827a026398 <col:5> 'void *(*)(void *, const void *, unsigned long)' <BuiltinFnToFnPtr>
+|   | | | `-DeclRefExpr 0x7f827a026230 <col:5> '<builtin fn type>' Function 0x7f827a026018 '__builtin_memcpy' 'void *(void *, const void *, unsigned long)'
+|   | | |-ImplicitCastExpr 0x7f827a0263f0 <col:22, col:23> 'void *' <BitCast>
+|   | | | `-UnaryOperator 0x7f827a026280 <col:22, col:23> 'mytype *' prefix '&'
+|   | | |   `-DeclRefExpr 0x7f827a026258 <col:23> 'mytype':'unsigned int' lvalue Var 0x7f827a025e20 'x' 'mytype':'unsigned int'
+|   | | |-ImplicitCastExpr 0x7f827a026420 <col:26, col:29> 'const void *' <BitCast>
+|   | | | `-ImplicitCastExpr 0x7f827a026408 <col:26, col:29> 'mytype *' <LValueToRValue>
+|   | | |   `-MemberExpr 0x7f827a0262e0 <col:26, col:29> 'mytype *' lvalue ->pu 0x7f827a025b38
+|   | | |     `-ImplicitCastExpr 0x7f827a0262c8 <col:26> 'struct S *' <LValueToRValue>
+|   | | |       `-DeclRefExpr 0x7f827a0262a0 <col:26> 'struct S *' lvalue ParmVar 0x7f827a025c30 'e' 'struct S *'
+|   | | `-UnaryExprOrTypeTraitExpr 0x7f827a026330 <col:33, col:48> 'unsigned long' sizeof 'unsigned int'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f827a0264b0 <line:14:3, col:10>
+|     `-ImplicitCastExpr 0x7f827a026498 <col:10> 'mytype':'unsigned int' <LValueToRValue>
+|       `-DeclRefExpr 0x7f827a026470 <col:10> 'mytype':'unsigned int' lvalue Var 0x7f827a025e20 'x' 'mytype':'unsigned int'
+`-FunctionDecl 0x7f827a026018 <line:13:5> col:5 implicit used __builtin_memcpy 'void *(void *, const void *, unsigned long)' extern
+  |-ParmVarDecl 0x7f827a0260b0 <<invalid sloc>> <invalid sloc> 'void *'
+  |-ParmVarDecl 0x7f827a026110 <<invalid sloc>> <invalid sloc> 'const void *'
+  |-ParmVarDecl 0x7f827a026170 <<invalid sloc>> <invalid sloc> 'unsigned long'
+  `-NoThrowAttr 0x7f827a0261e8 <col:5> Implicit

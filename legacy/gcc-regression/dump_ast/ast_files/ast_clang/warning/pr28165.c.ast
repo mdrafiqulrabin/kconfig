@@ -1,0 +1,25 @@
+c_files/pr28165.c:5:13: warning: #pragma system_header ignored in main file [-Wpragma-system-header-outside-header]
+#pragma GCC system_header   /* { dg-warning "system_header" "ignored" } */
+            ^
+c_files/pr28165.c:6:1: warning: #pragma system_header ignored in main file [-Wpragma-system-header-outside-header]
+_Pragma ("GCC system_header")   /* { dg-warning "system_header" "ignored" } */
+^
+<scratch space>:2:6: note: expanded from here
+ GCC system_header
+     ^
+2 warnings generated.
+TranslationUnitDecl 0x7fbfb40264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbfb4026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fbfb4026740 '__int128'
+|-TypedefDecl 0x7fbfb4026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fbfb4026760 'unsigned __int128'
+|-TypedefDecl 0x7fbfb4026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fbfb4026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fbfb4026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fbfb4026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fbfb4026dc0 'char *'
+|   `-BuiltinType 0x7fbfb4026560 'char'
+`-TypedefDecl 0x7fbfb40270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+  `-ConstantArrayType 0x7fbfb4027070 'struct __va_list_tag [1]' 1 
+    `-RecordType 0x7fbfb4026ee0 'struct __va_list_tag'
+      `-Record 0x7fbfb4026e58 '__va_list_tag'

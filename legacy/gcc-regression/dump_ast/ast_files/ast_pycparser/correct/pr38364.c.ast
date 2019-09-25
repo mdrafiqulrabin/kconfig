@@ -1,0 +1,234 @@
+FileAST: 
+  Decl: abort, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: f1, [], ['static'], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['short']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['short']
+        TypeDecl: f1, []
+          IdentifierType: ['short']
+    Compound: 
+      If: 
+        BinaryOp: >
+          ID: x
+          Constant: int, 0
+        Compound: 
+          If: 
+            BinaryOp: >
+              ID: y
+              Constant: int, 0
+            Compound: 
+              If: 
+                BinaryOp: >
+                  ID: x
+                  BinaryOp: /
+                    ID: __SHRT_MAX__
+                    ID: y
+                Return: 
+                  ID: x
+            If: 
+              BinaryOp: <
+                ID: y
+                BinaryOp: /
+                  BinaryOp: -
+                    UnaryOp: -
+                      ID: __SHRT_MAX__
+                    Constant: int, 1
+                  ID: x
+              Return: 
+                ID: x
+        Compound: 
+          If: 
+            BinaryOp: >
+              ID: y
+              Constant: int, 0
+            Compound: 
+              If: 
+                BinaryOp: <
+                  ID: x
+                  BinaryOp: /
+                    BinaryOp: -
+                      UnaryOp: -
+                        ID: __SHRT_MAX__
+                      Constant: int, 1
+                    ID: y
+                Return: 
+                  ID: x
+            If: 
+              BinaryOp: &&
+                BinaryOp: !=
+                  ID: x
+                  Constant: int, 0
+                BinaryOp: <
+                  ID: y
+                  BinaryOp: /
+                    ID: __SHRT_MAX__
+                    ID: x
+              Return: 
+                ID: x
+      Return: 
+        BinaryOp: *
+          ID: x
+          ID: y
+  FuncDef: 
+    Decl: f2, [], ['static'], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['signed', 'char']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['signed', 'char']
+        TypeDecl: f2, []
+          IdentifierType: ['signed', 'char']
+    Compound: 
+      If: 
+        BinaryOp: <
+          BinaryOp: &
+            BinaryOp: ^
+              ID: x
+              ID: y
+            BinaryOp: ^
+              BinaryOp: -
+                BinaryOp: ^
+                  ID: x
+                  BinaryOp: &
+                    BinaryOp: ^
+                      ID: x
+                      ID: y
+                    BinaryOp: <<
+                      Constant: int, 1
+                      BinaryOp: -
+                        ID: __CHAR_BIT__
+                        Constant: int, 1
+                ID: y
+              ID: y
+          Constant: int, 0
+        Return: 
+          ID: x
+      Return: 
+        BinaryOp: -
+          ID: x
+          ID: y
+  Decl: v, [], [], []
+    TypeDecl: v, []
+      IdentifierType: ['unsigned', 'int']
+  FuncDef: 
+    Decl: f3, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['unsigned', 'int']
+        TypeDecl: f3, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: f1
+        ExprList: 
+          Constant: int, 1
+          Constant: int, 1
+      Return: 
+        Constant: int, 1
+  FuncDef: 
+    Decl: f4, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['unsigned', 'short']
+        TypeDecl: f4, []
+          IdentifierType: ['int']
+    Compound: 
+      Assignment: =
+        ID: v
+        ID: x
+      Return: 
+        Constant: int, 1
+  FuncDef: 
+    Decl: f5, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+        TypeDecl: f5, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        FuncCall: 
+          ID: f2
+          ExprList: 
+            ID: x
+            Constant: int, 1
+        FuncCall: 
+          ID: f1
+          ExprList: 
+            Constant: int, 1
+            FuncCall: 
+              ID: f4
+              ExprList: 
+                Constant: int, 1
+      Return: 
+        ID: x
+  FuncDef: 
+    Decl: f6, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['unsigned', 'int']
+        TypeDecl: f6, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: f4
+        ExprList: 
+          BinaryOp: <
+            ID: x
+            BinaryOp: !=
+              Constant: int, 1
+              FuncCall: 
+                ID: f5
+                ExprList: 
+                  Constant: int, 0
+      Return: 
+        ID: x
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: f6
+        ExprList: 
+          Constant: int, 1
+      If: 
+        BinaryOp: !=
+          ID: v
+          Constant: int, 0
+        FuncCall: 
+          ID: abort
+      Return: 
+        Constant: int, 0

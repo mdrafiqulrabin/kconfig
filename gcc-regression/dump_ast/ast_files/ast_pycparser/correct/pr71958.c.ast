@@ -1,7 +1,0 @@
-FileAST: 
-  FuncDef: 
-    Decl: main, [], [], []
-      FuncDecl: 
-        TypeDecl: main, []
-          IdentifierType: ['void']
-    Compound: 

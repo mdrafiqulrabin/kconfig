@@ -1,0 +1,78 @@
+c_files/pr32207.c:7:17: warning: address of function 'z' will always evaluate to 'true' [-Wpointer-bool-conversion]
+void f() { if ( z ) z(); } /* { dg-warning "always evaluate as" } */
+           ~~   ^
+c_files/pr32207.c:7:17: note: prefix with the address-of operator to silence this warning
+void f() { if ( z ) z(); } /* { dg-warning "always evaluate as" } */
+                ^
+                &
+c_files/pr32207.c:8:17: warning: comparison of function 'z' not equal to a null pointer is always true [-Wtautological-pointer-compare]
+void g() { if ( z != 0 ) z(); } /* { dg-warning "the comparison will always evaluate as 'true'" } */
+                ^    ~
+c_files/pr32207.c:8:17: note: prefix with the address-of operator to silence this warning
+void g() { if ( z != 0 ) z(); } /* { dg-warning "the comparison will always evaluate as 'true'" } */
+                ^
+                &
+c_files/pr32207.c:9:17: warning: comparison of function 'z' not equal to a null pointer is always true [-Wtautological-pointer-compare]
+void h() { if ( z != (void*)0 ) z(); } /* { dg-warning "the comparison will always evaluate as 'true'" } */
+                ^    ~~~~~~~~
+c_files/pr32207.c:9:17: note: prefix with the address-of operator to silence this warning
+void h() { if ( z != (void*)0 ) z(); } /* { dg-warning "the comparison will always evaluate as 'true'" } */
+                ^
+                &
+3 warnings generated.
+TranslationUnitDecl 0x7fa81a0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa81a026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa81a026740 '__int128'
+|-TypedefDecl 0x7fa81a026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa81a026760 'unsigned __int128'
+|-TypedefDecl 0x7fa81a026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa81a026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa81a026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa81a026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa81a026dc0 'char *'
+|   `-BuiltinType 0x7fa81a026560 'char'
+|-TypedefDecl 0x7fa81a0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa81a027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa81a026ee0 'struct __va_list_tag'
+|     `-Record 0x7fa81a026e58 '__va_list_tag'
+|-FunctionDecl 0x7fa81a027168 <c_files/pr32207.c:5:1, col:15> col:13 used z 'void ()' extern
+|-FunctionDecl 0x7fa81a825a60 <line:7:1, col:26> col:6 f 'void ()'
+| `-CompoundStmt 0x7fa81a825c00 <col:10, col:26>
+|   `-IfStmt 0x7fa81a825bc8 <col:12, col:23>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-ImplicitCastExpr 0x7fa81a825b48 <col:17> 'void (*)()' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fa81a825af8 <col:17> 'void ()' Function 0x7fa81a027168 'z' 'void ()'
+|     |-CallExpr 0x7fa81a825ba0 <col:21, col:23> 'void'
+|     | `-ImplicitCastExpr 0x7fa81a825b88 <col:21> 'void (*)()' <FunctionToPointerDecay>
+|     |   `-DeclRefExpr 0x7fa81a825b60 <col:21> 'void ()' Function 0x7fa81a027168 'z' 'void ()'
+|     `-<<<NULL>>>
+|-FunctionDecl 0x7fa81a825c40 <line:8:1, col:31> col:6 g 'void ()'
+| `-CompoundStmt 0x7fa81a825e18 <col:10, col:31>
+|   `-IfStmt 0x7fa81a825de0 <col:12, col:28>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7fa81a825d50 <col:17, col:22> 'int' '!='
+|     | |-ImplicitCastExpr 0x7fa81a825d20 <col:17> 'void (*)()' <FunctionToPointerDecay>
+|     | | `-DeclRefExpr 0x7fa81a825cd8 <col:17> 'void ()' Function 0x7fa81a027168 'z' 'void ()'
+|     | `-ImplicitCastExpr 0x7fa81a825d38 <col:22> 'void (*)()' <NullToPointer>
+|     |   `-IntegerLiteral 0x7fa81a825d00 <col:22> 'int' 0
+|     |-CallExpr 0x7fa81a825db8 <col:26, col:28> 'void'
+|     | `-ImplicitCastExpr 0x7fa81a825da0 <col:26> 'void (*)()' <FunctionToPointerDecay>
+|     |   `-DeclRefExpr 0x7fa81a825d78 <col:26> 'void ()' Function 0x7fa81a027168 'z' 'void ()'
+|     `-<<<NULL>>>
+`-FunctionDecl 0x7fa81a825e58 <line:9:1, col:38> col:6 h 'void ()'
+  `-CompoundStmt 0x7fa81a826070 <col:10, col:38>
+    `-IfStmt 0x7fa81a826038 <col:12, col:35>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fa81a825fa8 <col:17, col:29> 'int' '!='
+      | |-ImplicitCastExpr 0x7fa81a825f78 <col:17> 'void (*)()' <FunctionToPointerDecay>
+      | | `-DeclRefExpr 0x7fa81a825ef0 <col:17> 'void ()' Function 0x7fa81a027168 'z' 'void ()'
+      | `-ImplicitCastExpr 0x7fa81a825f90 <col:22, col:29> 'void (*)()' <BitCast>
+      |   `-CStyleCastExpr 0x7fa81a825f50 <col:22, col:29> 'void *' <NullToPointer>
+      |     `-IntegerLiteral 0x7fa81a825f18 <col:29> 'int' 0
+      |-CallExpr 0x7fa81a826010 <col:33, col:35> 'void'
+      | `-ImplicitCastExpr 0x7fa81a825ff8 <col:33> 'void (*)()' <FunctionToPointerDecay>
+      |   `-DeclRefExpr 0x7fa81a825fd0 <col:33> 'void ()' Function 0x7fa81a027168 'z' 'void ()'
+      `-<<<NULL>>>

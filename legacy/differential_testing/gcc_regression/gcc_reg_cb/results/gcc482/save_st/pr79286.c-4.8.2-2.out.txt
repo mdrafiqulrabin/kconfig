@@ -1,0 +1,5 @@
+pr79286.c: In function ‘main’:
+pr79286.c:7:3: error: ‘for’ loop initial declarations are only allowed in C99 mode
+   for (int b = 0; b < 4; b++)
+   ^
+pr79286.c:7:3: note: use option -std=c99 or -std=gnu99 to compile your code

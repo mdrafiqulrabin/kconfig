@@ -1,0 +1,41 @@
+FileAST: 
+  FuncDef: 
+    Decl: broken030599, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: n, [], [], []
+            PtrDecl: []
+              TypeDecl: n, []
+                IdentifierType: ['int']
+        TypeDecl: broken030599, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 32
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          Assignment: =
+            ID: x
+            Constant: int, 0
+          UnaryOp: p++
+            ID: x
+          If: 
+            BinaryOp: &
+              ID: i
+              Constant: int, 4
+            UnaryOp: p++
+              ID: x
+          UnaryOp: p++
+            ID: x

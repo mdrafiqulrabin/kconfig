@@ -1,0 +1,98 @@
+FileAST: 
+  Typedef: stream, [], ['typedef']
+    TypeDecl: stream, []
+      Struct: None
+        Decl: avail_out, [], [], []
+          TypeDecl: avail_out, []
+            IdentifierType: ['unsigned', 'int']
+        Decl: state, [], [], []
+          PtrDecl: []
+            TypeDecl: state, []
+              IdentifierType: ['void']
+  Typedef: state_in, [], ['typedef']
+    TypeDecl: state_in, []
+      Struct: None
+        Decl: test, [], [], []
+          PtrDecl: []
+            TypeDecl: test, []
+              IdentifierType: ['stream']
+        Decl: num, [], [], []
+          TypeDecl: num, []
+            IdentifierType: ['int']
+  FuncDef: 
+    Decl: test_in, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: test, [], [], []
+            PtrDecl: []
+              TypeDecl: test, []
+                IdentifierType: ['stream']
+          Decl: action, [], [], []
+            TypeDecl: action, []
+              IdentifierType: ['int']
+        TypeDecl: test_in, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: tst, [], [], []
+        PtrDecl: []
+          TypeDecl: tst, []
+            IdentifierType: ['state_in']
+      If: 
+        BinaryOp: ==
+          ID: test
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['void']
+            Constant: int, 0
+        Return: 
+          UnaryOp: -
+            Constant: int, 2
+      If: 
+        BinaryOp: ==
+          ID: tst
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['void']
+            Constant: int, 0
+        Return: 
+          UnaryOp: -
+            Constant: int, 2
+      If: 
+        BinaryOp: !=
+          StructRef: ->
+            ID: tst
+            ID: test
+          ID: test
+        Return: 
+          UnaryOp: -
+            Constant: int, 2
+      Label: jump_here
+        Switch: 
+          StructRef: ->
+            ID: tst
+            ID: num
+          Compound: 
+            Case: 
+              Constant: int, 1
+              Return: 
+                UnaryOp: -
+                  Constant: int, 1
+            Case: 
+              Constant: int, 2
+              If: 
+                BinaryOp: ==
+                  ID: action
+                  Constant: int, 0
+                Compound: 
+              If: 
+                BinaryOp: ==
+                  ID: action
+                  Constant: int, 1
+                Compound: 
+                  Goto: jump_here
+      Return: 
+        Constant: int, 0

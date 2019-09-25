@@ -1,0 +1,135 @@
+TranslationUnitDecl 0x7f8cc00264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8cc0026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8cc0026740 '__int128'
+|-TypedefDecl 0x7f8cc0026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8cc0026760 'unsigned __int128'
+|-TypedefDecl 0x7f8cc0026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8cc0026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8cc0026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8cc0026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8cc0026dc0 'char *'
+|   `-BuiltinType 0x7f8cc0026560 'char'
+|-TypedefDecl 0x7f8cc00270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8cc0027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8cc0026ee0 'struct __va_list_tag'
+|     `-Record 0x7f8cc0026e58 '__va_list_tag'
+|-RecordDecl 0x7f8cc0027120 <c_files/pr52493.c:3:1, line:6:1> line:3:8 struct Time definition
+| |-FieldDecl 0x7f8cc1017a00 <line:4:5, col:14> col:14 referenced sec 'long'
+| `-FieldDecl 0x7f8cc1017a60 <line:5:5, col:10> col:10 referenced usec 'long'
+|-RecordDecl 0x7f8cc1017aa8 <line:7:1, line:10:1> line:7:8 struct Flow definition
+| |-FieldDecl 0x7f8cc1017b68 <line:8:5, col:20> col:20 iif 'unsigned short'
+| `-FieldDecl 0x7f8cc1017c00 <line:9:5, col:17> col:17 referenced mtime 'struct Time':'struct Time'
+|-RecordDecl 0x7f8cc1017c48 <line:11:1, line:15:1> line:11:8 struct NetFlow definition
+| |-FieldDecl 0x7f8cc1017d08 <line:12:5, col:14> col:14 MaxFlows 'unsigned int'
+| |-FieldDecl 0x7f8cc1017d68 <line:13:5, col:14> col:14 referenced HeaderFields 'unsigned int'
+| `-FieldDecl 0x7f8cc1017df0 <line:14:5, col:21> col:21 referenced HeaderFormat 'unsigned short *'
+|-VarDecl 0x7f8cc1017ef0 <line:16:1, col:24> col:24 used netflow 'struct NetFlow *' static
+|-VarDecl 0x7f8cc1017fb0 <line:17:1, col:20> col:20 used start_time 'struct Time':'struct Time' static
+|-VarDecl 0x7f8cc1018090 <line:18:1, col:38> col:22 used emit_packet 'unsigned char [1500]' static
+|-FunctionDecl 0x7f8cc1018318 <line:19:1, line:22:1> line:19:17 used cmpmtime 'long (struct Time *, struct Time *)' inline
+| |-ParmVarDecl 0x7f8cc1018170 <col:26, col:39> col:39 used t1 'struct Time *'
+| |-ParmVarDecl 0x7f8cc10181f8 <col:43, col:56> col:56 used t2 'struct Time *'
+| `-CompoundStmt 0x7f8cc1018790 <line:20:1, line:22:1>
+|   `-ReturnStmt 0x7f8cc1018778 <line:21:3, col:63>
+|     `-BinaryOperator 0x7f8cc1018750 <col:10, col:63> 'long' '+'
+|       |-BinaryOperator 0x7f8cc1018560 <col:10, col:32> 'long' '*'
+|       | |-ParenExpr 0x7f8cc1018508 <col:10, col:28> 'long'
+|       | | `-BinaryOperator 0x7f8cc10184e0 <col:11, col:25> 'long' '-'
+|       | |   |-ImplicitCastExpr 0x7f8cc10184b0 <col:11, col:15> 'long' <LValueToRValue>
+|       | |   | `-MemberExpr 0x7f8cc1018400 <col:11, col:15> 'long' lvalue ->sec 0x7f8cc1017a00
+|       | |   |   `-ImplicitCastExpr 0x7f8cc10183e8 <col:11> 'struct Time *' <LValueToRValue>
+|       | |   |     `-DeclRefExpr 0x7f8cc10183c0 <col:11> 'struct Time *' lvalue ParmVar 0x7f8cc1018170 't1' 'struct Time *'
+|       | |   `-ImplicitCastExpr 0x7f8cc10184c8 <col:21, col:25> 'long' <LValueToRValue>
+|       | |     `-MemberExpr 0x7f8cc1018478 <col:21, col:25> 'long' lvalue ->sec 0x7f8cc1017a00
+|       | |       `-ImplicitCastExpr 0x7f8cc1018460 <col:21> 'struct Time *' <LValueToRValue>
+|       | |         `-DeclRefExpr 0x7f8cc1018438 <col:21> 'struct Time *' lvalue ParmVar 0x7f8cc10181f8 't2' 'struct Time *'
+|       | `-ImplicitCastExpr 0x7f8cc1018548 <col:32> 'long' <IntegralCast>
+|       |   `-IntegerLiteral 0x7f8cc1018528 <col:32> 'int' 1000
+|       `-BinaryOperator 0x7f8cc1018728 <col:39, col:63> 'long' '/'
+|         |-ParenExpr 0x7f8cc10186d0 <col:39, col:59> 'long'
+|         | `-BinaryOperator 0x7f8cc10186a8 <col:40, col:55> 'long' '-'
+|         |   |-ImplicitCastExpr 0x7f8cc1018678 <col:40, col:44> 'long' <LValueToRValue>
+|         |   | `-MemberExpr 0x7f8cc10185c8 <col:40, col:44> 'long' lvalue ->usec 0x7f8cc1017a60
+|         |   |   `-ImplicitCastExpr 0x7f8cc10185b0 <col:40> 'struct Time *' <LValueToRValue>
+|         |   |     `-DeclRefExpr 0x7f8cc1018588 <col:40> 'struct Time *' lvalue ParmVar 0x7f8cc1018170 't1' 'struct Time *'
+|         |   `-ImplicitCastExpr 0x7f8cc1018690 <col:51, col:55> 'long' <LValueToRValue>
+|         |     `-MemberExpr 0x7f8cc1018640 <col:51, col:55> 'long' lvalue ->usec 0x7f8cc1017a60
+|         |       `-ImplicitCastExpr 0x7f8cc1018628 <col:51> 'struct Time *' <LValueToRValue>
+|         |         `-DeclRefExpr 0x7f8cc1018600 <col:51> 'struct Time *' lvalue ParmVar 0x7f8cc10181f8 't2' 'struct Time *'
+|         `-ImplicitCastExpr 0x7f8cc1018710 <col:63> 'long' <IntegralCast>
+|           `-IntegerLiteral 0x7f8cc10186f0 <col:63> 'int' 1000
+|-FunctionDecl 0x7f8cc1018b40 <line:23:1, line:34:1> line:23:13 used fill 'void (int, unsigned short *, struct Flow *, void *)' static
+| |-ParmVarDecl 0x7f8cc10187c8 <col:18, col:22> col:22 used fields 'int'
+| |-ParmVarDecl 0x7f8cc1018840 <col:30, col:46> col:46 used format 'unsigned short *'
+| |-ParmVarDecl 0x7f8cc1018950 <line:24:5, col:18> col:18 used flow 'struct Flow *'
+| |-ParmVarDecl 0x7f8cc1018a00 <col:24, col:30> col:30 used p 'void *'
+| `-CompoundStmt 0x7f8cc10193a8 <line:25:1, line:34:1>
+|   |-DeclStmt 0x7f8cc1018c70 <line:26:3, col:8>
+|   | `-VarDecl 0x7f8cc1018c10 <col:3, col:7> col:7 used i 'int'
+|   `-ForStmt 0x7f8cc1019370 <line:27:3, line:33:7>
+|     |-BinaryOperator 0x7f8cc1018cd0 <line:27:8, col:12> 'int' '='
+|     | |-DeclRefExpr 0x7f8cc1018c88 <col:8> 'int' lvalue Var 0x7f8cc1018c10 'i' 'int'
+|     | `-IntegerLiteral 0x7f8cc1018cb0 <col:12> 'int' 0
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7f8cc1018d78 <col:15, col:19> 'int' '<'
+|     | |-ImplicitCastExpr 0x7f8cc1018d48 <col:15> 'int' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7f8cc1018cf8 <col:15> 'int' lvalue Var 0x7f8cc1018c10 'i' 'int'
+|     | `-ImplicitCastExpr 0x7f8cc1018d60 <col:19> 'int' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7f8cc1018d20 <col:19> 'int' lvalue ParmVar 0x7f8cc10187c8 'fields' 'int'
+|     |-UnaryOperator 0x7f8cc1018dc8 <col:27, col:28> 'int' postfix '++'
+|     | `-DeclRefExpr 0x7f8cc1018da0 <col:27> 'int' lvalue Var 0x7f8cc1018c10 'i' 'int'
+|     `-IfStmt 0x7f8cc1019338 <line:28:5, line:33:7>
+|       |-<<<NULL>>>
+|       |-<<<NULL>>>
+|       |-BinaryOperator 0x7f8cc1018ee0 <line:28:9, col:22> 'int' '=='
+|       | |-ImplicitCastExpr 0x7f8cc1018ec8 <col:9, col:17> 'int' <IntegralCast>
+|       | | `-ImplicitCastExpr 0x7f8cc1018eb0 <col:9, col:17> 'unsigned short' <LValueToRValue>
+|       | |   `-ArraySubscriptExpr 0x7f8cc1018e68 <col:9, col:17> 'unsigned short' lvalue
+|       | |     |-ImplicitCastExpr 0x7f8cc1018e38 <col:9> 'unsigned short *' <LValueToRValue>
+|       | |     | `-DeclRefExpr 0x7f8cc1018de8 <col:9> 'unsigned short *' lvalue ParmVar 0x7f8cc1018840 'format' 'unsigned short *'
+|       | |     `-ImplicitCastExpr 0x7f8cc1018e50 <col:16> 'int' <LValueToRValue>
+|       | |       `-DeclRefExpr 0x7f8cc1018e10 <col:16> 'int' lvalue Var 0x7f8cc1018c10 'i' 'int'
+|       | `-IntegerLiteral 0x7f8cc1018e90 <col:22> 'int' 21
+|       |-CompoundStmt 0x7f8cc1019308 <line:29:7, line:33:7>
+|       | |-DeclStmt 0x7f8cc1018f80 <line:30:2, col:18>
+|       | | `-VarDecl 0x7f8cc1018f20 <col:2, col:15> col:15 used __v 'unsigned int'
+|       | |-BinaryOperator 0x7f8cc1019190 <line:31:2, col:42> 'unsigned int' '='
+|       | | |-DeclRefExpr 0x7f8cc1018f98 <col:2> 'unsigned int' lvalue Var 0x7f8cc1018f20 '__v' 'unsigned int'
+|       | | `-ImplicitCastExpr 0x7f8cc1019178 <col:8, col:42> 'unsigned int' <IntegralCast>
+|       | |   `-CallExpr 0x7f8cc1019140 <col:8, col:42> 'long'
+|       | |     |-ImplicitCastExpr 0x7f8cc1019128 <col:8> 'long (*)(struct Time *, struct Time *)' <FunctionToPointerDecay>
+|       | |     | `-DeclRefExpr 0x7f8cc1018fc0 <col:8> 'long (struct Time *, struct Time *)' Function 0x7f8cc1018318 'cmpmtime' 'long (struct Time *, struct Time *)'
+|       | |     |-UnaryOperator 0x7f8cc1019060 <col:17, col:24> 'struct Time *' prefix '&'
+|       | |     | `-MemberExpr 0x7f8cc1019028 <col:18, col:24> 'struct Time':'struct Time' lvalue ->mtime 0x7f8cc1017c00
+|       | |     |   `-ImplicitCastExpr 0x7f8cc1019010 <col:18> 'struct Flow *' <LValueToRValue>
+|       | |     |     `-DeclRefExpr 0x7f8cc1018fe8 <col:18> 'struct Flow *' lvalue ParmVar 0x7f8cc1018950 'flow' 'struct Flow *'
+|       | |     `-UnaryOperator 0x7f8cc10190a8 <col:31, col:32> 'struct Time *' prefix '&'
+|       | |       `-DeclRefExpr 0x7f8cc1019080 <col:32> 'struct Time':'struct Time' lvalue Var 0x7f8cc1017fb0 'start_time' 'struct Time':'struct Time'
+|       | `-BinaryOperator 0x7f8cc10192e0 <line:32:2, col:26> 'unsigned int' '='
+|       |   |-UnaryOperator 0x7f8cc1019280 <col:2, col:22> 'unsigned int' lvalue prefix '*'
+|       |   | `-ParenExpr 0x7f8cc1019260 <col:3, col:22> 'unsigned int *'
+|       |   |   `-CStyleCastExpr 0x7f8cc1019238 <col:4, col:21> 'unsigned int *' <BitCast>
+|       |   |     `-ImplicitCastExpr 0x7f8cc1019220 <col:21> 'void *' <LValueToRValue>
+|       |   |       `-DeclRefExpr 0x7f8cc10191b8 <col:21> 'void *' lvalue ParmVar 0x7f8cc1018a00 'p' 'void *'
+|       |   `-ImplicitCastExpr 0x7f8cc10192c8 <col:26> 'unsigned int' <LValueToRValue>
+|       |     `-DeclRefExpr 0x7f8cc10192a0 <col:26> 'unsigned int' lvalue Var 0x7f8cc1018f20 '__v' 'unsigned int'
+|       `-<<<NULL>>>
+`-FunctionDecl 0x7f8cc1019418 <line:35:1, line:38:1> line:35:6 emit_thread 'void ()'
+  `-CompoundStmt 0x7f8cc1019790 <line:36:1, line:38:1>
+    `-CallExpr 0x7f8cc10196d0 <line:37:3, col:69> 'void'
+      |-ImplicitCastExpr 0x7f8cc10196b8 <col:3> 'void (*)(int, unsigned short *, struct Flow *, void *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7f8cc10194b0 <col:3> 'void (int, unsigned short *, struct Flow *, void *)' Function 0x7f8cc1018b40 'fill' 'void (int, unsigned short *, struct Flow *, void *)'
+      |-ImplicitCastExpr 0x7f8cc1019730 <col:8, col:17> 'int' <IntegralCast>
+      | `-ImplicitCastExpr 0x7f8cc1019718 <col:8, col:17> 'unsigned int' <LValueToRValue>
+      |   `-MemberExpr 0x7f8cc1019518 <col:8, col:17> 'unsigned int' lvalue ->HeaderFields 0x7f8cc1017d68
+      |     `-ImplicitCastExpr 0x7f8cc1019500 <col:8> 'struct NetFlow *' <LValueToRValue>
+      |       `-DeclRefExpr 0x7f8cc10194d8 <col:8> 'struct NetFlow *' lvalue Var 0x7f8cc1017ef0 'netflow' 'struct NetFlow *'
+      |-ImplicitCastExpr 0x7f8cc1019748 <col:31, col:40> 'unsigned short *' <LValueToRValue>
+      | `-MemberExpr 0x7f8cc1019590 <col:31, col:40> 'unsigned short *' lvalue ->HeaderFormat 0x7f8cc1017df0
+      |   `-ImplicitCastExpr 0x7f8cc1019578 <col:31> 'struct NetFlow *' <LValueToRValue>
+      |     `-DeclRefExpr 0x7f8cc1019550 <col:31> 'struct NetFlow *' lvalue Var 0x7f8cc1017ef0 'netflow' 'struct NetFlow *'
+      |-ImplicitCastExpr 0x7f8cc1019760 <col:54> 'struct Flow *' <NullToPointer>
+      | `-IntegerLiteral 0x7f8cc10195c8 <col:54> 'int' 0
+      `-ImplicitCastExpr 0x7f8cc1019778 <col:57, col:58> 'void *' <BitCast>
+        `-UnaryOperator 0x7f8cc1019638 <col:57, col:58> 'unsigned char (*)[1500]' prefix '&'
+          `-DeclRefExpr 0x7f8cc10195e8 <col:58> 'unsigned char [1500]' lvalue Var 0x7f8cc1018090 'emit_packet' 'unsigned char [1500]'

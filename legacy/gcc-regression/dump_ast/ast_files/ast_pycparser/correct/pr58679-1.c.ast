@@ -1,0 +1,44 @@
+FileAST: 
+  Typedef: S, [], ['typedef']
+    TypeDecl: S, []
+      Struct: None
+        Decl: a, [], [], []
+          TypeDecl: a, []
+            IdentifierType: ['char']
+        Decl: b, [], [], []
+          TypeDecl: b, []
+            IdentifierType: ['long', 'long']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['S']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['S']
+        TypeDecl: foo, []
+          IdentifierType: ['S']
+    Compound: 
+      Decl: z, [], [], []
+        TypeDecl: z, []
+          IdentifierType: ['S']
+      Assignment: =
+        StructRef: .
+          ID: z
+          ID: a
+        Constant: int, 0
+      Assignment: =
+        StructRef: .
+          ID: z
+          ID: b
+        BinaryOp: /
+          StructRef: .
+            ID: x
+            ID: b
+          StructRef: .
+            ID: y
+            ID: b
+      Return: 
+        ID: z

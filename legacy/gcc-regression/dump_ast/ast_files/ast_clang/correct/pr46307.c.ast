@@ -1,0 +1,79 @@
+TranslationUnitDecl 0x7fd5f90264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd5f9026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd5f9026740 '__int128'
+|-TypedefDecl 0x7fd5f9026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd5f9026760 'unsigned __int128'
+|-TypedefDecl 0x7fd5f9026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd5f9026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd5f9026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd5f9026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd5f9026dc0 'char *'
+|   `-BuiltinType 0x7fd5f9026560 'char'
+|-TypedefDecl 0x7fd5f90270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd5f9027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd5f9026ee0 'struct __va_list_tag'
+|     `-Record 0x7fd5f9026e58 '__va_list_tag'
+|-FunctionDecl 0x7fd5f9825b68 <c_files/pr46307.c:5:8> col:8 implicit used fma 'double (double, double, double)' extern
+| |-ParmVarDecl 0x7fd5f9825c00 <<invalid sloc>> <invalid sloc> 'double'
+| |-ParmVarDecl 0x7fd5f9825c60 <<invalid sloc>> <invalid sloc> 'double'
+| |-ParmVarDecl 0x7fd5f9825cc0 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7fd5f9825d38 <col:8> Implicit
+| `-NoThrowAttr 0x7fd5f9825d80 <col:8> Implicit
+|-FunctionDecl 0x7fd5f9825d90 prev 0x7fd5f9825b68 <col:1, col:35> col:8 used fma 'double (double, double, double)'
+| |-ParmVarDecl 0x7fd5f9027138 <col:13> col:19 'double'
+| |-ParmVarDecl 0x7fd5f9825a00 <col:21> col:27 'double'
+| |-ParmVarDecl 0x7fd5f9825a78 <col:29> col:35 'double'
+| |-ConstAttr 0x7fd5f9825e78 <col:8> Inherited Implicit
+| `-NoThrowAttr 0x7fd5f9825e88 <col:8> Inherited Implicit
+|-FunctionDecl 0x7fd5f9826040 <line:7:1, line:14:1> line:8:1 foo 'double (double, double, double)'
+| |-ParmVarDecl 0x7fd5f9825eb0 <col:6, col:13> col:13 used x 'double'
+| |-ParmVarDecl 0x7fd5f9825f28 <col:16, col:23> col:23 used y 'double'
+| |-ParmVarDecl 0x7fd5f9825fa0 <col:26, col:33> col:33 used z 'double'
+| `-CompoundStmt 0x7fd5f98269e8 <line:9:1, line:14:1>
+|   |-DeclStmt 0x7fd5f98262b8 <line:10:3, col:23>
+|   | `-VarDecl 0x7fd5f9826148 <col:3, col:22> col:10 a 'double' cinit
+|   |   `-BinaryOperator 0x7fd5f9826290 <col:14, col:22> 'double' '+'
+|   |     |-BinaryOperator 0x7fd5f9826228 <col:14, col:18> 'double' '*'
+|   |     | |-ImplicitCastExpr 0x7fd5f98261f8 <col:14> 'double' <LValueToRValue>
+|   |     | | `-DeclRefExpr 0x7fd5f98261a8 <col:14> 'double' lvalue ParmVar 0x7fd5f9825eb0 'x' 'double'
+|   |     | `-ImplicitCastExpr 0x7fd5f9826210 <col:18> 'double' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7fd5f98261d0 <col:18> 'double' lvalue ParmVar 0x7fd5f9825f28 'y' 'double'
+|   |     `-ImplicitCastExpr 0x7fd5f9826278 <col:22> 'double' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7fd5f9826250 <col:22> 'double' lvalue ParmVar 0x7fd5f9825fa0 'z' 'double'
+|   |-DeclStmt 0x7fd5f98266d8 <line:11:3, col:37>
+|   | `-VarDecl 0x7fd5f98262e8 <col:3, col:36> col:10 b 'double' cinit
+|   |   `-CallExpr 0x7fd5f9826650 <col:14, col:36> 'double'
+|   |     |-ImplicitCastExpr 0x7fd5f9826638 <col:14> 'double (*)(double, double, double)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7fd5f9826570 <col:14> '<builtin fn type>' Function 0x7fd5f9826348 '__builtin_fma' 'double (double, double, double)'
+|   |     |-ImplicitCastExpr 0x7fd5f9826690 <col:29> 'double' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7fd5f9826598 <col:29> 'double' lvalue ParmVar 0x7fd5f9825eb0 'x' 'double'
+|   |     |-ImplicitCastExpr 0x7fd5f98266a8 <col:32> 'double' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7fd5f98265c0 <col:32> 'double' lvalue ParmVar 0x7fd5f9825f28 'y' 'double'
+|   |     `-ImplicitCastExpr 0x7fd5f98266c0 <col:35> 'double' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7fd5f98265e8 <col:35> 'double' lvalue ParmVar 0x7fd5f9825fa0 'z' 'double'
+|   |-DeclStmt 0x7fd5f98268a8 <line:12:3, col:27>
+|   | `-VarDecl 0x7fd5f9826708 <col:3, col:26> col:10 c 'double' cinit
+|   |   `-CallExpr 0x7fd5f9826820 <col:14, col:26> 'double'
+|   |     |-ImplicitCastExpr 0x7fd5f9826808 <col:14> 'double (*)(double, double, double)' <FunctionToPointerDecay>
+|   |     | `-DeclRefExpr 0x7fd5f9826768 <col:14> 'double (double, double, double)' Function 0x7fd5f9825d90 'fma' 'double (double, double, double)'
+|   |     |-ImplicitCastExpr 0x7fd5f9826860 <col:19> 'double' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7fd5f9826790 <col:19> 'double' lvalue ParmVar 0x7fd5f9825eb0 'x' 'double'
+|   |     |-ImplicitCastExpr 0x7fd5f9826878 <col:22> 'double' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7fd5f98267b8 <col:22> 'double' lvalue ParmVar 0x7fd5f9825f28 'y' 'double'
+|   |     `-ImplicitCastExpr 0x7fd5f9826890 <col:25> 'double' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7fd5f98267e0 <col:25> 'double' lvalue ParmVar 0x7fd5f9825fa0 'z' 'double'
+|   `-ReturnStmt 0x7fd5f98269d0 <line:13:3, col:18>
+|     `-BinaryOperator 0x7fd5f98269a8 <col:10, col:18> 'double' '/'
+|       |-BinaryOperator 0x7fd5f9826940 <col:10, col:14> 'double' '/'
+|       | |-ImplicitCastExpr 0x7fd5f9826910 <col:10> 'double' <LValueToRValue>
+|       | | `-DeclRefExpr 0x7fd5f98268c0 <col:10> 'double' lvalue ParmVar 0x7fd5f9825eb0 'x' 'double'
+|       | `-ImplicitCastExpr 0x7fd5f9826928 <col:14> 'double' <LValueToRValue>
+|       |   `-DeclRefExpr 0x7fd5f98268e8 <col:14> 'double' lvalue ParmVar 0x7fd5f9825f28 'y' 'double'
+|       `-ImplicitCastExpr 0x7fd5f9826990 <col:18> 'double' <LValueToRValue>
+|         `-DeclRefExpr 0x7fd5f9826968 <col:18> 'double' lvalue ParmVar 0x7fd5f9825fa0 'z' 'double'
+`-FunctionDecl 0x7fd5f9826348 <line:11:14> col:14 implicit used __builtin_fma 'double (double, double, double)' extern
+  |-ParmVarDecl 0x7fd5f98263e0 <<invalid sloc>> <invalid sloc> 'double'
+  |-ParmVarDecl 0x7fd5f9826440 <<invalid sloc>> <invalid sloc> 'double'
+  |-ParmVarDecl 0x7fd5f98264a0 <<invalid sloc>> <invalid sloc> 'double'
+  |-NoThrowAttr 0x7fd5f9826518 <col:14> Implicit
+  `-ConstAttr 0x7fd5f9826560 <col:14> Implicit

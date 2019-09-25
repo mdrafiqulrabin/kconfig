@@ -1,0 +1,3 @@
+pr14475.c:5:18: error: field ‘code’ has incomplete type
+   enum tree_code code : 8;  
+                  ^

@@ -1,0 +1,36 @@
+TranslationUnitDecl 0x7fab020264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fab02026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fab02026740 '__int128'
+|-TypedefDecl 0x7fab02026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fab02026760 'unsigned __int128'
+|-TypedefDecl 0x7fab02026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fab02026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fab02026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fab02026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fab02026dc0 'char *'
+|   `-BuiltinType 0x7fab02026560 'char'
+|-TypedefDecl 0x7fab020270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fab02027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fab02026ee0 'struct __va_list_tag'
+|     `-Record 0x7fab02026e58 '__va_list_tag'
+`-FunctionDecl 0x7fab02825b80 <c_files/pr44391.c:3:1, line:7:1> line:3:6 byte_insert_op1 'void (unsigned char *, unsigned char *, unsigned int *)'
+  |-ParmVarDecl 0x7fab02027160 <col:23, col:38> col:38 used loc 'unsigned char *'
+  |-ParmVarDecl 0x7fab02825a00 <col:43, col:58> col:58 used end 'unsigned char *'
+  |-ParmVarDecl 0x7fab02825aa0 <col:63, col:73> col:73 used pto 'unsigned int *'
+  `-CompoundStmt 0x7fab02825e58 <line:4:1, line:7:1>
+    `-WhileStmt 0x7fab02825e38 <line:5:3, line:6:15>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fab02825cf0 <line:5:10, col:17> 'int' '!='
+      | |-ImplicitCastExpr 0x7fab02825cc0 <col:10> 'unsigned char *' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fab02825c70 <col:10> 'unsigned char *' lvalue ParmVar 0x7fab02825a00 'end' 'unsigned char *'
+      | `-ImplicitCastExpr 0x7fab02825cd8 <col:17> 'unsigned char *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fab02825c98 <col:17> 'unsigned char *' lvalue ParmVar 0x7fab02027160 'loc' 'unsigned char *'
+      `-BinaryOperator 0x7fab02825e10 <line:6:5, col:15> 'unsigned int' '='
+        |-UnaryOperator 0x7fab02825d58 <col:5, col:6> 'unsigned int' lvalue prefix '*'
+        | `-ImplicitCastExpr 0x7fab02825d40 <col:6> 'unsigned int *' <LValueToRValue>
+        |   `-DeclRefExpr 0x7fab02825d18 <col:6> 'unsigned int *' lvalue ParmVar 0x7fab02825aa0 'pto' 'unsigned int *'
+        `-ImplicitCastExpr 0x7fab02825df8 <col:12, col:15> 'unsigned int' <IntegralCast>
+          `-ImplicitCastExpr 0x7fab02825de0 <col:12, col:15> 'unsigned char' <LValueToRValue>
+            `-UnaryOperator 0x7fab02825dc0 <col:12, col:15> 'unsigned char' lvalue prefix '*'
+              `-UnaryOperator 0x7fab02825da0 <col:13, col:15> 'unsigned char *' prefix '--'
+                `-DeclRefExpr 0x7fab02825d78 <col:15> 'unsigned char *' lvalue ParmVar 0x7fab02825a00 'end' 'unsigned char *'

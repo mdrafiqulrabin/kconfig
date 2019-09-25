@@ -1,3 +1,0 @@
-pr35439.c:5:6: error: declaration of ‘x’ as array of voids
- void x[1];  
-      ^

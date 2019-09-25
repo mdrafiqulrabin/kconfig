@@ -1,6 +1,0 @@
-pr80210-2.c:5:9: error: attribute(target("no-powerpc-gpopt")) is unknown
- #pragma GCC target "no-powerpc-gpopt"
-         ^
-pr80210-2.c:8:1: error: attribute(target("no-powerpc-gpopt")) is unknown
- {
- ^

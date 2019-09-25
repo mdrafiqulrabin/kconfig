@@ -1,0 +1,147 @@
+FileAST: 
+  Decl: abort, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: lshifts, [], ['static'], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: val, [], [], []
+            TypeDecl: val, []
+              IdentifierType: ['int']
+          Decl: cnt, [], [], []
+            TypeDecl: cnt, []
+              IdentifierType: ['int']
+        TypeDecl: lshifts, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: <
+          ID: val
+          Constant: int, 0
+        Return: 
+          ID: val
+      Return: 
+        BinaryOp: <<
+          ID: val
+          ID: cnt
+  FuncDef: 
+    Decl: lshiftu, [], ['static'], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: val, [], [], []
+            TypeDecl: val, []
+              IdentifierType: ['unsigned', 'int']
+          Decl: cnt, [], [], []
+            TypeDecl: cnt, []
+              IdentifierType: ['unsigned', 'int']
+        TypeDecl: lshiftu, []
+          IdentifierType: ['unsigned', 'int']
+    Compound: 
+      If: 
+        BinaryOp: ||
+          BinaryOp: >=
+            ID: cnt
+            BinaryOp: *
+              UnaryOp: sizeof
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['unsigned', 'int']
+              ID: __CHAR_BIT__
+          BinaryOp: >
+            ID: val
+            BinaryOp: >>
+              BinaryOp: *
+                ID: __INT_MAX__
+                Constant: int, 2U
+              ID: cnt
+        Return: 
+          ID: val
+      Return: 
+        BinaryOp: <<
+          ID: val
+          ID: cnt
+  FuncDef: 
+    Decl: rshifts, [], ['static'], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: val, [], [], []
+            TypeDecl: val, []
+              IdentifierType: ['int']
+          Decl: cnt, [], [], []
+            TypeDecl: cnt, []
+              IdentifierType: ['unsigned', 'int']
+        TypeDecl: rshifts, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: ||
+          BinaryOp: <
+            ID: val
+            Constant: int, 0
+          BinaryOp: >=
+            ID: cnt
+            BinaryOp: *
+              UnaryOp: sizeof
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['int']
+              ID: __CHAR_BIT__
+        Return: 
+          ID: val
+      Return: 
+        BinaryOp: >>
+          ID: val
+          ID: cnt
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: val, [], [], []
+            TypeDecl: val, []
+              IdentifierType: ['unsigned', 'int']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: rshifts
+          ExprList: 
+            BinaryOp: +
+              Constant: int, 1
+              ID: val
+            FuncCall: 
+              ID: lshifts
+              ExprList: 
+                FuncCall: 
+                  ID: lshiftu
+                  ExprList: 
+                    ID: val
+                    ID: val
+                Constant: int, 1
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: !=
+          FuncCall: 
+            ID: foo
+            ExprList: 
+              Constant: int, 1
+          Constant: int, 0
+        FuncCall: 
+          ID: abort
+      Return: 
+        Constant: int, 0

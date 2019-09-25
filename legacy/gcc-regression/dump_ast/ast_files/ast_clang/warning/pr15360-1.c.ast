@@ -1,0 +1,51 @@
+c_files/pr15360-1.c:14:12: warning: 'extern' variable has an initializer [-Wextern-initializer]
+extern int b = 1; /* { dg-warning "initialized and declared" "extern init warning" } */
+           ^
+c_files/pr15360-1.c:19:5: error: non-static declaration of 'c' follows static declaration
+int c; /* { dg-error "non-static" "correct error" } */
+    ^
+c_files/pr15360-1.c:18:12: note: previous definition is here
+static int c; /* { dg-message "note: previous declaration" } */
+           ^
+c_files/pr15360-1.c:22:5: error: non-static declaration of 'd' follows static declaration
+int d = 1; /* { dg-error "non-static" "correct error" } */
+    ^
+c_files/pr15360-1.c:21:12: note: previous definition is here
+static int d; /* { dg-message "note: previous declaration" } */
+           ^
+c_files/pr15360-1.c:24:30: error: 'extern' variable cannot have an initializer
+void foo (void) { extern int e = 1; } /* { dg-error "has both" "extern init in function" } */
+                             ^
+1 warning and 3 errors generated.
+TranslationUnitDecl 0x7fc6ea8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc6ea826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc6ea826740 '__int128'
+|-TypedefDecl 0x7fc6ea826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc6ea826760 'unsigned __int128'
+|-TypedefDecl 0x7fc6ea826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc6ea826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc6ea826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc6ea826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc6ea826dc0 'char *'
+|   `-BuiltinType 0x7fc6ea826560 'char'
+|-TypedefDecl 0x7fc6ea8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc6ea827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc6ea826ee0 'struct __va_list_tag'
+|     `-Record 0x7fc6ea826e58 '__va_list_tag'
+|-VarDecl 0x7fc6ea827138 <c_files/pr15360-1.c:8:1, col:12> col:12 a 'int' static
+|-VarDecl 0x7fc6eb025a00 prev 0x7fc6ea827138 <line:9:1, col:12> col:12 a 'int' static
+|-VarDecl 0x7fc6eb025a78 prev 0x7fc6eb025a00 <line:10:1, col:12> col:12 a 'int' extern
+|-VarDecl 0x7fc6eb025af0 prev 0x7fc6eb025a78 <line:11:1, col:12> col:12 a 'int' static
+|-VarDecl 0x7fc6eb025b68 <line:13:1, col:12> col:12 b 'int' static
+|-VarDecl 0x7fc6eb025be0 prev 0x7fc6eb025b68 <line:14:1, col:16> col:12 b 'int' extern cinit
+| `-IntegerLiteral 0x7fc6eb025c40 <col:16> 'int' 1
+|-VarDecl 0x7fc6eb025c78 prev 0x7fc6eb025be0 <line:15:1, col:12> col:12 b 'int' static
+|-VarDecl 0x7fc6eb025cf0 prev 0x7fc6eb025c78 <line:16:1, col:12> col:12 b 'int' static
+|-VarDecl 0x7fc6eb025d68 <line:18:1, col:12> col:12 c 'int' static
+|-VarDecl 0x7fc6eb025de0 <line:19:1, col:5> col:5 invalid c 'int'
+|-VarDecl 0x7fc6eb025e58 <line:21:1, col:12> col:12 d 'int' static
+|-VarDecl 0x7fc6eb025ed0 <line:22:1, col:5> col:5 invalid d 'int'
+`-FunctionDecl 0x7fc6eb026010 <line:24:1, col:37> col:6 foo 'void (void)'
+  `-CompoundStmt 0x7fc6eb026168 <col:17, col:37>
+    `-DeclStmt 0x7fc6eb026150 <col:19, col:35>
+      `-VarDecl 0x7fc6eb0260c0 parent 0x7fc6ea8264d0 <col:19, col:30> col:30 invalid e 'int' extern

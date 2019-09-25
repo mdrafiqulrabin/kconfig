@@ -1,0 +1,52 @@
+TranslationUnitDecl 0x7fb3548234d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb354823a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb354823740 '__int128'
+|-TypedefDecl 0x7fb354823a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb354823760 'unsigned __int128'
+|-TypedefDecl 0x7fb354823d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb354823b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb354823ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb354823e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb354823dc0 'char *'
+|   `-BuiltinType 0x7fb354823560 'char'
+|-TypedefDecl 0x7fb3548240c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb354824070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb354823ee0 'struct __va_list_tag'
+|     `-Record 0x7fb354823e58 '__va_list_tag'
+|-RecordDecl 0x7fb354824120 <c_files/pr44948-1a.c:9:1, col:53> col:8 struct A definition
+| `-FieldDecl 0x7fb355025a80 <col:12, col:20> col:17 b 'long [8]'
+|   `-AlignedAttr 0x7fb355025ac8 <col:37, col:48> aligned
+|     `-IntegerLiteral 0x7fb355025a00 <col:46> 'int' 32
+|-FunctionDecl 0x7fb355025cf0 <line:10:1, col:32> col:6 used foo 'void (long double, struct A)'
+| |-ParmVarDecl 0x7fb355025b30 <col:11, col:16> col:22 'long double'
+| `-ParmVarDecl 0x7fb355025be0 <col:24, col:31> col:32 'struct A':'struct A'
+`-FunctionDecl 0x7fb355025ea8 <line:12:1, line:18:1> line:13:1 main 'int (void)'
+  `-CompoundStmt 0x7fb3550264c8 <line:14:1, line:18:1>
+    |-DeclStmt 0x7fb355026338 <line:15:3, col:46>
+    | `-VarDecl 0x7fb355025f88 <col:3, col:45> col:12 used a 'struct A':'struct A' cinit
+    |   `-InitListExpr 0x7fb3550261b0 <col:16, col:45> 'struct A':'struct A'
+    |     `-InitListExpr 0x7fb3550261f8 <col:18, col:43> 'long [8]'
+    |       |-ImplicitCastExpr 0x7fb355026278 <col:20> 'long' <IntegralCast>
+    |       | `-IntegerLiteral 0x7fb355025fe8 <col:20> 'int' 0
+    |       |-ImplicitCastExpr 0x7fb355026290 <col:23> 'long' <IntegralCast>
+    |       | `-IntegerLiteral 0x7fb355026008 <col:23> 'int' 1
+    |       |-ImplicitCastExpr 0x7fb3550262a8 <col:26> 'long' <IntegralCast>
+    |       | `-IntegerLiteral 0x7fb355026028 <col:26> 'int' 2
+    |       |-ImplicitCastExpr 0x7fb3550262c0 <col:29> 'long' <IntegralCast>
+    |       | `-IntegerLiteral 0x7fb355026048 <col:29> 'int' 3
+    |       |-ImplicitCastExpr 0x7fb3550262d8 <col:32> 'long' <IntegralCast>
+    |       | `-IntegerLiteral 0x7fb355026068 <col:32> 'int' 4
+    |       |-ImplicitCastExpr 0x7fb3550262f0 <col:35> 'long' <IntegralCast>
+    |       | `-IntegerLiteral 0x7fb355026088 <col:35> 'int' 5
+    |       |-ImplicitCastExpr 0x7fb355026308 <col:38> 'long' <IntegralCast>
+    |       | `-IntegerLiteral 0x7fb3550260a8 <col:38> 'int' 6
+    |       `-ImplicitCastExpr 0x7fb355026320 <col:41> 'long' <IntegralCast>
+    |         `-IntegerLiteral 0x7fb3550260c8 <col:41> 'int' 7
+    |-CallExpr 0x7fb355026440 <line:16:3, col:15> 'void'
+    | |-ImplicitCastExpr 0x7fb355026428 <col:3> 'void (*)(long double, struct A)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fb355026350 <col:3> 'void (long double, struct A)' Function 0x7fb355025cf0 'foo' 'void (long double, struct A)'
+    | |-FloatingLiteral 0x7fb355026378 <col:8> 'long double' 8.000000e+00
+    | `-ImplicitCastExpr 0x7fb355026478 <col:14> 'struct A':'struct A' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fb3550263a8 <col:14> 'struct A':'struct A' lvalue Var 0x7fb355025f88 'a' 'struct A':'struct A'
+    `-ReturnStmt 0x7fb3550264b0 <line:17:3, col:10>
+      `-IntegerLiteral 0x7fb355026490 <col:10> 'int' 0

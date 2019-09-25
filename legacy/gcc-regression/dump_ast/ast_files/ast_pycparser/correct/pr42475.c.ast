@@ -1,0 +1,113 @@
+FileAST: 
+  Typedef: B, [], ['typedef']
+    TypeDecl: B, []
+      Struct: None
+        Decl: x, [], [], []
+          TypeDecl: x, []
+            IdentifierType: ['float']
+        Decl: y, [], [], []
+          TypeDecl: y, []
+            IdentifierType: ['float']
+  Typedef: C, [], ['typedef']
+    TypeDecl: C, []
+      Struct: None
+        Decl: z, [], [], []
+          TypeDecl: z, []
+            IdentifierType: ['float']
+  Typedef: D, [], ['typedef']
+    TypeDecl: D, []
+      Struct: None
+        Decl: b, [], [], []
+          TypeDecl: b, []
+            IdentifierType: ['B']
+        Decl: c, [], [], []
+          TypeDecl: c, []
+            IdentifierType: ['C']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['float']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['float']
+        TypeDecl: foo, []
+          IdentifierType: ['B']
+    Compound: 
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['B']
+        InitList: 
+          NamedInitializer: 
+            ID: x
+            ID: x
+          NamedInitializer: 
+            ID: y
+            ID: y
+      Return: 
+        ID: b
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['B']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['B']
+        TypeDecl: bar, []
+          IdentifierType: ['B']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: foo
+          ExprList: 
+            BinaryOp: +
+              StructRef: .
+                ID: y
+                ID: x
+              StructRef: .
+                ID: b
+                ID: x
+            StructRef: .
+              ID: b
+              ID: y
+  FuncDef: 
+    Decl: baz, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            TypeDecl: p, []
+              IdentifierType: ['D']
+        TypeDecl: baz, []
+          IdentifierType: ['B']
+    Compound: 
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          IdentifierType: ['D']
+        InitList: 
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['B']
+        FuncCall: 
+          ID: bar
+          ExprList: 
+            FuncCall: 
+              ID: foo
+              ExprList: 
+                Constant: int, 0
+                BinaryOp: /
+                  StructRef: .
+                    StructRef: .
+                      ID: p
+                      ID: c
+                    ID: z
+                  Constant: int, 2
+            StructRef: .
+              ID: d
+              ID: b
+      Return: 
+        ID: y

@@ -1,0 +1,28 @@
+FileAST: 
+  FuncDef: 
+    Decl: test, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: dst, [], [], []
+            PtrDecl: []
+              TypeDecl: dst, []
+                IdentifierType: ['void']
+          Decl: src, [], [], []
+            PtrDecl: []
+              TypeDecl: src, []
+                IdentifierType: ['void']
+        TypeDecl: test, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: __builtin_memcpy
+        ExprList: 
+          ID: dst
+          ID: src
+          BinaryOp: /
+            UnaryOp: sizeof
+              Typename: None, []
+                PtrDecl: []
+                  TypeDecl: None, []
+                    IdentifierType: ['char']
+            Constant: int, 2

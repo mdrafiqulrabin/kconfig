@@ -1,0 +1,38 @@
+TranslationUnitDecl 0x7fb5f30264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb5f3026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb5f3026740 '__int128'
+|-TypedefDecl 0x7fb5f3026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb5f3026760 'unsigned __int128'
+|-TypedefDecl 0x7fb5f3026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb5f3026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb5f3026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb5f3026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb5f3026dc0 'char *'
+|   `-BuiltinType 0x7fb5f3026560 'char'
+|-TypedefDecl 0x7fb5f30270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb5f3027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb5f3026ee0 'struct __va_list_tag'
+|     `-Record 0x7fb5f3026e58 '__va_list_tag'
+|-RecordDecl 0x7fb5f3027120 <c_files/pr82816.c:1:1, line:4:1> line:1:8 struct A definition
+| `-FieldDecl 0x7fb5f3825a18 <line:3:3, col:9> col:7 referenced b 'int'
+|   `-IntegerLiteral 0x7fb5f30271d0 <col:9> 'int' 3
+|-VarDecl 0x7fb5f3825ab0 <line:1:1, line:4:3> col:3 used d 'struct A':'struct A'
+|-VarDecl 0x7fb5f3825b70 <line:1:1, line:4:6> col:6 used e 'struct A':'struct A'
+|-VarDecl 0x7fb5f3825c08 <line:6:1, col:5> col:5 used c 'int'
+`-FunctionDecl 0x7fb5f3825cb8 <line:8:1, line:12:1> line:8:6 f 'void ()'
+  `-CompoundStmt 0x7fb5f3825ff8 <line:9:1, line:12:1>
+    |-DeclStmt 0x7fb5f3825f38 <line:10:3, col:21>
+    | `-VarDecl 0x7fb5f3825d60 <col:3, col:20> col:8 used g 'char' cinit
+    |   `-ImplicitCastExpr 0x7fb5f3825ed8 <col:12, col:20> 'char' <IntegralCast>
+    |     `-BinaryOperator 0x7fb5f3825eb0 <col:12, col:20> 'int' '*'
+    |       |-ImplicitCastExpr 0x7fb5f3825e80 <col:12, col:14> 'int' <LValueToRValue>
+    |       | `-MemberExpr 0x7fb5f3825de8 <col:12, col:14> 'int' lvalue bitfield .b 0x7fb5f3825a18
+    |       |   `-DeclRefExpr 0x7fb5f3825dc0 <col:12> 'struct A':'struct A' lvalue Var 0x7fb5f3825ab0 'd' 'struct A':'struct A'
+    |       `-ImplicitCastExpr 0x7fb5f3825e98 <col:18, col:20> 'int' <LValueToRValue>
+    |         `-MemberExpr 0x7fb5f3825e48 <col:18, col:20> 'int' lvalue bitfield .b 0x7fb5f3825a18
+    |           `-DeclRefExpr 0x7fb5f3825e20 <col:18> 'struct A':'struct A' lvalue Var 0x7fb5f3825b70 'e' 'struct A':'struct A'
+    `-BinaryOperator 0x7fb5f3825fd0 <line:11:3, col:7> 'int' '='
+      |-DeclRefExpr 0x7fb5f3825f50 <col:3> 'int' lvalue Var 0x7fb5f3825c08 'c' 'int'
+      `-ImplicitCastExpr 0x7fb5f3825fb8 <col:7> 'int' <IntegralCast>
+        `-ImplicitCastExpr 0x7fb5f3825fa0 <col:7> 'char' <LValueToRValue>
+          `-DeclRefExpr 0x7fb5f3825f78 <col:7> 'char' lvalue Var 0x7fb5f3825d60 'g' 'char'

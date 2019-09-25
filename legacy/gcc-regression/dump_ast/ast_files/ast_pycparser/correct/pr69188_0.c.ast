@@ -1,0 +1,11 @@
+FileAST: 
+  FuncDef: 
+    Decl: fn1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: fn1, []
+          IdentifierType: ['void']
+    Compound: 

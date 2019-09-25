@@ -1,0 +1,3 @@
+pr80210.c:10:9: error: attribute(target("no-powerpc-gpopt")) is unknown
+ #pragma GCC target "no-powerpc-gpopt"
+         ^

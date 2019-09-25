@@ -1,0 +1,37 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['_Complex', 'int']
+        TypeDecl: foo, []
+          IdentifierType: ['_Complex', 'int']
+    Compound: 
+      Assignment: +=
+        ID: x
+        ID: __INT_MAX__
+      Assignment: +=
+        ID: x
+        Constant: int, 1
+      Return: 
+        ID: x
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['_Complex', 'int']
+        TypeDecl: bar, []
+          IdentifierType: ['_Complex', 'int']
+    Compound: 
+      Assignment: +=
+        ID: x
+        Constant: int, 1
+      Assignment: +=
+        ID: x
+        ID: __INT_MAX__
+      Return: 
+        ID: x

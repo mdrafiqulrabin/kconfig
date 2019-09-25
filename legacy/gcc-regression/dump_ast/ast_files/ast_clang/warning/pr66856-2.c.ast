@@ -1,0 +1,134 @@
+c_files/pr66856-2.c:22:29: warning: expression result unused [-Wunused-value]
+      fn1(f, j) * fn1(g, j) * fn1(h, j);
+      ~~~~~~~~~~~~~~~~~~~~~ ^ ~~~~~~~~~
+1 warning generated.
+TranslationUnitDecl 0x7febf40264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7febf4026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7febf4026740 '__int128'
+|-TypedefDecl 0x7febf4026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7febf4026760 'unsigned __int128'
+|-TypedefDecl 0x7febf4026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7febf4026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7febf4026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7febf4026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7febf4026dc0 'char *'
+|   `-BuiltinType 0x7febf4026560 'char'
+|-TypedefDecl 0x7febf40270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7febf4027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7febf4026ee0 'struct __va_list_tag'
+|     `-Record 0x7febf4026e58 '__va_list_tag'
+|-TypedefDecl 0x7febf4027138 <c_files/pr66856-2.c:3:1, col:13> col:13 referenced uint32_t 'int'
+| `-BuiltinType 0x7febf40265c0 'int'
+|-VarDecl 0x7febf4825a00 <line:4:1, col:5> col:5 used c 'int'
+|-VarDecl 0x7febf4825ab8 <col:1, col:8> col:8 used e 'int'
+|-VarDecl 0x7febf4825b30 <col:1, col:11> col:11 used f 'int'
+|-VarDecl 0x7febf4825ba8 <col:1, col:14> col:14 used g 'int'
+|-VarDecl 0x7febf4825c20 <col:1, col:17> col:17 used h 'int'
+|-VarDecl 0x7febf4825cf0 <line:5:1, col:8> col:8 used d 'short *'
+|-FunctionDecl 0x7febf4825f00 <line:6:1, line:14:1> line:6:10 used fn1 'uint32_t (uint32_t, uint32_t)'
+| |-ParmVarDecl 0x7febf4825d80 <col:14, col:23> col:23 used p1 'uint32_t':'int'
+| |-ParmVarDecl 0x7febf4825df0 <col:27, col:36> col:36 used p2 'uint32_t':'int'
+| `-CompoundStmt 0x7febf48264f8 <line:7:1, line:14:1>
+|   |-DeclStmt 0x7febf48260a0 <line:8:3, col:16>
+|   | |-VarDecl 0x7febf4825fb8 <col:3, col:12> col:12 used a 'uint32_t':'int'
+|   | `-VarDecl 0x7febf4826028 <col:3, col:15> col:15 used b 'uint32_t':'int'
+|   |-BinaryOperator 0x7febf48261d0 <line:9:3, col:17> 'uint32_t':'int' '='
+|   | |-DeclRefExpr 0x7febf48260b8 <col:3> 'uint32_t':'int' lvalue Var 0x7febf4825fb8 'a' 'uint32_t':'int'
+|   | `-BinaryOperator 0x7febf48261a8 <col:7, col:17> 'int' '&'
+|   |   |-BinaryOperator 0x7febf4826140 <col:7, col:13> 'uint32_t':'int' '>>'
+|   |   | |-ImplicitCastExpr 0x7febf4826128 <col:7> 'uint32_t':'int' <LValueToRValue>
+|   |   | | `-DeclRefExpr 0x7febf48260e0 <col:7> 'uint32_t':'int' lvalue ParmVar 0x7febf4825d80 'p1' 'uint32_t':'int'
+|   |   | `-IntegerLiteral 0x7febf4826108 <col:13> 'int' 3
+|   |   `-ImplicitCastExpr 0x7febf4826190 <col:17> 'uint32_t':'int' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7febf4826168 <col:17> 'uint32_t':'int' lvalue ParmVar 0x7febf4825df0 'p2' 'uint32_t':'int'
+|   |-BinaryOperator 0x7febf48262a8 <line:10:3, col:12> 'uint32_t':'int' '='
+|   | |-DeclRefExpr 0x7febf48261f8 <col:3> 'uint32_t':'int' lvalue Var 0x7febf4826028 'b' 'uint32_t':'int'
+|   | `-BinaryOperator 0x7febf4826280 <col:7, col:12> 'int' '&'
+|   |   |-ImplicitCastExpr 0x7febf4826268 <col:7> 'uint32_t':'int' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7febf4826220 <col:7> 'uint32_t':'int' lvalue ParmVar 0x7febf4825d80 'p1' 'uint32_t':'int'
+|   |   `-IntegerLiteral 0x7febf4826248 <col:12> 'int' 58
+|   |-CompoundAssignOperator 0x7febf4826380 <line:11:3, col:13> 'uint32_t':'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7febf48262d0 <col:3> 'uint32_t':'int' lvalue Var 0x7febf4825fb8 'a' 'uint32_t':'int'
+|   | `-BinaryOperator 0x7febf4826358 <col:8, col:13> 'uint32_t':'int' '>>'
+|   |   |-ImplicitCastExpr 0x7febf4826340 <col:8> 'uint32_t':'int' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7febf48262f8 <col:8> 'uint32_t':'int' lvalue Var 0x7febf4825fb8 'a' 'uint32_t':'int'
+|   |   `-IntegerLiteral 0x7febf4826320 <col:13> 'int' 5
+|   |-CompoundAssignOperator 0x7febf4826468 <line:12:3, col:13> 'uint32_t':'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7febf48263b8 <col:3> 'uint32_t':'int' lvalue Var 0x7febf4825fb8 'a' 'uint32_t':'int'
+|   | `-BinaryOperator 0x7febf4826440 <col:8, col:13> 'uint32_t':'int' '>>'
+|   |   |-ImplicitCastExpr 0x7febf4826428 <col:8> 'uint32_t':'int' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7febf48263e0 <col:8> 'uint32_t':'int' lvalue Var 0x7febf4826028 'b' 'uint32_t':'int'
+|   |   `-IntegerLiteral 0x7febf4826408 <col:13> 'int' 5
+|   `-ReturnStmt 0x7febf48264e0 <line:13:3, col:10>
+|     `-ImplicitCastExpr 0x7febf48264c8 <col:10> 'uint32_t':'int' <LValueToRValue>
+|       `-DeclRefExpr 0x7febf48264a0 <col:10> 'uint32_t':'int' lvalue Var 0x7febf4825fb8 'a' 'uint32_t':'int'
+`-FunctionDecl 0x7febf4826588 <line:16:1, line:26:1> line:16:6 fn2 'void ()'
+  `-CompoundStmt 0x7febf48270c0 <line:17:1, line:26:1>
+    |-DeclStmt 0x7febf48266e8 <line:18:3, col:14>
+    | `-VarDecl 0x7febf4826688 <col:3, col:13> col:13 used i 'uint32_t *'
+    |-DeclStmt 0x7febf4826770 <line:19:3, col:13>
+    | `-VarDecl 0x7febf4826710 <col:3, col:12> col:12 used j 'uint32_t':'int'
+    `-WhileStmt 0x7febf48270a0 <line:20:3, line:25:3>
+      |-<<<NULL>>>
+      |-CompoundAssignOperator 0x7febf48267d0 <line:20:10, col:15> 'int' '-=' ComputeLHSTy='int' ComputeResultTy='int'
+      | |-DeclRefExpr 0x7febf4826788 <col:10> 'int' lvalue Var 0x7febf4825a00 'c' 'int'
+      | `-IntegerLiteral 0x7febf48267b0 <col:15> 'int' 4
+      `-CompoundStmt 0x7febf4827068 <col:18, line:25:3>
+        |-CallExpr 0x7febf48268f0 <line:21:7, col:15> 'uint32_t':'int'
+        | |-ImplicitCastExpr 0x7febf48268d8 <col:7> 'uint32_t (*)(uint32_t, uint32_t)' <FunctionToPointerDecay>
+        | | `-DeclRefExpr 0x7febf4826808 <col:7> 'uint32_t (uint32_t, uint32_t)' Function 0x7febf4825f00 'fn1' 'uint32_t (uint32_t, uint32_t)'
+        | |-ImplicitCastExpr 0x7febf4826928 <col:11> 'int' <LValueToRValue>
+        | | `-DeclRefExpr 0x7febf4826830 <col:11> 'int' lvalue Var 0x7febf4825ab8 'e' 'int'
+        | `-ImplicitCastExpr 0x7febf4826940 <col:14> 'uint32_t':'int' <LValueToRValue>
+        |   `-DeclRefExpr 0x7febf4826858 <col:14> 'uint32_t':'int' lvalue Var 0x7febf4826710 'j' 'uint32_t':'int'
+        |-BinaryOperator 0x7febf4826c80 <line:22:7, col:39> 'int' '*'
+        | |-BinaryOperator 0x7febf4826b60 <col:7, col:27> 'int' '*'
+        | | |-CallExpr 0x7febf4826a00 <col:7, col:15> 'uint32_t':'int'
+        | | | |-ImplicitCastExpr 0x7febf48269d0 <col:7> 'uint32_t (*)(uint32_t, uint32_t)' <FunctionToPointerDecay>
+        | | | | `-DeclRefExpr 0x7febf4826958 <col:7> 'uint32_t (uint32_t, uint32_t)' Function 0x7febf4825f00 'fn1' 'uint32_t (uint32_t, uint32_t)'
+        | | | |-ImplicitCastExpr 0x7febf4826a38 <col:11> 'int' <LValueToRValue>
+        | | | | `-DeclRefExpr 0x7febf4826980 <col:11> 'int' lvalue Var 0x7febf4825b30 'f' 'int'
+        | | | `-ImplicitCastExpr 0x7febf4826a50 <col:14> 'uint32_t':'int' <LValueToRValue>
+        | | |   `-DeclRefExpr 0x7febf48269a8 <col:14> 'uint32_t':'int' lvalue Var 0x7febf4826710 'j' 'uint32_t':'int'
+        | | `-CallExpr 0x7febf4826af8 <col:19, col:27> 'uint32_t':'int'
+        | |   |-ImplicitCastExpr 0x7febf4826ae0 <col:19> 'uint32_t (*)(uint32_t, uint32_t)' <FunctionToPointerDecay>
+        | |   | `-DeclRefExpr 0x7febf4826a68 <col:19> 'uint32_t (uint32_t, uint32_t)' Function 0x7febf4825f00 'fn1' 'uint32_t (uint32_t, uint32_t)'
+        | |   |-ImplicitCastExpr 0x7febf4826b30 <col:23> 'int' <LValueToRValue>
+        | |   | `-DeclRefExpr 0x7febf4826a90 <col:23> 'int' lvalue Var 0x7febf4825ba8 'g' 'int'
+        | |   `-ImplicitCastExpr 0x7febf4826b48 <col:26> 'uint32_t':'int' <LValueToRValue>
+        | |     `-DeclRefExpr 0x7febf4826ab8 <col:26> 'uint32_t':'int' lvalue Var 0x7febf4826710 'j' 'uint32_t':'int'
+        | `-CallExpr 0x7febf4826c18 <col:31, col:39> 'uint32_t':'int'
+        |   |-ImplicitCastExpr 0x7febf4826c00 <col:31> 'uint32_t (*)(uint32_t, uint32_t)' <FunctionToPointerDecay>
+        |   | `-DeclRefExpr 0x7febf4826b88 <col:31> 'uint32_t (uint32_t, uint32_t)' Function 0x7febf4825f00 'fn1' 'uint32_t (uint32_t, uint32_t)'
+        |   |-ImplicitCastExpr 0x7febf4826c50 <col:35> 'int' <LValueToRValue>
+        |   | `-DeclRefExpr 0x7febf4826bb0 <col:35> 'int' lvalue Var 0x7febf4825c20 'h' 'int'
+        |   `-ImplicitCastExpr 0x7febf4826c68 <col:38> 'uint32_t':'int' <LValueToRValue>
+        |     `-DeclRefExpr 0x7febf4826bd8 <col:38> 'uint32_t':'int' lvalue Var 0x7febf4826710 'j' 'uint32_t':'int'
+        |-BinaryOperator 0x7febf4826e60 <line:23:7, col:25> 'short' '='
+        | |-UnaryOperator 0x7febf4826cf0 <col:7, col:9> 'short' lvalue prefix '*'
+        | | `-UnaryOperator 0x7febf4826cd0 <col:8, col:9> 'short *' postfix '++'
+        | |   `-DeclRefExpr 0x7febf4826ca8 <col:8> 'short *' lvalue Var 0x7febf4825cf0 'd' 'short *'
+        | `-ImplicitCastExpr 0x7febf4826e48 <col:14, col:25> 'short' <IntegralCast>
+        |   `-CallExpr 0x7febf4826de0 <col:14, col:25> 'uint32_t':'int'
+        |     |-ImplicitCastExpr 0x7febf4826dc8 <col:14> 'uint32_t (*)(uint32_t, uint32_t)' <FunctionToPointerDecay>
+        |     | `-DeclRefExpr 0x7febf4826d10 <col:14> 'uint32_t (uint32_t, uint32_t)' Function 0x7febf4825f00 'fn1' 'uint32_t (uint32_t, uint32_t)'
+        |     |-ImplicitCastExpr 0x7febf4826e18 <col:18, col:20> 'uint32_t':'int' <LValueToRValue>
+        |     | `-UnaryOperator 0x7febf4826d80 <col:18, col:20> 'uint32_t':'int' lvalue prefix '*'
+        |     |   `-UnaryOperator 0x7febf4826d60 <col:19, col:20> 'uint32_t *' postfix '++'
+        |     |     `-DeclRefExpr 0x7febf4826d38 <col:19> 'uint32_t *' lvalue Var 0x7febf4826688 'i' 'uint32_t *'
+        |     `-ImplicitCastExpr 0x7febf4826e30 <col:24> 'uint32_t':'int' <LValueToRValue>
+        |       `-DeclRefExpr 0x7febf4826da0 <col:24> 'uint32_t':'int' lvalue Var 0x7febf4826710 'j' 'uint32_t':'int'
+        `-BinaryOperator 0x7febf4827040 <line:24:7, col:25> 'short' '='
+          |-UnaryOperator 0x7febf4826ed0 <col:7, col:9> 'short' lvalue prefix '*'
+          | `-UnaryOperator 0x7febf4826eb0 <col:8, col:9> 'short *' postfix '++'
+          |   `-DeclRefExpr 0x7febf4826e88 <col:8> 'short *' lvalue Var 0x7febf4825cf0 'd' 'short *'
+          `-ImplicitCastExpr 0x7febf4827028 <col:14, col:25> 'short' <IntegralCast>
+            `-CallExpr 0x7febf4826fc0 <col:14, col:25> 'uint32_t':'int'
+              |-ImplicitCastExpr 0x7febf4826fa8 <col:14> 'uint32_t (*)(uint32_t, uint32_t)' <FunctionToPointerDecay>
+              | `-DeclRefExpr 0x7febf4826ef0 <col:14> 'uint32_t (uint32_t, uint32_t)' Function 0x7febf4825f00 'fn1' 'uint32_t (uint32_t, uint32_t)'
+              |-ImplicitCastExpr 0x7febf4826ff8 <col:18, col:20> 'uint32_t':'int' <LValueToRValue>
+              | `-UnaryOperator 0x7febf4826f60 <col:18, col:20> 'uint32_t':'int' lvalue prefix '*'
+              |   `-UnaryOperator 0x7febf4826f40 <col:19, col:20> 'uint32_t *' postfix '++'
+              |     `-DeclRefExpr 0x7febf4826f18 <col:19> 'uint32_t *' lvalue Var 0x7febf4826688 'i' 'uint32_t *'
+              `-ImplicitCastExpr 0x7febf4827010 <col:24> 'uint32_t':'int' <LValueToRValue>
+                `-DeclRefExpr 0x7febf4826f80 <col:24> 'uint32_t':'int' lvalue Var 0x7febf4826710 'j' 'uint32_t':'int'

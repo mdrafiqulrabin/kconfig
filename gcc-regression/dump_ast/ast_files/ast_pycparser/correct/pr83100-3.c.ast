@@ -1,5 +1,0 @@
-FileAST: 
-  Decl: a, ['const'], [], []
-    TypeDecl: a, ['const']
-      IdentifierType: ['int']
-    Constant: int, 7

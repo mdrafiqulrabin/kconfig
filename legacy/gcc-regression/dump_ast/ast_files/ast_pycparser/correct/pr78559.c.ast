@@ -1,0 +1,90 @@
+FileAST: 
+  Decl: g, [], [], []
+    TypeDecl: g, []
+      IdentifierType: ['int']
+    Constant: int, 20
+  Decl: d, [], [], []
+    TypeDecl: d, []
+      IdentifierType: ['int']
+    Constant: int, 0
+  FuncDef: 
+    Decl: fn2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p1, [], [], []
+            TypeDecl: p1, []
+              IdentifierType: ['int']
+          Decl: p2, [], [], []
+            TypeDecl: p2, []
+              IdentifierType: ['int']
+        TypeDecl: fn2, []
+          IdentifierType: ['short']
+    Compound: 
+      Return: 
+        TernaryOp: 
+          BinaryOp: ||
+            BinaryOp: >=
+              ID: p2
+              Constant: int, 2
+            BinaryOp: >>
+              Constant: int, 5
+              ID: p2
+          ID: p1
+          BinaryOp: <<
+            ID: p1
+            ID: p2
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: result, [], [], []
+        TypeDecl: result, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      Label: lbl_2582
+        If: 
+          ID: g
+          Compound: 
+            For: 
+              DeclList: 
+                Decl: c, [], [], []
+                  TypeDecl: c, []
+                    IdentifierType: ['int']
+                  UnaryOp: -
+                    Constant: int, 3
+              ID: c
+              UnaryOp: p++
+                ID: c
+              Assignment: =
+                ID: result
+                FuncCall: 
+                  ID: fn2
+                  ExprList: 
+                    Constant: int, 1
+                    ID: g
+          Compound: 
+            For: 
+              DeclList: 
+                Decl: i, [], [], []
+                  TypeDecl: i, []
+                    IdentifierType: ['int']
+                  Constant: int, 0
+              BinaryOp: <
+                ID: i
+                Constant: int, 2
+              Assignment: +=
+                ID: i
+                Constant: int, 2
+              If: 
+                ID: d
+                Goto: lbl_2582
+      If: 
+        BinaryOp: !=
+          ID: result
+          Constant: int, 1
+        FuncCall: 
+          ID: __builtin_abort
+      Return: 
+        Constant: int, 0

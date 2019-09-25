@@ -1,0 +1,20 @@
+FileAST: 
+  FuncDef: 
+    Decl: setgetlen, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: a
+        TypeDecl: setgetlen, []
+          IdentifierType: ['int']
+    Compound: 
+      While: 
+        BinaryOp: &
+          UnaryOp: *
+            UnaryOp: p++
+              ID: a
+          Constant: int, 0x80000000
+        EmptyStatement: 
+    Decl: a, [], [], []
+      PtrDecl: []
+        TypeDecl: a, []
+          IdentifierType: ['int']

@@ -1,0 +1,21 @@
+FileAST: 
+  FuncDef: 
+    Decl: Rotate, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: angle, [], [], []
+            TypeDecl: angle, []
+              IdentifierType: ['float']
+        TypeDecl: Rotate, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: mag, [], [], []
+        TypeDecl: mag, []
+          IdentifierType: ['float']
+        TernaryOp: 
+          BinaryOp: <
+            ID: angle
+            Constant: int, 0
+          UnaryOp: -
+            ID: angle
+          ID: angle

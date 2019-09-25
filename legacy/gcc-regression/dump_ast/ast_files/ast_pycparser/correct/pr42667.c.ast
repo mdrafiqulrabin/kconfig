@@ -1,0 +1,42 @@
+FileAST: 
+  Decl: strlen, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, ['const']
+          PtrDecl: []
+            TypeDecl: None, ['const']
+              IdentifierType: ['char']
+      TypeDecl: strlen, []
+        IdentifierType: ['int']
+  Decl: WriteTextDots, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: len, [], [], []
+          TypeDecl: len, []
+            IdentifierType: ['int']
+      TypeDecl: WriteTextDots, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: OnDisplay, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: string, [], [], []
+            PtrDecl: []
+              TypeDecl: string, []
+                IdentifierType: ['char']
+        TypeDecl: OnDisplay, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        UnaryOp: !
+          ID: string
+        Assignment: =
+          ID: string
+          Constant: string, "(none)"
+      FuncCall: 
+        ID: WriteTextDots
+        ExprList: 
+          FuncCall: 
+            ID: strlen
+            ExprList: 
+              ID: string

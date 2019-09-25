@@ -1,3 +1,0 @@
-pr34964.c:5:12: error: invalid initializer
- char x[] = 0;  
-            ^

@@ -1,0 +1,48 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['_Bool']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['_Bool']
+        TypeDecl: foo, []
+          IdentifierType: ['_Bool']
+    Compound: 
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['int']
+        BinaryOp: &&
+          ID: a
+          UnaryOp: !
+            ID: b
+      Return: 
+        BinaryOp: !=
+          ID: x
+          Constant: int, 0
+  Decl: y, [], [], []
+    TypeDecl: y, []
+      IdentifierType: ['int']
+    Constant: int, 1
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['_Bool']
+      If: 
+        FuncCall: 
+          ID: foo
+          ExprList: 
+            ID: x
+            ID: y
+        FuncCall: 
+          ID: __builtin_abort
+      Return: 
+        Constant: int, 0

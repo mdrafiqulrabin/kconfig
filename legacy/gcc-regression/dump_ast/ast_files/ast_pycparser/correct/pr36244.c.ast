@@ -1,0 +1,165 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: p7prior_s
+      Decl: mnum, [], [], []
+        TypeDecl: mnum, []
+          IdentifierType: ['int']
+      Decl: mq, [], [], []
+        ArrayDecl: []
+          TypeDecl: mq, []
+            IdentifierType: ['float']
+          Constant: int, 200
+      Decl: m, [], [], []
+        ArrayDecl: []
+          ArrayDecl: []
+            TypeDecl: m, []
+              IdentifierType: ['float']
+            Constant: int, 20
+          Constant: int, 200
+  Decl: default_amino_prior, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      PtrDecl: []
+        TypeDecl: default_amino_prior, []
+          Struct: p7prior_s
+  Decl: P7AllocPrior, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      PtrDecl: []
+        TypeDecl: P7AllocPrior, []
+          Struct: p7prior_s
+  FuncDef: 
+    Decl: default_amino_prior, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        PtrDecl: []
+          TypeDecl: default_amino_prior, []
+            Struct: p7prior_s
+    Compound: 
+      Decl: pri, [], [], []
+        PtrDecl: []
+          TypeDecl: pri, []
+            Struct: p7prior_s
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['int']
+      Decl: q, [], [], []
+        TypeDecl: q, []
+          IdentifierType: ['int']
+      Decl: defmq, [], ['static'], []
+        ArrayDecl: []
+          TypeDecl: defmq, []
+            IdentifierType: ['float']
+          Constant: int, 5
+        InitList: 
+          Constant: float, 0.178091
+          Constant: float, 0.056591
+          Constant: float, 0.0960191
+          Constant: float, 0.0781233
+          Constant: float, 0.0834977
+      Decl: defm, [], ['static'], []
+        ArrayDecl: []
+          ArrayDecl: []
+            TypeDecl: defm, []
+              IdentifierType: ['float']
+            Constant: int, 6
+          Constant: int, 5
+        InitList: 
+          InitList: 
+            Constant: float, 0.270671
+            Constant: float, 0.039848
+            Constant: float, 0.017576
+            Constant: float, 0.016415
+            Constant: float, 0.014268
+            Constant: float, 0.216147
+          InitList: 
+            Constant: float, 0.021465
+            Constant: float, 0.010300
+            Constant: float, 0.011741
+            Constant: float, 0.010883
+            Constant: float, 0.385651
+            Constant: float, 0.029156
+          InitList: 
+            Constant: float, 0.561459
+            Constant: float, 0.045448
+            Constant: float, 0.438366
+            Constant: float, 0.764167
+            Constant: float, 0.087364
+            Constant: float, 0.583402
+          InitList: 
+            Constant: float, 0.070143
+            Constant: float, 0.011140
+            Constant: float, 0.019479
+            Constant: float, 0.094657
+            Constant: float, 0.013162
+            Constant: float, 0.073732
+          InitList: 
+            Constant: float, 0.041103
+            Constant: float, 0.014794
+            Constant: float, 0.005610
+            Constant: float, 0.010216
+            Constant: float, 0.153602
+            Constant: float, 0.012049
+      Assignment: =
+        ID: pri
+        FuncCall: 
+          ID: P7AllocPrior
+      Assignment: =
+        StructRef: ->
+          ID: pri
+          ID: mnum
+        Constant: int, 5
+      For: 
+        Assignment: =
+          ID: q
+          Constant: int, 0
+        BinaryOp: <
+          ID: q
+          StructRef: ->
+            ID: pri
+            ID: mnum
+        UnaryOp: p++
+          ID: q
+        Compound: 
+          Assignment: =
+            ArrayRef: 
+              StructRef: ->
+                ID: pri
+                ID: mq
+              ID: q
+            ArrayRef: 
+              ID: defmq
+              ID: q
+          For: 
+            Assignment: =
+              ID: x
+              Constant: int, 0
+            BinaryOp: <
+              ID: x
+              Constant: int, 6
+            UnaryOp: p++
+              ID: x
+            Assignment: =
+              ArrayRef: 
+                ArrayRef: 
+                  StructRef: ->
+                    ID: pri
+                    ID: m
+                  ID: q
+                ID: x
+              ArrayRef: 
+                ArrayRef: 
+                  ID: defm
+                  ID: q
+                ID: x
+      Return: 
+        ID: pri

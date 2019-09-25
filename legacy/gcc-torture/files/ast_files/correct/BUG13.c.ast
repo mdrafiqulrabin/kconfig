@@ -1,0 +1,51 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: tree_common
+      Decl: uid, [], [], []
+        TypeDecl: uid, []
+          IdentifierType: ['int']
+      Decl: code, [], [], []
+        TypeDecl: code, []
+          IdentifierType: ['unsigned', 'int']
+        Constant: int, 8
+      Decl: code2, [], [], []
+        TypeDecl: code2, []
+          IdentifierType: ['unsigned', 'int']
+        Constant: int, 8
+      Decl: external_attr, [], [], []
+        TypeDecl: external_attr, []
+          IdentifierType: ['unsigned']
+        Constant: int, 1
+      Decl: public_attr, [], [], []
+        TypeDecl: public_attr, []
+          IdentifierType: ['unsigned']
+        Constant: int, 1
+  FuncDef: 
+    Decl: duplicate_decls, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          ID: x
+        TypeDecl: duplicate_decls, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        StructRef: ->
+          ID: x
+          ID: external_attr
+        If: 
+          StructRef: ->
+            ID: x
+            ID: code
+          If: 
+            StructRef: ->
+              ID: x
+              ID: code2
+            Assignment: =
+              StructRef: ->
+                ID: x
+                ID: public_attr
+              Constant: int, 1
+    Decl: x, [], ['register'], []
+      PtrDecl: []
+        TypeDecl: x, []
+          Struct: tree_common

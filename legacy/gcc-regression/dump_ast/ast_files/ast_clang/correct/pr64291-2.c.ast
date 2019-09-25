@@ -1,0 +1,92 @@
+TranslationUnitDecl 0x7fb0f88264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb0f8826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb0f8826740 '__int128'
+|-TypedefDecl 0x7fb0f8826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb0f8826760 'unsigned __int128'
+|-TypedefDecl 0x7fb0f8826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb0f8826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb0f8826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb0f8826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb0f8826dc0 'char *'
+|   `-BuiltinType 0x7fb0f8826560 'char'
+|-TypedefDecl 0x7fb0f88270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb0f8827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb0f8826ee0 'struct __va_list_tag'
+|     `-Record 0x7fb0f8826e58 '__va_list_tag'
+|-FunctionDecl 0x7fb0f8867c30 </usr/include/assert.h:76:1, /usr/include/sys/cdefs.h:242:68> /usr/include/assert.h:76:6 used __assert_rtn 'void (const char *, const char *, int, const char *) __attribute__((noreturn))'
+| |-ParmVarDecl 0x7fb0f8827138 <col:19, col:30> col:31 'const char *'
+| |-ParmVarDecl 0x7fb0f8867a00 <col:33, col:44> col:45 'const char *'
+| |-ParmVarDecl 0x7fb0f8867a78 <col:47> col:50 'int'
+| |-ParmVarDecl 0x7fb0f8867af0 <col:52, col:63> col:64 'const char *'
+| `-DisableTailCallsAttr 0x7fb0f8867ce8 </usr/include/sys/cdefs.h:242:45>
+|-FunctionDecl 0x7fb0f8867e50 <c_files/pr64291-2.c:3:1, col:20> col:6 f 'void (void *, ...)'
+| |-ParmVarDecl 0x7fb0f8867d88 <col:8, col:13> col:13 p 'void *'
+| `-CompoundStmt 0x7fb0f8867ef0 <col:19, col:20>
+|-FunctionDecl 0x7fb0f88680f0 <line:4:1, col:43> col:6 g 'void (void *, long, long)'
+| |-ParmVarDecl 0x7fb0f8867f20 <col:8, col:13> col:13 p 'void *'
+| |-ParmVarDecl 0x7fb0f8867f98 <col:15, col:20> col:20 used a 'long'
+| |-ParmVarDecl 0x7fb0f8868010 <col:22, col:27> col:27 b 'long'
+| `-CompoundStmt 0x7fb0f8868928 <col:29, col:43>
+|   `-ParenExpr 0x7fb0f8868908 </usr/include/assert.h:93:5, col:90> 'void'
+|     `-ConditionalOperator 0x7fb0f88688d8 <col:6, col:89> 'void'
+|       |-CallExpr 0x7fb0f8868510 <col:6, col:30> 'long'
+|       | |-ImplicitCastExpr 0x7fb0f88684f8 <col:6> 'long (*)(long, long)' <BuiltinFnToFnPtr>
+|       | | `-DeclRefExpr 0x7fb0f88683a0 <col:6> '<builtin fn type>' Function 0x7fb0f88681e0 '__builtin_expect' 'long (long, long)'
+|       | |-ImplicitCastExpr 0x7fb0f8868548 <col:23, col:26> 'long' <IntegralCast>
+|       | | `-UnaryOperator 0x7fb0f8868488 <col:23, col:26> 'int' prefix '!'
+|       | |   `-ParenExpr 0x7fb0f8868468 <col:24, col:26> 'int'
+|       | |     `-BinaryOperator 0x7fb0f8868440 <c_files/pr64291-2.c:4:37, col:40> 'int' '=='
+|       | |       |-ImplicitCastExpr 0x7fb0f8868410 <col:37> 'long' <LValueToRValue>
+|       | |       | `-DeclRefExpr 0x7fb0f88683c8 <col:37> 'long' lvalue ParmVar 0x7fb0f8867f98 'a' 'long'
+|       | |       `-ImplicitCastExpr 0x7fb0f8868428 <col:40> 'long' <IntegralCast>
+|       | |         `-IntegerLiteral 0x7fb0f88683f0 <col:40> 'int' 8
+|       | `-ImplicitCastExpr 0x7fb0f8868560 </usr/include/assert.h:93:29> 'long' <IntegralCast>
+|       |   `-IntegerLiteral 0x7fb0f88684a8 <col:29> 'int' 0
+|       |-CallExpr 0x7fb0f88687c0 <col:34, col:79> 'void'
+|       | |-ImplicitCastExpr 0x7fb0f88687a8 <col:34> 'void (*)(const char *, const char *, int, const char *) __attribute__((noreturn))' <FunctionToPointerDecay>
+|       | | `-DeclRefExpr 0x7fb0f8868578 <col:34> 'void (const char *, const char *, int, const char *) __attribute__((noreturn))' Function 0x7fb0f8867c30 '__assert_rtn' 'void (const char *, const char *, int, const char *) __attribute__((noreturn))'
+|       | |-ImplicitCastExpr 0x7fb0f8868808 <col:47> 'const char *' <ArrayToPointerDecay>
+|       | | `-PredefinedExpr 0x7fb0f8868648 <col:47> 'const char [2]' lvalue __func__
+|       | |   `-StringLiteral 0x7fb0f8868618 <col:47> 'const char [2]' lvalue "g"
+|       | |-ImplicitCastExpr 0x7fb0f8868838 <<scratch space>:10:1> 'const char *' <BitCast>
+|       | | `-ImplicitCastExpr 0x7fb0f8868820 <col:1> 'char *' <ArrayToPointerDecay>
+|       | |   `-StringLiteral 0x7fb0f88686a8 <col:1> 'char [20]' lvalue "c_files/pr64291-2.c"
+|       | |-IntegerLiteral 0x7fb0f88686e8 <line:11:1> 'int' 4
+|       | `-ImplicitCastExpr 0x7fb0f8868868 <line:9:1> 'const char *' <BitCast>
+|       |   `-ImplicitCastExpr 0x7fb0f8868850 <col:1> 'char *' <ArrayToPointerDecay>
+|       |     `-StringLiteral 0x7fb0f8868748 <col:1> 'char [5]' lvalue "a==8"
+|       `-CStyleCastExpr 0x7fb0f88688b0 </usr/include/assert.h:93:83, col:89> 'void' <ToVoid>
+|         `-IntegerLiteral 0x7fb0f8868880 <col:89> 'int' 0
+|-FunctionDecl 0x7fb0f88681e0 <col:6> col:6 implicit used __builtin_expect 'long (long, long)' extern
+| |-ParmVarDecl 0x7fb0f8868278 <<invalid sloc>> <invalid sloc> 'long'
+| |-ParmVarDecl 0x7fb0f88682d8 <<invalid sloc>> <invalid sloc> 'long'
+| |-NoThrowAttr 0x7fb0f8868348 <col:6> Implicit
+| `-ConstAttr 0x7fb0f8868390 <col:6> Implicit
+|-RecordDecl 0x7fb0f8868948 <c_files/pr64291-2.c:5:9, line:9:1> line:5:9 struct definition
+| |-FieldDecl 0x7fb0f8892e18 <line:7:3, col:7> col:7 referenced _mp_size 'int'
+| `-FieldDecl 0x7fb0f8892ea0 <line:8:3, col:18> col:18 referenced _mp_d 'unsigned long *'
+|-TypedefDecl 0x7fb0f8892f40 <line:5:1, line:9:3> col:3 referenced __mpz_struct 'struct __mpz_struct':'__mpz_struct'
+| `-ElaboratedType 0x7fb0f8892ef0 'struct __mpz_struct' sugar
+|   `-RecordType 0x7fb0f88689d0 '__mpz_struct'
+|     `-Record 0x7fb0f8868948 ''
+|-TypedefDecl 0x7fb0f88930d8 <line:10:1, col:29> col:22 referenced mpz_t '__mpz_struct [1]'
+| `-ConstantArrayType 0x7fb0f8893080 '__mpz_struct [1]' 1 
+|   `-TypedefType 0x7fb0f8892fb0 '__mpz_struct' sugar
+|     |-Typedef 0x7fb0f8892f40 '__mpz_struct'
+|     `-ElaboratedType 0x7fb0f8892ef0 'struct __mpz_struct' sugar
+|       `-RecordType 0x7fb0f88689d0 '__mpz_struct'
+|         `-Record 0x7fb0f8868948 ''
+`-FunctionDecl 0x7fb0f88932f0 <line:11:1, line:14:1> line:11:6 h 'void (__mpz_struct *)'
+  |-ParmVarDecl 0x7fb0f88931f0 <col:8, col:14> col:14 used x '__mpz_struct *':'__mpz_struct *'
+  `-CompoundStmt 0x7fb0f8893528 <col:17, line:14:1>
+    |-BinaryOperator 0x7fb0f8893440 <line:12:3, col:12> 'unsigned long *' '='
+    | |-MemberExpr 0x7fb0f88933d0 <col:3, col:6> 'unsigned long *' lvalue ->_mp_d 0x7fb0f8892ea0
+    | | `-ImplicitCastExpr 0x7fb0f88933b8 <col:3> '__mpz_struct *':'__mpz_struct *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fb0f8893390 <col:3> '__mpz_struct *':'__mpz_struct *' lvalue ParmVar 0x7fb0f88931f0 'x' '__mpz_struct *':'__mpz_struct *'
+    | `-ImplicitCastExpr 0x7fb0f8893428 <col:12> 'unsigned long *' <NullToPointer>
+    |   `-IntegerLiteral 0x7fb0f8893408 <col:12> 'int' 0
+    `-BinaryOperator 0x7fb0f8893500 <line:13:3, col:15> 'int' '='
+      |-MemberExpr 0x7fb0f88934a8 <col:3, col:6> 'int' lvalue ->_mp_size 0x7fb0f8892e18
+      | `-ImplicitCastExpr 0x7fb0f8893490 <col:3> '__mpz_struct *':'__mpz_struct *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fb0f8893468 <col:3> '__mpz_struct *':'__mpz_struct *' lvalue ParmVar 0x7fb0f88931f0 'x' '__mpz_struct *':'__mpz_struct *'
+      `-IntegerLiteral 0x7fb0f88934e0 <col:15> 'int' 0

@@ -1,0 +1,28 @@
+FileAST: 
+  FuncDef: 
+    Decl: seed, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: seed, []
+          IdentifierType: ['unsigned', 'long']
+    Compound: 
+      Decl: u, [], [], []
+        TypeDecl: u, []
+          IdentifierType: ['unsigned', 'long']
+      FuncCall: 
+        ID: call
+      Assignment: =
+        ID: u
+        BinaryOp: *
+          Constant: int, 26107
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['unsigned', 'long']
+            UnaryOp: &
+              ID: u
+      Return: 
+        ID: u

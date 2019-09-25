@@ -1,0 +1,40 @@
+c_files/pr77881.c:10:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+1 warning generated.
+TranslationUnitDecl 0x7fc9168264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc916826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc916826740 '__int128'
+|-TypedefDecl 0x7fc916826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc916826760 'unsigned __int128'
+|-TypedefDecl 0x7fc916826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc916826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc916826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc916826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc916826dc0 'char *'
+|   `-BuiltinType 0x7fc916826560 'char'
+|-TypedefDecl 0x7fc9168270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc916827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc916826ee0 'struct __va_list_tag'
+|     `-Record 0x7fc916826e58 '__va_list_tag'
+|-FunctionDecl 0x7fc917025a00 <c_files/pr77881.c:4:1, col:21> col:13 used baz 'void (void)' extern
+`-FunctionDecl 0x7fc917025cc8 <line:5:1, line:10:1> line:6:1 foo 'int (long long, long long, int)'
+  |-ParmVarDecl 0x7fc917025af0 <col:6, col:20> col:20 used a 'long long'
+  |-ParmVarDecl 0x7fc917025b68 <col:23, col:37> col:37 a2 'long long'
+  |-ParmVarDecl 0x7fc917025be0 <col:41, col:45> col:45 used b 'int'
+  `-CompoundStmt 0x7fc917025f50 <line:7:1, line:10:1>
+    `-IfStmt 0x7fc917025f18 <line:8:5, line:9:16>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fc917025e58 <line:8:9, col:18> 'int' '||'
+      | |-BinaryOperator 0x7fc917025df0 <col:9, col:13> 'int' '<'
+      | | |-ImplicitCastExpr 0x7fc917025dc0 <col:9> 'long long' <LValueToRValue>
+      | | | `-DeclRefExpr 0x7fc917025d78 <col:9> 'long long' lvalue ParmVar 0x7fc917025af0 'a' 'long long'
+      | | `-ImplicitCastExpr 0x7fc917025dd8 <col:13> 'long long' <IntegralCast>
+      | |   `-IntegerLiteral 0x7fc917025da0 <col:13> 'int' 0
+      | `-ImplicitCastExpr 0x7fc917025e40 <col:18> 'int' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fc917025e18 <col:18> 'int' lvalue ParmVar 0x7fc917025be0 'b' 'int'
+      |-CallExpr 0x7fc917025ef0 <line:9:11, col:16> 'void'
+      | `-ImplicitCastExpr 0x7fc917025ed8 <col:11> 'void (*)(void)' <FunctionToPointerDecay>
+      |   `-DeclRefExpr 0x7fc917025e80 <col:11> 'void (void)' Function 0x7fc917025a00 'baz' 'void (void)'
+      `-<<<NULL>>>

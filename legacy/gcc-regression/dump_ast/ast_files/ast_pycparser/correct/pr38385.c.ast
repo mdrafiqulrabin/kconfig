@@ -1,0 +1,358 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: rtx_def
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['int']
+  Typedef: rtx, [], ['typedef']
+    PtrDecl: []
+      TypeDecl: rtx, []
+        Struct: rtx_def
+  Decl: None, [], [], []
+    Struct: rd
+      Decl: alternative_enabled_p, [], [], []
+        ArrayDecl: []
+          TypeDecl: alternative_enabled_p, []
+            IdentifierType: ['int']
+          Constant: int, 100
+      Decl: operand, [], [], []
+        ArrayDecl: []
+          TypeDecl: operand, []
+            IdentifierType: ['rtx']
+          Constant: int, 100
+      Decl: n_operands, [], [], []
+        TypeDecl: n_operands, []
+          IdentifierType: ['int']
+  Decl: this_insn, [], [], []
+    TypeDecl: this_insn, []
+      IdentifierType: ['rtx']
+  Decl: n_reloads, [], [], []
+    TypeDecl: n_reloads, []
+      IdentifierType: ['int']
+  Decl: n_replacements, [], [], []
+    TypeDecl: n_replacements, []
+      IdentifierType: ['int']
+  Decl: n_earlyclobbers, [], [], []
+    TypeDecl: n_earlyclobbers, []
+      IdentifierType: ['int']
+  Decl: replace_reloads, [], [], []
+    TypeDecl: replace_reloads, []
+      IdentifierType: ['int']
+  Decl: hard_regs_live_known, [], [], []
+    TypeDecl: hard_regs_live_known, []
+      IdentifierType: ['int']
+  Decl: static_reload_reg_p, [], [], []
+    PtrDecl: []
+      TypeDecl: static_reload_reg_p, []
+        IdentifierType: ['short']
+  Decl: recog_data, [], [], []
+    TypeDecl: recog_data, []
+      Struct: rd
+  Decl: ix86_preferred_reload_class, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['rtx']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: ix86_preferred_reload_class, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: find_reloads, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: insn, [], [], []
+            TypeDecl: insn, []
+              IdentifierType: ['rtx']
+          Decl: replace, [], [], []
+            TypeDecl: replace, []
+              IdentifierType: ['int']
+          Decl: ind_levels, [], [], []
+            TypeDecl: ind_levels, []
+              IdentifierType: ['int']
+          Decl: live_known, [], [], []
+            TypeDecl: live_known, []
+              IdentifierType: ['int']
+          Decl: reload_reg_p, [], [], []
+            PtrDecl: []
+              TypeDecl: reload_reg_p, []
+                IdentifierType: ['short']
+        TypeDecl: find_reloads, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['int']
+      Decl: noperands, [], [], []
+        TypeDecl: noperands, []
+          IdentifierType: ['int']
+        ID: replace
+      Decl: no_input_reloads, [], [], []
+        TypeDecl: no_input_reloads, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      Decl: n_alternatives, [], [], []
+        TypeDecl: n_alternatives, []
+          IdentifierType: ['int']
+        ID: replace
+      Decl: this_alternative_match_win, [], [], []
+        ArrayDecl: []
+          TypeDecl: this_alternative_match_win, []
+            IdentifierType: ['char']
+          Constant: int, 30
+      Decl: this_alternative_win, [], [], []
+        ArrayDecl: []
+          TypeDecl: this_alternative_win, []
+            IdentifierType: ['char']
+          Constant: int, 30
+      Decl: this_alternative_earlyclobber, [], [], []
+        ArrayDecl: []
+          TypeDecl: this_alternative_earlyclobber, []
+            IdentifierType: ['char']
+          Constant: int, 30
+      Decl: this_alternative_matches, [], [], []
+        ArrayDecl: []
+          TypeDecl: this_alternative_matches, []
+            IdentifierType: ['int']
+          Constant: int, 30
+      Decl: goal_alternative, [], [], []
+        ArrayDecl: []
+          TypeDecl: goal_alternative, []
+            IdentifierType: ['int']
+          Constant: int, 30
+      Decl: this_alternative_number, [], [], []
+        TypeDecl: this_alternative_number, []
+          IdentifierType: ['int']
+      Decl: goal_alternative_match_win, [], [], []
+        ArrayDecl: []
+          TypeDecl: goal_alternative_match_win, []
+            IdentifierType: ['char']
+          Constant: int, 30
+      Decl: goal_alternative_win, [], [], []
+        ArrayDecl: []
+          TypeDecl: goal_alternative_win, []
+            IdentifierType: ['char']
+          Constant: int, 30
+      Decl: best, [], [], []
+        TypeDecl: best, []
+          IdentifierType: ['int']
+      Decl: operand_mode, [], [], []
+        ArrayDecl: []
+          TypeDecl: operand_mode, []
+            IdentifierType: ['int']
+          Constant: int, 30
+      Decl: retval, [], [], []
+        TypeDecl: retval, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      For: 
+        Assignment: =
+          ID: this_alternative_number
+          Constant: int, 0
+        BinaryOp: <
+          ID: this_alternative_number
+          ID: n_alternatives
+        UnaryOp: p++
+          ID: this_alternative_number
+        Compound: 
+          Decl: losers, [], [], []
+            TypeDecl: losers, []
+              IdentifierType: ['int']
+            Constant: int, 0
+          Decl: bad, [], [], []
+            TypeDecl: bad, []
+              IdentifierType: ['int']
+            Constant: int, 0
+          If: 
+            UnaryOp: !
+              ArrayRef: 
+                StructRef: .
+                  ID: recog_data
+                  ID: alternative_enabled_p
+                ID: this_alternative_number
+            Compound: 
+              Decl: i, [], [], []
+                TypeDecl: i, []
+                  IdentifierType: ['int']
+              For: 
+                Assignment: =
+                  ID: i
+                  Constant: int, 0
+                BinaryOp: <
+                  ID: i
+                  StructRef: .
+                    ID: recog_data
+                    ID: n_operands
+                UnaryOp: p++
+                  ID: i
+                EmptyStatement: 
+              Continue: 
+          For: 
+            Assignment: =
+              ID: i
+              Constant: int, 0
+            BinaryOp: <
+              ID: i
+              ID: noperands
+            UnaryOp: p++
+              ID: i
+            If: 
+              BinaryOp: &&
+                ArrayRef: 
+                  ID: this_alternative_earlyclobber
+                  ID: i
+                BinaryOp: ||
+                  ArrayRef: 
+                    ID: this_alternative_win
+                    ID: i
+                  ArrayRef: 
+                    ID: this_alternative_match_win
+                    ID: i
+              Compound: 
+                If: 
+                  BinaryOp: !=
+                    ID: j
+                    ID: noperands
+                  Compound: 
+                    UnaryOp: p++
+                      ID: losers
+                    For: 
+                      Assignment: =
+                        ID: j
+                        Constant: int, 0
+                      BinaryOp: <
+                        ID: j
+                        ID: noperands
+                      UnaryOp: p++
+                        ID: j
+                      If: 
+                        BinaryOp: &&
+                          BinaryOp: ==
+                            ArrayRef: 
+                              ID: this_alternative_matches
+                              ID: j
+                            ID: i
+                          ArrayRef: 
+                            ID: this_alternative_match_win
+                            ID: j
+                        Compound: 
+                          Assignment: =
+                            ArrayRef: 
+                              ID: this_alternative_win
+                              ID: j
+                            Constant: int, 0
+                          Assignment: =
+                            ArrayRef: 
+                              ID: this_alternative_match_win
+                              ID: j
+                            Constant: int, 0
+                          UnaryOp: p++
+                            ID: losers
+          If: 
+            BinaryOp: ==
+              ID: losers
+              Constant: int, 0
+            Compound: 
+              For: 
+                Assignment: =
+                  ID: i
+                  Constant: int, 0
+                BinaryOp: <
+                  ID: i
+                  ID: noperands
+                UnaryOp: p++
+                  ID: i
+                Compound: 
+                  Assignment: =
+                    ArrayRef: 
+                      ID: goal_alternative_win
+                      ID: i
+                    Constant: int, 0
+                  Assignment: =
+                    ArrayRef: 
+                      ID: goal_alternative_match_win
+                      ID: i
+                    Constant: int, 0
+              Goto: finish
+          If: 
+            BinaryOp: &&
+              UnaryOp: !
+                ID: bad
+              BinaryOp: >
+                ID: best
+                ID: losers
+            Compound: 
+              For: 
+                Assignment: =
+                  ID: i
+                  Constant: int, 0
+                BinaryOp: <
+                  ID: i
+                  ID: noperands
+                UnaryOp: p++
+                  ID: i
+                Compound: 
+                  Assignment: =
+                    ArrayRef: 
+                      ID: goal_alternative
+                      ID: i
+                    Constant: int, 0
+                  Assignment: =
+                    ArrayRef: 
+                      ID: goal_alternative_win
+                      ID: i
+                    Constant: int, 0
+      Label: finish
+        For: 
+          Assignment: =
+            ID: i
+            Constant: int, 0
+          BinaryOp: <
+            ID: i
+            ID: noperands
+          UnaryOp: p++
+            ID: i
+          If: 
+            UnaryOp: !
+              ArrayRef: 
+                ID: goal_alternative_win
+                ID: i
+            Compound: 
+              Decl: op, [], [], []
+                TypeDecl: op, []
+                  IdentifierType: ['rtx']
+                ArrayRef: 
+                  StructRef: .
+                    ID: recog_data
+                    ID: operand
+                  ID: i
+              Decl: mode, [], [], []
+                TypeDecl: mode, []
+                  IdentifierType: ['int']
+                ArrayRef: 
+                  ID: operand_mode
+                  ID: i
+              If: 
+                BinaryOp: &&
+                  BinaryOp: ||
+                    BinaryOp: ==
+                      FuncCall: 
+                        ID: ix86_preferred_reload_class
+                        ExprList: 
+                          ID: op
+                          ArrayRef: 
+                            ID: goal_alternative
+                            ID: i
+                      Constant: int, 2
+                    ID: no_input_reloads
+                  BinaryOp: !=
+                    ID: mode
+                    Constant: int, 0
+                Compound: 
+      Return: 
+        ID: retval

@@ -1,0 +1,49 @@
+c_files/pr84723-3.c:6:16: warning: unknown attribute 'target_clones' ignored [-Wunknown-attributes]
+__attribute__((target_clones ("avx", "default")))
+               ^
+c_files/pr84723-3.c:11:41: error: function definition is not allowed here
+  __attribute__((noinline)) void bar () { goto lab; }
+                                        ^
+c_files/pr84723-3.c:13:5: warning: implicit declaration of function 'bar' is invalid in C99 [-Wimplicit-function-declaration]
+    bar ();
+    ^
+2 warnings and 1 error generated.
+TranslationUnitDecl 0x7fde0e0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fde0e026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fde0e026740 '__int128'
+|-TypedefDecl 0x7fde0e026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fde0e026760 'unsigned __int128'
+|-TypedefDecl 0x7fde0e026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fde0e026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fde0e026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fde0e026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fde0e026dc0 'char *'
+|   `-BuiltinType 0x7fde0e026560 'char'
+|-TypedefDecl 0x7fde0e0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fde0e027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fde0e026ee0 'struct __va_list_tag'
+|     `-Record 0x7fde0e026e58 '__va_list_tag'
+|-FunctionDecl 0x7fde0e826ae8 <c_files/pr84723-3.c:6:1, line:17:1> line:8:1 foo 'int (int)'
+| |-ParmVarDecl 0x7fde0e826a18 <col:6, col:10> col:10 used x 'int'
+| `-CompoundStmt 0x7fde0e826f28 <line:9:1, line:17:1>
+|   |-DeclStmt 0x7fde0e826c10 <line:10:3, col:16>
+|   | `-LabelDecl 0x7fde0e826bc8 <col:3, col:13> col:13 lab
+|   |-IfStmt 0x7fde0e826e28 <line:12:3, line:13:10>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fde0e826c88 <line:12:7, col:12> 'int' '=='
+|   | | |-ImplicitCastExpr 0x7fde0e826c70 <col:7> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fde0e826c28 <col:7> 'int' lvalue ParmVar 0x7fde0e826a18 'x' 'int'
+|   | | `-IntegerLiteral 0x7fde0e826c50 <col:12> 'int' 5
+|   | |-CallExpr 0x7fde0e826e00 <line:13:5, col:10> 'int'
+|   | | `-ImplicitCastExpr 0x7fde0e826de8 <col:5> 'int (*)()' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7fde0e826d98 <col:5> 'int ()' Function 0x7fde0e826d00 'bar' 'int ()'
+|   | `-<<<NULL>>>
+|   |-UnaryOperator 0x7fde0e826e88 <line:14:3, col:4> 'int' postfix '++'
+|   | `-DeclRefExpr 0x7fde0e826e60 <col:3> 'int' lvalue ParmVar 0x7fde0e826a18 'x' 'int'
+|   |-LabelStmt 0x7fde0e826eb8 <line:15:1, col:5> 'lab'
+|   | `-NullStmt 0x7fde0e826ea8 <col:5>
+|   `-ReturnStmt 0x7fde0e826f10 <line:16:3, col:10>
+|     `-ImplicitCastExpr 0x7fde0e826ef8 <col:10> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x7fde0e826ed0 <col:10> 'int' lvalue ParmVar 0x7fde0e826a18 'x' 'int'
+`-FunctionDecl 0x7fde0e826d00 <<invalid sloc>> line:13:5 implicit used bar 'int ()'

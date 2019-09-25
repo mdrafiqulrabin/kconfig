@@ -1,8 +1,0 @@
-pr81768-2.c: In function ‘foo’:
-pr81768-2.c:12:5: error: ‘for’ loop initial declarations are only allowed in C99 mode
-     for (float *j = &b[0][15][0]; j > &b[0][0][0]; j -= 10)
-     ^
-pr81768-2.c:12:5: note: use option -std=c99 or -std=gnu99 to compile your code
-pr81768-2.c:13:7: error: ‘for’ loop initial declarations are only allowed in C99 mode
-       for (float *k = &b[0][0][10]; k > &b[0][0][0]; --k)
-       ^

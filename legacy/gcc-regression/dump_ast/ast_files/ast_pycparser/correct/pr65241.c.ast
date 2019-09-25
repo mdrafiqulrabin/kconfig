@@ -1,0 +1,76 @@
+FileAST: 
+  Decl: None, [], [], []
+    Enum: E
+      EnumeratorList: 
+        Enumerator: A
+        Enumerator: B
+        Enumerator: C
+        Enumerator: D
+  Decl: fn4, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: fn4, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: fn1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p1, [], [], []
+            TypeDecl: p1, []
+              Enum: E
+        TypeDecl: fn1, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: w, [], ['static'], []
+        ArrayDecl: []
+          TypeDecl: w, []
+            IdentifierType: ['int']
+          ID: D
+      If: 
+        ArrayRef: 
+          ID: w
+          ID: p1
+        Switch: 
+          ID: p1
+          Case: 
+            ID: C
+            Assignment: =
+              ArrayRef: 
+                ID: w
+                ID: p1
+              Constant: int, 0
+  FuncDef: 
+    Decl: fn2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: p1
+        TypeDecl: fn2, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: fn1
+        ExprList: 
+          ID: p1
+  FuncDef: 
+    Decl: fn3, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p1, [], [], []
+            TypeDecl: p1, []
+              Enum: E
+        TypeDecl: fn3, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: fn2
+        ExprList: 
+          ID: p1
+      FuncCall: 
+        ID: fn4
+      FuncCall: 
+        ID: fn2
+        ExprList: 
+          ID: p1

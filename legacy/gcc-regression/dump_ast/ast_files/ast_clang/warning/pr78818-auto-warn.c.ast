@@ -1,0 +1,64 @@
+c_files/pr78818-auto-warn.c:3:16: warning: unknown attribute 'persistent' ignored [-Wunknown-attributes]
+__attribute__((persistent)) int persistent_1_g = 1;
+               ^
+c_files/pr78818-auto-warn.c:4:16: warning: unknown attribute 'persistent' ignored [-Wunknown-attributes]
+__attribute__((persistent)) int persistent_2_g = 0;
+               ^
+c_files/pr78818-auto-warn.c:5:23: warning: unknown attribute 'persistent' ignored [-Wunknown-attributes]
+static __attribute__((persistent)) int persistent_3_g = 1;
+                      ^
+c_files/pr78818-auto-warn.c:6:23: warning: unknown attribute 'persistent' ignored [-Wunknown-attributes]
+static __attribute__((persistent)) int persistent_4_g = 0;
+                      ^
+c_files/pr78818-auto-warn.c:11:18: warning: unknown attribute 'persistent' ignored [-Wunknown-attributes]
+  __attribute__((persistent)) int persistent_1 = 1; /* { dg-warning "attribute has no effect on automatic" } */
+                 ^
+c_files/pr78818-auto-warn.c:12:18: warning: unknown attribute 'persistent' ignored [-Wunknown-attributes]
+  __attribute__((persistent)) int persistent_2 = 0; /* { dg-warning "attribute has no effect on automatic" } */
+                 ^
+c_files/pr78818-auto-warn.c:13:25: warning: unknown attribute 'persistent' ignored [-Wunknown-attributes]
+  static __attribute__((persistent)) int persistent_3 = 1;
+                        ^
+c_files/pr78818-auto-warn.c:14:25: warning: unknown attribute 'persistent' ignored [-Wunknown-attributes]
+  static __attribute__((persistent)) int persistent_4 = 0;
+                        ^
+8 warnings generated.
+TranslationUnitDecl 0x7fe2480264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe248026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe248026740 '__int128'
+|-TypedefDecl 0x7fe248026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe248026760 'unsigned __int128'
+|-TypedefDecl 0x7fe248026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe248026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe248026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe248026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe248026dc0 'char *'
+|   `-BuiltinType 0x7fe248026560 'char'
+|-TypedefDecl 0x7fe2480270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe248027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe248026ee0 'struct __va_list_tag'
+|     `-Record 0x7fe248026e58 '__va_list_tag'
+|-VarDecl 0x7fe248027138 <c_files/pr78818-auto-warn.c:3:1, col:50> col:33 persistent_1_g 'int' cinit
+| `-IntegerLiteral 0x7fe2480271d8 <col:50> 'int' 1
+|-VarDecl 0x7fe249000018 <line:4:1, col:50> col:33 persistent_2_g 'int' cinit
+| `-IntegerLiteral 0x7fe249000078 <col:50> 'int' 0
+|-VarDecl 0x7fe2490000b0 <line:5:1, col:57> col:40 persistent_3_g 'int' static cinit
+| `-IntegerLiteral 0x7fe249000110 <col:57> 'int' 1
+|-VarDecl 0x7fe249000148 <line:6:1, col:57> col:40 persistent_4_g 'int' static cinit
+| `-IntegerLiteral 0x7fe2490001a8 <col:57> 'int' 0
+`-FunctionDecl 0x7fe249000298 <line:8:1, line:16:1> line:9:1 main 'int (void)'
+  `-CompoundStmt 0x7fe249000650 <line:10:1, line:16:1>
+    |-DeclStmt 0x7fe2490003f0 <line:11:3, col:51>
+    | `-VarDecl 0x7fe249000370 <col:3, col:50> col:35 persistent_1 'int' cinit
+    |   `-IntegerLiteral 0x7fe2490003d0 <col:50> 'int' 1
+    |-DeclStmt 0x7fe2490004a0 <line:12:3, col:51>
+    | `-VarDecl 0x7fe249000420 <col:3, col:50> col:35 persistent_2 'int' cinit
+    |   `-IntegerLiteral 0x7fe249000480 <col:50> 'int' 0
+    |-DeclStmt 0x7fe249000550 <line:13:3, col:58>
+    | `-VarDecl 0x7fe2490004d0 <col:3, col:57> col:42 persistent_3 'int' static cinit
+    |   `-IntegerLiteral 0x7fe249000530 <col:57> 'int' 1
+    |-DeclStmt 0x7fe249000600 <line:14:3, col:58>
+    | `-VarDecl 0x7fe249000580 <col:3, col:57> col:42 persistent_4 'int' static cinit
+    |   `-IntegerLiteral 0x7fe2490005e0 <col:57> 'int' 0
+    `-ReturnStmt 0x7fe249000638 <line:15:3, col:10>
+      `-IntegerLiteral 0x7fe249000618 <col:10> 'int' 0

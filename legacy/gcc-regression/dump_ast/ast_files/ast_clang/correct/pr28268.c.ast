@@ -1,0 +1,25 @@
+TranslationUnitDecl 0x7fe8dc0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe8dc026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe8dc026740 '__int128'
+|-TypedefDecl 0x7fe8dc026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe8dc026760 'unsigned __int128'
+|-TypedefDecl 0x7fe8dc026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe8dc026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe8dc026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe8dc026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe8dc026dc0 'char *'
+|   `-BuiltinType 0x7fe8dc026560 'char'
+|-TypedefDecl 0x7fe8dc0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe8dc027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe8dc026ee0 'struct __va_list_tag'
+|     `-Record 0x7fe8dc026e58 '__va_list_tag'
+|-VarDecl 0x7fe8dc027178 <c_files/pr28268.c:3:1, col:37> col:37 used a '__attribute__((__vector_size__(2 * sizeof(int)))) int'
+`-FunctionDecl 0x7fe8dc078488 <line:5:1, line:8:1> line:5:6 foo 'void ()'
+  `-CompoundStmt 0x7fe8dc078628 <line:6:1, line:8:1>
+    `-CompoundAssignOperator 0x7fe8dc0785f0 <line:7:5, col:12> '__attribute__((__vector_size__(2 * sizeof(int)))) int' '+=' ComputeLHSTy='__attribute__((__vector_size__(2 * sizeof(int)))) int' ComputeResultTy='__attribute__((__vector_size__(2 * sizeof(int)))) int'
+      |-DeclRefExpr 0x7fe8dc078520 <col:5> '__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7fe8dc027178 'a' '__attribute__((__vector_size__(2 * sizeof(int)))) int'
+      `-BinaryOperator 0x7fe8dc0785c8 <col:10, col:12> '__attribute__((__vector_size__(2 * sizeof(int)))) int' '*'
+        |-ImplicitCastExpr 0x7fe8dc078598 <col:10> '__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+        | `-DeclRefExpr 0x7fe8dc078548 <col:10> '__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7fe8dc027178 'a' '__attribute__((__vector_size__(2 * sizeof(int)))) int'
+        `-ImplicitCastExpr 0x7fe8dc0785b0 <col:12> '__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+          `-DeclRefExpr 0x7fe8dc078570 <col:12> '__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7fe8dc027178 'a' '__attribute__((__vector_size__(2 * sizeof(int)))) int'

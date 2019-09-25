@@ -1,0 +1,81 @@
+FileAST: 
+  Decl: snprintf, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['char']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+        Typename: None, ['const']
+          PtrDecl: []
+            TypeDecl: None, ['const']
+              IdentifierType: ['char']
+        EllipsisParam: 
+      TypeDecl: snprintf, []
+        IdentifierType: ['int']
+  Decl: abort, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: cmp, [], [], []
+        TypeDecl: cmp, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      Decl: buffer, [], [], []
+        ArrayDecl: []
+          TypeDecl: buffer, []
+            IdentifierType: ['char']
+          Constant: int, 1024
+      Decl: s, ['const'], [], []
+        PtrDecl: []
+          TypeDecl: s, ['const']
+            IdentifierType: ['char']
+        Constant: string, "the string"
+      FuncCall: 
+        ID: snprintf
+        ExprList: 
+          ID: buffer
+          Constant: int, 4
+          Constant: string, "%s"
+          ID: s
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 1
+        BinaryOp: <
+          ID: i
+          Constant: int, 4
+        UnaryOp: p++
+          ID: i
+        Assignment: +=
+          ID: cmp
+          FuncCall: 
+            ID: __builtin_strncmp
+            ExprList: 
+              ID: buffer
+              ID: s
+              BinaryOp: -
+                ID: i
+                Constant: int, 1
+      If: 
+        ID: cmp
+        FuncCall: 
+          ID: abort
+      Return: 
+        Constant: int, 0

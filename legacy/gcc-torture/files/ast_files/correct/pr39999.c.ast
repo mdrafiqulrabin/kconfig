@@ -1,0 +1,56 @@
+FileAST: 
+  Decl: foo, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+      TypeDecl: foo, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: MMAPGCD, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: A1, [], [], []
+            PtrDecl: []
+              TypeDecl: A1, []
+                IdentifierType: ['int']
+          Decl: A2, [], [], []
+            PtrDecl: []
+              TypeDecl: A2, []
+                IdentifierType: ['int']
+        TypeDecl: MMAPGCD, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: t, [], [], []
+        PtrDecl: []
+          TypeDecl: t, []
+            IdentifierType: ['int']
+      DoWhile: 
+        ArrayRef: 
+          ID: A2
+          UnaryOp: -
+            Constant: int, 1
+        Compound: 
+          Assignment: =
+            ID: t
+            ID: A1
+          Assignment: =
+            ID: A1
+            ID: A2
+          Assignment: =
+            ID: A2
+            ID: t
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          BinaryOp: -
+            ID: A1
+            Constant: int, 1
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          BinaryOp: -
+            ID: A2
+            Constant: int, 1

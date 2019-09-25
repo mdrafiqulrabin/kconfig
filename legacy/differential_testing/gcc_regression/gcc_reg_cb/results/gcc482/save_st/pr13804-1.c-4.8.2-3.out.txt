@@ -1,0 +1,19 @@
+pr13804-1.c: In function ‘f’:
+pr13804-1.c:21:5: error: ‘struct s0’ has no member named ‘c’
+   x0.c;  
+     ^
+pr13804-1.c:22:5: error: ‘S0’ has no member named ‘c’
+   x1.c;  
+     ^
+pr13804-1.c:23:5: error: ‘union u0’ has no member named ‘c’
+   x2.c;  
+     ^
+pr13804-1.c:24:5: error: ‘U0’ has no member named ‘c’
+   x3.c;  
+     ^
+pr13804-1.c:25:5: error: ‘struct s0’ has no member named ‘c’
+   x4->c;  
+     ^
+pr13804-1.c:26:5: error: ‘union u0’ has no member named ‘c’
+   x5->c;  
+     ^

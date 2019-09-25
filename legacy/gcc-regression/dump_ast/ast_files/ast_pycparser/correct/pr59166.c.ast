@@ -1,0 +1,87 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['int']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['int']
+  Decl: f, [], [], []
+    TypeDecl: f, []
+      IdentifierType: ['int']
+  Decl: g, [], [], []
+    TypeDecl: g, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      For: 
+        ID: b
+        UnaryOp: p++
+          ID: b
+        For: 
+          ID: f
+          Assignment: =
+            ID: f
+            ID: g
+          For: 
+            ID: a
+            EmptyStatement: 
+  FuncDef: 
+    Decl: bar, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            TypeDecl: p, []
+              IdentifierType: ['int']
+        TypeDecl: bar, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          IdentifierType: ['short']
+      If: 
+        ID: c
+        Compound: 
+          For: 
+            ID: f
+            Assignment: =
+              ID: f
+              ID: g
+            EmptyStatement: 
+          FuncCall: 
+            ID: foo
+          Assignment: =
+            ID: d
+            ID: p
+          Decl: e, [], [], []
+            TypeDecl: e, []
+              IdentifierType: ['char']
+            ID: d
+          If: 
+            ID: p
+            Return: 
+              Constant: int, 1
+      Return: 
+        ID: p
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: bar
+        ExprList: 
+          Constant: int, 0
+      FuncCall: 
+        ID: bar
+        ExprList: 
+          ID: g
+      Return: 
+        Constant: int, 0

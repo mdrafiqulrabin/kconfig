@@ -1,0 +1,29 @@
+TranslationUnitDecl 0x7f8d2d0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8d2d026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8d2d026740 '__int128'
+|-TypedefDecl 0x7f8d2d026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8d2d026760 'unsigned __int128'
+|-TypedefDecl 0x7f8d2d026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8d2d026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8d2d026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8d2d026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8d2d026dc0 'char *'
+|   `-BuiltinType 0x7f8d2d026560 'char'
+|-TypedefDecl 0x7f8d2d0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8d2d027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8d2d026ee0 'struct __va_list_tag'
+|     `-Record 0x7f8d2d026e58 '__va_list_tag'
+`-FunctionDecl 0x7f8d2d825b98 <c_files/pr39423-2.c:9:1, line:13:1> line:10:1 test_00 'int (unsigned short *, int)'
+  |-ParmVarDecl 0x7f8d2d825a00 <col:10, col:29> col:25 used tab 'unsigned short *':'unsigned short *'
+  |-ParmVarDecl 0x7f8d2d825a78 <col:32, col:36> col:36 used index 'int'
+  `-CompoundStmt 0x7f8d2d825db8 <line:11:1, line:13:1>
+    `-ReturnStmt 0x7f8d2d825da0 <line:12:3, col:23>
+      `-ImplicitCastExpr 0x7f8d2d825d88 <col:10, col:23> 'int' <IntegralCast>
+        `-ImplicitCastExpr 0x7f8d2d825d70 <col:10, col:23> 'unsigned short' <LValueToRValue>
+          `-ArraySubscriptExpr 0x7f8d2d825d48 <col:10, col:23> 'unsigned short' lvalue
+            |-ImplicitCastExpr 0x7f8d2d825d30 <col:10> 'unsigned short *':'unsigned short *' <LValueToRValue>
+            | `-DeclRefExpr 0x7f8d2d825c80 <col:10> 'unsigned short *':'unsigned short *' lvalue ParmVar 0x7f8d2d825a00 'tab' 'unsigned short *':'unsigned short *'
+            `-BinaryOperator 0x7f8d2d825d08 <col:14, col:22> 'int' '+'
+              |-ImplicitCastExpr 0x7f8d2d825cf0 <col:14> 'int' <LValueToRValue>
+              | `-DeclRefExpr 0x7f8d2d825ca8 <col:14> 'int' lvalue ParmVar 0x7f8d2d825a78 'index' 'int'
+              `-IntegerLiteral 0x7f8d2d825cd0 <col:22> 'int' 1

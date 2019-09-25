@@ -1,0 +1,33 @@
+FileAST: 
+  Pragma: redefine_extname f1 f
+  Pragma: redefine_extname g1 g
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        TypeDecl: f, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: f1, [], ['extern'], []
+        FuncDecl: 
+          TypeDecl: f1, []
+            IdentifierType: ['int']
+      FuncCall: 
+        ID: f1
+  FuncDef: 
+    Decl: g, [], [], []
+      FuncDecl: 
+        TypeDecl: g, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: g1
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: f
+      FuncCall: 
+        ID: g

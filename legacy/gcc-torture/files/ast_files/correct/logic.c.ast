@@ -1,0 +1,165 @@
+FileAST: 
+  FuncDef: 
+    Decl: logic, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: a
+          ID: b
+        TypeDecl: logic, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: &
+          UnaryOp: *
+            ID: a
+          Constant: int, 123
+        Assignment: =
+          ID: b
+          Constant: int, 1
+      If: 
+        BinaryOp: &
+          UnaryOp: *
+            ID: a
+          UnaryOp: ~
+            Constant: int, 222
+        Assignment: =
+          ID: b
+          Constant: int, 2
+      If: 
+        BinaryOp: &
+          Constant: int, 124
+          UnaryOp: *
+            ID: a
+        Assignment: =
+          ID: b
+          Constant: int, 3
+      If: 
+        BinaryOp: &
+          UnaryOp: ~
+            Constant: int, 111
+          UnaryOp: *
+            ID: a
+        Assignment: =
+          ID: b
+          Constant: int, 4
+      If: 
+        BinaryOp: &
+          UnaryOp: ~
+            UnaryOp: *
+              ID: a
+          Constant: int, 23
+        Assignment: =
+          ID: b
+          Constant: int, 1
+      If: 
+        BinaryOp: &
+          UnaryOp: ~
+            UnaryOp: *
+              ID: a
+          UnaryOp: ~
+            Constant: int, 22
+        Assignment: =
+          ID: b
+          Constant: int, 2
+      If: 
+        BinaryOp: &
+          Constant: int, 24
+          UnaryOp: ~
+            UnaryOp: *
+              ID: a
+        Assignment: =
+          ID: b
+          Constant: int, 3
+      If: 
+        BinaryOp: &
+          UnaryOp: ~
+            Constant: int, 11
+          UnaryOp: ~
+            UnaryOp: *
+              ID: a
+        Assignment: =
+          ID: b
+          Constant: int, 4
+      If: 
+        BinaryOp: &
+          UnaryOp: ~
+            UnaryOp: *
+              ID: a
+          ID: b
+        Assignment: =
+          ID: b
+          Constant: int, 1
+      If: 
+        BinaryOp: &
+          UnaryOp: ~
+            UnaryOp: *
+              ID: a
+          UnaryOp: ~
+            ID: b
+        Assignment: =
+          ID: b
+          Constant: int, 2
+      If: 
+        BinaryOp: &
+          UnaryOp: *
+            ID: a
+          UnaryOp: ~
+            UnaryOp: *
+              ID: a
+        Assignment: =
+          ID: b
+          Constant: int, 3
+      Return: 
+        ID: b
+    Decl: a, [], [], []
+      PtrDecl: []
+        TypeDecl: a, []
+          IdentifierType: ['int']
+    Decl: b, [], [], []
+      TypeDecl: b, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: x, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: a
+          ID: b
+          ID: c
+        TypeDecl: x, []
+          IdentifierType: ['int']
+    Compound: 
+      For: 
+        Assignment: =
+          ID: a
+          Constant: int, 0
+        BinaryOp: >
+          UnaryOp: --
+            ID: a
+          Constant: int, 0
+        EmptyStatement: 
+      For: 
+        Assignment: =
+          ID: b
+          UnaryOp: -
+            Constant: int, 1
+        BinaryOp: >
+          UnaryOp: --
+            ID: b
+          Constant: int, 0
+        EmptyStatement: 
+      For: 
+        Assignment: =
+          ID: c
+          UnaryOp: -
+            Constant: int, 65536
+        BinaryOp: >
+          UnaryOp: --
+            ID: c
+          Constant: int, 0
+        EmptyStatement: 
+      Return: 
+        BinaryOp: +
+          BinaryOp: +
+            ID: a
+            ID: b
+          ID: c

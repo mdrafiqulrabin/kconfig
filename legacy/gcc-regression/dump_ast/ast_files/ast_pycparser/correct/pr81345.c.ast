@@ -1,0 +1,64 @@
+FileAST: 
+  Decl: a, [], [], []
+    ArrayDecl: []
+      TypeDecl: a, []
+        IdentifierType: ['char']
+      Constant: int, 3
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: s, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: s, ['const']
+                IdentifierType: ['char']
+        TypeDecl: f, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: __builtin_strncpy
+        ExprList: 
+          ID: a
+          ID: s
+          BinaryOp: +
+            UnaryOp: sizeof
+              ID: a
+            Constant: int, 1
+  Decl: None, [], [], []
+    Struct: S
+      Decl: a, [], [], []
+        ArrayDecl: []
+          TypeDecl: a, []
+            IdentifierType: ['char']
+          Constant: int, 3
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+  FuncDef: 
+    Decl: g, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: d, [], [], []
+            PtrDecl: []
+              TypeDecl: d, []
+                Struct: S
+          Decl: s, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: s, ['const']
+                IdentifierType: ['char']
+        TypeDecl: g, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: __builtin_strncpy
+        ExprList: 
+          StructRef: ->
+            ID: d
+            ID: a
+          ID: s
+          BinaryOp: +
+            UnaryOp: sizeof
+              StructRef: ->
+                ID: d
+                ID: a
+            Constant: int, 1

@@ -1,0 +1,31 @@
+FileAST: 
+  Decl: isascii, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: isascii, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: f1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: type, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: type, ['const']
+                IdentifierType: ['char']
+        TypeDecl: f1, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: isascii
+          ExprList: 
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['unsigned', 'char']
+              UnaryOp: *
+                UnaryOp: p++
+                  ID: type

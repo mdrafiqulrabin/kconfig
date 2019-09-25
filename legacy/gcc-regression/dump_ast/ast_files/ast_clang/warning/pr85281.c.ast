@@ -1,0 +1,40 @@
+c_files/pr85281.c:12:8: warning: division by zero is undefined [-Wdivision-by-zero]
+  v[8] /= (unsigned __int128) 0;
+       ^  ~~~~~~~~~~~~~~~~~~~~~
+1 warning generated.
+TranslationUnitDecl 0x7fb8af8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb8af826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb8af826740 '__int128'
+|-TypedefDecl 0x7fb8af826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb8af826760 'unsigned __int128'
+|-TypedefDecl 0x7fb8af826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb8af826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb8af826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb8af826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb8af826dc0 'char *'
+|   `-BuiltinType 0x7fb8af826560 'char'
+|-TypedefDecl 0x7fb8af8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb8af827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb8af826ee0 'struct __va_list_tag'
+|     `-Record 0x7fb8af826e58 '__va_list_tag'
+|-TypedefDecl 0x7fb8af827178 <c_files/pr85281.c:7:1, col:14> col:14 referenced V '__attribute__((__vector_size__(64 * sizeof(char)))) char'
+| `-VectorType 0x7fb8af827140 '__attribute__((__vector_size__(64 * sizeof(char)))) char' 64
+|   `-BuiltinType 0x7fb8af826560 'char'
+`-FunctionDecl 0x7fb8b0026b00 <line:9:1, line:15:1> line:10:1 foo 'V (V)'
+  |-ParmVarDecl 0x7fb8b0026a00 <col:6, col:8> col:8 used v 'V':'__attribute__((__vector_size__(64 * sizeof(char)))) char'
+  `-CompoundStmt 0x7fb8b0026e28 <line:11:1, line:15:1>
+    |-CompoundAssignOperator 0x7fb8b0026cb0 <line:12:3, col:31> 'char' '/=' ComputeLHSTy='unsigned __int128' ComputeResultTy='unsigned __int128'
+    | |-ArraySubscriptExpr 0x7fb8b0026c28 <col:3, col:6> 'char' lvalue vectorcomponent
+    | | |-DeclRefExpr 0x7fb8b0026be0 <col:3> 'V':'__attribute__((__vector_size__(64 * sizeof(char)))) char' lvalue ParmVar 0x7fb8b0026a00 'v' 'V':'__attribute__((__vector_size__(64 * sizeof(char)))) char'
+    | | `-IntegerLiteral 0x7fb8b0026c08 <col:5> 'int' 8
+    | `-CStyleCastExpr 0x7fb8b0026c88 <col:11, col:31> 'unsigned __int128' <IntegralCast>
+    |   `-IntegerLiteral 0x7fb8b0026c50 <col:31> 'int' 0
+    |-CompoundAssignOperator 0x7fb8b0026d98 <line:13:3, col:12> 'char' '-=' ComputeLHSTy='int' ComputeResultTy='int'
+    | |-ArraySubscriptExpr 0x7fb8b0026d30 <col:3, col:6> 'char' lvalue vectorcomponent
+    | | |-DeclRefExpr 0x7fb8b0026ce8 <col:3> 'V':'__attribute__((__vector_size__(64 * sizeof(char)))) char' lvalue ParmVar 0x7fb8b0026a00 'v' 'V':'__attribute__((__vector_size__(64 * sizeof(char)))) char'
+    | | `-IntegerLiteral 0x7fb8b0026d10 <col:5> 'int' 0
+    | `-UnaryOperator 0x7fb8b0026d78 <col:11, col:12> 'int' prefix '~'
+    |   `-IntegerLiteral 0x7fb8b0026d58 <col:12> 'int' 255
+    `-ReturnStmt 0x7fb8b0026e10 <line:14:3, col:10>
+      `-ImplicitCastExpr 0x7fb8b0026df8 <col:10> 'V':'__attribute__((__vector_size__(64 * sizeof(char)))) char' <LValueToRValue>
+        `-DeclRefExpr 0x7fb8b0026dd0 <col:10> 'V':'__attribute__((__vector_size__(64 * sizeof(char)))) char' lvalue ParmVar 0x7fb8b0026a00 'v' 'V':'__attribute__((__vector_size__(64 * sizeof(char)))) char'

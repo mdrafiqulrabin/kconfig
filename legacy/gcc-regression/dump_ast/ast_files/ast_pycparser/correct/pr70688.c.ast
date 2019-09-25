@@ -1,0 +1,107 @@
+FileAST: 
+  Decl: n, ['const'], [], []
+    TypeDecl: n, ['const']
+      IdentifierType: ['int']
+    Constant: int, 100
+  FuncDef: 
+    Decl: private_reduction, [], [], []
+      FuncDecl: 
+        TypeDecl: private_reduction, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: r, [], [], []
+        TypeDecl: r, []
+          IdentifierType: ['int']
+      Pragma: acc parallel
+      Pragma: acc loop private (r) reduction (+:r)
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 100
+        UnaryOp: p++
+          ID: i
+        Assignment: +=
+          ID: r
+          Constant: int, 10
+      Return: 
+        ID: r
+  FuncDef: 
+    Decl: parallel_reduction, [], [], []
+      FuncDecl: 
+        TypeDecl: parallel_reduction, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: sum, [], [], []
+        TypeDecl: sum, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      Decl: dummy, [], [], []
+        TypeDecl: dummy, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      Pragma: acc data copy (dummy)
+      Compound: 
+        Pragma: acc parallel num_gangs (10) copy (sum) reduction (+:sum)
+        Compound: 
+          Decl: v, [], [], []
+            TypeDecl: v, []
+              IdentifierType: ['int']
+            Constant: int, 5
+          Assignment: +=
+            ID: sum
+            BinaryOp: +
+              Constant: int, 10
+              ID: v
+      Return: 
+        ID: sum
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: s, [], [], []
+        TypeDecl: s, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      Pragma: acc parallel num_gangs (10) copy (s) reduction (+:s)
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          ID: n
+        UnaryOp: p++
+          ID: i
+        Assignment: +=
+          ID: s
+          BinaryOp: +
+            ID: i
+            Constant: int, 1
+      Pragma: acc parallel num_gangs (10) reduction (+:s) copy (s)
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          ID: n
+        UnaryOp: p++
+          ID: i
+        Assignment: +=
+          ID: s
+          BinaryOp: +
+            ID: i
+            Constant: int, 1
+      Return: 
+        Constant: int, 0

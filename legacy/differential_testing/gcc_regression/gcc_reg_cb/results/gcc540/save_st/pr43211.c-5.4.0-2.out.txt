@@ -1,0 +1,3 @@
+pr43211.c:9:19: error: parameter 1 (‘t’) has incomplete type
+ void bar(struct T t) {}  
+                   ^

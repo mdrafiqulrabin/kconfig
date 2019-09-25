@@ -1,0 +1,233 @@
+FileAST: 
+  Decl: a, [], [], []
+    PtrDecl: []
+      TypeDecl: a, []
+        Struct: S
+          Decl: s, [], [], []
+            ArrayDecl: []
+              TypeDecl: s, []
+                IdentifierType: ['char']
+              Constant: int, 64
+          Decl: t, [], [], []
+            PtrDecl: []
+              TypeDecl: t, []
+                IdentifierType: ['int']
+  Decl: b, [], [], []
+    ArrayDecl: []
+      TypeDecl: b, []
+        IdentifierType: ['char']
+      Constant: int, 64
+  Decl: foo, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      PtrDecl: []
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+  Decl: bar, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['int']
+      PtrDecl: []
+        TypeDecl: bar, []
+          Struct: S
+  Decl: baz, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: baz, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: test, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: p, ['const']
+                IdentifierType: ['char']
+          Decl: q, [], [], []
+            TypeDecl: q, []
+              IdentifierType: ['long']
+        TypeDecl: test, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: c, [], [], []
+        PtrDecl: []
+          TypeDecl: c, []
+            IdentifierType: ['int']
+      Assignment: =
+        ID: c
+        FuncCall: 
+          ID: foo
+      While: 
+        Assignment: =
+          ID: a
+          FuncCall: 
+            ID: bar
+            ExprList: 
+              ID: c
+        Compound: 
+          If: 
+            BinaryOp: ||
+              BinaryOp: ||
+                BinaryOp: ||
+                  BinaryOp: ||
+                    BinaryOp: ||
+                      BinaryOp: ||
+                        BinaryOp: ||
+                          BinaryOp: ||
+                            BinaryOp: ||
+                              BinaryOp: ||
+                                FuncCall: 
+                                  ID: __builtin_strstr
+                                  ExprList: 
+                                    ID: p
+                                    Constant: string, "ABCD"
+                                FuncCall: 
+                                  ID: __builtin_strstr
+                                  ExprList: 
+                                    ID: p
+                                    Constant: string, "EFGHI"
+                              FuncCall: 
+                                ID: __builtin_strstr
+                                ExprList: 
+                                  ID: p
+                                  Constant: string, "JKL"
+                            FuncCall: 
+                              ID: __builtin_strstr
+                              ExprList: 
+                                ID: p
+                                Constant: string, "MNOPQR"
+                          FuncCall: 
+                            ID: __builtin_strstr
+                            ExprList: 
+                              ID: p
+                              Constant: string, "STUV"
+                        FuncCall: 
+                          ID: __builtin_strstr
+                          ExprList: 
+                            ID: p
+                            Constant: string, "WXYZabcd"
+                      FuncCall: 
+                        ID: __builtin_strstr
+                        ExprList: 
+                          ID: p
+                          Constant: string, "efghij"
+                    FuncCall: 
+                      ID: __builtin_strstr
+                      ExprList: 
+                        ID: p
+                        Constant: string, "klmno"
+                  FuncCall: 
+                    ID: __builtin_strstr
+                    ExprList: 
+                      ID: p
+                      Constant: string, "pqrstuvw"
+                BinaryOp: !=
+                  FuncCall: 
+                    ID: __builtin_strstr
+                    ExprList: 
+                      ID: b
+                      Constant: string, "MNOPQR"
+                  Constant: string, "EFGHI"
+              FuncCall: 
+                ID: __builtin_strstr
+                ExprList: 
+                  ID: b
+                  Constant: string, "JKL"
+            If: 
+              FuncCall: 
+                ID: __builtin_strstr
+                ExprList: 
+                  StructRef: ->
+                    ID: a
+                    ID: s
+                  Constant: string, "xyz12"
+              Continue: 
+          FuncCall: 
+            ID: __builtin_printf
+            ExprList: 
+              Constant: string, "%p\n"
+              StructRef: ->
+                ID: a
+                ID: t
+      FuncCall: 
+        ID: bar
+        ExprList: 
+          ID: c
+      While: 
+        ID: a
+        If: 
+          BinaryOp: ||
+            BinaryOp: ||
+              BinaryOp: ||
+                BinaryOp: ||
+                  BinaryOp: ||
+                    BinaryOp: ||
+                      BinaryOp: ||
+                        BinaryOp: ||
+                          BinaryOp: ||
+                            FuncCall: 
+                              ID: __builtin_strstr
+                              ExprList: 
+                                ID: p
+                                Constant: string, "ABCD"
+                            FuncCall: 
+                              ID: __builtin_strstr
+                              ExprList: 
+                                ID: p
+                                Constant: string, "EFGHI"
+                          FuncCall: 
+                            ID: __builtin_strstr
+                            ExprList: 
+                              ID: p
+                              Constant: string, "JKL"
+                        FuncCall: 
+                          ID: __builtin_strstr
+                          ExprList: 
+                            ID: p
+                            Constant: string, "MNOPQR"
+                      FuncCall: 
+                        ID: __builtin_strstr
+                        ExprList: 
+                          ID: p
+                          Constant: string, "STUV"
+                    FuncCall: 
+                      ID: __builtin_strstr
+                      ExprList: 
+                        ID: p
+                        Constant: string, "WXYZabcd"
+                  FuncCall: 
+                    ID: __builtin_strstr
+                    ExprList: 
+                      ID: p
+                      Constant: string, "efghij"
+                FuncCall: 
+                  ID: __builtin_strstr
+                  ExprList: 
+                    ID: p
+                    Constant: string, "klmno"
+              FuncCall: 
+                ID: __builtin_strstr
+                ExprList: 
+                  ID: p
+                  Constant: string, "pqrstuvw"
+            FuncCall: 
+              ID: __builtin_strstr
+              ExprList: 
+                Cast: 
+                  Typename: None, ['const']
+                    PtrDecl: []
+                      TypeDecl: None, ['const']
+                        IdentifierType: ['char']
+                  ID: q
+                Constant: string, "MNOPQR"
+          FuncCall: 
+            ID: baz

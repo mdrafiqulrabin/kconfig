@@ -1,0 +1,36 @@
+In file included from c_files/pr66633-4.c:5:
+c_files/pr66633-3.c:11:23: error: function definition is not allowed here
+  auto int bar (void) { return i; }
+                      ^
+c_files/pr66633-3.c:13:3: error: function definition is not allowed here
+  {
+  ^
+c_files/pr66633-3.c:17:3: warning: implicit declaration of function 'bar2' is invalid in C99 [-Wimplicit-function-declaration]
+  bar2 ();
+  ^
+1 warning and 2 errors generated.
+TranslationUnitDecl 0x7fc6528264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc652826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc652826740 '__int128'
+|-TypedefDecl 0x7fc652826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc652826760 'unsigned __int128'
+|-TypedefDecl 0x7fc652826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc652826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc652826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc652826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc652826dc0 'char *'
+|   `-BuiltinType 0x7fc652826560 'char'
+|-TypedefDecl 0x7fc6528270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc652827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc652826ee0 'struct __va_list_tag'
+|     `-Record 0x7fc652826e58 '__va_list_tag'
+|-FunctionDecl 0x7fc652877540 <c_files/pr66633-3.c:5:1, col:21> col:6 baz 'void (int (*)())'
+| `-ParmVarDecl 0x7fc652877438 <col:11, col:20> col:17 'int (*)()'
+|-FunctionDecl 0x7fc6528776e0 <line:7:1, line:18:1> line:8:1 foo 'void (void)'
+| `-CompoundStmt 0x7fc652877a10 <line:9:1, line:18:1>
+|   |-DeclStmt 0x7fc6528777f0 <line:10:3, col:8>
+|   | `-VarDecl 0x7fc652877790 <col:3, col:7> col:7 i 'int'
+|   `-CallExpr 0x7fc6528779e8 <line:17:3, col:9> 'int'
+|     `-ImplicitCastExpr 0x7fc6528779d0 <col:3> 'int (*)()' <FunctionToPointerDecay>
+|       `-DeclRefExpr 0x7fc6528779a8 <col:3> 'int ()' Function 0x7fc652877910 'bar2' 'int ()'
+`-FunctionDecl 0x7fc652877910 <<invalid sloc>> col:3 implicit used bar2 'int ()'

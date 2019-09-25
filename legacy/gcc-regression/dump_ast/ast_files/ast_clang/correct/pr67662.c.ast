@@ -1,0 +1,48 @@
+TranslationUnitDecl 0x7fef760264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fef76026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fef76026740 '__int128'
+|-TypedefDecl 0x7fef76026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fef76026760 'unsigned __int128'
+|-TypedefDecl 0x7fef76026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fef76026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fef76026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fef76026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fef76026dc0 'char *'
+|   `-BuiltinType 0x7fef76026560 'char'
+|-TypedefDecl 0x7fef760270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fef76027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fef76026ee0 'struct __va_list_tag'
+|     `-Record 0x7fef76026e58 '__va_list_tag'
+|-FunctionDecl 0x7fef76077430 <c_files/pr67662.c:4:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fef760774c8 prev 0x7fef76077430 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+`-FunctionDecl 0x7fef76077628 <line:6:1, line:14:1> line:7:1 main 'int (void)'
+  `-CompoundStmt 0x7fef76077b78 <line:8:1, line:14:1>
+    |-DeclStmt 0x7fef76077850 <line:9:3, col:39>
+    | `-VarDecl 0x7fef76077740 <col:3, col:38> col:7 used halfmaxval 'int' cinit
+    |   `-BinaryOperator 0x7fef76077828 <<built-in>:33:21, c_files/pr67662.c:9:38> 'int' '+'
+    |     |-BinaryOperator 0x7fef760777e0 <<built-in>:33:21, c_files/pr67662.c:9:34> 'int' '/'
+    |     | |-IntegerLiteral 0x7fef760777a0 <<built-in>:33:21> 'int' 2147483647
+    |     | `-IntegerLiteral 0x7fef760777c0 <c_files/pr67662.c:9:34> 'int' 2
+    |     `-IntegerLiteral 0x7fef76077808 <col:38> 'int' 1
+    |-DeclStmt 0x7fef760779d0 <line:10:3, col:43>
+    | `-VarDecl 0x7fef76077880 <col:3, col:33> col:7 used maxval 'int' cinit
+    |   `-BinaryOperator 0x7fef760779a8 <col:16, col:33> 'int' '+'
+    |     |-BinaryOperator 0x7fef76077940 <col:16, col:29> 'int' '-'
+    |     | |-ImplicitCastExpr 0x7fef76077928 <col:16> 'int' <LValueToRValue>
+    |     | | `-DeclRefExpr 0x7fef760778e0 <col:16> 'int' lvalue Var 0x7fef76077740 'halfmaxval' 'int'
+    |     | `-IntegerLiteral 0x7fef76077908 <col:29> 'int' 1
+    |     `-ImplicitCastExpr 0x7fef76077990 <col:33> 'int' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fef76077968 <col:33> 'int' lvalue Var 0x7fef76077740 'halfmaxval' 'int'
+    |-IfStmt 0x7fef76077b08 <line:11:3, line:12:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fef76077a48 <line:11:7, <built-in>:33:21> 'int' '!='
+    | | |-ImplicitCastExpr 0x7fef76077a30 <c_files/pr67662.c:11:7> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fef760779e8 <col:7> 'int' lvalue Var 0x7fef76077880 'maxval' 'int'
+    | | `-IntegerLiteral 0x7fef76077a10 <<built-in>:33:21> 'int' 2147483647
+    | |-CallExpr 0x7fef76077ae0 <c_files/pr67662.c:12:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fef76077ac8 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fef76077a70 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fef760774c8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fef76077b60 <line:13:3, col:10>
+      `-IntegerLiteral 0x7fef76077b40 <col:10> 'int' 0

@@ -1,0 +1,32 @@
+TranslationUnitDecl 0x7ff2498264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff249826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff249826740 '__int128'
+|-TypedefDecl 0x7ff249826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff249826760 'unsigned __int128'
+|-TypedefDecl 0x7ff249826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff249826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff249826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff249826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff249826dc0 'char *'
+|   `-BuiltinType 0x7ff249826560 'char'
+|-TypedefDecl 0x7ff2498270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff249827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff249826ee0 'struct __va_list_tag'
+|     `-Record 0x7ff249826e58 '__va_list_tag'
+|-FunctionDecl 0x7ff24a025ad8 <c_files/pr72839.c:5:14> col:14 implicit used strcpy 'char *(char *, const char *)' extern
+| |-ParmVarDecl 0x7ff24a025b70 <<invalid sloc>> <invalid sloc> 'char *'
+| `-ParmVarDecl 0x7ff24a025bd0 <<invalid sloc>> <invalid sloc> 'const char *'
+|-FunctionDecl 0x7ff24a025c40 prev 0x7ff24a025ad8 <col:1, col:42> col:14 used strcpy 'char *(char *, const char *)' extern
+| |-ParmVarDecl 0x7ff249827138 <col:22, col:27> col:28 'char *'
+| `-ParmVarDecl 0x7ff24a025a00 <col:30, col:41> col:42 'const char *'
+`-FunctionDecl 0x7ff24a025dc0 <line:7:1, line:13:1> line:8:1 foo 'void (char *)'
+  |-ParmVarDecl 0x7ff24a025d00 <col:6, col:12> col:12 used s 'char *'
+  `-CompoundStmt 0x7ff24a026090 <line:9:1, line:13:1>
+    `-CallExpr 0x7ff24a026010 <line:10:3, line:12:13> 'char *'
+      |-ImplicitCastExpr 0x7ff24a025ff8 <line:10:3> 'char *(*)(char *, const char *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7ff24a025ea0 <col:3> 'char *(char *, const char *)' Function 0x7ff24a025c40 'strcpy' 'char *(char *, const char *)'
+      |-ImplicitCastExpr 0x7ff24a026048 <col:11> 'char *' <LValueToRValue>
+      | `-DeclRefExpr 0x7ff24a025ec8 <col:11> 'char *' lvalue ParmVar 0x7ff24a025d00 's' 'char *'
+      `-ImplicitCastExpr 0x7ff24a026078 <line:11:4, line:12:4> 'const char *' <BitCast>
+        `-ImplicitCastExpr 0x7ff24a026060 <line:11:4, line:12:4> 'char *' <ArrayToPointerDecay>
+          `-StringLiteral 0x7ff24a025f28 <line:11:4, line:12:4> 'char [64]' lvalue "123456781234567812345678123456781234567812345678123456781234567"

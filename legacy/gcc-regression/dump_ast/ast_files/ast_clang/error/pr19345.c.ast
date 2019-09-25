@@ -1,0 +1,37 @@
+c_files/pr19345.c:6:44: error: fields must have a constant size: 'variable length array in structure' extension will never be supported
+  asm volatile ("" :: "m" ( *(struct {char x[l]; } *)a));
+                                           ^
+1 error generated.
+TranslationUnitDecl 0x7fc60c0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc60c026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc60c026740 '__int128'
+|-TypedefDecl 0x7fc60c026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc60c026760 'unsigned __int128'
+|-TypedefDecl 0x7fc60c026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc60c026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc60c026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc60c026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc60c026dc0 'char *'
+|   `-BuiltinType 0x7fc60c026560 'char'
+|-TypedefDecl 0x7fc60c0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc60c027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc60c026ee0 'struct __va_list_tag'
+|     `-Record 0x7fc60c026e58 '__va_list_tag'
+|-FunctionDecl 0x7fc60c077530 <c_files/pr19345.c:4:1, line:7:1> line:4:13 used bar 'void (char *, unsigned int)' inline
+| |-ParmVarDecl 0x7fc60c0271a0 <col:17, col:24> col:22 used a 'char *':'char *'
+| |-ParmVarDecl 0x7fc60c077418 <col:27, col:40> col:40 used l 'unsigned int'
+| `-CompoundStmt 0x7fc60c077a10 <line:5:1, line:7:1>
+|   `-GCCAsmStmt 0x7fc60c0779b0 <line:6:3, col:56>
+|     `-UnaryOperator 0x7fc60c077990 <col:29, col:54> 'struct (anonymous struct at c_files/pr19345.c:6:31)':'struct (anonymous at c_files/pr19345.c:6:31)' lvalue prefix '*'
+|       `-CStyleCastExpr 0x7fc60c077968 <col:30, col:54> 'struct (anonymous struct at c_files/pr19345.c:6:31) *' <BitCast>
+|         `-ImplicitCastExpr 0x7fc60c077950 <col:54> 'char *':'char *' <LValueToRValue>
+|           `-DeclRefExpr 0x7fc60c077870 <col:54> 'char *':'char *' lvalue ParmVar 0x7fc60c0271a0 'a' 'char *':'char *'
+`-FunctionDecl 0x7fc60c077af0 <line:9:1, line:12:1> line:9:6 foo 'void (void)'
+  `-CompoundStmt 0x7fc60c077cc8 <line:10:1, line:12:1>
+    `-CallExpr 0x7fc60c077c60 <line:11:3, col:12> 'void'
+      |-ImplicitCastExpr 0x7fc60c077c48 <col:3> 'void (*)(char *, unsigned int)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fc60c077b88 <col:3> 'void (char *, unsigned int)' Function 0x7fc60c077530 'bar' 'void (char *, unsigned int)'
+      |-ImplicitCastExpr 0x7fc60c077c98 <col:8> 'char *':'char *' <NullToPointer>
+      | `-IntegerLiteral 0x7fc60c077bb0 <col:8> 'int' 0
+      `-ImplicitCastExpr 0x7fc60c077cb0 <col:11> 'unsigned int' <IntegralCast>
+        `-IntegerLiteral 0x7fc60c077bd0 <col:11> 'int' 0

@@ -1,0 +1,40 @@
+FileAST: 
+  Decl: None, [], [], []
+    Enum: eShape
+      EnumeratorList: 
+        Enumerator: eSquare
+        Enumerator: eCircle
+        Enumerator: eShpere
+        Enumerator: eTetraeder
+  FuncDef: 
+    Decl: test_switch_native, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: shape, [], [], []
+            TypeDecl: shape, []
+              Enum: eShape
+          Decl: r, [], [], []
+            TypeDecl: r, []
+              IdentifierType: ['double']
+        TypeDecl: test_switch_native, []
+          IdentifierType: ['double']
+    Compound: 
+      Switch: 
+        ID: shape
+        Compound: 
+          Case: 
+            ID: eSquare
+            Return: 
+              Constant: int, 2
+          Case: 
+            ID: eCircle
+            Return: 
+              Constant: int, 3
+          Case: 
+            ID: eShpere
+            Return: 
+              Constant: int, 4
+          Case: 
+            ID: eTetraeder
+            Return: 
+              Constant: int, 5

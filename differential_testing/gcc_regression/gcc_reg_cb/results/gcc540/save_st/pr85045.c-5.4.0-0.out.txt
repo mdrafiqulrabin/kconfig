@@ -1,4 +1,0 @@
-pr85045.c: In function ‘f’:
-pr85045.c:8:3: error: called object is not a function or function pointer
-   (a / b) ();  
-   ^

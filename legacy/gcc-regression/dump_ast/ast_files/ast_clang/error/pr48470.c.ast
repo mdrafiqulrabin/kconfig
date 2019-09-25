@@ -1,0 +1,35 @@
+c_files/pr48470.c:9:5: error: non-ASM statement in naked function is not supported
+    int x = 0; /* { dg-error "cannot allocate stack for variable" } */
+    ^
+c_files/pr48470.c:7:21: note: attribute is here
+void __attribute__((naked)) f(void)
+                    ^
+1 error generated.
+TranslationUnitDecl 0x7f9c658264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9c65826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9c65826740 '__int128'
+|-TypedefDecl 0x7f9c65826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9c65826760 'unsigned __int128'
+|-TypedefDecl 0x7f9c65826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9c65826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9c65826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9c65826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9c65826dc0 'char *'
+|   `-BuiltinType 0x7f9c65826560 'char'
+|-TypedefDecl 0x7f9c658270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9c65827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9c65826ee0 'struct __va_list_tag'
+|     `-Record 0x7f9c65826e58 '__va_list_tag'
+|-FunctionDecl 0x7f9c66025a28 <c_files/pr48470.c:5:1, col:21> col:13 used g 'void (int *)' extern
+| `-ParmVarDecl 0x7f9c65827160 <col:15, col:20> col:20 x 'int *'
+`-FunctionDecl 0x7f9c66025bd0 <line:7:1, line:11:1> line:7:29 invalid f 'void (void)'
+  |-CompoundStmt 0x7f9c66025e40 <line:8:1, line:11:1>
+  | |-DeclStmt 0x7f9c66025d48 <line:9:5, col:14>
+  | | `-VarDecl 0x7f9c66025cc8 <col:5, col:13> col:9 used x 'int' cinit
+  | |   `-IntegerLiteral 0x7f9c66025d28 <col:13> 'int' 0
+  | `-CallExpr 0x7f9c66025e10 <line:10:5, col:9> 'void'
+  |   |-ImplicitCastExpr 0x7f9c66025df8 <col:5> 'void (*)(int *)' <FunctionToPointerDecay>
+  |   | `-DeclRefExpr 0x7f9c66025d60 <col:5> 'void (int *)' Function 0x7f9c66025a28 'g' 'void (int *)'
+  |   `-UnaryOperator 0x7f9c66025db0 <col:7, col:8> 'int *' prefix '&'
+  |     `-DeclRefExpr 0x7f9c66025d88 <col:8> 'int' lvalue Var 0x7f9c66025cc8 'x' 'int'
+  `-NakedAttr 0x7f9c66025c68 <line:7:21>

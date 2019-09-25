@@ -1,0 +1,66 @@
+TranslationUnitDecl 0x7fb2398264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb239826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb239826740 '__int128'
+|-TypedefDecl 0x7fb239826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb239826760 'unsigned __int128'
+|-TypedefDecl 0x7fb239826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb239826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb239826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb239826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb239826dc0 'char *'
+|   `-BuiltinType 0x7fb239826560 'char'
+|-TypedefDecl 0x7fb2398270c8 <<invalid sloc>> <invalid sloc> implicit referenced __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb239827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb239826ee0 'struct __va_list_tag'
+|     `-Record 0x7fb239826e58 '__va_list_tag'
+|-TypedefDecl 0x7fb239827150 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include/stdarg.h:30:1, col:27> col:27 referenced va_list '__builtin_va_list':'struct __va_list_tag [1]'
+| `-TypedefType 0x7fb239827120 '__builtin_va_list' sugar
+|   |-Typedef 0x7fb2398270c8 '__builtin_va_list'
+|   `-ConstantArrayType 0x7fb239827070 'struct __va_list_tag [1]' 1 
+|     `-RecordType 0x7fb239826ee0 'struct __va_list_tag'
+|       `-Record 0x7fb239826e58 '__va_list_tag'
+|-TypedefDecl 0x7fb239879400 <line:48:1, col:27> col:27 __gnuc_va_list '__builtin_va_list':'struct __va_list_tag [1]'
+| `-TypedefType 0x7fb239827120 '__builtin_va_list' sugar
+|   |-Typedef 0x7fb2398270c8 '__builtin_va_list'
+|   `-ConstantArrayType 0x7fb239827070 'struct __va_list_tag [1]' 1 
+|     `-RecordType 0x7fb239826ee0 'struct __va_list_tag'
+|       `-Record 0x7fb239826e58 '__va_list_tag'
+|-TypedefDecl 0x7fb2398794d8 <c_files/pr70738-5.c:6:1, col:13> col:13 referenced int32x2_t '__attribute__((__vector_size__(2 * sizeof(int)))) int'
+| `-VectorType 0x7fb2398794a0 '__attribute__((__vector_size__(2 * sizeof(int)))) int' 2
+|   `-BuiltinType 0x7fb2398265c0 'int'
+|-FunctionDecl 0x7fb239879618 <line:8:1, line:16:1> line:9:1 test 'int (int, ...)'
+| |-ParmVarDecl 0x7fb239879548 <col:7, col:11> col:11 used i 'int'
+| `-CompoundStmt 0x7fb239879e98 <line:10:1, line:16:1>
+|   |-DeclStmt 0x7fb239879790 <line:11:3, col:15>
+|   | `-VarDecl 0x7fb239879730 <col:3, col:11> col:11 used argp 'va_list':'struct __va_list_tag [1]'
+|   |-CallExpr 0x7fb239879a20 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include/stdarg.h:33:29, col:57> 'void'
+|   | |-ImplicitCastExpr 0x7fb239879a08 <col:29> 'void (*)(struct __va_list_tag *, ...)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7fb239879960 <col:29> '<builtin fn type>' Function 0x7fb239879818 '__builtin_va_start' 'void (struct __va_list_tag *, ...)'
+|   | |-ImplicitCastExpr 0x7fb239879a58 <c_files/pr70738-5.c:12:13> 'struct __va_list_tag *' <ArrayToPointerDecay>
+|   | | `-DeclRefExpr 0x7fb239879988 <col:13> 'va_list':'struct __va_list_tag [1]' lvalue Var 0x7fb239879730 'argp' 'va_list':'struct __va_list_tag [1]'
+|   | `-DeclRefExpr 0x7fb2398799b0 <col:19> 'int' lvalue ParmVar 0x7fb239879548 'i' 'int'
+|   |-DeclStmt 0x7fb239879c30 <line:13:3, col:35>
+|   | `-VarDecl 0x7fb239879aa0 <col:3, col:34> col:13 used x 'int32x2_t':'__attribute__((__vector_size__(2 * sizeof(int)))) int' cinit
+|   |   `-ImplicitCastExpr 0x7fb239879c18 <col:17, col:34> 'int32x2_t':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+|   |     `-CompoundLiteralExpr 0x7fb239879bf0 <col:17, col:34> 'int32x2_t':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue
+|   |       `-InitListExpr 0x7fb239879ba0 <col:29, col:34> 'int32x2_t':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+|   |         |-IntegerLiteral 0x7fb239879b10 <col:30> 'int' 0
+|   |         `-IntegerLiteral 0x7fb239879b30 <col:33> 'int' 1
+|   |-CompoundAssignOperator 0x7fb239879d10 <line:14:3, /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include/stdarg.h:35:54> 'int32x2_t':'__attribute__((__vector_size__(2 * sizeof(int)))) int' '+=' ComputeLHSTy='int32x2_t':'__attribute__((__vector_size__(2 * sizeof(int)))) int' ComputeResultTy='int32x2_t':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+|   | |-DeclRefExpr 0x7fb239879c48 <c_files/pr70738-5.c:14:3> 'int32x2_t':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7fb239879aa0 'x' 'int32x2_t':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+|   | `-VAArgExpr 0x7fb239879ce8 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include/stdarg.h:35:29, col:54> 'int32x2_t':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+|   |   `-ImplicitCastExpr 0x7fb239879cd0 <c_files/pr70738-5.c:14:16> 'struct __va_list_tag *' <ArrayToPointerDecay>
+|   |     `-DeclRefExpr 0x7fb239879c70 <col:16> 'va_list':'struct __va_list_tag [1]' lvalue Var 0x7fb239879730 'argp' 'va_list':'struct __va_list_tag [1]'
+|   `-ReturnStmt 0x7fb239879e80 <line:15:3, col:20>
+|     `-BinaryOperator 0x7fb239879e58 <col:10, col:20> 'int' '+'
+|       |-ImplicitCastExpr 0x7fb239879e28 <col:10, col:13> 'int' <LValueToRValue>
+|       | `-ArraySubscriptExpr 0x7fb239879d90 <col:10, col:13> 'int' lvalue vectorcomponent
+|       |   |-DeclRefExpr 0x7fb239879d48 <col:10> 'int32x2_t':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7fb239879aa0 'x' 'int32x2_t':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+|       |   `-IntegerLiteral 0x7fb239879d70 <col:12> 'int' 0
+|       `-ImplicitCastExpr 0x7fb239879e40 <col:17, col:20> 'int' <LValueToRValue>
+|         `-ArraySubscriptExpr 0x7fb239879e00 <col:17, col:20> 'int' lvalue vectorcomponent
+|           |-DeclRefExpr 0x7fb239879db8 <col:17> 'int32x2_t':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7fb239879aa0 'x' 'int32x2_t':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+|           `-IntegerLiteral 0x7fb239879de0 <col:19> 'int' 1
+`-FunctionDecl 0x7fb239879818 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include/stdarg.h:33:29> col:29 implicit used __builtin_va_start 'void (struct __va_list_tag *, ...)' extern
+  |-ParmVarDecl 0x7fb2398798b0 <<invalid sloc>> <invalid sloc> 'struct __va_list_tag *'
+  `-NoThrowAttr 0x7fb239879918 <col:29> Implicit

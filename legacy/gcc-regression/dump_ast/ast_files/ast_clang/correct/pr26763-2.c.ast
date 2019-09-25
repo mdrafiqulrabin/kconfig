@@ -1,0 +1,53 @@
+TranslationUnitDecl 0x7fbf160264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbf16026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fbf16026740 '__int128'
+|-TypedefDecl 0x7fbf16026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fbf16026760 'unsigned __int128'
+|-TypedefDecl 0x7fbf16026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fbf16026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fbf16026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fbf16026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fbf16026dc0 'char *'
+|   `-BuiltinType 0x7fbf16026560 'char'
+|-TypedefDecl 0x7fbf160270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fbf16027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fbf16026ee0 'struct __va_list_tag'
+|     `-Record 0x7fbf16026e58 '__va_list_tag'
+|-FunctionDecl 0x7fbf16825a30 <c_files/pr26763-2.c:3:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fbf16825ac8 prev 0x7fbf16825a30 <col:1, col:23> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fbf16825cc8 <line:5:1, line:8:1> line:5:5 used try 'int (char *, unsigned long)'
+| |-ParmVarDecl 0x7fbf16825b78 <col:10, col:16> col:16 used a 'char *'
+| |-ParmVarDecl 0x7fbf16825bf0 <<built-in>:75:23, c_files/pr26763-2.c:5:33> col:33 used d 'unsigned long'
+| `-CompoundStmt 0x7fbf16825ed8 <line:6:1, line:8:1>
+|   `-ReturnStmt 0x7fbf16825ec0 <line:7:3, col:18>
+|     `-BinaryOperator 0x7fbf16825e98 <col:10, col:18> 'int' '>'
+|       |-BinaryOperator 0x7fbf16825e30 <col:10, col:14> 'char *' '+'
+|       | |-ImplicitCastExpr 0x7fbf16825e00 <col:10> 'char *' <LValueToRValue>
+|       | | `-DeclRefExpr 0x7fbf16825db0 <col:10> 'char *' lvalue ParmVar 0x7fbf16825b78 'a' 'char *'
+|       | `-ImplicitCastExpr 0x7fbf16825e18 <col:14> 'unsigned long' <LValueToRValue>
+|       |   `-DeclRefExpr 0x7fbf16825dd8 <col:14> 'unsigned long' lvalue ParmVar 0x7fbf16825bf0 'd' 'unsigned long'
+|       `-ImplicitCastExpr 0x7fbf16825e80 <col:18> 'char *' <LValueToRValue>
+|         `-DeclRefExpr 0x7fbf16825e58 <col:18> 'char *' lvalue ParmVar 0x7fbf16825b78 'a' 'char *'
+`-FunctionDecl 0x7fbf16825fc8 <line:10:1, line:18:1> line:10:5 main 'int (void)'
+  `-CompoundStmt 0x7fbf16826408 <line:11:1, line:18:1>
+    |-DeclStmt 0x7fbf16826168 <line:12:3, col:16>
+    | `-VarDecl 0x7fbf16826108 <col:3, col:15> col:8 used bla 'char [100]'
+    |-IfStmt 0x7fbf16826398 <line:14:3, line:15:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-CallExpr 0x7fbf168262b0 <line:14:7, col:24> 'int'
+    | | |-ImplicitCastExpr 0x7fbf16826298 <col:7> 'int (*)(char *, unsigned long)' <FunctionToPointerDecay>
+    | | | `-DeclRefExpr 0x7fbf16826180 <col:7> 'int (char *, unsigned long)' Function 0x7fbf16825cc8 'try' 'int (char *, unsigned long)'
+    | | |-BinaryOperator 0x7fbf16826208 <col:12, col:18> 'char *' '+'
+    | | | |-ImplicitCastExpr 0x7fbf168261f0 <col:12> 'char *' <ArrayToPointerDecay>
+    | | | | `-DeclRefExpr 0x7fbf168261a8 <col:12> 'char [100]' lvalue Var 0x7fbf16826108 'bla' 'char [100]'
+    | | | `-IntegerLiteral 0x7fbf168261d0 <col:18> 'int' 50
+    | | `-ImplicitCastExpr 0x7fbf168262e8 <col:22, col:23> 'unsigned long' <IntegralCast>
+    | |   `-UnaryOperator 0x7fbf16826250 <col:22, col:23> 'int' prefix '-'
+    | |     `-IntegerLiteral 0x7fbf16826230 <col:23> 'int' 1
+    | |-CallExpr 0x7fbf16826370 <line:15:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fbf16826358 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fbf16826300 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fbf16825ac8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fbf168263f0 <line:17:3, col:10>
+      `-IntegerLiteral 0x7fbf168263d0 <col:10> 'int' 0

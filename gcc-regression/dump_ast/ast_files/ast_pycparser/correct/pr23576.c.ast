@@ -1,6 +1,0 @@
-FileAST: 
-  Decl: path, [], [], []
-    ArrayDecl: []
-      TypeDecl: path, []
-        Struct: ipr_path_entry
-      Constant: int, 0

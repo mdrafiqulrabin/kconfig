@@ -1,0 +1,237 @@
+c_files/pr65345-1.c:8:17: warning: expression with side effects has no effect in an unevaluated context [-Wunevaluated-expression]
+int a2 = sizeof (i = 0);
+                ^
+c_files/pr65345-1.c:9:17: warning: expression with side effects has no effect in an unevaluated context [-Wunevaluated-expression]
+int a3 = sizeof (i++);
+                ^
+c_files/pr65345-1.c:10:17: warning: expression with side effects has no effect in an unevaluated context [-Wunevaluated-expression]
+int a4 = sizeof (i--);
+                ^
+c_files/pr65345-1.c:13:10: warning: '_Alignof' applied to an expression is a GNU extension [-Wgnu-alignof-expression]
+int b1 = _Alignof (i + 1);
+         ^
+c_files/pr65345-1.c:14:10: warning: '_Alignof' applied to an expression is a GNU extension [-Wgnu-alignof-expression]
+int b2 = _Alignof (i = 0);
+         ^
+c_files/pr65345-1.c:14:22: warning: expression with side effects has no effect in an unevaluated context [-Wunevaluated-expression]
+int b2 = _Alignof (i = 0);
+                     ^
+c_files/pr65345-1.c:15:10: warning: '_Alignof' applied to an expression is a GNU extension [-Wgnu-alignof-expression]
+int b3 = _Alignof (i++);
+         ^
+c_files/pr65345-1.c:15:21: warning: expression with side effects has no effect in an unevaluated context [-Wunevaluated-expression]
+int b3 = _Alignof (i++);
+                    ^
+c_files/pr65345-1.c:16:10: warning: '_Alignof' applied to an expression is a GNU extension [-Wgnu-alignof-expression]
+int b4 = _Alignof (i--);
+         ^
+c_files/pr65345-1.c:16:21: warning: expression with side effects has no effect in an unevaluated context [-Wunevaluated-expression]
+int b4 = _Alignof (i--);
+                    ^
+c_files/pr65345-1.c:17:10: warning: '_Alignof' applied to an expression is a GNU extension [-Wgnu-alignof-expression]
+int b5 = _Alignof (-i);
+         ^
+c_files/pr65345-1.c:19:10: error: initializer element is not a compile-time constant
+int c1 = i; /* { dg-error "initializer element is not constant" } */
+         ^
+c_files/pr65345-1.c:20:11: error: initializer element is not a compile-time constant
+int c2 = (i ? 1 : 2); /* { dg-error "initializer element is not constant" } */
+          ^~~~~~~~~
+c_files/pr65345-1.c:21:5: error: variable length array declaration not allowed at file scope
+int c3[i]; /* { dg-error "variably modified" } */
+    ^  ~
+c_files/pr65345-1.c:22:12: error: initializer element is not a compile-time constant
+int c4 = 0 || i; /* { dg-error "initializer element is not constant" } */
+         ~~^~~~
+c_files/pr65345-1.c:23:5: error: initializing 'int' with an expression of incompatible type '_Atomic(int)'
+int c5 = (i += 10); /* { dg-error "initializer element is not constant" } */
+    ^    ~~~~~~~~~
+c_files/pr65345-1.c:27:29: warning: expression with side effects has no effect in an unevaluated context [-Wunevaluated-expression]
+_Static_assert (_Generic (i = 0, int: 1, default: 0) == 1, "3");
+                            ^
+c_files/pr65345-1.c:27:1: error: static_assert failed "3"
+_Static_assert (_Generic (i = 0, int: 1, default: 0) == 1, "3");
+^               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+c_files/pr65345-1.c:28:28: warning: expression with side effects has no effect in an unevaluated context [-Wunevaluated-expression]
+_Static_assert (_Generic (i++, int: 1, default: 0) == 1, "4");
+                           ^
+c_files/pr65345-1.c:29:28: warning: expression with side effects has no effect in an unevaluated context [-Wunevaluated-expression]
+_Static_assert (_Generic (i--, int: 1, default: 0) == 1, "5");
+                           ^
+c_files/pr65345-1.c:32:17: error: size of array has non-integer type '_Atomic(int)'
+void fn2 (int a[i = 0]);
+                ^~~~~
+14 warnings and 7 errors generated.
+TranslationUnitDecl 0x7ff5ae0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff5ae026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff5ae026740 '__int128'
+|-TypedefDecl 0x7ff5ae026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff5ae026760 'unsigned __int128'
+|-TypedefDecl 0x7ff5ae026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff5ae026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff5ae026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff5ae026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff5ae026dc0 'char *'
+|   `-BuiltinType 0x7ff5ae026560 'char'
+|-TypedefDecl 0x7ff5ae0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff5ae027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff5ae026ee0 'struct __va_list_tag'
+|     `-Record 0x7ff5ae026e58 '__va_list_tag'
+|-VarDecl 0x7ff5ae027168 <c_files/pr65345-1.c:5:1, col:17> col:13 used i '_Atomic(int)' cinit
+| `-ImplicitCastExpr 0x7ff5ae825a60 <col:17> '_Atomic(int)' <NonAtomicToAtomic>
+|   `-IntegerLiteral 0x7ff5ae825a40 <col:17> 'int' 3
+|-VarDecl 0x7ff5ae825a90 <line:7:1, col:23> col:5 a1 'int' cinit
+| `-ImplicitCastExpr 0x7ff5ae825bd0 <col:10, col:23> 'int' <IntegralCast>
+|   `-UnaryExprOrTypeTraitExpr 0x7ff5ae825bb0 <col:10, col:23> 'unsigned long' sizeof
+|     `-ParenExpr 0x7ff5ae825b90 <col:17, col:23> 'int'
+|       `-BinaryOperator 0x7ff5ae825b68 <col:18, col:22> 'int' '+'
+|         |-ImplicitCastExpr 0x7ff5ae825b50 <col:18> 'int' <AtomicToNonAtomic>
+|         | `-ImplicitCastExpr 0x7ff5ae825b38 <col:18> '_Atomic(int)' <LValueToRValue>
+|         |   `-DeclRefExpr 0x7ff5ae825af0 <col:18> '_Atomic(int)' lvalue Var 0x7ff5ae027168 'i' '_Atomic(int)'
+|         `-IntegerLiteral 0x7ff5ae825b18 <col:22> 'int' 1
+|-VarDecl 0x7ff5ae825c00 <line:8:1, col:23> col:5 a2 'int' cinit
+| `-ImplicitCastExpr 0x7ff5ae825d28 <col:10, col:23> 'int' <IntegralCast>
+|   `-UnaryExprOrTypeTraitExpr 0x7ff5ae825d08 <col:10, col:23> 'unsigned long' sizeof
+|     `-ParenExpr 0x7ff5ae825ce8 <col:17, col:23> '_Atomic(int)'
+|       `-BinaryOperator 0x7ff5ae825cc0 <col:18, col:22> '_Atomic(int)' '='
+|         |-DeclRefExpr 0x7ff5ae825c60 <col:18> '_Atomic(int)' lvalue Var 0x7ff5ae027168 'i' '_Atomic(int)'
+|         `-ImplicitCastExpr 0x7ff5ae825ca8 <col:22> '_Atomic(int)' <NonAtomicToAtomic>
+|           `-IntegerLiteral 0x7ff5ae825c88 <col:22> 'int' 0
+|-VarDecl 0x7ff5ae825d58 <line:9:1, col:21> col:5 a3 'int' cinit
+| `-ImplicitCastExpr 0x7ff5ae825e40 <col:10, col:21> 'int' <IntegralCast>
+|   `-UnaryExprOrTypeTraitExpr 0x7ff5ae825e20 <col:10, col:21> 'unsigned long' sizeof
+|     `-ParenExpr 0x7ff5ae825e00 <col:17, col:21> 'int'
+|       `-UnaryOperator 0x7ff5ae825de0 <col:18, col:19> 'int' postfix '++'
+|         `-DeclRefExpr 0x7ff5ae825db8 <col:18> '_Atomic(int)' lvalue Var 0x7ff5ae027168 'i' '_Atomic(int)'
+|-VarDecl 0x7ff5ae825e70 <line:10:1, col:21> col:5 a4 'int' cinit
+| `-ImplicitCastExpr 0x7ff5ae825f58 <col:10, col:21> 'int' <IntegralCast>
+|   `-UnaryExprOrTypeTraitExpr 0x7ff5ae825f38 <col:10, col:21> 'unsigned long' sizeof
+|     `-ParenExpr 0x7ff5ae825f18 <col:17, col:21> 'int'
+|       `-UnaryOperator 0x7ff5ae825ef8 <col:18, col:19> 'int' postfix '--'
+|         `-DeclRefExpr 0x7ff5ae825ed0 <col:18> '_Atomic(int)' lvalue Var 0x7ff5ae027168 'i' '_Atomic(int)'
+|-VarDecl 0x7ff5ae825f88 <line:11:1, col:20> col:5 a5 'int' cinit
+| `-ImplicitCastExpr 0x7ff5ae8260a0 <col:10, col:20> 'int' <IntegralCast>
+|   `-UnaryExprOrTypeTraitExpr 0x7ff5ae826080 <col:10, col:20> 'unsigned long' sizeof
+|     `-ParenExpr 0x7ff5ae826060 <col:17, col:20> 'int'
+|       `-UnaryOperator 0x7ff5ae826040 <col:18, col:19> 'int' prefix '-'
+|         `-ImplicitCastExpr 0x7ff5ae826028 <col:19> 'int' <AtomicToNonAtomic>
+|           `-ImplicitCastExpr 0x7ff5ae826010 <col:19> '_Atomic(int)' <LValueToRValue>
+|             `-DeclRefExpr 0x7ff5ae825fe8 <col:19> '_Atomic(int)' lvalue Var 0x7ff5ae027168 'i' '_Atomic(int)'
+|-VarDecl 0x7ff5ae8260d0 <line:13:1, col:25> col:5 b1 'int' cinit
+| `-ImplicitCastExpr 0x7ff5ae826210 <col:10, col:25> 'int' <IntegralCast>
+|   `-UnaryExprOrTypeTraitExpr 0x7ff5ae8261f0 <col:10, col:25> 'unsigned long' alignof
+|     `-ParenExpr 0x7ff5ae8261d0 <col:19, col:25> 'int'
+|       `-BinaryOperator 0x7ff5ae8261a8 <col:20, col:24> 'int' '+'
+|         |-ImplicitCastExpr 0x7ff5ae826190 <col:20> 'int' <AtomicToNonAtomic>
+|         | `-ImplicitCastExpr 0x7ff5ae826178 <col:20> '_Atomic(int)' <LValueToRValue>
+|         |   `-DeclRefExpr 0x7ff5ae826130 <col:20> '_Atomic(int)' lvalue Var 0x7ff5ae027168 'i' '_Atomic(int)'
+|         `-IntegerLiteral 0x7ff5ae826158 <col:24> 'int' 1
+|-VarDecl 0x7ff5ae826240 <line:14:1, col:25> col:5 b2 'int' cinit
+| `-ImplicitCastExpr 0x7ff5ae826368 <col:10, col:25> 'int' <IntegralCast>
+|   `-UnaryExprOrTypeTraitExpr 0x7ff5ae826348 <col:10, col:25> 'unsigned long' alignof
+|     `-ParenExpr 0x7ff5ae826328 <col:19, col:25> '_Atomic(int)'
+|       `-BinaryOperator 0x7ff5ae826300 <col:20, col:24> '_Atomic(int)' '='
+|         |-DeclRefExpr 0x7ff5ae8262a0 <col:20> '_Atomic(int)' lvalue Var 0x7ff5ae027168 'i' '_Atomic(int)'
+|         `-ImplicitCastExpr 0x7ff5ae8262e8 <col:24> '_Atomic(int)' <NonAtomicToAtomic>
+|           `-IntegerLiteral 0x7ff5ae8262c8 <col:24> 'int' 0
+|-VarDecl 0x7ff5ae826398 <line:15:1, col:23> col:5 b3 'int' cinit
+| `-ImplicitCastExpr 0x7ff5ae826480 <col:10, col:23> 'int' <IntegralCast>
+|   `-UnaryExprOrTypeTraitExpr 0x7ff5ae826460 <col:10, col:23> 'unsigned long' alignof
+|     `-ParenExpr 0x7ff5ae826440 <col:19, col:23> 'int'
+|       `-UnaryOperator 0x7ff5ae826420 <col:20, col:21> 'int' postfix '++'
+|         `-DeclRefExpr 0x7ff5ae8263f8 <col:20> '_Atomic(int)' lvalue Var 0x7ff5ae027168 'i' '_Atomic(int)'
+|-VarDecl 0x7ff5ae8264b0 <line:16:1, col:23> col:5 b4 'int' cinit
+| `-ImplicitCastExpr 0x7ff5ae826598 <col:10, col:23> 'int' <IntegralCast>
+|   `-UnaryExprOrTypeTraitExpr 0x7ff5ae826578 <col:10, col:23> 'unsigned long' alignof
+|     `-ParenExpr 0x7ff5ae826558 <col:19, col:23> 'int'
+|       `-UnaryOperator 0x7ff5ae826538 <col:20, col:21> 'int' postfix '--'
+|         `-DeclRefExpr 0x7ff5ae826510 <col:20> '_Atomic(int)' lvalue Var 0x7ff5ae027168 'i' '_Atomic(int)'
+|-VarDecl 0x7ff5ae8265c8 <line:17:1, col:22> col:5 b5 'int' cinit
+| `-ImplicitCastExpr 0x7ff5ae8266e0 <col:10, col:22> 'int' <IntegralCast>
+|   `-UnaryExprOrTypeTraitExpr 0x7ff5ae8266c0 <col:10, col:22> 'unsigned long' alignof
+|     `-ParenExpr 0x7ff5ae8266a0 <col:19, col:22> 'int'
+|       `-UnaryOperator 0x7ff5ae826680 <col:20, col:21> 'int' prefix '-'
+|         `-ImplicitCastExpr 0x7ff5ae826668 <col:21> 'int' <AtomicToNonAtomic>
+|           `-ImplicitCastExpr 0x7ff5ae826650 <col:21> '_Atomic(int)' <LValueToRValue>
+|             `-DeclRefExpr 0x7ff5ae826628 <col:21> '_Atomic(int)' lvalue Var 0x7ff5ae027168 'i' '_Atomic(int)'
+|-VarDecl 0x7ff5ae826710 <line:19:1, col:10> col:5 c1 'int' cinit
+| `-ImplicitCastExpr 0x7ff5ae8267b0 <col:10> 'int' <AtomicToNonAtomic>
+|   `-ImplicitCastExpr 0x7ff5ae826798 <col:10> '_Atomic(int)' <LValueToRValue>
+|     `-DeclRefExpr 0x7ff5ae826770 <col:10> '_Atomic(int)' lvalue Var 0x7ff5ae027168 'i' '_Atomic(int)'
+|-VarDecl 0x7ff5ae8267e0 <line:20:1, col:20> col:5 c2 'int' cinit
+| `-ParenExpr 0x7ff5ae826908 <col:10, col:20> 'int'
+|   `-ConditionalOperator 0x7ff5ae8268d8 <col:11, col:19> 'int'
+|     |-ImplicitCastExpr 0x7ff5ae8268c0 <col:11> 'int' <AtomicToNonAtomic>
+|     | `-ImplicitCastExpr 0x7ff5ae8268a8 <col:11> '_Atomic(int)' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7ff5ae826840 <col:11> '_Atomic(int)' lvalue Var 0x7ff5ae027168 'i' '_Atomic(int)'
+|     |-IntegerLiteral 0x7ff5ae826868 <col:15> 'int' 1
+|     `-IntegerLiteral 0x7ff5ae826888 <col:19> 'int' 2
+|-VarDecl 0x7ff5ae826a00 <line:21:1, col:9> col:5 invalid c3 'int [i]'
+|-VarDecl 0x7ff5ae826a78 <line:22:1, col:15> col:5 c4 'int' cinit
+| `-BinaryOperator 0x7ff5ae826b50 <col:10, col:15> 'int' '||'
+|   |-IntegerLiteral 0x7ff5ae826ad8 <col:10> 'int' 0
+|   `-ImplicitCastExpr 0x7ff5ae826b38 <col:15> 'int' <AtomicToNonAtomic>
+|     `-ImplicitCastExpr 0x7ff5ae826b20 <col:15> '_Atomic(int)' <LValueToRValue>
+|       `-DeclRefExpr 0x7ff5ae826af8 <col:15> '_Atomic(int)' lvalue Var 0x7ff5ae027168 'i' '_Atomic(int)'
+|-VarDecl 0x7ff5ae826b90 <line:23:1, col:5> col:5 invalid c5 'int'
+|-StaticAssertDecl 0x7ff5ae827220 <line:25:1, col:59> col:1
+| |-BinaryOperator 0x7ff5ae827170 <col:17, col:53> 'int' '=='
+| | |-GenericSelectionExpr 0x7ff5ae8270f0 <col:17, col:48> 'int'
+| | | |-ImplicitCastExpr 0x7ff5ae8270d8 <col:27> 'int' <AtomicToNonAtomic>
+| | | | `-ImplicitCastExpr 0x7ff5ae8270c0 <col:27> '_Atomic(int)' <LValueToRValue>
+| | | |   `-DeclRefExpr 0x7ff5ae827040 <col:27> '_Atomic(int)' lvalue Var 0x7ff5ae027168 'i' '_Atomic(int)'
+| | | |-IntegerLiteral 0x7ff5ae827080 <col:35> 'int' 1
+| | | `-IntegerLiteral 0x7ff5ae8270a0 <col:47> 'int' 0
+| | `-IntegerLiteral 0x7ff5ae827150 <col:53> 'int' 1
+| `-StringLiteral 0x7ff5ae8271d8 <col:56> 'char [2]' lvalue "1"
+|-StaticAssertDecl 0x7ff5ae827440 <line:26:1, col:63> col:1
+| |-BinaryOperator 0x7ff5ae8273d0 <col:17, col:57> 'int' '=='
+| | |-GenericSelectionExpr 0x7ff5ae827350 <col:17, col:52> 'int'
+| | | |-BinaryOperator 0x7ff5ae8272d0 <col:27, col:31> 'int' '+'
+| | | | |-ImplicitCastExpr 0x7ff5ae8272b8 <col:27> 'int' <AtomicToNonAtomic>
+| | | | | `-ImplicitCastExpr 0x7ff5ae8272a0 <col:27> '_Atomic(int)' <LValueToRValue>
+| | | | |   `-DeclRefExpr 0x7ff5ae827258 <col:27> '_Atomic(int)' lvalue Var 0x7ff5ae027168 'i' '_Atomic(int)'
+| | | | `-IntegerLiteral 0x7ff5ae827280 <col:31> 'int' 1
+| | | |-IntegerLiteral 0x7ff5ae827310 <col:39> 'int' 1
+| | | `-IntegerLiteral 0x7ff5ae827330 <col:51> 'int' 0
+| | `-IntegerLiteral 0x7ff5ae8273b0 <col:57> 'int' 1
+| `-StringLiteral 0x7ff5ae8273f8 <col:60> 'char [2]' lvalue "2"
+|-StaticAssertDecl 0x7ff5ae827648 <line:27:1, col:63> col:1
+| |-BinaryOperator 0x7ff5ae8275d8 <col:17, col:57> 'int' '=='
+| | |-GenericSelectionExpr 0x7ff5ae827558 <col:17, col:52> 'int'
+| | | |-BinaryOperator 0x7ff5ae8274d8 <col:27, col:31> '_Atomic(int)' '='
+| | | | |-DeclRefExpr 0x7ff5ae827478 <col:27> '_Atomic(int)' lvalue Var 0x7ff5ae027168 'i' '_Atomic(int)'
+| | | | `-ImplicitCastExpr 0x7ff5ae8274c0 <col:31> '_Atomic(int)' <NonAtomicToAtomic>
+| | | |   `-IntegerLiteral 0x7ff5ae8274a0 <col:31> 'int' 0
+| | | |-IntegerLiteral 0x7ff5ae827518 <col:39> 'int' 1
+| | | `-IntegerLiteral 0x7ff5ae827538 <col:51> 'int' 0
+| | `-IntegerLiteral 0x7ff5ae8275b8 <col:57> 'int' 1
+| `-StringLiteral 0x7ff5ae827600 <col:60> 'char [2]' lvalue "3"
+|-StaticAssertDecl 0x7ff5ae827810 <line:28:1, col:61> col:1
+| |-BinaryOperator 0x7ff5ae8277a0 <col:17, col:55> 'int' '=='
+| | |-GenericSelectionExpr 0x7ff5ae827720 <col:17, col:50> 'int'
+| | | |-UnaryOperator 0x7ff5ae8276a8 <col:27, col:28> 'int' postfix '++'
+| | | | `-DeclRefExpr 0x7ff5ae827680 <col:27> '_Atomic(int)' lvalue Var 0x7ff5ae027168 'i' '_Atomic(int)'
+| | | |-IntegerLiteral 0x7ff5ae8276e0 <col:37> 'int' 1
+| | | `-IntegerLiteral 0x7ff5ae827700 <col:49> 'int' 0
+| | `-IntegerLiteral 0x7ff5ae827780 <col:55> 'int' 1
+| `-StringLiteral 0x7ff5ae8277c8 <col:58> 'char [2]' lvalue "4"
+|-StaticAssertDecl 0x7ff5ae828a00 <line:29:1, col:61> col:1
+| |-BinaryOperator 0x7ff5ae827968 <col:17, col:55> 'int' '=='
+| | |-GenericSelectionExpr 0x7ff5ae8278e8 <col:17, col:50> 'int'
+| | | |-UnaryOperator 0x7ff5ae827870 <col:27, col:28> 'int' postfix '--'
+| | | | `-DeclRefExpr 0x7ff5ae827848 <col:27> '_Atomic(int)' lvalue Var 0x7ff5ae027168 'i' '_Atomic(int)'
+| | | |-IntegerLiteral 0x7ff5ae8278a8 <col:37> 'int' 1
+| | | `-IntegerLiteral 0x7ff5ae8278c8 <col:49> 'int' 0
+| | `-IntegerLiteral 0x7ff5ae827948 <col:55> 'int' 1
+| `-StringLiteral 0x7ff5ae827990 <col:58> 'char [2]' lvalue "5"
+|-FunctionDecl 0x7ff5ae828ca0 <line:31:1, col:23> col:6 fn1 'void (int *)'
+| `-ParmVarDecl 0x7ff5ae828ba0 <col:11, col:22> col:15 a 'int *':'int *'
+|-FunctionDecl 0x7ff5ae828ea0 <line:32:1, col:23> col:6 invalid fn2 'void (int)'
+| `-ParmVarDecl 0x7ff5ae828de0 <col:11, col:15> col:15 invalid a 'int'
+|-FunctionDecl 0x7ff5ae8290e0 <line:33:1, col:21> col:6 fn3 'void (int *)'
+| `-ParmVarDecl 0x7ff5ae829020 <col:11, col:20> col:15 a 'int *':'int *'
+|-FunctionDecl 0x7ff5ae829320 <line:34:1, col:21> col:6 fn4 'void (int *)'
+| `-ParmVarDecl 0x7ff5ae829260 <col:11, col:20> col:15 a 'int *':'int *'
+`-FunctionDecl 0x7ff5ae829590 <line:35:1, col:20> col:6 fn5 'void (int *)'
+  `-ParmVarDecl 0x7ff5ae8294d0 <col:11, col:19> col:15 a 'int *':'int *'

@@ -1,0 +1,53 @@
+TranslationUnitDecl 0x7faf0e8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7faf0e826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7faf0e826740 '__int128'
+|-TypedefDecl 0x7faf0e826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7faf0e826760 'unsigned __int128'
+|-TypedefDecl 0x7faf0e826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7faf0e826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7faf0e826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7faf0e826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7faf0e826dc0 'char *'
+|   `-BuiltinType 0x7faf0e826560 'char'
+|-TypedefDecl 0x7faf0e8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7faf0e827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7faf0e826ee0 'struct __va_list_tag'
+|     `-Record 0x7faf0e826e58 '__va_list_tag'
+|-TypedefDecl 0x7faf0f025a88 <c_files/pr47727.c:4:1, col:31> col:16 referenced func_ptr 'void (*)(void)'
+| `-PointerType 0x7faf0f025a30 'void (*)(void)'
+|   `-ParenType 0x7faf0e8271c0 'void (void)' sugar
+|     `-FunctionProtoType 0x7faf0e827190 'void (void)' cdecl
+|       `-BuiltinType 0x7faf0e826520 'void'
+|-VarDecl 0x7faf0f025bb8 <line:5:1, col:50> col:17 used __CTOR_END__ 'func_ptr [1]' static cinit
+| `-InitListExpr 0x7faf0f025cf8 <col:35, col:50> 'func_ptr [1]'
+|   `-CStyleCastExpr 0x7faf0f025c88 <col:37, col:48> 'func_ptr':'void (*)(void)' <NullToPointer>
+|     `-IntegerLiteral 0x7faf0f025c58 <col:48> 'int' 0
+`-FunctionDecl 0x7faf0f025dd0 <line:6:1, line:12:1> line:7:1 used __do_global_ctors_aux 'void (void)' static
+  |-CompoundStmt 0x7faf0f0262c0 <line:8:1, line:12:1>
+  | |-DeclStmt 0x7faf0f025f78 <line:9:3, col:14>
+  | | `-VarDecl 0x7faf0f025f18 <col:3, col:13> col:13 used p 'func_ptr *'
+  | `-ForStmt 0x7faf0f026288 <line:10:3, line:11:11>
+  |   |-BinaryOperator 0x7faf0f026040 <line:10:8, col:27> 'func_ptr *' '='
+  |   | |-DeclRefExpr 0x7faf0f025f90 <col:8> 'func_ptr *' lvalue Var 0x7faf0f025f18 'p' 'func_ptr *'
+  |   | `-BinaryOperator 0x7faf0f026018 <col:12, col:27> 'func_ptr *' '-'
+  |   |   |-ImplicitCastExpr 0x7faf0f026000 <col:12> 'func_ptr *' <ArrayToPointerDecay>
+  |   |   | `-DeclRefExpr 0x7faf0f025fb8 <col:12> 'func_ptr [1]' lvalue Var 0x7faf0f025bb8 '__CTOR_END__' 'func_ptr [1]'
+  |   |   `-IntegerLiteral 0x7faf0f025fe0 <col:27> 'int' 1
+  |   |-<<<NULL>>>
+  |   |-BinaryOperator 0x7faf0f026158 <col:30, col:48> 'int' '!='
+  |   | |-ImplicitCastExpr 0x7faf0f026140 <col:30, col:31> 'func_ptr':'void (*)(void)' <LValueToRValue>
+  |   | | `-UnaryOperator 0x7faf0f0260a8 <col:30, col:31> 'func_ptr':'void (*)(void)' lvalue prefix '*'
+  |   | |   `-ImplicitCastExpr 0x7faf0f026090 <col:31> 'func_ptr *' <LValueToRValue>
+  |   | |     `-DeclRefExpr 0x7faf0f026068 <col:31> 'func_ptr *' lvalue Var 0x7faf0f025f18 'p' 'func_ptr *'
+  |   | `-CStyleCastExpr 0x7faf0f026118 <col:36, col:48> 'func_ptr':'void (*)(void)' <IntegralToPointer>
+  |   |   `-UnaryOperator 0x7faf0f0260e8 <col:47, col:48> 'int' prefix '-'
+  |   |     `-IntegerLiteral 0x7faf0f0260c8 <col:48> 'int' 1
+  |   |-UnaryOperator 0x7faf0f0261a8 <col:51, col:52> 'func_ptr *' postfix '--'
+  |   | `-DeclRefExpr 0x7faf0f026180 <col:51> 'func_ptr *' lvalue Var 0x7faf0f025f18 'p' 'func_ptr *'
+  |   `-CallExpr 0x7faf0f026260 <line:11:5, col:11> 'void'
+  |     `-ImplicitCastExpr 0x7faf0f026248 <col:5, col:8> 'func_ptr':'void (*)(void)' <LValueToRValue>
+  |       `-ParenExpr 0x7faf0f026228 <col:5, col:8> 'func_ptr':'void (*)(void)' lvalue
+  |         `-UnaryOperator 0x7faf0f026208 <col:6, col:7> 'func_ptr':'void (*)(void)' lvalue prefix '*'
+  |           `-ImplicitCastExpr 0x7faf0f0261f0 <col:7> 'func_ptr *' <LValueToRValue>
+  |             `-DeclRefExpr 0x7faf0f0261c8 <col:7> 'func_ptr *' lvalue Var 0x7faf0f025f18 'p' 'func_ptr *'
+  `-UsedAttr 0x7faf0f025e68 <line:6:28>

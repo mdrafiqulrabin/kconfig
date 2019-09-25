@@ -1,0 +1,45 @@
+20190122200913920802103.c-4.8.2.out.txt -> checksum = 8171F2E3 : 20190122200913920802103.c-4.8.2-3.out.txt -> checksum = 79CD1F17
+/var/spool/slurm/slurmd/job655936/slurm_script: line 56: save_tc: command not found
+20190122200921083929508.c-4.8.2.out.txt -> checksum = F90C7C25 : 20190122200921083929508.c-4.8.2-3.out.txt -> checksum = E45512CC
+/var/spool/slurm/slurmd/job655936/slurm_script: line 56: save_tc: command not found
+20190122202517510355342.c-4.8.2.out.txt -> checksum = CBDE8028 : 20190122202517510355342.c-4.8.2-3.out.txt -> checksum = 8F4D2985
+/var/spool/slurm/slurmd/job655936/slurm_script: line 56: save_tc: command not found
+20190122205005610484322.c-4.8.2.out.txt -> checksum = 8856E579 : 20190122205005610484322.c-4.8.2-3.out.txt -> checksum = 5EFE1A62
+/var/spool/slurm/slurmd/job655936/slurm_script: line 56: save_tc: command not found
+20190122205506400607754.c-4.8.2.out.txt -> checksum = E0BB54E6 : 20190122205506400607754.c-4.8.2-3.out.txt -> checksum = 345FECF8
+/var/spool/slurm/slurmd/job655936/slurm_script: line 56: save_tc: command not found
+20190122210724157025701.c-4.8.2.out.txt -> checksum = A0BEF335 : 20190122210724157025701.c-4.8.2-3.out.txt -> checksum = 9E75EABB
+/var/spool/slurm/slurmd/job655936/slurm_script: line 56: save_tc: command not found
+20190122211622992178060.c-4.8.2.out.txt -> checksum = 2DBF4F7 : 20190122211622992178060.c-4.8.2-3.out.txt -> checksum = 39DD391E
+/var/spool/slurm/slurmd/job655936/slurm_script: line 56: save_tc: command not found
+20190122214030447716489.c-4.8.2.out.txt -> checksum = 164B893 : 20190122214030447716489.c-4.8.2-3.out.txt -> checksum = 32380859
+/var/spool/slurm/slurmd/job655936/slurm_script: line 56: save_tc: command not found
+20190122221945989641485.c-4.8.2.out.txt -> checksum = C0BB22F9 : 20190122221945989641485.c-4.8.2-3.out.txt -> checksum = 8AC15F2
+/var/spool/slurm/slurmd/job655936/slurm_script: line 56: save_tc: command not found
+20190122222318241209984.c-4.8.2.out.txt -> checksum = 685BA50D : 20190122222318241209984.c-4.8.2-3.out.txt -> checksum = 457C543B
+/var/spool/slurm/slurmd/job655936/slurm_script: line 56: save_tc: command not found
+20190122222711558843499.c-4.8.2.out.txt -> checksum = E3233896 : 20190122222711558843499.c-4.8.2-3.out.txt -> checksum = 600A8CC7
+/var/spool/slurm/slurmd/job655936/slurm_script: line 56: save_tc: command not found
+20190122223607737673260.c-4.8.2.out.txt -> checksum = 987AE77F : 20190122223607737673260.c-4.8.2-3.out.txt -> checksum = 72682623
+/var/spool/slurm/slurmd/job655936/slurm_script: line 56: save_tc: command not found
+20190122223708152152489.c-4.8.2.out.txt -> checksum = 6661CC0D : 20190122223708152152489.c-4.8.2-3.out.txt -> checksum = 2F58E286
+/var/spool/slurm/slurmd/job655936/slurm_script: line 56: save_tc: command not found
+20190122235158995200342.c-4.8.2.out.txt -> checksum = 5F18F37A : 20190122235158995200342.c-4.8.2-3.out.txt -> checksum = 909F8A8C
+/var/spool/slurm/slurmd/job655936/slurm_script: line 56: save_tc: command not found
+20190123001437832834664.c-4.8.2.out.txt -> checksum = E169722A : 20190123001437832834664.c-4.8.2-3.out.txt -> checksum = EDD7B2C7
+/var/spool/slurm/slurmd/job655936/slurm_script: line 56: save_tc: command not found
+20190123002207595048064.c-4.8.2.out.txt -> checksum = B82EA77 : 20190123002207595048064.c-4.8.2-3.out.txt -> checksum = 646DF088
+/var/spool/slurm/slurmd/job655936/slurm_script: line 56: save_tc: command not found
+20190123011345356880612.c-4.8.2.out.txt -> checksum = 54ADB87 : 20190123011345356880612.c-4.8.2-3.out.txt -> checksum = DA4C5645
+/var/spool/slurm/slurmd/job655936/slurm_script: line 56: save_tc: command not found
+20190123011930604169599.c-4.8.2.out.txt -> checksum = 94E0AFD6 : 20190123011930604169599.c-4.8.2-3.out.txt -> checksum = 2089D0CD
+/var/spool/slurm/slurmd/job655936/slurm_script: line 56: save_tc: command not found
+20190123012723183831764.c-4.8.2.out.txt -> checksum = ED8183D3 : 20190123012723183831764.c-4.8.2-3.out.txt -> checksum = 844D7FDE
+/var/spool/slurm/slurmd/job655936/slurm_script: line 56: save_tc: command not found
+20190123012917743324938.c-4.8.2.out.txt -> checksum = 7A24D443 : 20190123012917743324938.c-4.8.2-3.out.txt -> checksum = 57718206
+/var/spool/slurm/slurmd/job655936/slurm_script: line 56: save_tc: command not found
+20190123015634476477526.c-4.8.2.out.txt -> checksum = 8174E7CD : 20190123015634476477526.c-4.8.2-3.out.txt -> checksum = D1A68FB6
+/var/spool/slurm/slurmd/job655936/slurm_script: line 56: save_tc: command not found
+
+m_cs=0 m_tc=9023 m_cb=4738 m_to=455 m_ct=0 m_wc=21
+

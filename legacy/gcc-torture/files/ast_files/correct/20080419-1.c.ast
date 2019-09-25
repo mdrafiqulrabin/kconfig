@@ -1,0 +1,38 @@
+FileAST: 
+  Decl: f, [], ['extern'], []
+    FuncDecl: 
+      PtrDecl: []
+        TypeDecl: f, []
+          IdentifierType: ['void']
+  FuncDef: 
+    Decl: dmi_scan_machine, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: dmi_scan_machine, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: p, [], [], []
+        PtrDecl: []
+          TypeDecl: p, []
+            IdentifierType: ['char']
+        FuncCall: 
+          ID: f
+      Decl: q, [], [], []
+        PtrDecl: []
+          TypeDecl: q, []
+            IdentifierType: ['char']
+      For: 
+        Assignment: =
+          ID: q
+          ID: p
+        BinaryOp: <
+          ID: q
+          BinaryOp: +
+            ID: p
+            Constant: int, 10
+        UnaryOp: p++
+          ID: q
+        EmptyStatement: 

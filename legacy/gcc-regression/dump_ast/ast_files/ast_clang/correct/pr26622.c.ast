@@ -1,0 +1,33 @@
+TranslationUnitDecl 0x7f8b530264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8b53026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8b53026740 '__int128'
+|-TypedefDecl 0x7f8b53026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8b53026760 'unsigned __int128'
+|-TypedefDecl 0x7f8b53026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8b53026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8b53026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8b53026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8b53026dc0 'char *'
+|   `-BuiltinType 0x7f8b53026560 'char'
+|-TypedefDecl 0x7f8b530270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8b53027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8b53026ee0 'struct __va_list_tag'
+|     `-Record 0x7f8b53026e58 '__va_list_tag'
+|-VarDecl 0x7f8b53027138 <c_files/pr26622.c:5:1, col:15> col:15 used g 'unsigned char'
+`-FunctionDecl 0x7f8b53825ab8 <line:7:1, line:11:1> line:8:1 foo 'unsigned long long (void)'
+  `-CompoundStmt 0x7f8b53825d80 <line:9:1, line:11:1>
+    `-ReturnStmt 0x7f8b53825d68 <line:10:3, col:45>
+      `-ImplicitCastExpr 0x7f8b53825d50 <col:10, col:45> 'unsigned long long' <IntegralCast>
+        `-BinaryOperator 0x7f8b53825d28 <col:10, col:45> 'long long' '<<'
+          |-ParenExpr 0x7f8b53825ce8 <col:10, col:40> 'long long'
+          | `-CStyleCastExpr 0x7f8b53825cc0 <col:11, col:39> 'long long' <IntegralCast>
+          |   `-ParenExpr 0x7f8b53825ca0 <col:23, col:39> 'int'
+          |     `-BinaryOperator 0x7f8b53825c30 <col:24, col:38> 'int' '!='
+          |       |-ParenExpr 0x7f8b53825bf0 <col:24, col:33> 'int'
+          |       | `-BinaryOperator 0x7f8b53825bc8 <col:25, col:29> 'int' '&'
+          |       |   |-ImplicitCastExpr 0x7f8b53825bb0 <col:25> 'int' <IntegralCast>
+          |       |   | `-ImplicitCastExpr 0x7f8b53825b98 <col:25> 'unsigned char' <LValueToRValue>
+          |       |   |   `-DeclRefExpr 0x7f8b53825b50 <col:25> 'unsigned char' lvalue Var 0x7f8b53027138 'g' 'unsigned char'
+          |       |   `-IntegerLiteral 0x7f8b53825b78 <col:29> 'int' 128
+          |       `-IntegerLiteral 0x7f8b53825c10 <col:38> 'int' 0
+          `-IntegerLiteral 0x7f8b53825d08 <col:45> 'int' 7

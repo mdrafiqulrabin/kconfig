@@ -1,0 +1,45 @@
+c_files/pr35767-1i.c:5:10: fatal error: 'sse2-check.h' file not found
+#include "sse2-check.h"
+         ^~~~~~~~~~~~~~
+1 error generated.
+TranslationUnitDecl 0x7fc6198264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc619826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc619826740 '__int128'
+|-TypedefDecl 0x7fc619826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc619826760 'unsigned __int128'
+|-TypedefDecl 0x7fc619826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc619826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc619826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc619826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc619826dc0 'char *'
+|   `-BuiltinType 0x7fc619826560 'char'
+|-TypedefDecl 0x7fc6198270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc619827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc619826ee0 'struct __va_list_tag'
+|     `-Record 0x7fc619826e58 '__va_list_tag'
+|-RecordDecl 0x7fc619827120 <c_files/pr35767-1i.c:7:9, col:53> col:9 invalid struct definition
+| `-FieldDecl 0x7fc61a028a00 <col:18, col:26> col:26 invalid f 'int'
+|   `-PackedAttr 0x7fc61a028a48 <col:43>
+|-TypedefDecl 0x7fc61a028ae0 <col:1, col:55> col:55 referenced packed 'struct (anonymous struct at c_files/pr35767-1i.c:7:9)':'struct (anonymous at c_files/pr35767-1i.c:7:9)'
+| `-ElaboratedType 0x7fc61a028a90 'struct (anonymous struct at c_files/pr35767-1i.c:7:9)' sugar
+|   `-RecordType 0x7fc6198271b0 'struct (anonymous at c_files/pr35767-1i.c:7:9)'
+|     `-Record 0x7fc619827120 ''
+|-FunctionDecl 0x7fc61a028c10 <line:17:1, line:26:1> line:18:1 sse2_test 'void (void)'
+| `-CompoundStmt 0x7fc61a0294b0 <line:19:1, line:26:1>
+|   |-DeclStmt 0x7fc61a028d80 <line:20:3, col:11>
+|   | `-VarDecl 0x7fc61a028d20 <col:3, col:10> col:10 used x 'packed':'struct (anonymous at c_files/pr35767-1i.c:7:9)'
+|   `-IfStmt 0x7fc61a029478 <line:24:3, line:25:12>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-OpaqueValueExpr 0x7fc61a029458 <<invalid sloc>> '_Bool'
+|     |-CallExpr 0x7fc61a029430 <col:5, col:12> 'void'
+|     | `-ImplicitCastExpr 0x7fc61a029418 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|     |   `-DeclRefExpr 0x7fc61a0293c8 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fc61a029330 'abort' 'void (void) __attribute__((noreturn))'
+|     `-<<<NULL>>>
+|-FunctionDecl 0x7fc61a028e10 <<invalid sloc>> line:23:7 implicit used foo 'int ()'
+|-FunctionDecl 0x7fc61a029078 <line:24:7> col:7 implicit used __builtin_memcmp 'int (const void *, const void *, unsigned long)' extern
+| |-ParmVarDecl 0x7fc61a029110 <<invalid sloc>> <invalid sloc> 'const void *'
+| |-ParmVarDecl 0x7fc61a029170 <<invalid sloc>> <invalid sloc> 'const void *'
+| |-ParmVarDecl 0x7fc61a0291d0 <<invalid sloc>> <invalid sloc> 'unsigned long'
+| `-NoThrowAttr 0x7fc61a029248 <col:7> Implicit
+`-FunctionDecl 0x7fc61a029330 <line:25:5> col:5 implicit used abort 'void (void) __attribute__((noreturn))' extern

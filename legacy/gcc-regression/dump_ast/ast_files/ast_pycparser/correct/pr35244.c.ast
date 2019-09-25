@@ -1,0 +1,27 @@
+FileAST: 
+  Decl: v1, [], [], []
+    TypeDecl: v1, []
+      IdentifierType: ['int']
+  Typedef: A, [], ['typedef']
+    TypeDecl: A, []
+      Struct: A
+  Typedef: i, [], ['typedef']
+    TypeDecl: i, []
+      IdentifierType: ['int']
+  Pragma: omp threadprivate (i)	 
+  Pragma: omp threadprivate (A)	 
+  Pragma: omp threadprivate (v1)
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: v4, [], ['static'], []
+        TypeDecl: v4, []
+          IdentifierType: ['int']
+      Compound: 
+        Decl: v5, [], ['static'], []
+          TypeDecl: v5, []
+            IdentifierType: ['int']
+        Pragma: omp threadprivate (v4, v5)

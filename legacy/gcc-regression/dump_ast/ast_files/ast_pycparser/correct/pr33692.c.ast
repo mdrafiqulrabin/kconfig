@@ -1,0 +1,45 @@
+FileAST: 
+  Typedef: snd_pcm_info_t, [], ['typedef']
+    TypeDecl: snd_pcm_info_t, []
+      Struct: None
+        Decl: i, [], [], []
+          TypeDecl: i, []
+            IdentifierType: ['int']
+  Typedef: snd_pcm_shm_ctrl_t, [], ['typedef']
+    TypeDecl: snd_pcm_shm_ctrl_t, []
+      Struct: None
+        Decl: info, [], [], []
+          TypeDecl: info, []
+            IdentifierType: ['snd_pcm_info_t']
+  Decl: snd_pcm_info, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['snd_pcm_info_t']
+      TypeDecl: snd_pcm_info, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: pcm_shm_cmd, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: ctrl, ['volatile'], [], []
+            PtrDecl: []
+              TypeDecl: ctrl, ['volatile']
+                IdentifierType: ['snd_pcm_shm_ctrl_t']
+        TypeDecl: pcm_shm_cmd, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: snd_pcm_info
+        ExprList: 
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['snd_pcm_info_t']
+            UnaryOp: &
+              StructRef: ->
+                ID: ctrl
+                ID: info

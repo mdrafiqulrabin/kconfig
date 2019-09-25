@@ -1,3 +1,0 @@
-pr72816.c:8:5: error: array size missing in ‘b’
-   A b;
-     ^

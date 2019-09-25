@@ -1,0 +1,42 @@
+TranslationUnitDecl 0x7ff99e0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff99e026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff99e026740 '__int128'
+|-TypedefDecl 0x7ff99e026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff99e026760 'unsigned __int128'
+|-TypedefDecl 0x7ff99e026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff99e026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff99e026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff99e026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff99e026dc0 'char *'
+|   `-BuiltinType 0x7ff99e026560 'char'
+|-TypedefDecl 0x7ff99e0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff99e027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff99e026ee0 'struct __va_list_tag'
+|     `-Record 0x7ff99e026e58 '__va_list_tag'
+|-RecordDecl 0x7ff99e027120 <c_files/pr53790.c:3:9, line:5:1> line:3:16 struct s definition
+| `-FieldDecl 0x7ff99e825a00 <line:4:5, col:9> col:9 referenced value 'int'
+|-TypedefDecl 0x7ff99e825aa0 <line:3:1, line:5:3> col:3 referenced s_t 'struct s':'struct s'
+| `-ElaboratedType 0x7ff99e825a50 'struct s' sugar
+|   `-RecordType 0x7ff99e0271b0 'struct s'
+|     `-Record 0x7ff99e027120 's'
+|-FunctionDecl 0x7ff99e825ca8 <line:7:1, line:11:1> line:8:1 used read 'int (const s_t *)' static inline
+| |-ParmVarDecl 0x7ff99e825b98 <col:6, col:17> col:17 used var 'const s_t *'
+| `-CompoundStmt 0x7ff99e825e30 <line:9:1, line:11:1>
+|   `-ReturnStmt 0x7ff99e825e18 <line:10:3, col:15>
+|     `-ImplicitCastExpr 0x7ff99e825e00 <col:10, col:15> 'int' <LValueToRValue>
+|       `-MemberExpr 0x7ff99e825dc8 <col:10, col:15> 'const int' lvalue ->value 0x7ff99e825a00
+|         `-ImplicitCastExpr 0x7ff99e825db0 <col:10> 'const s_t *' <LValueToRValue>
+|           `-DeclRefExpr 0x7ff99e825d88 <col:10> 'const s_t *' lvalue ParmVar 0x7ff99e825b98 'var' 'const s_t *'
+`-FunctionDecl 0x7ff99e825ea0 <line:13:1, line:17:1> line:13:5 main 'int ()'
+  `-CompoundStmt 0x7ff99e826300 <line:14:1, line:17:1>
+    |-DeclStmt 0x7ff99e8260b8 <line:15:3, col:28>
+    | |-RecordDecl 0x7ff99e825f38 <col:10, col:16> col:16 union u
+    | `-VarDecl 0x7ff99e826030 parent 0x7ff99e0264d0 <col:3, col:18> col:18 used extern_var 'union u':'union u' extern
+    `-ReturnStmt 0x7ff99e8262e8 <line:16:3, col:33>
+      `-CallExpr 0x7ff99e8262a0 <col:10, col:33> 'int'
+        |-ImplicitCastExpr 0x7ff99e826288 <col:10> 'int (*)(const s_t *)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7ff99e8260d0 <col:10> 'int (const s_t *)' Function 0x7ff99e825ca8 'read' 'int (const s_t *)'
+        `-ImplicitCastExpr 0x7ff99e8262d0 <col:15, col:23> 'const s_t *' <BitCast>
+          `-CStyleCastExpr 0x7ff99e826208 <col:15, col:23> 's_t *' <BitCast>
+            `-UnaryOperator 0x7ff99e826178 <col:22, col:23> 'union u *' prefix '&'
+              `-DeclRefExpr 0x7ff99e8260f8 <col:23> 'union u':'union u' lvalue Var 0x7ff99e826030 'extern_var' 'union u':'union u'

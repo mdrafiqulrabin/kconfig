@@ -1,0 +1,32 @@
+TranslationUnitDecl 0x7f833e8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f833e826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f833e826740 '__int128'
+|-TypedefDecl 0x7f833e826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f833e826760 'unsigned __int128'
+|-TypedefDecl 0x7f833e826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f833e826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f833e826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f833e826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f833e826dc0 'char *'
+|   `-BuiltinType 0x7f833e826560 'char'
+|-TypedefDecl 0x7f833e8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f833e827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f833e826ee0 'struct __va_list_tag'
+|     `-Record 0x7f833e826e58 '__va_list_tag'
+|-FunctionDecl 0x7f833e877428 <c_files/pr61215.c:5:1, col:21> col:6 used fn1 'void (int *, ...)'
+| `-ParmVarDecl 0x7f833e827160 <col:11, col:15> col:16 'int *'
+`-FunctionDecl 0x7f833e8775e8 <line:6:1, line:10:1> line:6:5 fn2 'int (int)'
+  |-ParmVarDecl 0x7f833e877520 <col:10, col:14> col:14 used p1 'int'
+  `-CompoundStmt 0x7f833e877880 <line:7:1, line:10:1>
+    |-CallExpr 0x7f833e8777e0 <line:8:3, col:26> 'void'
+    | |-ImplicitCastExpr 0x7f833e8777c8 <col:3> 'void (*)(int *, ...)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7f833e877688 <col:3> 'void (int *, ...)' Function 0x7f833e877428 'fn1' 'void (int *, ...)'
+    | |-ImplicitCastExpr 0x7f833e877818 <col:8> 'int *' <NullToPointer>
+    | | `-IntegerLiteral 0x7f833e8776b0 <col:8> 'int' 0
+    | `-ImplicitCastExpr 0x7f833e877830 <col:11, col:24> 'int' <IntegralCast>
+    |   `-CStyleCastExpr 0x7f833e877770 <col:11, col:24> 'short' <IntegralCast>
+    |     `-CStyleCastExpr 0x7f833e877730 <col:18, col:24> 'int' <PointerToIntegral>
+    |       `-UnaryOperator 0x7f833e8776f8 <col:23, col:24> 'int *' prefix '&'
+    |         `-DeclRefExpr 0x7f833e8776d0 <col:24> 'int' lvalue ParmVar 0x7f833e877520 'p1' 'int'
+    `-ReturnStmt 0x7f833e877868 <line:9:3, col:10>
+      `-IntegerLiteral 0x7f833e877848 <col:10> 'int' 0

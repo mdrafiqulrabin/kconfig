@@ -1,0 +1,29 @@
+TranslationUnitDecl 0x7fe4c08264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe4c0826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe4c0826740 '__int128'
+|-TypedefDecl 0x7fe4c0826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe4c0826760 'unsigned __int128'
+|-TypedefDecl 0x7fe4c0826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe4c0826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe4c0826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe4c0826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe4c0826dc0 'char *'
+|   `-BuiltinType 0x7fe4c0826560 'char'
+|-TypedefDecl 0x7fe4c08270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe4c0827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe4c0826ee0 'struct __va_list_tag'
+|     `-Record 0x7fe4c0826e58 '__va_list_tag'
+`-FunctionDecl 0x7fe4c1025a00 <c_files/pr42398.c:1:1, line:6:1> line:1:5 ptrace_setregs 'int (void)'
+  `-CompoundStmt 0x7fe4c1025f38 <line:2:1, line:6:1>
+    |-DeclStmt 0x7fe4c1025d08 <line:3:3, col:44>
+    | |-RecordDecl 0x7fe4c1025ad8 <col:3, col:34> col:3 union definition
+    | | |-FieldDecl 0x7fe4c1025b98 <col:11, col:24> col:24 referenced l 'unsigned int'
+    | | `-FieldDecl 0x7fe4c1025bf8 <col:27, col:31> col:31 referenced t 'int'
+    | `-VarDecl 0x7fe4c1025c90 <col:3, col:36> col:36 used __gu_tmp 'union (anonymous union at c_files/pr42398.c:3:3)':'union (anonymous at c_files/pr42398.c:3:3)'
+    |-GCCAsmStmt 0x7fe4c1025e48 <line:4:3, col:46>
+    | `-MemberExpr 0x7fe4c1025e10 <col:35, col:44> 'unsigned int' lvalue .l 0x7fe4c1025b98
+    |   `-DeclRefExpr 0x7fe4c1025de8 <col:35> 'union (anonymous union at c_files/pr42398.c:3:3)':'union (anonymous at c_files/pr42398.c:3:3)' lvalue Var 0x7fe4c1025c90 '__gu_tmp' 'union (anonymous union at c_files/pr42398.c:3:3)':'union (anonymous at c_files/pr42398.c:3:3)'
+    `-ReturnStmt 0x7fe4c1025f20 <line:5:3, col:19>
+      `-ImplicitCastExpr 0x7fe4c1025f08 <col:10, col:19> 'int' <LValueToRValue>
+        `-MemberExpr 0x7fe4c1025ed0 <col:10, col:19> 'int' lvalue .t 0x7fe4c1025bf8
+          `-DeclRefExpr 0x7fe4c1025ea8 <col:10> 'union (anonymous union at c_files/pr42398.c:3:3)':'union (anonymous at c_files/pr42398.c:3:3)' lvalue Var 0x7fe4c1025c90 '__gu_tmp' 'union (anonymous union at c_files/pr42398.c:3:3)':'union (anonymous at c_files/pr42398.c:3:3)'

@@ -1,0 +1,191 @@
+FileAST: 
+  Decl: abort, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['signed', 'char']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['unsigned', 'char']
+  FuncDef: 
+    Decl: test1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: test1, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          IdentifierType: ['int']
+        UnaryOp: -
+          Constant: int, 1
+      Return: 
+        BinaryOp: >>
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['unsigned', 'int']
+            BinaryOp: ^
+              ID: a
+              ID: c
+          Constant: int, 9
+  FuncDef: 
+    Decl: test2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: test2, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          IdentifierType: ['int']
+        UnaryOp: -
+          Constant: int, 1
+      Return: 
+        BinaryOp: >>
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['unsigned', 'int']
+            BinaryOp: ^
+              ID: b
+              ID: c
+          Constant: int, 9
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Assignment: =
+        ID: a
+        Constant: int, 0
+      If: 
+        BinaryOp: !=
+          FuncCall: 
+            ID: test1
+          BinaryOp: >>
+            UnaryOp: -
+              Constant: int, 1U
+            Constant: int, 9
+        FuncCall: 
+          ID: abort
+      Assignment: =
+        ID: a
+        Constant: int, 0x40
+      If: 
+        BinaryOp: !=
+          FuncCall: 
+            ID: test1
+          BinaryOp: >>
+            UnaryOp: -
+              Constant: int, 1U
+            Constant: int, 9
+        FuncCall: 
+          ID: abort
+      Assignment: =
+        ID: a
+        Constant: int, 0x80
+      If: 
+        TernaryOp: 
+          BinaryOp: !=
+            FuncCall: 
+              ID: test1
+            BinaryOp: <
+              ID: a
+              Constant: int, 0
+          Constant: int, 0
+          BinaryOp: >>
+            UnaryOp: -
+              Constant: int, 1U
+            Constant: int, 9
+        FuncCall: 
+          ID: abort
+      Assignment: =
+        ID: a
+        Constant: int, 0xff
+      If: 
+        TernaryOp: 
+          BinaryOp: !=
+            FuncCall: 
+              ID: test1
+            BinaryOp: <
+              ID: a
+              Constant: int, 0
+          Constant: int, 0
+          BinaryOp: >>
+            UnaryOp: -
+              Constant: int, 1U
+            Constant: int, 9
+        FuncCall: 
+          ID: abort
+      Assignment: =
+        ID: b
+        Constant: int, 0
+      If: 
+        BinaryOp: !=
+          FuncCall: 
+            ID: test2
+          BinaryOp: >>
+            UnaryOp: -
+              Constant: int, 1U
+            Constant: int, 9
+        FuncCall: 
+          ID: abort
+      Assignment: =
+        ID: b
+        Constant: int, 0x40
+      If: 
+        BinaryOp: !=
+          FuncCall: 
+            ID: test2
+          BinaryOp: >>
+            UnaryOp: -
+              Constant: int, 1U
+            Constant: int, 9
+        FuncCall: 
+          ID: abort
+      Assignment: =
+        ID: b
+        Constant: int, 0x80
+      If: 
+        BinaryOp: !=
+          FuncCall: 
+            ID: test2
+          BinaryOp: >>
+            UnaryOp: -
+              Constant: int, 1U
+            Constant: int, 9
+        FuncCall: 
+          ID: abort
+      Assignment: =
+        ID: b
+        Constant: int, 0xff
+      If: 
+        BinaryOp: !=
+          FuncCall: 
+            ID: test2
+          BinaryOp: >>
+            UnaryOp: -
+              Constant: int, 1U
+            Constant: int, 9
+        FuncCall: 
+          ID: abort
+      Return: 
+        Constant: int, 0

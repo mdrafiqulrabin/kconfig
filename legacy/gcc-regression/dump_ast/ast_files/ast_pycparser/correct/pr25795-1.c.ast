@@ -1,0 +1,15 @@
+FileAST: 
+  Decl: mystr, ['const'], ['extern'], []
+    PtrDecl: []
+      TypeDecl: mystr, ['const']
+        IdentifierType: ['char']
+  Decl: mystr, ['const'], [], []
+    PtrDecl: []
+      TypeDecl: mystr, ['const']
+        IdentifierType: ['char']
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 

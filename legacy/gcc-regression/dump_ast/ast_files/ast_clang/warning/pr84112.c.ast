@@ -1,0 +1,947 @@
+c_files/pr84112.c:17:17: warning: operator '>>' has lower precedence than '-'; '-' will be evaluated first [-Wshift-op-parentheses]
+          i[j] = n & k - h[j] >> 31 | q & ~(k - h[j] >> 31);
+                     ~~^~~~~~ ~~
+c_files/pr84112.c:17:17: note: place parentheses around the '-' expression to silence this warning
+          i[j] = n & k - h[j] >> 31 | q & ~(k - h[j] >> 31);
+                       ^
+                     (       )
+c_files/pr84112.c:17:40: warning: operator '>>' has lower precedence than '-'; '-' will be evaluated first [-Wshift-op-parentheses]
+          i[j] = n & k - h[j] >> 31 | q & ~(k - h[j] >> 31);
+                                            ~~^~~~~~ ~~
+c_files/pr84112.c:17:40: note: place parentheses around the '-' expression to silence this warning
+          i[j] = n & k - h[j] >> 31 | q & ~(k - h[j] >> 31);
+                                              ^
+                                            (       )
+c_files/pr84112.c:17:13: warning: '&' within '|' [-Wbitwise-op-parentheses]
+          i[j] = n & k - h[j] >> 31 | q & ~(k - h[j] >> 31);
+                 ~~^~~~~~~~~~~~~~~~ ~
+c_files/pr84112.c:17:13: note: place parentheses around the '&' expression to silence this warning
+          i[j] = n & k - h[j] >> 31 | q & ~(k - h[j] >> 31);
+                   ^
+                 (                 )
+c_files/pr84112.c:17:34: warning: '&' within '|' [-Wbitwise-op-parentheses]
+          i[j] = n & k - h[j] >> 31 | q & ~(k - h[j] >> 31);
+                                    ~ ~~^~~~~~~~~~~~~~~~~~~
+c_files/pr84112.c:17:34: note: place parentheses around the '&' expression to silence this warning
+          i[j] = n & k - h[j] >> 31 | q & ~(k - h[j] >> 31);
+                                        ^
+                                      (                    )
+c_files/pr84112.c:18:21: warning: operator '>>' has lower precedence than '-'; '-' will be evaluated first [-Wshift-op-parentheses]
+          i[j + 1] = n & l - h[j + 1] >> 31 | q & ~(l - h[j + 1] >> 31);
+                         ~~^~~~~~~~~~ ~~
+c_files/pr84112.c:18:21: note: place parentheses around the '-' expression to silence this warning
+          i[j + 1] = n & l - h[j + 1] >> 31 | q & ~(l - h[j + 1] >> 31);
+                           ^
+                         (           )
+c_files/pr84112.c:18:48: warning: operator '>>' has lower precedence than '-'; '-' will be evaluated first [-Wshift-op-parentheses]
+          i[j + 1] = n & l - h[j + 1] >> 31 | q & ~(l - h[j + 1] >> 31);
+                                                    ~~^~~~~~~~~~ ~~
+c_files/pr84112.c:18:48: note: place parentheses around the '-' expression to silence this warning
+          i[j + 1] = n & l - h[j + 1] >> 31 | q & ~(l - h[j + 1] >> 31);
+                                                      ^
+                                                    (           )
+c_files/pr84112.c:18:17: warning: '&' within '|' [-Wbitwise-op-parentheses]
+          i[j + 1] = n & l - h[j + 1] >> 31 | q & ~(l - h[j + 1] >> 31);
+                     ~~^~~~~~~~~~~~~~~~~~~~ ~
+c_files/pr84112.c:18:17: note: place parentheses around the '&' expression to silence this warning
+          i[j + 1] = n & l - h[j + 1] >> 31 | q & ~(l - h[j + 1] >> 31);
+                       ^
+                     (                     )
+c_files/pr84112.c:18:42: warning: '&' within '|' [-Wbitwise-op-parentheses]
+          i[j + 1] = n & l - h[j + 1] >> 31 | q & ~(l - h[j + 1] >> 31);
+                                            ~ ~~^~~~~~~~~~~~~~~~~~~~~~~
+c_files/pr84112.c:18:42: note: place parentheses around the '&' expression to silence this warning
+          i[j + 1] = n & l - h[j + 1] >> 31 | q & ~(l - h[j + 1] >> 31);
+                                                ^
+                                              (                        )
+c_files/pr84112.c:19:21: warning: operator '>>' has lower precedence than '-'; '-' will be evaluated first [-Wshift-op-parentheses]
+          i[j + 2] = n & m - h[j + 2] >> 31 | s & ~(m - h[j + 2] >> 31);
+                         ~~^~~~~~~~~~ ~~
+c_files/pr84112.c:19:21: note: place parentheses around the '-' expression to silence this warning
+          i[j + 2] = n & m - h[j + 2] >> 31 | s & ~(m - h[j + 2] >> 31);
+                           ^
+                         (           )
+c_files/pr84112.c:19:48: warning: operator '>>' has lower precedence than '-'; '-' will be evaluated first [-Wshift-op-parentheses]
+          i[j + 2] = n & m - h[j + 2] >> 31 | s & ~(m - h[j + 2] >> 31);
+                                                    ~~^~~~~~~~~~ ~~
+c_files/pr84112.c:19:48: note: place parentheses around the '-' expression to silence this warning
+          i[j + 2] = n & m - h[j + 2] >> 31 | s & ~(m - h[j + 2] >> 31);
+                                                      ^
+                                                    (           )
+c_files/pr84112.c:19:17: warning: '&' within '|' [-Wbitwise-op-parentheses]
+          i[j + 2] = n & m - h[j + 2] >> 31 | s & ~(m - h[j + 2] >> 31);
+                     ~~^~~~~~~~~~~~~~~~~~~~ ~
+c_files/pr84112.c:19:17: note: place parentheses around the '&' expression to silence this warning
+          i[j + 2] = n & m - h[j + 2] >> 31 | s & ~(m - h[j + 2] >> 31);
+                       ^
+                     (                     )
+c_files/pr84112.c:19:42: warning: '&' within '|' [-Wbitwise-op-parentheses]
+          i[j + 2] = n & m - h[j + 2] >> 31 | s & ~(m - h[j + 2] >> 31);
+                                            ~ ~~^~~~~~~~~~~~~~~~~~~~~~~
+c_files/pr84112.c:19:42: note: place parentheses around the '&' expression to silence this warning
+          i[j + 2] = n & m - h[j + 2] >> 31 | s & ~(m - h[j + 2] >> 31);
+                                                ^
+                                              (                        )
+c_files/pr84112.c:20:21: warning: operator '>>' has lower precedence than '-'; '-' will be evaluated first [-Wshift-op-parentheses]
+          i[j + 3] = n & k - h[j + 3] >> 31 | q & ~(k - h[j + 3] >> 31);
+                         ~~^~~~~~~~~~ ~~
+c_files/pr84112.c:20:21: note: place parentheses around the '-' expression to silence this warning
+          i[j + 3] = n & k - h[j + 3] >> 31 | q & ~(k - h[j + 3] >> 31);
+                           ^
+                         (           )
+c_files/pr84112.c:20:48: warning: operator '>>' has lower precedence than '-'; '-' will be evaluated first [-Wshift-op-parentheses]
+          i[j + 3] = n & k - h[j + 3] >> 31 | q & ~(k - h[j + 3] >> 31);
+                                                    ~~^~~~~~~~~~ ~~
+c_files/pr84112.c:20:48: note: place parentheses around the '-' expression to silence this warning
+          i[j + 3] = n & k - h[j + 3] >> 31 | q & ~(k - h[j + 3] >> 31);
+                                                      ^
+                                                    (           )
+c_files/pr84112.c:20:17: warning: '&' within '|' [-Wbitwise-op-parentheses]
+          i[j + 3] = n & k - h[j + 3] >> 31 | q & ~(k - h[j + 3] >> 31);
+                     ~~^~~~~~~~~~~~~~~~~~~~ ~
+c_files/pr84112.c:20:17: note: place parentheses around the '&' expression to silence this warning
+          i[j + 3] = n & k - h[j + 3] >> 31 | q & ~(k - h[j + 3] >> 31);
+                       ^
+                     (                     )
+c_files/pr84112.c:20:42: warning: '&' within '|' [-Wbitwise-op-parentheses]
+          i[j + 3] = n & k - h[j + 3] >> 31 | q & ~(k - h[j + 3] >> 31);
+                                            ~ ~~^~~~~~~~~~~~~~~~~~~~~~~
+c_files/pr84112.c:20:42: note: place parentheses around the '&' expression to silence this warning
+          i[j + 3] = n & k - h[j + 3] >> 31 | q & ~(k - h[j + 3] >> 31);
+                                                ^
+                                              (                        )
+c_files/pr84112.c:21:21: warning: operator '>>' has lower precedence than '-'; '-' will be evaluated first [-Wshift-op-parentheses]
+          i[j + 4] = n & l - h[j + 4] >> 31 | q & ~(l - h[j + 4] >> 31);
+                         ~~^~~~~~~~~~ ~~
+c_files/pr84112.c:21:21: note: place parentheses around the '-' expression to silence this warning
+          i[j + 4] = n & l - h[j + 4] >> 31 | q & ~(l - h[j + 4] >> 31);
+                           ^
+                         (           )
+c_files/pr84112.c:21:48: warning: operator '>>' has lower precedence than '-'; '-' will be evaluated first [-Wshift-op-parentheses]
+          i[j + 4] = n & l - h[j + 4] >> 31 | q & ~(l - h[j + 4] >> 31);
+                                                    ~~^~~~~~~~~~ ~~
+c_files/pr84112.c:21:48: note: place parentheses around the '-' expression to silence this warning
+          i[j + 4] = n & l - h[j + 4] >> 31 | q & ~(l - h[j + 4] >> 31);
+                                                      ^
+                                                    (           )
+c_files/pr84112.c:21:17: warning: '&' within '|' [-Wbitwise-op-parentheses]
+          i[j + 4] = n & l - h[j + 4] >> 31 | q & ~(l - h[j + 4] >> 31);
+                     ~~^~~~~~~~~~~~~~~~~~~~ ~
+c_files/pr84112.c:21:17: note: place parentheses around the '&' expression to silence this warning
+          i[j + 4] = n & l - h[j + 4] >> 31 | q & ~(l - h[j + 4] >> 31);
+                       ^
+                     (                     )
+c_files/pr84112.c:21:42: warning: '&' within '|' [-Wbitwise-op-parentheses]
+          i[j + 4] = n & l - h[j + 4] >> 31 | q & ~(l - h[j + 4] >> 31);
+                                            ~ ~~^~~~~~~~~~~~~~~~~~~~~~~
+c_files/pr84112.c:21:42: note: place parentheses around the '&' expression to silence this warning
+          i[j + 4] = n & l - h[j + 4] >> 31 | q & ~(l - h[j + 4] >> 31);
+                                                ^
+                                              (                        )
+c_files/pr84112.c:22:21: warning: operator '>>' has lower precedence than '-'; '-' will be evaluated first [-Wshift-op-parentheses]
+          i[j + 5] = n & m - h[j + 5] >> 31 | s & ~(m - h[j + 5] >> 31);
+                         ~~^~~~~~~~~~ ~~
+c_files/pr84112.c:22:21: note: place parentheses around the '-' expression to silence this warning
+          i[j + 5] = n & m - h[j + 5] >> 31 | s & ~(m - h[j + 5] >> 31);
+                           ^
+                         (           )
+c_files/pr84112.c:22:48: warning: operator '>>' has lower precedence than '-'; '-' will be evaluated first [-Wshift-op-parentheses]
+          i[j + 5] = n & m - h[j + 5] >> 31 | s & ~(m - h[j + 5] >> 31);
+                                                    ~~^~~~~~~~~~ ~~
+c_files/pr84112.c:22:48: note: place parentheses around the '-' expression to silence this warning
+          i[j + 5] = n & m - h[j + 5] >> 31 | s & ~(m - h[j + 5] >> 31);
+                                                      ^
+                                                    (           )
+c_files/pr84112.c:22:17: warning: '&' within '|' [-Wbitwise-op-parentheses]
+          i[j + 5] = n & m - h[j + 5] >> 31 | s & ~(m - h[j + 5] >> 31);
+                     ~~^~~~~~~~~~~~~~~~~~~~ ~
+c_files/pr84112.c:22:17: note: place parentheses around the '&' expression to silence this warning
+          i[j + 5] = n & m - h[j + 5] >> 31 | s & ~(m - h[j + 5] >> 31);
+                       ^
+                     (                     )
+c_files/pr84112.c:22:42: warning: '&' within '|' [-Wbitwise-op-parentheses]
+          i[j + 5] = n & m - h[j + 5] >> 31 | s & ~(m - h[j + 5] >> 31);
+                                            ~ ~~^~~~~~~~~~~~~~~~~~~~~~~
+c_files/pr84112.c:22:42: note: place parentheses around the '&' expression to silence this warning
+          i[j + 5] = n & m - h[j + 5] >> 31 | s & ~(m - h[j + 5] >> 31);
+                                                ^
+                                              (                        )
+c_files/pr84112.c:23:21: warning: operator '>>' has lower precedence than '-'; '-' will be evaluated first [-Wshift-op-parentheses]
+          i[j + 6] = n & k - h[j + 6] >> 31 | q & ~(k - h[j + 6] >> 31);
+                         ~~^~~~~~~~~~ ~~
+c_files/pr84112.c:23:21: note: place parentheses around the '-' expression to silence this warning
+          i[j + 6] = n & k - h[j + 6] >> 31 | q & ~(k - h[j + 6] >> 31);
+                           ^
+                         (           )
+c_files/pr84112.c:23:48: warning: operator '>>' has lower precedence than '-'; '-' will be evaluated first [-Wshift-op-parentheses]
+          i[j + 6] = n & k - h[j + 6] >> 31 | q & ~(k - h[j + 6] >> 31);
+                                                    ~~^~~~~~~~~~ ~~
+c_files/pr84112.c:23:48: note: place parentheses around the '-' expression to silence this warning
+          i[j + 6] = n & k - h[j + 6] >> 31 | q & ~(k - h[j + 6] >> 31);
+                                                      ^
+                                                    (           )
+c_files/pr84112.c:23:17: warning: '&' within '|' [-Wbitwise-op-parentheses]
+          i[j + 6] = n & k - h[j + 6] >> 31 | q & ~(k - h[j + 6] >> 31);
+                     ~~^~~~~~~~~~~~~~~~~~~~ ~
+c_files/pr84112.c:23:17: note: place parentheses around the '&' expression to silence this warning
+          i[j + 6] = n & k - h[j + 6] >> 31 | q & ~(k - h[j + 6] >> 31);
+                       ^
+                     (                     )
+c_files/pr84112.c:23:42: warning: '&' within '|' [-Wbitwise-op-parentheses]
+          i[j + 6] = n & k - h[j + 6] >> 31 | q & ~(k - h[j + 6] >> 31);
+                                            ~ ~~^~~~~~~~~~~~~~~~~~~~~~~
+c_files/pr84112.c:23:42: note: place parentheses around the '&' expression to silence this warning
+          i[j + 6] = n & k - h[j + 6] >> 31 | q & ~(k - h[j + 6] >> 31);
+                                                ^
+                                              (                        )
+c_files/pr84112.c:24:21: warning: operator '>>' has lower precedence than '-'; '-' will be evaluated first [-Wshift-op-parentheses]
+          i[j + 7] = n & l - h[j + 7] >> 31 | q & ~(l - h[j + 7] >> 31);
+                         ~~^~~~~~~~~~ ~~
+c_files/pr84112.c:24:21: note: place parentheses around the '-' expression to silence this warning
+          i[j + 7] = n & l - h[j + 7] >> 31 | q & ~(l - h[j + 7] >> 31);
+                           ^
+                         (           )
+c_files/pr84112.c:24:48: warning: operator '>>' has lower precedence than '-'; '-' will be evaluated first [-Wshift-op-parentheses]
+          i[j + 7] = n & l - h[j + 7] >> 31 | q & ~(l - h[j + 7] >> 31);
+                                                    ~~^~~~~~~~~~ ~~
+c_files/pr84112.c:24:48: note: place parentheses around the '-' expression to silence this warning
+          i[j + 7] = n & l - h[j + 7] >> 31 | q & ~(l - h[j + 7] >> 31);
+                                                      ^
+                                                    (           )
+c_files/pr84112.c:24:17: warning: '&' within '|' [-Wbitwise-op-parentheses]
+          i[j + 7] = n & l - h[j + 7] >> 31 | q & ~(l - h[j + 7] >> 31);
+                     ~~^~~~~~~~~~~~~~~~~~~~ ~
+c_files/pr84112.c:24:17: note: place parentheses around the '&' expression to silence this warning
+          i[j + 7] = n & l - h[j + 7] >> 31 | q & ~(l - h[j + 7] >> 31);
+                       ^
+                     (                     )
+c_files/pr84112.c:24:42: warning: '&' within '|' [-Wbitwise-op-parentheses]
+          i[j + 7] = n & l - h[j + 7] >> 31 | q & ~(l - h[j + 7] >> 31);
+                                            ~ ~~^~~~~~~~~~~~~~~~~~~~~~~
+c_files/pr84112.c:24:42: note: place parentheses around the '&' expression to silence this warning
+          i[j + 7] = n & l - h[j + 7] >> 31 | q & ~(l - h[j + 7] >> 31);
+                                                ^
+                                              (                        )
+c_files/pr84112.c:25:21: warning: operator '>>' has lower precedence than '-'; '-' will be evaluated first [-Wshift-op-parentheses]
+          i[j + 8] = n & m - h[j + 8] >> 31 | s & ~(m - h[j + 8] >> 31);
+                         ~~^~~~~~~~~~ ~~
+c_files/pr84112.c:25:21: note: place parentheses around the '-' expression to silence this warning
+          i[j + 8] = n & m - h[j + 8] >> 31 | s & ~(m - h[j + 8] >> 31);
+                           ^
+                         (           )
+c_files/pr84112.c:25:48: warning: operator '>>' has lower precedence than '-'; '-' will be evaluated first [-Wshift-op-parentheses]
+          i[j + 8] = n & m - h[j + 8] >> 31 | s & ~(m - h[j + 8] >> 31);
+                                                    ~~^~~~~~~~~~ ~~
+c_files/pr84112.c:25:48: note: place parentheses around the '-' expression to silence this warning
+          i[j + 8] = n & m - h[j + 8] >> 31 | s & ~(m - h[j + 8] >> 31);
+                                                      ^
+                                                    (           )
+c_files/pr84112.c:25:17: warning: '&' within '|' [-Wbitwise-op-parentheses]
+          i[j + 8] = n & m - h[j + 8] >> 31 | s & ~(m - h[j + 8] >> 31);
+                     ~~^~~~~~~~~~~~~~~~~~~~ ~
+c_files/pr84112.c:25:17: note: place parentheses around the '&' expression to silence this warning
+          i[j + 8] = n & m - h[j + 8] >> 31 | s & ~(m - h[j + 8] >> 31);
+                       ^
+                     (                     )
+c_files/pr84112.c:25:42: warning: '&' within '|' [-Wbitwise-op-parentheses]
+          i[j + 8] = n & m - h[j + 8] >> 31 | s & ~(m - h[j + 8] >> 31);
+                                            ~ ~~^~~~~~~~~~~~~~~~~~~~~~~
+c_files/pr84112.c:25:42: note: place parentheses around the '&' expression to silence this warning
+          i[j + 8] = n & m - h[j + 8] >> 31 | s & ~(m - h[j + 8] >> 31);
+                                                ^
+                                              (                        )
+c_files/pr84112.c:26:21: warning: operator '>>' has lower precedence than '-'; '-' will be evaluated first [-Wshift-op-parentheses]
+          i[j + 9] = n & k - h[j + 9] >> 31 | q & ~(k - h[j + 9] >> 31);
+                         ~~^~~~~~~~~~ ~~
+c_files/pr84112.c:26:21: note: place parentheses around the '-' expression to silence this warning
+          i[j + 9] = n & k - h[j + 9] >> 31 | q & ~(k - h[j + 9] >> 31);
+                           ^
+                         (           )
+c_files/pr84112.c:26:48: warning: operator '>>' has lower precedence than '-'; '-' will be evaluated first [-Wshift-op-parentheses]
+          i[j + 9] = n & k - h[j + 9] >> 31 | q & ~(k - h[j + 9] >> 31);
+                                                    ~~^~~~~~~~~~ ~~
+c_files/pr84112.c:26:48: note: place parentheses around the '-' expression to silence this warning
+          i[j + 9] = n & k - h[j + 9] >> 31 | q & ~(k - h[j + 9] >> 31);
+                                                      ^
+                                                    (           )
+c_files/pr84112.c:26:17: warning: '&' within '|' [-Wbitwise-op-parentheses]
+          i[j + 9] = n & k - h[j + 9] >> 31 | q & ~(k - h[j + 9] >> 31);
+                     ~~^~~~~~~~~~~~~~~~~~~~ ~
+c_files/pr84112.c:26:17: note: place parentheses around the '&' expression to silence this warning
+          i[j + 9] = n & k - h[j + 9] >> 31 | q & ~(k - h[j + 9] >> 31);
+                       ^
+                     (                     )
+c_files/pr84112.c:26:42: warning: '&' within '|' [-Wbitwise-op-parentheses]
+          i[j + 9] = n & k - h[j + 9] >> 31 | q & ~(k - h[j + 9] >> 31);
+                                            ~ ~~^~~~~~~~~~~~~~~~~~~~~~~
+c_files/pr84112.c:26:42: note: place parentheses around the '&' expression to silence this warning
+          i[j + 9] = n & k - h[j + 9] >> 31 | q & ~(k - h[j + 9] >> 31);
+                                                ^
+                                              (                        )
+c_files/pr84112.c:27:22: warning: operator '>>' has lower precedence than '-'; '-' will be evaluated first [-Wshift-op-parentheses]
+          i[j + 10] = n & l - h[j + 10] >> 31 | q & ~(l - h[j + 10] >> 31);
+                          ~~^~~~~~~~~~~ ~~
+c_files/pr84112.c:27:22: note: place parentheses around the '-' expression to silence this warning
+          i[j + 10] = n & l - h[j + 10] >> 31 | q & ~(l - h[j + 10] >> 31);
+                            ^
+                          (            )
+c_files/pr84112.c:27:50: warning: operator '>>' has lower precedence than '-'; '-' will be evaluated first [-Wshift-op-parentheses]
+          i[j + 10] = n & l - h[j + 10] >> 31 | q & ~(l - h[j + 10] >> 31);
+                                                      ~~^~~~~~~~~~~ ~~
+c_files/pr84112.c:27:50: note: place parentheses around the '-' expression to silence this warning
+          i[j + 10] = n & l - h[j + 10] >> 31 | q & ~(l - h[j + 10] >> 31);
+                                                        ^
+                                                      (            )
+c_files/pr84112.c:27:18: warning: '&' within '|' [-Wbitwise-op-parentheses]
+          i[j + 10] = n & l - h[j + 10] >> 31 | q & ~(l - h[j + 10] >> 31);
+                      ~~^~~~~~~~~~~~~~~~~~~~~ ~
+c_files/pr84112.c:27:18: note: place parentheses around the '&' expression to silence this warning
+          i[j + 10] = n & l - h[j + 10] >> 31 | q & ~(l - h[j + 10] >> 31);
+                        ^
+                      (                      )
+c_files/pr84112.c:27:44: warning: '&' within '|' [-Wbitwise-op-parentheses]
+          i[j + 10] = n & l - h[j + 10] >> 31 | q & ~(l - h[j + 10] >> 31);
+                                              ~ ~~^~~~~~~~~~~~~~~~~~~~~~~~
+c_files/pr84112.c:27:44: note: place parentheses around the '&' expression to silence this warning
+          i[j + 10] = n & l - h[j + 10] >> 31 | q & ~(l - h[j + 10] >> 31);
+                                                  ^
+                                                (                         )
+c_files/pr84112.c:28:22: warning: operator '>>' has lower precedence than '-'; '-' will be evaluated first [-Wshift-op-parentheses]
+          i[j + 11] = n & m - h[j + 11] >> 31 | s & ~(m - h[j + 11] >> 31);
+                          ~~^~~~~~~~~~~ ~~
+c_files/pr84112.c:28:22: note: place parentheses around the '-' expression to silence this warning
+          i[j + 11] = n & m - h[j + 11] >> 31 | s & ~(m - h[j + 11] >> 31);
+                            ^
+                          (            )
+c_files/pr84112.c:28:50: warning: operator '>>' has lower precedence than '-'; '-' will be evaluated first [-Wshift-op-parentheses]
+          i[j + 11] = n & m - h[j + 11] >> 31 | s & ~(m - h[j + 11] >> 31);
+                                                      ~~^~~~~~~~~~~ ~~
+c_files/pr84112.c:28:50: note: place parentheses around the '-' expression to silence this warning
+          i[j + 11] = n & m - h[j + 11] >> 31 | s & ~(m - h[j + 11] >> 31);
+                                                        ^
+                                                      (            )
+c_files/pr84112.c:28:18: warning: '&' within '|' [-Wbitwise-op-parentheses]
+          i[j + 11] = n & m - h[j + 11] >> 31 | s & ~(m - h[j + 11] >> 31);
+                      ~~^~~~~~~~~~~~~~~~~~~~~ ~
+c_files/pr84112.c:28:18: note: place parentheses around the '&' expression to silence this warning
+          i[j + 11] = n & m - h[j + 11] >> 31 | s & ~(m - h[j + 11] >> 31);
+                        ^
+                      (                      )
+c_files/pr84112.c:28:44: warning: '&' within '|' [-Wbitwise-op-parentheses]
+          i[j + 11] = n & m - h[j + 11] >> 31 | s & ~(m - h[j + 11] >> 31);
+                                              ~ ~~^~~~~~~~~~~~~~~~~~~~~~~~
+c_files/pr84112.c:28:44: note: place parentheses around the '&' expression to silence this warning
+          i[j + 11] = n & m - h[j + 11] >> 31 | s & ~(m - h[j + 11] >> 31);
+                                                  ^
+                                                (                         )
+48 warnings generated.
+TranslationUnitDecl 0x7fd64a8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd64a826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd64a826740 '__int128'
+|-TypedefDecl 0x7fd64a826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd64a826760 'unsigned __int128'
+|-TypedefDecl 0x7fd64a826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd64a826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd64a826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd64a826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd64a826dc0 'char *'
+|   `-BuiltinType 0x7fd64a826560 'char'
+|-TypedefDecl 0x7fd64a8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd64a827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd64a826ee0 'struct __va_list_tag'
+|     `-Record 0x7fd64a826e58 '__va_list_tag'
+|-VarDecl 0x7fd64a827138 <c_files/pr84112.c:4:1, col:7> col:7 used b 'char *'
+|-VarDecl 0x7fd64b025a00 <line:5:1, col:5> col:5 used c 'int'
+|-VarDecl 0x7fd64b025a78 <col:1, col:8> col:8 used d 'int'
+|-VarDecl 0x7fd64b025af0 <col:1, col:11> col:11 used e 'int'
+|-VarDecl 0x7fd64b025b68 <col:1, col:14> col:14 used f 'int'
+`-FunctionDecl 0x7fd64b025f70 <line:7:1, line:33:1> line:8:1 foo 'void (char *, int, int, int, int, int)'
+  |-ParmVarDecl 0x7fd64b025c08 <col:6, col:12> col:12 used h 'char *'
+  |-ParmVarDecl 0x7fd64b025c80 <col:15, col:19> col:19 used k 'int'
+  |-ParmVarDecl 0x7fd64b025cf8 <col:22, col:26> col:26 used l 'int'
+  |-ParmVarDecl 0x7fd64b025d70 <col:29, col:33> col:33 used m 'int'
+  |-ParmVarDecl 0x7fd64b025de8 <col:36, col:40> col:40 used j 'int'
+  |-ParmVarDecl 0x7fd64b025e60 <col:43, col:47> col:47 used q 'int'
+  `-CompoundStmt 0x7fd64b802398 <line:9:1, line:33:1>
+    |-DeclStmt 0x7fd64b0260f0 <line:10:3, col:14>
+    | `-VarDecl 0x7fd64b026050 <col:3, col:13> col:9 used i 'char *' cinit
+    |   `-ImplicitCastExpr 0x7fd64b0260d8 <col:13> 'char *' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fd64b0260b0 <col:13> 'char *' lvalue Var 0x7fd64a827138 'b' 'char *'
+    |-DeclStmt 0x7fd64b0261c0 <line:11:3, col:12>
+    | `-VarDecl 0x7fd64b026120 <col:3, col:11> col:7 used n 'int' cinit
+    |   `-ImplicitCastExpr 0x7fd64b0261a8 <col:11> 'int' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fd64b026180 <col:11> 'int' lvalue Var 0x7fd64b025a78 'd' 'int'
+    |-DeclStmt 0x7fd64b026290 <line:12:3, col:12>
+    | `-VarDecl 0x7fd64b0261f0 <col:3, col:11> col:7 used s 'int' cinit
+    |   `-ImplicitCastExpr 0x7fd64b026278 <col:11> 'int' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fd64b026250 <col:11> 'int' lvalue Var 0x7fd64b025af0 'e' 'int'
+    `-WhileStmt 0x7fd64b802378 <line:13:3, line:32:5>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7fd64b0262d0 <line:13:10> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7fd64b0262a8 <col:10> 'int' lvalue Var 0x7fd64b025a00 'c' 'int'
+      `-CompoundStmt 0x7fd64b802350 <line:14:5, line:32:5>
+        |-ForStmt 0x7fd64b802240 <line:15:7, line:29:2>
+        | |-<<<NULL>>>
+        | |-<<<NULL>>>
+        | |-BinaryOperator 0x7fd64b026348 <line:15:14, col:19> 'int' '<='
+        | | |-ImplicitCastExpr 0x7fd64b026330 <col:14> 'int' <LValueToRValue>
+        | | | `-DeclRefExpr 0x7fd64b0262e8 <col:14> 'int' lvalue ParmVar 0x7fd64b025de8 'j' 'int'
+        | | `-IntegerLiteral 0x7fd64b026310 <col:19> 'int' 0
+        | |-CompoundAssignOperator 0x7fd64b0263b8 <col:22, col:27> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+        | | |-DeclRefExpr 0x7fd64b026370 <col:22> 'int' lvalue ParmVar 0x7fd64b025de8 'j' 'int'
+        | | `-IntegerLiteral 0x7fd64b026398 <col:27> 'int' 12
+        | `-CompoundStmt 0x7fd64b8021c8 <line:16:2, line:29:2>
+        |   |-BinaryOperator 0x7fd64b0268f8 <line:17:4, col:52> 'char' '='
+        |   | |-ArraySubscriptExpr 0x7fd64b026470 <col:4, col:7> 'char' lvalue
+        |   | | |-ImplicitCastExpr 0x7fd64b026440 <col:4> 'char *' <LValueToRValue>
+        |   | | | `-DeclRefExpr 0x7fd64b0263f0 <col:4> 'char *' lvalue Var 0x7fd64b026050 'i' 'char *'
+        |   | | `-ImplicitCastExpr 0x7fd64b026458 <col:6> 'int' <LValueToRValue>
+        |   | |   `-DeclRefExpr 0x7fd64b026418 <col:6> 'int' lvalue ParmVar 0x7fd64b025de8 'j' 'int'
+        |   | `-ImplicitCastExpr 0x7fd64b0268e0 <col:11, col:52> 'char' <IntegralCast>
+        |   |   `-BinaryOperator 0x7fd64b0268b8 <col:11, col:52> 'int' '|'
+        |   |     |-BinaryOperator 0x7fd64b026660 <col:11, col:27> 'int' '&'
+        |   |     | |-ImplicitCastExpr 0x7fd64b026648 <col:11> 'int' <LValueToRValue>
+        |   |     | | `-DeclRefExpr 0x7fd64b026498 <col:11> 'int' lvalue Var 0x7fd64b026120 'n' 'int'
+        |   |     | `-BinaryOperator 0x7fd64b026620 <col:15, col:27> 'int' '>>'
+        |   |     |   |-BinaryOperator 0x7fd64b0265d8 <col:15, col:22> 'int' '-'
+        |   |     |   | |-ImplicitCastExpr 0x7fd64b026590 <col:15> 'int' <LValueToRValue>
+        |   |     |   | | `-DeclRefExpr 0x7fd64b0264c0 <col:15> 'int' lvalue ParmVar 0x7fd64b025c80 'k' 'int'
+        |   |     |   | `-ImplicitCastExpr 0x7fd64b0265c0 <col:19, col:22> 'int' <IntegralCast>
+        |   |     |   |   `-ImplicitCastExpr 0x7fd64b0265a8 <col:19, col:22> 'char' <LValueToRValue>
+        |   |     |   |     `-ArraySubscriptExpr 0x7fd64b026568 <col:19, col:22> 'char' lvalue
+        |   |     |   |       |-ImplicitCastExpr 0x7fd64b026538 <col:19> 'char *' <LValueToRValue>
+        |   |     |   |       | `-DeclRefExpr 0x7fd64b0264e8 <col:19> 'char *' lvalue ParmVar 0x7fd64b025c08 'h' 'char *'
+        |   |     |   |       `-ImplicitCastExpr 0x7fd64b026550 <col:21> 'int' <LValueToRValue>
+        |   |     |   |         `-DeclRefExpr 0x7fd64b026510 <col:21> 'int' lvalue ParmVar 0x7fd64b025de8 'j' 'int'
+        |   |     |   `-IntegerLiteral 0x7fd64b026600 <col:27> 'int' 31
+        |   |     `-BinaryOperator 0x7fd64b026890 <col:32, col:52> 'int' '&'
+        |   |       |-ImplicitCastExpr 0x7fd64b026878 <col:32> 'int' <LValueToRValue>
+        |   |       | `-DeclRefExpr 0x7fd64b026688 <col:32> 'int' lvalue ParmVar 0x7fd64b025e60 'q' 'int'
+        |   |       `-UnaryOperator 0x7fd64b026858 <col:36, col:52> 'int' prefix '~'
+        |   |         `-ParenExpr 0x7fd64b026838 <col:37, col:52> 'int'
+        |   |           `-BinaryOperator 0x7fd64b026810 <col:38, col:50> 'int' '>>'
+        |   |             |-BinaryOperator 0x7fd64b0267c8 <col:38, col:45> 'int' '-'
+        |   |             | |-ImplicitCastExpr 0x7fd64b026780 <col:38> 'int' <LValueToRValue>
+        |   |             | | `-DeclRefExpr 0x7fd64b0266b0 <col:38> 'int' lvalue ParmVar 0x7fd64b025c80 'k' 'int'
+        |   |             | `-ImplicitCastExpr 0x7fd64b0267b0 <col:42, col:45> 'int' <IntegralCast>
+        |   |             |   `-ImplicitCastExpr 0x7fd64b026798 <col:42, col:45> 'char' <LValueToRValue>
+        |   |             |     `-ArraySubscriptExpr 0x7fd64b026758 <col:42, col:45> 'char' lvalue
+        |   |             |       |-ImplicitCastExpr 0x7fd64b026728 <col:42> 'char *' <LValueToRValue>
+        |   |             |       | `-DeclRefExpr 0x7fd64b0266d8 <col:42> 'char *' lvalue ParmVar 0x7fd64b025c08 'h' 'char *'
+        |   |             |       `-ImplicitCastExpr 0x7fd64b026740 <col:44> 'int' <LValueToRValue>
+        |   |             |         `-DeclRefExpr 0x7fd64b026700 <col:44> 'int' lvalue ParmVar 0x7fd64b025de8 'j' 'int'
+        |   |             `-IntegerLiteral 0x7fd64b0267f0 <col:50> 'int' 31
+        |   |-BinaryOperator 0x7fd64b026f18 <line:18:4, col:64> 'char' '='
+        |   | |-ArraySubscriptExpr 0x7fd64b026a00 <col:4, col:11> 'char' lvalue
+        |   | | |-ImplicitCastExpr 0x7fd64b0269d0 <col:4> 'char *' <LValueToRValue>
+        |   | | | `-DeclRefExpr 0x7fd64b026920 <col:4> 'char *' lvalue Var 0x7fd64b026050 'i' 'char *'
+        |   | | `-BinaryOperator 0x7fd64b0269a8 <col:6, col:10> 'int' '+'
+        |   | |   |-ImplicitCastExpr 0x7fd64b026990 <col:6> 'int' <LValueToRValue>
+        |   | |   | `-DeclRefExpr 0x7fd64b026948 <col:6> 'int' lvalue ParmVar 0x7fd64b025de8 'j' 'int'
+        |   | |   `-IntegerLiteral 0x7fd64b026970 <col:10> 'int' 1
+        |   | `-ImplicitCastExpr 0x7fd64b026f00 <col:15, col:64> 'char' <IntegralCast>
+        |   |   `-BinaryOperator 0x7fd64b026ed8 <col:15, col:64> 'int' '|'
+        |   |     |-BinaryOperator 0x7fd64b026c38 <col:15, col:35> 'int' '&'
+        |   |     | |-ImplicitCastExpr 0x7fd64b026c20 <col:15> 'int' <LValueToRValue>
+        |   |     | | `-DeclRefExpr 0x7fd64b026a28 <col:15> 'int' lvalue Var 0x7fd64b026120 'n' 'int'
+        |   |     | `-BinaryOperator 0x7fd64b026bf8 <col:19, col:35> 'int' '>>'
+        |   |     |   |-BinaryOperator 0x7fd64b026bb0 <col:19, col:30> 'int' '-'
+        |   |     |   | |-ImplicitCastExpr 0x7fd64b026b68 <col:19> 'int' <LValueToRValue>
+        |   |     |   | | `-DeclRefExpr 0x7fd64b026a50 <col:19> 'int' lvalue ParmVar 0x7fd64b025cf8 'l' 'int'
+        |   |     |   | `-ImplicitCastExpr 0x7fd64b026b98 <col:23, col:30> 'int' <IntegralCast>
+        |   |     |   |   `-ImplicitCastExpr 0x7fd64b026b80 <col:23, col:30> 'char' <LValueToRValue>
+        |   |     |   |     `-ArraySubscriptExpr 0x7fd64b026b40 <col:23, col:30> 'char' lvalue
+        |   |     |   |       |-ImplicitCastExpr 0x7fd64b026b28 <col:23> 'char *' <LValueToRValue>
+        |   |     |   |       | `-DeclRefExpr 0x7fd64b026a78 <col:23> 'char *' lvalue ParmVar 0x7fd64b025c08 'h' 'char *'
+        |   |     |   |       `-BinaryOperator 0x7fd64b026b00 <col:25, col:29> 'int' '+'
+        |   |     |   |         |-ImplicitCastExpr 0x7fd64b026ae8 <col:25> 'int' <LValueToRValue>
+        |   |     |   |         | `-DeclRefExpr 0x7fd64b026aa0 <col:25> 'int' lvalue ParmVar 0x7fd64b025de8 'j' 'int'
+        |   |     |   |         `-IntegerLiteral 0x7fd64b026ac8 <col:29> 'int' 1
+        |   |     |   `-IntegerLiteral 0x7fd64b026bd8 <col:35> 'int' 31
+        |   |     `-BinaryOperator 0x7fd64b026eb0 <col:40, col:64> 'int' '&'
+        |   |       |-ImplicitCastExpr 0x7fd64b026e98 <col:40> 'int' <LValueToRValue>
+        |   |       | `-DeclRefExpr 0x7fd64b026c60 <col:40> 'int' lvalue ParmVar 0x7fd64b025e60 'q' 'int'
+        |   |       `-UnaryOperator 0x7fd64b026e78 <col:44, col:64> 'int' prefix '~'
+        |   |         `-ParenExpr 0x7fd64b026e58 <col:45, col:64> 'int'
+        |   |           `-BinaryOperator 0x7fd64b026e30 <col:46, col:62> 'int' '>>'
+        |   |             |-BinaryOperator 0x7fd64b026de8 <col:46, col:57> 'int' '-'
+        |   |             | |-ImplicitCastExpr 0x7fd64b026da0 <col:46> 'int' <LValueToRValue>
+        |   |             | | `-DeclRefExpr 0x7fd64b026c88 <col:46> 'int' lvalue ParmVar 0x7fd64b025cf8 'l' 'int'
+        |   |             | `-ImplicitCastExpr 0x7fd64b026dd0 <col:50, col:57> 'int' <IntegralCast>
+        |   |             |   `-ImplicitCastExpr 0x7fd64b026db8 <col:50, col:57> 'char' <LValueToRValue>
+        |   |             |     `-ArraySubscriptExpr 0x7fd64b026d78 <col:50, col:57> 'char' lvalue
+        |   |             |       |-ImplicitCastExpr 0x7fd64b026d60 <col:50> 'char *' <LValueToRValue>
+        |   |             |       | `-DeclRefExpr 0x7fd64b026cb0 <col:50> 'char *' lvalue ParmVar 0x7fd64b025c08 'h' 'char *'
+        |   |             |       `-BinaryOperator 0x7fd64b026d38 <col:52, col:56> 'int' '+'
+        |   |             |         |-ImplicitCastExpr 0x7fd64b026d20 <col:52> 'int' <LValueToRValue>
+        |   |             |         | `-DeclRefExpr 0x7fd64b026cd8 <col:52> 'int' lvalue ParmVar 0x7fd64b025de8 'j' 'int'
+        |   |             |         `-IntegerLiteral 0x7fd64b026d00 <col:56> 'int' 1
+        |   |             `-IntegerLiteral 0x7fd64b026e10 <col:62> 'int' 31
+        |   |-BinaryOperator 0x7fd64b027520 <line:19:4, col:64> 'char' '='
+        |   | |-ArraySubscriptExpr 0x7fd64b027008 <col:4, col:11> 'char' lvalue
+        |   | | |-ImplicitCastExpr 0x7fd64b026ff0 <col:4> 'char *' <LValueToRValue>
+        |   | | | `-DeclRefExpr 0x7fd64b026f40 <col:4> 'char *' lvalue Var 0x7fd64b026050 'i' 'char *'
+        |   | | `-BinaryOperator 0x7fd64b026fc8 <col:6, col:10> 'int' '+'
+        |   | |   |-ImplicitCastExpr 0x7fd64b026fb0 <col:6> 'int' <LValueToRValue>
+        |   | |   | `-DeclRefExpr 0x7fd64b026f68 <col:6> 'int' lvalue ParmVar 0x7fd64b025de8 'j' 'int'
+        |   | |   `-IntegerLiteral 0x7fd64b026f90 <col:10> 'int' 2
+        |   | `-ImplicitCastExpr 0x7fd64b027508 <col:15, col:64> 'char' <IntegralCast>
+        |   |   `-BinaryOperator 0x7fd64b0274e0 <col:15, col:64> 'int' '|'
+        |   |     |-BinaryOperator 0x7fd64b027240 <col:15, col:35> 'int' '&'
+        |   |     | |-ImplicitCastExpr 0x7fd64b027228 <col:15> 'int' <LValueToRValue>
+        |   |     | | `-DeclRefExpr 0x7fd64b027030 <col:15> 'int' lvalue Var 0x7fd64b026120 'n' 'int'
+        |   |     | `-BinaryOperator 0x7fd64b027200 <col:19, col:35> 'int' '>>'
+        |   |     |   |-BinaryOperator 0x7fd64b0271b8 <col:19, col:30> 'int' '-'
+        |   |     |   | |-ImplicitCastExpr 0x7fd64b027170 <col:19> 'int' <LValueToRValue>
+        |   |     |   | | `-DeclRefExpr 0x7fd64b027058 <col:19> 'int' lvalue ParmVar 0x7fd64b025d70 'm' 'int'
+        |   |     |   | `-ImplicitCastExpr 0x7fd64b0271a0 <col:23, col:30> 'int' <IntegralCast>
+        |   |     |   |   `-ImplicitCastExpr 0x7fd64b027188 <col:23, col:30> 'char' <LValueToRValue>
+        |   |     |   |     `-ArraySubscriptExpr 0x7fd64b027148 <col:23, col:30> 'char' lvalue
+        |   |     |   |       |-ImplicitCastExpr 0x7fd64b027130 <col:23> 'char *' <LValueToRValue>
+        |   |     |   |       | `-DeclRefExpr 0x7fd64b027080 <col:23> 'char *' lvalue ParmVar 0x7fd64b025c08 'h' 'char *'
+        |   |     |   |       `-BinaryOperator 0x7fd64b027108 <col:25, col:29> 'int' '+'
+        |   |     |   |         |-ImplicitCastExpr 0x7fd64b0270f0 <col:25> 'int' <LValueToRValue>
+        |   |     |   |         | `-DeclRefExpr 0x7fd64b0270a8 <col:25> 'int' lvalue ParmVar 0x7fd64b025de8 'j' 'int'
+        |   |     |   |         `-IntegerLiteral 0x7fd64b0270d0 <col:29> 'int' 2
+        |   |     |   `-IntegerLiteral 0x7fd64b0271e0 <col:35> 'int' 31
+        |   |     `-BinaryOperator 0x7fd64b0274b8 <col:40, col:64> 'int' '&'
+        |   |       |-ImplicitCastExpr 0x7fd64b0274a0 <col:40> 'int' <LValueToRValue>
+        |   |       | `-DeclRefExpr 0x7fd64b027268 <col:40> 'int' lvalue Var 0x7fd64b0261f0 's' 'int'
+        |   |       `-UnaryOperator 0x7fd64b027480 <col:44, col:64> 'int' prefix '~'
+        |   |         `-ParenExpr 0x7fd64b027460 <col:45, col:64> 'int'
+        |   |           `-BinaryOperator 0x7fd64b027438 <col:46, col:62> 'int' '>>'
+        |   |             |-BinaryOperator 0x7fd64b0273f0 <col:46, col:57> 'int' '-'
+        |   |             | |-ImplicitCastExpr 0x7fd64b0273a8 <col:46> 'int' <LValueToRValue>
+        |   |             | | `-DeclRefExpr 0x7fd64b027290 <col:46> 'int' lvalue ParmVar 0x7fd64b025d70 'm' 'int'
+        |   |             | `-ImplicitCastExpr 0x7fd64b0273d8 <col:50, col:57> 'int' <IntegralCast>
+        |   |             |   `-ImplicitCastExpr 0x7fd64b0273c0 <col:50, col:57> 'char' <LValueToRValue>
+        |   |             |     `-ArraySubscriptExpr 0x7fd64b027380 <col:50, col:57> 'char' lvalue
+        |   |             |       |-ImplicitCastExpr 0x7fd64b027368 <col:50> 'char *' <LValueToRValue>
+        |   |             |       | `-DeclRefExpr 0x7fd64b0272b8 <col:50> 'char *' lvalue ParmVar 0x7fd64b025c08 'h' 'char *'
+        |   |             |       `-BinaryOperator 0x7fd64b027340 <col:52, col:56> 'int' '+'
+        |   |             |         |-ImplicitCastExpr 0x7fd64b027328 <col:52> 'int' <LValueToRValue>
+        |   |             |         | `-DeclRefExpr 0x7fd64b0272e0 <col:52> 'int' lvalue ParmVar 0x7fd64b025de8 'j' 'int'
+        |   |             |         `-IntegerLiteral 0x7fd64b027308 <col:56> 'int' 2
+        |   |             `-IntegerLiteral 0x7fd64b027418 <col:62> 'int' 31
+        |   |-BinaryOperator 0x7fd64b027b30 <line:20:4, col:64> 'char' '='
+        |   | |-ArraySubscriptExpr 0x7fd64b027610 <col:4, col:11> 'char' lvalue
+        |   | | |-ImplicitCastExpr 0x7fd64b0275f8 <col:4> 'char *' <LValueToRValue>
+        |   | | | `-DeclRefExpr 0x7fd64b027548 <col:4> 'char *' lvalue Var 0x7fd64b026050 'i' 'char *'
+        |   | | `-BinaryOperator 0x7fd64b0275d0 <col:6, col:10> 'int' '+'
+        |   | |   |-ImplicitCastExpr 0x7fd64b0275b8 <col:6> 'int' <LValueToRValue>
+        |   | |   | `-DeclRefExpr 0x7fd64b027570 <col:6> 'int' lvalue ParmVar 0x7fd64b025de8 'j' 'int'
+        |   | |   `-IntegerLiteral 0x7fd64b027598 <col:10> 'int' 3
+        |   | `-ImplicitCastExpr 0x7fd64b027b18 <col:15, col:64> 'char' <IntegralCast>
+        |   |   `-BinaryOperator 0x7fd64b027af0 <col:15, col:64> 'int' '|'
+        |   |     |-BinaryOperator 0x7fd64b027848 <col:15, col:35> 'int' '&'
+        |   |     | |-ImplicitCastExpr 0x7fd64b027830 <col:15> 'int' <LValueToRValue>
+        |   |     | | `-DeclRefExpr 0x7fd64b027638 <col:15> 'int' lvalue Var 0x7fd64b026120 'n' 'int'
+        |   |     | `-BinaryOperator 0x7fd64b027808 <col:19, col:35> 'int' '>>'
+        |   |     |   |-BinaryOperator 0x7fd64b0277c0 <col:19, col:30> 'int' '-'
+        |   |     |   | |-ImplicitCastExpr 0x7fd64b027778 <col:19> 'int' <LValueToRValue>
+        |   |     |   | | `-DeclRefExpr 0x7fd64b027660 <col:19> 'int' lvalue ParmVar 0x7fd64b025c80 'k' 'int'
+        |   |     |   | `-ImplicitCastExpr 0x7fd64b0277a8 <col:23, col:30> 'int' <IntegralCast>
+        |   |     |   |   `-ImplicitCastExpr 0x7fd64b027790 <col:23, col:30> 'char' <LValueToRValue>
+        |   |     |   |     `-ArraySubscriptExpr 0x7fd64b027750 <col:23, col:30> 'char' lvalue
+        |   |     |   |       |-ImplicitCastExpr 0x7fd64b027738 <col:23> 'char *' <LValueToRValue>
+        |   |     |   |       | `-DeclRefExpr 0x7fd64b027688 <col:23> 'char *' lvalue ParmVar 0x7fd64b025c08 'h' 'char *'
+        |   |     |   |       `-BinaryOperator 0x7fd64b027710 <col:25, col:29> 'int' '+'
+        |   |     |   |         |-ImplicitCastExpr 0x7fd64b0276f8 <col:25> 'int' <LValueToRValue>
+        |   |     |   |         | `-DeclRefExpr 0x7fd64b0276b0 <col:25> 'int' lvalue ParmVar 0x7fd64b025de8 'j' 'int'
+        |   |     |   |         `-IntegerLiteral 0x7fd64b0276d8 <col:29> 'int' 3
+        |   |     |   `-IntegerLiteral 0x7fd64b0277e8 <col:35> 'int' 31
+        |   |     `-BinaryOperator 0x7fd64b027ac8 <col:40, col:64> 'int' '&'
+        |   |       |-ImplicitCastExpr 0x7fd64b027ab0 <col:40> 'int' <LValueToRValue>
+        |   |       | `-DeclRefExpr 0x7fd64b027870 <col:40> 'int' lvalue ParmVar 0x7fd64b025e60 'q' 'int'
+        |   |       `-UnaryOperator 0x7fd64b027a90 <col:44, col:64> 'int' prefix '~'
+        |   |         `-ParenExpr 0x7fd64b027a70 <col:45, col:64> 'int'
+        |   |           `-BinaryOperator 0x7fd64b027a48 <col:46, col:62> 'int' '>>'
+        |   |             |-BinaryOperator 0x7fd64b027a00 <col:46, col:57> 'int' '-'
+        |   |             | |-ImplicitCastExpr 0x7fd64b0279b0 <col:46> 'int' <LValueToRValue>
+        |   |             | | `-DeclRefExpr 0x7fd64b027898 <col:46> 'int' lvalue ParmVar 0x7fd64b025c80 'k' 'int'
+        |   |             | `-ImplicitCastExpr 0x7fd64b0279e0 <col:50, col:57> 'int' <IntegralCast>
+        |   |             |   `-ImplicitCastExpr 0x7fd64b0279c8 <col:50, col:57> 'char' <LValueToRValue>
+        |   |             |     `-ArraySubscriptExpr 0x7fd64b027988 <col:50, col:57> 'char' lvalue
+        |   |             |       |-ImplicitCastExpr 0x7fd64b027970 <col:50> 'char *' <LValueToRValue>
+        |   |             |       | `-DeclRefExpr 0x7fd64b0278c0 <col:50> 'char *' lvalue ParmVar 0x7fd64b025c08 'h' 'char *'
+        |   |             |       `-BinaryOperator 0x7fd64b027948 <col:52, col:56> 'int' '+'
+        |   |             |         |-ImplicitCastExpr 0x7fd64b027930 <col:52> 'int' <LValueToRValue>
+        |   |             |         | `-DeclRefExpr 0x7fd64b0278e8 <col:52> 'int' lvalue ParmVar 0x7fd64b025de8 'j' 'int'
+        |   |             |         `-IntegerLiteral 0x7fd64b027910 <col:56> 'int' 3
+        |   |             `-IntegerLiteral 0x7fd64b027a28 <col:62> 'int' 31
+        |   |-BinaryOperator 0x7fd64b028138 <line:21:4, col:64> 'char' '='
+        |   | |-ArraySubscriptExpr 0x7fd64b027c20 <col:4, col:11> 'char' lvalue
+        |   | | |-ImplicitCastExpr 0x7fd64b027c08 <col:4> 'char *' <LValueToRValue>
+        |   | | | `-DeclRefExpr 0x7fd64b027b58 <col:4> 'char *' lvalue Var 0x7fd64b026050 'i' 'char *'
+        |   | | `-BinaryOperator 0x7fd64b027be0 <col:6, col:10> 'int' '+'
+        |   | |   |-ImplicitCastExpr 0x7fd64b027bc8 <col:6> 'int' <LValueToRValue>
+        |   | |   | `-DeclRefExpr 0x7fd64b027b80 <col:6> 'int' lvalue ParmVar 0x7fd64b025de8 'j' 'int'
+        |   | |   `-IntegerLiteral 0x7fd64b027ba8 <col:10> 'int' 4
+        |   | `-ImplicitCastExpr 0x7fd64b028120 <col:15, col:64> 'char' <IntegralCast>
+        |   |   `-BinaryOperator 0x7fd64b0280f8 <col:15, col:64> 'int' '|'
+        |   |     |-BinaryOperator 0x7fd64b027e58 <col:15, col:35> 'int' '&'
+        |   |     | |-ImplicitCastExpr 0x7fd64b027e40 <col:15> 'int' <LValueToRValue>
+        |   |     | | `-DeclRefExpr 0x7fd64b027c48 <col:15> 'int' lvalue Var 0x7fd64b026120 'n' 'int'
+        |   |     | `-BinaryOperator 0x7fd64b027e18 <col:19, col:35> 'int' '>>'
+        |   |     |   |-BinaryOperator 0x7fd64b027dd0 <col:19, col:30> 'int' '-'
+        |   |     |   | |-ImplicitCastExpr 0x7fd64b027d88 <col:19> 'int' <LValueToRValue>
+        |   |     |   | | `-DeclRefExpr 0x7fd64b027c70 <col:19> 'int' lvalue ParmVar 0x7fd64b025cf8 'l' 'int'
+        |   |     |   | `-ImplicitCastExpr 0x7fd64b027db8 <col:23, col:30> 'int' <IntegralCast>
+        |   |     |   |   `-ImplicitCastExpr 0x7fd64b027da0 <col:23, col:30> 'char' <LValueToRValue>
+        |   |     |   |     `-ArraySubscriptExpr 0x7fd64b027d60 <col:23, col:30> 'char' lvalue
+        |   |     |   |       |-ImplicitCastExpr 0x7fd64b027d48 <col:23> 'char *' <LValueToRValue>
+        |   |     |   |       | `-DeclRefExpr 0x7fd64b027c98 <col:23> 'char *' lvalue ParmVar 0x7fd64b025c08 'h' 'char *'
+        |   |     |   |       `-BinaryOperator 0x7fd64b027d20 <col:25, col:29> 'int' '+'
+        |   |     |   |         |-ImplicitCastExpr 0x7fd64b027d08 <col:25> 'int' <LValueToRValue>
+        |   |     |   |         | `-DeclRefExpr 0x7fd64b027cc0 <col:25> 'int' lvalue ParmVar 0x7fd64b025de8 'j' 'int'
+        |   |     |   |         `-IntegerLiteral 0x7fd64b027ce8 <col:29> 'int' 4
+        |   |     |   `-IntegerLiteral 0x7fd64b027df8 <col:35> 'int' 31
+        |   |     `-BinaryOperator 0x7fd64b0280d0 <col:40, col:64> 'int' '&'
+        |   |       |-ImplicitCastExpr 0x7fd64b0280b8 <col:40> 'int' <LValueToRValue>
+        |   |       | `-DeclRefExpr 0x7fd64b027e80 <col:40> 'int' lvalue ParmVar 0x7fd64b025e60 'q' 'int'
+        |   |       `-UnaryOperator 0x7fd64b028098 <col:44, col:64> 'int' prefix '~'
+        |   |         `-ParenExpr 0x7fd64b028078 <col:45, col:64> 'int'
+        |   |           `-BinaryOperator 0x7fd64b028050 <col:46, col:62> 'int' '>>'
+        |   |             |-BinaryOperator 0x7fd64b028008 <col:46, col:57> 'int' '-'
+        |   |             | |-ImplicitCastExpr 0x7fd64b027fc0 <col:46> 'int' <LValueToRValue>
+        |   |             | | `-DeclRefExpr 0x7fd64b027ea8 <col:46> 'int' lvalue ParmVar 0x7fd64b025cf8 'l' 'int'
+        |   |             | `-ImplicitCastExpr 0x7fd64b027ff0 <col:50, col:57> 'int' <IntegralCast>
+        |   |             |   `-ImplicitCastExpr 0x7fd64b027fd8 <col:50, col:57> 'char' <LValueToRValue>
+        |   |             |     `-ArraySubscriptExpr 0x7fd64b027f98 <col:50, col:57> 'char' lvalue
+        |   |             |       |-ImplicitCastExpr 0x7fd64b027f80 <col:50> 'char *' <LValueToRValue>
+        |   |             |       | `-DeclRefExpr 0x7fd64b027ed0 <col:50> 'char *' lvalue ParmVar 0x7fd64b025c08 'h' 'char *'
+        |   |             |       `-BinaryOperator 0x7fd64b027f58 <col:52, col:56> 'int' '+'
+        |   |             |         |-ImplicitCastExpr 0x7fd64b027f40 <col:52> 'int' <LValueToRValue>
+        |   |             |         | `-DeclRefExpr 0x7fd64b027ef8 <col:52> 'int' lvalue ParmVar 0x7fd64b025de8 'j' 'int'
+        |   |             |         `-IntegerLiteral 0x7fd64b027f20 <col:56> 'int' 4
+        |   |             `-IntegerLiteral 0x7fd64b028030 <col:62> 'int' 31
+        |   |-BinaryOperator 0x7fd64b028740 <line:22:4, col:64> 'char' '='
+        |   | |-ArraySubscriptExpr 0x7fd64b028228 <col:4, col:11> 'char' lvalue
+        |   | | |-ImplicitCastExpr 0x7fd64b028210 <col:4> 'char *' <LValueToRValue>
+        |   | | | `-DeclRefExpr 0x7fd64b028160 <col:4> 'char *' lvalue Var 0x7fd64b026050 'i' 'char *'
+        |   | | `-BinaryOperator 0x7fd64b0281e8 <col:6, col:10> 'int' '+'
+        |   | |   |-ImplicitCastExpr 0x7fd64b0281d0 <col:6> 'int' <LValueToRValue>
+        |   | |   | `-DeclRefExpr 0x7fd64b028188 <col:6> 'int' lvalue ParmVar 0x7fd64b025de8 'j' 'int'
+        |   | |   `-IntegerLiteral 0x7fd64b0281b0 <col:10> 'int' 5
+        |   | `-ImplicitCastExpr 0x7fd64b028728 <col:15, col:64> 'char' <IntegralCast>
+        |   |   `-BinaryOperator 0x7fd64b028700 <col:15, col:64> 'int' '|'
+        |   |     |-BinaryOperator 0x7fd64b028460 <col:15, col:35> 'int' '&'
+        |   |     | |-ImplicitCastExpr 0x7fd64b028448 <col:15> 'int' <LValueToRValue>
+        |   |     | | `-DeclRefExpr 0x7fd64b028250 <col:15> 'int' lvalue Var 0x7fd64b026120 'n' 'int'
+        |   |     | `-BinaryOperator 0x7fd64b028420 <col:19, col:35> 'int' '>>'
+        |   |     |   |-BinaryOperator 0x7fd64b0283d8 <col:19, col:30> 'int' '-'
+        |   |     |   | |-ImplicitCastExpr 0x7fd64b028390 <col:19> 'int' <LValueToRValue>
+        |   |     |   | | `-DeclRefExpr 0x7fd64b028278 <col:19> 'int' lvalue ParmVar 0x7fd64b025d70 'm' 'int'
+        |   |     |   | `-ImplicitCastExpr 0x7fd64b0283c0 <col:23, col:30> 'int' <IntegralCast>
+        |   |     |   |   `-ImplicitCastExpr 0x7fd64b0283a8 <col:23, col:30> 'char' <LValueToRValue>
+        |   |     |   |     `-ArraySubscriptExpr 0x7fd64b028368 <col:23, col:30> 'char' lvalue
+        |   |     |   |       |-ImplicitCastExpr 0x7fd64b028350 <col:23> 'char *' <LValueToRValue>
+        |   |     |   |       | `-DeclRefExpr 0x7fd64b0282a0 <col:23> 'char *' lvalue ParmVar 0x7fd64b025c08 'h' 'char *'
+        |   |     |   |       `-BinaryOperator 0x7fd64b028328 <col:25, col:29> 'int' '+'
+        |   |     |   |         |-ImplicitCastExpr 0x7fd64b028310 <col:25> 'int' <LValueToRValue>
+        |   |     |   |         | `-DeclRefExpr 0x7fd64b0282c8 <col:25> 'int' lvalue ParmVar 0x7fd64b025de8 'j' 'int'
+        |   |     |   |         `-IntegerLiteral 0x7fd64b0282f0 <col:29> 'int' 5
+        |   |     |   `-IntegerLiteral 0x7fd64b028400 <col:35> 'int' 31
+        |   |     `-BinaryOperator 0x7fd64b0286d8 <col:40, col:64> 'int' '&'
+        |   |       |-ImplicitCastExpr 0x7fd64b0286c0 <col:40> 'int' <LValueToRValue>
+        |   |       | `-DeclRefExpr 0x7fd64b028488 <col:40> 'int' lvalue Var 0x7fd64b0261f0 's' 'int'
+        |   |       `-UnaryOperator 0x7fd64b0286a0 <col:44, col:64> 'int' prefix '~'
+        |   |         `-ParenExpr 0x7fd64b028680 <col:45, col:64> 'int'
+        |   |           `-BinaryOperator 0x7fd64b028658 <col:46, col:62> 'int' '>>'
+        |   |             |-BinaryOperator 0x7fd64b028610 <col:46, col:57> 'int' '-'
+        |   |             | |-ImplicitCastExpr 0x7fd64b0285c8 <col:46> 'int' <LValueToRValue>
+        |   |             | | `-DeclRefExpr 0x7fd64b0284b0 <col:46> 'int' lvalue ParmVar 0x7fd64b025d70 'm' 'int'
+        |   |             | `-ImplicitCastExpr 0x7fd64b0285f8 <col:50, col:57> 'int' <IntegralCast>
+        |   |             |   `-ImplicitCastExpr 0x7fd64b0285e0 <col:50, col:57> 'char' <LValueToRValue>
+        |   |             |     `-ArraySubscriptExpr 0x7fd64b0285a0 <col:50, col:57> 'char' lvalue
+        |   |             |       |-ImplicitCastExpr 0x7fd64b028588 <col:50> 'char *' <LValueToRValue>
+        |   |             |       | `-DeclRefExpr 0x7fd64b0284d8 <col:50> 'char *' lvalue ParmVar 0x7fd64b025c08 'h' 'char *'
+        |   |             |       `-BinaryOperator 0x7fd64b028560 <col:52, col:56> 'int' '+'
+        |   |             |         |-ImplicitCastExpr 0x7fd64b028548 <col:52> 'int' <LValueToRValue>
+        |   |             |         | `-DeclRefExpr 0x7fd64b028500 <col:52> 'int' lvalue ParmVar 0x7fd64b025de8 'j' 'int'
+        |   |             |         `-IntegerLiteral 0x7fd64b028528 <col:56> 'int' 5
+        |   |             `-IntegerLiteral 0x7fd64b028638 <col:62> 'int' 31
+        |   |-BinaryOperator 0x7fd64b800368 <line:23:4, col:64> 'char' '='
+        |   | |-ArraySubscriptExpr 0x7fd64b028830 <col:4, col:11> 'char' lvalue
+        |   | | |-ImplicitCastExpr 0x7fd64b028818 <col:4> 'char *' <LValueToRValue>
+        |   | | | `-DeclRefExpr 0x7fd64b028768 <col:4> 'char *' lvalue Var 0x7fd64b026050 'i' 'char *'
+        |   | | `-BinaryOperator 0x7fd64b0287f0 <col:6, col:10> 'int' '+'
+        |   | |   |-ImplicitCastExpr 0x7fd64b0287d8 <col:6> 'int' <LValueToRValue>
+        |   | |   | `-DeclRefExpr 0x7fd64b028790 <col:6> 'int' lvalue ParmVar 0x7fd64b025de8 'j' 'int'
+        |   | |   `-IntegerLiteral 0x7fd64b0287b8 <col:10> 'int' 6
+        |   | `-ImplicitCastExpr 0x7fd64b800350 <col:15, col:64> 'char' <IntegralCast>
+        |   |   `-BinaryOperator 0x7fd64b800328 <col:15, col:64> 'int' '|'
+        |   |     |-BinaryOperator 0x7fd64b800088 <col:15, col:35> 'int' '&'
+        |   |     | |-ImplicitCastExpr 0x7fd64b800070 <col:15> 'int' <LValueToRValue>
+        |   |     | | `-DeclRefExpr 0x7fd64b028858 <col:15> 'int' lvalue Var 0x7fd64b026120 'n' 'int'
+        |   |     | `-BinaryOperator 0x7fd64b800048 <col:19, col:35> 'int' '>>'
+        |   |     |   |-BinaryOperator 0x7fd64b800000 <col:19, col:30> 'int' '-'
+        |   |     |   | |-ImplicitCastExpr 0x7fd64b028998 <col:19> 'int' <LValueToRValue>
+        |   |     |   | | `-DeclRefExpr 0x7fd64b028880 <col:19> 'int' lvalue ParmVar 0x7fd64b025c80 'k' 'int'
+        |   |     |   | `-ImplicitCastExpr 0x7fd64b0289c8 <col:23, col:30> 'int' <IntegralCast>
+        |   |     |   |   `-ImplicitCastExpr 0x7fd64b0289b0 <col:23, col:30> 'char' <LValueToRValue>
+        |   |     |   |     `-ArraySubscriptExpr 0x7fd64b028970 <col:23, col:30> 'char' lvalue
+        |   |     |   |       |-ImplicitCastExpr 0x7fd64b028958 <col:23> 'char *' <LValueToRValue>
+        |   |     |   |       | `-DeclRefExpr 0x7fd64b0288a8 <col:23> 'char *' lvalue ParmVar 0x7fd64b025c08 'h' 'char *'
+        |   |     |   |       `-BinaryOperator 0x7fd64b028930 <col:25, col:29> 'int' '+'
+        |   |     |   |         |-ImplicitCastExpr 0x7fd64b028918 <col:25> 'int' <LValueToRValue>
+        |   |     |   |         | `-DeclRefExpr 0x7fd64b0288d0 <col:25> 'int' lvalue ParmVar 0x7fd64b025de8 'j' 'int'
+        |   |     |   |         `-IntegerLiteral 0x7fd64b0288f8 <col:29> 'int' 6
+        |   |     |   `-IntegerLiteral 0x7fd64b800028 <col:35> 'int' 31
+        |   |     `-BinaryOperator 0x7fd64b800300 <col:40, col:64> 'int' '&'
+        |   |       |-ImplicitCastExpr 0x7fd64b8002e8 <col:40> 'int' <LValueToRValue>
+        |   |       | `-DeclRefExpr 0x7fd64b8000b0 <col:40> 'int' lvalue ParmVar 0x7fd64b025e60 'q' 'int'
+        |   |       `-UnaryOperator 0x7fd64b8002c8 <col:44, col:64> 'int' prefix '~'
+        |   |         `-ParenExpr 0x7fd64b8002a8 <col:45, col:64> 'int'
+        |   |           `-BinaryOperator 0x7fd64b800280 <col:46, col:62> 'int' '>>'
+        |   |             |-BinaryOperator 0x7fd64b800238 <col:46, col:57> 'int' '-'
+        |   |             | |-ImplicitCastExpr 0x7fd64b8001f0 <col:46> 'int' <LValueToRValue>
+        |   |             | | `-DeclRefExpr 0x7fd64b8000d8 <col:46> 'int' lvalue ParmVar 0x7fd64b025c80 'k' 'int'
+        |   |             | `-ImplicitCastExpr 0x7fd64b800220 <col:50, col:57> 'int' <IntegralCast>
+        |   |             |   `-ImplicitCastExpr 0x7fd64b800208 <col:50, col:57> 'char' <LValueToRValue>
+        |   |             |     `-ArraySubscriptExpr 0x7fd64b8001c8 <col:50, col:57> 'char' lvalue
+        |   |             |       |-ImplicitCastExpr 0x7fd64b8001b0 <col:50> 'char *' <LValueToRValue>
+        |   |             |       | `-DeclRefExpr 0x7fd64b800100 <col:50> 'char *' lvalue ParmVar 0x7fd64b025c08 'h' 'char *'
+        |   |             |       `-BinaryOperator 0x7fd64b800188 <col:52, col:56> 'int' '+'
+        |   |             |         |-ImplicitCastExpr 0x7fd64b800170 <col:52> 'int' <LValueToRValue>
+        |   |             |         | `-DeclRefExpr 0x7fd64b800128 <col:52> 'int' lvalue ParmVar 0x7fd64b025de8 'j' 'int'
+        |   |             |         `-IntegerLiteral 0x7fd64b800150 <col:56> 'int' 6
+        |   |             `-IntegerLiteral 0x7fd64b800260 <col:62> 'int' 31
+        |   |-BinaryOperator 0x7fd64b800970 <line:24:4, col:64> 'char' '='
+        |   | |-ArraySubscriptExpr 0x7fd64b800458 <col:4, col:11> 'char' lvalue
+        |   | | |-ImplicitCastExpr 0x7fd64b800440 <col:4> 'char *' <LValueToRValue>
+        |   | | | `-DeclRefExpr 0x7fd64b800390 <col:4> 'char *' lvalue Var 0x7fd64b026050 'i' 'char *'
+        |   | | `-BinaryOperator 0x7fd64b800418 <col:6, col:10> 'int' '+'
+        |   | |   |-ImplicitCastExpr 0x7fd64b800400 <col:6> 'int' <LValueToRValue>
+        |   | |   | `-DeclRefExpr 0x7fd64b8003b8 <col:6> 'int' lvalue ParmVar 0x7fd64b025de8 'j' 'int'
+        |   | |   `-IntegerLiteral 0x7fd64b8003e0 <col:10> 'int' 7
+        |   | `-ImplicitCastExpr 0x7fd64b800958 <col:15, col:64> 'char' <IntegralCast>
+        |   |   `-BinaryOperator 0x7fd64b800930 <col:15, col:64> 'int' '|'
+        |   |     |-BinaryOperator 0x7fd64b800690 <col:15, col:35> 'int' '&'
+        |   |     | |-ImplicitCastExpr 0x7fd64b800678 <col:15> 'int' <LValueToRValue>
+        |   |     | | `-DeclRefExpr 0x7fd64b800480 <col:15> 'int' lvalue Var 0x7fd64b026120 'n' 'int'
+        |   |     | `-BinaryOperator 0x7fd64b800650 <col:19, col:35> 'int' '>>'
+        |   |     |   |-BinaryOperator 0x7fd64b800608 <col:19, col:30> 'int' '-'
+        |   |     |   | |-ImplicitCastExpr 0x7fd64b8005c0 <col:19> 'int' <LValueToRValue>
+        |   |     |   | | `-DeclRefExpr 0x7fd64b8004a8 <col:19> 'int' lvalue ParmVar 0x7fd64b025cf8 'l' 'int'
+        |   |     |   | `-ImplicitCastExpr 0x7fd64b8005f0 <col:23, col:30> 'int' <IntegralCast>
+        |   |     |   |   `-ImplicitCastExpr 0x7fd64b8005d8 <col:23, col:30> 'char' <LValueToRValue>
+        |   |     |   |     `-ArraySubscriptExpr 0x7fd64b800598 <col:23, col:30> 'char' lvalue
+        |   |     |   |       |-ImplicitCastExpr 0x7fd64b800580 <col:23> 'char *' <LValueToRValue>
+        |   |     |   |       | `-DeclRefExpr 0x7fd64b8004d0 <col:23> 'char *' lvalue ParmVar 0x7fd64b025c08 'h' 'char *'
+        |   |     |   |       `-BinaryOperator 0x7fd64b800558 <col:25, col:29> 'int' '+'
+        |   |     |   |         |-ImplicitCastExpr 0x7fd64b800540 <col:25> 'int' <LValueToRValue>
+        |   |     |   |         | `-DeclRefExpr 0x7fd64b8004f8 <col:25> 'int' lvalue ParmVar 0x7fd64b025de8 'j' 'int'
+        |   |     |   |         `-IntegerLiteral 0x7fd64b800520 <col:29> 'int' 7
+        |   |     |   `-IntegerLiteral 0x7fd64b800630 <col:35> 'int' 31
+        |   |     `-BinaryOperator 0x7fd64b800908 <col:40, col:64> 'int' '&'
+        |   |       |-ImplicitCastExpr 0x7fd64b8008f0 <col:40> 'int' <LValueToRValue>
+        |   |       | `-DeclRefExpr 0x7fd64b8006b8 <col:40> 'int' lvalue ParmVar 0x7fd64b025e60 'q' 'int'
+        |   |       `-UnaryOperator 0x7fd64b8008d0 <col:44, col:64> 'int' prefix '~'
+        |   |         `-ParenExpr 0x7fd64b8008b0 <col:45, col:64> 'int'
+        |   |           `-BinaryOperator 0x7fd64b800888 <col:46, col:62> 'int' '>>'
+        |   |             |-BinaryOperator 0x7fd64b800840 <col:46, col:57> 'int' '-'
+        |   |             | |-ImplicitCastExpr 0x7fd64b8007f8 <col:46> 'int' <LValueToRValue>
+        |   |             | | `-DeclRefExpr 0x7fd64b8006e0 <col:46> 'int' lvalue ParmVar 0x7fd64b025cf8 'l' 'int'
+        |   |             | `-ImplicitCastExpr 0x7fd64b800828 <col:50, col:57> 'int' <IntegralCast>
+        |   |             |   `-ImplicitCastExpr 0x7fd64b800810 <col:50, col:57> 'char' <LValueToRValue>
+        |   |             |     `-ArraySubscriptExpr 0x7fd64b8007d0 <col:50, col:57> 'char' lvalue
+        |   |             |       |-ImplicitCastExpr 0x7fd64b8007b8 <col:50> 'char *' <LValueToRValue>
+        |   |             |       | `-DeclRefExpr 0x7fd64b800708 <col:50> 'char *' lvalue ParmVar 0x7fd64b025c08 'h' 'char *'
+        |   |             |       `-BinaryOperator 0x7fd64b800790 <col:52, col:56> 'int' '+'
+        |   |             |         |-ImplicitCastExpr 0x7fd64b800778 <col:52> 'int' <LValueToRValue>
+        |   |             |         | `-DeclRefExpr 0x7fd64b800730 <col:52> 'int' lvalue ParmVar 0x7fd64b025de8 'j' 'int'
+        |   |             |         `-IntegerLiteral 0x7fd64b800758 <col:56> 'int' 7
+        |   |             `-IntegerLiteral 0x7fd64b800868 <col:62> 'int' 31
+        |   |-BinaryOperator 0x7fd64b800f78 <line:25:4, col:64> 'char' '='
+        |   | |-ArraySubscriptExpr 0x7fd64b800a60 <col:4, col:11> 'char' lvalue
+        |   | | |-ImplicitCastExpr 0x7fd64b800a48 <col:4> 'char *' <LValueToRValue>
+        |   | | | `-DeclRefExpr 0x7fd64b800998 <col:4> 'char *' lvalue Var 0x7fd64b026050 'i' 'char *'
+        |   | | `-BinaryOperator 0x7fd64b800a20 <col:6, col:10> 'int' '+'
+        |   | |   |-ImplicitCastExpr 0x7fd64b800a08 <col:6> 'int' <LValueToRValue>
+        |   | |   | `-DeclRefExpr 0x7fd64b8009c0 <col:6> 'int' lvalue ParmVar 0x7fd64b025de8 'j' 'int'
+        |   | |   `-IntegerLiteral 0x7fd64b8009e8 <col:10> 'int' 8
+        |   | `-ImplicitCastExpr 0x7fd64b800f60 <col:15, col:64> 'char' <IntegralCast>
+        |   |   `-BinaryOperator 0x7fd64b800f38 <col:15, col:64> 'int' '|'
+        |   |     |-BinaryOperator 0x7fd64b800c98 <col:15, col:35> 'int' '&'
+        |   |     | |-ImplicitCastExpr 0x7fd64b800c80 <col:15> 'int' <LValueToRValue>
+        |   |     | | `-DeclRefExpr 0x7fd64b800a88 <col:15> 'int' lvalue Var 0x7fd64b026120 'n' 'int'
+        |   |     | `-BinaryOperator 0x7fd64b800c58 <col:19, col:35> 'int' '>>'
+        |   |     |   |-BinaryOperator 0x7fd64b800c10 <col:19, col:30> 'int' '-'
+        |   |     |   | |-ImplicitCastExpr 0x7fd64b800bc8 <col:19> 'int' <LValueToRValue>
+        |   |     |   | | `-DeclRefExpr 0x7fd64b800ab0 <col:19> 'int' lvalue ParmVar 0x7fd64b025d70 'm' 'int'
+        |   |     |   | `-ImplicitCastExpr 0x7fd64b800bf8 <col:23, col:30> 'int' <IntegralCast>
+        |   |     |   |   `-ImplicitCastExpr 0x7fd64b800be0 <col:23, col:30> 'char' <LValueToRValue>
+        |   |     |   |     `-ArraySubscriptExpr 0x7fd64b800ba0 <col:23, col:30> 'char' lvalue
+        |   |     |   |       |-ImplicitCastExpr 0x7fd64b800b88 <col:23> 'char *' <LValueToRValue>
+        |   |     |   |       | `-DeclRefExpr 0x7fd64b800ad8 <col:23> 'char *' lvalue ParmVar 0x7fd64b025c08 'h' 'char *'
+        |   |     |   |       `-BinaryOperator 0x7fd64b800b60 <col:25, col:29> 'int' '+'
+        |   |     |   |         |-ImplicitCastExpr 0x7fd64b800b48 <col:25> 'int' <LValueToRValue>
+        |   |     |   |         | `-DeclRefExpr 0x7fd64b800b00 <col:25> 'int' lvalue ParmVar 0x7fd64b025de8 'j' 'int'
+        |   |     |   |         `-IntegerLiteral 0x7fd64b800b28 <col:29> 'int' 8
+        |   |     |   `-IntegerLiteral 0x7fd64b800c38 <col:35> 'int' 31
+        |   |     `-BinaryOperator 0x7fd64b800f10 <col:40, col:64> 'int' '&'
+        |   |       |-ImplicitCastExpr 0x7fd64b800ef8 <col:40> 'int' <LValueToRValue>
+        |   |       | `-DeclRefExpr 0x7fd64b800cc0 <col:40> 'int' lvalue Var 0x7fd64b0261f0 's' 'int'
+        |   |       `-UnaryOperator 0x7fd64b800ed8 <col:44, col:64> 'int' prefix '~'
+        |   |         `-ParenExpr 0x7fd64b800eb8 <col:45, col:64> 'int'
+        |   |           `-BinaryOperator 0x7fd64b800e90 <col:46, col:62> 'int' '>>'
+        |   |             |-BinaryOperator 0x7fd64b800e48 <col:46, col:57> 'int' '-'
+        |   |             | |-ImplicitCastExpr 0x7fd64b800e00 <col:46> 'int' <LValueToRValue>
+        |   |             | | `-DeclRefExpr 0x7fd64b800ce8 <col:46> 'int' lvalue ParmVar 0x7fd64b025d70 'm' 'int'
+        |   |             | `-ImplicitCastExpr 0x7fd64b800e30 <col:50, col:57> 'int' <IntegralCast>
+        |   |             |   `-ImplicitCastExpr 0x7fd64b800e18 <col:50, col:57> 'char' <LValueToRValue>
+        |   |             |     `-ArraySubscriptExpr 0x7fd64b800dd8 <col:50, col:57> 'char' lvalue
+        |   |             |       |-ImplicitCastExpr 0x7fd64b800dc0 <col:50> 'char *' <LValueToRValue>
+        |   |             |       | `-DeclRefExpr 0x7fd64b800d10 <col:50> 'char *' lvalue ParmVar 0x7fd64b025c08 'h' 'char *'
+        |   |             |       `-BinaryOperator 0x7fd64b800d98 <col:52, col:56> 'int' '+'
+        |   |             |         |-ImplicitCastExpr 0x7fd64b800d80 <col:52> 'int' <LValueToRValue>
+        |   |             |         | `-DeclRefExpr 0x7fd64b800d38 <col:52> 'int' lvalue ParmVar 0x7fd64b025de8 'j' 'int'
+        |   |             |         `-IntegerLiteral 0x7fd64b800d60 <col:56> 'int' 8
+        |   |             `-IntegerLiteral 0x7fd64b800e70 <col:62> 'int' 31
+        |   |-BinaryOperator 0x7fd64b801590 <line:26:4, col:64> 'char' '='
+        |   | |-ArraySubscriptExpr 0x7fd64b801078 <col:4, col:11> 'char' lvalue
+        |   | | |-ImplicitCastExpr 0x7fd64b801060 <col:4> 'char *' <LValueToRValue>
+        |   | | | `-DeclRefExpr 0x7fd64b800fa0 <col:4> 'char *' lvalue Var 0x7fd64b026050 'i' 'char *'
+        |   | | `-BinaryOperator 0x7fd64b801038 <col:6, col:10> 'int' '+'
+        |   | |   |-ImplicitCastExpr 0x7fd64b801020 <col:6> 'int' <LValueToRValue>
+        |   | |   | `-DeclRefExpr 0x7fd64b800fc8 <col:6> 'int' lvalue ParmVar 0x7fd64b025de8 'j' 'int'
+        |   | |   `-IntegerLiteral 0x7fd64b801000 <col:10> 'int' 9
+        |   | `-ImplicitCastExpr 0x7fd64b801578 <col:15, col:64> 'char' <IntegralCast>
+        |   |   `-BinaryOperator 0x7fd64b801550 <col:15, col:64> 'int' '|'
+        |   |     |-BinaryOperator 0x7fd64b8012b0 <col:15, col:35> 'int' '&'
+        |   |     | |-ImplicitCastExpr 0x7fd64b801298 <col:15> 'int' <LValueToRValue>
+        |   |     | | `-DeclRefExpr 0x7fd64b8010a0 <col:15> 'int' lvalue Var 0x7fd64b026120 'n' 'int'
+        |   |     | `-BinaryOperator 0x7fd64b801270 <col:19, col:35> 'int' '>>'
+        |   |     |   |-BinaryOperator 0x7fd64b801228 <col:19, col:30> 'int' '-'
+        |   |     |   | |-ImplicitCastExpr 0x7fd64b8011e0 <col:19> 'int' <LValueToRValue>
+        |   |     |   | | `-DeclRefExpr 0x7fd64b8010c8 <col:19> 'int' lvalue ParmVar 0x7fd64b025c80 'k' 'int'
+        |   |     |   | `-ImplicitCastExpr 0x7fd64b801210 <col:23, col:30> 'int' <IntegralCast>
+        |   |     |   |   `-ImplicitCastExpr 0x7fd64b8011f8 <col:23, col:30> 'char' <LValueToRValue>
+        |   |     |   |     `-ArraySubscriptExpr 0x7fd64b8011b8 <col:23, col:30> 'char' lvalue
+        |   |     |   |       |-ImplicitCastExpr 0x7fd64b8011a0 <col:23> 'char *' <LValueToRValue>
+        |   |     |   |       | `-DeclRefExpr 0x7fd64b8010f0 <col:23> 'char *' lvalue ParmVar 0x7fd64b025c08 'h' 'char *'
+        |   |     |   |       `-BinaryOperator 0x7fd64b801178 <col:25, col:29> 'int' '+'
+        |   |     |   |         |-ImplicitCastExpr 0x7fd64b801160 <col:25> 'int' <LValueToRValue>
+        |   |     |   |         | `-DeclRefExpr 0x7fd64b801118 <col:25> 'int' lvalue ParmVar 0x7fd64b025de8 'j' 'int'
+        |   |     |   |         `-IntegerLiteral 0x7fd64b801140 <col:29> 'int' 9
+        |   |     |   `-IntegerLiteral 0x7fd64b801250 <col:35> 'int' 31
+        |   |     `-BinaryOperator 0x7fd64b801528 <col:40, col:64> 'int' '&'
+        |   |       |-ImplicitCastExpr 0x7fd64b801510 <col:40> 'int' <LValueToRValue>
+        |   |       | `-DeclRefExpr 0x7fd64b8012d8 <col:40> 'int' lvalue ParmVar 0x7fd64b025e60 'q' 'int'
+        |   |       `-UnaryOperator 0x7fd64b8014f0 <col:44, col:64> 'int' prefix '~'
+        |   |         `-ParenExpr 0x7fd64b8014d0 <col:45, col:64> 'int'
+        |   |           `-BinaryOperator 0x7fd64b8014a8 <col:46, col:62> 'int' '>>'
+        |   |             |-BinaryOperator 0x7fd64b801460 <col:46, col:57> 'int' '-'
+        |   |             | |-ImplicitCastExpr 0x7fd64b801418 <col:46> 'int' <LValueToRValue>
+        |   |             | | `-DeclRefExpr 0x7fd64b801300 <col:46> 'int' lvalue ParmVar 0x7fd64b025c80 'k' 'int'
+        |   |             | `-ImplicitCastExpr 0x7fd64b801448 <col:50, col:57> 'int' <IntegralCast>
+        |   |             |   `-ImplicitCastExpr 0x7fd64b801430 <col:50, col:57> 'char' <LValueToRValue>
+        |   |             |     `-ArraySubscriptExpr 0x7fd64b8013f0 <col:50, col:57> 'char' lvalue
+        |   |             |       |-ImplicitCastExpr 0x7fd64b8013d8 <col:50> 'char *' <LValueToRValue>
+        |   |             |       | `-DeclRefExpr 0x7fd64b801328 <col:50> 'char *' lvalue ParmVar 0x7fd64b025c08 'h' 'char *'
+        |   |             |       `-BinaryOperator 0x7fd64b8013b0 <col:52, col:56> 'int' '+'
+        |   |             |         |-ImplicitCastExpr 0x7fd64b801398 <col:52> 'int' <LValueToRValue>
+        |   |             |         | `-DeclRefExpr 0x7fd64b801350 <col:52> 'int' lvalue ParmVar 0x7fd64b025de8 'j' 'int'
+        |   |             |         `-IntegerLiteral 0x7fd64b801378 <col:56> 'int' 9
+        |   |             `-IntegerLiteral 0x7fd64b801488 <col:62> 'int' 31
+        |   |-BinaryOperator 0x7fd64b801b98 <line:27:4, col:67> 'char' '='
+        |   | |-ArraySubscriptExpr 0x7fd64b801680 <col:4, col:12> 'char' lvalue
+        |   | | |-ImplicitCastExpr 0x7fd64b801668 <col:4> 'char *' <LValueToRValue>
+        |   | | | `-DeclRefExpr 0x7fd64b8015b8 <col:4> 'char *' lvalue Var 0x7fd64b026050 'i' 'char *'
+        |   | | `-BinaryOperator 0x7fd64b801640 <col:6, col:10> 'int' '+'
+        |   | |   |-ImplicitCastExpr 0x7fd64b801628 <col:6> 'int' <LValueToRValue>
+        |   | |   | `-DeclRefExpr 0x7fd64b8015e0 <col:6> 'int' lvalue ParmVar 0x7fd64b025de8 'j' 'int'
+        |   | |   `-IntegerLiteral 0x7fd64b801608 <col:10> 'int' 10
+        |   | `-ImplicitCastExpr 0x7fd64b801b80 <col:16, col:67> 'char' <IntegralCast>
+        |   |   `-BinaryOperator 0x7fd64b801b58 <col:16, col:67> 'int' '|'
+        |   |     |-BinaryOperator 0x7fd64b8018b8 <col:16, col:37> 'int' '&'
+        |   |     | |-ImplicitCastExpr 0x7fd64b8018a0 <col:16> 'int' <LValueToRValue>
+        |   |     | | `-DeclRefExpr 0x7fd64b8016a8 <col:16> 'int' lvalue Var 0x7fd64b026120 'n' 'int'
+        |   |     | `-BinaryOperator 0x7fd64b801878 <col:20, col:37> 'int' '>>'
+        |   |     |   |-BinaryOperator 0x7fd64b801830 <col:20, col:32> 'int' '-'
+        |   |     |   | |-ImplicitCastExpr 0x7fd64b8017e8 <col:20> 'int' <LValueToRValue>
+        |   |     |   | | `-DeclRefExpr 0x7fd64b8016d0 <col:20> 'int' lvalue ParmVar 0x7fd64b025cf8 'l' 'int'
+        |   |     |   | `-ImplicitCastExpr 0x7fd64b801818 <col:24, col:32> 'int' <IntegralCast>
+        |   |     |   |   `-ImplicitCastExpr 0x7fd64b801800 <col:24, col:32> 'char' <LValueToRValue>
+        |   |     |   |     `-ArraySubscriptExpr 0x7fd64b8017c0 <col:24, col:32> 'char' lvalue
+        |   |     |   |       |-ImplicitCastExpr 0x7fd64b8017a8 <col:24> 'char *' <LValueToRValue>
+        |   |     |   |       | `-DeclRefExpr 0x7fd64b8016f8 <col:24> 'char *' lvalue ParmVar 0x7fd64b025c08 'h' 'char *'
+        |   |     |   |       `-BinaryOperator 0x7fd64b801780 <col:26, col:30> 'int' '+'
+        |   |     |   |         |-ImplicitCastExpr 0x7fd64b801768 <col:26> 'int' <LValueToRValue>
+        |   |     |   |         | `-DeclRefExpr 0x7fd64b801720 <col:26> 'int' lvalue ParmVar 0x7fd64b025de8 'j' 'int'
+        |   |     |   |         `-IntegerLiteral 0x7fd64b801748 <col:30> 'int' 10
+        |   |     |   `-IntegerLiteral 0x7fd64b801858 <col:37> 'int' 31
+        |   |     `-BinaryOperator 0x7fd64b801b30 <col:42, col:67> 'int' '&'
+        |   |       |-ImplicitCastExpr 0x7fd64b801b18 <col:42> 'int' <LValueToRValue>
+        |   |       | `-DeclRefExpr 0x7fd64b8018e0 <col:42> 'int' lvalue ParmVar 0x7fd64b025e60 'q' 'int'
+        |   |       `-UnaryOperator 0x7fd64b801af8 <col:46, col:67> 'int' prefix '~'
+        |   |         `-ParenExpr 0x7fd64b801ad8 <col:47, col:67> 'int'
+        |   |           `-BinaryOperator 0x7fd64b801ab0 <col:48, col:65> 'int' '>>'
+        |   |             |-BinaryOperator 0x7fd64b801a68 <col:48, col:60> 'int' '-'
+        |   |             | |-ImplicitCastExpr 0x7fd64b801a20 <col:48> 'int' <LValueToRValue>
+        |   |             | | `-DeclRefExpr 0x7fd64b801908 <col:48> 'int' lvalue ParmVar 0x7fd64b025cf8 'l' 'int'
+        |   |             | `-ImplicitCastExpr 0x7fd64b801a50 <col:52, col:60> 'int' <IntegralCast>
+        |   |             |   `-ImplicitCastExpr 0x7fd64b801a38 <col:52, col:60> 'char' <LValueToRValue>
+        |   |             |     `-ArraySubscriptExpr 0x7fd64b8019f8 <col:52, col:60> 'char' lvalue
+        |   |             |       |-ImplicitCastExpr 0x7fd64b8019e0 <col:52> 'char *' <LValueToRValue>
+        |   |             |       | `-DeclRefExpr 0x7fd64b801930 <col:52> 'char *' lvalue ParmVar 0x7fd64b025c08 'h' 'char *'
+        |   |             |       `-BinaryOperator 0x7fd64b8019b8 <col:54, col:58> 'int' '+'
+        |   |             |         |-ImplicitCastExpr 0x7fd64b8019a0 <col:54> 'int' <LValueToRValue>
+        |   |             |         | `-DeclRefExpr 0x7fd64b801958 <col:54> 'int' lvalue ParmVar 0x7fd64b025de8 'j' 'int'
+        |   |             |         `-IntegerLiteral 0x7fd64b801980 <col:58> 'int' 10
+        |   |             `-IntegerLiteral 0x7fd64b801a90 <col:65> 'int' 31
+        |   `-BinaryOperator 0x7fd64b8021a0 <line:28:4, col:67> 'char' '='
+        |     |-ArraySubscriptExpr 0x7fd64b801c88 <col:4, col:12> 'char' lvalue
+        |     | |-ImplicitCastExpr 0x7fd64b801c70 <col:4> 'char *' <LValueToRValue>
+        |     | | `-DeclRefExpr 0x7fd64b801bc0 <col:4> 'char *' lvalue Var 0x7fd64b026050 'i' 'char *'
+        |     | `-BinaryOperator 0x7fd64b801c48 <col:6, col:10> 'int' '+'
+        |     |   |-ImplicitCastExpr 0x7fd64b801c30 <col:6> 'int' <LValueToRValue>
+        |     |   | `-DeclRefExpr 0x7fd64b801be8 <col:6> 'int' lvalue ParmVar 0x7fd64b025de8 'j' 'int'
+        |     |   `-IntegerLiteral 0x7fd64b801c10 <col:10> 'int' 11
+        |     `-ImplicitCastExpr 0x7fd64b802188 <col:16, col:67> 'char' <IntegralCast>
+        |       `-BinaryOperator 0x7fd64b802160 <col:16, col:67> 'int' '|'
+        |         |-BinaryOperator 0x7fd64b801ec0 <col:16, col:37> 'int' '&'
+        |         | |-ImplicitCastExpr 0x7fd64b801ea8 <col:16> 'int' <LValueToRValue>
+        |         | | `-DeclRefExpr 0x7fd64b801cb0 <col:16> 'int' lvalue Var 0x7fd64b026120 'n' 'int'
+        |         | `-BinaryOperator 0x7fd64b801e80 <col:20, col:37> 'int' '>>'
+        |         |   |-BinaryOperator 0x7fd64b801e38 <col:20, col:32> 'int' '-'
+        |         |   | |-ImplicitCastExpr 0x7fd64b801df0 <col:20> 'int' <LValueToRValue>
+        |         |   | | `-DeclRefExpr 0x7fd64b801cd8 <col:20> 'int' lvalue ParmVar 0x7fd64b025d70 'm' 'int'
+        |         |   | `-ImplicitCastExpr 0x7fd64b801e20 <col:24, col:32> 'int' <IntegralCast>
+        |         |   |   `-ImplicitCastExpr 0x7fd64b801e08 <col:24, col:32> 'char' <LValueToRValue>
+        |         |   |     `-ArraySubscriptExpr 0x7fd64b801dc8 <col:24, col:32> 'char' lvalue
+        |         |   |       |-ImplicitCastExpr 0x7fd64b801db0 <col:24> 'char *' <LValueToRValue>
+        |         |   |       | `-DeclRefExpr 0x7fd64b801d00 <col:24> 'char *' lvalue ParmVar 0x7fd64b025c08 'h' 'char *'
+        |         |   |       `-BinaryOperator 0x7fd64b801d88 <col:26, col:30> 'int' '+'
+        |         |   |         |-ImplicitCastExpr 0x7fd64b801d70 <col:26> 'int' <LValueToRValue>
+        |         |   |         | `-DeclRefExpr 0x7fd64b801d28 <col:26> 'int' lvalue ParmVar 0x7fd64b025de8 'j' 'int'
+        |         |   |         `-IntegerLiteral 0x7fd64b801d50 <col:30> 'int' 11
+        |         |   `-IntegerLiteral 0x7fd64b801e60 <col:37> 'int' 31
+        |         `-BinaryOperator 0x7fd64b802138 <col:42, col:67> 'int' '&'
+        |           |-ImplicitCastExpr 0x7fd64b802120 <col:42> 'int' <LValueToRValue>
+        |           | `-DeclRefExpr 0x7fd64b801ee8 <col:42> 'int' lvalue Var 0x7fd64b0261f0 's' 'int'
+        |           `-UnaryOperator 0x7fd64b802100 <col:46, col:67> 'int' prefix '~'
+        |             `-ParenExpr 0x7fd64b8020e0 <col:47, col:67> 'int'
+        |               `-BinaryOperator 0x7fd64b8020b8 <col:48, col:65> 'int' '>>'
+        |                 |-BinaryOperator 0x7fd64b802070 <col:48, col:60> 'int' '-'
+        |                 | |-ImplicitCastExpr 0x7fd64b802028 <col:48> 'int' <LValueToRValue>
+        |                 | | `-DeclRefExpr 0x7fd64b801f10 <col:48> 'int' lvalue ParmVar 0x7fd64b025d70 'm' 'int'
+        |                 | `-ImplicitCastExpr 0x7fd64b802058 <col:52, col:60> 'int' <IntegralCast>
+        |                 |   `-ImplicitCastExpr 0x7fd64b802040 <col:52, col:60> 'char' <LValueToRValue>
+        |                 |     `-ArraySubscriptExpr 0x7fd64b802000 <col:52, col:60> 'char' lvalue
+        |                 |       |-ImplicitCastExpr 0x7fd64b801fe8 <col:52> 'char *' <LValueToRValue>
+        |                 |       | `-DeclRefExpr 0x7fd64b801f38 <col:52> 'char *' lvalue ParmVar 0x7fd64b025c08 'h' 'char *'
+        |                 |       `-BinaryOperator 0x7fd64b801fc0 <col:54, col:58> 'int' '+'
+        |                 |         |-ImplicitCastExpr 0x7fd64b801fa8 <col:54> 'int' <LValueToRValue>
+        |                 |         | `-DeclRefExpr 0x7fd64b801f60 <col:54> 'int' lvalue ParmVar 0x7fd64b025de8 'j' 'int'
+        |                 |         `-IntegerLiteral 0x7fd64b801f88 <col:58> 'int' 11
+        |                 `-IntegerLiteral 0x7fd64b802098 <col:65> 'int' 31
+        `-WhileStmt 0x7fd64b802330 <line:30:7, line:31:2>
+          |-<<<NULL>>>
+          |-BinaryOperator 0x7fd64b8022f8 <line:30:14, col:18> 'int' '<'
+          | |-ImplicitCastExpr 0x7fd64b8022c8 <col:14> 'int' <LValueToRValue>
+          | | `-DeclRefExpr 0x7fd64b802278 <col:14> 'int' lvalue ParmVar 0x7fd64b025de8 'j' 'int'
+          | `-ImplicitCastExpr 0x7fd64b8022e0 <col:18> 'int' <LValueToRValue>
+          |   `-DeclRefExpr 0x7fd64b8022a0 <col:18> 'int' lvalue Var 0x7fd64b025b68 'f' 'int'
+          `-NullStmt 0x7fd64b802320 <line:31:2>

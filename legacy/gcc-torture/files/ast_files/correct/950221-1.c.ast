@@ -1,0 +1,48 @@
+FileAST: 
+  Decl: v, [], [], []
+    TypeDecl: v, []
+      IdentifierType: ['short']
+    UnaryOp: -
+      Constant: int, 1
+  Typedef: atype, [], ['typedef']
+    TypeDecl: atype, []
+      Struct: None
+        Decl: network, [], [], []
+          TypeDecl: network, []
+            IdentifierType: ['short']
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        TypeDecl: f, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: config, [], ['static'], []
+        TypeDecl: config, []
+          IdentifierType: ['atype']
+      Decl: cp, [], [], []
+        PtrDecl: []
+          TypeDecl: cp, []
+            IdentifierType: ['atype']
+      Decl: net, [], [], []
+        TypeDecl: net, []
+          IdentifierType: ['short']
+      Assignment: =
+        ID: cp
+        UnaryOp: &
+          ID: config
+      Assignment: =
+        StructRef: ->
+          ID: cp
+          ID: network
+        TernaryOp: 
+          BinaryOp: ==
+            ID: v
+            UnaryOp: -
+              Constant: int, 1
+          Constant: int, 100
+          ID: v
+      Assignment: =
+        ID: net
+        StructRef: ->
+          ID: cp
+          ID: network

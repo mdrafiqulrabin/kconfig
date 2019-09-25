@@ -1,0 +1,221 @@
+c_files/pr44468.c:16:29: warning: unknown attribute 'noclone' ignored [-Wunknown-attributes]
+int __attribute__((noinline,noclone))
+                            ^
+c_files/pr44468.c:24:29: warning: unknown attribute 'noclone' ignored [-Wunknown-attributes]
+int __attribute__((noinline,noclone))
+                            ^
+c_files/pr44468.c:32:29: warning: unknown attribute 'noclone' ignored [-Wunknown-attributes]
+int __attribute__((noinline,noclone))
+                            ^
+3 warnings generated.
+TranslationUnitDecl 0x7f892b0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f892b026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f892b026740 '__int128'
+|-TypedefDecl 0x7f892b026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f892b026760 'unsigned __int128'
+|-TypedefDecl 0x7f892b026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f892b026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f892b026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f892b026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f892b026dc0 'char *'
+|   `-BuiltinType 0x7f892b026560 'char'
+|-TypedefDecl 0x7f892b0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f892b027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f892b026ee0 'struct __va_list_tag'
+|     `-Record 0x7f892b026e58 '__va_list_tag'
+|-TypedefDecl 0x7f892b027138 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include/stddef.h:51:1, col:26> col:26 ptrdiff_t 'long'
+| `-BuiltinType 0x7f892b0265e0 'long'
+|-TypedefDecl 0x7f892b0271a8 <line:62:1, col:23> col:23 size_t 'unsigned long'
+| `-BuiltinType 0x7f892b026680 'unsigned long'
+|-TypedefDecl 0x7f892b82a018 <line:90:1, col:24> col:24 wchar_t 'int'
+| `-BuiltinType 0x7f892b0265c0 'int'
+|-TypedefDecl 0x7f892b82a088 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include/__stddef_max_align_t.h:32:1, col:21> col:21 max_align_t 'long double'
+| `-BuiltinType 0x7f892b026700 'long double'
+|-RecordDecl 0x7f892b82a0e0 <c_files/pr44468.c:3:1, line:6:1> line:3:8 struct S definition
+| |-FieldDecl 0x7f892b82a1a8 <line:4:3, col:7> col:7 referenced i 'int'
+| `-FieldDecl 0x7f892b82a208 <line:5:3, col:7> col:7 referenced j 'int'
+|-RecordDecl 0x7f892b82a250 <line:7:1, line:10:1> line:7:8 struct R definition
+| |-FieldDecl 0x7f892b82a318 <line:8:3, col:7> col:7 k 'int'
+| `-FieldDecl 0x7f892b82a3b0 <line:9:3, col:12> col:12 referenced a 'struct S':'struct S'
+|-RecordDecl 0x7f892b82a3f8 <line:11:1, line:14:1> line:11:8 struct Q definition
+| |-FieldDecl 0x7f892b82a4b8 <line:12:3, col:9> col:9 k 'float'
+| `-FieldDecl 0x7f892b82a520 <line:13:3, col:12> col:12 referenced a 'struct S':'struct S'
+|-VarDecl 0x7f892b82a5c0 <line:15:1, col:10> col:10 used s 'struct Q':'struct Q'
+|-FunctionDecl 0x7f892b82a748 <line:16:1, line:23:1> line:17:1 used test1 'int (void *)'
+| |-ParmVarDecl 0x7f892b82a678 <col:8, col:14> col:14 used q 'void *'
+| |-CompoundStmt 0x7f892b82adb0 <line:18:1, line:23:1>
+| | |-DeclStmt 0x7f892b82aa90 <line:19:3, col:55>
+| | | `-VarDecl 0x7f892b82a8b0 <col:3, col:54> col:13 used b 'struct S *' cinit
+| | |   `-CStyleCastExpr 0x7f892b82aa68 <col:17, col:54> 'struct S *' <BitCast>
+| | |     `-ParenExpr 0x7f892b82aa48 <col:29, col:54> 'char *'
+| | |       `-BinaryOperator 0x7f892b82a9c8 <col:30, col:53> 'char *' '+'
+| | |         |-CStyleCastExpr 0x7f892b82a968 <col:30, col:38> 'char *' <BitCast>
+| | |         | `-ImplicitCastExpr 0x7f892b82a950 <col:38> 'void *' <LValueToRValue>
+| | |         |   `-DeclRefExpr 0x7f892b82a910 <col:38> 'void *' lvalue ParmVar 0x7f892b82a678 'q' 'void *'
+| | |         `-UnaryExprOrTypeTraitExpr 0x7f892b82a9a8 <col:42, col:53> 'unsigned long' sizeof 'int'
+| | |-BinaryOperator 0x7f892b82ab60 <line:20:3, col:11> 'int' '='
+| | | |-MemberExpr 0x7f892b82ab08 <col:3, col:7> 'int' lvalue .i 0x7f892b82a1a8
+| | | | `-MemberExpr 0x7f892b82aad0 <col:3, col:5> 'struct S':'struct S' lvalue .a 0x7f892b82a520
+| | | |   `-DeclRefExpr 0x7f892b82aaa8 <col:3> 'struct Q':'struct Q' lvalue Var 0x7f892b82a5c0 's' 'struct Q':'struct Q'
+| | | `-IntegerLiteral 0x7f892b82ab40 <col:11> 'int' 0
+| | |-BinaryOperator 0x7f892b82acc0 <line:21:3, col:10> 'int' '='
+| | | |-MemberExpr 0x7f892b82ac68 <col:3, col:6> 'int' lvalue ->i 0x7f892b82a1a8
+| | | | `-ImplicitCastExpr 0x7f892b82ac50 <col:3> 'struct S *' <LValueToRValue>
+| | | |   `-DeclRefExpr 0x7f892b82ac28 <col:3> 'struct S *' lvalue Var 0x7f892b82a8b0 'b' 'struct S *'
+| | | `-IntegerLiteral 0x7f892b82aca0 <col:10> 'int' 3
+| | `-ReturnStmt 0x7f892b82ad98 <line:22:3, col:14>
+| |   `-ImplicitCastExpr 0x7f892b82ad80 <col:10, col:14> 'int' <LValueToRValue>
+| |     `-MemberExpr 0x7f892b82ad48 <col:10, col:14> 'int' lvalue .i 0x7f892b82a1a8
+| |       `-MemberExpr 0x7f892b82ad10 <col:10, col:12> 'struct S':'struct S' lvalue .a 0x7f892b82a520
+| |         `-DeclRefExpr 0x7f892b82ace8 <col:10> 'struct Q':'struct Q' lvalue Var 0x7f892b82a5c0 's' 'struct Q':'struct Q'
+| `-NoInlineAttr 0x7f892b82a7e8 <line:16:20>
+|-FunctionDecl 0x7f892b82ae90 <line:24:1, line:31:1> line:25:1 used test2 'int (void *)'
+| |-ParmVarDecl 0x7f892b82ae00 <col:8, col:14> col:14 used q 'void *'
+| |-CompoundStmt 0x7f892b82d818 <line:26:1, line:31:1>
+| | |-DeclStmt 0x7f892b82d598 <line:27:3, col:36>
+| | | `-VarDecl 0x7f892b82afa0 <col:3, col:35> col:13 used b 'struct S *' cinit
+| | |   `-UnaryOperator 0x7f892b82d578 <col:17, col:35> 'struct S *' prefix '&'
+| | |     `-MemberExpr 0x7f892b82d540 <col:18, col:35> 'struct S':'struct S' lvalue ->a 0x7f892b82a3b0
+| | |       `-ParenExpr 0x7f892b82d520 <col:18, col:32> 'struct R *'
+| | |         `-CStyleCastExpr 0x7f892b82d4f8 <col:19, col:31> 'struct R *' <BitCast>
+| | |           `-ImplicitCastExpr 0x7f892b82d4e0 <col:31> 'void *' <LValueToRValue>
+| | |             `-DeclRefExpr 0x7f892b82d400 <col:31> 'void *' lvalue ParmVar 0x7f892b82ae00 'q' 'void *'
+| | |-BinaryOperator 0x7f892b82d668 <line:28:3, col:11> 'int' '='
+| | | |-MemberExpr 0x7f892b82d610 <col:3, col:7> 'int' lvalue .i 0x7f892b82a1a8
+| | | | `-MemberExpr 0x7f892b82d5d8 <col:3, col:5> 'struct S':'struct S' lvalue .a 0x7f892b82a520
+| | | |   `-DeclRefExpr 0x7f892b82d5b0 <col:3> 'struct Q':'struct Q' lvalue Var 0x7f892b82a5c0 's' 'struct Q':'struct Q'
+| | | `-IntegerLiteral 0x7f892b82d648 <col:11> 'int' 0
+| | |-BinaryOperator 0x7f892b82d728 <line:29:3, col:10> 'int' '='
+| | | |-MemberExpr 0x7f892b82d6d0 <col:3, col:6> 'int' lvalue ->i 0x7f892b82a1a8
+| | | | `-ImplicitCastExpr 0x7f892b82d6b8 <col:3> 'struct S *' <LValueToRValue>
+| | | |   `-DeclRefExpr 0x7f892b82d690 <col:3> 'struct S *' lvalue Var 0x7f892b82afa0 'b' 'struct S *'
+| | | `-IntegerLiteral 0x7f892b82d708 <col:10> 'int' 3
+| | `-ReturnStmt 0x7f892b82d800 <line:30:3, col:14>
+| |   `-ImplicitCastExpr 0x7f892b82d7e8 <col:10, col:14> 'int' <LValueToRValue>
+| |     `-MemberExpr 0x7f892b82d7b0 <col:10, col:14> 'int' lvalue .i 0x7f892b82a1a8
+| |       `-MemberExpr 0x7f892b82d778 <col:10, col:12> 'struct S':'struct S' lvalue .a 0x7f892b82a520
+| |         `-DeclRefExpr 0x7f892b82d750 <col:10> 'struct Q':'struct Q' lvalue Var 0x7f892b82a5c0 's' 'struct Q':'struct Q'
+| `-NoInlineAttr 0x7f892b82af30 <line:24:20>
+|-FunctionDecl 0x7f892b82d8f8 <line:32:1, line:38:1> line:33:1 used test3 'int (void *)'
+| |-ParmVarDecl 0x7f892b82d868 <col:8, col:14> col:14 used q 'void *'
+| |-CompoundStmt 0x7f892b82dda8 <line:34:1, line:38:1>
+| | |-BinaryOperator 0x7f892b82da98 <line:35:3, col:11> 'int' '='
+| | | |-MemberExpr 0x7f892b82da40 <col:3, col:7> 'int' lvalue .i 0x7f892b82a1a8
+| | | | `-MemberExpr 0x7f892b82da08 <col:3, col:5> 'struct S':'struct S' lvalue .a 0x7f892b82a520
+| | | |   `-DeclRefExpr 0x7f892b82d9e0 <col:3> 'struct Q':'struct Q' lvalue Var 0x7f892b82a5c0 's' 'struct Q':'struct Q'
+| | | `-IntegerLiteral 0x7f892b82da78 <col:11> 'int' 0
+| | |-BinaryOperator 0x7f892b82dcb8 <line:36:3, col:49> 'int' '='
+| | | |-MemberExpr 0x7f892b82dc60 <col:3, col:45> 'int' lvalue ->i 0x7f892b82a1a8
+| | | | `-ParenExpr 0x7f892b82dc40 <col:3, col:42> 'struct S *'
+| | | |   `-CStyleCastExpr 0x7f892b82dc18 <col:4, col:41> 'struct S *' <BitCast>
+| | | |     `-ParenExpr 0x7f892b82dbf8 <col:16, col:41> 'char *'
+| | | |       `-BinaryOperator 0x7f892b82db78 <col:17, col:40> 'char *' '+'
+| | | |         |-CStyleCastExpr 0x7f892b82db18 <col:17, col:25> 'char *' <BitCast>
+| | | |         | `-ImplicitCastExpr 0x7f892b82db00 <col:25> 'void *' <LValueToRValue>
+| | | |         |   `-DeclRefExpr 0x7f892b82dac0 <col:25> 'void *' lvalue ParmVar 0x7f892b82d868 'q' 'void *'
+| | | |         `-UnaryExprOrTypeTraitExpr 0x7f892b82db58 <col:29, col:40> 'unsigned long' sizeof 'int'
+| | | `-IntegerLiteral 0x7f892b82dc98 <col:49> 'int' 3
+| | `-ReturnStmt 0x7f892b82dd90 <line:37:3, col:14>
+| |   `-ImplicitCastExpr 0x7f892b82dd78 <col:10, col:14> 'int' <LValueToRValue>
+| |     `-MemberExpr 0x7f892b82dd40 <col:10, col:14> 'int' lvalue .i 0x7f892b82a1a8
+| |       `-MemberExpr 0x7f892b82dd08 <col:10, col:12> 'struct S':'struct S' lvalue .a 0x7f892b82a520
+| |         `-DeclRefExpr 0x7f892b82dce0 <col:10> 'struct Q':'struct Q' lvalue Var 0x7f892b82a5c0 's' 'struct Q':'struct Q'
+| `-NoInlineAttr 0x7f892b82d998 <line:32:20>
+|-FunctionDecl 0x7f892b82ded0 <line:39:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7f892b82df68 prev 0x7f892b82ded0 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+`-FunctionDecl 0x7f892b82e050 <line:40:1, line:60:1> line:41:1 main 'int ()'
+  `-CompoundStmt 0x7f892b82efc8 <line:42:1, line:60:1>
+    |-IfStmt 0x7f892b82e3c8 <line:43:3, line:46:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f892b82e368 <line:43:7, line:45:47> 'int' '||'
+    | | |-BinaryOperator 0x7f892b82e288 <line:43:7, line:44:47> 'int' '||'
+    | | | |-BinaryOperator 0x7f892b82e158 <line:43:7, col:36> 'int' '!='
+    | | | | |-UnaryExprOrTypeTraitExpr 0x7f892b82e100 <col:7, col:20> 'unsigned long' sizeof 'float'
+    | | | | `-UnaryExprOrTypeTraitExpr 0x7f892b82e138 <col:25, col:36> 'unsigned long' sizeof 'int'
+    | | | `-BinaryOperator 0x7f892b82e210 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include/stddef.h:120:24, c_files/pr44468.c:44:47> 'int' '!='
+    | | |   |-OffsetOfExpr 0x7f892b82e1a0 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include/stddef.h:120:24, col:47> 'unsigned long'
+    | | |   `-UnaryExprOrTypeTraitExpr 0x7f892b82e1f0 <c_files/pr44468.c:44:36, col:47> 'unsigned long' sizeof 'int'
+    | | `-BinaryOperator 0x7f892b82e340 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include/stddef.h:120:24, c_files/pr44468.c:45:47> 'int' '!='
+    | |   |-OffsetOfExpr 0x7f892b82e2d0 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include/stddef.h:120:24, col:47> 'unsigned long'
+    | |   `-UnaryExprOrTypeTraitExpr 0x7f892b82e320 <c_files/pr44468.c:45:36, col:47> 'unsigned long' sizeof 'int'
+    | |-ReturnStmt 0x7f892b82e3b0 <line:46:5, col:12>
+    | | `-IntegerLiteral 0x7f892b82e390 <col:12> 'int' 0
+    | `-<<<NULL>>>
+    |-BinaryOperator 0x7f892b82e4b8 <line:47:3, col:11> 'int' '='
+    | |-MemberExpr 0x7f892b82e460 <col:3, col:7> 'int' lvalue .i 0x7f892b82a1a8
+    | | `-MemberExpr 0x7f892b82e428 <col:3, col:5> 'struct S':'struct S' lvalue .a 0x7f892b82a520
+    | |   `-DeclRefExpr 0x7f892b82e400 <col:3> 'struct Q':'struct Q' lvalue Var 0x7f892b82a5c0 's' 'struct Q':'struct Q'
+    | `-IntegerLiteral 0x7f892b82e498 <col:11> 'int' 1
+    |-BinaryOperator 0x7f892b82e598 <line:48:3, col:11> 'int' '='
+    | |-MemberExpr 0x7f892b82e540 <col:3, col:7> 'int' lvalue .j 0x7f892b82a208
+    | | `-MemberExpr 0x7f892b82e508 <col:3, col:5> 'struct S':'struct S' lvalue .a 0x7f892b82a520
+    | |   `-DeclRefExpr 0x7f892b82e4e0 <col:3> 'struct Q':'struct Q' lvalue Var 0x7f892b82a5c0 's' 'struct Q':'struct Q'
+    | `-IntegerLiteral 0x7f892b82e578 <col:11> 'int' 2
+    |-IfStmt 0x7f892b82e818 <line:49:3, line:50:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f892b82e760 <line:49:7, col:29> 'int' '!='
+    | | |-CallExpr 0x7f892b82e710 <col:7, col:24> 'int'
+    | | | |-ImplicitCastExpr 0x7f892b82e6f8 <col:7> 'int (*)(void *)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7f892b82e5c0 <col:7> 'int (void *)' Function 0x7f892b82a748 'test1' 'int (void *)'
+    | | | `-CStyleCastExpr 0x7f892b82e6a0 <col:14, col:23> 'void *' <BitCast>
+    | | |   `-UnaryOperator 0x7f892b82e668 <col:22, col:23> 'struct Q *' prefix '&'
+    | | |     `-DeclRefExpr 0x7f892b82e5e8 <col:23> 'struct Q':'struct Q' lvalue Var 0x7f892b82a5c0 's' 'struct Q':'struct Q'
+    | | `-IntegerLiteral 0x7f892b82e740 <col:29> 'int' 3
+    | |-CallExpr 0x7f892b82e7f0 <line:50:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7f892b82e7d8 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7f892b82e788 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7f892b82df68 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-BinaryOperator 0x7f892b82e908 <line:51:3, col:11> 'int' '='
+    | |-MemberExpr 0x7f892b82e8b0 <col:3, col:7> 'int' lvalue .i 0x7f892b82a1a8
+    | | `-MemberExpr 0x7f892b82e878 <col:3, col:5> 'struct S':'struct S' lvalue .a 0x7f892b82a520
+    | |   `-DeclRefExpr 0x7f892b82e850 <col:3> 'struct Q':'struct Q' lvalue Var 0x7f892b82a5c0 's' 'struct Q':'struct Q'
+    | `-IntegerLiteral 0x7f892b82e8e8 <col:11> 'int' 1
+    |-BinaryOperator 0x7f892b82e9e8 <line:52:3, col:11> 'int' '='
+    | |-MemberExpr 0x7f892b82e990 <col:3, col:7> 'int' lvalue .j 0x7f892b82a208
+    | | `-MemberExpr 0x7f892b82e958 <col:3, col:5> 'struct S':'struct S' lvalue .a 0x7f892b82a520
+    | |   `-DeclRefExpr 0x7f892b82e930 <col:3> 'struct Q':'struct Q' lvalue Var 0x7f892b82a5c0 's' 'struct Q':'struct Q'
+    | `-IntegerLiteral 0x7f892b82e9c8 <col:11> 'int' 2
+    |-IfStmt 0x7f892b82ebb8 <line:53:3, line:54:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f892b82eb28 <line:53:7, col:29> 'int' '!='
+    | | |-CallExpr 0x7f892b82ead8 <col:7, col:24> 'int'
+    | | | |-ImplicitCastExpr 0x7f892b82eac0 <col:7> 'int (*)(void *)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7f892b82ea10 <col:7> 'int (void *)' Function 0x7f892b82ae90 'test2' 'int (void *)'
+    | | | `-CStyleCastExpr 0x7f892b82ea98 <col:14, col:23> 'void *' <BitCast>
+    | | |   `-UnaryOperator 0x7f892b82ea60 <col:22, col:23> 'struct Q *' prefix '&'
+    | | |     `-DeclRefExpr 0x7f892b82ea38 <col:23> 'struct Q':'struct Q' lvalue Var 0x7f892b82a5c0 's' 'struct Q':'struct Q'
+    | | `-IntegerLiteral 0x7f892b82eb08 <col:29> 'int' 3
+    | |-CallExpr 0x7f892b82eb90 <line:54:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7f892b82eb78 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7f892b82eb50 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7f892b82df68 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-BinaryOperator 0x7f892b82eca8 <line:55:3, col:11> 'int' '='
+    | |-MemberExpr 0x7f892b82ec50 <col:3, col:7> 'int' lvalue .i 0x7f892b82a1a8
+    | | `-MemberExpr 0x7f892b82ec18 <col:3, col:5> 'struct S':'struct S' lvalue .a 0x7f892b82a520
+    | |   `-DeclRefExpr 0x7f892b82ebf0 <col:3> 'struct Q':'struct Q' lvalue Var 0x7f892b82a5c0 's' 'struct Q':'struct Q'
+    | `-IntegerLiteral 0x7f892b82ec88 <col:11> 'int' 1
+    |-BinaryOperator 0x7f892b82ed88 <line:56:3, col:11> 'int' '='
+    | |-MemberExpr 0x7f892b82ed30 <col:3, col:7> 'int' lvalue .j 0x7f892b82a208
+    | | `-MemberExpr 0x7f892b82ecf8 <col:3, col:5> 'struct S':'struct S' lvalue .a 0x7f892b82a520
+    | |   `-DeclRefExpr 0x7f892b82ecd0 <col:3> 'struct Q':'struct Q' lvalue Var 0x7f892b82a5c0 's' 'struct Q':'struct Q'
+    | `-IntegerLiteral 0x7f892b82ed68 <col:11> 'int' 2
+    |-IfStmt 0x7f892b82ef58 <line:57:3, line:58:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f892b82eec8 <line:57:7, col:29> 'int' '!='
+    | | |-CallExpr 0x7f892b82ee78 <col:7, col:24> 'int'
+    | | | |-ImplicitCastExpr 0x7f892b82ee60 <col:7> 'int (*)(void *)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7f892b82edb0 <col:7> 'int (void *)' Function 0x7f892b82d8f8 'test3' 'int (void *)'
+    | | | `-CStyleCastExpr 0x7f892b82ee38 <col:14, col:23> 'void *' <BitCast>
+    | | |   `-UnaryOperator 0x7f892b82ee00 <col:22, col:23> 'struct Q *' prefix '&'
+    | | |     `-DeclRefExpr 0x7f892b82edd8 <col:23> 'struct Q':'struct Q' lvalue Var 0x7f892b82a5c0 's' 'struct Q':'struct Q'
+    | | `-IntegerLiteral 0x7f892b82eea8 <col:29> 'int' 3
+    | |-CallExpr 0x7f892b82ef30 <line:58:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7f892b82ef18 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7f892b82eef0 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7f892b82df68 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7f892b82efb0 <line:59:3, col:10>
+      `-IntegerLiteral 0x7f892b82ef90 <col:10> 'int' 0

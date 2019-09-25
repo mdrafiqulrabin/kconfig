@@ -1,0 +1,34 @@
+c_files/pr66208.c:9:3: warning: null passed to a callee that requires a non-null argument [-Wnonnull]
+  foo (0); /* { dg-message "note: in expansion" } */
+  ^    ~
+c_files/pr66208.c:5:36: note: expanded from macro 'foo'
+#define foo(p) foox (p, "p is null") /* { dg-warning "null argument" } */
+                     ~             ^
+1 warning generated.
+TranslationUnitDecl 0x7fd6b08264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd6b0826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd6b0826740 '__int128'
+|-TypedefDecl 0x7fd6b0826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd6b0826760 'unsigned __int128'
+|-TypedefDecl 0x7fd6b0826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd6b0826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd6b0826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd6b0826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd6b0826dc0 'char *'
+|   `-BuiltinType 0x7fd6b0826560 'char'
+|-TypedefDecl 0x7fd6b08270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd6b0827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd6b0826ee0 'struct __va_list_tag'
+|     `-Record 0x7fd6b0826e58 '__va_list_tag'
+|-FunctionDecl 0x7fd6b0878428 <c_files/pr66208.c:4:1, col:52> col:6 used foox 'void (char *, ...)'
+| |-ParmVarDecl 0x7fd6b0827138 <col:12, col:16> col:17 'char *'
+| `-NonNullAttr 0x7fd6b08784c8 <col:40, col:50> 0
+`-FunctionDecl 0x7fd6b0878620 <line:7:1, line:10:1> line:7:6 baz 'void (void)'
+  `-CompoundStmt 0x7fd6b0878818 <line:8:1, line:10:1>
+    `-CallExpr 0x7fd6b08787b0 <line:5:16, col:36> 'void'
+      |-ImplicitCastExpr 0x7fd6b0878798 <col:16> 'void (*)(char *, ...)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fd6b08786b8 <col:16> 'void (char *, ...)' Function 0x7fd6b0878428 'foox' 'void (char *, ...)'
+      |-ImplicitCastExpr 0x7fd6b08787e8 <line:9:8> 'char *' <NullToPointer>
+      | `-IntegerLiteral 0x7fd6b08786e0 <col:8> 'int' 0
+      `-ImplicitCastExpr 0x7fd6b0878800 <line:5:25> 'char *' <ArrayToPointerDecay>
+        `-StringLiteral 0x7fd6b0878738 <col:25> 'char [10]' lvalue "p is null"

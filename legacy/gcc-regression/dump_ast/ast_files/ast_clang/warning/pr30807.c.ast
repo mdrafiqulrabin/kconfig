@@ -1,0 +1,603 @@
+c_files/pr30807.c:181:23: warning: & has lower precedence than ==; == will be evaluated first [-Wparentheses]
+          if (atsv->sv_flags & 0x00000400 == 0x00000400)
+                             ^~~~~~~~~~~~~~~~~~~~~~~~~~
+c_files/pr30807.c:181:23: note: place parentheses around the '==' expression to silence this warning
+          if (atsv->sv_flags & 0x00000400 == 0x00000400)
+                             ^
+                               (                       )
+c_files/pr30807.c:181:23: note: place parentheses around the & expression to evaluate it first
+          if (atsv->sv_flags & 0x00000400 == 0x00000400)
+                             ^
+              (                          )
+1 warning generated.
+TranslationUnitDecl 0x7ff2dd0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff2dd026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff2dd026740 '__int128'
+|-TypedefDecl 0x7ff2dd026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff2dd026760 'unsigned __int128'
+|-TypedefDecl 0x7ff2dd026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff2dd026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff2dd026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff2dd026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff2dd026dc0 'char *'
+|   `-BuiltinType 0x7ff2dd026560 'char'
+|-TypedefDecl 0x7ff2dd0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff2dd027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff2dd026ee0 'struct __va_list_tag'
+|     `-Record 0x7ff2dd026e58 '__va_list_tag'
+|-TypedefDecl 0x7ff2dd027138 <c_files/pr30807.c:4:1, col:22> col:22 referenced size_t 'unsigned int'
+| `-BuiltinType 0x7ff2dd026660 'unsigned int'
+|-RecordDecl 0x7ff2dd825a00 <line:5:9, line:8:1> line:5:9 struct definition
+| `-FieldDecl 0x7ff2dd825c50 <line:7:3, col:60> col:17 __val 'unsigned long [16]'
+|-TypedefDecl 0x7ff2dd825cf0 <line:5:1, line:8:4> col:4 referenced __sigset_t 'struct __sigset_t':'__sigset_t'
+| `-ElaboratedType 0x7ff2dd825ca0 'struct __sigset_t' sugar
+|   `-RecordType 0x7ff2dd825a90 '__sigset_t'
+|     `-Record 0x7ff2dd825a00 ''
+|-RecordDecl 0x7ff2dd825d60 <line:9:1, line:12:1> line:9:8 struct __jmp_buf_tag definition
+| `-FieldDecl 0x7ff2dd825e40 <line:11:3, col:14> col:14 __saved_mask '__sigset_t':'__sigset_t'
+|-TypedefDecl 0x7ff2dd826018 <line:13:1, col:42> col:30 referenced sigjmp_buf 'struct __jmp_buf_tag [1]'
+| `-ConstantArrayType 0x7ff2dd825fb0 'struct __jmp_buf_tag [1]' 1 
+|   `-ElaboratedType 0x7ff2dd825ef0 'struct __jmp_buf_tag' sugar
+|     `-RecordType 0x7ff2dd825df0 'struct __jmp_buf_tag'
+|       `-Record 0x7ff2dd825d60 '__jmp_buf_tag'
+|-RecordDecl 0x7ff2dd826070 <line:14:1, line:21:1> line:14:8 struct stat definition
+| |-FieldDecl 0x7ff2dd826138 <line:16:3, col:13> col:13 st_dev 'long long'
+| |-FieldDecl 0x7ff2dd826198 <line:17:3, col:22> col:22 __pad1 'unsigned short'
+| |-FieldDecl 0x7ff2dd8261f8 <line:18:3, col:7> col:7 tm_isdst 'int'
+| |-FieldDecl 0x7ff2dd826258 <line:19:3, col:12> col:12 tm_gmtoff 'long'
+| `-FieldDecl 0x7ff2dd8262b8 <line:20:3, col:9> col:9 tm_zone 'char *'
+|-TypedefDecl 0x7ff2dd826330 <line:23:1, col:16> col:16 referenced STRLEN 'size_t':'unsigned int'
+| `-TypedefType 0x7ff2dd826300 'size_t' sugar
+|   |-Typedef 0x7ff2dd027138 'size_t'
+|   `-BuiltinType 0x7ff2dd026660 'unsigned int'
+|-RecordDecl 0x7ff2dd826388 <line:24:9, col:16> col:16 struct op
+|-TypedefDecl 0x7ff2dd826480 <col:1, col:19> col:19 referenced OP 'struct op':'struct op'
+| `-ElaboratedType 0x7ff2dd826430 'struct op' sugar
+|   `-RecordType 0x7ff2dd826410 'struct op'
+|     `-Record 0x7ff2dd826388 'op'
+|-RecordDecl 0x7ff2dd8264f0 <line:25:9, col:16> col:16 struct cop
+|-TypedefDecl 0x7ff2dd8265f0 <col:1, col:20> col:20 referenced COP 'struct cop':'struct cop'
+| `-ElaboratedType 0x7ff2dd8265a0 'struct cop' sugar
+|   `-RecordType 0x7ff2dd826580 'struct cop'
+|     `-Record 0x7ff2dd829a80 'cop'
+|-RecordDecl 0x7ff2dd826660 <line:26:9, col:16> col:16 struct interpreter
+|-TypedefDecl 0x7ff2dd826760 <col:1, col:28> col:28 referenced PerlInterpreter 'struct interpreter':'struct interpreter'
+| `-ElaboratedType 0x7ff2dd826710 'struct interpreter' sugar
+|   `-RecordType 0x7ff2dd8266f0 'struct interpreter'
+|     `-Record 0x7ff2dd829d38 'interpreter'
+|-RecordDecl 0x7ff2dd8267d0 <line:27:9, col:16> col:16 struct sv
+|-TypedefDecl 0x7ff2dd8268d0 <col:1, col:19> col:19 referenced SV 'struct sv':'struct sv'
+| `-ElaboratedType 0x7ff2dd826880 'struct sv' sugar
+|   `-RecordType 0x7ff2dd826860 'struct sv'
+|     `-Record 0x7ff2dd828780 'sv'
+|-RecordDecl 0x7ff2dd826940 <line:28:9, col:16> col:16 struct av
+|-TypedefDecl 0x7ff2dd827a50 <col:1, col:19> col:19 referenced AV 'struct av':'struct av'
+| `-ElaboratedType 0x7ff2dd827a00 'struct av' sugar
+|   `-RecordType 0x7ff2dd8269d0 'struct av'
+|     `-Record 0x7ff2dd826940 'av'
+|-RecordDecl 0x7ff2dd827ac0 <line:29:9, col:16> col:16 struct cv
+|-TypedefDecl 0x7ff2dd827bc0 <col:1, col:19> col:19 referenced CV 'struct cv':'struct cv'
+| `-ElaboratedType 0x7ff2dd827b70 'struct cv' sugar
+|   `-RecordType 0x7ff2dd827b50 'struct cv'
+|     `-Record 0x7ff2dd827ac0 'cv'
+|-RecordDecl 0x7ff2dd827c30 <line:30:9, col:16> col:16 struct gp
+|-TypedefDecl 0x7ff2dd827d30 <col:1, col:19> col:19 referenced GP 'struct gp':'struct gp'
+| `-ElaboratedType 0x7ff2dd827ce0 'struct gp' sugar
+|   `-RecordType 0x7ff2dd827cc0 'struct gp'
+|     `-Record 0x7ff2dd829530 'gp'
+|-RecordDecl 0x7ff2dd827da0 <line:31:9, col:16> col:16 struct gv
+|-TypedefDecl 0x7ff2dd827ea0 <col:1, col:19> col:19 referenced GV 'struct gv':'struct gv'
+| `-ElaboratedType 0x7ff2dd827e50 'struct gv' sugar
+|   `-RecordType 0x7ff2dd827e30 'struct gv'
+|     `-Record 0x7ff2dd828e68 'gv'
+|-RecordDecl 0x7ff2dd827f10 <line:32:9, col:16> col:16 struct xpv
+|-TypedefDecl 0x7ff2dd828010 <col:1, col:20> col:20 referenced XPV 'struct xpv':'struct xpv'
+| `-ElaboratedType 0x7ff2dd827fc0 'struct xpv' sugar
+|   `-RecordType 0x7ff2dd827fa0 'struct xpv'
+|     `-Record 0x7ff2dd8292d0 'xpv'
+|-RecordDecl 0x7ff2dd828080 <line:33:9, col:16> col:16 struct xpvio
+|-TypedefDecl 0x7ff2dd828180 <col:1, col:22> col:22 referenced XPVIO 'struct xpvio':'struct xpvio'
+| `-ElaboratedType 0x7ff2dd828130 'struct xpvio' sugar
+|   `-RecordType 0x7ff2dd828110 'struct xpvio'
+|     `-Record 0x7ff2dd8293d8 'xpvio'
+|-RecordDecl 0x7ff2dd8281f0 <line:34:9, col:15> col:15 union any
+|-TypedefDecl 0x7ff2dd8282f0 <col:1, col:19> col:19 referenced ANY 'union any':'union any'
+| `-ElaboratedType 0x7ff2dd8282a0 'union any' sugar
+|   `-RecordType 0x7ff2dd828280 'union any'
+|     `-Record 0x7ff2dd8281f0 'any'
+|-TypedefDecl 0x7ff2dd828378 <line:35:1, col:23> col:23 referenced U8 'unsigned char'
+| `-BuiltinType 0x7ff2dd026620 'unsigned char'
+|-TypedefDecl 0x7ff2dd8283e8 <line:36:1, col:14> col:14 referenced I32 'long'
+| `-BuiltinType 0x7ff2dd0265e0 'long'
+|-TypedefDecl 0x7ff2dd828458 <line:37:1, col:23> col:23 referenced U32 'unsigned long'
+| `-BuiltinType 0x7ff2dd026680 'unsigned long'
+|-TypedefDecl 0x7ff2dd8284e0 <line:38:1, col:13> col:13 referenced line_t 'U32':'unsigned long'
+| `-TypedefType 0x7ff2dd8284b0 'U32' sugar
+|   |-Typedef 0x7ff2dd828458 'U32'
+|   `-BuiltinType 0x7ff2dd026680 'unsigned long'
+|-RecordDecl 0x7ff2dd828538 <line:39:9, col:16> col:16 struct _PerlIO
+|-TypedefDecl 0x7ff2dd828630 <col:1, col:24> col:24 referenced PerlIOl 'struct _PerlIO':'struct _PerlIO'
+| `-ElaboratedType 0x7ff2dd8285e0 'struct _PerlIO' sugar
+|   `-RecordType 0x7ff2dd8285c0 'struct _PerlIO'
+|     `-Record 0x7ff2dd828538 '_PerlIO'
+|-TypedefDecl 0x7ff2dd828728 <line:40:1, col:18> col:18 referenced PerlIO 'PerlIOl *'
+| `-PointerType 0x7ff2dd8286f0 'PerlIOl *'
+|   `-TypedefType 0x7ff2dd8286a0 'PerlIOl' sugar
+|     |-Typedef 0x7ff2dd828630 'PerlIOl'
+|     `-ElaboratedType 0x7ff2dd8285e0 'struct _PerlIO' sugar
+|       `-RecordType 0x7ff2dd8285c0 'struct _PerlIO'
+|         `-Record 0x7ff2dd828538 '_PerlIO'
+|-RecordDecl 0x7ff2dd828780 prev 0x7ff2dd8267d0 <line:41:1, line:49:1> line:41:8 struct sv definition
+| |-FieldDecl 0x7ff2dd828820 <line:43:3, col:9> col:9 referenced sv_any 'void *'
+| |-FieldDecl 0x7ff2dd828878 <line:44:3, col:7> col:7 referenced sv_flags 'U32':'unsigned long'
+| |-RecordDecl 0x7ff2dd8288c0 <line:45:3, line:48:3> line:45:3 union definition
+| | `-FieldDecl 0x7ff2dd828988 <line:47:5, col:11> col:11 svu_pv 'char *'
+| `-FieldDecl 0x7ff2dd828e20 <line:45:3, line:48:5> col:5 sv_u 'union (anonymous union at c_files/pr30807.c:45:3)':'union sv::(anonymous at c_files/pr30807.c:45:3)'
+|-RecordDecl 0x7ff2dd828e68 prev 0x7ff2dd827da0 <line:50:1, line:57:1> line:50:8 struct gv definition
+| |-FieldDecl 0x7ff2dd828f00 <line:52:3, col:7> col:7 sv_flags 'U32':'unsigned long'
+| |-RecordDecl 0x7ff2dd828f48 <line:53:3, line:56:3> line:53:3 union definition
+| | `-FieldDecl 0x7ff2dd829078 <line:55:5, col:9> col:9 referenced svu_gp 'GP *'
+| `-FieldDecl 0x7ff2dd829110 <line:53:3, line:56:5> col:5 referenced sv_u 'union (anonymous union at c_files/pr30807.c:53:3)':'union gv::(anonymous at c_files/pr30807.c:53:3)'
+|-RecordDecl 0x7ff2dd829158 <line:58:1, line:61:1> line:58:8 struct io definition
+| `-FieldDecl 0x7ff2dd829288 <line:60:3, col:10> col:10 sv_any 'XPVIO *'
+|-RecordDecl 0x7ff2dd8292d0 prev 0x7ff2dd827f10 <line:62:1, line:65:1> line:62:8 struct xpv definition
+| `-FieldDecl 0x7ff2dd829390 <line:64:3, col:10> col:10 referenced xpv_cur 'STRLEN':'unsigned int'
+|-RecordDecl 0x7ff2dd8293d8 prev 0x7ff2dd828080 <line:66:1, line:69:1> line:66:8 struct xpvio definition
+| `-FieldDecl 0x7ff2dd8294e8 <line:68:3, col:11> col:11 xio_ofp 'PerlIO *'
+|-RecordDecl 0x7ff2dd829530 prev 0x7ff2dd827c30 <line:70:1, line:74:1> line:70:8 struct gp definition
+| |-FieldDecl 0x7ff2dd829648 <line:72:3, col:7> col:7 referenced gp_sv 'SV *'
+| `-FieldDecl 0x7ff2dd829740 <line:73:3, col:14> col:14 gp_io 'struct io *'
+|-RecordDecl 0x7ff2dd829788 <line:75:1, line:80:1> line:75:8 struct jmpenv definition
+| |-FieldDecl 0x7ff2dd8298e0 <line:77:3, col:18> col:18 referenced je_prev 'struct jmpenv *'
+| |-FieldDecl 0x7ff2dd829960 <line:78:3, col:14> col:14 referenced je_buf 'sigjmp_buf':'struct __jmp_buf_tag [1]'
+| `-FieldDecl 0x7ff2dd8299c0 <line:79:3, col:7> col:7 referenced je_ret 'int'
+|-TypedefDecl 0x7ff2dd829a28 <line:81:1, col:23> col:23 referenced JMPENV 'struct jmpenv':'struct jmpenv'
+| `-ElaboratedType 0x7ff2dd829830 'struct jmpenv' sugar
+|   `-RecordType 0x7ff2dd829810 'struct jmpenv'
+|     `-Record 0x7ff2dd829788 'jmpenv'
+|-RecordDecl 0x7ff2dd829a80 prev 0x7ff2dd8264f0 <line:82:1, line:86:1> line:82:8 struct cop definition
+| |-FieldDecl 0x7ff2dd829b40 <line:84:3, col:10> col:10 referenced cop_line 'line_t':'unsigned long'
+| |-RecordDecl 0x7ff2dd829b88 parent 0x7ff2dd0264d0 <line:85:3, col:10> col:10 struct refcounted_he
+| `-FieldDecl 0x7ff2dd829cf0 <col:3, col:25> col:25 cop_hints_hash 'struct refcounted_he *'
+|-RecordDecl 0x7ff2dd829d38 prev 0x7ff2dd826660 <line:87:1, line:129:1> line:87:8 struct interpreter definition
+| |-FieldDecl 0x7ff2dd829e40 <line:89:3, col:8> col:8 referenced Istack_sp 'SV **'
+| |-FieldDecl 0x7ff2dd829f18 <line:90:3, col:7> col:7 Iop 'OP *'
+| |-FieldDecl 0x7ff2dd829f78 <line:91:3, col:8> col:8 Icurpad 'SV **'
+| |-FieldDecl 0x7ff2dd829fd8 <line:92:3, col:8> col:8 referenced Istack_base 'SV **'
+| |-FieldDecl 0x7ff2dd82a038 <line:93:3, col:8> col:8 Istack_max 'SV **'
+| |-FieldDecl 0x7ff2dd82a108 <line:94:3, col:8> col:8 Iscopestack 'I32 *'
+| |-FieldDecl 0x7ff2dd82a160 <line:95:3, col:7> col:7 referenced Iscopestack_ix 'I32':'long'
+| |-FieldDecl 0x7ff2dd82a1b8 <line:96:3, col:7> col:7 Iscopestack_max 'I32':'long'
+| |-FieldDecl 0x7ff2dd82a288 <line:97:3, col:8> col:8 Isavestack 'ANY *'
+| |-FieldDecl 0x7ff2dd82a2e0 <line:98:3, col:7> col:7 Isavestack_ix 'I32':'long'
+| |-FieldDecl 0x7ff2dd82a338 <line:99:3, col:7> col:7 Isavestack_max 'I32':'long'
+| |-FieldDecl 0x7ff2dd82a398 <line:100:3, col:8> col:8 Itmps_stack 'SV **'
+| |-FieldDecl 0x7ff2dd82a3f0 <line:101:3, col:7> col:7 Itmps_ix 'I32':'long'
+| |-FieldDecl 0x7ff2dd82a448 <line:102:3, col:7> col:7 Itmps_floor 'I32':'long'
+| |-FieldDecl 0x7ff2dd82a4a0 <line:103:3, col:7> col:7 Itmps_max 'I32':'long'
+| |-FieldDecl 0x7ff2dd82a4f8 <line:104:3, col:7> col:7 Imodcount 'I32':'long'
+| |-FieldDecl 0x7ff2dd82a550 <line:105:3, col:8> col:8 Imarkstack 'I32 *'
+| |-FieldDecl 0x7ff2dd82a5a8 <line:106:3, col:8> col:8 referenced Imarkstack_ptr 'I32 *'
+| |-FieldDecl 0x7ff2dd82a600 <line:107:3, col:8> col:8 Imarkstack_max 'I32 *'
+| |-FieldDecl 0x7ff2dd82a658 <line:108:3, col:7> col:7 ISv 'SV *'
+| |-FieldDecl 0x7ff2dd82a728 <line:109:3, col:8> col:8 IXpv 'XPV *'
+| |-FieldDecl 0x7ff2dd82a780 <line:110:3, col:10> col:10 Ina 'STRLEN':'unsigned int'
+| |-FieldDecl 0x7ff2dd82a820 <line:111:3, col:15> col:15 Istatbuf 'struct stat':'struct stat'
+| |-FieldDecl 0x7ff2dd82a888 <line:112:3, col:15> col:15 Istatcache 'struct stat':'struct stat'
+| |-FieldDecl 0x7ff2dd82a8e0 <line:113:3, col:7> col:7 referenced Irestartop 'OP *'
+| |-FieldDecl 0x7ff2dd82a9b8 <line:114:3, col:17> col:17 referenced Icurcop 'COP *volatile'
+| |-FieldDecl 0x7ff2dd82aa58 <line:115:3, col:11> col:11 referenced Itop_env 'JMPENV *'
+| |-FieldDecl 0x7ff2dd82aad0 <line:116:3, col:6> col:6 Iexit_flags 'U8':'unsigned char'
+| |-FieldDecl 0x7ff2dd82ab28 <line:117:3, col:7> col:7 referenced Istatusvalue 'I32':'long'
+| |-FieldDecl 0x7ff2dd82ab80 <line:118:3, col:7> col:7 referenced Istatusvalue_posix 'I32':'long'
+| |-FieldDecl 0x7ff2dd82ac58 <line:119:3, col:7> col:7 Istderrgv 'GV *'
+| |-FieldDecl 0x7ff2dd82acb0 <line:120:3, col:7> col:7 referenced Ierrgv 'GV *'
+| |-FieldDecl 0x7ff2dd82ad88 <line:121:3, col:7> col:7 referenced Ibeginav 'AV *'
+| |-FieldDecl 0x7ff2dd82c600 <line:122:3, col:7> col:7 referenced Iunitcheckav 'AV *'
+| |-FieldDecl 0x7ff2dd82c658 <line:123:3, col:7> col:7 referenced Icompiling 'COP':'struct cop'
+| |-FieldDecl 0x7ff2dd82c6b0 <line:124:3, col:8> col:8 referenced Isavebegin 'char'
+| |-FieldDecl 0x7ff2dd82c708 <line:125:3, col:16> col:16 referenced Idebug 'volatile U32':'volatile unsigned long'
+| |-FieldDecl 0x7ff2dd82c760 <line:126:3, col:7> col:7 referenced Ibeginav_save 'AV *'
+| |-FieldDecl 0x7ff2dd82c7b8 <line:127:3, col:7> col:7 referenced Icheckav_save 'AV *'
+| `-FieldDecl 0x7ff2dd82c810 <line:128:3, col:7> col:7 referenced Iunitcheckav_save 'AV *'
+|-FunctionDecl 0x7ff2dd82cab0 <line:131:1, line:132:27> line:131:6 used S_my_exit_jump 'void (PerlInterpreter *) __attribute__((noreturn))'
+| `-ParmVarDecl 0x7ff2dd82c8e8 <col:22, col:39> col:39 my_perl 'PerlInterpreter *'
+|   `-UnusedAttr 0x7ff2dd82c948 <col:62> unused
+|-FunctionDecl 0x7ff2dd82cd28 <line:134:1, col:39> col:5 used Perl_av_len 'int (PerlInterpreter *, AV *)'
+| |-ParmVarDecl 0x7ff2dd82cba0 <col:18, col:33> col:34 'PerlInterpreter *'
+| `-ParmVarDecl 0x7ff2dd82cc10 <col:36, col:38> col:39 'AV *'
+|-FunctionDecl 0x7ff2dd82d050 <line:135:1, col:58> col:6 used Perl_av_create_and_push 'void (PerlInterpreter *, AV **, SV *)'
+| |-ParmVarDecl 0x7ff2dd82cde0 <col:31, col:46> col:47 'PerlInterpreter *'
+| |-ParmVarDecl 0x7ff2dd82ceb0 <col:49, col:52> col:53 'AV **'
+| `-ParmVarDecl 0x7ff2dd82cf20 <col:55, col:57> col:58 'SV *'
+|-FunctionDecl 0x7ff2dd82d380 <line:136:5> col:5 implicit used __sigsetjmp 'int (struct __jmp_buf_tag *, int)' extern
+| |-ParmVarDecl 0x7ff2dd82d418 <<invalid sloc>> <invalid sloc> 'struct __jmp_buf_tag *'
+| |-ParmVarDecl 0x7ff2dd82d478 <<invalid sloc>> <invalid sloc> 'int'
+| `-ReturnsTwiceAttr 0x7ff2dd82d4e8 <col:5> Implicit
+|-FunctionDecl 0x7ff2dd82d530 prev 0x7ff2dd82d380 <col:1, col:46> col:5 used __sigsetjmp 'int (struct __jmp_buf_tag *, int)'
+| |-ParmVarDecl 0x7ff2dd82d1a0 <col:18, col:29> col:29 env 'struct __jmp_buf_tag *':'struct __jmp_buf_tag *'
+| |-ParmVarDecl 0x7ff2dd82d218 <col:34, col:38> col:38 savemask 'int'
+| `-ReturnsTwiceAttr 0x7ff2dd82e638 <col:5> Inherited Implicit
+|-FunctionDecl 0x7ff2dd82e950 <line:137:1, col:60> col:6 used Perl_sv_2pv_flags 'void (PerlInterpreter *, SV *, STRLEN *, int)'
+| |-ParmVarDecl 0x7ff2dd82e658 <col:25, col:40> col:41 'PerlInterpreter *'
+| |-ParmVarDecl 0x7ff2dd82e6c8 <col:43, col:45> col:46 'SV *'
+| |-ParmVarDecl 0x7ff2dd82e798 <col:48, col:54> col:55 'STRLEN *'
+| `-ParmVarDecl 0x7ff2dd82e810 <col:57> col:60 'int'
+|-FunctionDecl 0x7ff2dd82ede0 <line:138:1, line:139:56> line:138:6 used Perl_deb 'void (PerlInterpreter *, const char *, const char *, int, const char *, int)'
+| |-ParmVarDecl 0x7ff2dd82ea18 <col:16, col:31> col:32 'PerlInterpreter *'
+| |-ParmVarDecl 0x7ff2dd82ea90 <line:139:9, col:19> col:20 'const char *'
+| |-ParmVarDecl 0x7ff2dd82eb08 <col:22, col:32> col:33 'const char *'
+| |-ParmVarDecl 0x7ff2dd82eb80 <col:35> col:38 'int'
+| |-ParmVarDecl 0x7ff2dd82ebf8 <col:40, col:50> col:51 'const char *'
+| `-ParmVarDecl 0x7ff2dd82ec70 <col:53> col:56 'int'
+|-FunctionDecl 0x7ff2dd82f0e0 <line:140:1, col:54> col:6 used Perl_croak 'void (PerlInterpreter *, const char *, void *)'
+| |-ParmVarDecl 0x7ff2dd82eeb8 <col:18, col:33> col:34 'PerlInterpreter *'
+| |-ParmVarDecl 0x7ff2dd82ef30 <col:36, col:46> col:47 'const char *'
+| `-ParmVarDecl 0x7ff2dd82efa8 <col:49, col:53> col:54 'void *'
+|-FunctionDecl 0x7ff2dd82f250 <line:141:1, col:15> col:6 used foo 'void (void)'
+`-FunctionDecl 0x7ff2dd82f550 <line:143:1, line:217:1> line:144:1 Perl_call_list 'void (PerlInterpreter *, I32, AV *)'
+  |-ParmVarDecl 0x7ff2dd82f2f8 <col:17, col:34> col:34 used my_perl 'PerlInterpreter *'
+  | `-UnusedAttr 0x7ff2dd82f358 <col:57> unused
+  |-ParmVarDecl 0x7ff2dd82f3b0 <line:145:3, col:7> col:7 used oldscope 'I32':'long'
+  |-ParmVarDecl 0x7ff2dd82f420 <col:17, col:21> col:21 used paramList 'AV *'
+  `-CompoundStmt 0x7ff2dd837ea0 <line:146:1, line:217:1>
+    |-DeclStmt 0x7ff2dd82f670 <line:147:3, col:11>
+    | `-VarDecl 0x7ff2dd82f610 <col:3, col:7> col:7 used atsv 'SV *'
+    |-DeclStmt 0x7ff2dd82f778 <line:148:3, col:9>
+    | `-VarDecl 0x7ff2dd82f718 <col:3, col:7> col:7 used cv 'CV *'
+    |-DeclStmt 0x7ff2dd82f800 <line:149:3, col:13>
+    | `-VarDecl 0x7ff2dd82f7a0 <col:3, col:10> col:10 used len 'STRLEN':'unsigned int'
+    |-DeclStmt 0x7ff2dd82f890 <line:150:3, col:10>
+    | `-VarDecl 0x7ff2dd82f830 <col:3, col:7> col:7 used ret 'int'
+    |-DeclStmt 0x7ff2dd82f918 <line:151:3, col:17>
+    | `-VarDecl 0x7ff2dd82f8b8 <col:3, col:10> col:10 used cur_env 'JMPENV':'struct jmpenv'
+    |-DeclStmt 0x7ff2dd82f9a0 <line:152:3, col:13>
+    | `-VarDecl 0x7ff2dd82f940 <col:3, col:7> col:7 used shplep 'GV *'
+    |-DeclStmt 0x7ff2dd82fa28 <line:153:3, col:26>
+    | `-VarDecl 0x7ff2dd82f9c8 <col:3, col:19> col:19 used oldline 'volatile line_t':'volatile unsigned long'
+    |-BinaryOperator 0x7ff2dd82fc60 <line:155:3, col:63> 'line_t':'unsigned long' '='
+    | |-DeclRefExpr 0x7ff2dd82fa40 <col:3> 'volatile line_t':'volatile unsigned long' lvalue Var 0x7ff2dd82f9c8 'oldline' 'volatile line_t':'volatile unsigned long'
+    | `-ConditionalOperator 0x7ff2dd82fc30 <col:13, col:63> 'unsigned long'
+    |   |-ImplicitCastExpr 0x7ff2dd82fbe8 <col:13, col:30> 'COP *' <LValueToRValue>
+    |   | `-ParenExpr 0x7ff2dd82fae0 <col:13, col:30> 'COP *volatile' lvalue
+    |   |   `-MemberExpr 0x7ff2dd82faa8 <col:14, col:23> 'COP *volatile' lvalue ->Icurcop 0x7ff2dd82a9b8
+    |   |     `-ImplicitCastExpr 0x7ff2dd82fa90 <col:14> 'PerlInterpreter *' <LValueToRValue>
+    |   |       `-DeclRefExpr 0x7ff2dd82fa68 <col:14> 'PerlInterpreter *' lvalue ParmVar 0x7ff2dd82f2f8 'my_perl' 'PerlInterpreter *'
+    |   |-ImplicitCastExpr 0x7ff2dd82fc00 <col:34, col:52> 'line_t':'unsigned long' <LValueToRValue>
+    |   | `-MemberExpr 0x7ff2dd82fb90 <col:34, col:52> 'line_t':'unsigned long' lvalue ->cop_line 0x7ff2dd829b40
+    |   |   `-ImplicitCastExpr 0x7ff2dd82fb78 <col:34, col:43> 'COP *' <LValueToRValue>
+    |   |     `-MemberExpr 0x7ff2dd82fb40 <col:34, col:43> 'COP *volatile' lvalue ->Icurcop 0x7ff2dd82a9b8
+    |   |       `-ImplicitCastExpr 0x7ff2dd82fb28 <col:34> 'PerlInterpreter *' <LValueToRValue>
+    |   |         `-DeclRefExpr 0x7ff2dd82fb00 <col:34> 'PerlInterpreter *' lvalue ParmVar 0x7ff2dd82f2f8 'my_perl' 'PerlInterpreter *'
+    |   `-ImplicitCastExpr 0x7ff2dd82fc18 <col:63> 'unsigned long' <IntegralCast>
+    |     `-IntegerLiteral 0x7ff2dd82fbc8 <col:63> 'int' 0
+    `-WhileStmt 0x7ff2dd837e80 <line:157:3, line:216:5>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7ff2dd82fdf8 <line:157:10, col:46> 'int' '>='
+      | |-CallExpr 0x7ff2dd82fd70 <col:10, col:41> 'int'
+      | | |-ImplicitCastExpr 0x7ff2dd82fd58 <col:10> 'int (*)(PerlInterpreter *, AV *)' <FunctionToPointerDecay>
+      | | | `-DeclRefExpr 0x7ff2dd82fc88 <col:10> 'int (PerlInterpreter *, AV *)' Function 0x7ff2dd82cd28 'Perl_av_len' 'int (PerlInterpreter *, AV *)'
+      | | |-ImplicitCastExpr 0x7ff2dd82fda8 <col:23> 'PerlInterpreter *' <LValueToRValue>
+      | | | `-DeclRefExpr 0x7ff2dd82fcb0 <col:23> 'PerlInterpreter *' lvalue ParmVar 0x7ff2dd82f2f8 'my_perl' 'PerlInterpreter *'
+      | | `-ImplicitCastExpr 0x7ff2dd82fdc0 <col:32> 'AV *' <LValueToRValue>
+      | |   `-DeclRefExpr 0x7ff2dd82fcd8 <col:32> 'AV *' lvalue ParmVar 0x7ff2dd82f420 'paramList' 'AV *'
+      | `-IntegerLiteral 0x7ff2dd82fdd8 <col:46> 'int' 0
+      `-CompoundStmt 0x7ff2dd837e50 <line:158:5, line:216:5>
+        |-IfStmt 0x7ff2dd835928 <line:159:7, line:171:2>
+        | |-<<<NULL>>>
+        | |-<<<NULL>>>
+        | |-ImplicitCastExpr 0x7ff2dd82fe98 <line:159:11, col:20> 'char' <LValueToRValue>
+        | | `-MemberExpr 0x7ff2dd82fe60 <col:11, col:20> 'char' lvalue ->Isavebegin 0x7ff2dd82c6b0
+        | |   `-ImplicitCastExpr 0x7ff2dd82fe48 <col:11> 'PerlInterpreter *' <LValueToRValue>
+        | |     `-DeclRefExpr 0x7ff2dd82fe20 <col:11> 'PerlInterpreter *' lvalue ParmVar 0x7ff2dd82f2f8 'my_perl' 'PerlInterpreter *'
+        | |-CompoundStmt 0x7ff2dd835908 <line:160:2, line:171:2>
+        | | `-IfStmt 0x7ff2dd8358d0 <line:161:4, line:170:17>
+        | |   |-<<<NULL>>>
+        | |   |-<<<NULL>>>
+        | |   |-BinaryOperator 0x7ff2dd82ff80 <line:161:8, col:30> 'int' '=='
+        | |   | |-ImplicitCastExpr 0x7ff2dd82ff50 <col:8> 'AV *' <LValueToRValue>
+        | |   | | `-DeclRefExpr 0x7ff2dd82feb0 <col:8> 'AV *' lvalue ParmVar 0x7ff2dd82f420 'paramList' 'AV *'
+        | |   | `-ImplicitCastExpr 0x7ff2dd82ff68 <col:21, col:30> 'AV *' <LValueToRValue>
+        | |   |   `-MemberExpr 0x7ff2dd82ff18 <col:21, col:30> 'AV *' lvalue ->Ibeginav 0x7ff2dd82ad88
+        | |   |     `-ImplicitCastExpr 0x7ff2dd82ff00 <col:21> 'PerlInterpreter *' <LValueToRValue>
+        | |   |       `-DeclRefExpr 0x7ff2dd82fed8 <col:21> 'PerlInterpreter *' lvalue ParmVar 0x7ff2dd82f2f8 'my_perl' 'PerlInterpreter *'
+        | |   |-CompoundStmt 0x7ff2dd8303a8 <line:162:6, line:167:6>
+        | |   | |-CallExpr 0x7ff2dd830180 <line:163:8, line:164:20> 'void'
+        | |   | | |-ImplicitCastExpr 0x7ff2dd830168 <line:163:8> 'void (*)(PerlInterpreter *, AV **, SV *)' <FunctionToPointerDecay>
+        | |   | | | `-DeclRefExpr 0x7ff2dd82ffa8 <col:8> 'void (PerlInterpreter *, AV **, SV *)' Function 0x7ff2dd82d050 'Perl_av_create_and_push' 'void (PerlInterpreter *, AV **, SV *)'
+        | |   | | |-ImplicitCastExpr 0x7ff2dd8301c0 <col:33> 'PerlInterpreter *' <LValueToRValue>
+        | |   | | | `-DeclRefExpr 0x7ff2dd82ffd0 <col:33> 'PerlInterpreter *' lvalue ParmVar 0x7ff2dd82f2f8 'my_perl' 'PerlInterpreter *'
+        | |   | | |-UnaryOperator 0x7ff2dd830070 <col:42, col:52> 'AV **' prefix '&'
+        | |   | | | `-MemberExpr 0x7ff2dd830038 <col:43, col:52> 'AV *' lvalue ->Ibeginav_save 0x7ff2dd82c760
+        | |   | | |   `-ImplicitCastExpr 0x7ff2dd830020 <col:43> 'PerlInterpreter *' <LValueToRValue>
+        | |   | | |     `-DeclRefExpr 0x7ff2dd82fff8 <col:43> 'PerlInterpreter *' lvalue ParmVar 0x7ff2dd82f2f8 'my_perl' 'PerlInterpreter *'
+        | |   | | `-CStyleCastExpr 0x7ff2dd8300e0 <line:164:12, col:18> 'SV *' <BitCast>
+        | |   | |   `-ImplicitCastExpr 0x7ff2dd8300c8 <col:18> 'CV *' <LValueToRValue>
+        | |   | |     `-DeclRefExpr 0x7ff2dd830090 <col:18> 'CV *' lvalue Var 0x7ff2dd82f718 'cv' 'CV *'
+        | |   | `-CallExpr 0x7ff2dd830350 <line:165:8, line:166:19> 'void'
+        | |   |   |-ImplicitCastExpr 0x7ff2dd830338 <line:165:8> 'void (*)(PerlInterpreter *, AV **, SV *)' <FunctionToPointerDecay>
+        | |   |   | `-DeclRefExpr 0x7ff2dd8301d8 <col:8> 'void (PerlInterpreter *, AV **, SV *)' Function 0x7ff2dd82d050 'Perl_av_create_and_push' 'void (PerlInterpreter *, AV **, SV *)'
+        | |   |   |-ImplicitCastExpr 0x7ff2dd830390 <col:32> 'PerlInterpreter *' <LValueToRValue>
+        | |   |   | `-DeclRefExpr 0x7ff2dd830200 <col:32> 'PerlInterpreter *' lvalue ParmVar 0x7ff2dd82f2f8 'my_perl' 'PerlInterpreter *'
+        | |   |   |-UnaryOperator 0x7ff2dd8302a0 <col:41, col:51> 'AV **' prefix '&'
+        | |   |   | `-MemberExpr 0x7ff2dd830268 <col:42, col:51> 'AV *' lvalue ->Icheckav_save 0x7ff2dd82c7b8
+        | |   |   |   `-ImplicitCastExpr 0x7ff2dd830250 <col:42> 'PerlInterpreter *' <LValueToRValue>
+        | |   |   |     `-DeclRefExpr 0x7ff2dd830228 <col:42> 'PerlInterpreter *' lvalue ParmVar 0x7ff2dd82f2f8 'my_perl' 'PerlInterpreter *'
+        | |   |   `-CStyleCastExpr 0x7ff2dd830310 <line:166:11, col:17> 'SV *' <BitCast>
+        | |   |     `-ImplicitCastExpr 0x7ff2dd8302f8 <col:17> 'CV *' <LValueToRValue>
+        | |   |       `-DeclRefExpr 0x7ff2dd8302c0 <col:17> 'CV *' lvalue Var 0x7ff2dd82f718 'cv' 'CV *'
+        | |   `-IfStmt 0x7ff2dd835898 <line:168:9, line:170:17>
+        | |     |-<<<NULL>>>
+        | |     |-<<<NULL>>>
+        | |     |-BinaryOperator 0x7ff2dd8304a0 <line:168:13, col:35> 'int' '=='
+        | |     | |-ImplicitCastExpr 0x7ff2dd830470 <col:13> 'AV *' <LValueToRValue>
+        | |     | | `-DeclRefExpr 0x7ff2dd8303d0 <col:13> 'AV *' lvalue ParmVar 0x7ff2dd82f420 'paramList' 'AV *'
+        | |     | `-ImplicitCastExpr 0x7ff2dd830488 <col:26, col:35> 'AV *' <LValueToRValue>
+        | |     |   `-MemberExpr 0x7ff2dd830438 <col:26, col:35> 'AV *' lvalue ->Iunitcheckav 0x7ff2dd82c600
+        | |     |     `-ImplicitCastExpr 0x7ff2dd830420 <col:26> 'PerlInterpreter *' <LValueToRValue>
+        | |     |       `-DeclRefExpr 0x7ff2dd8303f8 <col:26> 'PerlInterpreter *' lvalue ParmVar 0x7ff2dd82f2f8 'my_perl' 'PerlInterpreter *'
+        | |     |-CallExpr 0x7ff2dd835840 <line:169:6, line:170:17> 'void'
+        | |     | |-ImplicitCastExpr 0x7ff2dd835828 <line:169:6> 'void (*)(PerlInterpreter *, AV **, SV *)' <FunctionToPointerDecay>
+        | |     | | `-DeclRefExpr 0x7ff2dd8304c8 <col:6> 'void (PerlInterpreter *, AV **, SV *)' Function 0x7ff2dd82d050 'Perl_av_create_and_push' 'void (PerlInterpreter *, AV **, SV *)'
+        | |     | |-ImplicitCastExpr 0x7ff2dd835880 <col:30> 'PerlInterpreter *' <LValueToRValue>
+        | |     | | `-DeclRefExpr 0x7ff2dd8304f0 <col:30> 'PerlInterpreter *' lvalue ParmVar 0x7ff2dd82f2f8 'my_perl' 'PerlInterpreter *'
+        | |     | |-UnaryOperator 0x7ff2dd830590 <col:39, col:49> 'AV **' prefix '&'
+        | |     | | `-MemberExpr 0x7ff2dd830558 <col:40, col:49> 'AV *' lvalue ->Iunitcheckav_save 0x7ff2dd82c810
+        | |     | |   `-ImplicitCastExpr 0x7ff2dd830540 <col:40> 'PerlInterpreter *' <LValueToRValue>
+        | |     | |     `-DeclRefExpr 0x7ff2dd830518 <col:40> 'PerlInterpreter *' lvalue ParmVar 0x7ff2dd82f2f8 'my_perl' 'PerlInterpreter *'
+        | |     | `-CStyleCastExpr 0x7ff2dd835800 <line:170:9, col:15> 'SV *' <BitCast>
+        | |     |   `-ImplicitCastExpr 0x7ff2dd8305e8 <col:15> 'CV *' <LValueToRValue>
+        | |     |     `-DeclRefExpr 0x7ff2dd8305b0 <col:15> 'CV *' lvalue Var 0x7ff2dd82f718 'cv' 'CV *'
+        | |     `-<<<NULL>>>
+        | `-<<<NULL>>>
+        |-BinaryOperator 0x7ff2dd835b30 <line:173:7, col:54> 'int' '='
+        | |-MemberExpr 0x7ff2dd835988 <col:7, col:15> 'int' lvalue .je_ret 0x7ff2dd8299c0
+        | | `-DeclRefExpr 0x7ff2dd835960 <col:7> 'JMPENV':'struct jmpenv' lvalue Var 0x7ff2dd82f8b8 'cur_env' 'JMPENV':'struct jmpenv'
+        | `-CallExpr 0x7ff2dd835ae0 <col:24, col:54> 'int'
+        |   |-ImplicitCastExpr 0x7ff2dd835ac8 <col:24> 'int (*)(struct __jmp_buf_tag *, int)' <FunctionToPointerDecay>
+        |   | `-DeclRefExpr 0x7ff2dd8359c0 <col:24> 'int (struct __jmp_buf_tag *, int)' Function 0x7ff2dd82d530 '__sigsetjmp' 'int (struct __jmp_buf_tag *, int)'
+        |   |-ImplicitCastExpr 0x7ff2dd835b18 <col:37, col:45> 'struct __jmp_buf_tag *' <ArrayToPointerDecay>
+        |   | `-MemberExpr 0x7ff2dd835a10 <col:37, col:45> 'sigjmp_buf':'struct __jmp_buf_tag [1]' lvalue .je_buf 0x7ff2dd829960
+        |   |   `-DeclRefExpr 0x7ff2dd8359e8 <col:37> 'JMPENV':'struct jmpenv' lvalue Var 0x7ff2dd82f8b8 'cur_env' 'JMPENV':'struct jmpenv'
+        |   `-IntegerLiteral 0x7ff2dd835a48 <col:53> 'int' 0
+        `-SwitchStmt 0x7ff2dd835bf0 <line:175:7, line:215:2>
+          |-<<<NULL>>>
+          |-<<<NULL>>>
+          |-ImplicitCastExpr 0x7ff2dd835bd8 <line:175:15> 'int' <LValueToRValue>
+          | `-DeclRefExpr 0x7ff2dd835bb0 <col:15> 'int' lvalue Var 0x7ff2dd82f830 'ret' 'int'
+          `-CompoundStmt 0x7ff2dd837dd0 <line:176:2, line:215:2>
+            |-CaseStmt 0x7ff2dd835c40 <line:177:2, line:178:29>
+            | |-IntegerLiteral 0x7ff2dd835c20 <line:177:7> 'int' 0
+            | |-<<<NULL>>>
+            | `-BinaryOperator 0x7ff2dd835d68 <line:178:4, col:29> 'GV *' '='
+            |   |-DeclRefExpr 0x7ff2dd835c78 <col:4> 'GV *' lvalue Var 0x7ff2dd82f940 'shplep' 'GV *'
+            |   `-CStyleCastExpr 0x7ff2dd835d40 <col:13, col:29> 'GV *' <NoOp>
+            |     `-ImplicitCastExpr 0x7ff2dd835d28 <col:20, col:29> 'GV *' <LValueToRValue>
+            |       `-MemberExpr 0x7ff2dd835ce0 <col:20, col:29> 'GV *' lvalue ->Ierrgv 0x7ff2dd82acb0
+            |         `-ImplicitCastExpr 0x7ff2dd835cc8 <col:20> 'PerlInterpreter *' <LValueToRValue>
+            |           `-DeclRefExpr 0x7ff2dd835ca0 <col:20> 'PerlInterpreter *' lvalue ParmVar 0x7ff2dd82f2f8 'my_perl' 'PerlInterpreter *'
+            |-BinaryOperator 0x7ff2dd835f88 <line:179:4, col:61> 'I32':'long' '='
+            | |-UnaryOperator 0x7ff2dd835e20 <col:4, col:14> 'I32':'long' lvalue prefix '*'
+            | | `-ImplicitCastExpr 0x7ff2dd835e08 <col:5, col:14> 'I32 *' <LValueToRValue>
+            | |   `-MemberExpr 0x7ff2dd835dd0 <col:5, col:14> 'I32 *' lvalue ->Imarkstack_ptr 0x7ff2dd82a5a8
+            | |     `-ImplicitCastExpr 0x7ff2dd835db8 <col:5> 'PerlInterpreter *' <LValueToRValue>
+            | |       `-DeclRefExpr 0x7ff2dd835d90 <col:5> 'PerlInterpreter *' lvalue ParmVar 0x7ff2dd82f2f8 'my_perl' 'PerlInterpreter *'
+            | `-BinaryOperator 0x7ff2dd835f60 <col:31, col:61> 'long' '-'
+            |   |-ImplicitCastExpr 0x7ff2dd835f30 <col:31, col:40> 'SV **' <LValueToRValue>
+            |   | `-MemberExpr 0x7ff2dd835e80 <col:31, col:40> 'SV **' lvalue ->Istack_sp 0x7ff2dd829e40
+            |   |   `-ImplicitCastExpr 0x7ff2dd835e68 <col:31> 'PerlInterpreter *' <LValueToRValue>
+            |   |     `-DeclRefExpr 0x7ff2dd835e40 <col:31> 'PerlInterpreter *' lvalue ParmVar 0x7ff2dd82f2f8 'my_perl' 'PerlInterpreter *'
+            |   `-ImplicitCastExpr 0x7ff2dd835f48 <col:52, col:61> 'SV **' <LValueToRValue>
+            |     `-MemberExpr 0x7ff2dd835ef8 <col:52, col:61> 'SV **' lvalue ->Istack_base 0x7ff2dd829fd8
+            |       `-ImplicitCastExpr 0x7ff2dd835ee0 <col:52> 'PerlInterpreter *' <LValueToRValue>
+            |         `-DeclRefExpr 0x7ff2dd835eb8 <col:52> 'PerlInterpreter *' lvalue ParmVar 0x7ff2dd82f2f8 'my_perl' 'PerlInterpreter *'
+            |-BinaryOperator 0x7ff2dd8360f0 <line:180:4, col:32> 'SV *' '='
+            | |-DeclRefExpr 0x7ff2dd835fb0 <col:4> 'SV *' lvalue Var 0x7ff2dd82f610 'atsv' 'SV *'
+            | `-ImplicitCastExpr 0x7ff2dd8360d8 <col:11, col:32> 'SV *' <LValueToRValue>
+            |   `-MemberExpr 0x7ff2dd8360a0 <col:11, col:32> 'SV *' lvalue ->gp_sv 0x7ff2dd829648
+            |     `-ImplicitCastExpr 0x7ff2dd836088 <col:11, col:24> 'GP *' <LValueToRValue>
+            |       `-MemberExpr 0x7ff2dd836050 <col:11, col:24> 'GP *' lvalue .svu_gp 0x7ff2dd829078
+            |         `-MemberExpr 0x7ff2dd836018 <col:11, col:19> 'union (anonymous union at c_files/pr30807.c:53:3)':'union gv::(anonymous at c_files/pr30807.c:53:3)' lvalue ->sv_u 0x7ff2dd829110
+            |           `-ImplicitCastExpr 0x7ff2dd836000 <col:11> 'GV *' <LValueToRValue>
+            |             `-DeclRefExpr 0x7ff2dd835fd8 <col:11> 'GV *' lvalue Var 0x7ff2dd82f940 'shplep' 'GV *'
+            |-IfStmt 0x7ff2dd836678 <line:181:4, line:184:50>
+            | |-<<<NULL>>>
+            | |-<<<NULL>>>
+            | |-BinaryOperator 0x7ff2dd836228 <line:181:8, col:39> 'unsigned long' '&'
+            | | |-ImplicitCastExpr 0x7ff2dd8361f8 <col:8, col:14> 'U32':'unsigned long' <LValueToRValue>
+            | | | `-MemberExpr 0x7ff2dd836158 <col:8, col:14> 'U32':'unsigned long' lvalue ->sv_flags 0x7ff2dd828878
+            | | |   `-ImplicitCastExpr 0x7ff2dd836140 <col:8> 'SV *' <LValueToRValue>
+            | | |     `-DeclRefExpr 0x7ff2dd836118 <col:8> 'SV *' lvalue Var 0x7ff2dd82f610 'atsv' 'SV *'
+            | | `-ImplicitCastExpr 0x7ff2dd836210 <col:25, col:39> 'unsigned long' <IntegralCast>
+            | |   `-BinaryOperator 0x7ff2dd8361d0 <col:25, col:39> 'int' '=='
+            | |     |-IntegerLiteral 0x7ff2dd836190 <col:25> 'int' 1024
+            | |     `-IntegerLiteral 0x7ff2dd8361b0 <col:39> 'int' 1024
+            | |-BinaryOperator 0x7ff2dd836438 <line:182:6, col:44> 'STRLEN':'unsigned int' '='
+            | | |-DeclRefExpr 0x7ff2dd836250 <col:6> 'STRLEN':'unsigned int' lvalue Var 0x7ff2dd82f7a0 'len' 'STRLEN':'unsigned int'
+            | | `-ImplicitCastExpr 0x7ff2dd836420 <col:12, col:44> 'STRLEN':'unsigned int' <LValueToRValue>
+            | |   `-MemberExpr 0x7ff2dd8363e8 <col:12, col:44> 'STRLEN':'unsigned int' lvalue ->xpv_cur 0x7ff2dd829390
+            | |     `-ParenExpr 0x7ff2dd8363c8 <col:12, col:41> 'XPV *'
+            | |       `-CStyleCastExpr 0x7ff2dd8363a0 <col:13, col:35> 'XPV *' <BitCast>
+            | |         `-ImplicitCastExpr 0x7ff2dd836388 <col:20, col:35> 'void *' <LValueToRValue>
+            | |           `-MemberExpr 0x7ff2dd836340 <col:20, col:35> 'void *' lvalue ->sv_any 0x7ff2dd828820
+            | |             `-ParenExpr 0x7ff2dd836320 <col:20, col:32> 'SV *'
+            | |               `-CStyleCastExpr 0x7ff2dd8362c8 <col:21, col:28> 'SV *' <NoOp>
+            | |                 `-ImplicitCastExpr 0x7ff2dd8362b0 <col:28> 'SV *' <LValueToRValue>
+            | |                   `-DeclRefExpr 0x7ff2dd836278 <col:28> 'SV *' lvalue Var 0x7ff2dd82f610 'atsv' 'SV *'
+            | `-CallExpr 0x7ff2dd836600 <line:184:6, col:50> 'void'
+            |   |-ImplicitCastExpr 0x7ff2dd8365e8 <col:6> 'void (*)(PerlInterpreter *, SV *, STRLEN *, int)' <FunctionToPointerDecay>
+            |   | `-DeclRefExpr 0x7ff2dd836460 <col:6> 'void (PerlInterpreter *, SV *, STRLEN *, int)' Function 0x7ff2dd82e950 'Perl_sv_2pv_flags' 'void (PerlInterpreter *, SV *, STRLEN *, int)'
+            |   |-ImplicitCastExpr 0x7ff2dd836648 <col:25> 'PerlInterpreter *' <LValueToRValue>
+            |   | `-DeclRefExpr 0x7ff2dd836488 <col:25> 'PerlInterpreter *' lvalue ParmVar 0x7ff2dd82f2f8 'my_perl' 'PerlInterpreter *'
+            |   |-ImplicitCastExpr 0x7ff2dd836660 <col:34> 'SV *' <LValueToRValue>
+            |   | `-DeclRefExpr 0x7ff2dd8364b0 <col:34> 'SV *' lvalue Var 0x7ff2dd82f610 'atsv' 'SV *'
+            |   |-UnaryOperator 0x7ff2dd836500 <col:40, col:41> 'STRLEN *' prefix '&'
+            |   | `-DeclRefExpr 0x7ff2dd8364d8 <col:41> 'STRLEN':'unsigned int' lvalue Var 0x7ff2dd82f7a0 'len' 'STRLEN':'unsigned int'
+            |   `-BinaryOperator 0x7ff2dd836560 <col:46, col:48> 'int' '|'
+            |     |-IntegerLiteral 0x7ff2dd836520 <col:46> 'int' 2
+            |     `-IntegerLiteral 0x7ff2dd836540 <col:48> 'int' 32
+            |-IfStmt 0x7ff2dd8371c8 <line:186:4, line:198:6>
+            | |-<<<NULL>>>
+            | |-<<<NULL>>>
+            | |-ImplicitCastExpr 0x7ff2dd8366d8 <line:186:8> 'STRLEN':'unsigned int' <LValueToRValue>
+            | | `-DeclRefExpr 0x7ff2dd8366b0 <col:8> 'STRLEN':'unsigned int' lvalue Var 0x7ff2dd82f7a0 'len' 'STRLEN':'unsigned int'
+            | |-CompoundStmt 0x7ff2dd837198 <line:187:6, line:198:6>
+            | | |-BinaryOperator 0x7ff2dd836800 <line:188:8, col:37> 'COP *' '='
+            | | | |-MemberExpr 0x7ff2dd836730 <col:8, col:17> 'COP *volatile' lvalue ->Icurcop 0x7ff2dd82a9b8
+            | | | | `-ImplicitCastExpr 0x7ff2dd836718 <col:8> 'PerlInterpreter *' <LValueToRValue>
+            | | | |   `-DeclRefExpr 0x7ff2dd8366f0 <col:8> 'PerlInterpreter *' lvalue ParmVar 0x7ff2dd82f2f8 'my_perl' 'PerlInterpreter *'
+            | | | `-UnaryOperator 0x7ff2dd8367e0 <col:27, col:37> 'COP *' prefix '&'
+            | | |   `-MemberExpr 0x7ff2dd8367a8 <col:28, col:37> 'COP':'struct cop' lvalue ->Icompiling 0x7ff2dd82c658
+            | | |     `-ImplicitCastExpr 0x7ff2dd836790 <col:28> 'PerlInterpreter *' <LValueToRValue>
+            | | |       `-DeclRefExpr 0x7ff2dd836768 <col:28> 'PerlInterpreter *' lvalue ParmVar 0x7ff2dd82f2f8 'my_perl' 'PerlInterpreter *'
+            | | |-WhileStmt 0x7ff2dd836f38 <line:189:8, line:195:3>
+            | | | |-<<<NULL>>>
+            | | | |-BinaryOperator 0x7ff2dd8368f8 <line:189:15, col:41> 'int' '>'
+            | | | | |-ImplicitCastExpr 0x7ff2dd8368c8 <col:15, col:24> 'I32':'long' <LValueToRValue>
+            | | | | | `-MemberExpr 0x7ff2dd836868 <col:15, col:24> 'I32':'long' lvalue ->Iscopestack_ix 0x7ff2dd82a160
+            | | | | |   `-ImplicitCastExpr 0x7ff2dd836850 <col:15> 'PerlInterpreter *' <LValueToRValue>
+            | | | | |     `-DeclRefExpr 0x7ff2dd836828 <col:15> 'PerlInterpreter *' lvalue ParmVar 0x7ff2dd82f2f8 'my_perl' 'PerlInterpreter *'
+            | | | | `-ImplicitCastExpr 0x7ff2dd8368e0 <col:41> 'I32':'long' <LValueToRValue>
+            | | | |   `-DeclRefExpr 0x7ff2dd8368a0 <col:41> 'I32':'long' lvalue ParmVar 0x7ff2dd82f3b0 'oldscope' 'I32':'long'
+            | | | `-CompoundStmt 0x7ff2dd836f10 <line:190:3, line:195:3>
+            | | |   |-IfStmt 0x7ff2dd836da0 <line:191:5, line:193:49>
+            | | |   | |-<<<NULL>>>
+            | | |   | |-<<<NULL>>>
+            | | |   | |-BinaryOperator 0x7ff2dd8369e8 <line:191:9, col:27> 'unsigned long' '&'
+            | | |   | | |-ImplicitCastExpr 0x7ff2dd8369b8 <col:9, col:18> 'U32':'unsigned long' <LValueToRValue>
+            | | |   | | | `-MemberExpr 0x7ff2dd836960 <col:9, col:18> 'volatile U32':'volatile unsigned long' lvalue ->Idebug 0x7ff2dd82c708
+            | | |   | | |   `-ImplicitCastExpr 0x7ff2dd836948 <col:9> 'PerlInterpreter *' <LValueToRValue>
+            | | |   | | |     `-DeclRefExpr 0x7ff2dd836920 <col:9> 'PerlInterpreter *' lvalue ParmVar 0x7ff2dd82f2f8 'my_perl' 'PerlInterpreter *'
+            | | |   | | `-ImplicitCastExpr 0x7ff2dd8369d0 <col:27> 'unsigned long' <IntegralCast>
+            | | |   | |   `-IntegerLiteral 0x7ff2dd836998 <col:27> 'int' 4
+            | | |   | |-CallExpr 0x7ff2dd836c70 <line:192:7, line:193:49> 'void'
+            | | |   | | |-ImplicitCastExpr 0x7ff2dd836c58 <line:192:7> 'void (*)(PerlInterpreter *, const char *, const char *, int, const char *, int)' <FunctionToPointerDecay>
+            | | |   | | | `-DeclRefExpr 0x7ff2dd836a10 <col:7> 'void (PerlInterpreter *, const char *, const char *, int, const char *, int)' Function 0x7ff2dd82ede0 'Perl_deb' 'void (PerlInterpreter *, const char *, const char *, int, const char *, int)'
+            | | |   | | |-ImplicitCastExpr 0x7ff2dd836cc8 <col:17> 'PerlInterpreter *' <LValueToRValue>
+            | | |   | | | `-DeclRefExpr 0x7ff2dd836a38 <col:17> 'PerlInterpreter *' lvalue ParmVar 0x7ff2dd82f2f8 'my_perl' 'PerlInterpreter *'
+            | | |   | | |-ImplicitCastExpr 0x7ff2dd836cf8 <col:26> 'const char *' <BitCast>
+            | | |   | | | `-ImplicitCastExpr 0x7ff2dd836ce0 <col:26> 'char *' <ArrayToPointerDecay>
+            | | |   | | |   `-StringLiteral 0x7ff2dd836a98 <col:26> 'char [6]' lvalue "scope"
+            | | |   | | |-ImplicitCastExpr 0x7ff2dd836d28 <col:35> 'const char *' <BitCast>
+            | | |   | | | `-ImplicitCastExpr 0x7ff2dd836d10 <col:35> 'char *' <ArrayToPointerDecay>
+            | | |   | | |   `-StringLiteral 0x7ff2dd836ac8 <col:35> 'char [6]' lvalue "LEAVE"
+            | | |   | | |-ImplicitCastExpr 0x7ff2dd836d58 <line:193:10, col:19> 'int' <IntegralCast>
+            | | |   | | | `-ImplicitCastExpr 0x7ff2dd836d40 <col:10, col:19> 'I32':'long' <LValueToRValue>
+            | | |   | | |   `-MemberExpr 0x7ff2dd836b38 <col:10, col:19> 'I32':'long' lvalue ->Iscopestack_ix 0x7ff2dd82a160
+            | | |   | | |     `-ImplicitCastExpr 0x7ff2dd836b20 <col:10> 'PerlInterpreter *' <LValueToRValue>
+            | | |   | | |       `-DeclRefExpr 0x7ff2dd836af8 <col:10> 'PerlInterpreter *' lvalue ParmVar 0x7ff2dd82f2f8 'my_perl' 'PerlInterpreter *'
+            | | |   | | |-ImplicitCastExpr 0x7ff2dd836d88 <col:35> 'const char *' <BitCast>
+            | | |   | | | `-ImplicitCastExpr 0x7ff2dd836d70 <col:35> 'char *' <ArrayToPointerDecay>
+            | | |   | | |   `-StringLiteral 0x7ff2dd836ba8 <col:35> 'char [7]' lvalue "perl.c"
+            | | |   | | `-IntegerLiteral 0x7ff2dd836bd8 <col:45> 'int' 5166
+            | | |   | `-<<<NULL>>>
+            | | |   `-BinaryOperator 0x7ff2dd836ee8 <line:194:5, col:35> 'JMPENV *' '='
+            | | |     |-ParenExpr 0x7ff2dd836e50 <col:5, col:23> 'JMPENV *' lvalue
+            | | |     | `-MemberExpr 0x7ff2dd836e18 <col:6, col:15> 'JMPENV *' lvalue ->Itop_env 0x7ff2dd82aa58
+            | | |     |   `-ImplicitCastExpr 0x7ff2dd836e00 <col:6> 'PerlInterpreter *' <LValueToRValue>
+            | | |     |     `-DeclRefExpr 0x7ff2dd836dd8 <col:6> 'PerlInterpreter *' lvalue ParmVar 0x7ff2dd82f2f8 'my_perl' 'PerlInterpreter *'
+            | | |     `-ImplicitCastExpr 0x7ff2dd836ed0 <col:27, col:35> 'struct jmpenv *' <LValueToRValue>
+            | | |       `-MemberExpr 0x7ff2dd836e98 <col:27, col:35> 'struct jmpenv *' lvalue .je_prev 0x7ff2dd8298e0
+            | | |         `-DeclRefExpr 0x7ff2dd836e70 <col:27> 'JMPENV':'struct jmpenv' lvalue Var 0x7ff2dd82f8b8 'cur_env' 'JMPENV':'struct jmpenv'
+            | | `-CallExpr 0x7ff2dd837110 <line:197:8, col:52> 'void'
+            | |   |-ImplicitCastExpr 0x7ff2dd8370f8 <col:8> 'void (*)(PerlInterpreter *, const char *, void *)' <FunctionToPointerDecay>
+            | |   | `-DeclRefExpr 0x7ff2dd836f58 <col:8> 'void (PerlInterpreter *, const char *, void *)' Function 0x7ff2dd82f0e0 'Perl_croak' 'void (PerlInterpreter *, const char *, void *)'
+            | |   |-ImplicitCastExpr 0x7ff2dd837150 <col:20> 'PerlInterpreter *' <LValueToRValue>
+            | |   | `-DeclRefExpr 0x7ff2dd836f80 <col:20> 'PerlInterpreter *' lvalue ParmVar 0x7ff2dd82f2f8 'my_perl' 'PerlInterpreter *'
+            | |   |-ImplicitCastExpr 0x7ff2dd837180 <col:29, col:36> 'const char *' <BitCast>
+            | |   | `-ImplicitCastExpr 0x7ff2dd837168 <col:29, col:36> 'char *' <ArrayToPointerDecay>
+            | |   |   `-StringLiteral 0x7ff2dd836fe8 <col:29, col:36> 'char [4]' lvalue "%-p"
+            | |   `-CStyleCastExpr 0x7ff2dd837078 <col:40, col:48> 'void *' <BitCast>
+            | |     `-ImplicitCastExpr 0x7ff2dd837060 <col:48> 'SV *' <LValueToRValue>
+            | |       `-DeclRefExpr 0x7ff2dd837020 <col:48> 'SV *' lvalue Var 0x7ff2dd82f610 'atsv' 'SV *'
+            | `-<<<NULL>>>
+            |-CaseStmt 0x7ff2dd837220 <line:200:2, line:201:28>
+            | |-IntegerLiteral 0x7ff2dd837200 <line:200:7> 'int' 1
+            | |-<<<NULL>>>
+            | `-BinaryOperator 0x7ff2dd837308 <line:201:4, col:28> 'I32':'long' '='
+            |   |-MemberExpr 0x7ff2dd837298 <col:4, col:13> 'I32':'long' lvalue ->Istatusvalue 0x7ff2dd82ab28
+            |   | `-ImplicitCastExpr 0x7ff2dd837280 <col:4> 'PerlInterpreter *' <LValueToRValue>
+            |   |   `-DeclRefExpr 0x7ff2dd837258 <col:4> 'PerlInterpreter *' lvalue ParmVar 0x7ff2dd82f2f8 'my_perl' 'PerlInterpreter *'
+            |   `-ImplicitCastExpr 0x7ff2dd8372f0 <col:28> 'I32':'long' <IntegralCast>
+            |     `-IntegerLiteral 0x7ff2dd8372d0 <col:28> 'int' 1
+            |-BinaryOperator 0x7ff2dd8373e0 <line:202:4, col:34> 'I32':'long' '='
+            | |-MemberExpr 0x7ff2dd837370 <col:4, col:13> 'I32':'long' lvalue ->Istatusvalue_posix 0x7ff2dd82ab80
+            | | `-ImplicitCastExpr 0x7ff2dd837358 <col:4> 'PerlInterpreter *' <LValueToRValue>
+            | |   `-DeclRefExpr 0x7ff2dd837330 <col:4> 'PerlInterpreter *' lvalue ParmVar 0x7ff2dd82f2f8 'my_perl' 'PerlInterpreter *'
+            | `-ImplicitCastExpr 0x7ff2dd8373c8 <col:34> 'I32':'long' <IntegralCast>
+            |   `-IntegerLiteral 0x7ff2dd8373a8 <col:34> 'int' 1
+            |-CaseStmt 0x7ff2dd837428 <line:203:2, line:206:13>
+            | |-IntegerLiteral 0x7ff2dd837408 <line:203:7> 'int' 2
+            | |-<<<NULL>>>
+            | `-WhileStmt 0x7ff2dd837710 <line:204:4, line:206:13>
+            |   |-<<<NULL>>>
+            |   |-BinaryOperator 0x7ff2dd837530 <line:204:11, col:37> 'int' '>'
+            |   | |-ImplicitCastExpr 0x7ff2dd837500 <col:11, col:20> 'I32':'long' <LValueToRValue>
+            |   | | `-MemberExpr 0x7ff2dd8374a0 <col:11, col:20> 'I32':'long' lvalue ->Iscopestack_ix 0x7ff2dd82a160
+            |   | |   `-ImplicitCastExpr 0x7ff2dd837488 <col:11> 'PerlInterpreter *' <LValueToRValue>
+            |   | |     `-DeclRefExpr 0x7ff2dd837460 <col:11> 'PerlInterpreter *' lvalue ParmVar 0x7ff2dd82f2f8 'my_perl' 'PerlInterpreter *'
+            |   | `-ImplicitCastExpr 0x7ff2dd837518 <col:37> 'I32':'long' <LValueToRValue>
+            |   |   `-DeclRefExpr 0x7ff2dd8374d8 <col:37> 'I32':'long' lvalue ParmVar 0x7ff2dd82f3b0 'oldscope' 'I32':'long'
+            |   `-IfStmt 0x7ff2dd8376d8 <line:205:6, line:206:13>
+            |     |-<<<NULL>>>
+            |     |-<<<NULL>>>
+            |     |-BinaryOperator 0x7ff2dd837620 <line:205:10, col:28> 'unsigned long' '&'
+            |     | |-ImplicitCastExpr 0x7ff2dd8375f0 <col:10, col:19> 'U32':'unsigned long' <LValueToRValue>
+            |     | | `-MemberExpr 0x7ff2dd837598 <col:10, col:19> 'volatile U32':'volatile unsigned long' lvalue ->Idebug 0x7ff2dd82c708
+            |     | |   `-ImplicitCastExpr 0x7ff2dd837580 <col:10> 'PerlInterpreter *' <LValueToRValue>
+            |     | |     `-DeclRefExpr 0x7ff2dd837558 <col:10> 'PerlInterpreter *' lvalue ParmVar 0x7ff2dd82f2f8 'my_perl' 'PerlInterpreter *'
+            |     | `-ImplicitCastExpr 0x7ff2dd837608 <col:28> 'unsigned long' <IntegralCast>
+            |     |   `-IntegerLiteral 0x7ff2dd8375d0 <col:28> 'int' 4
+            |     |-CallExpr 0x7ff2dd8376b0 <line:206:8, col:13> 'void'
+            |     | `-ImplicitCastExpr 0x7ff2dd837698 <col:8> 'void (*)(void)' <FunctionToPointerDecay>
+            |     |   `-DeclRefExpr 0x7ff2dd837648 <col:8> 'void (void)' Function 0x7ff2dd82f250 'foo' 'void (void)'
+            |     `-<<<NULL>>>
+            |-BinaryOperator 0x7ff2dd837858 <line:207:4, col:33> 'COP *' '='
+            | |-MemberExpr 0x7ff2dd837770 <col:4, col:13> 'COP *volatile' lvalue ->Icurcop 0x7ff2dd82a9b8
+            | | `-ImplicitCastExpr 0x7ff2dd837758 <col:4> 'PerlInterpreter *' <LValueToRValue>
+            | |   `-DeclRefExpr 0x7ff2dd837730 <col:4> 'PerlInterpreter *' lvalue ParmVar 0x7ff2dd82f2f8 'my_perl' 'PerlInterpreter *'
+            | `-UnaryOperator 0x7ff2dd837838 <col:23, col:33> 'COP *' prefix '&'
+            |   `-MemberExpr 0x7ff2dd837800 <col:24, col:33> 'COP':'struct cop' lvalue ->Icompiling 0x7ff2dd82c658
+            |     `-ImplicitCastExpr 0x7ff2dd8377d0 <col:24> 'PerlInterpreter *' <LValueToRValue>
+            |       `-DeclRefExpr 0x7ff2dd8377a8 <col:24> 'PerlInterpreter *' lvalue ParmVar 0x7ff2dd82f2f8 'my_perl' 'PerlInterpreter *'
+            |-BinaryOperator 0x7ff2dd837988 <line:208:4, col:33> 'line_t':'unsigned long' '='
+            | |-MemberExpr 0x7ff2dd837910 <col:4, col:22> 'line_t':'unsigned long' lvalue ->cop_line 0x7ff2dd829b40
+            | | `-ImplicitCastExpr 0x7ff2dd8378f8 <col:4, col:13> 'COP *' <LValueToRValue>
+            | |   `-MemberExpr 0x7ff2dd8378c0 <col:4, col:13> 'COP *volatile' lvalue ->Icurcop 0x7ff2dd82a9b8
+            | |     `-ImplicitCastExpr 0x7ff2dd8378a8 <col:4> 'PerlInterpreter *' <LValueToRValue>
+            | |       `-DeclRefExpr 0x7ff2dd837880 <col:4> 'PerlInterpreter *' lvalue ParmVar 0x7ff2dd82f2f8 'my_perl' 'PerlInterpreter *'
+            | `-ImplicitCastExpr 0x7ff2dd837970 <col:33> 'line_t':'unsigned long' <LValueToRValue>
+            |   `-DeclRefExpr 0x7ff2dd837948 <col:33> 'volatile line_t':'volatile unsigned long' lvalue Var 0x7ff2dd82f9c8 'oldline' 'volatile line_t':'volatile unsigned long'
+            |-IfStmt 0x7ff2dd837b08 <line:209:4, line:210:11>
+            | |-<<<NULL>>>
+            | |-<<<NULL>>>
+            | |-BinaryOperator 0x7ff2dd837a78 <line:209:8, col:26> 'unsigned long' '&'
+            | | |-ImplicitCastExpr 0x7ff2dd837a48 <col:8, col:17> 'U32':'unsigned long' <LValueToRValue>
+            | | | `-MemberExpr 0x7ff2dd8379f0 <col:8, col:17> 'volatile U32':'volatile unsigned long' lvalue ->Idebug 0x7ff2dd82c708
+            | | |   `-ImplicitCastExpr 0x7ff2dd8379d8 <col:8> 'PerlInterpreter *' <LValueToRValue>
+            | | |     `-DeclRefExpr 0x7ff2dd8379b0 <col:8> 'PerlInterpreter *' lvalue ParmVar 0x7ff2dd82f2f8 'my_perl' 'PerlInterpreter *'
+            | | `-ImplicitCastExpr 0x7ff2dd837a60 <col:26> 'unsigned long' <IntegralCast>
+            | |   `-IntegerLiteral 0x7ff2dd837a28 <col:26> 'int' 4
+            | |-CallExpr 0x7ff2dd837ae0 <line:210:6, col:11> 'void'
+            | | `-ImplicitCastExpr 0x7ff2dd837ac8 <col:6> 'void (*)(void)' <FunctionToPointerDecay>
+            | |   `-DeclRefExpr 0x7ff2dd837aa0 <col:6> 'void (void)' Function 0x7ff2dd82f250 'foo' 'void (void)'
+            | `-<<<NULL>>>
+            |-CallExpr 0x7ff2dd837c00 <line:211:4, col:27> 'void'
+            | |-ImplicitCastExpr 0x7ff2dd837be8 <col:4> 'void (*)(PerlInterpreter *) __attribute__((noreturn))' <FunctionToPointerDecay>
+            | | `-DeclRefExpr 0x7ff2dd837b40 <col:4> 'void (PerlInterpreter *) __attribute__((noreturn))' Function 0x7ff2dd82cab0 'S_my_exit_jump' 'void (PerlInterpreter *) __attribute__((noreturn))'
+            | `-ImplicitCastExpr 0x7ff2dd837c30 <col:20> 'PerlInterpreter *' <LValueToRValue>
+            |   `-DeclRefExpr 0x7ff2dd837b68 <col:20> 'PerlInterpreter *' lvalue ParmVar 0x7ff2dd82f2f8 'my_perl' 'PerlInterpreter *'
+            `-CaseStmt 0x7ff2dd837c68 <line:212:2, line:214:11>
+              |-IntegerLiteral 0x7ff2dd837c48 <line:212:7> 'int' 3
+              |-<<<NULL>>>
+              `-IfStmt 0x7ff2dd837d98 <line:213:4, line:214:11>
+                |-<<<NULL>>>
+                |-<<<NULL>>>
+                |-ImplicitCastExpr 0x7ff2dd837d18 <line:213:8, col:17> 'OP *' <LValueToRValue>
+                | `-MemberExpr 0x7ff2dd837ce0 <col:8, col:17> 'OP *' lvalue ->Irestartop 0x7ff2dd82a8e0
+                |   `-ImplicitCastExpr 0x7ff2dd837cc8 <col:8> 'PerlInterpreter *' <LValueToRValue>
+                |     `-DeclRefExpr 0x7ff2dd837ca0 <col:8> 'PerlInterpreter *' lvalue ParmVar 0x7ff2dd82f2f8 'my_perl' 'PerlInterpreter *'
+                |-CallExpr 0x7ff2dd837d70 <line:214:6, col:11> 'void'
+                | `-ImplicitCastExpr 0x7ff2dd837d58 <col:6> 'void (*)(void)' <FunctionToPointerDecay>
+                |   `-DeclRefExpr 0x7ff2dd837d30 <col:6> 'void (void)' Function 0x7ff2dd82f250 'foo' 'void (void)'
+                `-<<<NULL>>>

@@ -1,0 +1,184 @@
+FileAST: 
+  Decl: total1, [], [], []
+    ArrayDecl: []
+      TypeDecl: total1, []
+        IdentifierType: ['int']
+      Constant: int, 10
+  Decl: total2, [], [], []
+    ArrayDecl: []
+      TypeDecl: total2, []
+        IdentifierType: ['int']
+      Constant: int, 10
+  Decl: total3, [], [], []
+    ArrayDecl: []
+      TypeDecl: total3, []
+        IdentifierType: ['int']
+      Constant: int, 10
+  Decl: total4, [], [], []
+    ArrayDecl: []
+      TypeDecl: total4, []
+        IdentifierType: ['int']
+      Constant: int, 10
+  Decl: total5, [], [], []
+    ArrayDecl: []
+      TypeDecl: total5, []
+        IdentifierType: ['int']
+      Constant: int, 10
+  Decl: a, [], [], []
+    ArrayDecl: []
+      TypeDecl: a, []
+        IdentifierType: ['int']
+      Constant: int, 20
+  Decl: len, [], [], []
+    TypeDecl: len, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: stackclean, [], [], []
+      FuncDecl: 
+        TypeDecl: stackclean, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: ptr, [], [], []
+        PtrDecl: []
+          TypeDecl: ptr, []
+            IdentifierType: ['void']
+        FuncCall: 
+          ID: __builtin_alloca
+          ExprList: 
+            Constant: int, 20000
+      FuncCall: 
+        ID: __builtin_memset
+        ExprList: 
+          ID: ptr
+          Constant: int, 0
+          Constant: int, 20000
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: s, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: s, ['const']
+                IdentifierType: ['char']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: r1, [], [], []
+        TypeDecl: r1, []
+          IdentifierType: ['int']
+        ArrayRef: 
+          ID: a
+          Constant: int, 1
+      Decl: r2, [], [], []
+        TypeDecl: r2, []
+          IdentifierType: ['int']
+        ArrayRef: 
+          ID: a
+          Constant: int, 2
+      Decl: r3, [], [], []
+        TypeDecl: r3, []
+          IdentifierType: ['int']
+        ArrayRef: 
+          ID: a
+          Constant: int, 3
+      Decl: r4, [], [], []
+        TypeDecl: r4, []
+          IdentifierType: ['int']
+        ArrayRef: 
+          ID: a
+          Constant: int, 4
+      Decl: r5, [], [], []
+        TypeDecl: r5, []
+          IdentifierType: ['int']
+        ArrayRef: 
+          ID: a
+          Constant: int, 5
+      Assignment: =
+        ID: len
+        FuncCall: 
+          ID: __builtin_strlen
+          ExprList: 
+            ID: s
+      If: 
+        BinaryOp: !=
+          ID: s
+          Constant: int, 0
+        Return: 
+      While: 
+        ID: r1
+        Compound: 
+          Assignment: =
+            ArrayRef: 
+              ID: total1
+              ID: r1
+            ID: r1
+          UnaryOp: p--
+            ID: r1
+      While: 
+        ID: r2
+        Compound: 
+          Assignment: =
+            ArrayRef: 
+              ID: total2
+              ID: r2
+            ID: r2
+          UnaryOp: p--
+            ID: r2
+      While: 
+        ID: r3
+        Compound: 
+          Assignment: =
+            ArrayRef: 
+              ID: total3
+              ID: r3
+            ID: r3
+          UnaryOp: p--
+            ID: r3
+      While: 
+        ID: r4
+        Compound: 
+          Assignment: =
+            ArrayRef: 
+              ID: total4
+              ID: r4
+            ID: r4
+          UnaryOp: p--
+            ID: r4
+      While: 
+        ID: r5
+        Compound: 
+          Assignment: =
+            ArrayRef: 
+              ID: total5
+              ID: r5
+            ID: r5
+          UnaryOp: p--
+            ID: r5
+  Decl: abort, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: stackclean
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          Constant: string, "abcdefgh"
+      If: 
+        BinaryOp: !=
+          ID: len
+          Constant: int, 8
+        FuncCall: 
+          ID: abort
+      Return: 
+        Constant: int, 0

@@ -1,0 +1,38 @@
+c_files/pr71606.c:1:1: warning: plain '_Complex' requires a type specifier; assuming '_Complex double'
+_Complex a;
+^
+         double
+1 warning generated.
+TranslationUnitDecl 0x7fe7f30202d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe7f3020820 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe7f3020540 '__int128'
+|-TypedefDecl 0x7fe7f3020890 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe7f3020560 'unsigned __int128'
+|-TypedefDecl 0x7fe7f3020b68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe7f3020970 'struct __NSConstantString_tag'
+|   `-Record 0x7fe7f30208e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe7f3020c00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe7f3020bc0 'char *'
+|   `-BuiltinType 0x7fe7f3020360 'char'
+|-TypedefDecl 0x7fe7f3020ec8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe7f3020e70 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe7f3020ce0 'struct __va_list_tag'
+|     `-Record 0x7fe7f3020c58 '__va_list_tag'
+|-VarDecl 0x7fe7f3020f30 <c_files/pr71606.c:1:1, col:10> col:10 used a '_Complex double'
+|-FunctionDecl 0x7fe7f2827a20 <line:2:1, col:11> col:6 used fn1 'void ()'
+|-FunctionDecl 0x7fe7f2827b10 <line:4:1, line:7:1> line:4:5 main 'int ()'
+| `-CompoundStmt 0x7fe7f2827cc0 <col:13, line:7:1>
+|   |-CallExpr 0x7fe7f2827c40 <line:5:3, col:9> 'void'
+|   | |-ImplicitCastExpr 0x7fe7f2827c28 <col:3> 'void (*)()' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fe7f2827ba8 <col:3> 'void ()' Function 0x7fe7f2827a20 'fn1' 'void ()'
+|   | `-ImplicitCastExpr 0x7fe7f2827c70 <col:8> '_Complex double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fe7f2827bd0 <col:8> '_Complex double' lvalue Var 0x7fe7f3020f30 'a' '_Complex double'
+|   `-ReturnStmt 0x7fe7f2827ca8 <line:6:3, col:10>
+|     `-IntegerLiteral 0x7fe7f2827c88 <col:10> 'int' 0
+`-FunctionDecl 0x7fe7f2827dc0 prev 0x7fe7f2827a20 <line:9:1, line:11:1> line:9:6 used fn1 'void (_Complex long double)'
+  |-ParmVarDecl 0x7fe7f2827cf8 <col:11, col:35> col:35 used p1 '_Complex long double'
+  `-CompoundStmt 0x7fe7f2827f00 <col:39, line:11:1>
+    `-BinaryOperator 0x7fe7f2827ed8 <line:10:3, col:17> 'long double' '='
+      |-UnaryOperator 0x7fe7f2827e88 <col:3, col:12> 'long double' lvalue prefix '__imag'
+      | `-DeclRefExpr 0x7fe7f2827e60 <col:12> '_Complex long double' lvalue ParmVar 0x7fe7f2827cf8 'p1' '_Complex long double'
+      `-FloatingLiteral 0x7fe7f2827ea8 <col:17> 'long double' 6.000000e+00

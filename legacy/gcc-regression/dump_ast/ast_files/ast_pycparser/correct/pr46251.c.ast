@@ -1,0 +1,19 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            PtrDecl: []
+              TypeDecl: x, []
+                IdentifierType: ['long', 'double']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: __builtin_sincosl
+        ExprList: 
+          UnaryOp: *
+            ID: x
+          ID: x
+          ID: x

@@ -1,0 +1,71 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: s
+      Decl: bit, [], [], []
+        TypeDecl: bit, []
+          IdentifierType: ['unsigned', 'int']
+        Constant: int, 1
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            PtrDecl: []
+              TypeDecl: p, []
+                Struct: s
+        TypeDecl: foo, []
+          IdentifierType: ['unsigned', 'int']
+    Compound: 
+      If: 
+        StructRef: ->
+          ID: p
+          ID: bit
+        Return: 
+          Constant: int, 1
+        Return: 
+          Constant: int, 0
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            PtrDecl: []
+              TypeDecl: p, []
+                Struct: s
+        TypeDecl: bar, []
+          IdentifierType: ['unsigned', 'int']
+    Compound: 
+      Return: 
+        Cast: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['unsigned', 'int']
+          StructRef: ->
+            ID: p
+            ID: bit
+  FuncDef: 
+    Decl: andrew, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            PtrDecl: []
+              TypeDecl: p, []
+                Struct: s
+        TypeDecl: andrew, []
+          IdentifierType: ['unsigned', 'int']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      If: 
+        StructRef: ->
+          ID: p
+          ID: bit
+        Assignment: =
+          ID: i
+          Constant: int, 1
+        Assignment: =
+          ID: i
+          Constant: int, 0
+      Return: 
+        ID: i

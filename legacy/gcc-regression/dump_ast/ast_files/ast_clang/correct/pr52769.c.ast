@@ -1,0 +1,47 @@
+TranslationUnitDecl 0x7fec610264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fec61026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fec61026740 '__int128'
+|-TypedefDecl 0x7fec61026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fec61026760 'unsigned __int128'
+|-TypedefDecl 0x7fec61026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fec61026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fec61026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fec61026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fec61026dc0 'char *'
+|   `-BuiltinType 0x7fec61026560 'char'
+|-TypedefDecl 0x7fec610270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fec61027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fec61026ee0 'struct __va_list_tag'
+|     `-Record 0x7fec61026e58 '__va_list_tag'
+|-RecordDecl 0x7fec61027120 <c_files/pr52769.c:5:9, line:10:1> line:5:9 struct definition
+| |-FieldDecl 0x7fec61825a00 <line:7:3, col:7> col:7 referenced should_be_zero 'int'
+| |-FieldDecl 0x7fec61825ac8 <line:8:3, col:11> col:8 s 'char [6]'
+| `-FieldDecl 0x7fec61825b28 <line:9:3, col:7> col:7 x 'int'
+|-TypedefDecl 0x7fec61825bc0 <line:5:1, line:10:3> col:3 referenced foo_t 'struct foo_t':'foo_t'
+| `-ElaboratedType 0x7fec61825b70 'struct foo_t' sugar
+|   `-RecordType 0x7fec610271b0 'foo_t'
+|     `-Record 0x7fec61027120 ''
+|-FunctionDecl 0x7fec61825cf8 <line:12:1, line:24:1> line:13:1 main 'int (void)'
+| `-CompoundStmt 0x7fec61826398 <line:14:1, line:24:1>
+|   |-DeclStmt 0x7fec61826050 <line:15:3, line:18:4>
+|   | `-VarDecl 0x7fec61825e30 <line:15:3, line:18:3> line:15:18 used foo 'volatile foo_t':'volatile foo_t' cinit
+|   |   `-InitListExpr 0x7fec61825fe8 <col:24, line:18:3> 'foo_t':'foo_t'
+|   |     |-ImplicitValueInitExpr 0x7fec61826040 <<invalid sloc>> 'int'
+|   |     |-StringLiteral 0x7fec61825ec8 <line:16:10> 'char [6]' lvalue "123456"
+|   |     `-IntegerLiteral 0x7fec61825f38 <line:17:10> 'int' 2
+|   |-IfStmt 0x7fec61826328 <line:20:3, line:21:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fec61826100 <line:20:7, col:29> 'int' '!='
+|   | | |-ImplicitCastExpr 0x7fec618260e8 <col:7, col:11> 'int' <LValueToRValue>
+|   | | | `-MemberExpr 0x7fec61826090 <col:7, col:11> 'volatile int' lvalue .should_be_zero 0x7fec61825a00
+|   | | |   `-DeclRefExpr 0x7fec61826068 <col:7> 'volatile foo_t':'volatile foo_t' lvalue Var 0x7fec61825e30 'foo' 'volatile foo_t':'volatile foo_t'
+|   | | `-IntegerLiteral 0x7fec618260c8 <col:29> 'int' 0
+|   | |-CallExpr 0x7fec61826300 <line:21:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fec618262e8 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fec61826290 <col:5> '<builtin fn type>' Function 0x7fec618261b0 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fec61826380 <line:23:3, col:10>
+|     `-IntegerLiteral 0x7fec61826360 <col:10> 'int' 0
+`-FunctionDecl 0x7fec618261b0 <line:21:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7fec61826248 <col:5> Implicit

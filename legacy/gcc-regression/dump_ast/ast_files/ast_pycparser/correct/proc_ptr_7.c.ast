@@ -1,0 +1,34 @@
+FileAST: 
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: f, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        Constant: int, 42
+  FuncDef: 
+    Decl: assignf_, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: ptr, [], [], []
+            PtrDecl: []
+              PtrDecl: []
+                FuncDecl: 
+                  ParamList: 
+                    Typename: None, []
+                      TypeDecl: None, []
+                        IdentifierType: ['void']
+                  TypeDecl: ptr, []
+                    IdentifierType: ['int']
+        TypeDecl: assignf_, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        UnaryOp: *
+          ID: ptr
+        ID: f

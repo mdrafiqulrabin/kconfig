@@ -1,0 +1,54 @@
+TranslationUnitDecl 0x7ff8658264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff865826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff865826740 '__int128'
+|-TypedefDecl 0x7ff865826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff865826760 'unsigned __int128'
+|-TypedefDecl 0x7ff865826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff865826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff865826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff865826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff865826dc0 'char *'
+|   `-BuiltinType 0x7ff865826560 'char'
+|-TypedefDecl 0x7ff8658270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff865827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff865826ee0 'struct __va_list_tag'
+|     `-Record 0x7ff865826e58 '__va_list_tag'
+|-FunctionDecl 0x7ff8658774d8 <c_files/predict-13.c:4:1, line:21:1> line:4:5 main 'int (int, char **)'
+| |-ParmVarDecl 0x7ff865827138 <col:10, col:14> col:14 used argc 'int'
+| |-ParmVarDecl 0x7ff865877400 <col:20, col:27> col:27 argv 'char **'
+| `-CompoundStmt 0x7ff865877ae8 <line:5:1, line:21:1>
+|   |-SwitchStmt 0x7ff865877600 <line:6:3, line:18:5>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7ff8658775e8 <line:6:11> 'int' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7ff8658775c0 <col:11> 'int' lvalue ParmVar 0x7ff865827138 'argc' 'int'
+|   | `-CompoundStmt 0x7ff865877a70 <line:7:5, line:18:5>
+|   |   |-CaseStmt 0x7ff865877650 <line:8:5, line:9:14>
+|   |   | |-IntegerLiteral 0x7ff865877630 <line:8:10> 'int' 1
+|   |   | |-<<<NULL>>>
+|   |   | `-ReturnStmt 0x7ff8658776a8 <line:9:7, col:14>
+|   |   |   `-IntegerLiteral 0x7ff865877688 <col:14> 'int' 1
+|   |   |-CaseStmt 0x7ff8658776e0 <line:10:5, line:11:14>
+|   |   | |-IntegerLiteral 0x7ff8658776c0 <line:10:10> 'int' 2
+|   |   | |-<<<NULL>>>
+|   |   | `-ReturnStmt 0x7ff865877738 <line:11:7, col:14>
+|   |   |   `-IntegerLiteral 0x7ff865877718 <col:14> 'int' 2
+|   |   |-CaseStmt 0x7ff865877770 <line:12:5, line:13:23>
+|   |   | |-IntegerLiteral 0x7ff865877750 <line:12:10> 'int' 3
+|   |   | |-<<<NULL>>>
+|   |   | `-CallExpr 0x7ff865877930 <line:13:7, col:23> 'void'
+|   |   |   `-ImplicitCastExpr 0x7ff865877918 <col:7> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   |   |     `-DeclRefExpr 0x7ff8658778c0 <col:7> '<builtin fn type>' Function 0x7ff8658777e0 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   |   |-CaseStmt 0x7ff865877978 <line:14:5, line:15:23>
+|   |   | |-IntegerLiteral 0x7ff865877958 <line:14:10> 'int' 4
+|   |   | |-<<<NULL>>>
+|   |   | `-CallExpr 0x7ff8658779f0 <line:15:7, col:23> 'void'
+|   |   |   `-ImplicitCastExpr 0x7ff8658779d8 <col:7> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   |   |     `-DeclRefExpr 0x7ff8658779b0 <col:7> '<builtin fn type>' Function 0x7ff8658777e0 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   |   `-DefaultStmt 0x7ff865877a50 <line:16:5, line:17:14>
+|   |     `-ReturnStmt 0x7ff865877a38 <col:7, col:14>
+|   |       `-IntegerLiteral 0x7ff865877a18 <col:14> 'int' 5
+|   `-ReturnStmt 0x7ff865877ad0 <line:20:3, col:10>
+|     `-IntegerLiteral 0x7ff865877ab0 <col:10> 'int' 10
+`-FunctionDecl 0x7ff8658777e0 <line:13:7> col:7 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7ff865877878 <col:7> Implicit

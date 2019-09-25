@@ -1,0 +1,57 @@
+c_files/pr83415.c:7:1: error: second parameter of 'main' (argument array) must be of type 'char **'
+main (int argc, short *argv[])
+^
+1 error generated.
+TranslationUnitDecl 0x7fc3560264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc356026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc356026740 '__int128'
+|-TypedefDecl 0x7fc356026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc356026760 'unsigned __int128'
+|-TypedefDecl 0x7fc356026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc356026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc356026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc356026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc356026dc0 'char *'
+|   `-BuiltinType 0x7fc356026560 'char'
+|-TypedefDecl 0x7fc3560270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc356027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc356026ee0 'struct __va_list_tag'
+|     `-Record 0x7fc356026e58 '__va_list_tag'
+|-VarDecl 0x7fc356027178 <c_files/pr83415.c:4:1, col:75> col:46 used y '__attribute__((__vector_size__(8 * sizeof(short)))) short const' cinit
+| `-InitListExpr 0x7fc3560785c0 <col:50, col:75> '__attribute__((__vector_size__(8 * sizeof(short)))) short'
+|   |-ImplicitCastExpr 0x7fc356078640 <col:52> 'short' <IntegralCast>
+|   | `-IntegerLiteral 0x7fc356078440 <col:52> 'int' 0
+|   |-ImplicitCastExpr 0x7fc356078658 <col:55> 'short' <IntegralCast>
+|   | `-IntegerLiteral 0x7fc356078460 <col:55> 'int' 1
+|   |-ImplicitCastExpr 0x7fc356078670 <col:58> 'short' <IntegralCast>
+|   | `-IntegerLiteral 0x7fc356078480 <col:58> 'int' 2
+|   |-ImplicitCastExpr 0x7fc356078688 <col:61> 'short' <IntegralCast>
+|   | `-IntegerLiteral 0x7fc3560784a0 <col:61> 'int' 3
+|   |-ImplicitCastExpr 0x7fc3560786a0 <col:64> 'short' <IntegralCast>
+|   | `-IntegerLiteral 0x7fc3560784c0 <col:64> 'int' 4
+|   |-ImplicitCastExpr 0x7fc3560786b8 <col:67> 'short' <IntegralCast>
+|   | `-IntegerLiteral 0x7fc3560784e0 <col:67> 'int' 5
+|   |-ImplicitCastExpr 0x7fc3560786d0 <col:70> 'short' <IntegralCast>
+|   | `-IntegerLiteral 0x7fc356078500 <col:70> 'int' 6
+|   `-ImplicitCastExpr 0x7fc3560786e8 <col:73> 'short' <IntegralCast>
+|     `-IntegerLiteral 0x7fc356078520 <col:73> 'int' 7
+`-FunctionDecl 0x7fc356078978 <line:6:1, line:12:1> line:7:1 invalid main 'int (int, short **)'
+  |-ParmVarDecl 0x7fc356078718 <col:7, col:11> col:11 used argc 'int'
+  |-ParmVarDecl 0x7fc356078860 <col:17, col:29> col:24 argv 'short **':'short **'
+  `-CompoundStmt 0x7fc356079060 <line:8:1, line:12:1>
+    |-DeclStmt 0x7fc356078eb8 <line:9:3, col:15>
+    | `-VarDecl 0x7fc356078e18 <col:3, col:11> col:7 used i 'int' cinit
+    |   `-ImplicitCastExpr 0x7fc356078ea0 <col:11> 'int' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fc356078e78 <col:11> 'int' lvalue ParmVar 0x7fc356078718 'argc' 'int'
+    |-BinaryOperator 0x7fc356079000 <line:10:3, col:14> 'short' '='
+    | |-ArraySubscriptExpr 0x7fc356078f38 <col:3, col:6> 'short' lvalue vectorcomponent
+    | | |-DeclRefExpr 0x7fc356078ed0 <col:3> '__attribute__((__vector_size__(8 * sizeof(short)))) short const' lvalue Var 0x7fc356027178 'y' '__attribute__((__vector_size__(8 * sizeof(short)))) short const'
+    | | `-ImplicitCastExpr 0x7fc356078f20 <col:5> 'int' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fc356078ef8 <col:5> 'int' lvalue Var 0x7fc356078e18 'i' 'int'
+    | `-ImplicitCastExpr 0x7fc356078fe8 <col:10, col:14> 'short' <IntegralCast>
+    |   `-BinaryOperator 0x7fc356078fc0 <col:10, col:14> 'int' '-'
+    |     |-IntegerLiteral 0x7fc356078f60 <col:10> 'int' 7
+    |     `-ImplicitCastExpr 0x7fc356078fa8 <col:14> 'int' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fc356078f80 <col:14> 'int' lvalue Var 0x7fc356078e18 'i' 'int'
+    `-ReturnStmt 0x7fc356079048 <line:11:3, col:10>
+      `-IntegerLiteral 0x7fc356079028 <col:10> 'int' 0

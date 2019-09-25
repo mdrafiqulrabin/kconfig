@@ -1,0 +1,96 @@
+c_files/pr39335.c:20:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+1 warning generated.
+TranslationUnitDecl 0x7fa2e00264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa2e0026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa2e0026740 '__int128'
+|-TypedefDecl 0x7fa2e0026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa2e0026760 'unsigned __int128'
+|-TypedefDecl 0x7fa2e0026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa2e0026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa2e0026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa2e0026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa2e0026dc0 'char *'
+|   `-BuiltinType 0x7fa2e0026560 'char'
+|-TypedefDecl 0x7fa2e00270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa2e0027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa2e0026ee0 'struct __va_list_tag'
+|     `-Record 0x7fa2e0026e58 '__va_list_tag'
+|-TypedefDecl 0x7fa2e0027138 <c_files/pr39335.c:3:1, col:23> col:23 referenced byte 'unsigned char'
+| `-BuiltinType 0x7fa2e0026620 'unsigned char'
+|-RecordDecl 0x7fa2e0825a00 <line:4:9, col:16> col:16 struct gx_device_s
+|-TypedefDecl 0x7fa2e0825b00 <col:1, col:28> col:28 referenced gx_device 'struct gx_device_s':'struct gx_device_s'
+| `-ElaboratedType 0x7fa2e0825ab0 'struct gx_device_s' sugar
+|   `-RecordType 0x7fa2e0825a90 'struct gx_device_s'
+|     `-Record 0x7fa2e0825a00 'gx_device_s'
+|-RecordDecl 0x7fa2e0825b70 <line:5:9, col:16> col:16 struct gs_devn_params_s
+|-TypedefDecl 0x7fa2e0825c70 <col:1, col:33> col:33 referenced gs_devn_params 'struct gs_devn_params_s':'struct gs_devn_params_s'
+| `-ElaboratedType 0x7fa2e0825c20 'struct gs_devn_params_s' sugar
+|   `-RecordType 0x7fa2e0825c00 'struct gs_devn_params_s'
+|     `-Record 0x7fa2e0825ce0 'gs_devn_params_s'
+|-RecordDecl 0x7fa2e0825ce0 prev 0x7fa2e0825b70 <line:6:9, line:8:1> line:6:16 struct gs_devn_params_s definition
+| |-RecordDecl 0x7fa2e0825d68 parent 0x7fa2e00264d0 <line:7:4, col:11> col:11 struct compressed_color_list_s
+| `-FieldDecl 0x7fa2e0825ed0 <col:4, col:37> col:37 referenced compressed_color_list 'struct compressed_color_list_s *'
+|-TypedefDecl 0x7fa2e0825f38 <line:6:1, line:8:3> col:3 gs_devn_params_t 'struct gs_devn_params_s':'struct gs_devn_params_s'
+| `-ElaboratedType 0x7fa2e0825c20 'struct gs_devn_params_s' sugar
+|   `-RecordType 0x7fa2e0825c00 'struct gs_devn_params_s'
+|     `-Record 0x7fa2e0825ce0 'gs_devn_params_s'
+`-FunctionDecl 0x7fa2e08264e8 <line:9:1, line:20:1> line:9:5 devn_unpack_row 'int (gx_device *, int, gs_devn_params *, int, byte *, byte *)'
+  |-ParmVarDecl 0x7fa2e0826038 <col:21, col:33> col:33 dev 'gx_device *'
+  |-ParmVarDecl 0x7fa2e08260b0 <col:38, col:42> col:42 used num_comp 'int'
+  |-ParmVarDecl 0x7fa2e0826198 <line:10:20, col:37> col:37 used pdevn_params 'gs_devn_params *'
+  |-ParmVarDecl 0x7fa2e0826210 <col:51, col:55> col:55 used width 'int'
+  |-ParmVarDecl 0x7fa2e08262f8 <col:62, col:69> col:69 used in 'byte *'
+  |-ParmVarDecl 0x7fa2e0826368 <line:11:20, col:27> col:27 used out 'byte *'
+  `-CompoundStmt 0x7fa2e0827d80 <line:12:1, line:20:1>
+    |-DeclStmt 0x7fa2e0826778 <line:13:2, col:28>
+    | |-VarDecl 0x7fa2e0826608 <col:2, col:6> col:6 used i 'int'
+    | |-VarDecl 0x7fa2e0826680 <col:2, col:9> col:9 comp_num 'int'
+    | `-VarDecl 0x7fa2e08266f8 <col:2, col:19> col:19 used pixel_num 'int'
+    `-IfStmt 0x7fa2e0827d48 <line:14:2, line:19:4>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fa2e08268b8 <line:14:6, col:55> 'int' '=='
+      | |-ImplicitCastExpr 0x7fa2e0826888 <col:6, col:20> 'struct compressed_color_list_s *' <LValueToRValue>
+      | | `-MemberExpr 0x7fa2e08267d0 <col:6, col:20> 'struct compressed_color_list_s *' lvalue ->compressed_color_list 0x7fa2e0825ed0
+      | |   `-ImplicitCastExpr 0x7fa2e08267b8 <col:6> 'gs_devn_params *' <LValueToRValue>
+      | |     `-DeclRefExpr 0x7fa2e0826790 <col:6> 'gs_devn_params *' lvalue ParmVar 0x7fa2e0826198 'pdevn_params' 'gs_devn_params *'
+      | `-ImplicitCastExpr 0x7fa2e08268a0 <col:45, col:55> 'struct compressed_color_list_s *' <BitCast>
+      |   `-ParenExpr 0x7fa2e0826868 <col:45, col:55> 'void *'
+      |     `-CStyleCastExpr 0x7fa2e0826840 <col:46, col:54> 'void *' <NullToPointer>
+      |       `-IntegerLiteral 0x7fa2e0826808 <col:54> 'int' 0
+      |-CompoundStmt 0x7fa2e0827d28 <line:15:4, line:19:4>
+      | `-ForStmt 0x7fa2e0827cf0 <line:16:6, line:18:22>
+      |   |-BinaryOperator 0x7fa2e0826928 <line:16:11, col:23> 'int' '='
+      |   | |-DeclRefExpr 0x7fa2e08268e0 <col:11> 'int' lvalue Var 0x7fa2e08266f8 'pixel_num' 'int'
+      |   | `-IntegerLiteral 0x7fa2e0826908 <col:23> 'int' 0
+      |   |-<<<NULL>>>
+      |   |-BinaryOperator 0x7fa2e08269d0 <col:26, col:38> 'int' '<'
+      |   | |-ImplicitCastExpr 0x7fa2e08269a0 <col:26> 'int' <LValueToRValue>
+      |   | | `-DeclRefExpr 0x7fa2e0826950 <col:26> 'int' lvalue Var 0x7fa2e08266f8 'pixel_num' 'int'
+      |   | `-ImplicitCastExpr 0x7fa2e08269b8 <col:38> 'int' <LValueToRValue>
+      |   |   `-DeclRefExpr 0x7fa2e0826978 <col:38> 'int' lvalue ParmVar 0x7fa2e0826210 'width' 'int'
+      |   |-UnaryOperator 0x7fa2e0827a28 <col:45, col:54> 'int' postfix '++'
+      |   | `-DeclRefExpr 0x7fa2e0827a00 <col:45> 'int' lvalue Var 0x7fa2e08266f8 'pixel_num' 'int'
+      |   `-ForStmt 0x7fa2e0827cb8 <line:17:8, line:18:22>
+      |     |-BinaryOperator 0x7fa2e0827a90 <line:17:13, col:17> 'int' '='
+      |     | |-DeclRefExpr 0x7fa2e0827a48 <col:13> 'int' lvalue Var 0x7fa2e0826608 'i' 'int'
+      |     | `-IntegerLiteral 0x7fa2e0827a70 <col:17> 'int' 0
+      |     |-<<<NULL>>>
+      |     |-BinaryOperator 0x7fa2e0827b38 <col:20, col:24> 'int' '<'
+      |     | |-ImplicitCastExpr 0x7fa2e0827b08 <col:20> 'int' <LValueToRValue>
+      |     | | `-DeclRefExpr 0x7fa2e0827ab8 <col:20> 'int' lvalue Var 0x7fa2e0826608 'i' 'int'
+      |     | `-ImplicitCastExpr 0x7fa2e0827b20 <col:24> 'int' <LValueToRValue>
+      |     |   `-DeclRefExpr 0x7fa2e0827ae0 <col:24> 'int' lvalue ParmVar 0x7fa2e08260b0 'num_comp' 'int'
+      |     |-UnaryOperator 0x7fa2e0827b88 <col:34, col:35> 'int' postfix '++'
+      |     | `-DeclRefExpr 0x7fa2e0827b60 <col:34> 'int' lvalue Var 0x7fa2e0826608 'i' 'int'
+      |     `-BinaryOperator 0x7fa2e0827c90 <line:18:10, col:22> 'byte':'unsigned char' '='
+      |       |-UnaryOperator 0x7fa2e0827bf0 <col:10, col:14> 'byte':'unsigned char' lvalue prefix '*'
+      |       | `-UnaryOperator 0x7fa2e0827bd0 <col:11, col:14> 'byte *' postfix '++'
+      |       |   `-DeclRefExpr 0x7fa2e0827ba8 <col:11> 'byte *' lvalue ParmVar 0x7fa2e0826368 'out' 'byte *'
+      |       `-ImplicitCastExpr 0x7fa2e0827c78 <col:19, col:22> 'byte':'unsigned char' <LValueToRValue>
+      |         `-UnaryOperator 0x7fa2e0827c58 <col:19, col:22> 'byte':'unsigned char' lvalue prefix '*'
+      |           `-UnaryOperator 0x7fa2e0827c38 <col:20, col:22> 'byte *' postfix '++'
+      |             `-DeclRefExpr 0x7fa2e0827c10 <col:20> 'byte *' lvalue ParmVar 0x7fa2e08262f8 'in' 'byte *'
+      `-<<<NULL>>>

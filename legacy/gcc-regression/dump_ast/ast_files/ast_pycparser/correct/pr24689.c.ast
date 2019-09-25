@@ -1,0 +1,63 @@
+FileAST: 
+  Decl: bar, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['unsigned', 'int']
+      TypeDecl: bar, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: buf, [], [], []
+        ArrayDecl: []
+          TypeDecl: buf, []
+            IdentifierType: ['char']
+          Constant: int, 1
+        InitList: 
+          Constant: int, 3
+      Decl: p, ['const'], [], []
+        PtrDecl: []
+          TypeDecl: p, ['const']
+            IdentifierType: ['char']
+        ID: buf
+      Decl: q, ['const'], [], []
+        PtrDecl: []
+          PtrDecl: []
+            TypeDecl: q, ['const']
+              IdentifierType: ['char']
+        UnaryOp: &
+          ID: p
+      Decl: ch, [], [], []
+        TypeDecl: ch, []
+          IdentifierType: ['unsigned', 'int']
+      Switch: 
+        UnaryOp: *
+          UnaryOp: *
+            ID: q
+        Compound: 
+          Case: 
+            Constant: int, 1
+            Assignment: =
+              ID: ch
+              Constant: int, 5
+            Break: 
+          Default: 
+            Assignment: =
+              ID: ch
+              Constant: int, 0
+            Break: 
+      FuncCall: 
+        ID: bar
+        ExprList: 
+          ID: ch
+      Return: 
+        ID: ch

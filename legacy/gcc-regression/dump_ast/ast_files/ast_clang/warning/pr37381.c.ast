@@ -1,0 +1,441 @@
+c_files/pr37381.c:47:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+DoFullScreen (void)
+^
+c_files/pr37381.c:54:7: warning: implicit declaration of function 'ioctl' is invalid in C99 [-Wimplicit-function-declaration]
+  if (ioctl
+      ^
+c_files/pr37381.c:62:7: warning: implicit declaration of function 'perror' is invalid in C99 [-Wimplicit-function-declaration]
+      perror ("ioctl VIDIOCCAPTURE");
+      ^
+c_files/pr37381.c:64:8: warning: implicit declaration of function 'XTranslateCoordinates' is invalid in C99 [-Wimplicit-function-declaration]
+  if (!XTranslateCoordinates
+       ^
+c_files/pr37381.c:83:7: warning: implicit declaration of function 'XF86VidModeGetAllModeLines' is invalid in C99 [-Wimplicit-function-declaration]
+      XF86VidModeGetAllModeLines (display, XDefaultScreen (display), &tml,
+      ^
+c_files/pr37381.c:83:44: warning: implicit declaration of function 'XDefaultScreen' is invalid in C99 [-Wimplicit-function-declaration]
+      XF86VidModeGetAllModeLines (display, XDefaultScreen (display), &tml,
+                                           ^
+c_files/pr37381.c:93:4: warning: implicit declaration of function 'XF86VidModeSetViewPort' is invalid in C99 [-Wimplicit-function-declaration]
+          XF86VidModeSetViewPort (display, XDefaultScreen (display), vswin.x,
+          ^
+c_files/pr37381.c:97:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+8 warnings generated.
+TranslationUnitDecl 0x7fac108264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fac10826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fac10826740 '__int128'
+|-TypedefDecl 0x7fac10826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fac10826760 'unsigned __int128'
+|-TypedefDecl 0x7fac10826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fac10826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fac10826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fac10826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fac10826dc0 'char *'
+|   `-BuiltinType 0x7fac10826560 'char'
+|-TypedefDecl 0x7fac108270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fac10827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fac10826ee0 'struct __va_list_tag'
+|     `-Record 0x7fac10826e58 '__va_list_tag'
+|-VarDecl 0x7fac10827138 <c_files/pr37381.c:1:1, col:21> col:21 used __invalid_size_argument_for_IOC 'unsigned int' extern
+|-TypedefDecl 0x7fac11025a00 <line:2:1, col:22> col:22 referenced __u32 'unsigned int'
+| `-BuiltinType 0x7fac10826660 'unsigned int'
+|-RecordDecl 0x7fac11025a58 <line:3:1, line:7:1> line:3:8 struct video_window definition
+| |-FieldDecl 0x7fac11025b30 <line:5:3, col:9> col:9 referenced x '__u32':'unsigned int'
+| |-FieldDecl 0x7fac11025b88 <col:3, col:12> col:12 referenced y '__u32':'unsigned int'
+| |-FieldDecl 0x7fac11025be0 <line:6:3, col:9> col:9 referenced width '__u32':'unsigned int'
+| `-FieldDecl 0x7fac11025c38 <col:3, col:16> col:16 referenced height '__u32':'unsigned int'
+|-TypedefDecl 0x7fac11025c98 <line:8:1, col:23> col:23 referenced XID 'unsigned long'
+| `-BuiltinType 0x7fac10826680 'unsigned long'
+|-TypedefDecl 0x7fac11025d20 <line:9:1, col:13> col:13 referenced Window 'XID':'unsigned long'
+| `-TypedefType 0x7fac11025cf0 'XID' sugar
+|   |-Typedef 0x7fac11025c98 'XID'
+|   `-BuiltinType 0x7fac10826680 'unsigned long'
+|-RecordDecl 0x7fac11025d78 <line:10:9, line:13:1> line:10:16 struct _XExtData definition
+| `-FieldDecl 0x7fac11025e50 <line:12:3, col:10> col:10 referenced root 'Window':'unsigned long'
+|-TypedefDecl 0x7fac11025ef0 <line:10:1, line:14:1> col:1 referenced Screen 'struct _XExtData':'struct _XExtData'
+| `-ElaboratedType 0x7fac11025ea0 'struct _XExtData' sugar
+|   `-RecordType 0x7fac11025e00 'struct _XExtData'
+|     `-Record 0x7fac11025d78 '_XExtData'
+|-RecordDecl 0x7fac11025f60 <line:15:9, line:18:1> line:15:9 struct definition
+| `-FieldDecl 0x7fac11026028 <line:17:3, col:7> col:7 referenced border_width 'int'
+|-TypedefDecl 0x7fac110260c0 <line:15:1, line:19:1> col:1 referenced XWindowAttributes 'struct XWindowAttributes':'XWindowAttributes'
+| `-ElaboratedType 0x7fac11026070 'struct XWindowAttributes' sugar
+|   `-RecordType 0x7fac11025ff0 'XWindowAttributes'
+|     `-Record 0x7fac11025f60 ''
+|-RecordDecl 0x7fac11026130 <line:20:9, col:16> col:16 struct _XDisplay
+|-TypedefDecl 0x7fac11026230 <col:1, col:26> col:26 referenced Display 'struct _XDisplay':'struct _XDisplay'
+| `-ElaboratedType 0x7fac110261e0 'struct _XDisplay' sugar
+|   `-RecordType 0x7fac110261c0 'struct _XDisplay'
+|     `-Record 0x7fac11026130 '_XDisplay'
+|-RecordDecl 0x7fac110262a0 <line:21:9, line:25:1> line:21:9 struct definition
+| |-FieldDecl 0x7fac11026368 <line:23:3, col:7> col:7 referenced default_screen 'int'
+| `-FieldDecl 0x7fac11026438 <line:24:3, col:11> col:11 referenced screens 'Screen *'
+|-TypedefDecl 0x7fac11026530 <line:21:1, line:26:3> col:3 referenced _XPrivDisplay 'struct (anonymous struct at c_files/pr37381.c:21:9) *'
+| `-PointerType 0x7fac110264e0 'struct (anonymous struct at c_files/pr37381.c:21:9) *'
+|   `-ElaboratedType 0x7fac11026480 'struct (anonymous struct at c_files/pr37381.c:21:9)' sugar
+|     `-RecordType 0x7fac11026330 'struct (anonymous at c_files/pr37381.c:21:9)'
+|       `-Record 0x7fac110262a0 ''
+|-RecordDecl 0x7fac110265a0 <line:27:9, line:30:1> line:27:9 struct definition
+| |-FieldDecl 0x7fac11026668 <line:29:3, col:7> col:7 referenced x 'int'
+| `-FieldDecl 0x7fac110266c8 <col:3, col:10> col:10 referenced y 'int'
+|-TypedefDecl 0x7fac11026760 <line:27:1, line:31:1> col:1 referenced XSizeHints 'struct XSizeHints':'XSizeHints'
+| `-ElaboratedType 0x7fac11026710 'struct XSizeHints' sugar
+|   `-RecordType 0x7fac11026630 'XSizeHints'
+|     `-Record 0x7fac110265a0 ''
+|-RecordDecl 0x7fac110267d0 <line:32:9, line:36:1> line:32:9 struct definition
+| |-FieldDecl 0x7fac11026898 <line:34:3, col:18> col:18 referenced hdisplay 'unsigned short'
+| `-FieldDecl 0x7fac110268f8 <line:35:3, col:18> col:18 referenced vdisplay 'unsigned short'
+|-TypedefDecl 0x7fac11026990 <line:32:1, line:37:1> col:1 referenced XF86VidModeModeInfo 'struct XF86VidModeModeInfo':'XF86VidModeModeInfo'
+| `-ElaboratedType 0x7fac11026940 'struct XF86VidModeModeInfo' sugar
+|   `-RecordType 0x7fac11026860 'XF86VidModeModeInfo'
+|     `-Record 0x7fac110267d0 ''
+|-VarDecl 0x7fac11026a88 <line:38:1, col:10> col:10 used display 'Display *'
+|-VarDecl 0x7fac11026b00 <line:39:1, col:5> col:5 used tfd 'int'
+|-VarDecl 0x7fac11026b78 <line:40:1, col:5> col:5 used ccapt 'int'
+|-VarDecl 0x7fac11026bf0 <line:41:1, col:5> col:5 used tml 'int'
+|-VarDecl 0x7fac11026c68 <line:42:1, col:15> col:5 used fswidth 'int' cinit
+| `-IntegerLiteral 0x7fac11026cc8 <col:15> 'int' 0
+|-VarDecl 0x7fac11026d00 <line:43:1, col:16> col:5 used fsheight 'int' cinit
+| `-IntegerLiteral 0x7fac11026d60 <col:16> 'int' 0
+|-VarDecl 0x7fac11026d90 <line:44:1, col:8> col:8 used fmwin 'Window':'unsigned long'
+|-VarDecl 0x7fac11026ee0 <line:45:1, col:23> col:23 used modelines 'XF86VidModeModeInfo **'
+|-VarDecl 0x7fac11026f50 <col:1, col:63> col:35 used fullscreenmode 'XF86VidModeModeInfo *' cinit
+| `-ImplicitCastExpr 0x7fac11027030 <col:52, col:63> 'XF86VidModeModeInfo *' <NullToPointer>
+|   `-ParenExpr 0x7fac11027010 <col:52, col:63> 'void *'
+|     `-CStyleCastExpr 0x7fac11026fe8 <col:53, col:62> 'void *' <NullToPointer>
+|       `-IntegerLiteral 0x7fac11026fb0 <col:62> 'int' 0
+|-VarDecl 0x7fac110270b0 <line:46:1, col:21> col:21 used vswin 'struct video_window':'struct video_window'
+|-FunctionDecl 0x7fac110271d8 <line:47:1, line:97:1> line:47:1 DoFullScreen 'int (void)'
+| `-CompoundStmt 0x7fac1102bc70 <line:48:1, line:97:1>
+|   |-DeclStmt 0x7fac110272e8 <line:49:3, col:8>
+|   | `-VarDecl 0x7fac11027288 <col:3, col:7> col:7 used i 'int'
+|   |-DeclStmt 0x7fac11027408 <line:50:3, col:13>
+|   | |-VarDecl 0x7fac11027318 <col:3, col:7> col:7 used rx 'int'
+|   | `-VarDecl 0x7fac11027390 <col:3, col:11> col:11 used ry 'int'
+|   |-DeclStmt 0x7fac11027490 <line:51:3, col:17>
+|   | `-VarDecl 0x7fac11027430 <col:3, col:10> col:10 used junkwin 'Window':'unsigned long'
+|   |-DeclStmt 0x7fac11027540 <line:52:3, col:25>
+|   | `-VarDecl 0x7fac110274e0 <col:3, col:14> col:14 used fmsizehints 'XSizeHints':'XSizeHints'
+|   |-DeclStmt 0x7fac110275f0 <line:53:3, col:30>
+|   | `-VarDecl 0x7fac11027590 <col:3, col:21> col:21 used fmwinattr 'XWindowAttributes':'XWindowAttributes'
+|   |-IfStmt 0x7fac110293f8 <line:54:3, line:63:5>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fac110291e8 <line:54:7, line:60:30> 'int' '<'
+|   | | |-CallExpr 0x7fac11029170 <line:54:7, line:60:26> 'int'
+|   | | | |-ImplicitCastExpr 0x7fac11029158 <line:54:7> 'int (*)()' <FunctionToPointerDecay>
+|   | | | | `-DeclRefExpr 0x7fac110276f8 <col:7> 'int ()' Function 0x7fac11027660 'ioctl' 'int ()'
+|   | | | |-ImplicitCastExpr 0x7fac110291b0 <line:55:8> 'int' <LValueToRValue>
+|   | | | | `-DeclRefExpr 0x7fac11027720 <col:8> 'int' lvalue Var 0x7fac11026b00 'tfd' 'int'
+|   | | | |-ParenExpr 0x7fac11029098 <line:56:8, line:60:17> 'unsigned long'
+|   | | | | `-BinaryOperator 0x7fac11029070 <line:56:9, line:60:16> 'unsigned long' '|'
+|   | | | |   |-ImplicitCastExpr 0x7fac11029058 <line:56:9, col:76> 'unsigned long' <IntegralCast>
+|   | | | |   | `-BinaryOperator 0x7fac11028b88 <col:9, col:76> 'unsigned int' '|'
+|   | | | |   |   |-BinaryOperator 0x7fac11028a80 <col:9, col:61> 'unsigned int' '|'
+|   | | | |   |   | |-ParenExpr 0x7fac11027908 <col:9, col:38> 'unsigned int'
+|   | | | |   |   | | `-BinaryOperator 0x7fac110278e0 <col:10, col:37> 'unsigned int' '<<'
+|   | | | |   |   | |   |-ParenExpr 0x7fac11027768 <col:10, col:13> 'unsigned int'
+|   | | | |   |   | |   | `-IntegerLiteral 0x7fac11027748 <col:11> 'unsigned int' 1
+|   | | | |   |   | |   `-ParenExpr 0x7fac110278c0 <col:18, col:37> 'int'
+|   | | | |   |   | |     `-BinaryOperator 0x7fac11027898 <col:19, col:35> 'int' '+'
+|   | | | |   |   | |       |-ParenExpr 0x7fac11027858 <col:19, col:31> 'int'
+|   | | | |   |   | |       | `-BinaryOperator 0x7fac11027830 <col:20, col:30> 'int' '+'
+|   | | | |   |   | |       |   |-ParenExpr 0x7fac110277f0 <col:20, col:26> 'int'
+|   | | | |   |   | |       |   | `-BinaryOperator 0x7fac110277c8 <col:21, col:25> 'int' '+'
+|   | | | |   |   | |       |   |   |-IntegerLiteral 0x7fac11027788 <col:21> 'int' 0
+|   | | | |   |   | |       |   |   `-IntegerLiteral 0x7fac110277a8 <col:25> 'int' 8
+|   | | | |   |   | |       |   `-IntegerLiteral 0x7fac11027810 <col:30> 'int' 8
+|   | | | |   |   | |       `-IntegerLiteral 0x7fac11027878 <col:35> 'int' 14
+|   | | | |   |   | `-ImplicitCastExpr 0x7fac11028a68 <col:42, col:61> 'unsigned int' <IntegralCast>
+|   | | | |   |   |   `-ParenExpr 0x7fac11028a48 <col:42, col:61> 'int'
+|   | | | |   |   |     `-BinaryOperator 0x7fac11028a20 <col:43, col:60> 'int' '<<'
+|   | | | |   |   |       |-ParenExpr 0x7fac11027960 <col:43, col:49> 'int'
+|   | | | |   |   |       | `-ParenExpr 0x7fac11027940 <col:44, col:48> 'int'
+|   | | | |   |   |       |   `-CharacterLiteral 0x7fac11027928 <col:45> 'int' 118
+|   | | | |   |   |       `-ParenExpr 0x7fac11028a00 <col:54, col:60> 'int'
+|   | | | |   |   |         `-BinaryOperator 0x7fac110279c0 <col:55, col:59> 'int' '+'
+|   | | | |   |   |           |-IntegerLiteral 0x7fac11027980 <col:55> 'int' 0
+|   | | | |   |   |           `-IntegerLiteral 0x7fac110279a0 <col:59> 'int' 8
+|   | | | |   |   `-ImplicitCastExpr 0x7fac11028b70 <col:65, col:76> 'unsigned int' <IntegralCast>
+|   | | | |   |     `-ParenExpr 0x7fac11028b50 <col:65, col:76> 'int'
+|   | | | |   |       `-BinaryOperator 0x7fac11028b28 <col:66, col:75> 'int' '<<'
+|   | | | |   |         |-ParenExpr 0x7fac11028ae8 <col:66, col:70> 'int'
+|   | | | |   |         | `-ParenExpr 0x7fac11028ac8 <col:67, col:69> 'int'
+|   | | | |   |         |   `-IntegerLiteral 0x7fac11028aa8 <col:68> 'int' 8
+|   | | | |   |         `-IntegerLiteral 0x7fac11028b08 <col:75> 'int' 0
+|   | | | |   `-ParenExpr 0x7fac11029038 <line:57:2, line:60:16> 'unsigned long'
+|   | | | |     `-BinaryOperator 0x7fac11029010 <line:57:3, line:60:15> 'unsigned long' '<<'
+|   | | | |       |-ParenExpr 0x7fac11028f00 <line:57:3, line:59:68> 'unsigned long'
+|   | | | |       | `-ParenExpr 0x7fac11028ee0 <line:57:4, line:59:67> 'unsigned long'
+|   | | | |       |   `-ParenExpr 0x7fac11028ec0 <line:57:5, line:59:66> 'unsigned long'
+|   | | | |       |     `-ConditionalOperator 0x7fac11028e90 <line:57:6, line:59:35> 'unsigned long'
+|   | | | |       |       |-ParenExpr 0x7fac11028de0 <line:57:6, line:59:16> 'int'
+|   | | | |       |       | `-BinaryOperator 0x7fac11028db8 <line:57:7, line:59:15> 'int' '&&'
+|   | | | |       |       |   |-BinaryOperator 0x7fac11028c90 <line:57:7, col:37> 'int' '=='
+|   | | | |       |       |   | |-UnaryExprOrTypeTraitExpr 0x7fac11028bc8 <col:7, col:18> 'unsigned long' sizeof 'int'
+|   | | | |       |       |   | `-UnaryExprOrTypeTraitExpr 0x7fac11028c70 <col:23, col:37> 'unsigned long' sizeof 'int [1]'
+|   | | | |       |       |   `-BinaryOperator 0x7fac11028d90 <line:58:10, line:59:15> 'int' '<'
+|   | | | |       |       |     |-UnaryExprOrTypeTraitExpr 0x7fac11028cd0 <line:58:10, col:21> 'unsigned long' sizeof 'int'
+|   | | | |       |       |     `-ImplicitCastExpr 0x7fac11028d78 <line:59:7, col:15> 'unsigned long' <IntegralCast>
+|   | | | |       |       |       `-ParenExpr 0x7fac11028d58 <col:7, col:15> 'int'
+|   | | | |       |       |         `-BinaryOperator 0x7fac11028d30 <col:8, col:13> 'int' '<<'
+|   | | | |       |       |           |-IntegerLiteral 0x7fac11028cf0 <col:8> 'int' 1
+|   | | | |       |       |           `-IntegerLiteral 0x7fac11028d10 <col:13> 'int' 14
+|   | | | |       |       |-UnaryExprOrTypeTraitExpr 0x7fac11028e18 <col:20, col:31> 'unsigned long' sizeof 'int'
+|   | | | |       |       `-ImplicitCastExpr 0x7fac11028e78 <col:35> 'unsigned long' <IntegralCast>
+|   | | | |       |         `-ImplicitCastExpr 0x7fac11028e60 <col:35> 'unsigned int' <LValueToRValue>
+|   | | | |       |           `-DeclRefExpr 0x7fac11028e38 <col:35> 'unsigned int' lvalue Var 0x7fac10827138 '__invalid_size_argument_for_IOC' 'unsigned int'
+|   | | | |       `-ParenExpr 0x7fac11028ff0 <line:60:3, col:15> 'int'
+|   | | | |         `-BinaryOperator 0x7fac11028fc8 <col:4, col:14> 'int' '+'
+|   | | | |           |-ParenExpr 0x7fac11028f88 <col:4, col:10> 'int'
+|   | | | |           | `-BinaryOperator 0x7fac11028f60 <col:5, col:9> 'int' '+'
+|   | | | |           |   |-IntegerLiteral 0x7fac11028f20 <col:5> 'int' 0
+|   | | | |           |   `-IntegerLiteral 0x7fac11028f40 <col:9> 'int' 8
+|   | | | |           `-IntegerLiteral 0x7fac11028fa8 <col:14> 'int' 8
+|   | | | `-UnaryOperator 0x7fac11029108 <col:20, col:21> 'int *' prefix '&'
+|   | | |   `-DeclRefExpr 0x7fac110290b8 <col:21> 'int' lvalue Var 0x7fac11026b78 'ccapt' 'int'
+|   | | `-IntegerLiteral 0x7fac110291c8 <col:30> 'int' 0
+|   | |-CompoundStmt 0x7fac110293d8 <line:61:5, line:63:5>
+|   | | `-CallExpr 0x7fac11029390 <line:62:7, col:36> 'int'
+|   | |   |-ImplicitCastExpr 0x7fac11029378 <col:7> 'int (*)()' <FunctionToPointerDecay>
+|   | |   | `-DeclRefExpr 0x7fac110292d0 <col:7> 'int ()' Function 0x7fac11029238 'perror' 'int ()'
+|   | |   `-ImplicitCastExpr 0x7fac110293c0 <col:15> 'char *' <ArrayToPointerDecay>
+|   | |     `-StringLiteral 0x7fac11029338 <col:15> 'char [20]' lvalue "ioctl VIDIOCCAPTURE"
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7fac11029ba8 <line:64:3, line:70:5>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7fac11029b70 <line:64:7, line:68:76> 'int' prefix '!'
+|   | | `-CallExpr 0x7fac11029ac0 <line:64:8, line:68:76> 'int'
+|   | |   |-ImplicitCastExpr 0x7fac11029aa8 <line:64:8> 'int (*)()' <FunctionToPointerDecay>
+|   | |   | `-DeclRefExpr 0x7fac110294f0 <col:8> 'int ()' Function 0x7fac11029458 'XTranslateCoordinates' 'int ()'
+|   | |   |-ImplicitCastExpr 0x7fac11029b28 <line:65:8> 'Display *' <LValueToRValue>
+|   | |   | `-DeclRefExpr 0x7fac11029518 <col:8> 'Display *' lvalue Var 0x7fac11026a88 'display' 'Display *'
+|   | |   |-ImplicitCastExpr 0x7fac11029b40 <col:17> 'Window':'unsigned long' <LValueToRValue>
+|   | |   | `-DeclRefExpr 0x7fac11029540 <col:17> 'Window':'unsigned long' lvalue Var 0x7fac11026d90 'fmwin' 'Window':'unsigned long'
+|   | |   |-ImplicitCastExpr 0x7fac11029b58 <line:66:8, line:67:62> 'Window':'unsigned long' <LValueToRValue>
+|   | |   | `-ParenExpr 0x7fac11029820 <line:66:8, line:67:62> 'Window':'unsigned long' lvalue
+|   | |   |   `-MemberExpr 0x7fac110297e8 <line:66:9, line:67:58> 'Window':'unsigned long' lvalue ->root 0x7fac11025e50
+|   | |   |     `-ParenExpr 0x7fac110297c8 <line:66:9, line:67:55> 'Screen *'
+|   | |   |       `-UnaryOperator 0x7fac110297a8 <line:66:10, line:67:54> 'Screen *' prefix '&'
+|   | |   |         `-ArraySubscriptExpr 0x7fac11029780 <line:66:11, line:67:54> 'Screen':'struct _XExtData' lvalue
+|   | |   |           |-ImplicitCastExpr 0x7fac11029750 <line:66:11, line:67:3> 'Screen *' <LValueToRValue>
+|   | |   |           | `-MemberExpr 0x7fac11029628 <line:66:11, line:67:3> 'Screen *' lvalue ->screens 0x7fac11026438
+|   | |   |           |   `-ParenExpr 0x7fac11029608 <line:66:11, col:35> '_XPrivDisplay':'struct (anonymous struct at c_files/pr37381.c:21:9) *'
+|   | |   |           |     `-CStyleCastExpr 0x7fac110295e0 <col:12, col:28> '_XPrivDisplay':'struct (anonymous struct at c_files/pr37381.c:21:9) *' <BitCast>
+|   | |   |           |       `-ImplicitCastExpr 0x7fac110295c8 <col:28> 'Display *' <LValueToRValue>
+|   | |   |           |         `-DeclRefExpr 0x7fac11029590 <col:28> 'Display *' lvalue Var 0x7fac11026a88 'display' 'Display *'
+|   | |   |           `-ImplicitCastExpr 0x7fac11029768 <line:67:11, col:53> 'int' <LValueToRValue>
+|   | |   |             `-ParenExpr 0x7fac11029730 <col:11, col:53> 'int' lvalue
+|   | |   |               `-MemberExpr 0x7fac110296f8 <col:12, col:39> 'int' lvalue ->default_screen 0x7fac11026368
+|   | |   |                 `-ParenExpr 0x7fac110296d8 <col:12, col:36> '_XPrivDisplay':'struct (anonymous struct at c_files/pr37381.c:21:9) *'
+|   | |   |                   `-CStyleCastExpr 0x7fac110296b0 <col:13, col:29> '_XPrivDisplay':'struct (anonymous struct at c_files/pr37381.c:21:9) *' <BitCast>
+|   | |   |                     `-ImplicitCastExpr 0x7fac11029698 <col:29> 'Display *' <LValueToRValue>
+|   | |   |                       `-DeclRefExpr 0x7fac11029660 <col:29> 'Display *' lvalue Var 0x7fac11026a88 'display' 'Display *'
+|   | |   |-UnaryOperator 0x7fac110298b8 <line:68:8, col:19> 'int' prefix '-'
+|   | |   | `-ImplicitCastExpr 0x7fac110298a0 <col:9, col:19> 'int' <LValueToRValue>
+|   | |   |   `-MemberExpr 0x7fac11029868 <col:9, col:19> 'int' lvalue .border_width 0x7fac11026028
+|   | |   |     `-DeclRefExpr 0x7fac11029840 <col:9> 'XWindowAttributes':'XWindowAttributes' lvalue Var 0x7fac11027590 'fmwinattr' 'XWindowAttributes':'XWindowAttributes'
+|   | |   |-UnaryOperator 0x7fac11029950 <col:33, col:44> 'int' prefix '-'
+|   | |   | `-ImplicitCastExpr 0x7fac11029938 <col:34, col:44> 'int' <LValueToRValue>
+|   | |   |   `-MemberExpr 0x7fac11029900 <col:34, col:44> 'int' lvalue .border_width 0x7fac11026028
+|   | |   |     `-DeclRefExpr 0x7fac110298d8 <col:34> 'XWindowAttributes':'XWindowAttributes' lvalue Var 0x7fac11027590 'fmwinattr' 'XWindowAttributes':'XWindowAttributes'
+|   | |   |-UnaryOperator 0x7fac11029998 <col:58, col:59> 'int *' prefix '&'
+|   | |   | `-DeclRefExpr 0x7fac11029970 <col:59> 'int' lvalue Var 0x7fac11027318 'rx' 'int'
+|   | |   |-UnaryOperator 0x7fac110299e0 <col:63, col:64> 'int *' prefix '&'
+|   | |   | `-DeclRefExpr 0x7fac110299b8 <col:64> 'int' lvalue Var 0x7fac11027390 'ry' 'int'
+|   | |   `-UnaryOperator 0x7fac11029a88 <col:68, col:69> 'Window *' prefix '&'
+|   | |     `-DeclRefExpr 0x7fac11029a00 <col:69> 'Window':'unsigned long' lvalue Var 0x7fac11027430 'junkwin' 'Window':'unsigned long'
+|   | |-CompoundStmt 0x7fac11029b90 <line:69:5, line:70:5>
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x7fac11029c98 <line:71:3, col:17> '__u32':'unsigned int' '='
+|   | |-MemberExpr 0x7fac11029c08 <col:3, col:9> '__u32':'unsigned int' lvalue .width 0x7fac11025be0
+|   | | `-DeclRefExpr 0x7fac11029be0 <col:3> 'struct video_window':'struct video_window' lvalue Var 0x7fac110270b0 'vswin' 'struct video_window':'struct video_window'
+|   | `-ImplicitCastExpr 0x7fac11029c80 <col:17> '__u32':'unsigned int' <IntegralCast>
+|   |   `-ImplicitCastExpr 0x7fac11029c68 <col:17> 'int' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fac11029c40 <col:17> 'int' lvalue Var 0x7fac11026c68 'fswidth' 'int'
+|   |-BinaryOperator 0x7fac11029dd8 <line:72:3, col:18> '__u32':'unsigned int' '='
+|   | |-MemberExpr 0x7fac11029d48 <col:3, col:9> '__u32':'unsigned int' lvalue .height 0x7fac11025c38
+|   | | `-DeclRefExpr 0x7fac11029d20 <col:3> 'struct video_window':'struct video_window' lvalue Var 0x7fac110270b0 'vswin' 'struct video_window':'struct video_window'
+|   | `-ImplicitCastExpr 0x7fac11029dc0 <col:18> '__u32':'unsigned int' <IntegralCast>
+|   |   `-ImplicitCastExpr 0x7fac11029da8 <col:18> 'int' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fac11029d80 <col:18> 'int' lvalue Var 0x7fac11026d00 'fsheight' 'int'
+|   |-BinaryOperator 0x7fac11029f58 <line:73:3, col:29> '__u32':'unsigned int' '='
+|   | |-MemberExpr 0x7fac11029e28 <col:3, col:9> '__u32':'unsigned int' lvalue .x 0x7fac11025b30
+|   | | `-DeclRefExpr 0x7fac11029e00 <col:3> 'struct video_window':'struct video_window' lvalue Var 0x7fac110270b0 'vswin' 'struct video_window':'struct video_window'
+|   | `-ImplicitCastExpr 0x7fac11029f40 <col:13, col:29> '__u32':'unsigned int' <IntegralCast>
+|   |   `-BinaryOperator 0x7fac11029f18 <col:13, col:29> 'int' '+'
+|   |     |-ImplicitCastExpr 0x7fac11029ee8 <col:13, col:25> 'int' <LValueToRValue>
+|   |     | `-MemberExpr 0x7fac11029e88 <col:13, col:25> 'int' lvalue .x 0x7fac11026668
+|   |     |   `-DeclRefExpr 0x7fac11029e60 <col:13> 'XSizeHints':'XSizeHints' lvalue Var 0x7fac110274e0 'fmsizehints' 'XSizeHints':'XSizeHints'
+|   |     `-ImplicitCastExpr 0x7fac11029f00 <col:29> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7fac11029ec0 <col:29> 'int' lvalue Var 0x7fac11027318 'rx' 'int'
+|   |-BinaryOperator 0x7fac1102a128 <line:74:3, col:29> '__u32':'unsigned int' '='
+|   | |-MemberExpr 0x7fac11029ff8 <col:3, col:9> '__u32':'unsigned int' lvalue .y 0x7fac11025b88
+|   | | `-DeclRefExpr 0x7fac11029fd0 <col:3> 'struct video_window':'struct video_window' lvalue Var 0x7fac110270b0 'vswin' 'struct video_window':'struct video_window'
+|   | `-ImplicitCastExpr 0x7fac1102a110 <col:13, col:29> '__u32':'unsigned int' <IntegralCast>
+|   |   `-BinaryOperator 0x7fac1102a0e8 <col:13, col:29> 'int' '+'
+|   |     |-ImplicitCastExpr 0x7fac1102a0b8 <col:13, col:25> 'int' <LValueToRValue>
+|   |     | `-MemberExpr 0x7fac1102a058 <col:13, col:25> 'int' lvalue .y 0x7fac110266c8
+|   |     |   `-DeclRefExpr 0x7fac1102a030 <col:13> 'XSizeHints':'XSizeHints' lvalue Var 0x7fac110274e0 'fmsizehints' 'XSizeHints':'XSizeHints'
+|   |     `-ImplicitCastExpr 0x7fac1102a0d0 <col:29> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7fac1102a090 <col:29> 'int' lvalue Var 0x7fac11027390 'ry' 'int'
+|   `-IfStmt 0x7fac1102bc38 <line:75:3, line:96:5>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7fac1102afa0 <line:75:7, line:81:30> 'int' '<'
+|     | |-CallExpr 0x7fac1102af28 <line:75:7, line:81:26> 'int'
+|     | | |-ImplicitCastExpr 0x7fac1102af10 <line:75:7> 'int (*)()' <FunctionToPointerDecay>
+|     | | | `-DeclRefExpr 0x7fac1102a150 <col:7> 'int ()' Function 0x7fac11027660 'ioctl' 'int ()'
+|     | | |-ImplicitCastExpr 0x7fac1102af68 <line:76:8> 'int' <LValueToRValue>
+|     | | | `-DeclRefExpr 0x7fac1102a178 <col:8> 'int' lvalue Var 0x7fac11026b00 'tfd' 'int'
+|     | | |-ParenExpr 0x7fac1102aea8 <line:77:8, line:81:17> 'unsigned long'
+|     | | | `-BinaryOperator 0x7fac1102ae80 <line:77:9, line:81:16> 'unsigned long' '|'
+|     | | |   |-ImplicitCastExpr 0x7fac1102ae68 <line:77:9, col:76> 'unsigned long' <IntegralCast>
+|     | | |   | `-BinaryOperator 0x7fac1102a5c8 <col:9, col:76> 'unsigned int' '|'
+|     | | |   |   |-BinaryOperator 0x7fac1102a4c0 <col:9, col:61> 'unsigned int' '|'
+|     | | |   |   | |-ParenExpr 0x7fac1102a360 <col:9, col:38> 'unsigned int'
+|     | | |   |   | | `-BinaryOperator 0x7fac1102a338 <col:10, col:37> 'unsigned int' '<<'
+|     | | |   |   | |   |-ParenExpr 0x7fac1102a1c0 <col:10, col:13> 'unsigned int'
+|     | | |   |   | |   | `-IntegerLiteral 0x7fac1102a1a0 <col:11> 'unsigned int' 1
+|     | | |   |   | |   `-ParenExpr 0x7fac1102a318 <col:18, col:37> 'int'
+|     | | |   |   | |     `-BinaryOperator 0x7fac1102a2f0 <col:19, col:35> 'int' '+'
+|     | | |   |   | |       |-ParenExpr 0x7fac1102a2b0 <col:19, col:31> 'int'
+|     | | |   |   | |       | `-BinaryOperator 0x7fac1102a288 <col:20, col:30> 'int' '+'
+|     | | |   |   | |       |   |-ParenExpr 0x7fac1102a248 <col:20, col:26> 'int'
+|     | | |   |   | |       |   | `-BinaryOperator 0x7fac1102a220 <col:21, col:25> 'int' '+'
+|     | | |   |   | |       |   |   |-IntegerLiteral 0x7fac1102a1e0 <col:21> 'int' 0
+|     | | |   |   | |       |   |   `-IntegerLiteral 0x7fac1102a200 <col:25> 'int' 8
+|     | | |   |   | |       |   `-IntegerLiteral 0x7fac1102a268 <col:30> 'int' 8
+|     | | |   |   | |       `-IntegerLiteral 0x7fac1102a2d0 <col:35> 'int' 14
+|     | | |   |   | `-ImplicitCastExpr 0x7fac1102a4a8 <col:42, col:61> 'unsigned int' <IntegralCast>
+|     | | |   |   |   `-ParenExpr 0x7fac1102a488 <col:42, col:61> 'int'
+|     | | |   |   |     `-BinaryOperator 0x7fac1102a460 <col:43, col:60> 'int' '<<'
+|     | | |   |   |       |-ParenExpr 0x7fac1102a3b8 <col:43, col:49> 'int'
+|     | | |   |   |       | `-ParenExpr 0x7fac1102a398 <col:44, col:48> 'int'
+|     | | |   |   |       |   `-CharacterLiteral 0x7fac1102a380 <col:45> 'int' 118
+|     | | |   |   |       `-ParenExpr 0x7fac1102a440 <col:54, col:60> 'int'
+|     | | |   |   |         `-BinaryOperator 0x7fac1102a418 <col:55, col:59> 'int' '+'
+|     | | |   |   |           |-IntegerLiteral 0x7fac1102a3d8 <col:55> 'int' 0
+|     | | |   |   |           `-IntegerLiteral 0x7fac1102a3f8 <col:59> 'int' 8
+|     | | |   |   `-ImplicitCastExpr 0x7fac1102a5b0 <col:65, col:76> 'unsigned int' <IntegralCast>
+|     | | |   |     `-ParenExpr 0x7fac1102a590 <col:65, col:76> 'int'
+|     | | |   |       `-BinaryOperator 0x7fac1102a568 <col:66, col:75> 'int' '<<'
+|     | | |   |         |-ParenExpr 0x7fac1102a528 <col:66, col:70> 'int'
+|     | | |   |         | `-ParenExpr 0x7fac1102a508 <col:67, col:69> 'int'
+|     | | |   |         |   `-IntegerLiteral 0x7fac1102a4e8 <col:68> 'int' 8
+|     | | |   |         `-IntegerLiteral 0x7fac1102a548 <col:75> 'int' 0
+|     | | |   `-ParenExpr 0x7fac1102ae48 <line:78:2, line:81:16> 'unsigned long'
+|     | | |     `-BinaryOperator 0x7fac1102ae20 <line:78:3, line:81:15> 'unsigned long' '<<'
+|     | | |       |-ParenExpr 0x7fac1102a900 <line:78:3, line:80:68> 'unsigned long'
+|     | | |       | `-ParenExpr 0x7fac1102a8e0 <line:78:4, line:80:67> 'unsigned long'
+|     | | |       |   `-ParenExpr 0x7fac1102a8c0 <line:78:5, line:80:66> 'unsigned long'
+|     | | |       |     `-ConditionalOperator 0x7fac1102a890 <line:78:6, line:80:35> 'unsigned long'
+|     | | |       |       |-ParenExpr 0x7fac1102a7e0 <line:78:6, line:80:16> 'int'
+|     | | |       |       | `-BinaryOperator 0x7fac1102a7b8 <line:78:7, line:80:15> 'int' '&&'
+|     | | |       |       |   |-BinaryOperator 0x7fac1102a690 <line:78:7, col:37> 'int' '=='
+|     | | |       |       |   | |-UnaryExprOrTypeTraitExpr 0x7fac1102a608 <col:7, col:18> 'unsigned long' sizeof 'int'
+|     | | |       |       |   | `-UnaryExprOrTypeTraitExpr 0x7fac1102a670 <col:23, col:37> 'unsigned long' sizeof 'int [1]'
+|     | | |       |       |   `-BinaryOperator 0x7fac1102a790 <line:79:10, line:80:15> 'int' '<'
+|     | | |       |       |     |-UnaryExprOrTypeTraitExpr 0x7fac1102a6d0 <line:79:10, col:21> 'unsigned long' sizeof 'int'
+|     | | |       |       |     `-ImplicitCastExpr 0x7fac1102a778 <line:80:7, col:15> 'unsigned long' <IntegralCast>
+|     | | |       |       |       `-ParenExpr 0x7fac1102a758 <col:7, col:15> 'int'
+|     | | |       |       |         `-BinaryOperator 0x7fac1102a730 <col:8, col:13> 'int' '<<'
+|     | | |       |       |           |-IntegerLiteral 0x7fac1102a6f0 <col:8> 'int' 1
+|     | | |       |       |           `-IntegerLiteral 0x7fac1102a710 <col:13> 'int' 14
+|     | | |       |       |-UnaryExprOrTypeTraitExpr 0x7fac1102a818 <col:20, col:31> 'unsigned long' sizeof 'int'
+|     | | |       |       `-ImplicitCastExpr 0x7fac1102a878 <col:35> 'unsigned long' <IntegralCast>
+|     | | |       |         `-ImplicitCastExpr 0x7fac1102a860 <col:35> 'unsigned int' <LValueToRValue>
+|     | | |       |           `-DeclRefExpr 0x7fac1102a838 <col:35> 'unsigned int' lvalue Var 0x7fac10827138 '__invalid_size_argument_for_IOC' 'unsigned int'
+|     | | |       `-ParenExpr 0x7fac1102ae00 <line:81:3, col:15> 'int'
+|     | | |         `-BinaryOperator 0x7fac1102a9c8 <col:4, col:14> 'int' '+'
+|     | | |           |-ParenExpr 0x7fac1102a988 <col:4, col:10> 'int'
+|     | | |           | `-BinaryOperator 0x7fac1102a960 <col:5, col:9> 'int' '+'
+|     | | |           |   |-IntegerLiteral 0x7fac1102a920 <col:5> 'int' 0
+|     | | |           |   `-IntegerLiteral 0x7fac1102a940 <col:9> 'int' 8
+|     | | |           `-IntegerLiteral 0x7fac1102a9a8 <col:14> 'int' 8
+|     | | `-UnaryOperator 0x7fac1102aef0 <col:20, col:21> 'int *' prefix '&'
+|     | |   `-DeclRefExpr 0x7fac1102aec8 <col:21> 'int' lvalue Var 0x7fac11026b78 'ccapt' 'int'
+|     | `-IntegerLiteral 0x7fac1102af80 <col:30> 'int' 0
+|     |-CompoundStmt 0x7fac1102bc08 <line:82:5, line:96:5>
+|     | |-CallExpr 0x7fac1102b350 <line:83:7, line:84:17> 'int'
+|     | | |-ImplicitCastExpr 0x7fac1102b338 <line:83:7> 'int (*)()' <FunctionToPointerDecay>
+|     | | | `-DeclRefExpr 0x7fac1102b088 <col:7> 'int ()' Function 0x7fac1102aff0 'XF86VidModeGetAllModeLines' 'int ()'
+|     | | |-ImplicitCastExpr 0x7fac1102b398 <col:35> 'Display *' <LValueToRValue>
+|     | | | `-DeclRefExpr 0x7fac1102b0b0 <col:35> 'Display *' lvalue Var 0x7fac11026a88 'display' 'Display *'
+|     | | |-CallExpr 0x7fac1102b200 <col:44, col:67> 'int'
+|     | | | |-ImplicitCastExpr 0x7fac1102b1e8 <col:44> 'int (*)()' <FunctionToPointerDecay>
+|     | | | | `-DeclRefExpr 0x7fac1102b198 <col:44> 'int ()' Function 0x7fac1102b100 'XDefaultScreen' 'int ()'
+|     | | | `-ImplicitCastExpr 0x7fac1102b230 <col:60> 'Display *' <LValueToRValue>
+|     | | |   `-DeclRefExpr 0x7fac1102b1c0 <col:60> 'Display *' lvalue Var 0x7fac11026a88 'display' 'Display *'
+|     | | |-UnaryOperator 0x7fac1102b270 <col:70, col:71> 'int *' prefix '&'
+|     | | | `-DeclRefExpr 0x7fac1102b248 <col:71> 'int' lvalue Var 0x7fac11026bf0 'tml' 'int'
+|     | | `-UnaryOperator 0x7fac1102b318 <line:84:7, col:8> 'XF86VidModeModeInfo ***' prefix '&'
+|     | |   `-DeclRefExpr 0x7fac1102b290 <col:8> 'XF86VidModeModeInfo **' lvalue Var 0x7fac11026ee0 'modelines' 'XF86VidModeModeInfo **'
+|     | |-CompoundStmt 0x7fac1102b8a0 <line:85:2, line:91:2>
+|     | | `-IfStmt 0x7fac1102b868 <line:86:4, line:90:6>
+|     | |   |-<<<NULL>>>
+|     | |   |-<<<NULL>>>
+|     | |   |-BinaryOperator 0x7fac1102b710 <line:86:8, line:87:46> 'int' '&&'
+|     | |   | |-ParenExpr 0x7fac1102b540 <line:86:8, col:42> 'int'
+|     | |   | | `-BinaryOperator 0x7fac1102b518 <col:9, col:35> 'int' '=='
+|     | |   | |   |-ImplicitCastExpr 0x7fac1102b4e8 <col:9, col:23> 'int' <IntegralCast>
+|     | |   | |   | `-ImplicitCastExpr 0x7fac1102b4d0 <col:9, col:23> 'unsigned short' <LValueToRValue>
+|     | |   | |   |   `-MemberExpr 0x7fac1102b470 <col:9, col:23> 'unsigned short' lvalue ->hdisplay 0x7fac11026898
+|     | |   | |   |     `-ImplicitCastExpr 0x7fac1102b458 <col:9, col:20> 'XF86VidModeModeInfo *' <LValueToRValue>
+|     | |   | |   |       `-ArraySubscriptExpr 0x7fac1102b430 <col:9, col:20> 'XF86VidModeModeInfo *' lvalue
+|     | |   | |   |         |-ImplicitCastExpr 0x7fac1102b400 <col:9> 'XF86VidModeModeInfo **' <LValueToRValue>
+|     | |   | |   |         | `-DeclRefExpr 0x7fac1102b3b0 <col:9> 'XF86VidModeModeInfo **' lvalue Var 0x7fac11026ee0 'modelines' 'XF86VidModeModeInfo **'
+|     | |   | |   |         `-ImplicitCastExpr 0x7fac1102b418 <col:19> 'int' <LValueToRValue>
+|     | |   | |   |           `-DeclRefExpr 0x7fac1102b3d8 <col:19> 'int' lvalue Var 0x7fac11027288 'i' 'int'
+|     | |   | |   `-ImplicitCastExpr 0x7fac1102b500 <col:35> 'int' <LValueToRValue>
+|     | |   | |     `-DeclRefExpr 0x7fac1102b4a8 <col:35> 'int' lvalue Var 0x7fac11026c68 'fswidth' 'int'
+|     | |   | `-ParenExpr 0x7fac1102b6f0 <line:87:11, col:46> 'int'
+|     | |   |   `-BinaryOperator 0x7fac1102b6c8 <col:12, col:38> 'int' '=='
+|     | |   |     |-ImplicitCastExpr 0x7fac1102b698 <col:12, col:26> 'int' <IntegralCast>
+|     | |   |     | `-ImplicitCastExpr 0x7fac1102b680 <col:12, col:26> 'unsigned short' <LValueToRValue>
+|     | |   |     |   `-MemberExpr 0x7fac1102b620 <col:12, col:26> 'unsigned short' lvalue ->vdisplay 0x7fac110268f8
+|     | |   |     |     `-ImplicitCastExpr 0x7fac1102b608 <col:12, col:23> 'XF86VidModeModeInfo *' <LValueToRValue>
+|     | |   |     |       `-ArraySubscriptExpr 0x7fac1102b5e0 <col:12, col:23> 'XF86VidModeModeInfo *' lvalue
+|     | |   |     |         |-ImplicitCastExpr 0x7fac1102b5b0 <col:12> 'XF86VidModeModeInfo **' <LValueToRValue>
+|     | |   |     |         | `-DeclRefExpr 0x7fac1102b560 <col:12> 'XF86VidModeModeInfo **' lvalue Var 0x7fac11026ee0 'modelines' 'XF86VidModeModeInfo **'
+|     | |   |     |         `-ImplicitCastExpr 0x7fac1102b5c8 <col:22> 'int' <LValueToRValue>
+|     | |   |     |           `-DeclRefExpr 0x7fac1102b588 <col:22> 'int' lvalue Var 0x7fac11027288 'i' 'int'
+|     | |   |     `-ImplicitCastExpr 0x7fac1102b6b0 <col:38> 'int' <LValueToRValue>
+|     | |   |       `-DeclRefExpr 0x7fac1102b658 <col:38> 'int' lvalue Var 0x7fac11026d00 'fsheight' 'int'
+|     | |   |-CompoundStmt 0x7fac1102b848 <line:88:6, line:90:6>
+|     | |   | `-BinaryOperator 0x7fac1102b820 <line:89:8, col:36> 'XF86VidModeModeInfo *' '='
+|     | |   |   |-DeclRefExpr 0x7fac1102b738 <col:8> 'XF86VidModeModeInfo *' lvalue Var 0x7fac11026f50 'fullscreenmode' 'XF86VidModeModeInfo *'
+|     | |   |   `-ImplicitCastExpr 0x7fac1102b808 <col:25, col:36> 'XF86VidModeModeInfo *' <LValueToRValue>
+|     | |   |     `-ArraySubscriptExpr 0x7fac1102b7e0 <col:25, col:36> 'XF86VidModeModeInfo *' lvalue
+|     | |   |       |-ImplicitCastExpr 0x7fac1102b7b0 <col:25> 'XF86VidModeModeInfo **' <LValueToRValue>
+|     | |   |       | `-DeclRefExpr 0x7fac1102b760 <col:25> 'XF86VidModeModeInfo **' lvalue Var 0x7fac11026ee0 'modelines' 'XF86VidModeModeInfo **'
+|     | |   |       `-ImplicitCastExpr 0x7fac1102b7c8 <col:35> 'int' <LValueToRValue>
+|     | |   |         `-DeclRefExpr 0x7fac1102b788 <col:35> 'int' lvalue Var 0x7fac11027288 'i' 'int'
+|     | |   `-<<<NULL>>>
+|     | `-CompoundStmt 0x7fac1102bbe8 <line:92:2, line:95:2>
+|     |   `-CallExpr 0x7fac1102bb58 <line:93:4, line:94:14> 'int'
+|     |     |-ImplicitCastExpr 0x7fac1102bb40 <line:93:4> 'int (*)()' <FunctionToPointerDecay>
+|     |     | `-DeclRefExpr 0x7fac1102b980 <col:4> 'int ()' Function 0x7fac1102b8e8 'XF86VidModeSetViewPort' 'int ()'
+|     |     |-ImplicitCastExpr 0x7fac1102bba0 <col:28> 'Display *' <LValueToRValue>
+|     |     | `-DeclRefExpr 0x7fac1102b9a8 <col:28> 'Display *' lvalue Var 0x7fac11026a88 'display' 'Display *'
+|     |     |-CallExpr 0x7fac1102ba38 <col:37, col:60> 'int'
+|     |     | |-ImplicitCastExpr 0x7fac1102ba20 <col:37> 'int (*)()' <FunctionToPointerDecay>
+|     |     | | `-DeclRefExpr 0x7fac1102b9d0 <col:37> 'int ()' Function 0x7fac1102b100 'XDefaultScreen' 'int ()'
+|     |     | `-ImplicitCastExpr 0x7fac1102ba68 <col:53> 'Display *' <LValueToRValue>
+|     |     |   `-DeclRefExpr 0x7fac1102b9f8 <col:53> 'Display *' lvalue Var 0x7fac11026a88 'display' 'Display *'
+|     |     |-ImplicitCastExpr 0x7fac1102bbb8 <col:63, col:69> '__u32':'unsigned int' <LValueToRValue>
+|     |     | `-MemberExpr 0x7fac1102baa8 <col:63, col:69> '__u32':'unsigned int' lvalue .x 0x7fac11025b30
+|     |     |   `-DeclRefExpr 0x7fac1102ba80 <col:63> 'struct video_window':'struct video_window' lvalue Var 0x7fac110270b0 'vswin' 'struct video_window':'struct video_window'
+|     |     `-ImplicitCastExpr 0x7fac1102bbd0 <line:94:7, col:13> '__u32':'unsigned int' <LValueToRValue>
+|     |       `-MemberExpr 0x7fac1102bb08 <col:7, col:13> '__u32':'unsigned int' lvalue .y 0x7fac11025b88
+|     |         `-DeclRefExpr 0x7fac1102bae0 <col:7> 'struct video_window':'struct video_window' lvalue Var 0x7fac110270b0 'vswin' 'struct video_window':'struct video_window'
+|     `-<<<NULL>>>
+|-FunctionDecl 0x7fac11027660 <<invalid sloc>> line:54:7 implicit used ioctl 'int ()'
+|-FunctionDecl 0x7fac11029238 <<invalid sloc>> line:62:7 implicit used perror 'int ()'
+|-FunctionDecl 0x7fac11029458 <<invalid sloc>> line:64:8 implicit used XTranslateCoordinates 'int ()'
+|-FunctionDecl 0x7fac1102aff0 <<invalid sloc>> line:83:7 implicit used XF86VidModeGetAllModeLines 'int ()'
+|-FunctionDecl 0x7fac1102b100 <<invalid sloc>> col:44 implicit used XDefaultScreen 'int ()'
+`-FunctionDecl 0x7fac1102b8e8 <<invalid sloc>> line:93:4 implicit used XF86VidModeSetViewPort 'int ()'

@@ -1,0 +1,6 @@
+FileAST: 
+  Pragma: STDC FLOAT_CONST_DECIMAL64 ON	 
+  Decl: d, [], [], []
+    TypeDecl: d, []
+      IdentifierType: ['double']
+    Constant: float, 1.0

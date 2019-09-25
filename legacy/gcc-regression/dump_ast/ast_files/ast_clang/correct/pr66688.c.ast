@@ -1,0 +1,112 @@
+TranslationUnitDecl 0x7fefc80264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fefc8026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fefc8026740 '__int128'
+|-TypedefDecl 0x7fefc8026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fefc8026760 'unsigned __int128'
+|-TypedefDecl 0x7fefc8026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fefc8026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fefc8026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fefc8026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fefc8026dc0 'char *'
+|   `-BuiltinType 0x7fefc8026560 'char'
+|-TypedefDecl 0x7fefc80270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fefc8027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fefc8026ee0 'struct __va_list_tag'
+|     `-Record 0x7fefc8026e58 '__va_list_tag'
+|-RecordDecl 0x7fefc8027120 <c_files/pr66688.c:6:1, col:37> col:8 struct fdt_header definition
+| `-FieldDecl 0x7fefc8077400 <col:21, col:30> col:30 referenced magic 'unsigned int'
+|-VarDecl 0x7fefc8077500 <col:1, col:40> col:40 used a 'struct fdt_header *'
+|-VarDecl 0x7fefc80775d0 <line:8:1, col:5> col:5 used d 'int'
+|-FunctionDecl 0x7fefc8077718 <line:10:1, line:14:1> line:11:1 used __fswab32 'int (int)'
+| |-ParmVarDecl 0x7fefc8077648 <col:12, col:16> col:16 used p1 'int'
+| `-CompoundStmt 0x7fefc8077a70 <line:12:1, line:14:1>
+|   `-ReturnStmt 0x7fefc8077a58 <line:13:3, col:31>
+|     `-ImplicitCastExpr 0x7fefc8077a40 <col:10, col:31> 'int' <IntegralCast>
+|       `-CallExpr 0x7fefc80779e0 <col:10, col:31> 'unsigned int'
+|         |-ImplicitCastExpr 0x7fefc80779c8 <col:10> 'unsigned int (*)(unsigned int)' <BuiltinFnToFnPtr>
+|         | `-DeclRefExpr 0x7fefc8077950 <col:10> '<builtin fn type>' Function 0x7fefc80777f8 '__builtin_bswap32' 'unsigned int (unsigned int)'
+|         `-ImplicitCastExpr 0x7fefc8077a28 <col:29> 'unsigned int' <IntegralCast>
+|           `-ImplicitCastExpr 0x7fefc8077a10 <col:29> 'int' <LValueToRValue>
+|             `-DeclRefExpr 0x7fefc8077978 <col:29> 'int' lvalue ParmVar 0x7fefc8077648 'p1' 'int'
+|-FunctionDecl 0x7fefc80777f8 <col:10> col:10 implicit used __builtin_bswap32 'unsigned int (unsigned int)' extern
+| |-ParmVarDecl 0x7fefc8077890 <<invalid sloc>> <invalid sloc> 'unsigned int'
+| |-NoThrowAttr 0x7fefc80778f8 <col:10> Implicit
+| `-ConstAttr 0x7fefc8077940 <col:10> Implicit
+|-FunctionDecl 0x7fefc8077b70 <line:16:1, line:21:1> line:17:1 used fdt_set_magic 'void (int)'
+| |-ParmVarDecl 0x7fefc8077aa8 <col:16, col:20> col:20 used p1 'int'
+| `-CompoundStmt 0x7fefc80780c8 <line:18:1, line:21:1>
+|   |-DeclStmt 0x7fefc8077cd8 <line:19:3, col:27>
+|   | `-VarDecl 0x7fefc8077c38 <col:3, col:26> col:22 used b 'struct fdt_header *' cinit
+|   |   `-ImplicitCastExpr 0x7fefc8077cc0 <col:26> 'struct fdt_header *' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fefc8077c98 <col:26> 'struct fdt_header *' lvalue Var 0x7fefc8077500 'a' 'struct fdt_header *'
+|   `-BinaryOperator 0x7fefc80780a0 <line:20:3, col:57> 'unsigned int' '='
+|     |-MemberExpr 0x7fefc8077d30 <col:3, col:6> 'unsigned int' lvalue ->magic 0x7fefc8077400
+|     | `-ImplicitCastExpr 0x7fefc8077d18 <col:3> 'struct fdt_header *' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7fefc8077cf0 <col:3> 'struct fdt_header *' lvalue Var 0x7fefc8077c38 'b' 'struct fdt_header *'
+|     `-ImplicitCastExpr 0x7fefc8078088 <col:14, col:57> 'unsigned int' <IntegralCast>
+|       `-BinaryConditionalOperator 0x7fefc8078048 <col:14, col:57> 'int'
+|         |-CallExpr 0x7fefc8077f20 <col:14, col:38> 'int'
+|         | |-ImplicitCastExpr 0x7fefc8077f08 <col:14> 'int (*)()' <BuiltinFnToFnPtr>
+|         | | `-DeclRefExpr 0x7fefc8077e88 <col:14> '<builtin fn type>' Function 0x7fefc8077d98 '__builtin_constant_p' 'int ()'
+|         | `-DeclRefExpr 0x7fefc8077eb0 <col:36> 'int' lvalue ParmVar 0x7fefc8077aa8 'p1' 'int'
+|         |-OpaqueValueExpr 0x7fefc8078028 <col:14, col:38> 'int'
+|         | `-CallExpr 0x7fefc8077f20 <col:14, col:38> 'int'
+|         |   |-ImplicitCastExpr 0x7fefc8077f08 <col:14> 'int (*)()' <BuiltinFnToFnPtr>
+|         |   | `-DeclRefExpr 0x7fefc8077e88 <col:14> '<builtin fn type>' Function 0x7fefc8077d98 '__builtin_constant_p' 'int ()'
+|         |   `-DeclRefExpr 0x7fefc8077eb0 <col:36> 'int' lvalue ParmVar 0x7fefc8077aa8 'p1' 'int'
+|         |-OpaqueValueExpr 0x7fefc8078028 <col:14, col:38> 'int'
+|         | `-CallExpr 0x7fefc8077f20 <col:14, col:38> 'int'
+|         |   |-ImplicitCastExpr 0x7fefc8077f08 <col:14> 'int (*)()' <BuiltinFnToFnPtr>
+|         |   | `-DeclRefExpr 0x7fefc8077e88 <col:14> '<builtin fn type>' Function 0x7fefc8077d98 '__builtin_constant_p' 'int ()'
+|         |   `-DeclRefExpr 0x7fefc8077eb0 <col:36> 'int' lvalue ParmVar 0x7fefc8077aa8 'p1' 'int'
+|         `-CallExpr 0x7fefc8077fe0 <col:44, col:57> 'int'
+|           |-ImplicitCastExpr 0x7fefc8077fc8 <col:44> 'int (*)(int)' <FunctionToPointerDecay>
+|           | `-DeclRefExpr 0x7fefc8077f50 <col:44> 'int (int)' Function 0x7fefc8077718 '__fswab32' 'int (int)'
+|           `-ImplicitCastExpr 0x7fefc8078010 <col:55> 'int' <LValueToRValue>
+|             `-DeclRefExpr 0x7fefc8077f78 <col:55> 'int' lvalue ParmVar 0x7fefc8077aa8 'p1' 'int'
+|-FunctionDecl 0x7fefc8077d98 <col:14> col:14 implicit used __builtin_constant_p 'int ()' extern
+| |-NoThrowAttr 0x7fefc8077e30 <col:14> Implicit
+| `-ConstAttr 0x7fefc8077e78 <col:14> Implicit
+|-FunctionDecl 0x7fefc8078118 <line:23:1, line:30:1> line:24:1 used _fdt_sw_check_header 'int ()'
+| `-CompoundStmt 0x7fefc8079470 <line:25:1, line:30:1>
+|   |-DeclStmt 0x7fefc8078368 <line:26:3, col:43>
+|   | `-VarDecl 0x7fefc80781c8 <col:3, col:38> col:7 used c 'int' cinit
+|   |   `-ImplicitCastExpr 0x7fefc8078308 <col:11, col:38> 'int' <IntegralCast>
+|   |     `-ImplicitCastExpr 0x7fefc80782f0 <col:11, col:38> 'unsigned int' <LValueToRValue>
+|   |       `-MemberExpr 0x7fefc80782b8 <col:11, col:38> 'unsigned int' lvalue ->magic 0x7fefc8077400
+|   |         `-ParenExpr 0x7fefc8078298 <col:11, col:35> 'struct fdt_header *'
+|   |           `-CStyleCastExpr 0x7fefc8078270 <col:12, col:34> 'struct fdt_header *' <IntegralToPointer>
+|   |             `-IntegerLiteral 0x7fefc8078228 <col:34> 'int' 1
+|   |-IfStmt 0x7fefc8079400 <line:27:3, line:28:12>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7fefc80783a8 <line:27:7> 'int' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7fefc8078380 <col:7> 'int' lvalue Var 0x7fefc80781c8 'c' 'int'
+|   | |-ReturnStmt 0x7fefc80783e0 <line:28:5, col:12>
+|   | | `-IntegerLiteral 0x7fefc80783c0 <col:12> 'int' 1
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fefc8079458 <line:29:3, col:10>
+|     `-IntegerLiteral 0x7fefc8079438 <col:10> 'int' 0
+`-FunctionDecl 0x7fefc80794c8 <line:32:1, line:40:1> line:33:1 fdt_finish 'int ()'
+  `-CompoundStmt 0x7fefc80797a8 <line:34:1, line:40:1>
+    |-IfStmt 0x7fefc8079678 <line:35:3, line:37:14>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-CallExpr 0x7fefc80795a0 <line:35:7, col:29> 'int'
+    | | `-ImplicitCastExpr 0x7fefc8079588 <col:7> 'int (*)()' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fefc8079560 <col:7> 'int ()' Function 0x7fefc8078118 '_fdt_sw_check_header' 'int ()'
+    | |-IfStmt 0x7fefc8079640 <line:36:5, line:37:14>
+    | | |-<<<NULL>>>
+    | | |-<<<NULL>>>
+    | | |-ImplicitCastExpr 0x7fefc80795f0 <line:36:9> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fefc80795c8 <col:9> 'int' lvalue Var 0x7fefc80775d0 'd' 'int'
+    | | |-ReturnStmt 0x7fefc8079628 <line:37:7, col:14>
+    | | | `-IntegerLiteral 0x7fefc8079608 <col:14> 'int' 0
+    | | `-<<<NULL>>>
+    | `-<<<NULL>>>
+    |-CallExpr 0x7fefc8079740 <line:38:3, col:19> 'void'
+    | |-ImplicitCastExpr 0x7fefc8079728 <col:3> 'void (*)(int)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fefc80796b0 <col:3> 'void (int)' Function 0x7fefc8077b70 'fdt_set_magic' 'void (int)'
+    | `-IntegerLiteral 0x7fefc80796d8 <col:18> 'int' 0
+    `-ReturnStmt 0x7fefc8079790 <line:39:3, col:10>
+      `-IntegerLiteral 0x7fefc8079770 <col:10> 'int' 0

@@ -1,0 +1,50 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['int']
+          Decl: z, [], [], []
+            TypeDecl: z, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Pragma: omp parallel for simd linear (y : x & 15) linear (x : 16) linear (z : x & 15)
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 256
+        UnaryOp: ++
+          ID: i
+        ExprList: 
+          Assignment: +=
+            ID: x
+            Constant: int, 16
+          Assignment: +=
+            ID: y
+            BinaryOp: &
+              ID: x
+              Constant: int, 15
+          Assignment: +=
+            ID: z
+            BinaryOp: &
+              ID: x
+              Constant: int, 15
+      Return: 
+        BinaryOp: +
+          BinaryOp: +
+            ID: x
+            ID: y
+          ID: z

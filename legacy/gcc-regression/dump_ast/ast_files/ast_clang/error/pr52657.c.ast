@@ -1,0 +1,136 @@
+c_files/pr52657.c:36:18: error: invalid output constraint '=&f' in asm
+               : "=&f" (q[1]), "=&f" (q[0])
+                 ^
+1 error generated.
+TranslationUnitDecl 0x7fec840264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fec84026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fec84026740 '__int128'
+|-TypedefDecl 0x7fec84026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fec84026760 'unsigned __int128'
+|-TypedefDecl 0x7fec84026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fec84026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fec84026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fec84026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fec84026dc0 'char *'
+|   `-BuiltinType 0x7fec84026560 'char'
+|-TypedefDecl 0x7fec840270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fec84027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fec84026ee0 'struct __va_list_tag'
+|     `-Record 0x7fec84026e58 '__va_list_tag'
+|-TypedefDecl 0x7fec84027138 <c_files/pr52657.c:4:1, col:27> col:27 referenced mp_limb_t 'unsigned long'
+| `-BuiltinType 0x7fec84026680 'unsigned long'
+|-RecordDecl 0x7fec84825a00 <line:6:9, line:11:1> line:6:9 struct definition
+| |-FieldDecl 0x7fec84825ac8 <line:8:3, col:7> col:7 _mp_alloc 'int'
+| |-FieldDecl 0x7fec84825b28 <line:9:3, col:7> col:7 _mp_size 'int'
+| `-FieldDecl 0x7fec84825bf8 <line:10:3, col:14> col:14 _mp_d 'mp_limb_t *'
+|-TypedefDecl 0x7fec84825c90 <line:6:1, line:11:3> col:3 referenced __mpz_struct 'struct __mpz_struct':'__mpz_struct'
+| `-ElaboratedType 0x7fec84825c40 'struct __mpz_struct' sugar
+|   `-RecordType 0x7fec84825a90 '__mpz_struct'
+|     `-Record 0x7fec84825a00 ''
+|-TypedefDecl 0x7fec84825e38 <line:13:1, col:29> col:22 mpz_t '__mpz_struct [1]'
+| `-ConstantArrayType 0x7fec84825de0 '__mpz_struct [1]' 1 
+|   `-TypedefType 0x7fec84825d00 '__mpz_struct' sugar
+|     |-Typedef 0x7fec84825c90 '__mpz_struct'
+|     `-ElaboratedType 0x7fec84825c40 'struct __mpz_struct' sugar
+|       `-RecordType 0x7fec84825a90 '__mpz_struct'
+|         `-Record 0x7fec84825a00 ''
+|-TypedefDecl 0x7fec84825ea0 <line:14:1, col:21> col:21 referenced mp_ptr 'mp_limb_t *'
+| `-PointerType 0x7fec84825bc0 'mp_limb_t *'
+|   `-TypedefType 0x7fec84825b70 'mp_limb_t' sugar
+|     |-Typedef 0x7fec84027138 'mp_limb_t'
+|     `-BuiltinType 0x7fec84026680 'unsigned long'
+|-TypedefDecl 0x7fec84825f68 <line:15:1, col:27> col:27 referenced mp_srcptr 'const mp_limb_t *'
+| `-PointerType 0x7fec84825f30 'const mp_limb_t *'
+|   `-QualType 0x7fec84825b71 'const mp_limb_t' const
+|     `-TypedefType 0x7fec84825b70 'mp_limb_t' sugar
+|       |-Typedef 0x7fec84027138 'mp_limb_t'
+|       `-BuiltinType 0x7fec84026680 'unsigned long'
+|-TypedefDecl 0x7fec84825fd8 <line:16:1, col:18> col:18 referenced mp_size_t 'long'
+| `-BuiltinType 0x7fec840265e0 'long'
+|-FunctionDecl 0x7fec84826330 <line:18:1, col:74> col:18 used __gmpn_addmul_2 'mp_limb_t (mp_ptr, mp_srcptr, mp_size_t, mp_srcptr)' extern
+| |-ParmVarDecl 0x7fec84826060 <col:35> col:41 'mp_ptr':'mp_limb_t *'
+| |-ParmVarDecl 0x7fec848260f0 <col:43> col:52 'mp_srcptr':'const mp_limb_t *'
+| |-ParmVarDecl 0x7fec84826180 <col:54> col:63 'mp_size_t':'long'
+| `-ParmVarDecl 0x7fec848261f0 <col:65> col:74 'mp_srcptr':'const mp_limb_t *'
+`-FunctionDecl 0x7fec84826760 <line:20:1, line:44:1> line:21:1 __gmpn_redc_2 'void (mp_ptr, mp_ptr, mp_srcptr, mp_size_t, mp_srcptr)'
+  |-ParmVarDecl 0x7fec84826438 <col:16, col:23> col:23 rp 'mp_ptr':'mp_limb_t *'
+  |-ParmVarDecl 0x7fec848264a8 <col:27, col:34> col:34 used up 'mp_ptr':'mp_limb_t *'
+  |-ParmVarDecl 0x7fec84826518 <col:38, col:48> col:48 used mp 'mp_srcptr':'const mp_limb_t *'
+  |-ParmVarDecl 0x7fec84826588 <col:52, col:62> col:62 used n 'mp_size_t':'long'
+  |-ParmVarDecl 0x7fec848265f8 <col:65, col:75> col:75 used mip 'mp_srcptr':'const mp_limb_t *'
+  `-CompoundStmt 0x7fec84827ab8 <line:22:1, line:44:1>
+    |-DeclStmt 0x7fec84826938 <line:23:3, col:17>
+    | `-VarDecl 0x7fec848268d8 <col:3, col:16> col:13 used q 'mp_limb_t [2]'
+    |-DeclStmt 0x7fec848269c0 <line:24:3, col:14>
+    | `-VarDecl 0x7fec84826960 <col:3, col:13> col:13 used j 'mp_size_t':'long'
+    |-DeclStmt 0x7fec84826a60 <line:25:3, col:16>
+    | `-VarDecl 0x7fec84826a00 <col:3, col:13> col:13 used upn 'mp_limb_t':'unsigned long'
+    `-ForStmt 0x7fec84827a80 <line:27:3, line:43:5>
+      |-BinaryOperator 0x7fec84826b40 <line:27:8, col:16> 'mp_size_t':'long' '='
+      | |-DeclRefExpr 0x7fec84826a78 <col:8> 'mp_size_t':'long' lvalue Var 0x7fec84826960 'j' 'mp_size_t':'long'
+      | `-BinaryOperator 0x7fec84826b18 <col:12, col:16> 'long' '-'
+      |   |-ImplicitCastExpr 0x7fec84826ae8 <col:12> 'mp_size_t':'long' <LValueToRValue>
+      |   | `-DeclRefExpr 0x7fec84826aa0 <col:12> 'mp_size_t':'long' lvalue ParmVar 0x7fec84826588 'n' 'mp_size_t':'long'
+      |   `-ImplicitCastExpr 0x7fec84826b00 <col:16> 'long' <IntegralCast>
+      |     `-IntegerLiteral 0x7fec84826ac8 <col:16> 'int' 2
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fec84826be0 <col:19, col:24> 'int' '>='
+      | |-ImplicitCastExpr 0x7fec84826bb0 <col:19> 'mp_size_t':'long' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fec84826b68 <col:19> 'mp_size_t':'long' lvalue Var 0x7fec84826960 'j' 'mp_size_t':'long'
+      | `-ImplicitCastExpr 0x7fec84826bc8 <col:24> 'long' <IntegralCast>
+      |   `-IntegerLiteral 0x7fec84826b90 <col:24> 'int' 0
+      |-CompoundAssignOperator 0x7fec84826c68 <col:27, col:32> 'mp_size_t':'long' '-=' ComputeLHSTy='long' ComputeResultTy='long'
+      | |-DeclRefExpr 0x7fec84826c08 <col:27> 'mp_size_t':'long' lvalue Var 0x7fec84826960 'j' 'mp_size_t':'long'
+      | `-ImplicitCastExpr 0x7fec84826c50 <col:32> 'long' <IntegralCast>
+      |   `-IntegerLiteral 0x7fec84826c30 <col:32> 'int' 2
+      `-CompoundStmt 0x7fec84827a38 <line:28:5, line:43:5>
+        |-DeclStmt 0x7fec84826d98 <line:29:7, col:25>
+        | |-VarDecl 0x7fec84826cb0 <col:7, col:17> col:17 _ph 'mp_limb_t':'unsigned long'
+        | `-VarDecl 0x7fec84826d20 <col:7, col:22> col:22 _pl 'mp_limb_t':'unsigned long'
+        |-BinaryOperator 0x7fec84827440 <line:38:7, col:17> 'mp_limb_t':'unsigned long' '='
+        | |-DeclRefExpr 0x7fec84827358 <col:7> 'mp_limb_t':'unsigned long' lvalue Var 0x7fec84826a00 'upn' 'mp_limb_t':'unsigned long'
+        | `-ImplicitCastExpr 0x7fec84827428 <col:13, col:17> 'mp_limb_t':'unsigned long' <LValueToRValue>
+        |   `-ArraySubscriptExpr 0x7fec84827400 <col:13, col:17> 'mp_limb_t':'unsigned long' lvalue
+        |     |-ImplicitCastExpr 0x7fec848273d0 <col:13> 'mp_ptr':'mp_limb_t *' <LValueToRValue>
+        |     | `-DeclRefExpr 0x7fec84827380 <col:13> 'mp_ptr':'mp_limb_t *' lvalue ParmVar 0x7fec848264a8 'up' 'mp_ptr':'mp_limb_t *'
+        |     `-ImplicitCastExpr 0x7fec848273e8 <col:16> 'mp_size_t':'long' <LValueToRValue>
+        |       `-DeclRefExpr 0x7fec848273a8 <col:16> 'mp_size_t':'long' lvalue ParmVar 0x7fec84826588 'n' 'mp_size_t':'long'
+        |-BinaryOperator 0x7fec848276f0 <line:39:7, col:44> 'mp_limb_t':'unsigned long' '='
+        | |-ArraySubscriptExpr 0x7fec848274c8 <col:7, col:11> 'mp_limb_t':'unsigned long' lvalue
+        | | |-ImplicitCastExpr 0x7fec848274b0 <col:7> 'mp_ptr':'mp_limb_t *' <LValueToRValue>
+        | | | `-DeclRefExpr 0x7fec84827468 <col:7> 'mp_ptr':'mp_limb_t *' lvalue ParmVar 0x7fec848264a8 'up' 'mp_ptr':'mp_limb_t *'
+        | | `-IntegerLiteral 0x7fec84827490 <col:10> 'int' 1
+        | `-CallExpr 0x7fec84827630 <col:15, col:44> 'mp_limb_t':'unsigned long'
+        |   |-ImplicitCastExpr 0x7fec84827618 <col:15> 'mp_limb_t (*)(mp_ptr, mp_srcptr, mp_size_t, mp_srcptr)' <FunctionToPointerDecay>
+        |   | `-DeclRefExpr 0x7fec848274f0 <col:15> 'mp_limb_t (mp_ptr, mp_srcptr, mp_size_t, mp_srcptr)' Function 0x7fec84826330 '__gmpn_addmul_2' 'mp_limb_t (mp_ptr, mp_srcptr, mp_size_t, mp_srcptr)'
+        |   |-ImplicitCastExpr 0x7fec84827678 <col:32> 'mp_ptr':'mp_limb_t *' <LValueToRValue>
+        |   | `-DeclRefExpr 0x7fec84827518 <col:32> 'mp_ptr':'mp_limb_t *' lvalue ParmVar 0x7fec848264a8 'up' 'mp_ptr':'mp_limb_t *'
+        |   |-ImplicitCastExpr 0x7fec84827690 <col:36> 'mp_srcptr':'const mp_limb_t *' <LValueToRValue>
+        |   | `-DeclRefExpr 0x7fec84827540 <col:36> 'mp_srcptr':'const mp_limb_t *' lvalue ParmVar 0x7fec84826518 'mp' 'mp_srcptr':'const mp_limb_t *'
+        |   |-ImplicitCastExpr 0x7fec848276a8 <col:40> 'mp_size_t':'long' <LValueToRValue>
+        |   | `-DeclRefExpr 0x7fec84827568 <col:40> 'mp_size_t':'long' lvalue ParmVar 0x7fec84826588 'n' 'mp_size_t':'long'
+        |   `-ImplicitCastExpr 0x7fec848276d8 <col:43> 'mp_srcptr':'const mp_limb_t *' <BitCast>
+        |     `-ImplicitCastExpr 0x7fec848276c0 <col:43> 'mp_limb_t *' <ArrayToPointerDecay>
+        |       `-DeclRefExpr 0x7fec84827590 <col:43> 'mp_limb_t [2]' lvalue Var 0x7fec848268d8 'q' 'mp_limb_t [2]'
+        |-BinaryOperator 0x7fec84827860 <line:40:7, col:19> 'mp_limb_t':'unsigned long' '='
+        | |-ArraySubscriptExpr 0x7fec84827778 <col:7, col:11> 'mp_limb_t':'unsigned long' lvalue
+        | | |-ImplicitCastExpr 0x7fec84827760 <col:7> 'mp_ptr':'mp_limb_t *' <LValueToRValue>
+        | | | `-DeclRefExpr 0x7fec84827718 <col:7> 'mp_ptr':'mp_limb_t *' lvalue ParmVar 0x7fec848264a8 'up' 'mp_ptr':'mp_limb_t *'
+        | | `-IntegerLiteral 0x7fec84827740 <col:10> 'int' 0
+        | `-ImplicitCastExpr 0x7fec84827848 <col:15, col:19> 'mp_limb_t':'unsigned long' <LValueToRValue>
+        |   `-ArraySubscriptExpr 0x7fec84827820 <col:15, col:19> 'mp_limb_t':'unsigned long' lvalue
+        |     |-ImplicitCastExpr 0x7fec848277f0 <col:15> 'mp_ptr':'mp_limb_t *' <LValueToRValue>
+        |     | `-DeclRefExpr 0x7fec848277a0 <col:15> 'mp_ptr':'mp_limb_t *' lvalue ParmVar 0x7fec848264a8 'up' 'mp_ptr':'mp_limb_t *'
+        |     `-ImplicitCastExpr 0x7fec84827808 <col:18> 'mp_size_t':'long' <LValueToRValue>
+        |       `-DeclRefExpr 0x7fec848277c8 <col:18> 'mp_size_t':'long' lvalue ParmVar 0x7fec84826588 'n' 'mp_size_t':'long'
+        |-BinaryOperator 0x7fec84827970 <line:41:7, col:15> 'mp_limb_t':'unsigned long' '='
+        | |-ArraySubscriptExpr 0x7fec84827908 <col:7, col:11> 'mp_limb_t':'unsigned long' lvalue
+        | | |-ImplicitCastExpr 0x7fec848278d8 <col:7> 'mp_ptr':'mp_limb_t *' <LValueToRValue>
+        | | | `-DeclRefExpr 0x7fec84827888 <col:7> 'mp_ptr':'mp_limb_t *' lvalue ParmVar 0x7fec848264a8 'up' 'mp_ptr':'mp_limb_t *'
+        | | `-ImplicitCastExpr 0x7fec848278f0 <col:10> 'mp_size_t':'long' <LValueToRValue>
+        | |   `-DeclRefExpr 0x7fec848278b0 <col:10> 'mp_size_t':'long' lvalue ParmVar 0x7fec84826588 'n' 'mp_size_t':'long'
+        | `-ImplicitCastExpr 0x7fec84827958 <col:15> 'mp_limb_t':'unsigned long' <LValueToRValue>
+        |   `-DeclRefExpr 0x7fec84827930 <col:15> 'mp_limb_t':'unsigned long' lvalue Var 0x7fec84826a00 'upn' 'mp_limb_t':'unsigned long'
+        `-CompoundAssignOperator 0x7fec84827a00 <line:42:7, col:13> 'mp_ptr':'mp_limb_t *' '+=' ComputeLHSTy='mp_ptr':'mp_limb_t *' ComputeResultTy='mp_ptr':'mp_limb_t *'
+          |-DeclRefExpr 0x7fec84827998 <col:7> 'mp_ptr':'mp_limb_t *' lvalue ParmVar 0x7fec848264a8 'up' 'mp_ptr':'mp_limb_t *'
+          `-IntegerLiteral 0x7fec848279c0 <col:13> 'int' 2

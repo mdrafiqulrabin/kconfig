@@ -1,0 +1,25 @@
+FileAST: 
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: i, [], [], []
+            PtrDecl: []
+              TypeDecl: i, []
+                IdentifierType: ['int']
+        TypeDecl: f, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        UnaryOp: !
+          ID: i
+        Return: 
+        Compound: 
+          FuncCall: 
+            ID: __builtin_printf
+            ExprList: 
+              Constant: string, "Hi"
+          Assignment: =
+            UnaryOp: *
+              ID: i
+            Constant: int, 0

@@ -1,0 +1,53 @@
+c_files/pr11001-memset-3.c:7:25: error: register '%edi' unsuitable for global register variables on this target
+register int regvar asm("%edi");
+                        ^
+1 error generated.
+TranslationUnitDecl 0x7fb84d0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb84d026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb84d026740 '__int128'
+|-TypedefDecl 0x7fb84d026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb84d026760 'unsigned __int128'
+|-TypedefDecl 0x7fb84d026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb84d026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb84d026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb84d026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb84d026dc0 'char *'
+|   `-BuiltinType 0x7fb84d026560 'char'
+|-TypedefDecl 0x7fb84d0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb84d027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb84d026ee0 'struct __va_list_tag'
+|     `-Record 0x7fb84d026e58 '__va_list_tag'
+|-FunctionDecl 0x7fb84d077568 <c_files/pr11001-memset-3.c:5:14> col:14 implicit used memset 'void *(void *, int, unsigned long)' extern
+| |-ParmVarDecl 0x7fb84d077600 <<invalid sloc>> <invalid sloc> 'void *'
+| |-ParmVarDecl 0x7fb84d077660 <<invalid sloc>> <invalid sloc> 'int'
+| `-ParmVarDecl 0x7fb84d0776c0 <<invalid sloc>> <invalid sloc> 'unsigned long'
+|-FunctionDecl 0x7fb84d077738 prev 0x7fb84d077568 <col:1, col:48> col:14 used memset 'void *(void *, int, unsigned long)' extern
+| |-ParmVarDecl 0x7fb84d027138 <col:22, col:27> col:28 'void *'
+| |-ParmVarDecl 0x7fb84d077400 <col:30> col:33 'int'
+| `-ParmVarDecl 0x7fb84d077478 <<built-in>:75:23, col:37> c_files/pr11001-memset-3.c:5:48 'unsigned long'
+|-VarDecl 0x7fb84d077870 <line:7:1, col:14> col:14 regvar 'int' register
+| `-AsmLabelAttr 0x7fb84d0778d0 <col:25> "%edi"
+|-VarDecl 0x7fb84d0779f0 <line:9:1, col:11> col:5 used foo 'int [10]'
+|-VarDecl 0x7fb84d077a98 <line:10:1, col:11> col:5 bar 'int [10]'
+|-VarDecl 0x7fb84d077b78 <line:12:1, col:12> col:6 used baz 'char [15]'
+|-VarDecl 0x7fb84d077c18 <line:13:1, col:13> col:6 quux 'char [15]'
+`-FunctionDecl 0x7fb84d077cc8 <line:15:1, line:20:1> line:16:1 do_copy 'void ()'
+  `-CompoundStmt 0x7fb84d078068 <line:17:1, line:20:1>
+    |-CallExpr 0x7fb84d077ea0 <line:18:3, col:29> 'void *'
+    | |-ImplicitCastExpr 0x7fb84d077e88 <col:3> 'void *(*)(void *, int, unsigned long)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fb84d077d60 <col:3> 'void *(void *, int, unsigned long)' Function 0x7fb84d077738 'memset' 'void *(void *, int, unsigned long)'
+    | |-ImplicitCastExpr 0x7fb84d077ef8 <col:11> 'void *' <BitCast>
+    | | `-ImplicitCastExpr 0x7fb84d077ee0 <col:11> 'int *' <ArrayToPointerDecay>
+    | |   `-DeclRefExpr 0x7fb84d077d88 <col:11> 'int [10]' lvalue Var 0x7fb84d0779f0 'foo' 'int [10]'
+    | |-IntegerLiteral 0x7fb84d077db0 <col:16> 'int' 0
+    | `-UnaryExprOrTypeTraitExpr 0x7fb84d077df8 <col:19, col:26> 'unsigned long' sizeof
+    |   `-DeclRefExpr 0x7fb84d077dd0 <col:26> 'int [10]' lvalue Var 0x7fb84d0779f0 'foo' 'int [10]'
+    `-CallExpr 0x7fb84d077ff8 <line:19:3, col:29> 'void *'
+      |-ImplicitCastExpr 0x7fb84d077fe0 <col:3> 'void *(*)(void *, int, unsigned long)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fb84d077f10 <col:3> 'void *(void *, int, unsigned long)' Function 0x7fb84d077738 'memset' 'void *(void *, int, unsigned long)'
+      |-ImplicitCastExpr 0x7fb84d078050 <col:11> 'void *' <BitCast>
+      | `-ImplicitCastExpr 0x7fb84d078038 <col:11> 'char *' <ArrayToPointerDecay>
+      |   `-DeclRefExpr 0x7fb84d077f38 <col:11> 'char [15]' lvalue Var 0x7fb84d077b78 'baz' 'char [15]'
+      |-IntegerLiteral 0x7fb84d077f60 <col:16> 'int' 0
+      `-UnaryExprOrTypeTraitExpr 0x7fb84d077fa8 <col:19, col:26> 'unsigned long' sizeof
+        `-DeclRefExpr 0x7fb84d077f80 <col:26> 'char [15]' lvalue Var 0x7fb84d077b78 'baz' 'char [15]'

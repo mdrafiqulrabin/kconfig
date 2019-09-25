@@ -1,5 +1,0 @@
-foo (a)
-{
-  return a;
-}
-

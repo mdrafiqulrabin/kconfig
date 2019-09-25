@@ -1,0 +1,72 @@
+FileAST: 
+  Decl: anything, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: anything, []
+        IdentifierType: ['void']
+  Decl: foo, [], ['static'], []
+    FuncDecl: 
+      ParamList: 
+        Decl: i, [], [], []
+          TypeDecl: i, []
+            IdentifierType: ['int']
+      TypeDecl: foo, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: bar, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+        TypeDecl: bar, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          ID: i
+  Decl: j, [], ['extern'], []
+    TypeDecl: j, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        ID: j
+        FuncCall: 
+          ID: anything
+          ExprList: 
+            ID: j
+      Return: 
+        FuncCall: 
+          ID: bar
+          ExprList: 
+            ID: i
+  FuncDef: 
+    Decl: baz, [], [], []
+      FuncDecl: 
+        TypeDecl: baz, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          Constant: int, 0
+      If: 
+        FuncCall: 
+          ID: baz
+        Return: 
+          Constant: int, 1
+      Return: 
+        Constant: int, 0

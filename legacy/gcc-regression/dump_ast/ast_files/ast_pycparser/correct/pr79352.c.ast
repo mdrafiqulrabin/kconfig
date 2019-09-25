@@ -1,0 +1,219 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: A
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: a1, [], [], []
+        ArrayDecl: []
+          TypeDecl: a1, []
+            IdentifierType: ['char']
+          Constant: int, 1
+  Decl: None, [], [], []
+    Struct: B
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: a3, [], [], []
+        ArrayDecl: []
+          TypeDecl: a3, []
+            IdentifierType: ['char']
+          Constant: int, 3
+  Decl: None, [], [], []
+    Struct: C
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: ax, [], [], []
+        ArrayDecl: []
+          TypeDecl: ax, []
+            IdentifierType: ['char']
+  FuncDef: 
+    Decl: test_array_1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+          Decl: a, [], [], []
+            PtrDecl: []
+              TypeDecl: a, []
+                Struct: A
+        TypeDecl: test_array_1, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: __builtin_snprintf
+          ExprList: 
+            Constant: int, 0
+            Constant: int, 0
+            Constant: string, "%-s"
+            StructRef: ->
+              ID: a
+              ID: a1
+  FuncDef: 
+    Decl: test_array_3, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+          Decl: b, [], [], []
+            PtrDecl: []
+              TypeDecl: b, []
+                Struct: B
+        TypeDecl: test_array_3, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: __builtin_snprintf
+          ExprList: 
+            Constant: int, 0
+            Constant: int, 0
+            Constant: string, "%-s"
+            StructRef: ->
+              ID: b
+              ID: a3
+  FuncDef: 
+    Decl: test_array_1_3, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+          Decl: a, [], [], []
+            PtrDecl: []
+              TypeDecl: a, []
+                Struct: A
+          Decl: b, [], [], []
+            PtrDecl: []
+              TypeDecl: b, []
+                Struct: B
+        TypeDecl: test_array_1_3, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: __builtin_snprintf
+          ExprList: 
+            Constant: int, 0
+            Constant: int, 0
+            Constant: string, "%-s"
+            TernaryOp: 
+              ID: i
+              StructRef: ->
+                ID: a
+                ID: a1
+              StructRef: ->
+                ID: b
+                ID: a3
+  FuncDef: 
+    Decl: test_string_and_array_3, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+          Decl: b, [], [], []
+            PtrDecl: []
+              TypeDecl: b, []
+                Struct: B
+        TypeDecl: test_string_and_array_3, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: __builtin_snprintf
+          ExprList: 
+            Constant: int, 0
+            Constant: int, 0
+            Constant: string, "%-s"
+            TernaryOp: 
+              ID: i
+              Constant: string, "123"
+              StructRef: ->
+                ID: b
+                ID: a3
+  FuncDef: 
+    Decl: test_flexarray, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: c, [], [], []
+            PtrDecl: []
+              TypeDecl: c, []
+                Struct: C
+        TypeDecl: test_flexarray, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: __builtin_snprintf
+          ExprList: 
+            Constant: int, 0
+            Constant: int, 0
+            Constant: string, "%-s"
+            StructRef: ->
+              ID: c
+              ID: ax
+  FuncDef: 
+    Decl: test_array_and_flexarray, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+          Decl: b, [], [], []
+            PtrDecl: []
+              TypeDecl: b, []
+                Struct: B
+          Decl: c, [], [], []
+            PtrDecl: []
+              TypeDecl: c, []
+                Struct: C
+        TypeDecl: test_array_and_flexarray, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: __builtin_snprintf
+          ExprList: 
+            Constant: int, 0
+            Constant: int, 0
+            Constant: string, "%-s"
+            TernaryOp: 
+              ID: i
+              StructRef: ->
+                ID: b
+                ID: a3
+              StructRef: ->
+                ID: c
+                ID: ax
+  FuncDef: 
+    Decl: test_string_and_flexarray, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+          Decl: c, [], [], []
+            PtrDecl: []
+              TypeDecl: c, []
+                Struct: C
+        TypeDecl: test_string_and_flexarray, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: __builtin_snprintf
+          ExprList: 
+            Constant: int, 0
+            Constant: int, 0
+            Constant: string, "%-s"
+            TernaryOp: 
+              ID: i
+              Constant: string, "123"
+              StructRef: ->
+                ID: c
+                ID: ax

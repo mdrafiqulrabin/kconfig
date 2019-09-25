@@ -1,0 +1,29 @@
+TranslationUnitDecl 0x7f94c18264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f94c1826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f94c1826740 '__int128'
+|-TypedefDecl 0x7f94c1826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f94c1826760 'unsigned __int128'
+|-TypedefDecl 0x7f94c1826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f94c1826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f94c1826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f94c1826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f94c1826dc0 'char *'
+|   `-BuiltinType 0x7f94c1826560 'char'
+|-TypedefDecl 0x7f94c18270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f94c1827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f94c1826ee0 'struct __va_list_tag'
+|     `-Record 0x7f94c1826e58 '__va_list_tag'
+|-VarDecl 0x7f94c2025a30 <c_files/pr49927.c:4:1, col:12> col:6 used a 'char [1][1]'
+|-VarDecl 0x7f94c2025ae8 <line:5:1, col:11> col:11 used b 'long long'
+`-FunctionDecl 0x7f94c2025c10 <line:7:1, line:11:1> line:8:1 foo 'void (void)'
+  `-CompoundStmt 0x7f94c2025e20 <line:9:1, line:11:1>
+    `-UnaryOperator 0x7f94c2025e00 <line:10:3, col:11> 'char' prefix '--'
+      `-ArraySubscriptExpr 0x7f94c2025dd8 <col:5, col:11> 'char' lvalue
+        |-ImplicitCastExpr 0x7f94c2025da8 <col:5, col:8> 'char *' <ArrayToPointerDecay>
+        | `-ArraySubscriptExpr 0x7f94c2025d58 <col:5, col:8> 'char [1]' lvalue
+        |   |-ImplicitCastExpr 0x7f94c2025d28 <col:5> 'char (*)[1]' <ArrayToPointerDecay>
+        |   | `-DeclRefExpr 0x7f94c2025ca8 <col:5> 'char [1][1]' lvalue Var 0x7f94c2025a30 'a' 'char [1][1]'
+        |   `-ImplicitCastExpr 0x7f94c2025d40 <col:7> 'long long' <LValueToRValue>
+        |     `-DeclRefExpr 0x7f94c2025cd0 <col:7> 'long long' lvalue Var 0x7f94c2025ae8 'b' 'long long'
+        `-ImplicitCastExpr 0x7f94c2025dc0 <col:10> 'long long' <LValueToRValue>
+          `-DeclRefExpr 0x7f94c2025d80 <col:10> 'long long' lvalue Var 0x7f94c2025ae8 'b' 'long long'

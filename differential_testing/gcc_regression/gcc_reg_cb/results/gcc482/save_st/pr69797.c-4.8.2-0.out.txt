@@ -1,4 +1,0 @@
-pr69797.c: In function ‘foo’:
-pr69797.c:7:3: error: too few arguments to function ‘__atomic_fetch_add’
-   __atomic_fetch_add ();  
-   ^

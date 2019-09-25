@@ -1,0 +1,119 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['int']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['int']
+  Decl: d, [], [], []
+    ArrayDecl: []
+      TypeDecl: d, []
+        IdentifierType: ['int']
+      Constant: int, 6
+  Decl: e, [], [], []
+    TypeDecl: e, []
+      IdentifierType: ['int']
+    Constant: int, 3
+  Decl: f, [], [], []
+    TypeDecl: f, []
+      IdentifierType: ['int']
+  Decl: abort, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: fn1, [], [], []
+      FuncDecl: 
+        TypeDecl: fn1, []
+          IdentifierType: ['void']
+    Compound: 
+      For: 
+        Assignment: =
+          ID: b
+          Constant: int, 1
+        BinaryOp: <
+          ID: b
+          Constant: int, 5
+        UnaryOp: p++
+          ID: b
+        Compound: 
+          For: 
+            Assignment: =
+              ID: c
+              Constant: int, 0
+            BinaryOp: <
+              ID: c
+              Constant: int, 5
+            UnaryOp: p++
+              ID: c
+            Assignment: =
+              ArrayRef: 
+                ID: d
+                ID: b
+              ID: e
+          If: 
+            ID: a
+            UnaryOp: p++
+              ID: f
+          Assignment: =
+            ArrayRef: 
+              ID: d
+              BinaryOp: +
+                ID: b
+                Constant: int, 1
+            Constant: int, 1
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: fn1
+      If: 
+        BinaryOp: ||
+          BinaryOp: ||
+            BinaryOp: ||
+              BinaryOp: ||
+                BinaryOp: ||
+                  BinaryOp: !=
+                    ArrayRef: 
+                      ID: d
+                      Constant: int, 0
+                    Constant: int, 0
+                  BinaryOp: !=
+                    ArrayRef: 
+                      ID: d
+                      Constant: int, 1
+                    Constant: int, 3
+                BinaryOp: !=
+                  ArrayRef: 
+                    ID: d
+                    Constant: int, 2
+                  Constant: int, 3
+              BinaryOp: !=
+                ArrayRef: 
+                  ID: d
+                  Constant: int, 3
+                Constant: int, 3
+            BinaryOp: !=
+              ArrayRef: 
+                ID: d
+                Constant: int, 4
+              Constant: int, 3
+          BinaryOp: !=
+            ArrayRef: 
+              ID: d
+              Constant: int, 5
+            Constant: int, 1
+        FuncCall: 
+          ID: abort
+      Return: 
+        Constant: int, 0

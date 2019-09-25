@@ -1,0 +1,108 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: X
+      Decl: m, [], [], []
+        TypeDecl: m, []
+          IdentifierType: ['double']
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['int']
+  Decl: None, [], [], []
+    Struct: Y
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['int']
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          IdentifierType: ['short']
+  Decl: None, [], [], []
+    Struct: YY
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['int']
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          IdentifierType: ['short']
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          IdentifierType: ['char']
+  Decl: link_error, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: link_error, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            PtrDecl: []
+              TypeDecl: x, []
+                Struct: X
+          Decl: y, [], [], []
+            PtrDecl: []
+              TypeDecl: y, []
+                Struct: Y
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Assignment: =
+        StructRef: ->
+          ID: x
+          ID: x
+        Constant: int, 0
+      Assignment: =
+        StructRef: ->
+          ID: y
+          ID: y
+        Constant: int, 1
+      If: 
+        BinaryOp: !=
+          StructRef: ->
+            ID: x
+            ID: x
+          Constant: int, 0
+        FuncCall: 
+          ID: link_error
+  FuncDef: 
+    Decl: foo_no, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            PtrDecl: []
+              TypeDecl: x, []
+                Struct: X
+          Decl: y, [], [], []
+            PtrDecl: []
+              TypeDecl: y, []
+                Struct: YY
+        TypeDecl: foo_no, []
+          IdentifierType: ['int']
+    Compound: 
+      Assignment: =
+        StructRef: ->
+          ID: x
+          ID: x
+        Constant: int, 0
+      Assignment: =
+        StructRef: ->
+          ID: y
+          ID: y
+        Constant: int, 1
+      If: 
+        BinaryOp: !=
+          StructRef: ->
+            ID: x
+            ID: x
+          Constant: int, 0
+        FuncCall: 
+          ID: link_error
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 

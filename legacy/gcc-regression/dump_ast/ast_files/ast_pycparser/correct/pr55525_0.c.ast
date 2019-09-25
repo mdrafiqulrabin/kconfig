@@ -1,0 +1,29 @@
+FileAST: 
+  Decl: s, [], [], []
+    ArrayDecl: []
+      TypeDecl: s, []
+        IdentifierType: ['char']
+      UnaryOp: sizeof
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['char']
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: strcmp
+          ExprList: 
+            UnaryOp: &
+              ArrayRef: 
+                ID: s
+                Constant: int, 1
+            Constant: string, "foo"

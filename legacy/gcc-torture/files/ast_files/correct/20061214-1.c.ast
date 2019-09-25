@@ -1,0 +1,34 @@
+FileAST: 
+  Typedef: ull, [], ['typedef']
+    TypeDecl: ull, []
+      IdentifierType: ['unsigned', 'long', 'long']
+  Decl: bar, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: bar, []
+        IdentifierType: ['ull']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            PtrDecl: []
+              TypeDecl: x, []
+                IdentifierType: ['ull']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['ull']
+        FuncCall: 
+          ID: bar
+      Assignment: +=
+        UnaryOp: *
+          ID: x
+        BinaryOp: >>
+          ID: y
+          Constant: int, 32

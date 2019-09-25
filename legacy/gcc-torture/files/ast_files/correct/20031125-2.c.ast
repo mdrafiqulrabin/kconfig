@@ -1,0 +1,60 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: BlobSpan
+      Decl: right, [], [], []
+        TypeDecl: right, []
+          IdentifierType: ['int']
+  FuncDef: 
+    Decl: render_blob_line, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: blobdata, [], [], []
+            TypeDecl: blobdata, []
+              Struct: BlobSpan
+        TypeDecl: render_blob_line, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: buf, [], [], []
+        ArrayDecl: []
+          TypeDecl: buf, []
+            IdentifierType: ['int']
+          BinaryOp: *
+            Constant: int, 4
+            Constant: int, 8
+      Decl: data, [], [], []
+        PtrDecl: []
+          TypeDecl: data, []
+            IdentifierType: ['int']
+        ID: buf
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: n, [], [], []
+        TypeDecl: n, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      If: 
+        StructRef: .
+          ID: blobdata
+          ID: right
+        UnaryOp: p++
+          ID: n
+      If: 
+        ID: n
+        For: 
+          BinaryOp: <
+            ID: i
+            BinaryOp: *
+              Constant: int, 2
+              ID: n
+          Assignment: =
+            ArrayRef: 
+              ID: data
+              ID: i
+            Constant: int, 0
+      Assignment: *=
+        ID: n
+        Constant: int, 2
+      For: 
+        ID: n
+        EmptyStatement: 

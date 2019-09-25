@@ -1,0 +1,90 @@
+FileAST: 
+  Typedef: U32, [], ['typedef']
+    TypeDecl: U32, []
+      IdentifierType: ['unsigned', 'int']
+  Decl: None, [], [], []
+    Struct: sv
+      Decl: sv_any, [], [], []
+        PtrDecl: []
+          TypeDecl: sv_any, []
+            IdentifierType: ['void']
+      Decl: sv_refcnt, [], [], []
+        TypeDecl: sv_refcnt, []
+          IdentifierType: ['U32']
+      Decl: sv_flags, [], [], []
+        TypeDecl: sv_flags, []
+          IdentifierType: ['U32']
+  Typedef: SV, [], ['typedef']
+    TypeDecl: SV, []
+      Struct: sv
+  Decl: None, [], [], []
+    Struct: xrv
+      Decl: xrv_rv, [], [], []
+        PtrDecl: []
+          TypeDecl: xrv_rv, []
+            IdentifierType: ['SV']
+  Typedef: XRV, [], ['typedef']
+    TypeDecl: XRV, []
+      Struct: xrv
+  Decl: PL_xrv_root, [], ['extern'], []
+    PtrDecl: []
+      TypeDecl: PL_xrv_root, []
+        IdentifierType: ['XRV']
+  FuncDef: 
+    Decl: more_xrv, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: more_xrv, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: xrv, [], ['register'], []
+        PtrDecl: []
+          TypeDecl: xrv, []
+            IdentifierType: ['XRV']
+      Decl: xrvend, [], ['register'], []
+        PtrDecl: []
+          TypeDecl: xrvend, []
+            IdentifierType: ['XRV']
+      Assignment: =
+        ID: xrv
+        ID: PL_xrv_root
+      Assignment: =
+        ID: xrvend
+        UnaryOp: &
+          ArrayRef: 
+            ID: xrv
+            BinaryOp: -
+              BinaryOp: /
+                Constant: int, 200
+                UnaryOp: sizeof
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['XRV']
+              Constant: int, 1
+      While: 
+        BinaryOp: <
+          ID: xrv
+          ID: xrvend
+        Compound: 
+          Assignment: =
+            StructRef: ->
+              ID: xrv
+              ID: xrv_rv
+            Cast: 
+              Typename: None, []
+                PtrDecl: []
+                  TypeDecl: None, []
+                    IdentifierType: ['SV']
+              BinaryOp: +
+                ID: xrv
+                Constant: int, 1
+          UnaryOp: p++
+            ID: xrv
+      Assignment: =
+        StructRef: ->
+          ID: xrv
+          ID: xrv_rv
+        Constant: int, 0

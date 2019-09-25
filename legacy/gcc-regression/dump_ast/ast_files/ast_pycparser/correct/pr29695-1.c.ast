@@ -1,0 +1,269 @@
+FileAST: 
+  Decl: abort, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: f1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: f1, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['int']
+        Constant: int, 128
+      Return: 
+        TernaryOp: 
+          BinaryOp: &
+            ID: a
+            Constant: int, 0x80
+          Constant: int, 0x80
+          Constant: int, 0
+  FuncDef: 
+    Decl: f2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: f2, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['unsigned', 'char']
+        Constant: int, 128
+      Return: 
+        TernaryOp: 
+          BinaryOp: &
+            ID: a
+            Constant: int, 0x80
+          Constant: int, 0x80
+          Constant: int, 0
+  FuncDef: 
+    Decl: f3, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: f3, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['unsigned', 'char']
+        Constant: int, 128
+      Return: 
+        TernaryOp: 
+          BinaryOp: &
+            ID: a
+            Constant: int, 0x80
+          Constant: int, 0x380
+          Constant: int, 0
+  FuncDef: 
+    Decl: f4, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: f4, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['unsigned', 'char']
+        Constant: int, 128
+      Return: 
+        TernaryOp: 
+          BinaryOp: &
+            ID: a
+            Constant: int, 0x80
+          UnaryOp: -
+            Constant: int, 128
+          Constant: int, 0
+  FuncDef: 
+    Decl: f5, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: f5, []
+          IdentifierType: ['long', 'long']
+    Compound: 
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['long', 'long']
+        Constant: int, 0x80000000LL
+      Return: 
+        TernaryOp: 
+          BinaryOp: &
+            ID: a
+            Constant: int, 0x80000000
+          Constant: int, 0x80000000LL
+          Constant: int, 0LL
+  FuncDef: 
+    Decl: f6, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: f6, []
+          IdentifierType: ['long', 'long']
+    Compound: 
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['unsigned', 'int']
+        Constant: int, 0x80000000
+      Return: 
+        TernaryOp: 
+          BinaryOp: &
+            ID: a
+            Constant: int, 0x80000000
+          Constant: int, 0x80000000LL
+          Constant: int, 0LL
+  FuncDef: 
+    Decl: f7, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: f7, []
+          IdentifierType: ['long', 'long']
+    Compound: 
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['unsigned', 'int']
+        Constant: int, 0x80000000
+      Return: 
+        TernaryOp: 
+          BinaryOp: &
+            ID: a
+            Constant: int, 0x80000000
+          Constant: int, 0x380000000LL
+          Constant: int, 0LL
+  FuncDef: 
+    Decl: f8, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: f8, []
+          IdentifierType: ['long', 'long']
+    Compound: 
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['unsigned', 'int']
+        Constant: int, 0x80000000
+      Return: 
+        TernaryOp: 
+          BinaryOp: &
+            ID: a
+            Constant: int, 0x80000000
+          UnaryOp: -
+            Constant: int, 2147483648LL
+          Constant: int, 0LL
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: ||
+          BinaryOp: !=
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['char']
+              Constant: int, 128
+            UnaryOp: -
+              Constant: int, 128
+          BinaryOp: !=
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['int']
+              Constant: int, 0x80000000
+            UnaryOp: -
+              Constant: int, 2147483648
+        Return: 
+          Constant: int, 0
+      If: 
+        BinaryOp: !=
+          FuncCall: 
+            ID: f1
+          Constant: int, 128
+        FuncCall: 
+          ID: abort
+      If: 
+        BinaryOp: !=
+          FuncCall: 
+            ID: f2
+          Constant: int, 128
+        FuncCall: 
+          ID: abort
+      If: 
+        BinaryOp: !=
+          FuncCall: 
+            ID: f3
+          Constant: int, 896
+        FuncCall: 
+          ID: abort
+      If: 
+        BinaryOp: !=
+          FuncCall: 
+            ID: f4
+          UnaryOp: -
+            Constant: int, 128
+        FuncCall: 
+          ID: abort
+      If: 
+        BinaryOp: !=
+          FuncCall: 
+            ID: f5
+          Constant: int, 0x80000000LL
+        FuncCall: 
+          ID: abort
+      If: 
+        BinaryOp: !=
+          FuncCall: 
+            ID: f6
+          Constant: int, 0x80000000LL
+        FuncCall: 
+          ID: abort
+      If: 
+        BinaryOp: !=
+          FuncCall: 
+            ID: f7
+          Constant: int, 0x380000000LL
+        FuncCall: 
+          ID: abort
+      If: 
+        BinaryOp: !=
+          FuncCall: 
+            ID: f8
+          UnaryOp: -
+            Constant: int, 2147483648LL
+        FuncCall: 
+          ID: abort
+      Return: 
+        Constant: int, 0

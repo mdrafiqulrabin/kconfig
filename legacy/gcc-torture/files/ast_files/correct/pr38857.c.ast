@@ -1,0 +1,138 @@
+FileAST: 
+  Decl: vs_total_ac_bits, ['const'], ['static'], []
+    TypeDecl: vs_total_ac_bits, ['const']
+      IdentifierType: ['int']
+    Constant: int, 2680
+  Typedef: EncBlockInfo, [], ['typedef']
+    TypeDecl: EncBlockInfo, []
+      Struct: EncBlockInfo
+        Decl: mb, [], [], []
+          ArrayDecl: []
+            TypeDecl: mb, []
+              IdentifierType: ['short']
+            Constant: int, 64
+        Decl: next, [], [], []
+          ArrayDecl: []
+            TypeDecl: next, []
+              IdentifierType: ['unsigned', 'char']
+            Constant: int, 64
+  FuncDef: 
+    Decl: dv_guess_qnos, [], [], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: blks, [], [], []
+            PtrDecl: []
+              TypeDecl: blks, []
+                IdentifierType: ['EncBlockInfo']
+          Decl: qnos, [], [], []
+            PtrDecl: []
+              TypeDecl: qnos, []
+                IdentifierType: ['int']
+        TypeDecl: dv_guess_qnos, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: size, [], [], []
+        ArrayDecl: []
+          TypeDecl: size, []
+            IdentifierType: ['int']
+          Constant: int, 5
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['int']
+      Decl: k, [], [], []
+        TypeDecl: k, []
+          IdentifierType: ['int']
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['int']
+      Decl: prev, [], [], []
+        TypeDecl: prev, []
+          IdentifierType: ['int']
+      Decl: b, [], [], []
+        PtrDecl: []
+          TypeDecl: b, []
+            IdentifierType: ['EncBlockInfo']
+      For: 
+        Assignment: =
+          ID: a
+          Constant: int, 2
+        BinaryOp: ||
+          BinaryOp: ==
+            ID: a
+            Constant: int, 2
+          BinaryOp: <
+            ID: vs_total_ac_bits
+            ArrayRef: 
+              ID: size
+              Constant: int, 0
+        Assignment: +=
+          ID: a
+          ID: a
+        Compound: 
+          For: 
+            Assignment: =
+              ID: j
+              Constant: int, 0
+            BinaryOp: <
+              ID: j
+              BinaryOp: *
+                Constant: int, 6
+                Constant: int, 5
+            ExprList: 
+              UnaryOp: p++
+                ID: j
+              UnaryOp: p++
+                ID: b
+            Compound: 
+              For: 
+                Assignment: =
+                  ID: k
+                  ArrayRef: 
+                    StructRef: ->
+                      ID: b
+                      ID: next
+                    ID: prev
+                BinaryOp: <
+                  ID: k
+                  Constant: int, 64
+                Assignment: =
+                  ID: k
+                  ArrayRef: 
+                    StructRef: ->
+                      ID: b
+                      ID: next
+                    ID: k
+                Compound: 
+                  If: 
+                    BinaryOp: &&
+                      BinaryOp: <
+                        ArrayRef: 
+                          StructRef: ->
+                            ID: b
+                            ID: mb
+                          ID: k
+                        ID: a
+                      BinaryOp: >
+                        ArrayRef: 
+                          StructRef: ->
+                            ID: b
+                            ID: mb
+                          ID: k
+                        UnaryOp: -
+                          ID: a
+                    Compound: 
+                      Assignment: =
+                        ArrayRef: 
+                          StructRef: ->
+                            ID: b
+                            ID: next
+                          ID: prev
+                        ArrayRef: 
+                          StructRef: ->
+                            ID: b
+                            ID: next
+                          ID: k
+                    Compound: 
+                      Assignment: =
+                        ID: prev
+                        ID: k

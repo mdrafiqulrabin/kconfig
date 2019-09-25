@@ -1,0 +1,34 @@
+TranslationUnitDecl 0x7fd0048264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd004826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd004826740 '__int128'
+|-TypedefDecl 0x7fd004826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd004826760 'unsigned __int128'
+|-TypedefDecl 0x7fd004826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd004826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd004826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd004826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd004826dc0 'char *'
+|   `-BuiltinType 0x7fd004826560 'char'
+|-TypedefDecl 0x7fd0048270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd004827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd004826ee0 'struct __va_list_tag'
+|     `-Record 0x7fd004826e58 '__va_list_tag'
+|-RecordDecl 0x7fd004827120 <c_files/pr78952-2.c:7:1, line:12:1> line:7:8 struct S1 definition
+| |-FieldDecl 0x7fd005025a00 <line:9:3, col:8> col:8 pad1 'char'
+| |-FieldDecl 0x7fd005025a58 <line:10:3, col:8> col:8 referenced val 'char'
+| `-FieldDecl 0x7fd005025ab8 <line:11:3, col:9> col:9 pad2 'short'
+`-FunctionDecl 0x7fd005025cf0 <line:14:1, line:19:1> line:14:11 foo 'struct S1 (struct S1, int)'
+  |-ParmVarDecl 0x7fd005025b50 <col:16, col:26> col:26 used a 'struct S1':'struct S1'
+  |-ParmVarDecl 0x7fd005025bc8 <col:29, col:33> col:33 used b 'int'
+  `-CompoundStmt 0x7fd005025fb0 <line:15:1, line:19:1>
+    |-BinaryOperator 0x7fd005025ed8 <line:16:3, col:16> 'char' '='
+    | |-MemberExpr 0x7fd005025e00 <col:3, col:5> 'char' lvalue .val 0x7fd005025a58
+    | | `-DeclRefExpr 0x7fd005025dd8 <col:3> 'struct S1':'struct S1' lvalue ParmVar 0x7fd005025b50 'a' 'struct S1':'struct S1'
+    | `-ImplicitCastExpr 0x7fd005025ec0 <col:11, col:16> 'char' <IntegralCast>
+    |   `-BinaryOperator 0x7fd005025e98 <col:11, col:16> 'int' '>>'
+    |     |-ImplicitCastExpr 0x7fd005025e80 <col:11> 'int' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7fd005025e38 <col:11> 'int' lvalue ParmVar 0x7fd005025bc8 'b' 'int'
+    |     `-IntegerLiteral 0x7fd005025e60 <col:16> 'int' 8
+    `-ReturnStmt 0x7fd005025f98 <line:18:3, col:10>
+      `-ImplicitCastExpr 0x7fd005025f80 <col:10> 'struct S1':'struct S1' <LValueToRValue>
+        `-DeclRefExpr 0x7fd005025f58 <col:10> 'struct S1':'struct S1' lvalue ParmVar 0x7fd005025b50 'a' 'struct S1':'struct S1'

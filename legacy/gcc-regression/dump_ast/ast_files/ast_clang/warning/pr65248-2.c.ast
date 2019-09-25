@@ -1,0 +1,27 @@
+c_files/pr65248-2.c:5:22: warning: target does not support 'protected' visibility; using 'default' [-Wunsupported-visibility]
+__attribute__((weak, visibility("protected")))
+                     ^
+1 warning generated.
+TranslationUnitDecl 0x7fd9618264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd961826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd961826740 '__int128'
+|-TypedefDecl 0x7fd961826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd961826760 'unsigned __int128'
+|-TypedefDecl 0x7fd961826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd961826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd961826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd961826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd961826dc0 'char *'
+|   `-BuiltinType 0x7fd961826560 'char'
+|-TypedefDecl 0x7fd9618270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd961827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd961826ee0 'struct __va_list_tag'
+|     `-Record 0x7fd961826e58 '__va_list_tag'
+|-VarDecl 0x7fd962026a00 <c_files/pr65248-2.c:5:1, line:6:5> col:5 used xxx 'int'
+| |-VisibilityAttr 0x7fd962026a60 <line:5:22, col:44> Default
+| `-WeakAttr 0x7fd962026aa8 <col:16>
+`-FunctionDecl 0x7fd962026b50 <line:8:1, line:12:1> line:9:1 foo 'int ()'
+  `-CompoundStmt 0x7fd962026c40 <line:10:1, line:12:1>
+    `-ReturnStmt 0x7fd962026c28 <line:11:3, col:10>
+      `-ImplicitCastExpr 0x7fd962026c10 <col:10> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7fd962026be8 <col:10> 'int' lvalue Var 0x7fd962026a00 'xxx' 'int'

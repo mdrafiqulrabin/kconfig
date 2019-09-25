@@ -1,0 +1,77 @@
+TranslationUnitDecl 0x7f8fa80264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8fa8026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8fa8026740 '__int128'
+|-TypedefDecl 0x7f8fa8026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8fa8026760 'unsigned __int128'
+|-TypedefDecl 0x7f8fa8026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8fa8026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8fa8026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8fa8026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8fa8026dc0 'char *'
+|   `-BuiltinType 0x7f8fa8026560 'char'
+|-TypedefDecl 0x7f8fa80270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8fa8027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8fa8026ee0 'struct __va_list_tag'
+|     `-Record 0x7f8fa8026e58 '__va_list_tag'
+|-RecordDecl 0x7f8fa8027120 <c_files/pr42196-2.c:1:1, line:5:1> line:1:7 union U definition
+| |-FieldDecl 0x7f8fa8825a10 <line:3:3, col:19> col:19 referenced ci '_Complex int'
+| `-FieldDecl 0x7f8fa8825a68 <line:4:3, col:21> col:21 referenced cf '_Complex float'
+|-VarDecl 0x7f8fa8825ac8 <line:7:1, col:7> col:7 gd 'float'
+|-FunctionDecl 0x7f8fa8825cc8 <line:8:1, col:26> col:14 used bar 'float (union U)' extern
+| `-ParmVarDecl 0x7f8fa8825bc0 <col:19, col:25> col:26 'union U':'union U'
+`-FunctionDecl 0x7f8fa8826068 <line:10:1, line:28:1> line:10:7 foo 'float (int, double, double, int, int)'
+  |-ParmVarDecl 0x7f8fa8825d80 <col:12, col:16> col:16 used b 'int'
+  |-ParmVarDecl 0x7f8fa8825df8 <col:19, col:26> col:26 used f1 'double'
+  |-ParmVarDecl 0x7f8fa8825e70 <col:30, col:37> col:37 used f2 'double'
+  |-ParmVarDecl 0x7f8fa8825ee8 <col:41, col:45> col:45 used c1 'int'
+  |-ParmVarDecl 0x7f8fa8825f60 <col:49, col:53> col:53 used c2 'int'
+  `-CompoundStmt 0x7f8fa8826918 <line:11:1, line:28:1>
+    |-DeclStmt 0x7f8fa88261a8 <line:12:3, col:12>
+    | `-VarDecl 0x7f8fa8826148 <col:3, col:11> col:11 used u 'union U':'union U'
+    |-DeclStmt 0x7f8fa8826238 <line:13:3, col:11>
+    | `-VarDecl 0x7f8fa88261d8 <col:3, col:10> col:10 used r 'double'
+    |-IfStmt 0x7f8fa8826700 <line:15:3, line:24:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7f8fa8826278 <line:15:7> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7f8fa8826250 <col:7> 'int' lvalue ParmVar 0x7f8fa8825d80 'b' 'int'
+    | |-CompoundStmt 0x7f8fa8826490 <line:16:5, line:19:5>
+    | | |-BinaryOperator 0x7f8fa8826368 <line:17:7, col:23> 'float' '='
+    | | | |-UnaryOperator 0x7f8fa88262f0 <col:7, col:18> 'float' lvalue prefix '__real'
+    | | | | `-MemberExpr 0x7f8fa88262b8 <col:16, col:18> '_Complex float' lvalue .cf 0x7f8fa8825a68
+    | | | |   `-DeclRefExpr 0x7f8fa8826290 <col:16> 'union U':'union U' lvalue Var 0x7f8fa8826148 'u' 'union U':'union U'
+    | | | `-ImplicitCastExpr 0x7f8fa8826350 <col:23> 'float' <FloatingCast>
+    | | |   `-ImplicitCastExpr 0x7f8fa8826338 <col:23> 'double' <LValueToRValue>
+    | | |     `-DeclRefExpr 0x7f8fa8826310 <col:23> 'double' lvalue ParmVar 0x7f8fa8825df8 'f1' 'double'
+    | | `-BinaryOperator 0x7f8fa8826468 <line:18:7, col:23> 'float' '='
+    | |   |-UnaryOperator 0x7f8fa88263f0 <col:7, col:18> 'float' lvalue prefix '__imag'
+    | |   | `-MemberExpr 0x7f8fa88263b8 <col:16, col:18> '_Complex float' lvalue .cf 0x7f8fa8825a68
+    | |   |   `-DeclRefExpr 0x7f8fa8826390 <col:16> 'union U':'union U' lvalue Var 0x7f8fa8826148 'u' 'union U':'union U'
+    | |   `-ImplicitCastExpr 0x7f8fa8826450 <col:23> 'float' <FloatingCast>
+    | |     `-ImplicitCastExpr 0x7f8fa8826438 <col:23> 'double' <LValueToRValue>
+    | |       `-DeclRefExpr 0x7f8fa8826410 <col:23> 'double' lvalue ParmVar 0x7f8fa8825e70 'f2' 'double'
+    | `-CompoundStmt 0x7f8fa88266d8 <line:21:5, line:24:5>
+    |   |-BinaryOperator 0x7f8fa8826578 <line:22:7, col:23> 'int' '='
+    |   | |-UnaryOperator 0x7f8fa8826518 <col:7, col:18> 'int' lvalue prefix '__real'
+    |   | | `-MemberExpr 0x7f8fa88264e0 <col:16, col:18> '_Complex int' lvalue .ci 0x7f8fa8825a10
+    |   | |   `-DeclRefExpr 0x7f8fa88264b8 <col:16> 'union U':'union U' lvalue Var 0x7f8fa8826148 'u' 'union U':'union U'
+    |   | `-ImplicitCastExpr 0x7f8fa8826560 <col:23> 'int' <LValueToRValue>
+    |   |   `-DeclRefExpr 0x7f8fa8826538 <col:23> 'int' lvalue ParmVar 0x7f8fa8825ee8 'c1' 'int'
+    |   `-BinaryOperator 0x7f8fa88266b0 <line:23:7, col:23> 'int' '='
+    |     |-UnaryOperator 0x7f8fa8826650 <col:7, col:18> 'int' lvalue prefix '__imag'
+    |     | `-MemberExpr 0x7f8fa8826618 <col:16, col:18> '_Complex int' lvalue .ci 0x7f8fa8825a10
+    |     |   `-DeclRefExpr 0x7f8fa88265f0 <col:16> 'union U':'union U' lvalue Var 0x7f8fa8826148 'u' 'union U':'union U'
+    |     `-ImplicitCastExpr 0x7f8fa8826698 <col:23> 'int' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f8fa8826670 <col:23> 'int' lvalue ParmVar 0x7f8fa8825f60 'c2' 'int'
+    |-BinaryOperator 0x7f8fa8826880 <line:26:3, col:13> 'double' '='
+    | |-DeclRefExpr 0x7f8fa8826738 <col:3> 'double' lvalue Var 0x7f8fa88261d8 'r' 'double'
+    | `-ImplicitCastExpr 0x7f8fa8826868 <col:7, col:13> 'double' <FloatingCast>
+    |   `-CallExpr 0x7f8fa8826820 <col:7, col:13> 'float'
+    |     |-ImplicitCastExpr 0x7f8fa8826808 <col:7> 'float (*)(union U)' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x7f8fa8826760 <col:7> 'float (union U)' Function 0x7f8fa8825cc8 'bar' 'float (union U)'
+    |     `-ImplicitCastExpr 0x7f8fa8826850 <col:12> 'union U':'union U' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f8fa8826788 <col:12> 'union U':'union U' lvalue Var 0x7f8fa8826148 'u' 'union U':'union U'
+    `-ReturnStmt 0x7f8fa8826900 <line:27:3, col:10>
+      `-ImplicitCastExpr 0x7f8fa88268e8 <col:10> 'float' <FloatingCast>
+        `-ImplicitCastExpr 0x7f8fa88268d0 <col:10> 'double' <LValueToRValue>
+          `-DeclRefExpr 0x7f8fa88268a8 <col:10> 'double' lvalue Var 0x7f8fa88261d8 'r' 'double'

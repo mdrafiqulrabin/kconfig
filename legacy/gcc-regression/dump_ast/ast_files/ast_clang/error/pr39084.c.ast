@@ -1,0 +1,33 @@
+c_files/pr39084.c:11:8: error: redefinition of 'color'
+struct color { int j; }; /* { dg-error "redefinition of" } */
+       ^
+c_files/pr39084.c:4:8: note: previous definition is here
+struct color { int i; }; /* { dg-message "note: originally defined here" } */
+       ^
+1 error generated.
+TranslationUnitDecl 0x7fc9af8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc9af826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc9af826740 '__int128'
+|-TypedefDecl 0x7fc9af826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc9af826760 'unsigned __int128'
+|-TypedefDecl 0x7fc9af826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc9af826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc9af826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc9af826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc9af826dc0 'char *'
+|   `-BuiltinType 0x7fc9af826560 'char'
+|-TypedefDecl 0x7fc9af8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc9af827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc9af826ee0 'struct __va_list_tag'
+|     `-Record 0x7fc9af826e58 '__va_list_tag'
+|-RecordDecl 0x7fc9af827120 <c_files/pr39084.c:4:1, col:23> col:8 struct color definition
+| `-FieldDecl 0x7fc9b0025a00 <col:16, col:20> col:20 i 'int'
+|-VarDecl 0x7fc9b0025aa0 <line:5:1, col:27> col:27 used col 'const struct color':'const struct color' static
+|-FunctionDecl 0x7fc9b0025ca8 <line:6:1, line:9:1> line:6:16 f 'struct color *(void)'
+| `-CompoundStmt 0x7fc9b0025e78 <line:7:1, line:9:1>
+|   `-ReturnStmt 0x7fc9b0025e60 <line:8:5, col:30>
+|     `-CStyleCastExpr 0x7fc9b0025e38 <col:12, col:30> 'struct color *' <BitCast>
+|       `-UnaryOperator 0x7fc9b0025dc8 <col:29, col:30> 'const struct color *' prefix '&'
+|         `-DeclRefExpr 0x7fc9b0025d40 <col:30> 'const struct color':'const struct color' lvalue Var 0x7fc9b0025aa0 'col' 'const struct color':'const struct color'
+`-RecordDecl 0x7fc9b0025e98 <line:11:1, col:23> col:8 invalid struct definition
+  `-FieldDecl 0x7fc9b0025f58 <col:16, col:20> col:20 j 'int'

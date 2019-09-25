@@ -1,0 +1,58 @@
+c_files/pr33193.c:10:13: error: invalid type 'struct a' to __real operator
+  float x = __real b;           /* { dg-error "" } */
+            ^
+c_files/pr33193.c:11:13: error: invalid type 'struct a' to __imag operator
+  float y = __imag b;           /* { dg-error "" } */
+            ^
+c_files/pr33193.c:16:13: error: invalid type 'int *' to __imag operator
+  float x = __imag b;           /* { dg-error "wrong type argument" } */
+            ^
+c_files/pr33193.c:17:13: error: invalid type 'int *' to __real operator
+  float y = __real b;           /* { dg-error "wrong type argument" } */
+            ^
+4 errors generated.
+TranslationUnitDecl 0x7fca008264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fca00826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fca00826740 '__int128'
+|-TypedefDecl 0x7fca00826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fca00826760 'unsigned __int128'
+|-TypedefDecl 0x7fca00826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fca00826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fca00826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fca00826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fca00826dc0 'char *'
+|   `-BuiltinType 0x7fca00826560 'char'
+|-TypedefDecl 0x7fca008270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fca00827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fca00826ee0 'struct __va_list_tag'
+|     `-Record 0x7fca00826e58 '__va_list_tag'
+|-RecordDecl 0x7fca00827120 <c_files/pr33193.c:4:1, col:23> col:8 struct a definition
+| |-FieldDecl 0x7fca01025a00 <col:11, col:17> col:17 x 'float'
+| `-FieldDecl 0x7fca01025a60 <col:11, col:20> col:20 y 'float'
+|-FunctionDecl 0x7fca01025c08 <line:6:1, line:13:1> line:6:7 f 'float (struct a)'
+| |-ParmVarDecl 0x7fca01025b00 <col:9, col:18> col:18 used b 'struct a':'struct a'
+| `-CompoundStmt 0x7fca010262e8 <line:7:1, line:13:1>
+|   |-DeclStmt 0x7fca01026140 <line:10:3, col:21>
+|   | `-VarDecl 0x7fca01025d00 <col:3, col:9> col:9 used x 'float'
+|   |-DeclStmt 0x7fca01026210 <line:11:3, col:21>
+|   | `-VarDecl 0x7fca01026170 <col:3, col:9> col:9 used y 'float'
+|   `-ReturnStmt 0x7fca010262d0 <line:12:3, col:14>
+|     `-BinaryOperator 0x7fca010262a8 <col:10, col:14> 'float' '/'
+|       |-ImplicitCastExpr 0x7fca01026278 <col:10> 'float' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fca01026228 <col:10> 'float' lvalue Var 0x7fca01025d00 'x' 'float'
+|       `-ImplicitCastExpr 0x7fca01026290 <col:14> 'float' <LValueToRValue>
+|         `-DeclRefExpr 0x7fca01026250 <col:14> 'float' lvalue Var 0x7fca01026170 'y' 'float'
+`-FunctionDecl 0x7fca01026428 <line:14:1, line:19:1> line:14:5 f1 'int (int *)'
+  |-ParmVarDecl 0x7fca01026360 <col:8, col:13> col:13 used b 'int *'
+  `-CompoundStmt 0x7fca01026728 <line:15:1, line:19:1>
+    |-DeclStmt 0x7fca01026580 <line:16:3, col:21>
+    | `-VarDecl 0x7fca010264e0 <col:3, col:9> col:9 used x 'float'
+    |-DeclStmt 0x7fca01026638 <line:17:3, col:21>
+    | `-VarDecl 0x7fca010265b0 <col:3, col:9> col:9 used y 'float'
+    `-ReturnStmt 0x7fca01026710 <line:18:3, col:14>
+      `-ImplicitCastExpr 0x7fca010266f8 <col:10, col:14> 'int' <FloatingToIntegral>
+        `-BinaryOperator 0x7fca010266d0 <col:10, col:14> 'float' '-'
+          |-ImplicitCastExpr 0x7fca010266a0 <col:10> 'float' <LValueToRValue>
+          | `-DeclRefExpr 0x7fca01026650 <col:10> 'float' lvalue Var 0x7fca010264e0 'x' 'float'
+          `-ImplicitCastExpr 0x7fca010266b8 <col:14> 'float' <LValueToRValue>
+            `-DeclRefExpr 0x7fca01026678 <col:14> 'float' lvalue Var 0x7fca010265b0 'y' 'float'

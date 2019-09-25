@@ -1,0 +1,24 @@
+FileAST: 
+  Decl: round, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['double']
+      TypeDecl: round, []
+        IdentifierType: ['double']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['double']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: round
+          ExprList: 
+            ID: a

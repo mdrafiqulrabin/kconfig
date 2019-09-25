@@ -1,0 +1,83 @@
+FileAST: 
+  FuncDef: 
+    Decl: lagrange, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, ['const'], [], []
+            ArrayDecl: []
+              TypeDecl: x, ['const']
+                IdentifierType: ['double']
+          Decl: y, ['const'], [], []
+            ArrayDecl: []
+              TypeDecl: y, ['const']
+                IdentifierType: ['double']
+          Decl: n, [], [], []
+            TypeDecl: n, []
+              IdentifierType: ['long']
+          Decl: xval, [], [], []
+            TypeDecl: xval, []
+              IdentifierType: ['double']
+        TypeDecl: lagrange, []
+          IdentifierType: ['double']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['long']
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['long']
+      Decl: yval, [], [], []
+        TypeDecl: yval, []
+          IdentifierType: ['double']
+        Constant: float, 0.
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          ID: n
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          Decl: l, [], [], []
+            TypeDecl: l, []
+              IdentifierType: ['double']
+            Constant: float, 1.
+          For: 
+            Assignment: =
+              ID: j
+              Constant: int, 0
+            BinaryOp: <
+              ID: j
+              ID: n
+            UnaryOp: p++
+              ID: j
+            If: 
+              BinaryOp: !=
+                ID: i
+                ID: j
+              Assignment: *=
+                ID: l
+                BinaryOp: /
+                  BinaryOp: -
+                    ID: xval
+                    ArrayRef: 
+                      ID: x
+                      ID: j
+                  BinaryOp: -
+                    ArrayRef: 
+                      ID: x
+                      ID: i
+                    ArrayRef: 
+                      ID: x
+                      ID: j
+          Assignment: +=
+            ID: yval
+            BinaryOp: *
+              ArrayRef: 
+                ID: y
+                ID: i
+              ID: l
+      Return: 
+        ID: yval

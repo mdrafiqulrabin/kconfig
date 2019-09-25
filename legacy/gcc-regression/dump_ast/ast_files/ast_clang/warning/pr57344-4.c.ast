@@ -1,0 +1,86 @@
+c_files/pr57344-4.c:12:26: warning: unknown attribute 'noclone' ignored [-Wunknown-attributes]
+__attribute__((noinline, noclone)) void
+                         ^
+1 warning generated.
+TranslationUnitDecl 0x7f88328264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8832826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8832826740 '__int128'
+|-TypedefDecl 0x7f8832826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8832826760 'unsigned __int128'
+|-TypedefDecl 0x7f8832826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8832826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8832826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8832826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8832826dc0 'char *'
+|   `-BuiltinType 0x7f8832826560 'char'
+|-TypedefDecl 0x7f88328270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8832827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8832826ee0 'struct __va_list_tag'
+|     `-Record 0x7f8832826e58 '__va_list_tag'
+|-RecordDecl 0x7f8832827120 <c_files/pr57344-4.c:3:1, line:9:1> line:3:32 struct S definition
+| |-PackedAttr 0x7f88328271d0 <col:23>
+| |-FieldDecl 0x7f8832878470 <line:5:3, col:21> col:17 a 'long long'
+| | `-IntegerLiteral 0x7f8832878438 <col:21> 'int' 59
+| |-FieldDecl 0x7f88328784f0 <line:6:3, col:21> col:17 referenced b 'long long'
+| | `-IntegerLiteral 0x7f88328784b8 <col:21> 'int' 54
+| |-FieldDecl 0x7f8832878548 <line:7:3, col:8> col:8 c 'char'
+| `-FieldDecl 0x7f88328785c8 <line:8:3, col:19> col:3 'long long'
+|   `-IntegerLiteral 0x7f8832878590 <col:19> 'int' 0
+|-VarDecl 0x7f8832878768 <line:3:1, line:9:6> col:3 used s 'struct S [2]'
+|-VarDecl 0x7f8832878838 <line:10:1, col:5> col:5 used i 'int'
+|-FunctionDecl 0x7f8832878970 <line:12:1, line:18:1> line:13:1 used foo 'void (long long)'
+| |-ParmVarDecl 0x7f88328788b0 <col:6, col:20> col:20 used x 'long long'
+| |-CompoundStmt 0x7f8832878df8 <line:14:1, line:18:1>
+| | |-IfStmt 0x7f8832878ca8 <line:15:3, line:16:22>
+| | | |-<<<NULL>>>
+| | | |-<<<NULL>>>
+| | | |-BinaryOperator 0x7f8832878ad8 <line:15:7, col:13> 'int' '!='
+| | | | |-ImplicitCastExpr 0x7f8832878ac0 <col:7> 'long long' <LValueToRValue>
+| | | | | `-DeclRefExpr 0x7f8832878a58 <col:7> 'long long' lvalue ParmVar 0x7f88328788b0 'x' 'long long'
+| | | | `-UnaryOperator 0x7f8832878aa0 <col:12, col:13> 'long long' prefix '-'
+| | | |   `-IntegerLiteral 0x7f8832878a80 <col:13> 'long long' 1220975898975746
+| | | |-CallExpr 0x7f8832878c80 <line:16:5, col:22> 'void'
+| | | | `-ImplicitCastExpr 0x7f8832878c68 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+| | | |   `-DeclRefExpr 0x7f8832878c10 <col:5> '<builtin fn type>' Function 0x7f8832878b30 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+| | | `-<<<NULL>>>
+| | `-GCCAsmStmt 0x7f8832878da8 <line:17:3, col:34>
+| `-NoInlineAttr 0x7f8832878a10 <line:12:16>
+|-FunctionDecl 0x7f8832878b30 <line:16:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+| `-NoThrowAttr 0x7f8832878bc8 <col:5> Implicit
+`-FunctionDecl 0x7f8832878e70 <line:20:1, line:28:1> line:21:1 main 'int ()'
+  `-CompoundStmt 0x7f88328794f8 <line:22:1, line:28:1>
+    |-DeclStmt 0x7f88328790c0 <line:23:3, col:42>
+    | `-VarDecl 0x7f8832878f28 <col:3, col:41> col:12 used t 'struct S':'struct S' cinit
+    |   `-InitListExpr 0x7f8832879038 <col:16, col:41> 'struct S':'struct S'
+    |     |-ImplicitCastExpr 0x7f8832879098 <col:18> 'long long' <IntegralCast>
+    |     | `-IntegerLiteral 0x7f8832878f88 <col:18> 'int' 0
+    |     |-UnaryOperator 0x7f8832878fc8 <col:21, col:22> 'long long' prefix '-'
+    |     | `-IntegerLiteral 0x7f8832878fa8 <col:22> 'long long' 1220975898975746
+    |     `-ImplicitValueInitExpr 0x7f88328790b0 <<invalid sloc>> 'char'
+    |-BinaryOperator 0x7f88328791f8 <line:24:3, col:10> 'struct S':'struct S' '='
+    | |-ArraySubscriptExpr 0x7f8832879190 <col:3, col:6> 'struct S':'struct S' lvalue
+    | | |-ImplicitCastExpr 0x7f8832879178 <col:3> 'struct S *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7f88328790d8 <col:3> 'struct S [2]' lvalue Var 0x7f8832878768 's' 'struct S [2]'
+    | | `-IntegerLiteral 0x7f8832879100 <col:5> 'int' 1
+    | `-ImplicitCastExpr 0x7f88328791e0 <col:10> 'struct S':'struct S' <LValueToRValue>
+    |   `-DeclRefExpr 0x7f88328791b8 <col:10> 'struct S':'struct S' lvalue Var 0x7f8832878f28 't' 'struct S':'struct S'
+    |-ForStmt 0x7f8832879488 <line:25:3, line:26:16>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f8832879280 <line:25:10, col:14> 'int' '<'
+    | | |-ImplicitCastExpr 0x7f8832879268 <col:10> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7f8832879220 <col:10> 'int' lvalue Var 0x7f8832878838 'i' 'int'
+    | | `-IntegerLiteral 0x7f8832879248 <col:14> 'int' 1
+    | |-UnaryOperator 0x7f88328792d0 <col:17, col:18> 'int' postfix '++'
+    | | `-DeclRefExpr 0x7f88328792a8 <col:17> 'int' lvalue Var 0x7f8832878838 'i' 'int'
+    | `-CallExpr 0x7f8832879440 <line:26:5, col:16> 'void'
+    |   |-ImplicitCastExpr 0x7f8832879428 <col:5> 'void (*)(long long)' <FunctionToPointerDecay>
+    |   | `-DeclRefExpr 0x7f88328792f0 <col:5> 'void (long long)' Function 0x7f8832878970 'foo' 'void (long long)'
+    |   `-ImplicitCastExpr 0x7f8832879470 <col:10, col:15> 'long long' <LValueToRValue>
+    |     `-MemberExpr 0x7f88328793a0 <col:10, col:15> 'long long' lvalue bitfield .b 0x7f88328784f0
+    |       `-ArraySubscriptExpr 0x7f8832879378 <col:10, col:13> 'struct S':'struct S' lvalue
+    |         |-ImplicitCastExpr 0x7f8832879360 <col:10> 'struct S *' <ArrayToPointerDecay>
+    |         | `-DeclRefExpr 0x7f8832879318 <col:10> 'struct S [2]' lvalue Var 0x7f8832878768 's' 'struct S [2]'
+    |         `-IntegerLiteral 0x7f8832879340 <col:12> 'int' 1
+    `-ReturnStmt 0x7f88328794e0 <line:27:3, col:10>
+      `-IntegerLiteral 0x7f88328794c0 <col:10> 'int' 0

@@ -1,0 +1,46 @@
+TranslationUnitDecl 0x7ff1048264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff104826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff104826740 '__int128'
+|-TypedefDecl 0x7ff104826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff104826760 'unsigned __int128'
+|-TypedefDecl 0x7ff104826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff104826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff104826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff104826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff104826dc0 'char *'
+|   `-BuiltinType 0x7ff104826560 'char'
+|-TypedefDecl 0x7ff1048270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff104827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff104826ee0 'struct __va_list_tag'
+|     `-Record 0x7ff104826e58 '__va_list_tag'
+`-FunctionDecl 0x7ff105025a30 <c_files/pr30978.c:4:1, line:11:1> line:4:5 foo 'int (int)'
+  |-ParmVarDecl 0x7ff104827138 <col:9, col:13> col:13 used a 'int'
+  `-CompoundStmt 0x7ff105025fa8 <line:5:1, line:11:1>
+    |-DeclStmt 0x7ff105025c28 <line:6:3, col:25>
+    | `-VarDecl 0x7ff105025b28 <col:3, col:24> col:16 used b 'unsigned int' cinit
+    |   `-ImplicitCastExpr 0x7ff105025c10 <col:20, col:24> 'unsigned int' <IntegralCast>
+    |     `-BinaryOperator 0x7ff105025be8 <col:20, col:24> 'int' '>'
+    |       |-ImplicitCastExpr 0x7ff105025bd0 <col:20> 'int' <LValueToRValue>
+    |       | `-DeclRefExpr 0x7ff105025b88 <col:20> 'int' lvalue ParmVar 0x7ff104827138 'a' 'int'
+    |       `-IntegerLiteral 0x7ff105025bb0 <col:24> 'int' 0
+    |-DeclStmt 0x7ff105025d08 <line:7:3, col:13>
+    | `-VarDecl 0x7ff105025c50 <col:3, col:12> col:8 used c 'char' cinit
+    |   `-ImplicitCastExpr 0x7ff105025cf0 <col:12> 'char' <IntegralCast>
+    |     `-ImplicitCastExpr 0x7ff105025cd8 <col:12> 'unsigned int' <LValueToRValue>
+    |       `-DeclRefExpr 0x7ff105025cb0 <col:12> 'unsigned int' lvalue Var 0x7ff105025b28 'b' 'unsigned int'
+    |-DeclStmt 0x7ff105025e48 <line:8:3, col:19>
+    | `-VarDecl 0x7ff105025d30 <col:3, col:18> col:9 used d '_Bool' cinit
+    |   `-ImplicitCastExpr 0x7ff105025e30 <col:13, col:18> '_Bool' <IntegralToBoolean>
+    |     `-BinaryOperator 0x7ff105025e08 <col:13, col:18> 'int' '=='
+    |       |-ImplicitCastExpr 0x7ff105025df0 <col:13> 'int' <IntegralCast>
+    |       | `-ImplicitCastExpr 0x7ff105025dd8 <col:13> 'char' <LValueToRValue>
+    |       |   `-DeclRefExpr 0x7ff105025d90 <col:13> 'char' lvalue Var 0x7ff105025c50 'c' 'char'
+    |       `-IntegerLiteral 0x7ff105025db8 <col:18> 'int' 0
+    |-DeclStmt 0x7ff105025f38 <line:9:3, col:13>
+    | `-VarDecl 0x7ff105025e78 <col:3, col:12> col:7 used e 'int' cinit
+    |   `-UnaryOperator 0x7ff105025f18 <col:11, col:12> 'int' prefix '!'
+    |     `-ImplicitCastExpr 0x7ff105025f00 <col:12> '_Bool' <LValueToRValue>
+    |       `-DeclRefExpr 0x7ff105025ed8 <col:12> '_Bool' lvalue Var 0x7ff105025d30 'd' '_Bool'
+    `-ReturnStmt 0x7ff105025f90 <line:10:3, col:10>
+      `-ImplicitCastExpr 0x7ff105025f78 <col:10> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7ff105025f50 <col:10> 'int' lvalue Var 0x7ff105025e78 'e' 'int'

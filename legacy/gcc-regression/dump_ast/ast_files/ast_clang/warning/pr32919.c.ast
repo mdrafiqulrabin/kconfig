@@ -1,0 +1,114 @@
+c_files/pr32919.c:13:6: warning: implicit declaration of function 'read_int' is invalid in C99 [-Wimplicit-function-declaration]
+     read_int (&f);
+     ^
+c_files/pr32919.c:15:5: warning: implicit declaration of function '_itoa_word' is invalid in C99 [-Wimplicit-function-declaration]
+    _itoa_word (spec);
+    ^
+c_files/pr32919.c:23:7: warning: implicit declaration of function '__strnlen' is invalid in C99 [-Wimplicit-function-declaration]
+      __strnlen ();
+      ^
+3 warnings generated.
+TranslationUnitDecl 0x7fa0ba8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa0ba826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa0ba826740 '__int128'
+|-TypedefDecl 0x7fa0ba826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa0ba826760 'unsigned __int128'
+|-TypedefDecl 0x7fa0ba826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa0ba826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa0ba826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa0ba826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa0ba826dc0 'char *'
+|   `-BuiltinType 0x7fa0ba826560 'char'
+|-TypedefDecl 0x7fa0ba8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa0ba827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa0ba826ee0 'struct __va_list_tag'
+|     `-Record 0x7fa0ba826e58 '__va_list_tag'
+|-FunctionDecl 0x7fa0ba877400 <c_files/pr32919.c:4:1, line:28:1> line:4:6 _IO_vfprintf_internal 'void (char *)'
+| |-ParmVarDecl 0x7fa0ba827138 <col:30, col:36> col:36 used f 'char *'
+| `-CompoundStmt 0x7fa0ba8795c8 <line:5:1, line:28:1>
+|   |-DeclStmt 0x7fa0ba8778b8 <line:6:3, col:98>
+|   | `-VarDecl 0x7fa0ba877590 <col:3, col:97> col:28 used step0_jumps 'const void *const [3]' static cinit
+|   |   `-InitListExpr 0x7fa0ba877780 <col:44, col:97> 'const void *const [3]'
+|   |     |-ImplicitCastExpr 0x7fa0ba8777c0 <col:46, col:48> 'const void *' <BitCast>
+|   |     | `-AddrLabelExpr 0x7fa0ba877638 <col:46, col:48> 'void *' do_form_unknown 0x7fa0ba8775f0
+|   |     |-ImplicitCastExpr 0x7fa0ba8777e0 <col:65, col:67> 'const void *' <BitCast>
+|   |     | `-AddrLabelExpr 0x7fa0ba8776a0 <col:65, col:67> 'void *' do_flag_plus 0x7fa0ba877658
+|   |     `-ImplicitCastExpr 0x7fa0ba877808 <col:81, col:83> 'const void *' <BitCast>
+|   |       `-AddrLabelExpr 0x7fa0ba877708 <col:81, col:83> 'void *' do_form_float 0x7fa0ba8776c0
+|   |-DeclStmt 0x7fa0ba877a10 <line:7:3, col:36>
+|   | `-VarDecl 0x7fa0ba8778e8 <col:3, col:35> col:16 used ptr 'const void *' cinit
+|   |   `-ImplicitCastExpr 0x7fa0ba8779f8 <col:22, col:35> 'const void *' <LValueToRValue>
+|   |     `-ArraySubscriptExpr 0x7fa0ba8779d0 <col:22, col:35> 'const void *const' lvalue
+|   |       |-ImplicitCastExpr 0x7fa0ba8779b8 <col:22> 'const void *const *' <ArrayToPointerDecay>
+|   |       | `-DeclRefExpr 0x7fa0ba877948 <col:22> 'const void *const [3]' lvalue Var 0x7fa0ba877590 'step0_jumps' 'const void *const [3]'
+|   |       `-IntegerLiteral 0x7fa0ba877970 <col:34> 'int' 0
+|   `-DoStmt 0x7fa0ba8795a8 <line:8:3, line:27:20>
+|     |-CompoundStmt 0x7fa0ba879478 <line:8:6, line:26:3>
+|     | |-DeclStmt 0x7fa0ba877a98 <line:9:5, col:14>
+|     | | `-VarDecl 0x7fa0ba877a38 <col:5, col:10> col:10 used spec 'char'
+|     | |-BinaryOperator 0x7fa0ba877b78 <line:10:5, col:17> 'char' '='
+|     | | |-DeclRefExpr 0x7fa0ba877ab0 <col:5> 'char' lvalue Var 0x7fa0ba877a38 'spec' 'char'
+|     | | `-ImplicitCastExpr 0x7fa0ba877b60 <col:12, col:17> 'char' <LValueToRValue>
+|     | |   `-ParenExpr 0x7fa0ba877b40 <col:12, col:17> 'char' lvalue
+|     | |     `-UnaryOperator 0x7fa0ba877b20 <col:13, col:16> 'char' lvalue prefix '*'
+|     | |       `-UnaryOperator 0x7fa0ba877b00 <col:14, col:16> 'char *' prefix '++'
+|     | |         `-DeclRefExpr 0x7fa0ba877ad8 <col:16> 'char *' lvalue ParmVar 0x7fa0ba827138 'f' 'char *'
+|     | |-IndirectGotoStmt 0x7fa0ba877be0 <line:11:5, col:11>
+|     | | `-ImplicitCastExpr 0x7fa0ba877bc8 <col:11> 'const void *' <LValueToRValue>
+|     | |   `-DeclRefExpr 0x7fa0ba877ba0 <col:11> 'const void *' lvalue Var 0x7fa0ba8778e8 'ptr' 'const void *'
+|     | |-LabelStmt 0x7fa0ba877e00 <line:12:1, line:13:18> 'do_flag_plus'
+|     | | `-CallExpr 0x7fa0ba877dd0 <col:6, col:18> 'int'
+|     | |   |-ImplicitCastExpr 0x7fa0ba877db8 <col:6> 'int (*)()' <FunctionToPointerDecay>
+|     | |   | `-DeclRefExpr 0x7fa0ba877ce8 <col:6> 'int ()' Function 0x7fa0ba877c50 'read_int' 'int ()'
+|     | |   `-UnaryOperator 0x7fa0ba877d68 <col:16, col:17> 'char **' prefix '&'
+|     | |     `-DeclRefExpr 0x7fa0ba877d10 <col:17> 'char *' lvalue ParmVar 0x7fa0ba827138 'f' 'char *'
+|     | |-LabelStmt 0x7fa0ba877fe8 <line:14:1, line:15:21> 'do_number'
+|     | | `-CallExpr 0x7fa0ba877f40 <col:5, col:21> 'int'
+|     | |   |-ImplicitCastExpr 0x7fa0ba877f28 <col:5> 'int (*)()' <FunctionToPointerDecay>
+|     | |   | `-DeclRefExpr 0x7fa0ba877ed8 <col:5> 'int ()' Function 0x7fa0ba877e40 '_itoa_word' 'int ()'
+|     | |   `-ImplicitCastExpr 0x7fa0ba877f88 <col:17> 'int' <IntegralCast>
+|     | |     `-ImplicitCastExpr 0x7fa0ba877f70 <col:17> 'char' <LValueToRValue>
+|     | |       `-DeclRefExpr 0x7fa0ba877f00 <col:17> 'char' lvalue Var 0x7fa0ba877a38 'spec' 'char'
+|     | |-LabelStmt 0x7fa0ba8781f8 <line:16:1, line:21:5> 'do_form_float'
+|     | | `-IfStmt 0x7fa0ba8781c0 <line:17:5, line:21:5>
+|     | |   |-<<<NULL>>>
+|     | |   |-<<<NULL>>>
+|     | |   |-BinaryOperator 0x7fa0ba8780d8 <line:17:9, col:26> 'int' '!='
+|     | |   | |-ImplicitCastExpr 0x7fa0ba8780a8 <col:9> 'const void *' <LValueToRValue>
+|     | |   | | `-DeclRefExpr 0x7fa0ba878000 <col:9> 'const void *' lvalue Var 0x7fa0ba8778e8 'ptr' 'const void *'
+|     | |   | `-ImplicitCastExpr 0x7fa0ba8780c0 <col:16, col:26> 'const void *' <BitCast>
+|     | |   |   `-ParenExpr 0x7fa0ba878088 <col:16, col:26> 'void *'
+|     | |   |     `-CStyleCastExpr 0x7fa0ba878060 <col:17, col:25> 'void *' <NullToPointer>
+|     | |   |       `-IntegerLiteral 0x7fa0ba878028 <col:25> 'int' 0
+|     | |   |-CompoundStmt 0x7fa0ba878198 <line:18:5, line:21:5>
+|     | |   | |-BinaryOperator 0x7fa0ba878158 <line:19:7, col:14> 'char' '='
+|     | |   | | |-DeclRefExpr 0x7fa0ba878100 <col:7> 'char' lvalue Var 0x7fa0ba877a38 'spec' 'char'
+|     | |   | | `-ImplicitCastExpr 0x7fa0ba878140 <col:14> 'char' <IntegralCast>
+|     | |   | |   `-CharacterLiteral 0x7fa0ba878128 <col:14> 'int' 120
+|     | |   | `-GotoStmt 0x7fa0ba878180 <line:20:7, col:12> 'do_number' 0x7fa0ba877fa0
+|     | |   `-<<<NULL>>>
+|     | |-IfStmt 0x7fa0ba879400 <line:22:5, line:23:18>
+|     | | |-<<<NULL>>>
+|     | | |-<<<NULL>>>
+|     | | |-BinaryOperator 0x7fa0ba878280 <line:22:9, col:17> 'int' '!='
+|     | | | |-ImplicitCastExpr 0x7fa0ba878268 <col:9> 'int' <IntegralCast>
+|     | | | | `-ImplicitCastExpr 0x7fa0ba878250 <col:9> 'char' <LValueToRValue>
+|     | | | |   `-DeclRefExpr 0x7fa0ba878210 <col:9> 'char' lvalue Var 0x7fa0ba877a38 'spec' 'char'
+|     | | | `-CharacterLiteral 0x7fa0ba878238 <col:17> 'int' 83
+|     | | |-CallExpr 0x7fa0ba8783a8 <line:23:7, col:18> 'int'
+|     | | | `-ImplicitCastExpr 0x7fa0ba878390 <col:7> 'int (*)()' <FunctionToPointerDecay>
+|     | | |   `-DeclRefExpr 0x7fa0ba878368 <col:7> 'int ()' Function 0x7fa0ba8782d0 '__strnlen' 'int ()'
+|     | | `-<<<NULL>>>
+|     | |-ReturnStmt 0x7fa0ba879438 <line:24:5>
+|     | `-LabelStmt 0x7fa0ba879460 <line:25:5, col:21> 'do_form_unknown'
+|     |   `-NullStmt 0x7fa0ba879450 <col:21>
+|     `-BinaryOperator 0x7fa0ba879580 <line:27:10, col:16> 'int' '!='
+|       |-ImplicitCastExpr 0x7fa0ba879568 <col:10, col:11> 'int' <IntegralCast>
+|       | `-ImplicitCastExpr 0x7fa0ba879550 <col:10, col:11> 'char' <LValueToRValue>
+|       |   `-UnaryOperator 0x7fa0ba879518 <col:10, col:11> 'char' lvalue prefix '*'
+|       |     `-ImplicitCastExpr 0x7fa0ba879500 <col:11> 'char *' <LValueToRValue>
+|       |       `-DeclRefExpr 0x7fa0ba8794d8 <col:11> 'char *' lvalue ParmVar 0x7fa0ba827138 'f' 'char *'
+|       `-CharacterLiteral 0x7fa0ba879538 <col:16> 'int' 0
+|-FunctionDecl 0x7fa0ba877c50 <<invalid sloc>> line:13:6 implicit used read_int 'int ()'
+|-FunctionDecl 0x7fa0ba877e40 <<invalid sloc>> line:15:5 implicit used _itoa_word 'int ()'
+`-FunctionDecl 0x7fa0ba8782d0 <<invalid sloc>> line:23:7 implicit used __strnlen 'int ()'

@@ -1,0 +1,51 @@
+c_files/pr48742.c:8:12: warning: division by zero is undefined [-Wdivision-by-zero]
+  return 1 / 0 > 0;
+           ^ ~
+c_files/pr48742.c:14:15: warning: remainder by zero is undefined [-Wdivision-by-zero]
+  baz (1 <= 2 % (3 >> 1 > 5 / 6 == 3));
+              ^ ~~~~~~~~~~~~~~~~~~~~~
+2 warnings generated.
+TranslationUnitDecl 0x7fc18b8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc18b826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc18b826740 '__int128'
+|-TypedefDecl 0x7fc18b826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc18b826760 'unsigned __int128'
+|-TypedefDecl 0x7fc18b826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc18b826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc18b826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc18b826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc18b826dc0 'char *'
+|   `-BuiltinType 0x7fc18b826560 'char'
+|-TypedefDecl 0x7fc18b8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc18b827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc18b826ee0 'struct __va_list_tag'
+|     `-Record 0x7fc18b826e58 '__va_list_tag'
+|-FunctionDecl 0x7fc18b877400 <c_files/pr48742.c:3:1, col:14> col:6 used baz 'void (int)'
+| `-ParmVarDecl 0x7fc18b827138 <col:11> col:14 'int'
+|-FunctionDecl 0x7fc18b8775a8 <line:5:1, line:9:1> line:6:1 foo 'int (void)'
+| `-CompoundStmt 0x7fc18b877708 <line:7:1, line:9:1>
+|   `-ReturnStmt 0x7fc18b8776f0 <line:8:3, col:18>
+|     `-BinaryOperator 0x7fc18b8776c8 <col:10, col:18> 'int' '>'
+|       |-BinaryOperator 0x7fc18b877680 <col:10, col:14> 'int' '/'
+|       | |-IntegerLiteral 0x7fc18b877640 <col:10> 'int' 1
+|       | `-IntegerLiteral 0x7fc18b877660 <col:14> 'int' 0
+|       `-IntegerLiteral 0x7fc18b8776a8 <col:18> 'int' 0
+`-FunctionDecl 0x7fc18b8777f0 <line:11:1, line:15:1> line:12:1 bar 'void (void)'
+  `-CompoundStmt 0x7fc18b877b10 <line:13:1, line:15:1>
+    `-CallExpr 0x7fc18b877ae0 <line:14:3, col:38> 'void'
+      |-ImplicitCastExpr 0x7fc18b877ac8 <col:3> 'void (*)(int)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fc18b877888 <col:3> 'void (int)' Function 0x7fc18b877400 'baz' 'void (int)'
+      `-BinaryOperator 0x7fc18b877a78 <col:8, col:37> 'int' '<='
+        |-IntegerLiteral 0x7fc18b8778b0 <col:8> 'int' 1
+        `-BinaryOperator 0x7fc18b877a50 <col:13, col:37> 'int' '%'
+          |-IntegerLiteral 0x7fc18b8778d0 <col:13> 'int' 2
+          `-ParenExpr 0x7fc18b877a30 <col:17, col:37> 'int'
+            `-BinaryOperator 0x7fc18b877a08 <col:18, col:36> 'int' '=='
+              |-BinaryOperator 0x7fc18b8779c0 <col:18, col:31> 'int' '>'
+              | |-BinaryOperator 0x7fc18b877930 <col:18, col:23> 'int' '>>'
+              | | |-IntegerLiteral 0x7fc18b8778f0 <col:18> 'int' 3
+              | | `-IntegerLiteral 0x7fc18b877910 <col:23> 'int' 1
+              | `-BinaryOperator 0x7fc18b877998 <col:27, col:31> 'int' '/'
+              |   |-IntegerLiteral 0x7fc18b877958 <col:27> 'int' 5
+              |   `-IntegerLiteral 0x7fc18b877978 <col:31> 'int' 6
+              `-IntegerLiteral 0x7fc18b8779e8 <col:36> 'int' 3

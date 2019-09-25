@@ -1,0 +1,101 @@
+FileAST: 
+  Decl: wx, [], [], []
+    TypeDecl: wx, []
+      IdentifierType: ['int']
+  Decl: qi, [], [], []
+    TypeDecl: qi, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: yj, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: gw, [], [], []
+            TypeDecl: gw, []
+              IdentifierType: ['int']
+        TypeDecl: yj, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: ak, [], [], []
+        PtrDecl: []
+          TypeDecl: ak, []
+            IdentifierType: ['int']
+        UnaryOp: &
+          ID: gw
+      While: 
+        BinaryOp: !=
+          ID: wx
+          Constant: int, 0
+        Compound: 
+          Decl: k2, [], [], []
+            TypeDecl: k2, []
+              IdentifierType: ['int']
+            BinaryOp: &
+              ID: __INTPTR_TYPE__
+              ID: ak
+          Decl: xq, [], [], []
+            PtrDecl: []
+              PtrDecl: []
+                TypeDecl: xq, []
+                  IdentifierType: ['int']
+            Cast: 
+              Typename: None, []
+                PtrDecl: []
+                  PtrDecl: []
+                    TypeDecl: None, []
+                      IdentifierType: ['int']
+              UnaryOp: &
+                ID: k2
+          Label: ja
+            Assignment: =
+              UnaryOp: *
+                ID: xq
+              UnaryOp: &
+                ID: gw
+          While: 
+            BinaryOp: <
+              ID: qi
+              Constant: int, 1
+            Compound: 
+              Decl: ey, [], [], []
+                TypeDecl: ey, []
+                  IdentifierType: ['unsigned', 'short', 'int']
+              Label: be
+                For: 
+                  Assignment: =
+                    ID: ey
+                    Constant: int, 0
+                  BinaryOp: <
+                    ID: ey
+                    Constant: int, 251
+                  UnaryOp: ++
+                    ID: ey
+                  Compound: 
+                    For: 
+                      Assignment: =
+                        ID: wx
+                        Constant: int, 0
+                      BinaryOp: <
+                        ID: wx
+                        Constant: int, 2
+                      UnaryOp: ++
+                        ID: wx
+                      Compound: 
+                    Assignment: +=
+                      UnaryOp: *
+                        ID: ak
+                      Constant: int, 8555712
+                    Assignment: +=
+                      ID: k2
+                      UnaryOp: *
+                        ID: ak
+              UnaryOp: ++
+                ID: qi
+      Assignment: =
+        ID: gw
+        Constant: int, 1
+      If: 
+        BinaryOp: !=
+          ID: gw
+          Constant: int, 0
+        Goto: ja
+        Goto: be

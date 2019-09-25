@@ -1,0 +1,76 @@
+TranslationUnitDecl 0x7fb28f8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb28f826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb28f826740 '__int128'
+|-TypedefDecl 0x7fb28f826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb28f826760 'unsigned __int128'
+|-TypedefDecl 0x7fb28f826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb28f826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb28f826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb28f826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb28f826dc0 'char *'
+|   `-BuiltinType 0x7fb28f826560 'char'
+|-TypedefDecl 0x7fb28f8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb28f827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb28f826ee0 'struct __va_list_tag'
+|     `-Record 0x7fb28f826e58 '__va_list_tag'
+|-FunctionDecl 0x7fb28f877568 <c_files/pr27661.c:6:12> col:12 implicit used memcmp 'int (const void *, const void *, unsigned long)' extern
+| |-ParmVarDecl 0x7fb28f877600 <<invalid sloc>> <invalid sloc> 'const void *'
+| |-ParmVarDecl 0x7fb28f877660 <<invalid sloc>> <invalid sloc> 'const void *'
+| `-ParmVarDecl 0x7fb28f8776c0 <<invalid sloc>> <invalid sloc> 'unsigned long'
+|-FunctionDecl 0x7fb28f877738 prev 0x7fb28f877568 <col:1, col:67> col:12 used memcmp 'int (const void *, const void *, unsigned long)' extern
+| |-ParmVarDecl 0x7fb28f827160 <col:20, col:32> col:32 s1 'const void *'
+| |-ParmVarDecl 0x7fb28f877400 <col:36, col:48> col:48 s2 'const void *'
+| `-ParmVarDecl 0x7fb28f877478 <col:52, col:66> col:66 n 'unsigned long'
+|-FunctionDecl 0x7fb28f877908 <line:7:12> col:12 implicit used printf 'int (const char *, ...)' extern
+| |-ParmVarDecl 0x7fb28f8779a0 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-FormatAttr 0x7fb28f877a08 <col:12> Implicit printf 1 2
+|-FunctionDecl 0x7fb28f877a60 prev 0x7fb28f877908 <col:1, col:58> col:12 used printf 'int (const char *, ...)' extern
+| |-ParmVarDecl 0x7fb28f877800 <col:20, col:45> col:45 __format 'const char *__restrict'
+| `-FormatAttr 0x7fb28f877b38 <col:12> Inherited printf 1 2
+|-RecordDecl 0x7fb28f877b58 <line:9:1, line:13:1> line:9:8 struct test definition
+| |-FieldDecl 0x7fb28f877c78 <line:11:3, col:16> col:8 tmp 'char [4096]'
+| `-FieldDecl 0x7fb28f877d38 <line:12:3, col:17> col:8 referenced msgtype 'char [2]'
+`-FunctionDecl 0x7fb28f877f30 <line:15:1, line:24:1> line:15:6 test 'void (struct test *)'
+  |-ParmVarDecl 0x7fb28f877e30 <col:12, col:25> col:25 used testtb 'struct test *'
+  `-CompoundStmt 0x7fb28f87d780 <line:16:1, line:24:1>
+    |-IfStmt 0x7fb28f878150 <line:17:3, line:18:16>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7fb28f878038 <line:17:7> 'struct test *' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fb28f878010 <col:7> 'struct test *' lvalue ParmVar 0x7fb28f877e30 'testtb' 'struct test *'
+    | |-CallExpr 0x7fb28f8780f0 <line:18:5, col:16> 'int'
+    | | |-ImplicitCastExpr 0x7fb28f8780d8 <col:5> 'int (*)(const char *, ...)' <FunctionToPointerDecay>
+    | | | `-DeclRefExpr 0x7fb28f878050 <col:5> 'int (const char *, ...)' Function 0x7fb28f877a60 'printf' 'int (const char *, ...)'
+    | | `-ImplicitCastExpr 0x7fb28f878138 <col:13> 'const char *' <BitCast>
+    | |   `-ImplicitCastExpr 0x7fb28f878120 <col:13> 'char *' <ArrayToPointerDecay>
+    | |     `-StringLiteral 0x7fb28f878078 <col:13> 'char [2]' lvalue "a"
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fb28f87d678 <line:20:3, line:21:16>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-CallExpr 0x7fb28f8782f0 <line:20:7, col:37> 'int'
+    | | |-ImplicitCastExpr 0x7fb28f8782d8 <col:7> 'int (*)(const void *, const void *, unsigned long)' <FunctionToPointerDecay>
+    | | | `-DeclRefExpr 0x7fb28f878188 <col:7> 'int (const void *, const void *, unsigned long)' Function 0x7fb28f877738 'memcmp' 'int (const void *, const void *, unsigned long)'
+    | | |-ImplicitCastExpr 0x7fb28f878348 <col:14, col:22> 'const void *' <BitCast>
+    | | | `-ImplicitCastExpr 0x7fb28f878330 <col:14, col:22> 'char *' <ArrayToPointerDecay>
+    | | |   `-MemberExpr 0x7fb28f8781f0 <col:14, col:22> 'char [2]' lvalue ->msgtype 0x7fb28f877d38
+    | | |     `-ImplicitCastExpr 0x7fb28f8781d8 <col:14> 'struct test *' <LValueToRValue>
+    | | |       `-DeclRefExpr 0x7fb28f8781b0 <col:14> 'struct test *' lvalue ParmVar 0x7fb28f877e30 'testtb' 'struct test *'
+    | | |-ImplicitCastExpr 0x7fb28f878378 <col:31> 'const void *' <BitCast>
+    | | | `-ImplicitCastExpr 0x7fb28f878360 <col:31> 'char *' <ArrayToPointerDecay>
+    | | |   `-StringLiteral 0x7fb28f878228 <col:31> 'char [2]' lvalue "a"
+    | | `-ImplicitCastExpr 0x7fb28f878390 <col:36> 'unsigned long' <IntegralCast>
+    | |   `-IntegerLiteral 0x7fb28f878258 <col:36> 'int' 2
+    | |-CallExpr 0x7fb28f87d618 <line:21:5, col:16> 'int'
+    | | |-ImplicitCastExpr 0x7fb28f87d600 <col:5> 'int (*)(const char *, ...)' <FunctionToPointerDecay>
+    | | | `-DeclRefExpr 0x7fb28f8783a8 <col:5> 'int (const char *, ...)' Function 0x7fb28f877a60 'printf' 'int (const char *, ...)'
+    | | `-ImplicitCastExpr 0x7fb28f87d660 <col:13> 'const char *' <BitCast>
+    | |   `-ImplicitCastExpr 0x7fb28f87d648 <col:13> 'char *' <ArrayToPointerDecay>
+    | |     `-StringLiteral 0x7fb28f8783d0 <col:13> 'char [2]' lvalue "a"
+    | `-<<<NULL>>>
+    `-CallExpr 0x7fb28f87d720 <line:23:3, col:14> 'int'
+      |-ImplicitCastExpr 0x7fb28f87d708 <col:3> 'int (*)(const char *, ...)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fb28f87d6b0 <col:3> 'int (const char *, ...)' Function 0x7fb28f877a60 'printf' 'int (const char *, ...)'
+      `-ImplicitCastExpr 0x7fb28f87d768 <col:11> 'const char *' <BitCast>
+        `-ImplicitCastExpr 0x7fb28f87d750 <col:11> 'char *' <ArrayToPointerDecay>
+          `-StringLiteral 0x7fb28f87d6d8 <col:11> 'char [2]' lvalue "b"

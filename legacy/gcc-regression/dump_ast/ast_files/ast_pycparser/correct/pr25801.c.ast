@@ -1,0 +1,96 @@
+FileAST: 
+  Decl: a, [], [], []
+    PtrDecl: []
+      ArrayDecl: []
+        TypeDecl: a, []
+          IdentifierType: ['int']
+  Decl: s, [], [], []
+    PtrDecl: []
+      TypeDecl: s, []
+        Struct: S
+  Decl: u, [], [], []
+    PtrDecl: []
+      TypeDecl: u, []
+        Union: U
+  Decl: e, [], [], []
+    PtrDecl: []
+      TypeDecl: e, []
+        Enum: E
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: f, []
+          IdentifierType: ['void']
+    Compound: 
+      UnaryOp: p++
+        ID: a
+      UnaryOp: ++
+        ID: a
+      UnaryOp: p--
+        ID: a
+      UnaryOp: --
+        ID: a
+      Assignment: +=
+        ID: a
+        Constant: int, 1
+      Assignment: -=
+        ID: a
+        Constant: int, 1
+      BinaryOp: -
+        ID: a
+        ID: a
+      UnaryOp: p++
+        ID: s
+      UnaryOp: ++
+        ID: s
+      UnaryOp: p--
+        ID: s
+      UnaryOp: --
+        ID: s
+      Assignment: +=
+        ID: s
+        Constant: int, 1
+      Assignment: -=
+        ID: s
+        Constant: int, 1
+      BinaryOp: -
+        ID: s
+        ID: s
+      UnaryOp: p++
+        ID: u
+      UnaryOp: ++
+        ID: u
+      UnaryOp: p--
+        ID: u
+      UnaryOp: --
+        ID: u
+      Assignment: +=
+        ID: u
+        Constant: int, 1
+      Assignment: -=
+        ID: u
+        Constant: int, 1
+      BinaryOp: -
+        ID: u
+        ID: u
+      UnaryOp: p++
+        ID: e
+      UnaryOp: ++
+        ID: e
+      UnaryOp: p--
+        ID: e
+      UnaryOp: --
+        ID: e
+      Assignment: +=
+        ID: e
+        Constant: int, 1
+      Assignment: -=
+        ID: e
+        Constant: int, 1
+      BinaryOp: -
+        ID: e
+        ID: e

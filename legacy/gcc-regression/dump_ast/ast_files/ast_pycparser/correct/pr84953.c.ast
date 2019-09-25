@@ -1,0 +1,36 @@
+FileAST: 
+  Decl: strpbrk, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, ['const']
+          PtrDecl: []
+            TypeDecl: None, ['const']
+              IdentifierType: ['char']
+        Typename: None, ['const']
+          PtrDecl: []
+            TypeDecl: None, ['const']
+              IdentifierType: ['char']
+      PtrDecl: []
+        TypeDecl: strpbrk, []
+          IdentifierType: ['char']
+  FuncDef: 
+    Decl: test, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            PtrDecl: []
+              TypeDecl: p, []
+                IdentifierType: ['char']
+        PtrDecl: []
+          TypeDecl: test, []
+            IdentifierType: ['char']
+    Compound: 
+      Assignment: =
+        ID: p
+        FuncCall: 
+          ID: strpbrk
+          ExprList: 
+            ID: p
+            Constant: string, ""
+      Return: 
+        ID: p

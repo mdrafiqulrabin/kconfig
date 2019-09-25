@@ -1,0 +1,125 @@
+TranslationUnitDecl 0x7fa68a8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa68a826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa68a826740 '__int128'
+|-TypedefDecl 0x7fa68a826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa68a826760 'unsigned __int128'
+|-TypedefDecl 0x7fa68a826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa68a826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa68a826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa68a826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa68a826dc0 'char *'
+|   `-BuiltinType 0x7fa68a826560 'char'
+|-TypedefDecl 0x7fa68a8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa68a827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa68a826ee0 'struct __va_list_tag'
+|     `-Record 0x7fa68a826e58 '__va_list_tag'
+|-FunctionDecl 0x7fa68b025a00 <c_files/pr71675.c:15:1, line:34:1> line:15:6 f 'void (void)'
+| `-CompoundStmt 0x7fa68b02a978 <line:16:1, line:34:1>
+|   |-DoStmt 0x7fa68b026120 <line:8:3, line:13:13>
+|   | |-CompoundStmt 0x7fa68b0260d0 <line:8:6, line:13:3>
+|   | | |-DeclStmt 0x7fa68b025b48 <line:9:5, col:15>
+|   | | | `-VarDecl 0x7fa68b025ae8 <col:5, col:14> col:14 referenced x 'char' static
+|   | | |-DeclStmt 0x7fa68b026010 <line:10:5, line:11:31>
+|   | | | `-VarDecl 0x7fa68b025fb0 <line:10:5, line:11:30> line:10:9 used r 'int [1]'
+|   | | `-CStyleCastExpr 0x7fa68b0260a8 <line:12:5, col:12> 'void' <ToVoid>
+|   | |   `-UnaryOperator 0x7fa68b026078 <col:11, col:12> 'int (*)[1]' prefix '&'
+|   | |     `-DeclRefExpr 0x7fa68b026028 <col:12> 'int [1]' lvalue Var 0x7fa68b025fb0 'r' 'int [1]'
+|   | `-IntegerLiteral 0x7fa68b026100 <line:13:12> 'int' 0
+|   |-DoStmt 0x7fa68b026668 <line:8:3, line:13:13>
+|   | |-CompoundStmt 0x7fa68b026618 <line:8:6, line:13:3>
+|   | | |-DeclStmt 0x7fa68b0261b8 <line:9:5, col:15>
+|   | | | `-VarDecl 0x7fa68b026158 <col:5, col:14> col:14 referenced x 'signed char' static
+|   | | |-DeclStmt 0x7fa68b026580 <line:10:5, line:11:31>
+|   | | | `-VarDecl 0x7fa68b026520 <line:10:5, line:11:30> line:10:9 used r 'int [1]'
+|   | | `-CStyleCastExpr 0x7fa68b0265f0 <line:12:5, col:12> 'void' <ToVoid>
+|   | |   `-UnaryOperator 0x7fa68b0265c0 <col:11, col:12> 'int (*)[1]' prefix '&'
+|   | |     `-DeclRefExpr 0x7fa68b026598 <col:12> 'int [1]' lvalue Var 0x7fa68b026520 'r' 'int [1]'
+|   | `-IntegerLiteral 0x7fa68b026648 <line:13:12> 'int' 0
+|   |-DoStmt 0x7fa68b0281d0 <line:8:3, line:13:13>
+|   | |-CompoundStmt 0x7fa68b028180 <line:8:6, line:13:3>
+|   | | |-DeclStmt 0x7fa68b026700 <line:9:5, col:15>
+|   | | | `-VarDecl 0x7fa68b0266a0 <col:5, col:14> col:14 referenced x 'unsigned char' static
+|   | | |-DeclStmt 0x7fa68b0280e8 <line:10:5, line:11:31>
+|   | | | `-VarDecl 0x7fa68b028088 <line:10:5, line:11:30> line:10:9 used r 'int [1]'
+|   | | `-CStyleCastExpr 0x7fa68b028158 <line:12:5, col:12> 'void' <ToVoid>
+|   | |   `-UnaryOperator 0x7fa68b028128 <col:11, col:12> 'int (*)[1]' prefix '&'
+|   | |     `-DeclRefExpr 0x7fa68b028100 <col:12> 'int [1]' lvalue Var 0x7fa68b028088 'r' 'int [1]'
+|   | `-IntegerLiteral 0x7fa68b0281b0 <line:13:12> 'int' 0
+|   |-DoStmt 0x7fa68b028718 <line:8:3, line:13:13>
+|   | |-CompoundStmt 0x7fa68b0286c8 <line:8:6, line:13:3>
+|   | | |-DeclStmt 0x7fa68b028268 <line:9:5, col:15>
+|   | | | `-VarDecl 0x7fa68b028208 <col:5, col:14> col:14 referenced x 'int' static
+|   | | |-DeclStmt 0x7fa68b028630 <line:10:5, line:11:31>
+|   | | | `-VarDecl 0x7fa68b0285d0 <line:10:5, line:11:30> line:10:9 used r 'int [1]'
+|   | | `-CStyleCastExpr 0x7fa68b0286a0 <line:12:5, col:12> 'void' <ToVoid>
+|   | |   `-UnaryOperator 0x7fa68b028670 <col:11, col:12> 'int (*)[1]' prefix '&'
+|   | |     `-DeclRefExpr 0x7fa68b028648 <col:12> 'int [1]' lvalue Var 0x7fa68b0285d0 'r' 'int [1]'
+|   | `-IntegerLiteral 0x7fa68b0286f8 <line:13:12> 'int' 0
+|   |-DoStmt 0x7fa68b028c68 <line:8:3, line:13:13>
+|   | |-CompoundStmt 0x7fa68b028c18 <line:8:6, line:13:3>
+|   | | |-DeclStmt 0x7fa68b0287b0 <line:9:5, col:15>
+|   | | | `-VarDecl 0x7fa68b028750 <col:5, col:14> col:14 referenced x 'unsigned int' static
+|   | | |-DeclStmt 0x7fa68b028b80 <line:10:5, line:11:31>
+|   | | | `-VarDecl 0x7fa68b028b20 <line:10:5, line:11:30> line:10:9 used r 'int [1]'
+|   | | `-CStyleCastExpr 0x7fa68b028bf0 <line:12:5, col:12> 'void' <ToVoid>
+|   | |   `-UnaryOperator 0x7fa68b028bc0 <col:11, col:12> 'int (*)[1]' prefix '&'
+|   | |     `-DeclRefExpr 0x7fa68b028b98 <col:12> 'int [1]' lvalue Var 0x7fa68b028b20 'r' 'int [1]'
+|   | `-IntegerLiteral 0x7fa68b028c48 <line:13:12> 'int' 0
+|   |-DoStmt 0x7fa68b0291d0 <line:8:3, line:13:13>
+|   | |-CompoundStmt 0x7fa68b029180 <line:8:6, line:13:3>
+|   | | |-DeclStmt 0x7fa68b028d00 <line:9:5, col:15>
+|   | | | `-VarDecl 0x7fa68b028ca0 <col:5, col:14> col:14 referenced x 'long' static
+|   | | |-DeclStmt 0x7fa68b0290e8 <line:10:5, line:11:31>
+|   | | | `-VarDecl 0x7fa68b029088 <line:10:5, line:11:30> line:10:9 used r 'int [1]'
+|   | | `-CStyleCastExpr 0x7fa68b029158 <line:12:5, col:12> 'void' <ToVoid>
+|   | |   `-UnaryOperator 0x7fa68b029128 <col:11, col:12> 'int (*)[1]' prefix '&'
+|   | |     `-DeclRefExpr 0x7fa68b029100 <col:12> 'int [1]' lvalue Var 0x7fa68b029088 'r' 'int [1]'
+|   | `-IntegerLiteral 0x7fa68b0291b0 <line:13:12> 'int' 0
+|   |-DoStmt 0x7fa68b029718 <line:8:3, line:13:13>
+|   | |-CompoundStmt 0x7fa68b0296c8 <line:8:6, line:13:3>
+|   | | |-DeclStmt 0x7fa68b029268 <line:9:5, col:15>
+|   | | | `-VarDecl 0x7fa68b029208 <col:5, col:14> col:14 referenced x 'unsigned long' static
+|   | | |-DeclStmt 0x7fa68b029630 <line:10:5, line:11:31>
+|   | | | `-VarDecl 0x7fa68b0295d0 <line:10:5, line:11:30> line:10:9 used r 'int [1]'
+|   | | `-CStyleCastExpr 0x7fa68b0296a0 <line:12:5, col:12> 'void' <ToVoid>
+|   | |   `-UnaryOperator 0x7fa68b029670 <col:11, col:12> 'int (*)[1]' prefix '&'
+|   | |     `-DeclRefExpr 0x7fa68b029648 <col:12> 'int [1]' lvalue Var 0x7fa68b0295d0 'r' 'int [1]'
+|   | `-IntegerLiteral 0x7fa68b0296f8 <line:13:12> 'int' 0
+|   |-DoStmt 0x7fa68b029c68 <line:8:3, line:13:13>
+|   | |-CompoundStmt 0x7fa68b029c18 <line:8:6, line:13:3>
+|   | | |-DeclStmt 0x7fa68b0297b0 <line:9:5, col:15>
+|   | | | `-VarDecl 0x7fa68b029750 <col:5, col:14> col:14 referenced x 'long long' static
+|   | | |-DeclStmt 0x7fa68b029b80 <line:10:5, line:11:31>
+|   | | | `-VarDecl 0x7fa68b029b20 <line:10:5, line:11:30> line:10:9 used r 'int [1]'
+|   | | `-CStyleCastExpr 0x7fa68b029bf0 <line:12:5, col:12> 'void' <ToVoid>
+|   | |   `-UnaryOperator 0x7fa68b029bc0 <col:11, col:12> 'int (*)[1]' prefix '&'
+|   | |     `-DeclRefExpr 0x7fa68b029b98 <col:12> 'int [1]' lvalue Var 0x7fa68b029b20 'r' 'int [1]'
+|   | `-IntegerLiteral 0x7fa68b029c48 <line:13:12> 'int' 0
+|   |-DoStmt 0x7fa68b02a1d0 <line:8:3, line:13:13>
+|   | |-CompoundStmt 0x7fa68b02a180 <line:8:6, line:13:3>
+|   | | |-DeclStmt 0x7fa68b029d00 <line:9:5, col:15>
+|   | | | `-VarDecl 0x7fa68b029ca0 <col:5, col:14> col:14 referenced x 'unsigned long long' static
+|   | | |-DeclStmt 0x7fa68b02a0e8 <line:10:5, line:11:31>
+|   | | | `-VarDecl 0x7fa68b02a088 <line:10:5, line:11:30> line:10:9 used r 'int [1]'
+|   | | `-CStyleCastExpr 0x7fa68b02a158 <line:12:5, col:12> 'void' <ToVoid>
+|   | |   `-UnaryOperator 0x7fa68b02a128 <col:11, col:12> 'int (*)[1]' prefix '&'
+|   | |     `-DeclRefExpr 0x7fa68b02a100 <col:12> 'int [1]' lvalue Var 0x7fa68b02a088 'r' 'int [1]'
+|   | `-IntegerLiteral 0x7fa68b02a1b0 <line:13:12> 'int' 0
+|   |-DeclStmt 0x7fa68b02a3c0 <line:32:3, col:25>
+|   | |-EnumDecl 0x7fa68b02a1f0 <col:11, col:22> col:16 E
+|   | | `-EnumConstantDecl 0x7fa68b02a2b0 <col:20> col:20 e 'int'
+|   | `-TypedefDecl 0x7fa68b02a350 <col:3, col:24> col:24 referenced E 'enum E':'enum E'
+|   |   `-ElaboratedType 0x7fa68b02a300 'enum E' sugar
+|   |     `-EnumType 0x7fa68b02a290 'enum E'
+|   |       `-Enum 0x7fa68b02a1f0 'E'
+|   `-DoStmt 0x7fa68b02a958 <line:8:3, line:13:13>
+|     |-CompoundStmt 0x7fa68b02a908 <line:8:6, line:13:3>
+|     | |-DeclStmt 0x7fa68b02a470 <line:9:5, col:15>
+|     | | `-VarDecl 0x7fa68b02a410 <col:5, col:14> col:14 referenced x 'E':'enum E' static
+|     | |-DeclStmt 0x7fa68b02a870 <line:10:5, line:11:31>
+|     | | `-VarDecl 0x7fa68b02a810 <line:10:5, line:11:30> line:10:9 used r 'int [1]'
+|     | `-CStyleCastExpr 0x7fa68b02a8e0 <line:12:5, col:12> 'void' <ToVoid>
+|     |   `-UnaryOperator 0x7fa68b02a8b0 <col:11, col:12> 'int (*)[1]' prefix '&'
+|     |     `-DeclRefExpr 0x7fa68b02a888 <col:12> 'int [1]' lvalue Var 0x7fa68b02a810 'r' 'int [1]'
+|     `-IntegerLiteral 0x7fa68b02a938 <line:13:12> 'int' 0
+`-FunctionDecl 0x7fa68b025b88 <line:10:22> col:22 implicit referenced __atomic_compare_exchange_n 'void ()' extern

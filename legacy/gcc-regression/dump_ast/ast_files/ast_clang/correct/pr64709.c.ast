@@ -1,0 +1,29 @@
+TranslationUnitDecl 0x7f8c308264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8c30826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8c30826740 '__int128'
+|-TypedefDecl 0x7f8c30826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8c30826760 'unsigned __int128'
+|-TypedefDecl 0x7f8c30826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8c30826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8c30826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8c30826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8c30826dc0 'char *'
+|   `-BuiltinType 0x7f8c30826560 'char'
+|-TypedefDecl 0x7f8c308270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8c30827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8c30826ee0 'struct __va_list_tag'
+|     `-Record 0x7f8c30826e58 '__va_list_tag'
+|-RecordDecl 0x7f8c30827120 <c_files/pr64709.c:5:1, col:22> col:8 struct S definition
+| |-FieldDecl 0x7f8c31025a00 <col:12, col:16> col:16 a 'int'
+| `-FieldDecl 0x7f8c31025a60 <col:12, col:19> col:19 b 'int'
+`-FunctionDecl 0x7f8c31025b70 <line:6:1, line:10:1> line:7:1 foo 'void (void)'
+  `-CompoundStmt 0x7f8c31026050 <line:8:1, line:10:1>
+    `-DeclStmt 0x7f8c31026038 <line:9:3, col:37>
+      `-VarDecl 0x7f8c31025d08 <col:3, col:36> col:12 s 'struct S [2]' cinit
+        `-InitListExpr 0x7f8c31025eb0 <col:18, col:36> 'struct S [2]'
+          |-InitListExpr 0x7f8c31025ef0 <col:20, col:27> 'struct S':'struct S'
+          | |-IntegerLiteral 0x7f8c31025d68 <col:22> 'int' 1
+          | `-IntegerLiteral 0x7f8c31025d88 <col:25> 'int' 2
+          `-InitListExpr 0x7f8c31025f48 <col:30, col:34> 'struct S':'struct S'
+            |-IntegerLiteral 0x7f8c31025df8 <col:32> 'int' 0
+            `-ImplicitValueInitExpr 0x7f8c31025fa8 <<invalid sloc>> 'int'

@@ -1,0 +1,38 @@
+c_files/pr39614-5.c:7:10: warning: expression result unused [-Wunused-value]
+  i = (1 / 0, 1 / 0);
+       ~ ^ ~
+c_files/pr39614-5.c:7:10: warning: division by zero is undefined [-Wdivision-by-zero]
+  i = (1 / 0, 1 / 0);
+         ^ ~
+c_files/pr39614-5.c:7:17: warning: division by zero is undefined [-Wdivision-by-zero]
+  i = (1 / 0, 1 / 0);
+                ^ ~
+3 warnings generated.
+TranslationUnitDecl 0x7f9b068264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9b06826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9b06826740 '__int128'
+|-TypedefDecl 0x7f9b06826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9b06826760 'unsigned __int128'
+|-TypedefDecl 0x7f9b06826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9b06826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9b06826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9b06826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9b06826dc0 'char *'
+|   `-BuiltinType 0x7f9b06826560 'char'
+|-TypedefDecl 0x7f9b068270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9b06827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9b06826ee0 'struct __va_list_tag'
+|     `-Record 0x7f9b06826e58 '__va_list_tag'
+|-VarDecl 0x7f9b06827138 <c_files/pr39614-5.c:3:1, col:5> col:5 used i 'int'
+`-FunctionDecl 0x7f9b07025ab0 <line:4:1, line:8:1> line:5:1 f 'void (void)'
+  `-CompoundStmt 0x7f9b07025cb0 <line:6:1, line:8:1>
+    `-BinaryOperator 0x7f9b07025c88 <line:7:3, col:20> 'int' '='
+      |-DeclRefExpr 0x7f9b07025b48 <col:3> 'int' lvalue Var 0x7f9b06827138 'i' 'int'
+      `-ParenExpr 0x7f9b07025c68 <col:7, col:20> 'int'
+        `-BinaryOperator 0x7f9b07025c40 <col:8, col:19> 'int' ','
+          |-BinaryOperator 0x7f9b07025bb0 <col:8, col:12> 'int' '/'
+          | |-IntegerLiteral 0x7f9b07025b70 <col:8> 'int' 1
+          | `-IntegerLiteral 0x7f9b07025b90 <col:12> 'int' 0
+          `-BinaryOperator 0x7f9b07025c18 <col:15, col:19> 'int' '/'
+            |-IntegerLiteral 0x7f9b07025bd8 <col:15> 'int' 1
+            `-IntegerLiteral 0x7f9b07025bf8 <col:19> 'int' 0

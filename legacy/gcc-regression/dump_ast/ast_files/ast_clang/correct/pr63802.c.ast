@@ -1,0 +1,87 @@
+TranslationUnitDecl 0x7f8fc40264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8fc4026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8fc4026740 '__int128'
+|-TypedefDecl 0x7f8fc4026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8fc4026760 'unsigned __int128'
+|-TypedefDecl 0x7f8fc4026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8fc4026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8fc4026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8fc4026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8fc4026dc0 'char *'
+|   `-BuiltinType 0x7f8fc4026560 'char'
+|-TypedefDecl 0x7f8fc40270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8fc4027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8fc4026ee0 'struct __va_list_tag'
+|     `-Record 0x7f8fc4026e58 '__va_list_tag'
+|-RecordDecl 0x7f8fc4027120 <c_files/pr63802.c:8:1, line:11:1> line:8:8 struct test_struct definition
+| |-AlignedAttr 0x7f8fc4826ac8 <line:11:18, col:32> aligned
+| | `-IntegerLiteral 0x7f8fc4826aa8 <col:30> 'int' 64
+| |-FieldDecl 0x7f8fc4826a00 <line:9:3, col:17> col:17 a 'unsigned long'
+| `-FieldDecl 0x7f8fc4826a60 <line:10:3, col:7> col:7 referenced b 'int'
+|-VarDecl 0x7f8fc4826b98 <line:13:1, col:11> col:6 used a 'char [200]'
+`-FunctionDecl 0x7f8fc4826c90 <line:15:1, line:21:1> line:15:5 main 'int ()'
+  `-CompoundStmt 0x7f8fc48279b8 <line:16:1, line:21:1>
+    |-DeclStmt 0x7f8fc4827388 <line:17:3, col:83>
+    | `-VarDecl 0x7f8fc4826d40 <col:3, col:82> col:16 x 'volatile int' cinit
+    |   `-ImplicitCastExpr 0x7f8fc4827370 <col:20, col:82> 'int' <LValueToRValue>
+    |     `-MemberExpr 0x7f8fc4827338 <col:20, col:82> 'int' lvalue ->b 0x7f8fc4826a60
+    |       `-ParenExpr 0x7f8fc4827318 <col:20, col:79> 'struct test_struct *'
+    |         `-CStyleCastExpr 0x7f8fc48272f0 <col:21, col:78> 'struct test_struct *' <IntegralToPointer>
+    |           `-ParenExpr 0x7f8fc48272d0 <col:42, col:78> 'unsigned long'
+    |             `-BinaryOperator 0x7f8fc48271c0 <line:6:24, line:17:76> 'unsigned long' '+'
+    |               |-ParenExpr 0x7f8fc4827168 <line:6:24, col:57> 'unsigned long'
+    |               | `-BinaryOperator 0x7f8fc4827140 <col:25, col:56> 'unsigned long' '+'
+    |               |   |-ParenExpr 0x7f8fc48270e8 <col:25, col:54> 'unsigned long'
+    |               |   | `-BinaryOperator 0x7f8fc48270c0 <col:26, line:5:51> 'unsigned long' '|'
+    |               |   |   |-ParenExpr 0x7f8fc4826ea0 <line:6:26, col:32> 'unsigned long'
+    |               |   |   | `-BinaryOperator 0x7f8fc4826e78 <col:27, col:31> 'unsigned long' '-'
+    |               |   |   |   |-ParenExpr 0x7f8fc4826e20 <col:27, col:29> 'unsigned long'
+    |               |   |   |   | `-CStyleCastExpr 0x7f8fc4826df8 <line:17:52, col:67> 'unsigned long' <PointerToIntegral>
+    |               |   |   |   |   `-ImplicitCastExpr 0x7f8fc4826de0 <col:67> 'char *' <ArrayToPointerDecay>
+    |               |   |   |   |     `-DeclRefExpr 0x7f8fc4826da0 <col:67> 'char [200]' lvalue Var 0x7f8fc4826b98 'a' 'char [200]'
+    |               |   |   |   `-ImplicitCastExpr 0x7f8fc4826e60 <line:6:31> 'unsigned long' <IntegralCast>
+    |               |   |   |     `-IntegerLiteral 0x7f8fc4826e40 <col:31> 'int' 1
+    |               |   |   `-ParenExpr 0x7f8fc48270a0 <line:5:28, col:51> 'typeof ((unsigned long)a)':'unsigned long'
+    |               |   |     `-CStyleCastExpr 0x7f8fc4827078 <col:29, col:50> 'typeof ((unsigned long)a)':'unsigned long' <IntegralCast>
+    |               |   |       `-ParenExpr 0x7f8fc4827058 <col:44, col:50> 'int'
+    |               |   |         `-BinaryOperator 0x7f8fc4826fc0 <col:45, col:49> 'int' '-'
+    |               |   |           |-ParenExpr 0x7f8fc4826f80 <col:45, col:47> 'int'
+    |               |   |           | `-IntegerLiteral 0x7f8fc4826f60 <line:17:70> 'int' 64
+    |               |   |           `-IntegerLiteral 0x7f8fc4826fa0 <line:5:49> 'int' 1
+    |               |   `-ImplicitCastExpr 0x7f8fc4827128 <line:6:56> 'unsigned long' <IntegralCast>
+    |               |     `-IntegerLiteral 0x7f8fc4827108 <col:56> 'int' 1
+    |               `-ImplicitCastExpr 0x7f8fc48271a8 <line:17:76> 'unsigned long' <IntegralCast>
+    |                 `-IntegerLiteral 0x7f8fc4827188 <col:76> 'int' 16
+    |-DeclStmt 0x7f8fc4827968 <line:18:3, col:83>
+    | `-VarDecl 0x7f8fc48273b8 <col:3, col:82> col:16 y 'volatile int' cinit
+    |   `-ImplicitCastExpr 0x7f8fc4827950 <col:20, col:82> 'int' <LValueToRValue>
+    |     `-MemberExpr 0x7f8fc4827918 <col:20, col:82> 'int' lvalue ->b 0x7f8fc4826a60
+    |       `-ParenExpr 0x7f8fc48278f8 <col:20, col:79> 'struct test_struct *'
+    |         `-CStyleCastExpr 0x7f8fc48278d0 <col:21, col:78> 'struct test_struct *' <IntegralToPointer>
+    |           `-ParenExpr 0x7f8fc48278b0 <col:42, col:78> 'unsigned long'
+    |             `-BinaryOperator 0x7f8fc4827830 <line:6:24, line:18:76> 'unsigned long' '+'
+    |               |-ParenExpr 0x7f8fc48277d8 <line:6:24, col:57> 'unsigned long'
+    |               | `-BinaryOperator 0x7f8fc48277b0 <col:25, col:56> 'unsigned long' '+'
+    |               |   |-ParenExpr 0x7f8fc4827758 <col:25, col:54> 'unsigned long'
+    |               |   | `-BinaryOperator 0x7f8fc4827730 <col:26, line:5:51> 'unsigned long' '|'
+    |               |   |   |-ParenExpr 0x7f8fc4827518 <line:6:26, col:32> 'unsigned long'
+    |               |   |   | `-BinaryOperator 0x7f8fc48274f0 <col:27, col:31> 'unsigned long' '-'
+    |               |   |   |   |-ParenExpr 0x7f8fc4827498 <col:27, col:29> 'unsigned long'
+    |               |   |   |   | `-CStyleCastExpr 0x7f8fc4827470 <line:18:52, col:67> 'unsigned long' <PointerToIntegral>
+    |               |   |   |   |   `-ImplicitCastExpr 0x7f8fc4827458 <col:67> 'char *' <ArrayToPointerDecay>
+    |               |   |   |   |     `-DeclRefExpr 0x7f8fc4827418 <col:67> 'char [200]' lvalue Var 0x7f8fc4826b98 'a' 'char [200]'
+    |               |   |   |   `-ImplicitCastExpr 0x7f8fc48274d8 <line:6:31> 'unsigned long' <IntegralCast>
+    |               |   |   |     `-IntegerLiteral 0x7f8fc48274b8 <col:31> 'int' 1
+    |               |   |   `-ParenExpr 0x7f8fc4827710 <line:5:28, col:51> 'typeof ((unsigned long)a)':'unsigned long'
+    |               |   |     `-CStyleCastExpr 0x7f8fc48276e8 <col:29, col:50> 'typeof ((unsigned long)a)':'unsigned long' <IntegralCast>
+    |               |   |       `-ParenExpr 0x7f8fc48276c8 <col:44, col:50> 'int'
+    |               |   |         `-BinaryOperator 0x7f8fc4827638 <col:45, col:49> 'int' '-'
+    |               |   |           |-ParenExpr 0x7f8fc48275f8 <col:45, col:47> 'int'
+    |               |   |           | `-IntegerLiteral 0x7f8fc48275d8 <line:18:70> 'int' 64
+    |               |   |           `-IntegerLiteral 0x7f8fc4827618 <line:5:49> 'int' 1
+    |               |   `-ImplicitCastExpr 0x7f8fc4827798 <line:6:56> 'unsigned long' <IntegralCast>
+    |               |     `-IntegerLiteral 0x7f8fc4827778 <col:56> 'int' 1
+    |               `-ImplicitCastExpr 0x7f8fc4827818 <line:18:76> 'unsigned long' <IntegralCast>
+    |                 `-IntegerLiteral 0x7f8fc48277f8 <col:76> 'int' 15
+    `-ReturnStmt 0x7f8fc48279a0 <line:20:3, col:10>
+      `-IntegerLiteral 0x7f8fc4827980 <col:10> 'int' 0

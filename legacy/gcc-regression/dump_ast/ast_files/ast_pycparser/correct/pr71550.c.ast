@@ -1,0 +1,94 @@
+FileAST: 
+  Decl: exit, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: exit, []
+        IdentifierType: ['void']
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+    Constant: int, 3
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['int']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['int']
+  Decl: f, [], [], []
+    TypeDecl: f, []
+      IdentifierType: ['int']
+  Decl: g, [], [], []
+    TypeDecl: g, []
+      IdentifierType: ['int']
+  Decl: h, [], [], []
+    TypeDecl: h, []
+      IdentifierType: ['int']
+  Decl: d, [], [], []
+    TypeDecl: d, []
+      IdentifierType: ['unsigned']
+  Decl: e, [], [], []
+    PtrDecl: []
+      TypeDecl: e, []
+        IdentifierType: ['char']
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      For: 
+        ID: a
+        UnaryOp: p--
+          ID: a
+        Compound: 
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+          If: 
+            BinaryOp: &&
+              ID: h
+              ID: i
+            FuncCall: 
+              ID: __builtin_printf
+              ExprList: 
+                Constant: string, "%d%d"
+                ID: c
+                ID: f
+          Assignment: =
+            ID: i
+            Constant: int, 0
+          For: 
+            BinaryOp: <
+              ID: i
+              Constant: int, 2
+            UnaryOp: p++
+              ID: i
+            If: 
+              ID: g
+              For: 
+                BinaryOp: <
+                  ID: d
+                  Constant: int, 10
+                UnaryOp: p++
+                  ID: d
+                Assignment: =
+                  ID: b
+                  UnaryOp: *
+                    ID: e
+          Assignment: =
+            ID: i
+            Constant: int, 0
+          For: 
+            BinaryOp: <
+              ID: i
+              Constant: int, 1
+            UnaryOp: p++
+              ID: i
+            EmptyStatement: 
+      FuncCall: 
+        ID: exit
+        ExprList: 
+          Constant: int, 0

@@ -1,0 +1,112 @@
+FileAST: 
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: var6, [], [], []
+        TypeDecl: var6, []
+          IdentifierType: ['int']
+        UnaryOp: -
+          Constant: int, 1267827473
+      DoWhile: 
+        BinaryOp: <=
+          ID: var6
+          UnaryOp: -
+            Constant: int, 1267827462
+        Compound: 
+          UnaryOp: ++
+            ID: var6
+          Decl: s1_115, [], [], []
+            ArrayDecl: []
+              TypeDecl: s1_115, []
+                IdentifierType: ['double']
+              Constant: int, 4
+          Decl: s2_108, [], [], []
+            ArrayDecl: []
+              TypeDecl: s2_108, []
+                IdentifierType: ['double']
+              Constant: int, 4
+          Decl: var8, [], [], []
+            TypeDecl: var8, []
+              IdentifierType: ['int']
+            UnaryOp: -
+              Constant: int, 161498264
+          DoWhile: 
+            BinaryOp: <=
+              ID: var8
+              UnaryOp: -
+                Constant: int, 161498254
+            Compound: 
+              UnaryOp: ++
+                ID: var8
+              Decl: var12, [], [], []
+                TypeDecl: var12, []
+                  IdentifierType: ['int']
+                Constant: int, 1260960076
+              For: 
+                BinaryOp: <=
+                  ID: var12
+                  Constant: int, 1260960080
+                UnaryOp: ++
+                  ID: var12
+                Compound: 
+                  Decl: var13, [], [], []
+                    TypeDecl: var13, []
+                      IdentifierType: ['int']
+                    Constant: int, 1960990937
+                  DoWhile: 
+                    BinaryOp: <=
+                      ID: var13
+                      Constant: int, 1960990946
+                    Compound: 
+                      UnaryOp: ++
+                        ID: var13
+                      Decl: var14, [], [], []
+                        TypeDecl: var14, []
+                          IdentifierType: ['int']
+                        Constant: int, 2128638723
+                      For: 
+                        BinaryOp: <=
+                          ID: var14
+                          Constant: int, 2128638728
+                        UnaryOp: ++
+                          ID: var14
+                        Compound: 
+                          Decl: var22, [], [], []
+                            TypeDecl: var22, []
+                              IdentifierType: ['int']
+                            UnaryOp: -
+                              Constant: int, 1141190839
+                          DoWhile: 
+                            BinaryOp: <=
+                              ID: var22
+                              UnaryOp: -
+                                Constant: int, 1141190829
+                            Compound: 
+                              UnaryOp: ++
+                                ID: var22
+                              If: 
+                                BinaryOp: >
+                                  ID: s2_108
+                                  ID: s1_115
+                                Compound: 
+                                  Decl: var23, [], [], []
+                                    TypeDecl: var23, []
+                                      IdentifierType: ['int']
+                                    UnaryOp: -
+                                      Constant: int, 890798748
+                                  DoWhile: 
+                                    BinaryOp: <=
+                                      ID: var23
+                                      UnaryOp: -
+                                        Constant: int, 890798746
+                                    Compound: 
+                                      UnaryOp: ++
+                                        ID: var23
+                                      Decl: e_119, [], [], []
+                                        ArrayDecl: []
+                                          TypeDecl: e_119, []
+                                            IdentifierType: ['long', 'long']
+                                          Constant: int, 4

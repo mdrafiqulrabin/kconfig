@@ -1,5 +1,0 @@
-pr77822-1.c: In function ‘m_fn1’:
-pr77822-1.c:16:3: error: ‘for’ loop initial declarations are only allowed in C99 mode
-   for (int e = 0; e < d; e++) {
-   ^
-pr77822-1.c:16:3: note: use option -std=c99 or -std=gnu99 to compile your code

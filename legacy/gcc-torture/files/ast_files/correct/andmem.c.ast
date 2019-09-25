@@ -1,0 +1,130 @@
+FileAST: 
+  FuncDef: 
+    Decl: p1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: p
+        TypeDecl: p1, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: &=
+        UnaryOp: *
+          ID: p
+        UnaryOp: ~
+          Constant: int, 0xff
+    Decl: p, [], [], []
+      PtrDecl: []
+        TypeDecl: p, []
+          IdentifierType: ['int']
+  FuncDef: 
+    Decl: p2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: p
+        TypeDecl: p2, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: &=
+        UnaryOp: *
+          ID: p
+        UnaryOp: ~
+          Constant: int, 0xff00
+    Decl: p, [], [], []
+      PtrDecl: []
+        TypeDecl: p, []
+          IdentifierType: ['int']
+  FuncDef: 
+    Decl: p3, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: p
+        TypeDecl: p3, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: &=
+        UnaryOp: *
+          ID: p
+        UnaryOp: ~
+          Constant: int, 0xffff0000
+    Decl: p, [], [], []
+      PtrDecl: []
+        TypeDecl: p, []
+          IdentifierType: ['int']
+  FuncDef: 
+    Decl: p4, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: p
+        TypeDecl: p4, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: &=
+        UnaryOp: *
+          ID: p
+        UnaryOp: ~
+          Constant: int, 0xffff
+    Decl: p, [], [], []
+      PtrDecl: []
+        TypeDecl: p, []
+          IdentifierType: ['int']
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['int']
+      Assignment: =
+        ID: a
+        Constant: int, 0x12345678
+      FuncCall: 
+        ID: p1
+        ExprList: 
+          UnaryOp: &
+            ID: a
+      FuncCall: 
+        ID: printf
+        ExprList: 
+          Constant: string, "%x\n"
+          ID: a
+      Assignment: =
+        ID: a
+        Constant: int, 0x12345678
+      FuncCall: 
+        ID: p2
+        ExprList: 
+          UnaryOp: &
+            ID: a
+      FuncCall: 
+        ID: printf
+        ExprList: 
+          Constant: string, "%x\n"
+          ID: a
+      Assignment: =
+        ID: a
+        Constant: int, 0x12345678
+      FuncCall: 
+        ID: p3
+        ExprList: 
+          UnaryOp: &
+            ID: a
+      FuncCall: 
+        ID: printf
+        ExprList: 
+          Constant: string, "%x\n"
+          ID: a
+      Assignment: =
+        ID: a
+        Constant: int, 0x12345678
+      FuncCall: 
+        ID: p4
+        ExprList: 
+          UnaryOp: &
+            ID: a
+      FuncCall: 
+        ID: printf
+        ExprList: 
+          Constant: string, "%x\n"
+          ID: a

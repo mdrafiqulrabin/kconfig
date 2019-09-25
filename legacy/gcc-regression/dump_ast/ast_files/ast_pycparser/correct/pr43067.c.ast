@@ -1,0 +1,83 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      Union: None
+        Decl: i32, [], [], []
+          ArrayDecl: []
+            TypeDecl: i32, []
+              IdentifierType: ['int']
+            Constant: int, 10240
+        Decl: i64, [], [], []
+          ArrayDecl: []
+            TypeDecl: i64, []
+              IdentifierType: ['long', 'long']
+            Constant: int, 10240
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      Union: None
+        Decl: i32, [], [], []
+          ArrayDecl: []
+            TypeDecl: i32, []
+              IdentifierType: ['int']
+            Constant: int, 10240
+        Decl: i64, [], [], []
+          ArrayDecl: []
+            TypeDecl: i64, []
+              IdentifierType: ['long', 'long']
+            Constant: int, 10240
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      Union: None
+        Decl: i32, [], [], []
+          ArrayDecl: []
+            TypeDecl: i32, []
+              IdentifierType: ['int']
+            Constant: int, 10240
+        Decl: i64, [], [], []
+          ArrayDecl: []
+            TypeDecl: i64, []
+              IdentifierType: ['long', 'long']
+            Constant: int, 10240
+  FuncDef: 
+    Decl: imul32_to_64, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: imul32_to_64, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 10240
+        UnaryOp: p++
+          ID: i
+        Assignment: =
+          ArrayRef: 
+            StructRef: .
+              ID: a
+              ID: i64
+            ID: i
+          BinaryOp: *
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['long', 'long']
+              ArrayRef: 
+                StructRef: .
+                  ID: b
+                  ID: i32
+                ID: i
+            ArrayRef: 
+              StructRef: .
+                ID: c
+                ID: i32
+              ID: i

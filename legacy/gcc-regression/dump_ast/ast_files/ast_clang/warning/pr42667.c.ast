@@ -1,0 +1,49 @@
+c_files/pr42667.c:4:12: warning: incompatible redeclaration of library function 'strlen' [-Wincompatible-library-redeclaration]
+extern int strlen(const char *);
+           ^
+c_files/pr42667.c:4:12: note: 'strlen' is a builtin with type 'unsigned long (const char *)'
+1 warning generated.
+TranslationUnitDecl 0x7f920a8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f920a826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f920a826740 '__int128'
+|-TypedefDecl 0x7f920a826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f920a826760 'unsigned __int128'
+|-TypedefDecl 0x7f920a826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f920a826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f920a826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f920a826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f920a826dc0 'char *'
+|   `-BuiltinType 0x7f920a826560 'char'
+|-TypedefDecl 0x7f920a8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f920a827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f920a826ee0 'struct __va_list_tag'
+|     `-Record 0x7f920a826e58 '__va_list_tag'
+|-FunctionDecl 0x7f920b800068 <c_files/pr42667.c:4:12> col:12 implicit used strlen 'unsigned long (const char *)' extern
+| `-ParmVarDecl 0x7f920b800100 <<invalid sloc>> <invalid sloc> 'const char *'
+|-FunctionDecl 0x7f920b800168 prev 0x7f920b800068 <col:1, col:31> col:12 used strlen 'int (const char *)' extern
+| `-ParmVarDecl 0x7f920a827138 <col:19, col:30> col:31 'const char *'
+|-FunctionDecl 0x7f920b8006a0 <line:5:1, col:27> col:6 used WriteTextDots 'void (int)'
+| `-ParmVarDecl 0x7f920b8005d8 <col:20, col:24> col:24 len 'int'
+`-FunctionDecl 0x7f920b800860 <line:7:1, line:12:1> line:7:6 OnDisplay 'void (char *)'
+  |-ParmVarDecl 0x7f920b800798 <col:16, col:23> col:23 used string 'char *'
+  `-CompoundStmt 0x7f920b800c00 <line:8:1, line:12:1>
+    |-IfStmt 0x7f920b800a38 <line:9:3, line:10:14>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-UnaryOperator 0x7f920b800940 <line:9:7, col:8> 'int' prefix '!'
+    | | `-ImplicitCastExpr 0x7f920b800928 <col:8> 'char *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7f920b800900 <col:8> 'char *' lvalue ParmVar 0x7f920b800798 'string' 'char *'
+    | |-BinaryOperator 0x7f920b800a10 <line:10:5, col:14> 'char *' '='
+    | | |-DeclRefExpr 0x7f920b800960 <col:5> 'char *' lvalue ParmVar 0x7f920b800798 'string' 'char *'
+    | | `-ImplicitCastExpr 0x7f920b8009f8 <col:14> 'char *' <ArrayToPointerDecay>
+    | |   `-StringLiteral 0x7f920b8009c8 <col:14> 'char [7]' lvalue "(none)"
+    | `-<<<NULL>>>
+    `-CallExpr 0x7f920b800bd0 <line:11:3, col:31> 'void'
+      |-ImplicitCastExpr 0x7f920b800bb8 <col:3> 'void (*)(int)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7f920b800a70 <col:3> 'void (int)' Function 0x7f920b8006a0 'WriteTextDots' 'void (int)'
+      `-CallExpr 0x7f920b800b30 <col:17, col:30> 'int'
+        |-ImplicitCastExpr 0x7f920b800b18 <col:17> 'int (*)(const char *)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7f920b800a98 <col:17> 'int (const char *)' Function 0x7f920b800168 'strlen' 'int (const char *)'
+        `-ImplicitCastExpr 0x7f920b800b78 <col:24> 'const char *' <BitCast>
+          `-ImplicitCastExpr 0x7f920b800b60 <col:24> 'char *' <LValueToRValue>
+            `-DeclRefExpr 0x7f920b800ac0 <col:24> 'char *' lvalue ParmVar 0x7f920b800798 'string' 'char *'

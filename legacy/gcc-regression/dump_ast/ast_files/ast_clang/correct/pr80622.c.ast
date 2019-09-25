@@ -1,0 +1,201 @@
+TranslationUnitDecl 0x7fa8ec8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa8ec826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa8ec826740 '__int128'
+|-TypedefDecl 0x7fa8ec826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa8ec826760 'unsigned __int128'
+|-TypedefDecl 0x7fa8ec826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa8ec826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa8ec826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa8ec826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa8ec826dc0 'char *'
+|   `-BuiltinType 0x7fa8ec826560 'char'
+|-TypedefDecl 0x7fa8ec8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa8ec827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa8ec826ee0 'struct __va_list_tag'
+|     `-Record 0x7fa8ec826e58 '__va_list_tag'
+|-RecordDecl 0x7fa8ec827120 <c_files/pr80622.c:4:1, col:42> col:8 struct S definition
+| |-FieldDecl 0x7fa8ed025a00 <col:12, col:16> col:16 d 'int'
+| |-FieldDecl 0x7fa8ed025a58 <col:19, col:24> col:24 referenced e 'char'
+| |-FieldDecl 0x7fa8ed025ab8 <col:27, col:31> col:31 f 'int'
+| `-FieldDecl 0x7fa8ed025b10 <col:34, col:39> col:39 referenced g 'char'
+|-VarDecl 0x7fa8ed025bb0 <col:1, col:44> col:44 used a 'struct S':'struct S'
+|-VarDecl 0x7fa8ed025c78 <line:5:1, col:6> col:6 used c 'char'
+|-FunctionDecl 0x7fa8ed025d30 <line:7:1, line:19:1> line:8:1 main 'int ()'
+| `-CompoundStmt 0x7fa8ed0283c8 <line:9:1, line:19:1>
+|   |-DeclStmt 0x7fa8ed027d28 <line:10:3, line:13:73>
+|   | `-VarDecl 0x7fa8ed025f68 <line:10:3, line:13:72> line:10:12 used b 'struct S [17][1]' cinit
+|   |   `-InitListExpr 0x7fa8ed026c20 <col:21, line:13:72> 'struct S [17][1]'
+|   |     |-InitListExpr 0x7fa8ed026c60 <line:10:22, col:31> 'struct S [1]'
+|   |     | `-InitListExpr 0x7fa8ed026cb0 <col:22, col:31> 'struct S':'struct S'
+|   |     |   |-IntegerLiteral 0x7fa8ed025fc8 <col:22> 'int' 3
+|   |     |   |-ImplicitCastExpr 0x7fa8ed026d10 <col:25> 'char' <IntegralCast>
+|   |     |   | `-IntegerLiteral 0x7fa8ed025fe8 <col:25> 'int' 0
+|   |     |   |-IntegerLiteral 0x7fa8ed026008 <col:28> 'int' 3
+|   |     |   `-ImplicitCastExpr 0x7fa8ed026d28 <col:31> 'char' <IntegralCast>
+|   |     |     `-IntegerLiteral 0x7fa8ed026028 <col:31> 'int' 4
+|   |     |-InitListExpr 0x7fa8ed026d40 <col:34, col:43> 'struct S [1]'
+|   |     | `-InitListExpr 0x7fa8ed026d98 <col:34, col:43> 'struct S':'struct S'
+|   |     |   |-IntegerLiteral 0x7fa8ed026048 <col:34> 'int' 3
+|   |     |   |-ImplicitCastExpr 0x7fa8ed026df8 <col:37> 'char' <IntegralCast>
+|   |     |   | `-IntegerLiteral 0x7fa8ed026068 <col:37> 'int' 0
+|   |     |   |-IntegerLiteral 0x7fa8ed026088 <col:40> 'int' 3
+|   |     |   `-ImplicitCastExpr 0x7fa8ed026e10 <col:43> 'char' <IntegralCast>
+|   |     |     `-IntegerLiteral 0x7fa8ed0260a8 <col:43> 'int' 4
+|   |     |-InitListExpr 0x7fa8ed026e28 <col:46, col:55> 'struct S [1]'
+|   |     | `-InitListExpr 0x7fa8ed026e90 <col:46, col:55> 'struct S':'struct S'
+|   |     |   |-IntegerLiteral 0x7fa8ed0260c8 <col:46> 'int' 3
+|   |     |   |-ImplicitCastExpr 0x7fa8ed026ef0 <col:49> 'char' <IntegralCast>
+|   |     |   | `-IntegerLiteral 0x7fa8ed0260e8 <col:49> 'int' 0
+|   |     |   |-IntegerLiteral 0x7fa8ed026108 <col:52> 'int' 3
+|   |     |   `-ImplicitCastExpr 0x7fa8ed026f08 <col:55> 'char' <IntegralCast>
+|   |     |     `-IntegerLiteral 0x7fa8ed026128 <col:55> 'int' 4
+|   |     |-InitListExpr 0x7fa8ed026f20 <col:58, col:67> 'struct S [1]'
+|   |     | `-InitListExpr 0x7fa8ed026f68 <col:58, col:67> 'struct S':'struct S'
+|   |     |   |-IntegerLiteral 0x7fa8ed026148 <col:58> 'int' 3
+|   |     |   |-ImplicitCastExpr 0x7fa8ed026fc8 <col:61> 'char' <IntegralCast>
+|   |     |   | `-IntegerLiteral 0x7fa8ed026168 <col:61> 'int' 0
+|   |     |   |-IntegerLiteral 0x7fa8ed026188 <col:64> 'int' 3
+|   |     |   `-ImplicitCastExpr 0x7fa8ed026fe0 <col:67> 'char' <IntegralCast>
+|   |     |     `-IntegerLiteral 0x7fa8ed0261a8 <col:67> 'int' 4
+|   |     |-InitListExpr 0x7fa8ed026ff8 <col:70, line:11:29> 'struct S [1]'
+|   |     | `-InitListExpr 0x7fa8ed027080 <line:10:70, line:11:29> 'struct S':'struct S'
+|   |     |   |-IntegerLiteral 0x7fa8ed0261c8 <line:10:70> 'int' 3
+|   |     |   |-ImplicitCastExpr 0x7fa8ed0270e0 <line:11:23> 'char' <IntegralCast>
+|   |     |   | `-IntegerLiteral 0x7fa8ed0261e8 <col:23> 'int' 0
+|   |     |   |-IntegerLiteral 0x7fa8ed026208 <col:26> 'int' 3
+|   |     |   `-ImplicitCastExpr 0x7fa8ed0270f8 <col:29> 'char' <IntegralCast>
+|   |     |     `-IntegerLiteral 0x7fa8ed026228 <col:29> 'int' 4
+|   |     |-InitListExpr 0x7fa8ed027110 <col:32, col:41> 'struct S [1]'
+|   |     | `-InitListExpr 0x7fa8ed027158 <col:32, col:41> 'struct S':'struct S'
+|   |     |   |-IntegerLiteral 0x7fa8ed026248 <col:32> 'int' 3
+|   |     |   |-ImplicitCastExpr 0x7fa8ed0271b8 <col:35> 'char' <IntegralCast>
+|   |     |   | `-IntegerLiteral 0x7fa8ed026268 <col:35> 'int' 0
+|   |     |   |-IntegerLiteral 0x7fa8ed026288 <col:38> 'int' 3
+|   |     |   `-ImplicitCastExpr 0x7fa8ed0271d0 <col:41> 'char' <IntegralCast>
+|   |     |     `-IntegerLiteral 0x7fa8ed0262a8 <col:41> 'int' 4
+|   |     |-InitListExpr 0x7fa8ed0271e8 <col:44, col:53> 'struct S [1]'
+|   |     | `-InitListExpr 0x7fa8ed027230 <col:44, col:53> 'struct S':'struct S'
+|   |     |   |-IntegerLiteral 0x7fa8ed0262c8 <col:44> 'int' 3
+|   |     |   |-ImplicitCastExpr 0x7fa8ed027290 <col:47> 'char' <IntegralCast>
+|   |     |   | `-IntegerLiteral 0x7fa8ed0262e8 <col:47> 'int' 0
+|   |     |   |-IntegerLiteral 0x7fa8ed026308 <col:50> 'int' 3
+|   |     |   `-ImplicitCastExpr 0x7fa8ed0272a8 <col:53> 'char' <IntegralCast>
+|   |     |     `-IntegerLiteral 0x7fa8ed026328 <col:53> 'int' 4
+|   |     |-InitListExpr 0x7fa8ed0272c0 <col:56, col:65> 'struct S [1]'
+|   |     | `-InitListExpr 0x7fa8ed027308 <col:56, col:65> 'struct S':'struct S'
+|   |     |   |-IntegerLiteral 0x7fa8ed026348 <col:56> 'int' 3
+|   |     |   |-ImplicitCastExpr 0x7fa8ed027368 <col:59> 'char' <IntegralCast>
+|   |     |   | `-IntegerLiteral 0x7fa8ed026368 <col:59> 'int' 0
+|   |     |   |-IntegerLiteral 0x7fa8ed026388 <col:62> 'int' 3
+|   |     |   `-ImplicitCastExpr 0x7fa8ed027380 <col:65> 'char' <IntegralCast>
+|   |     |     `-IntegerLiteral 0x7fa8ed0263a8 <col:65> 'int' 4
+|   |     |-InitListExpr 0x7fa8ed027398 <col:68, line:12:26> 'struct S [1]'
+|   |     | `-InitListExpr 0x7fa8ed027460 <line:11:68, line:12:26> 'struct S':'struct S'
+|   |     |   |-IntegerLiteral 0x7fa8ed0263c8 <line:11:68> 'int' 3
+|   |     |   |-ImplicitCastExpr 0x7fa8ed0274c0 <col:71> 'char' <IntegralCast>
+|   |     |   | `-IntegerLiteral 0x7fa8ed0263e8 <col:71> 'int' 0
+|   |     |   |-IntegerLiteral 0x7fa8ed026408 <line:12:23> 'int' 3
+|   |     |   `-ImplicitCastExpr 0x7fa8ed0274d8 <col:26> 'char' <IntegralCast>
+|   |     |     `-IntegerLiteral 0x7fa8ed026428 <col:26> 'int' 4
+|   |     |-InitListExpr 0x7fa8ed0274f0 <col:29, col:38> 'struct S [1]'
+|   |     | `-InitListExpr 0x7fa8ed027538 <col:29, col:38> 'struct S':'struct S'
+|   |     |   |-IntegerLiteral 0x7fa8ed026448 <col:29> 'int' 3
+|   |     |   |-ImplicitCastExpr 0x7fa8ed027598 <col:32> 'char' <IntegralCast>
+|   |     |   | `-IntegerLiteral 0x7fa8ed026468 <col:32> 'int' 4
+|   |     |   |-IntegerLiteral 0x7fa8ed026488 <col:35> 'int' 7
+|   |     |   `-ImplicitCastExpr 0x7fa8ed0275b0 <col:38> 'char' <IntegralCast>
+|   |     |     `-IntegerLiteral 0x7fa8ed0264a8 <col:38> 'int' 7
+|   |     |-InitListExpr 0x7fa8ed0275c8 <col:41, col:50> 'struct S [1]'
+|   |     | `-InitListExpr 0x7fa8ed027610 <col:41, col:50> 'struct S':'struct S'
+|   |     |   |-IntegerLiteral 0x7fa8ed0264c8 <col:41> 'int' 3
+|   |     |   |-ImplicitCastExpr 0x7fa8ed027670 <col:44> 'char' <IntegralCast>
+|   |     |   | `-IntegerLiteral 0x7fa8ed0264e8 <col:44> 'int' 5
+|   |     |   |-IntegerLiteral 0x7fa8ed026508 <col:47> 'int' 0
+|   |     |   `-ImplicitCastExpr 0x7fa8ed027688 <col:50> 'char' <IntegralCast>
+|   |     |     `-IntegerLiteral 0x7fa8ed026528 <col:50> 'int' 3
+|   |     |-InitListExpr 0x7fa8ed0276a0 <col:53, col:62> 'struct S [1]'
+|   |     | `-InitListExpr 0x7fa8ed0276e8 <col:53, col:62> 'struct S':'struct S'
+|   |     |   |-IntegerLiteral 0x7fa8ed026548 <col:53> 'int' 4
+|   |     |   |-ImplicitCastExpr 0x7fa8ed027748 <col:56> 'char' <IntegralCast>
+|   |     |   | `-IntegerLiteral 0x7fa8ed026568 <col:56> 'int' 7
+|   |     |   |-IntegerLiteral 0x7fa8ed026588 <col:59> 'int' 7
+|   |     |   `-ImplicitCastExpr 0x7fa8ed027760 <col:62> 'char' <IntegralCast>
+|   |     |     `-IntegerLiteral 0x7fa8ed0265a8 <col:62> 'int' 3
+|   |     |-InitListExpr 0x7fa8ed027778 <col:65, line:13:23> 'struct S [1]'
+|   |     | `-InitListExpr 0x7fa8ed0277c0 <line:12:65, line:13:23> 'struct S':'struct S'
+|   |     |   |-IntegerLiteral 0x7fa8ed0265c8 <line:12:65> 'int' 5
+|   |     |   |-ImplicitCastExpr 0x7fa8ed027820 <col:68> 'char' <IntegralCast>
+|   |     |   | `-IntegerLiteral 0x7fa8ed0265e8 <col:68> 'int' 0
+|   |     |   |-IntegerLiteral 0x7fa8ed026608 <col:71> 'int' 3
+|   |     |   `-ImplicitCastExpr 0x7fa8ed027838 <line:13:23> 'char' <IntegralCast>
+|   |     |     `-IntegerLiteral 0x7fa8ed026628 <col:23> 'int' 4
+|   |     |-InitListExpr 0x7fa8ed027850 <col:26, col:35> 'struct S [1]'
+|   |     | `-InitListExpr 0x7fa8ed027898 <col:26, col:35> 'struct S':'struct S'
+|   |     |   |-IntegerLiteral 0x7fa8ed026648 <col:26> 'int' 3
+|   |     |   |-ImplicitCastExpr 0x7fa8ed0278f8 <col:29> 'char' <IntegralCast>
+|   |     |   | `-IntegerLiteral 0x7fa8ed026668 <col:29> 'int' 4
+|   |     |   |-IntegerLiteral 0x7fa8ed026688 <col:32> 'int' 7
+|   |     |   `-ImplicitCastExpr 0x7fa8ed027910 <col:35> 'char' <IntegralCast>
+|   |     |     `-IntegerLiteral 0x7fa8ed0266a8 <col:35> 'int' 7
+|   |     |-InitListExpr 0x7fa8ed027928 <col:38, col:47> 'struct S [1]'
+|   |     | `-InitListExpr 0x7fa8ed027970 <col:38, col:47> 'struct S':'struct S'
+|   |     |   |-IntegerLiteral 0x7fa8ed0266c8 <col:38> 'int' 3
+|   |     |   |-ImplicitCastExpr 0x7fa8ed0279d0 <col:41> 'char' <IntegralCast>
+|   |     |   | `-IntegerLiteral 0x7fa8ed0266e8 <col:41> 'int' 5
+|   |     |   |-IntegerLiteral 0x7fa8ed026708 <col:44> 'int' 0
+|   |     |   `-ImplicitCastExpr 0x7fa8ed0279e8 <col:47> 'char' <IntegralCast>
+|   |     |     `-IntegerLiteral 0x7fa8ed026728 <col:47> 'int' 3
+|   |     |-InitListExpr 0x7fa8ed027a00 <col:50, col:59> 'struct S [1]'
+|   |     | `-InitListExpr 0x7fa8ed027a48 <col:50, col:59> 'struct S':'struct S'
+|   |     |   |-IntegerLiteral 0x7fa8ed026748 <col:50> 'int' 4
+|   |     |   |-ImplicitCastExpr 0x7fa8ed027aa8 <col:53> 'char' <IntegralCast>
+|   |     |   | `-IntegerLiteral 0x7fa8ed026768 <col:53> 'int' 7
+|   |     |   |-IntegerLiteral 0x7fa8ed026788 <col:56> 'int' 7
+|   |     |   `-ImplicitCastExpr 0x7fa8ed027ac0 <col:59> 'char' <IntegralCast>
+|   |     |     `-IntegerLiteral 0x7fa8ed0267a8 <col:59> 'int' 3
+|   |     `-InitListExpr 0x7fa8ed027ad8 <col:62, col:71> 'struct S [1]'
+|   |       `-InitListExpr 0x7fa8ed027c20 <col:62, col:71> 'struct S':'struct S'
+|   |         |-IntegerLiteral 0x7fa8ed0267c8 <col:62> 'int' 5
+|   |         |-ImplicitCastExpr 0x7fa8ed027c80 <col:65> 'char' <IntegralCast>
+|   |         | `-IntegerLiteral 0x7fa8ed0267e8 <col:65> 'int' 0
+|   |         |-IntegerLiteral 0x7fa8ed026808 <col:68> 'int' 3
+|   |         `-ImplicitCastExpr 0x7fa8ed027c98 <col:71> 'char' <IntegralCast>
+|   |           `-IntegerLiteral 0x7fa8ed026828 <col:71> 'int' 4
+|   |-BinaryOperator 0x7fa8ed027f20 <line:14:3, col:13> 'struct S':'struct S' '='
+|   | |-DeclRefExpr 0x7fa8ed027d40 <col:3> 'struct S':'struct S' lvalue Var 0x7fa8ed025bb0 'a' 'struct S':'struct S'
+|   | `-ImplicitCastExpr 0x7fa8ed027f08 <col:7, col:13> 'struct S':'struct S' <LValueToRValue>
+|   |   `-ArraySubscriptExpr 0x7fa8ed027ee0 <col:7, col:13> 'struct S':'struct S' lvalue
+|   |     |-ImplicitCastExpr 0x7fa8ed027ec8 <col:7, col:10> 'struct S *' <ArrayToPointerDecay>
+|   |     | `-ArraySubscriptExpr 0x7fa8ed027e20 <col:7, col:10> 'struct S [1]' lvalue
+|   |     |   |-ImplicitCastExpr 0x7fa8ed027e08 <col:7> 'struct S (*)[1]' <ArrayToPointerDecay>
+|   |     |   | `-DeclRefExpr 0x7fa8ed027d68 <col:7> 'struct S [17][1]' lvalue Var 0x7fa8ed025f68 'b' 'struct S [17][1]'
+|   |     |   `-IntegerLiteral 0x7fa8ed027d90 <col:9> 'int' 4
+|   |     `-IntegerLiteral 0x7fa8ed027e48 <col:12> 'int' 0
+|   |-BinaryOperator 0x7fa8ed0280a8 <line:15:3, col:15> 'char' '='
+|   | |-DeclRefExpr 0x7fa8ed027f48 <col:3> 'char' lvalue Var 0x7fa8ed025c78 'c' 'char'
+|   | `-ImplicitCastExpr 0x7fa8ed028090 <col:7, col:15> 'char' <LValueToRValue>
+|   |   `-MemberExpr 0x7fa8ed028058 <col:7, col:15> 'char' lvalue .e 0x7fa8ed025a58
+|   |     `-ArraySubscriptExpr 0x7fa8ed028030 <col:7, col:13> 'struct S':'struct S' lvalue
+|   |       |-ImplicitCastExpr 0x7fa8ed028018 <col:7, col:10> 'struct S *' <ArrayToPointerDecay>
+|   |       | `-ArraySubscriptExpr 0x7fa8ed027fd0 <col:7, col:10> 'struct S [1]' lvalue
+|   |       |   |-ImplicitCastExpr 0x7fa8ed027fb8 <col:7> 'struct S (*)[1]' <ArrayToPointerDecay>
+|   |       |   | `-DeclRefExpr 0x7fa8ed027f70 <col:7> 'struct S [17][1]' lvalue Var 0x7fa8ed025f68 'b' 'struct S [17][1]'
+|   |       |   `-IntegerLiteral 0x7fa8ed027f98 <col:9> 'int' 4
+|   |       `-IntegerLiteral 0x7fa8ed027ff8 <col:12> 'int' 0
+|   |-IfStmt 0x7fa8ed028358 <line:16:3, line:17:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fa8ed028180 <line:16:7, col:14> 'int' '!='
+|   | | |-ImplicitCastExpr 0x7fa8ed028168 <col:7, col:9> 'int' <IntegralCast>
+|   | | | `-ImplicitCastExpr 0x7fa8ed028150 <col:7, col:9> 'char' <LValueToRValue>
+|   | | |   `-MemberExpr 0x7fa8ed0280f8 <col:7, col:9> 'char' lvalue .g 0x7fa8ed025b10
+|   | | |     `-DeclRefExpr 0x7fa8ed0280d0 <col:7> 'struct S':'struct S' lvalue Var 0x7fa8ed025bb0 'a' 'struct S':'struct S'
+|   | | `-IntegerLiteral 0x7fa8ed028130 <col:14> 'int' 4
+|   | |-CallExpr 0x7fa8ed028330 <line:17:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fa8ed028318 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fa8ed0282c0 <col:5> '<builtin fn type>' Function 0x7fa8ed0281e0 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fa8ed0283b0 <line:18:3, col:10>
+|     `-IntegerLiteral 0x7fa8ed028390 <col:10> 'int' 0
+`-FunctionDecl 0x7fa8ed0281e0 <line:17:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7fa8ed028278 <col:5> Implicit

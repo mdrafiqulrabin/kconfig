@@ -1,0 +1,32 @@
+pr85511.c: In function ‘bar’:
+pr85511.c:14:3: internal compiler error: in copy_to_mode_reg, at explow.c:617
+   __builtin_ia32_writeeflags_u32 (x);   
+   ^
+0xa7713e copy_to_mode_reg(machine_mode, rtx_def*)
+	../../gcc/explow.c:617
+0x167eb7c ix86_expand_builtin
+	../../gcc/config/i386/i386.c:39690
+0x86af13 expand_builtin(tree_node*, rtx_def*, rtx_def*, machine_mode, int)
+	../../gcc/builtins.c:5979
+0xac8841 expand_expr_real_1(tree_node*, rtx_def*, machine_mode, expand_modifier, rtx_def**, bool)
+	../../gcc/expr.c:10489
+0xabab83 expand_expr_real(tree_node*, rtx_def*, machine_mode, expand_modifier, rtx_def**, bool)
+	../../gcc/expr.c:8018
+0x8b3591 expand_expr
+	../../gcc/expr.h:254
+0x8c14c6 expand_call_stmt
+	../../gcc/cfgexpand.c:2399
+0x8c58b2 expand_gimple_stmt_1
+	../../gcc/cfgexpand.c:3358
+0x8c642f expand_gimple_stmt
+	../../gcc/cfgexpand.c:3522
+0x8c6678 expand_gimple_tailcall
+	../../gcc/cfgexpand.c:3569
+0x8d038e expand_gimple_basic_block
+	../../gcc/cfgexpand.c:5511
+0x8d3291 execute
+	../../gcc/cfgexpand.c:6152
+Please submit a full bug report,
+with preprocessed source if appropriate.
+Please include the complete backtrace with any bug report.
+See <http://gcc.gnu.org/bugs.html> for instructions.

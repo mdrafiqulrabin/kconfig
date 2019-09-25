@@ -1,0 +1,113 @@
+FileAST: 
+  Decl: abort, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  Decl: None, [], [], []
+    Struct: a
+      Decl: bits, [], [], []
+        TypeDecl: bits, []
+          IdentifierType: ['unsigned', 'int']
+        Constant: int, 1
+      Decl: val, [], [], []
+        TypeDecl: val, []
+          IdentifierType: ['signed', 'long']
+        BinaryOp: -
+          BinaryOp: *
+            UnaryOp: sizeof
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['long']
+            Constant: int, 8
+          Constant: int, 1
+  FuncDef: 
+    Decl: Fnegate, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              Struct: a
+        TypeDecl: Fnegate, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: &&
+          BinaryOp: <=
+            UnaryOp: -
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['long']
+                StructRef: .
+                  ID: b
+                  ID: val
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['long']
+              BinaryOp: -
+                BinaryOp: <<
+                  Constant: int, 1UL
+                  BinaryOp: -
+                    BinaryOp: *
+                      UnaryOp: sizeof
+                        Typename: None, []
+                          TypeDecl: None, []
+                            IdentifierType: ['long']
+                      Constant: int, 8
+                    Constant: int, 2
+                Constant: int, 1UL
+          BinaryOp: >=
+            UnaryOp: -
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['long']
+                StructRef: .
+                  ID: b
+                  ID: val
+            BinaryOp: -
+              UnaryOp: -
+                Cast: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['long']
+                  BinaryOp: -
+                    BinaryOp: <<
+                      Constant: int, 1UL
+                      BinaryOp: -
+                        BinaryOp: *
+                          UnaryOp: sizeof
+                            Typename: None, []
+                              TypeDecl: None, []
+                                IdentifierType: ['long']
+                          Constant: int, 8
+                        Constant: int, 2
+                    Constant: int, 1UL
+              Constant: int, 1
+        Return: 
+          Constant: int, 0
+      FuncCall: 
+        ID: abort
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          Struct: a
+        InitList: 
+          Constant: int, 1
+          Constant: int, 1
+      FuncCall: 
+        ID: Fnegate
+        ExprList: 
+          ID: b
+      Return: 
+        Constant: int, 0

@@ -1,0 +1,70 @@
+TranslationUnitDecl 0x7f8bbd8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8bbd826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8bbd826740 '__int128'
+|-TypedefDecl 0x7f8bbd826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8bbd826760 'unsigned __int128'
+|-TypedefDecl 0x7f8bbd826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8bbd826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8bbd826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8bbd826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8bbd826dc0 'char *'
+|   `-BuiltinType 0x7f8bbd826560 'char'
+|-TypedefDecl 0x7f8bbd8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8bbd827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8bbd826ee0 'struct __va_list_tag'
+|     `-Record 0x7f8bbd826e58 '__va_list_tag'
+|-RecordDecl 0x7f8bbd827120 <c_files/pr38505.c:4:1, line:8:1> line:4:8 struct S definition
+| |-FieldDecl 0x7f8bbe025a60 <line:6:3, col:22> col:18 a 'unsigned short [50]'
+| `-FieldDecl 0x7f8bbe025b30 <line:7:3, col:22> col:18 referenced b 'unsigned short [20]'
+|-FunctionDecl 0x7f8bbe025d30 <line:9:1, col:28> col:13 used bar 'void (struct S *)' extern
+| `-ParmVarDecl 0x7f8bbe025c30 <col:18, col:27> col:28 'struct S *'
+|-FunctionDecl 0x7f8bbe025f10 <line:10:1, col:34> col:13 used baz 'void (unsigned short *)' extern
+| `-ParmVarDecl 0x7f8bbe025e50 <col:18, col:33> col:34 'unsigned short *'
+|-VarDecl 0x7f8bbe026000 <line:11:1, col:25> col:23 used d 'unsigned short []' extern
+|-FunctionDecl 0x7f8bbe026120 <line:13:1, line:23:1> line:14:1 foo 'void (void)'
+| `-CompoundStmt 0x7f8bbe026bb0 <line:15:1, line:23:1>
+|   |-DeclStmt 0x7f8bbe026238 <line:16:3, col:13>
+|   | `-VarDecl 0x7f8bbe0261d8 <col:3, col:12> col:12 used s 'struct S':'struct S'
+|   |-DeclStmt 0x7f8bbe0262f8 <line:17:3, col:23>
+|   | `-VarDecl 0x7f8bbe026298 <col:3, col:22> col:18 used g 'unsigned short [50]'
+|   |-CallExpr 0x7f8bbe0263a0 <line:19:3, col:9> 'void'
+|   | |-ImplicitCastExpr 0x7f8bbe026388 <col:3> 'void (*)(unsigned short *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f8bbe026310 <col:3> 'void (unsigned short *)' Function 0x7f8bbe025f10 'baz' 'void (unsigned short *)'
+|   | `-ImplicitCastExpr 0x7f8bbe0263d0 <col:8> 'unsigned short *' <ArrayToPointerDecay>
+|   |   `-DeclRefExpr 0x7f8bbe026338 <col:8> 'unsigned short [50]' lvalue Var 0x7f8bbe026298 'g' 'unsigned short [50]'
+|   |-CallExpr 0x7f8bbe0267e0 <line:20:3, col:38> 'void *'
+|   | |-ImplicitCastExpr 0x7f8bbe0267c8 <col:3> 'void *(*)(void *, const void *, unsigned long)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7f8bbe026680 <col:3> '<builtin fn type>' Function 0x7f8bbe026468 '__builtin_memcpy' 'void *(void *, const void *, unsigned long)'
+|   | |-ImplicitCastExpr 0x7f8bbe026820 <col:21, col:22> 'void *' <BitCast>
+|   | | `-UnaryOperator 0x7f8bbe0266d0 <col:21, col:22> 'struct S *' prefix '&'
+|   | |   `-DeclRefExpr 0x7f8bbe0266a8 <col:22> 'struct S':'struct S' lvalue Var 0x7f8bbe0261d8 's' 'struct S':'struct S'
+|   | |-ImplicitCastExpr 0x7f8bbe026850 <col:25> 'const void *' <BitCast>
+|   | | `-ImplicitCastExpr 0x7f8bbe026838 <col:25> 'unsigned short *' <ArrayToPointerDecay>
+|   | |   `-DeclRefExpr 0x7f8bbe0266f0 <col:25> 'unsigned short [50]' lvalue Var 0x7f8bbe026298 'g' 'unsigned short [50]'
+|   | `-UnaryExprOrTypeTraitExpr 0x7f8bbe026760 <col:28, col:37> 'unsigned long' sizeof
+|   |   `-ParenExpr 0x7f8bbe026740 <col:35, col:37> 'unsigned short [50]' lvalue
+|   |     `-DeclRefExpr 0x7f8bbe026718 <col:36> 'unsigned short [50]' lvalue Var 0x7f8bbe026298 'g' 'unsigned short [50]'
+|   |-CallExpr 0x7f8bbe026a00 <line:21:3, col:41> 'void *'
+|   | |-ImplicitCastExpr 0x7f8bbe0269e8 <col:3> 'void *(*)(void *, const void *, unsigned long)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7f8bbe026868 <col:3> '<builtin fn type>' Function 0x7f8bbe026468 '__builtin_memcpy' 'void *(void *, const void *, unsigned long)'
+|   | |-ImplicitCastExpr 0x7f8bbe026a58 <col:21, col:23> 'void *' <BitCast>
+|   | | `-ImplicitCastExpr 0x7f8bbe026a40 <col:21, col:23> 'unsigned short *' <ArrayToPointerDecay>
+|   | |   `-MemberExpr 0x7f8bbe0268b8 <col:21, col:23> 'unsigned short [20]' lvalue .b 0x7f8bbe025b30
+|   | |     `-DeclRefExpr 0x7f8bbe026890 <col:21> 'struct S':'struct S' lvalue Var 0x7f8bbe0261d8 's' 'struct S':'struct S'
+|   | |-ImplicitCastExpr 0x7f8bbe026a88 <col:26> 'const void *' <BitCast>
+|   | | `-ImplicitCastExpr 0x7f8bbe026a70 <col:26> 'unsigned short *' <ArrayToPointerDecay>
+|   | |   `-DeclRefExpr 0x7f8bbe0268f0 <col:26> 'unsigned short []' lvalue Var 0x7f8bbe026000 'd' 'unsigned short []'
+|   | `-UnaryExprOrTypeTraitExpr 0x7f8bbe026998 <col:29, col:40> 'unsigned long' sizeof
+|   |   `-ParenExpr 0x7f8bbe026978 <col:36, col:40> 'unsigned short [20]' lvalue
+|   |     `-MemberExpr 0x7f8bbe026940 <col:37, col:39> 'unsigned short [20]' lvalue .b 0x7f8bbe025b30
+|   |       `-DeclRefExpr 0x7f8bbe026918 <col:37> 'struct S':'struct S' lvalue Var 0x7f8bbe0261d8 's' 'struct S':'struct S'
+|   `-CallExpr 0x7f8bbe026b80 <line:22:3, col:10> 'void'
+|     |-ImplicitCastExpr 0x7f8bbe026b68 <col:3> 'void (*)(struct S *)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7f8bbe026aa0 <col:3> 'void (struct S *)' Function 0x7f8bbe025d30 'bar' 'void (struct S *)'
+|     `-UnaryOperator 0x7f8bbe026af0 <col:8, col:9> 'struct S *' prefix '&'
+|       `-DeclRefExpr 0x7f8bbe026ac8 <col:9> 'struct S':'struct S' lvalue Var 0x7f8bbe0261d8 's' 'struct S':'struct S'
+`-FunctionDecl 0x7f8bbe026468 <line:20:3> col:3 implicit used __builtin_memcpy 'void *(void *, const void *, unsigned long)' extern
+  |-ParmVarDecl 0x7f8bbe026500 <<invalid sloc>> <invalid sloc> 'void *'
+  |-ParmVarDecl 0x7f8bbe026560 <<invalid sloc>> <invalid sloc> 'const void *'
+  |-ParmVarDecl 0x7f8bbe0265c0 <<invalid sloc>> <invalid sloc> 'unsigned long'
+  `-NoThrowAttr 0x7f8bbe026638 <col:3> Implicit

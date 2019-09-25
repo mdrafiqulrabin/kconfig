@@ -1,0 +1,45 @@
+c_files/pr54363.c:10:35: warning: incompatible pointer types initializing 'char **' with an expression of type 'char [2]' [-Wincompatible-pointer-types]
+  struct S b = { .a = (char **) { "a", "b" } }; /* { dg-warning "(initialization|excess elements)" } */
+                                  ^~~
+c_files/pr54363.c:10:40: warning: excess elements in scalar initializer
+  struct S b = { .a = (char **) { "a", "b" } }; /* { dg-warning "(initialization|excess elements)" } */
+                                       ^~~
+2 warnings generated.
+TranslationUnitDecl 0x7fd8f80264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd8f8026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd8f8026740 '__int128'
+|-TypedefDecl 0x7fd8f8026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd8f8026760 'unsigned __int128'
+|-TypedefDecl 0x7fd8f8026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd8f8026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd8f8026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd8f8026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd8f8026dc0 'char *'
+|   `-BuiltinType 0x7fd8f8026560 'char'
+|-TypedefDecl 0x7fd8f80270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd8f8027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd8f8026ee0 'struct __va_list_tag'
+|     `-Record 0x7fd8f8026e58 '__va_list_tag'
+|-RecordDecl 0x7fd8f8027120 <c_files/pr54363.c:5:1, col:22> col:8 struct S definition
+| `-FieldDecl 0x7fd8f8825a18 <col:12, col:19> col:19 a 'char **'
+`-FunctionDecl 0x7fd8f8825b20 <line:7:1, line:12:1> line:8:1 test 'void (void)'
+  `-CompoundStmt 0x7fd8f88266b0 <line:9:1, line:12:1>
+    |-DeclStmt 0x7fd8f8826328 <line:10:3, col:47>
+    | `-VarDecl 0x7fd8f8825c50 <col:3, col:46> col:12 b 'struct S':'struct S' cinit
+    |   `-InitListExpr 0x7fd8f88262c8 <col:16, col:46> 'struct S':'struct S'
+    |     `-ImplicitCastExpr 0x7fd8f8826310 <col:23, col:44> 'char **' <LValueToRValue>
+    |       `-CompoundLiteralExpr 0x7fd8f8826218 <col:23, col:44> 'char **' lvalue
+    |         `-InitListExpr 0x7fd8f8825db8 <col:33, col:44> 'char **'
+    |           `-ImplicitCastExpr 0x7fd8f8825e10 <col:35> 'char **' <BitCast>
+    |             `-ImplicitCastExpr 0x7fd8f8825df8 <col:35> 'char *' <ArrayToPointerDecay>
+    |               `-StringLiteral 0x7fd8f8825d08 <col:35> 'char [2]' lvalue "a"
+    `-DeclStmt 0x7fd8f8826698 <line:11:3, col:48>
+      `-VarDecl 0x7fd8f8826360 <col:3, col:47> col:12 c 'struct S':'struct S' cinit
+        `-InitListExpr 0x7fd8f8826638 <col:16, col:47> 'struct S':'struct S'
+          `-ImplicitCastExpr 0x7fd8f8826680 <col:23, col:45> 'char **' <ArrayToPointerDecay>
+            `-CompoundLiteralExpr 0x7fd8f8826588 <col:23, col:45> 'char *[2]' lvalue
+              `-InitListExpr 0x7fd8f88264c0 <col:34, col:45> 'char *[2]'
+                |-ImplicitCastExpr 0x7fd8f8826500 <col:36> 'char *' <ArrayToPointerDecay>
+                | `-StringLiteral 0x7fd8f8826410 <col:36> 'char [2]' lvalue "a"
+                `-ImplicitCastExpr 0x7fd8f8826520 <col:41> 'char *' <ArrayToPointerDecay>
+                  `-StringLiteral 0x7fd8f8826440 <col:41> 'char [2]' lvalue "b"

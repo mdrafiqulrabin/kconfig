@@ -1,0 +1,81 @@
+TranslationUnitDecl 0x7faba90264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7faba9026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7faba9026740 '__int128'
+|-TypedefDecl 0x7faba9026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7faba9026760 'unsigned __int128'
+|-TypedefDecl 0x7faba9026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7faba9026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7faba9026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7faba9026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7faba9026dc0 'char *'
+|   `-BuiltinType 0x7faba9026560 'char'
+|-TypedefDecl 0x7faba90270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7faba9027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7faba9026ee0 'struct __va_list_tag'
+|     `-Record 0x7faba9026e58 '__va_list_tag'
+|-RecordDecl 0x7faba9027120 <c_files/pr85168.c:4:9, line:8:1> line:4:9 struct definition
+| |-RecordDecl 0x7faba9825a00 <line:5:5, line:7:5> line:5:5 struct definition
+| | `-FieldDecl 0x7faba9825ac0 <line:6:2, col:7> col:7 referenced a 'char'
+| `-FieldDecl 0x7faba9825b60 <line:5:5, line:7:7> col:7 referenced b 'struct (anonymous struct at c_files/pr85168.c:5:5)':'struct c::(anonymous at c_files/pr85168.c:5:5)'
+|-TypedefDecl 0x7faba9825c40 <line:4:1, line:8:3> col:3 referenced c 'struct c':'c'
+| `-ElaboratedType 0x7faba9825bf0 'struct c' sugar
+|   `-RecordType 0x7faba90271b0 'c'
+|     `-Record 0x7faba9027120 ''
+|-VarDecl 0x7faba9825cc8 <line:10:1, col:5> col:5 used d 'int'
+|-VarDecl 0x7faba9825d80 <col:1, col:8> col:8 used f 'int'
+|-VarDecl 0x7faba9825e88 <line:11:1, col:4> col:4 used e 'c *'
+|-FunctionDecl 0x7faba9825fb0 <line:13:1, col:19> col:13 used i 'void (void)' extern
+|-FunctionDecl 0x7faba9826098 <line:14:1, col:52> col:13 used sejtmp 'void ()' extern
+| `-ReturnsTwiceAttr 0x7faba9826130 <col:38>
+`-FunctionDecl 0x7faba9826208 <line:16:1, line:30:1> line:16:6 g 'void (void)'
+  `-CompoundStmt 0x7faba98268f0 <line:17:1, line:30:1>
+    |-DeclStmt 0x7faba9826350 <line:18:3, col:11>
+    | `-VarDecl 0x7faba98262b0 <col:3, col:10> col:6 used h 'c *' cinit
+    |   `-ImplicitCastExpr 0x7faba9826338 <col:10> 'c *' <LValueToRValue>
+    |     `-DeclRefExpr 0x7faba9826310 <col:10> 'c *' lvalue Var 0x7faba9825e88 'e' 'c *'
+    |-IfStmt 0x7faba9826690 <line:19:3, line:26:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7faba9826390 <line:19:7> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7faba9826368 <col:7> 'int' lvalue Var 0x7faba9825d80 'f' 'int'
+    | |-CompoundStmt 0x7faba9826660 <line:20:5, line:26:5>
+    | | |-CallExpr 0x7faba9826410 <line:21:7, col:9> 'void'
+    | | | `-ImplicitCastExpr 0x7faba98263f8 <col:7> 'void (*)(void)' <FunctionToPointerDecay>
+    | | |   `-DeclRefExpr 0x7faba98263a8 <col:7> 'void (void)' Function 0x7faba9825fb0 'i' 'void (void)'
+    | | |-UnaryOperator 0x7faba9826460 <line:22:7, col:8> 'c *' postfix '--'
+    | | | `-DeclRefExpr 0x7faba9826438 <col:7> 'c *' lvalue Var 0x7faba98262b0 'h' 'c *'
+    | | `-IfStmt 0x7faba9826628 <line:23:7, line:25:6>
+    | |   |-<<<NULL>>>
+    | |   |-<<<NULL>>>
+    | |   |-ImplicitCastExpr 0x7faba98264a8 <line:23:11> 'int' <LValueToRValue>
+    | |   | `-DeclRefExpr 0x7faba9826480 <col:11> 'int' lvalue Var 0x7faba9825cc8 'd' 'int'
+    | |   |-IfStmt 0x7faba98265f0 <line:24:2, line:25:6>
+    | |   | |-<<<NULL>>>
+    | |   | |-<<<NULL>>>
+    | |   | |-ImplicitCastExpr 0x7faba9826570 <line:24:6, col:11> 'char' <LValueToRValue>
+    | |   | | `-MemberExpr 0x7faba9826538 <col:6, col:11> 'char' lvalue .a 0x7faba9825ac0
+    | |   | |   `-MemberExpr 0x7faba9826500 <col:6, col:9> 'struct (anonymous struct at c_files/pr85168.c:5:5)':'struct c::(anonymous at c_files/pr85168.c:5:5)' lvalue ->b 0x7faba9825b60
+    | |   | |     `-ImplicitCastExpr 0x7faba98264e8 <col:6> 'c *' <LValueToRValue>
+    | |   | |       `-DeclRefExpr 0x7faba98264c0 <col:6> 'c *' lvalue Var 0x7faba98262b0 'h' 'c *'
+    | |   | |-CallExpr 0x7faba98265c8 <line:25:4, col:6> 'void'
+    | |   | | `-ImplicitCastExpr 0x7faba98265b0 <col:4> 'void (*)(void)' <FunctionToPointerDecay>
+    | |   | |   `-DeclRefExpr 0x7faba9826588 <col:4> 'void (void)' Function 0x7faba9825fb0 'i' 'void (void)'
+    | |   | `-<<<NULL>>>
+    | |   `-<<<NULL>>>
+    | `-<<<NULL>>>
+    |-IfStmt 0x7faba9826828 <line:27:3, line:28:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7faba9826778 <line:27:7, col:12> 'char' <LValueToRValue>
+    | | `-MemberExpr 0x7faba9826740 <col:7, col:12> 'char' lvalue .a 0x7faba9825ac0
+    | |   `-MemberExpr 0x7faba9826708 <col:7, col:10> 'struct (anonymous struct at c_files/pr85168.c:5:5)':'struct c::(anonymous at c_files/pr85168.c:5:5)' lvalue ->b 0x7faba9825b60
+    | |     `-ImplicitCastExpr 0x7faba98266f0 <col:7> 'c *' <LValueToRValue>
+    | |       `-DeclRefExpr 0x7faba98266c8 <col:7> 'c *' lvalue Var 0x7faba98262b0 'h' 'c *'
+    | |-CallExpr 0x7faba9826800 <line:28:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7faba98267e8 <col:5> 'void (*)()' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7faba9826790 <col:5> 'void ()' Function 0x7faba9826098 'sejtmp' 'void ()'
+    | `-<<<NULL>>>
+    `-BinaryOperator 0x7faba98268c8 <line:29:3, col:7> 'c *' '='
+      |-DeclRefExpr 0x7faba9826860 <col:3> 'c *' lvalue Var 0x7faba9825e88 'e' 'c *'
+      `-ImplicitCastExpr 0x7faba98268b0 <col:7> 'c *' <LValueToRValue>
+        `-DeclRefExpr 0x7faba9826888 <col:7> 'c *' lvalue Var 0x7faba98262b0 'h' 'c *'

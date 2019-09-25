@@ -1,0 +1,118 @@
+FileAST: 
+  Typedef: int32_t, [], ['typedef']
+    TypeDecl: int32_t, []
+      IdentifierType: ['int']
+  Typedef: uint32_t, [], ['typedef']
+    TypeDecl: uint32_t, []
+      IdentifierType: ['unsigned', 'int']
+  Typedef: Elf32_Word, [], ['typedef']
+    TypeDecl: Elf32_Word, []
+      IdentifierType: ['uint32_t']
+  Typedef: Elf32_Sword, [], ['typedef']
+    TypeDecl: Elf32_Sword, []
+      IdentifierType: ['int32_t']
+  Typedef: Elf32_Addr, [], ['typedef']
+    TypeDecl: Elf32_Addr, []
+      IdentifierType: ['uint32_t']
+  Typedef: Elf32_Dyn, [], ['typedef']
+    TypeDecl: Elf32_Dyn, []
+      Struct: None
+        Decl: d_tag, [], [], []
+          TypeDecl: d_tag, []
+            IdentifierType: ['Elf32_Sword']
+        Decl: d_un, [], [], []
+          TypeDecl: d_un, []
+            Union: None
+              Decl: d_val, [], [], []
+                TypeDecl: d_val, []
+                  IdentifierType: ['Elf32_Word']
+              Decl: d_ptr, [], [], []
+                TypeDecl: d_ptr, []
+                  IdentifierType: ['Elf32_Addr']
+  Decl: None, [], [], []
+    Struct: link_map
+      Decl: l_ld, [], [], []
+        PtrDecl: []
+          TypeDecl: l_ld, []
+            IdentifierType: ['Elf32_Dyn']
+      Decl: l_info, [], [], []
+        ArrayDecl: []
+          PtrDecl: []
+            TypeDecl: l_info, []
+              IdentifierType: ['Elf32_Dyn']
+          BinaryOp: +
+            BinaryOp: +
+              BinaryOp: +
+                BinaryOp: +
+                  Constant: int, 34
+                  Constant: int, 16
+                Constant: int, 3
+              Constant: int, 12
+            Constant: int, 11
+  FuncDef: 
+    Decl: elf_get_dynamic_info, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: l, [], [], []
+            PtrDecl: []
+              TypeDecl: l, []
+                Struct: link_map
+        TypeDecl: elf_get_dynamic_info, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: dyn, [], [], []
+        PtrDecl: []
+          TypeDecl: dyn, []
+            IdentifierType: ['Elf32_Dyn']
+        StructRef: ->
+          ID: l
+          ID: l_ld
+      Decl: info, [], [], []
+        PtrDecl: []
+          PtrDecl: []
+            TypeDecl: info, []
+              IdentifierType: ['Elf32_Dyn']
+        StructRef: ->
+          ID: l
+          ID: l_info
+      Typedef: d_tag_utype, [], ['typedef']
+        TypeDecl: d_tag_utype, []
+          IdentifierType: ['Elf32_Word']
+      While: 
+        BinaryOp: !=
+          StructRef: ->
+            ID: dyn
+            ID: d_tag
+          Constant: int, 0
+        Compound: 
+          If: 
+            BinaryOp: <
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['d_tag_utype']
+                BinaryOp: -
+                  Constant: int, 0x6ffffeff
+                  StructRef: ->
+                    ID: dyn
+                    ID: d_tag
+              Constant: int, 11
+            Assignment: =
+              ArrayRef: 
+                ID: info
+                BinaryOp: +
+                  BinaryOp: +
+                    BinaryOp: +
+                      BinaryOp: +
+                        BinaryOp: -
+                          Constant: int, 0x6ffffeff
+                          StructRef: ->
+                            ID: dyn
+                            ID: d_tag
+                        Constant: int, 34
+                      Constant: int, 16
+                    Constant: int, 3
+                  Constant: int, 12
+              ID: dyn
+          UnaryOp: ++
+            ID: dyn

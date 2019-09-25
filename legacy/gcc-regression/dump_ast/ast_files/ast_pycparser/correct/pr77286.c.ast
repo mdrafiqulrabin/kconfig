@@ -1,0 +1,192 @@
+FileAST: 
+  Typedef: real, [], ['typedef']
+    TypeDecl: real, []
+      IdentifierType: ['float']
+  Typedef: t_grpopts, [], ['typedef']
+    TypeDecl: t_grpopts, []
+      Struct: None
+        Decl: ngtc, [], [], []
+          TypeDecl: ngtc, []
+            IdentifierType: ['int']
+        Decl: ref_t, [], [], []
+          PtrDecl: []
+            TypeDecl: ref_t, []
+              IdentifierType: ['real']
+        Decl: tau_t, [], [], []
+          PtrDecl: []
+            TypeDecl: tau_t, []
+              IdentifierType: ['real']
+  Typedef: t_grp_tcstat, [], ['typedef']
+    TypeDecl: t_grp_tcstat, []
+      Struct: None
+        Decl: T, [], [], []
+          TypeDecl: T, []
+            IdentifierType: ['real']
+        Decl: xi, [], [], []
+          TypeDecl: xi, []
+            IdentifierType: ['real']
+  Typedef: t_groups, [], ['typedef']
+    TypeDecl: t_groups, []
+      Struct: None
+        Decl: tcstat, [], [], []
+          PtrDecl: []
+            TypeDecl: tcstat, []
+              IdentifierType: ['t_grp_tcstat']
+  Decl: save_calloc, [], ['extern'], []
+    FuncDecl: 
+      PtrDecl: []
+        TypeDecl: save_calloc, []
+          IdentifierType: ['real']
+  FuncDef: 
+    Decl: nosehoover_tcoupl, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: opts, [], [], []
+            PtrDecl: []
+              TypeDecl: opts, []
+                IdentifierType: ['t_grpopts']
+          Decl: grps, [], [], []
+            PtrDecl: []
+              TypeDecl: grps, []
+                IdentifierType: ['t_groups']
+          Decl: dt, [], [], []
+            TypeDecl: dt, []
+              IdentifierType: ['real']
+          Decl: SAfactor, [], [], []
+            TypeDecl: SAfactor, []
+              IdentifierType: ['real']
+        TypeDecl: nosehoover_tcoupl, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: Qinv, [], ['static'], []
+        PtrDecl: []
+          TypeDecl: Qinv, []
+            IdentifierType: ['real']
+        Cast: 
+          Typename: None, []
+            PtrDecl: []
+              TypeDecl: None, []
+                IdentifierType: ['void']
+          Constant: int, 0
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: reft, [], [], []
+        TypeDecl: reft, []
+          IdentifierType: ['real']
+        Constant: int, 0
+      Decl: xit, [], [], []
+        TypeDecl: xit, []
+          IdentifierType: ['real']
+      Decl: oldxi, [], [], []
+        TypeDecl: oldxi, []
+          IdentifierType: ['real']
+      If: 
+        BinaryOp: ==
+          ID: Qinv
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['void']
+            Constant: int, 0
+        Compound: 
+          Assignment: =
+            ID: Qinv
+            FuncCall: 
+              ID: save_calloc
+              ExprList: 
+                Constant: string, "Qinv"
+                Constant: string, "coupling.c"
+                Constant: int, 372
+                StructRef: ->
+                  ID: opts
+                  ID: ngtc
+                UnaryOp: sizeof
+                  UnaryOp: *
+                    ID: Qinv
+          For: 
+            Assignment: =
+              ID: i
+              Constant: int, 0
+            BinaryOp: <
+              ID: i
+              StructRef: ->
+                ID: opts
+                ID: ngtc
+            UnaryOp: p++
+              ID: i
+            If: 
+              BinaryOp: >
+                ArrayRef: 
+                  StructRef: ->
+                    ID: opts
+                    ID: tau_t
+                  ID: i
+                Constant: int, 0
+              Assignment: =
+                ArrayRef: 
+                  ID: Qinv
+                  ID: i
+                BinaryOp: /
+                  Constant: float, 1.0
+                  ArrayRef: 
+                    StructRef: ->
+                      ID: opts
+                      ID: tau_t
+                    ID: i
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          StructRef: ->
+            ID: opts
+            ID: ngtc
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          Assignment: =
+            ID: reft
+            TernaryOp: 
+              BinaryOp: >
+                Constant: float, 0.0
+                BinaryOp: *
+                  ArrayRef: 
+                    StructRef: ->
+                      ID: opts
+                      ID: ref_t
+                    ID: i
+                  ID: SAfactor
+              Constant: float, 0.0
+              BinaryOp: *
+                ArrayRef: 
+                  StructRef: ->
+                    ID: opts
+                    ID: ref_t
+                  ID: i
+                ID: SAfactor
+          Assignment: +=
+            StructRef: .
+              ArrayRef: 
+                StructRef: ->
+                  ID: grps
+                  ID: tcstat
+                ID: i
+              ID: xi
+            BinaryOp: *
+              BinaryOp: *
+                ID: dt
+                ArrayRef: 
+                  ID: Qinv
+                  ID: i
+              BinaryOp: -
+                StructRef: .
+                  ArrayRef: 
+                    StructRef: ->
+                      ID: grps
+                      ID: tcstat
+                    ID: i
+                  ID: T
+                ID: reft

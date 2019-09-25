@@ -1,0 +1,99 @@
+c_files/pr67043.c:23:7: warning: incompatible pointer to integer conversion assigning to 'int' from 'typeof(int *)' (aka 'int *'); dereference with * [-Wint-conversion]
+    c = ({
+      ^ ~~
+        *(
+1 warning generated.
+TranslationUnitDecl 0x7febb08264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7febb0826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7febb0826740 '__int128'
+|-TypedefDecl 0x7febb0826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7febb0826760 'unsigned __int128'
+|-TypedefDecl 0x7febb0826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7febb0826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7febb0826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7febb0826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7febb0826dc0 'char *'
+|   `-BuiltinType 0x7febb0826560 'char'
+|-TypedefDecl 0x7febb08270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7febb0827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7febb0826ee0 'struct __va_list_tag'
+|     `-Record 0x7febb0826e58 '__va_list_tag'
+|-FunctionDecl 0x7febb1025a00 <c_files/pr67043.c:4:1, col:33> col:13 used rt_mutex_owner 'void (void)' extern
+|-FunctionDecl 0x7febb1025bb0 <line:5:1, col:48> col:13 used rt_mutex_deadlock_account_lock 'void (int)' extern
+| `-ParmVarDecl 0x7febb1025af0 <col:45> col:48 'int'
+|-FunctionDecl 0x7febb1025ce0 <line:6:1, col:33> col:13 used signal_pending 'void (void)' extern
+|-VarDecl 0x7febb1025e00 <line:7:1, col:20> col:20 used a 'typeof(int *)':'int *'
+|-VarDecl 0x7febb1025e78 <line:8:1, col:5> col:5 used b 'int'
+|-FunctionDecl 0x7febb1025fb8 <line:10:1, line:17:1> line:11:1 used try_to_take_rt_mutex 'int (int)'
+| |-ParmVarDecl 0x7febb1025ef0 <col:23, col:27> col:27 used p1 'int'
+| `-CompoundStmt 0x7febb10262b0 <col:31, line:17:1>
+|   |-CallExpr 0x7febb10260c0 <line:12:3, col:19> 'void'
+|   | `-ImplicitCastExpr 0x7febb10260a8 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7febb1026058 <col:3> 'void (void)' Function 0x7febb1025a00 'rt_mutex_owner' 'void (void)'
+|   |-IfStmt 0x7febb1026160 <line:13:3, line:14:12>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7febb1026110 <line:13:7> 'int' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7febb10260e8 <col:7> 'int' lvalue Var 0x7febb1025e78 'b' 'int'
+|   | |-ReturnStmt 0x7febb1026148 <line:14:5, col:12>
+|   | | `-IntegerLiteral 0x7febb1026128 <col:12> 'int' 0
+|   | `-<<<NULL>>>
+|   |-CallExpr 0x7febb1026230 <line:15:3, col:37> 'void'
+|   | |-ImplicitCastExpr 0x7febb1026218 <col:3> 'void (*)(int)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7febb1026198 <col:3> 'void (int)' Function 0x7febb1025bb0 'rt_mutex_deadlock_account_lock' 'void (int)'
+|   | `-ImplicitCastExpr 0x7febb1026260 <col:35> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7febb10261c0 <col:35> 'int' lvalue ParmVar 0x7febb1025ef0 'p1' 'int'
+|   `-ReturnStmt 0x7febb1026298 <line:16:3, col:10>
+|     `-IntegerLiteral 0x7febb1026278 <col:10> 'int' 1
+|-FunctionDecl 0x7febb1026388 <line:19:1, line:32:1> line:20:1 __rt_mutex_slowlock 'void (int)'
+| |-ParmVarDecl 0x7febb1026300 <col:22, col:26> col:26 used p1 'int'
+| `-CompoundStmt 0x7febb10280c0 <col:30, line:32:1>
+|   |-DeclStmt 0x7febb10264a0 <line:21:3, col:8>
+|   | `-VarDecl 0x7febb1026440 <col:3, col:7> col:7 used c 'int'
+|   `-ForStmt 0x7febb1028088 <line:22:3, line:31:3>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     `-CompoundStmt 0x7febb1028058 <line:22:12, line:31:3>
+|       |-BinaryOperator 0x7febb1027af0 <line:23:5, line:26:6> 'int' '='
+|       | |-DeclRefExpr 0x7febb10264b8 <line:23:5> 'int' lvalue Var 0x7febb1026440 'c' 'int'
+|       | `-ImplicitCastExpr 0x7febb10266b8 <col:9, line:26:6> 'int' <PointerToIntegral>
+|       |   `-StmtExpr 0x7febb1026698 <line:23:9, line:26:6> 'typeof(int *)':'int *'
+|       |     `-CompoundStmt 0x7febb1026670 <line:23:10, line:26:5>
+|       |       |-GCCAsmStmt 0x7febb10265d0 <line:24:7, col:24>
+|       |       | `-DeclRefExpr 0x7febb10265a8 <col:22> 'typeof(int *)':'int *' lvalue Var 0x7febb1025e00 'a' 'typeof(int *)':'int *'
+|       |       `-ImplicitCastExpr 0x7febb1026658 <line:25:7> 'typeof(int *)':'int *' <LValueToRValue>
+|       |         `-DeclRefExpr 0x7febb1026630 <col:7> 'typeof(int *)':'int *' lvalue Var 0x7febb1025e00 'a' 'typeof(int *)':'int *'
+|       |-IfStmt 0x7febb1027c00 <line:27:5, line:28:7>
+|       | |-<<<NULL>>>
+|       | |-<<<NULL>>>
+|       | |-CallExpr 0x7febb1027bb0 <line:27:9, col:32> 'int'
+|       | | |-ImplicitCastExpr 0x7febb1027b98 <col:9> 'int (*)(int)' <FunctionToPointerDecay>
+|       | | | `-DeclRefExpr 0x7febb1027b18 <col:9> 'int (int)' Function 0x7febb1025fb8 'try_to_take_rt_mutex' 'int (int)'
+|       | | `-ImplicitCastExpr 0x7febb1027be0 <col:31> 'int' <LValueToRValue>
+|       | |   `-DeclRefExpr 0x7febb1027b40 <col:31> 'int' lvalue Var 0x7febb1026440 'c' 'int'
+|       | |-BreakStmt 0x7febb1027bf8 <line:28:7>
+|       | `-<<<NULL>>>
+|       `-IfStmt 0x7febb1028020 <line:29:5, line:30:23>
+|         |-<<<NULL>>>
+|         |-<<<NULL>>>
+|         |-CallExpr 0x7febb1027f50 <line:29:9, col:37> 'long'
+|         | |-ImplicitCastExpr 0x7febb1027f38 <col:9> 'long (*)(long, long)' <BuiltinFnToFnPtr>
+|         | | `-DeclRefExpr 0x7febb1027e40 <col:9> '<builtin fn type>' Function 0x7febb1027c80 '__builtin_expect' 'long (long, long)'
+|         | |-ImplicitCastExpr 0x7febb1027f88 <col:27, col:33> 'long' <IntegralCast>
+|         | | `-BinaryOperator 0x7febb1027ec8 <col:27, col:33> 'int' '=='
+|         | |   |-ImplicitCastExpr 0x7febb1027eb0 <col:27> 'int' <LValueToRValue>
+|         | |   | `-DeclRefExpr 0x7febb1027e68 <col:27> 'int' lvalue ParmVar 0x7febb1026300 'p1' 'int'
+|         | |   `-IntegerLiteral 0x7febb1027e90 <col:33> 'int' 0
+|         | `-ImplicitCastExpr 0x7febb1027fa0 <col:36> 'long' <IntegralCast>
+|         |   `-IntegerLiteral 0x7febb1027ef0 <col:36> 'int' 0
+|         |-CallExpr 0x7febb1027ff8 <line:30:7, col:23> 'void'
+|         | `-ImplicitCastExpr 0x7febb1027fe0 <col:7> 'void (*)(void)' <FunctionToPointerDecay>
+|         |   `-DeclRefExpr 0x7febb1027fb8 <col:7> 'void (void)' Function 0x7febb1025ce0 'signal_pending' 'void (void)'
+|         `-<<<NULL>>>
+`-FunctionDecl 0x7febb1027c80 <line:29:9> col:9 implicit used __builtin_expect 'long (long, long)' extern
+  |-ParmVarDecl 0x7febb1027d18 <<invalid sloc>> <invalid sloc> 'long'
+  |-ParmVarDecl 0x7febb1027d78 <<invalid sloc>> <invalid sloc> 'long'
+  |-NoThrowAttr 0x7febb1027de8 <col:9> Implicit
+  `-ConstAttr 0x7febb1027e30 <col:9> Implicit

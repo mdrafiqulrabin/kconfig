@@ -1,0 +1,90 @@
+FileAST: 
+  Decl: bar, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: bar, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: repllen, [], [], []
+            TypeDecl: repllen, []
+              IdentifierType: ['long']
+          Decl: rp, [], [], []
+            PtrDecl: []
+              TypeDecl: rp, []
+                IdentifierType: ['char']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: matchend, [], [], []
+        PtrDecl: []
+          TypeDecl: matchend, []
+            IdentifierType: ['char']
+      Decl: scan, [], [], []
+        PtrDecl: []
+          TypeDecl: scan, []
+            IdentifierType: ['char']
+      Decl: len, [], [], []
+        TypeDecl: len, []
+          IdentifierType: ['long']
+      Decl: matchstart, [], [], []
+        PtrDecl: []
+          TypeDecl: matchstart, []
+            IdentifierType: ['char']
+      Decl: text, [], [], []
+        PtrDecl: []
+          TypeDecl: text, []
+            IdentifierType: ['char']
+      Decl: t, [], [], []
+        PtrDecl: []
+          TypeDecl: t, []
+            IdentifierType: ['char']
+      UnaryOp: p--
+        ID: repllen
+      For: 
+        Compound: 
+          Assignment: =
+            ID: matchstart
+            BinaryOp: +
+              ID: t
+              ArrayRef: 
+                ID: rp
+                Constant: int, 0
+          Assignment: =
+            ID: matchend
+            ID: rp
+          Assignment: =
+            ID: len
+            BinaryOp: +
+              BinaryOp: -
+                ID: matchstart
+                ID: text
+              BinaryOp: *
+                ID: repllen
+                BinaryOp: -
+                  ID: matchend
+                  ID: matchstart
+          While: 
+            ID: len
+            EmptyStatement: 
+          For: 
+            Assignment: =
+              ID: scan
+              ID: text
+            BinaryOp: !=
+              ID: scan
+              ID: rp
+            UnaryOp: p++
+              ID: scan
+            FuncCall: 
+              ID: bar
+          If: 
+            ID: matchstart
+            Assignment: =
+              ID: text
+              ID: matchend

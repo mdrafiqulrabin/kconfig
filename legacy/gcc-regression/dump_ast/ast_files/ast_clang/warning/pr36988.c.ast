@@ -1,0 +1,52 @@
+c_files/pr36988.c:10:3: warning: implicit declaration of function '__writel' is invalid in C99 [-Wimplicit-function-declaration]
+  __writel((*(unsigned int *) mb));
+  ^
+1 warning generated.
+TranslationUnitDecl 0x7fc84c0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc84c026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc84c026740 '__int128'
+|-TypedefDecl 0x7fc84c026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc84c026760 'unsigned __int128'
+|-TypedefDecl 0x7fc84c026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc84c026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc84c026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc84c026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc84c026dc0 'char *'
+|   `-BuiltinType 0x7fc84c026560 'char'
+|-TypedefDecl 0x7fc84c0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc84c027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc84c026ee0 'struct __va_list_tag'
+|     `-Record 0x7fc84c026e58 '__va_list_tag'
+|-RecordDecl 0x7fc84c027120 <c_files/pr36988.c:1:9, line:3:1> line:1:9 struct definition
+| `-FieldDecl 0x7fc84c825a00 <line:2:5, col:19> col:19 referenced mbxCommand 'unsigned char'
+|-TypedefDecl 0x7fc84c825aa0 <line:1:1, line:3:3> col:3 referenced MAILBOX_t 'struct MAILBOX_t':'MAILBOX_t'
+| `-ElaboratedType 0x7fc84c825a50 'struct MAILBOX_t' sugar
+|   `-RecordType 0x7fc84c0271b0 'MAILBOX_t'
+|     `-Record 0x7fc84c027120 ''
+|-FunctionDecl 0x7fc84c825bd0 <line:4:1, line:11:1> line:4:6 lpfc_sli_brdrestart 'void (void)'
+| `-CompoundStmt 0x7fc84c8262c8 <line:5:1, line:11:1>
+|   |-DeclStmt 0x7fc84c825d20 <line:6:3, col:30>
+|   | `-VarDecl 0x7fc84c825cc0 <col:3, col:25> col:25 used word0 'volatile unsigned int'
+|   |-DeclStmt 0x7fc84c825e28 <line:7:3, col:16>
+|   | `-VarDecl 0x7fc84c825dc8 <col:3, col:14> col:14 used mb 'MAILBOX_t *'
+|   |-BinaryOperator 0x7fc84c825f40 <line:8:3, col:23> 'MAILBOX_t *' '='
+|   | |-DeclRefExpr 0x7fc84c825e40 <col:3> 'MAILBOX_t *' lvalue Var 0x7fc84c825dc8 'mb' 'MAILBOX_t *'
+|   | `-CStyleCastExpr 0x7fc84c825f18 <col:8, col:23> 'MAILBOX_t *' <BitCast>
+|   |   `-UnaryOperator 0x7fc84c825eb8 <col:22, col:23> 'volatile unsigned int *' prefix '&'
+|   |     `-DeclRefExpr 0x7fc84c825e68 <col:23> 'volatile unsigned int' lvalue Var 0x7fc84c825cc0 'word0' 'volatile unsigned int'
+|   |-BinaryOperator 0x7fc84c826018 <line:9:3, col:20> 'unsigned char' '='
+|   | |-MemberExpr 0x7fc84c825fa8 <col:3, col:7> 'unsigned char' lvalue ->mbxCommand 0x7fc84c825a00
+|   | | `-ImplicitCastExpr 0x7fc84c825f90 <col:3> 'MAILBOX_t *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7fc84c825f68 <col:3> 'MAILBOX_t *' lvalue Var 0x7fc84c825dc8 'mb' 'MAILBOX_t *'
+|   | `-ImplicitCastExpr 0x7fc84c826000 <col:20> 'unsigned char' <IntegralCast>
+|   |   `-IntegerLiteral 0x7fc84c825fe0 <col:20> 'int' 26
+|   `-CallExpr 0x7fc84c826280 <line:10:3, col:34> 'int'
+|     |-ImplicitCastExpr 0x7fc84c826268 <col:3> 'int (*)()' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fc84c826128 <col:3> 'int ()' Function 0x7fc84c826090 '__writel' 'int ()'
+|     `-ImplicitCastExpr 0x7fc84c8262b0 <col:12, col:33> 'unsigned int' <LValueToRValue>
+|       `-ParenExpr 0x7fc84c826220 <col:12, col:33> 'unsigned int' lvalue
+|         `-UnaryOperator 0x7fc84c826200 <col:13, col:31> 'unsigned int' lvalue prefix '*'
+|           `-CStyleCastExpr 0x7fc84c8261d8 <col:14, col:31> 'unsigned int *' <BitCast>
+|             `-ImplicitCastExpr 0x7fc84c8261c0 <col:31> 'MAILBOX_t *' <LValueToRValue>
+|               `-DeclRefExpr 0x7fc84c826150 <col:31> 'MAILBOX_t *' lvalue Var 0x7fc84c825dc8 'mb' 'MAILBOX_t *'
+`-FunctionDecl 0x7fc84c826090 <<invalid sloc>> col:3 implicit used __writel 'int ()'

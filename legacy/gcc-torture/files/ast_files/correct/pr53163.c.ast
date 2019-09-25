@@ -1,0 +1,118 @@
+FileAST: 
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      Struct: S
+        Decl: s, [], [], []
+          TypeDecl: s, []
+            IdentifierType: ['int']
+  Decl: f, [], [], []
+    TypeDecl: f, []
+      Struct: S
+        Decl: s, [], [], []
+          TypeDecl: s, []
+            IdentifierType: ['int']
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          IdentifierType: ['int']
+      Decl: e, [], [], []
+        TypeDecl: e, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: d
+          Constant: int, 4
+        BinaryOp: <
+          ID: d
+          Constant: int, 19
+        UnaryOp: ++
+          ID: d
+        For: 
+          Assignment: =
+            ID: e
+            Constant: int, 2
+          BinaryOp: >=
+            ID: e
+            Constant: int, 0
+          UnaryOp: p--
+            ID: e
+          Compound: 
+            Assignment: =
+              ID: a
+              Constant: int, 0
+            Assignment: =
+              ID: a
+              Constant: int, 1
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: bar, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: g, [], [], []
+        TypeDecl: g, []
+          IdentifierType: ['int']
+      Decl: h, [], [], []
+        TypeDecl: h, []
+          IdentifierType: ['int']
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 1
+        BinaryOp: >=
+          ID: i
+          Constant: int, 0
+        UnaryOp: p--
+          ID: i
+        Compound: 
+          Assignment: =
+            ID: b
+            ID: f
+          For: 
+            Assignment: =
+              ID: g
+              Constant: int, 0
+            BinaryOp: <=
+              ID: g
+              Constant: int, 1
+            UnaryOp: p++
+              ID: g
+            Compound: 
+              If: 
+                ID: c
+                Break: 
+              For: 
+                Assignment: =
+                  ID: h
+                  Constant: int, 0
+                BinaryOp: <=
+                  ID: h
+                  Constant: int, 1
+                UnaryOp: p++
+                  ID: h
+                FuncCall: 
+                  ID: foo
+              FuncCall: 
+                ID: foo

@@ -1,0 +1,55 @@
+FileAST: 
+  FuncDef: 
+    Decl: ucs2reverse_internal_loop_single, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: irreversible, [], [], []
+            PtrDecl: []
+              TypeDecl: irreversible, []
+                IdentifierType: ['long']
+          Decl: foo, [], [], []
+            TypeDecl: foo, []
+              IdentifierType: ['int']
+        TypeDecl: ucs2reverse_internal_loop_single, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: bytebuf, [], [], []
+        ArrayDecl: []
+          TypeDecl: bytebuf, []
+            IdentifierType: ['unsigned', 'char']
+          Constant: int, 2
+      Decl: inptr, ['const'], [], []
+        PtrDecl: []
+          TypeDecl: inptr, ['const']
+            IdentifierType: ['unsigned', 'char']
+        ID: bytebuf
+      If: 
+        BinaryOp: ==
+          ID: irreversible
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['void']
+            Constant: int, 0
+        EmptyStatement: 
+        Assignment: +=
+          ID: inptr
+          Constant: int, 2
+      If: 
+        BinaryOp: !=
+          ID: inptr
+          ID: bytebuf
+        TernaryOp: 
+          BinaryOp: >
+            BinaryOp: -
+              ID: inptr
+              ID: bytebuf
+            ID: foo
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['void']
+            Constant: int, 0
+          FuncCall: 
+            ID: __assert_fail

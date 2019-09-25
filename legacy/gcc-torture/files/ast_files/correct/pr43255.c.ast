@@ -1,0 +1,168 @@
+FileAST: 
+  Decl: safe, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: safe, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: ui1, [], [], []
+            TypeDecl: ui1, []
+              IdentifierType: ['unsigned']
+          Decl: ui2, [], [], []
+            TypeDecl: ui2, []
+              IdentifierType: ['unsigned']
+        TypeDecl: foo, []
+          IdentifierType: ['unsigned']
+    Compound: 
+      Return: 
+        BinaryOp: +
+          ID: ui1
+          ID: ui2
+  Decl: g_22, [], [], []
+    TypeDecl: g_22, []
+      IdentifierType: ['int']
+  Decl: g_23, [], [], []
+    PtrDecl: ['volatile']
+      TypeDecl: g_23, []
+        IdentifierType: ['int']
+    UnaryOp: &
+      ID: g_22
+  Decl: g_282, [], [], []
+    ArrayDecl: []
+      ArrayDecl: []
+        ArrayDecl: []
+          PtrDecl: []
+            PtrDecl: []
+              TypeDecl: g_282, []
+                IdentifierType: ['int']
+          Constant: int, 1
+        Constant: int, 10
+      Constant: int, 8
+  Decl: g_330, [], [], []
+    PtrDecl: []
+      TypeDecl: g_330, []
+        IdentifierType: ['int']
+    UnaryOp: &
+      ID: g_22
+  Decl: g_348, ['volatile'], [], []
+    TypeDecl: g_348, ['volatile']
+      IdentifierType: ['unsigned']
+  Decl: g_397, [], [], []
+    TypeDecl: g_397, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: int32func, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p_10, ['const'], [], []
+            TypeDecl: p_10, ['const']
+              IdentifierType: ['unsigned', 'char']
+        TypeDecl: int32func, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        FuncCall: 
+          ID: foo
+          ExprList: 
+            UnaryOp: ~
+              BinaryOp: |
+                ID: p_10
+                BinaryOp: ==
+                  UnaryOp: *
+                    ArrayRef: 
+                      ArrayRef: 
+                        ArrayRef: 
+                          ID: g_282
+                          BinaryOp: %
+                            Cast: 
+                              Typename: None, []
+                                TypeDecl: None, []
+                                  IdentifierType: ['unsigned', 'long']
+                              ID: g_397
+                            Constant: int, 8
+                        BinaryOp: %
+                          Cast: 
+                            Typename: None, []
+                              TypeDecl: None, []
+                                IdentifierType: ['unsigned']
+                            ID: g_22
+                          Constant: int, 10
+                      BinaryOp: %
+                        ID: g_348
+                        Constant: int, 1
+                  UnaryOp: *
+                    ArrayRef: 
+                      ArrayRef: 
+                        ArrayRef: 
+                          ID: g_282
+                          BinaryOp: %
+                            Cast: 
+                              Typename: None, []
+                                TypeDecl: None, []
+                                  IdentifierType: ['unsigned', 'long']
+                              ID: g_397
+                            Constant: int, 8
+                        BinaryOp: %
+                          Cast: 
+                            Typename: None, []
+                              TypeDecl: None, []
+                                IdentifierType: ['unsigned']
+                            ID: g_22
+                          Constant: int, 10
+                      BinaryOp: %
+                        ID: g_348
+                        Constant: int, 1
+            Constant: int, 1
+        Compound: 
+        If: 
+          ExprList: 
+            BinaryOp: &
+              BinaryOp: >=
+                UnaryOp: *
+                  ID: g_330
+                FuncCall: 
+                  ID: safe
+                  ExprList: 
+                    BinaryOp: ^
+                      UnaryOp: *
+                        ID: g_23
+                      UnaryOp: *
+                        UnaryOp: *
+                          ArrayRef: 
+                            ArrayRef: 
+                              ArrayRef: 
+                                ID: g_282
+                                BinaryOp: %
+                                  Cast: 
+                                    Typename: None, []
+                                      TypeDecl: None, []
+                                        IdentifierType: ['unsigned', 'long']
+                                    ID: g_397
+                                  Constant: int, 8
+                              BinaryOp: %
+                                Cast: 
+                                  Typename: None, []
+                                    TypeDecl: None, []
+                                      IdentifierType: ['unsigned']
+                                  ID: g_22
+                                Constant: int, 10
+                            BinaryOp: %
+                              ID: g_348
+                              Constant: int, 1
+              UnaryOp: *
+                UnaryOp: *
+                  ArrayRef: 
+                    ArrayRef: 
+                      ArrayRef: 
+                        ID: g_282
+                        Constant: int, 8
+                      Constant: int, 10
+                    Constant: int, 1
+            Constant: int, 1
+          Compound: 

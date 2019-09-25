@@ -1,0 +1,54 @@
+FileAST: 
+  Typedef: fn, [], ['typedef']
+    PtrDecl: []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: fn, []
+          IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], ['static'], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        Constant: int, 1
+  FuncDef: 
+    Decl: test, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: test, []
+          IdentifierType: ['fn']
+    Compound: 
+      Return: 
+        ID: foo
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: f, [], [], []
+        TypeDecl: f, []
+          IdentifierType: ['fn']
+        FuncCall: 
+          ID: test
+      Return: 
+        BinaryOp: !=
+          FuncCall: 
+            ID: f
+          Constant: int, 1

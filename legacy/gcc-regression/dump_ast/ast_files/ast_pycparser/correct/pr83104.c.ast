@@ -1,0 +1,26 @@
+FileAST: 
+  Decl: a, [], [], []
+    PtrDecl: []
+      TypeDecl: a, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: &&
+          ID: a
+          BinaryOp: >
+            BinaryOp: -
+              ID: a
+              Cast: 
+                Typename: None, []
+                  PtrDecl: []
+                    TypeDecl: None, []
+                      IdentifierType: ['int']
+                Constant: int, 0
+            Constant: int, 0
+        Return: 
+          Constant: int, 0

@@ -1,0 +1,77 @@
+FileAST: 
+  Decl: foo, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      PtrDecl: []
+        TypeDecl: foo, []
+          IdentifierType: ['unsigned', 'int']
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: d, [], [], []
+            PtrDecl: []
+              TypeDecl: d, []
+                IdentifierType: ['double']
+        PtrDecl: []
+          TypeDecl: bar, []
+            IdentifierType: ['char']
+    Compound: 
+      Return: 
+        BinaryOp: -
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['char']
+            BinaryOp: +
+              ID: d
+              Constant: int, 1
+          UnaryOp: sizeof
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['unsigned', 'int']
+  FuncDef: 
+    Decl: baz, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['double']
+        TypeDecl: baz, []
+          IdentifierType: ['char']
+    Compound: 
+      Decl: h, [], [], []
+        TypeDecl: h, []
+          IdentifierType: ['unsigned', 'int']
+        UnaryOp: *
+          FuncCall: 
+            ID: foo
+      Decl: l, [], [], []
+        TypeDecl: l, []
+          IdentifierType: ['unsigned', 'int']
+        UnaryOp: *
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['unsigned', 'int']
+            FuncCall: 
+              ID: bar
+              ExprList: 
+                UnaryOp: &
+                  ID: x
+      Return: 
+        BinaryOp: &&
+          BinaryOp: ==
+            BinaryOp: &
+              ID: h
+              UnaryOp: ~
+                Constant: int, 0x80000000L
+            Constant: int, 0x7FF00000
+          BinaryOp: ==
+            ID: l
+            Constant: int, 0

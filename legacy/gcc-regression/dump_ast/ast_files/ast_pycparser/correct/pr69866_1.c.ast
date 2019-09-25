@@ -1,0 +1,15 @@
+FileAST: 
+  FuncDef: 
+    Decl: weaks, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+        TypeDecl: weaks, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        BinaryOp: +
+          ID: i
+          Constant: int, 1

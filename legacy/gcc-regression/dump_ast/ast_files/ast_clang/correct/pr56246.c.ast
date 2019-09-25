@@ -1,0 +1,36 @@
+TranslationUnitDecl 0x7fd02d8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd02d826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd02d826740 '__int128'
+|-TypedefDecl 0x7fd02d826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd02d826760 'unsigned __int128'
+|-TypedefDecl 0x7fd02d826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd02d826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd02d826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd02d826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd02d826dc0 'char *'
+|   `-BuiltinType 0x7fd02d826560 'char'
+|-TypedefDecl 0x7fd02d8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd02d827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd02d826ee0 'struct __va_list_tag'
+|     `-Record 0x7fd02d826e58 '__va_list_tag'
+|-FunctionDecl 0x7fd02d877428 <c_files/pr56246.c:5:1, line:7:1> line:5:6 NoBarrier_AtomicExchange 'void (long long *)'
+| |-ParmVarDecl 0x7fd02d827160 <col:32, col:43> col:43 used ptr 'long long *'
+| `-CompoundStmt 0x7fd02d877a60 <col:48, line:7:1>
+|   `-WhileStmt 0x7fd02d877a40 <line:6:3, col:51>
+|     |-<<<NULL>>>
+|     |-CallExpr 0x7fd02d8776a0 <col:10, col:48> 'long long'
+|     | |-ImplicitCastExpr 0x7fd02d877a18 <col:10> 'long long (*)(volatile long long *, long long, long long, ...)' <BuiltinFnToFnPtr>
+|     | | `-DeclRefExpr 0x7fd02d8779c0 <col:10> '<builtin fn type>' Function 0x7fd02d877778 '__sync_val_compare_and_swap_8' 'long long (volatile long long *, long long, long long, ...)'
+|     | |-ImplicitCastExpr 0x7fd02d8776e0 <col:39> 'long long *' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7fd02d8775f8 <col:39> 'long long *' lvalue ParmVar 0x7fd02d827160 'ptr' 'long long *'
+|     | |-ImplicitCastExpr 0x7fd02d877990 <col:44> 'long long' <IntegralCast>
+|     | | `-IntegerLiteral 0x7fd02d877620 <col:44> 'int' 1
+|     | `-ImplicitCastExpr 0x7fd02d8779a8 <col:47> 'long long' <IntegralCast>
+|     |   `-IntegerLiteral 0x7fd02d877640 <col:47> 'int' 0
+|     `-NullStmt 0x7fd02d877a30 <col:51>
+|-FunctionDecl 0x7fd02d877538 <col:10> col:10 implicit used __sync_val_compare_and_swap 'void ()' extern
+`-FunctionDecl 0x7fd02d877778 <col:10> col:10 implicit __sync_val_compare_and_swap_8 'long long (volatile long long *, long long, long long, ...)' extern
+  |-ParmVarDecl 0x7fd02d877810 <<invalid sloc>> <invalid sloc> 'volatile long long *'
+  |-ParmVarDecl 0x7fd02d877870 <<invalid sloc>> <invalid sloc> 'long long'
+  |-ParmVarDecl 0x7fd02d8778d0 <<invalid sloc>> <invalid sloc> 'long long'
+  `-NoThrowAttr 0x7fd02d877948 <col:10> Implicit

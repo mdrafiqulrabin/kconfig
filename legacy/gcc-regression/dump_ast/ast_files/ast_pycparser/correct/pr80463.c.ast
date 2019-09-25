@@ -1,0 +1,98 @@
+FileAST: 
+  Decl: t2, [], [], []
+    TypeDecl: t2, []
+      IdentifierType: ['short', 'int']
+  Decl: cd, [], [], []
+    TypeDecl: cd, []
+      IdentifierType: ['int']
+  Decl: aa, [], [], []
+    TypeDecl: aa, []
+      IdentifierType: ['int']
+  Decl: ft, [], [], []
+    TypeDecl: ft, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: dh, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: dh, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: qs, [], [], []
+        TypeDecl: qs, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      If: 
+        BinaryOp: <
+          ID: t2
+          Constant: int, 1
+        Compound: 
+          Decl: bq, [], [], []
+            TypeDecl: bq, []
+              IdentifierType: ['int']
+            Constant: int, 0
+          While: 
+            BinaryOp: <
+              ID: bq
+              Constant: int, 1
+            Compound: 
+          While: 
+            BinaryOp: <
+              ID: t2
+              Constant: int, 1
+            Compound: 
+              If: 
+                BinaryOp: ==
+                  ID: t2
+                  Constant: int, 0
+                Compound: 
+                  Assignment: =
+                    ID: bq
+                    Constant: int, 0
+                  Assignment: =
+                    ID: cd
+                    UnaryOp: !
+                      UnaryOp: !
+                        ID: cd
+                Compound: 
+                  Assignment: =
+                    ID: bq
+                    Constant: int, 1
+                  Assignment: =
+                    ID: cd
+                    BinaryOp: >
+                      ID: bq
+                      ID: qs
+              Assignment: +=
+                ID: t2
+                ID: cd
+              Assignment: =
+                ID: bq
+                BinaryOp: ==
+                  BinaryOp: /
+                    ID: t2
+                    ID: qs
+                  ID: bq
+              If: 
+                BinaryOp: !=
+                  ID: aa
+                  ID: ft
+                Compound: 
+                  Assignment: %=
+                    ID: qs
+                    Constant: int, 0
+                  While: 
+                    BinaryOp: !=
+                      ID: bq
+                      Constant: int, 0
+                    Compound: 
+                      Label: ro
+                        EmptyStatement: 
+              UnaryOp: ++
+                ID: t2
+          Label: ia
+            Goto: ro
+      Goto: ia

@@ -1,4 +1,0 @@
-FileAST: 
-  Decl: make_non_empty, [], [], []
-    TypeDecl: make_non_empty, []
-      IdentifierType: ['int']

@@ -1,0 +1,124 @@
+FileAST: 
+  FuncDef: 
+    Decl: b2w, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: out, [], [], []
+            PtrDecl: []
+              TypeDecl: out, []
+                IdentifierType: ['unsigned', 'int']
+          Decl: in, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: in, ['const']
+                IdentifierType: ['unsigned', 'char']
+          Decl: len, [], [], []
+            TypeDecl: len, []
+              IdentifierType: ['unsigned', 'int']
+        TypeDecl: b2w, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: bpend, ['const'], [], []
+        PtrDecl: []
+          TypeDecl: bpend, ['const']
+            IdentifierType: ['unsigned', 'char']
+        BinaryOp: +
+          ID: in
+          ID: len
+      For: 
+        BinaryOp: !=
+          ID: in
+          ID: bpend
+        ExprList: 
+          Assignment: +=
+            ID: in
+            Constant: int, 4
+          UnaryOp: ++
+            ID: out
+        Compound: 
+          Assignment: =
+            UnaryOp: *
+              ID: out
+            BinaryOp: |
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['unsigned', 'int']
+                ArrayRef: 
+                  ID: in
+                  Constant: int, 0
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['unsigned', 'int']
+                BinaryOp: <<
+                  ArrayRef: 
+                    ID: in
+                    Constant: int, 3
+                  Constant: int, 24
+  FuncDef: 
+    Decl: md4step, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: state, [], [], []
+            ArrayDecl: []
+              TypeDecl: state, []
+                IdentifierType: ['unsigned', 'int']
+              Constant: int, 4
+          Decl: data, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: data, ['const']
+                IdentifierType: ['unsigned', 'char']
+        TypeDecl: md4step, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: A, [], [], []
+        TypeDecl: A, []
+          IdentifierType: ['unsigned', 'int']
+      Decl: X, [], [], []
+        ArrayDecl: []
+          TypeDecl: X, []
+            IdentifierType: ['unsigned', 'int']
+          Constant: int, 16
+      FuncCall: 
+        ID: b2w
+        ExprList: 
+          ID: X
+          ID: data
+          Constant: int, 64
+      Assignment: +=
+        ArrayRef: 
+          ID: state
+          Constant: int, 0
+        ID: A
+  FuncDef: 
+    Decl: md4sum, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: md4sum, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: final, [], [], []
+        ArrayDecl: []
+          TypeDecl: final, []
+            IdentifierType: ['unsigned', 'char']
+          Constant: int, 128
+      Decl: state, [], [], []
+        ArrayDecl: []
+          TypeDecl: state, []
+            IdentifierType: ['unsigned', 'int']
+          Constant: int, 4
+      FuncCall: 
+        ID: md4step
+        ExprList: 
+          ID: state
+          ID: final
+      FuncCall: 
+        ID: md4step
+        ExprList: 
+          ID: state
+          BinaryOp: +
+            ID: final
+            Constant: int, 64

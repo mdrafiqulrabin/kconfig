@@ -1,0 +1,26 @@
+c_files/pr85022.c:8:21: error: dereference of pointer to incomplete type 'struct B'
+  __asm ("" : "+m" (b));
+                    ^
+c_files/pr85022.c:3:15: note: forward declaration of 'struct B'
+extern struct B b;
+              ^
+1 error generated.
+TranslationUnitDecl 0x7fda058264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fda05826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fda05826740 '__int128'
+|-TypedefDecl 0x7fda05826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fda05826760 'unsigned __int128'
+|-TypedefDecl 0x7fda05826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fda05826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fda05826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fda05826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fda05826dc0 'char *'
+|   `-BuiltinType 0x7fda05826560 'char'
+|-TypedefDecl 0x7fda058270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fda05827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fda05826ee0 'struct __va_list_tag'
+|     `-Record 0x7fda05826e58 '__va_list_tag'
+|-RecordDecl 0x7fda05827120 <c_files/pr85022.c:3:8, col:15> col:15 struct B
+|-VarDecl 0x7fda06025a20 <col:1, col:17> col:17 used b 'struct B':'struct B' extern
+`-FunctionDecl 0x7fda06025b28 <line:5:1, line:9:1> line:6:1 foo 'void ()'
+  `-CompoundStmt 0x7fda06026060 <line:7:1, line:9:1>

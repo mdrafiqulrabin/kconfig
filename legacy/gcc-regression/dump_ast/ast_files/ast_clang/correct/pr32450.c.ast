@@ -1,0 +1,56 @@
+TranslationUnitDecl 0x7fd2970264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd297026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd297026740 '__int128'
+|-TypedefDecl 0x7fd297026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd297026760 'unsigned __int128'
+|-TypedefDecl 0x7fd297026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd297026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd297026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd297026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd297026dc0 'char *'
+|   `-BuiltinType 0x7fd297026560 'char'
+|-TypedefDecl 0x7fd2970270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd297027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd297026ee0 'struct __va_list_tag'
+|     `-Record 0x7fd297026e58 '__va_list_tag'
+|-FunctionDecl 0x7fd297825a30 <c_files/pr32450.c:9:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fd297825ac8 prev 0x7fd297825a30 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-VarDecl 0x7fd297825b78 <line:11:1, col:5> col:5 used stack_pointer 'int'
+|-FunctionDecl 0x7fd297825c68 <line:13:1, line:18:1> line:15:1 used mystop 'void ()'
+| |-CompoundStmt 0x7fd297825dd8 <line:16:1, line:18:1>
+| | `-CallExpr 0x7fd297825db0 <line:17:3, col:10> 'void'
+| |   `-ImplicitCastExpr 0x7fd297825d98 <col:3> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+| |     `-DeclRefExpr 0x7fd297825d48 <col:3> 'void (void) __attribute__((noreturn))' Function 0x7fd297825ac8 'abort' 'void (void) __attribute__((noreturn))'
+| `-NoInlineAttr 0x7fd297825d00 <line:14:16>
+|-FunctionDecl 0x7fd297825e18 <line:20:1, line:28:1> line:22:1 used add 'void ()'
+| |-CompoundStmt 0x7fd297826168 <line:23:1, line:28:1>
+| | |-IfStmt 0x7fd297826058 <line:24:3, line:25:13>
+| | | |-<<<NULL>>>
+| | | |-<<<NULL>>>
+| | | |-BinaryOperator 0x7fd297825fa0 <line:24:7, col:27> 'int' '>'
+| | | | |-BinaryOperator 0x7fd297825f58 <col:7, col:23> 'int' '+'
+| | | | | |-ImplicitCastExpr 0x7fd297825f40 <col:7> 'int' <LValueToRValue>
+| | | | | | `-DeclRefExpr 0x7fd297825ef8 <col:7> 'int' lvalue Var 0x7fd297825b78 'stack_pointer' 'int'
+| | | | | `-IntegerLiteral 0x7fd297825f20 <col:23> 'int' 1
+| | | | `-IntegerLiteral 0x7fd297825f80 <col:27> 'int' 10
+| | | |-CallExpr 0x7fd297826030 <line:25:5, col:13> 'void'
+| | | | `-ImplicitCastExpr 0x7fd297826018 <col:5> 'void (*)()' <FunctionToPointerDecay>
+| | | |   `-DeclRefExpr 0x7fd297825fc8 <col:5> 'void ()' Function 0x7fd297825c68 'mystop' 'void ()'
+| | | `-<<<NULL>>>
+| | `-BinaryOperator 0x7fd297826140 <line:27:3, col:35> 'int' '='
+| |   |-DeclRefExpr 0x7fd297826090 <col:3> 'int' lvalue Var 0x7fd297825b78 'stack_pointer' 'int'
+| |   `-BinaryOperator 0x7fd297826118 <col:19, col:35> 'int' '+'
+| |     |-ImplicitCastExpr 0x7fd297826100 <col:19> 'int' <LValueToRValue>
+| |     | `-DeclRefExpr 0x7fd2978260b8 <col:19> 'int' lvalue Var 0x7fd297825b78 'stack_pointer' 'int'
+| |     `-IntegerLiteral 0x7fd2978260e0 <col:35> 'int' 1
+| `-NoInlineAttr 0x7fd297825eb0 <line:21:16>
+`-FunctionDecl 0x7fd2978261e0 <line:30:1, line:34:1> line:30:5 main 'int ()'
+  `-CompoundStmt 0x7fd297826380 <line:31:1, line:34:1>
+    |-CallExpr 0x7fd2978262b8 <line:32:3, col:8> 'void'
+    | `-ImplicitCastExpr 0x7fd2978262a0 <col:3> 'void (*)()' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7fd297826278 <col:3> 'void ()' Function 0x7fd297825e18 'add' 'void ()'
+    `-ReturnStmt 0x7fd297826368 <line:33:3, col:26>
+      `-BinaryOperator 0x7fd297826340 <col:10, col:26> 'int' '-'
+        |-ImplicitCastExpr 0x7fd297826328 <col:10> 'int' <LValueToRValue>
+        | `-DeclRefExpr 0x7fd2978262e0 <col:10> 'int' lvalue Var 0x7fd297825b78 'stack_pointer' 'int'
+        `-IntegerLiteral 0x7fd297826308 <col:26> 'int' 1

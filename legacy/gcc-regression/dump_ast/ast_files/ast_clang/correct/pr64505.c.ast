@@ -1,0 +1,1130 @@
+TranslationUnitDecl 0x7fbab28264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbab2826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fbab2826740 '__int128'
+|-TypedefDecl 0x7fbab2826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fbab2826760 'unsigned __int128'
+|-TypedefDecl 0x7fbab2826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fbab2826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fbab2826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fbab2826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fbab2826dc0 'char *'
+|   `-BuiltinType 0x7fbab2826560 'char'
+|-TypedefDecl 0x7fbab28270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fbab2827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fbab2826ee0 'struct __va_list_tag'
+|     `-Record 0x7fbab2826e58 '__va_list_tag'
+|-RecordDecl 0x7fbab2827120 <c_files/pr64505.c:9:1, line:11:1> line:9:8 struct fltcom_st definition
+| `-FieldDecl 0x7fbab2879260 <line:10:5, col:21> col:11 fltbuf 'short [950]'
+|-VarDecl 0x7fbab2879300 <line:9:1, line:11:3> col:3 used fltcom_ 'struct fltcom_st':'struct fltcom_st'
+| `-CommonAttr 0x7fbab2879360 <col:27>
+|-RecordDecl 0x7fbab2879400 <line:15:1, line:17:1> line:15:8 struct fltcom2_st definition
+| `-FieldDecl 0x7fbab2879530 <line:16:5, col:21> col:11 fltbuf2 'short [56]'
+|-VarDecl 0x7fbab28795d0 <line:15:1, line:17:3> col:3 used fltcom2_ 'struct fltcom2_st':'struct fltcom2_st'
+| `-CommonAttr 0x7fbab2879630 <col:28>
+|-RecordDecl 0x7fbab2879690 <line:23:1, line:29:1> line:23:8 struct aidatcm_st definition
+| |-FieldDecl 0x7fbab2879758 <line:24:5, col:12> col:12 cm_aid 'double'
+| |-FieldDecl 0x7fbab28797b8 <col:5, col:20> col:20 cm_ext 'double'
+| |-FieldDecl 0x7fbab2879818 <col:5, col:28> col:28 referenced cm_basis 'double'
+| |-FieldDecl 0x7fbab2879878 <line:25:5, col:11> col:11 cm_aiday 'short'
+| |-FieldDecl 0x7fbab28798d8 <col:5, col:21> col:21 referenced cm_exday 'short'
+| |-FieldDecl 0x7fbab2879938 <col:5, col:31> col:31 cm_dperd 'short'
+| |-FieldDecl 0x7fbab2879998 <col:5, col:41> col:41 cm_aiexf 'short'
+| |-FieldDecl 0x7fbab28799f8 <col:5, col:51> col:51 cm_aidex 'short'
+| |-FieldDecl 0x7fbab2879a58 <col:5, col:61> col:61 cm_aiok 'short'
+| |-FieldDecl 0x7fbab2879ab8 <col:5, line:26:13> col:13 cm_aigdo 'short'
+| |-FieldDecl 0x7fbab2879b18 <line:25:5, line:26:23> col:23 cm_aildo 'short'
+| |-FieldDecl 0x7fbab2879be0 <line:25:5, line:26:42> col:33 referenced cm_prev 'short [3]'
+| |-FieldDecl 0x7fbab2879c70 <line:25:5, line:26:54> col:45 cm_next 'short [3]'
+| |-FieldDecl 0x7fbab2879d40 <line:25:5, line:26:69> col:57 cm_aid_pad 'short [2]'
+| |-FieldDecl 0x7fbab2879da0 <line:27:5, col:12> col:12 cm_rvgfact 'double'
+| |-FieldDecl 0x7fbab2879e00 <col:5, col:24> col:24 cm_ai1st 'double'
+| |-FieldDecl 0x7fbab2879e60 <col:5, col:34> col:34 cm_ai2nd 'double'
+| `-FieldDecl 0x7fbab2879ec0 <line:28:5, col:9> col:9 cm_aieurok 'int'
+|-VarDecl 0x7fbab2879f60 <line:23:1, line:29:3> col:3 used aidatcm_ 'struct aidatcm_st':'struct aidatcm_st'
+| `-CommonAttr 0x7fbab2879fc0 <col:28>
+|-RecordDecl 0x7fbab287a020 <line:34:1, line:36:1> line:34:8 struct cshfcm_st definition
+| `-FieldDecl 0x7fbab287a150 <line:35:5, col:22> col:11 bufff 'short [10862]'
+|-VarDecl 0x7fbab287c200 <line:34:1, line:36:3> col:3 used cshfcm_ 'struct cshfcm_st':'struct cshfcm_st'
+| `-CommonAttr 0x7fbab287c260 <col:27>
+|-RecordDecl 0x7fbab287c2c0 <line:42:1, line:44:1> line:42:8 struct calctsdb_st definition
+| `-FieldDecl 0x7fbab287c3f0 <line:43:5, col:27> col:11 calctsdbbuff 'short [115]'
+|-VarDecl 0x7fbab287c490 <line:42:1, line:44:3> col:3 used calctsdb_ 'struct calctsdb_st':'struct calctsdb_st'
+| `-CommonAttr 0x7fbab287c4f0 <col:29>
+|-RecordDecl 0x7fbab287c550 <line:49:1, line:51:1> line:49:8 struct cf600cm_st definition
+| `-FieldDecl 0x7fbab287c680 <line:50:5, col:22> col:11 bufcf 'short [14404]'
+|-VarDecl 0x7fbab287c720 <line:49:1, line:51:3> col:3 used cf600cm_ 'struct cf600cm_st':'struct cf600cm_st'
+| `-CommonAttr 0x7fbab287c780 <col:28>
+|-RecordDecl 0x7fbab287c7e0 <line:54:9, col:54> col:9 struct definition
+| |-FieldDecl 0x7fbab287c8a8 <col:18, col:22> col:22 id 'int'
+| |-FieldDecl 0x7fbab287c908 <col:26, col:30> col:30 type 'int'
+| `-FieldDecl 0x7fbab287c968 <col:36, col:48> col:48 name 'const char *'
+|-TypedefDecl 0x7fbab287ca00 <col:1, col:56> col:56 referenced bregdb_bitinfo_t 'struct bregdb_bitinfo_t':'bregdb_bitinfo_t'
+| `-ElaboratedType 0x7fbab287c9b0 'struct bregdb_bitinfo_t' sugar
+|   `-RecordType 0x7fbab287c870 'bregdb_bitinfo_t'
+|     `-Record 0x7fbab287c7e0 ''
+|-FunctionDecl 0x7fbab287cd48 <line:56:1, line:59:56> line:57:1 used bregdb_eval_bbitcxt_bool_rv 'int (const bregdb_bitinfo_t *const, const int, const void *const)'
+| |-ParmVarDecl 0x7fbab287caf8 <col:29, col:60> col:60 bbit 'const bregdb_bitinfo_t *const'
+| |-ParmVarDecl 0x7fbab287cb70 <line:58:29, col:39> col:39 bbit_default 'const int'
+| `-ParmVarDecl 0x7fbab287cc10 <line:59:29, col:48> col:48 bregucxt 'const void *const'
+|-VarDecl 0x7fbab287ce08 <line:61:1, line:62:35> line:61:31 used bbit_calc_dr_d33 'const bregdb_bitinfo_t':'const bregdb_bitinfo_t' static cinit
+| `-InitListExpr 0x7fbab287cf78 <line:62:3, col:35> 'bregdb_bitinfo_t':'bregdb_bitinfo_t'
+|   |-IntegerLiteral 0x7fbab287ce68 <col:5> 'int' 160667
+|   |-IntegerLiteral 0x7fbab287ce88 <col:13> 'int' 5
+|   `-ImplicitCastExpr 0x7fbab287cfe8 <col:16> 'const char *' <BitCast>
+|     `-ImplicitCastExpr 0x7fbab287cfd0 <col:16> 'char *' <ArrayToPointerDecay>
+|       `-StringLiteral 0x7fbab287cee8 <col:16> 'char [17]' lvalue "bbit_calc_dr_d33"
+|-VarDecl 0x7fbab287d010 <line:65:1, line:66:35> line:65:31 used bbit_calc_sx_b24 'const bregdb_bitinfo_t':'const bregdb_bitinfo_t' static cinit
+| `-InitListExpr 0x7fbab287d140 <line:66:3, col:35> 'bregdb_bitinfo_t':'bregdb_bitinfo_t'
+|   |-IntegerLiteral 0x7fbab287d070 <col:5> 'int' 158854
+|   |-IntegerLiteral 0x7fbab287d090 <col:13> 'int' 5
+|   `-ImplicitCastExpr 0x7fbab287d1b0 <col:16> 'const char *' <BitCast>
+|     `-ImplicitCastExpr 0x7fbab287d198 <col:16> 'char *' <ArrayToPointerDecay>
+|       `-StringLiteral 0x7fbab287d0b0 <col:16> 'char [17]' lvalue "bbit_calc_sx_b24"
+|-VarDecl 0x7fbab287f200 <line:69:1, line:70:35> line:69:31 used bbit_calc_dr_d36 'const bregdb_bitinfo_t':'const bregdb_bitinfo_t' static cinit
+| `-InitListExpr 0x7fbab287f330 <line:70:3, col:35> 'bregdb_bitinfo_t':'bregdb_bitinfo_t'
+|   |-IntegerLiteral 0x7fbab287f260 <col:5> 'int' 161244
+|   |-IntegerLiteral 0x7fbab287f280 <col:13> 'int' 5
+|   `-ImplicitCastExpr 0x7fbab287f3a0 <col:16> 'const char *' <BitCast>
+|     `-ImplicitCastExpr 0x7fbab287f388 <col:16> 'char *' <ArrayToPointerDecay>
+|       `-StringLiteral 0x7fbab287f2a0 <col:16> 'char [17]' lvalue "bbit_calc_dr_d36"
+|-VarDecl 0x7fbab287f3c8 <line:73:1, line:74:35> line:73:31 used bbit_calc_dr_d37 'const bregdb_bitinfo_t':'const bregdb_bitinfo_t' static cinit
+| `-InitListExpr 0x7fbab287f4f8 <line:74:3, col:35> 'bregdb_bitinfo_t':'bregdb_bitinfo_t'
+|   |-IntegerLiteral 0x7fbab287f428 <col:5> 'int' 161315
+|   |-IntegerLiteral 0x7fbab287f448 <col:13> 'int' 5
+|   `-ImplicitCastExpr 0x7fbab287f568 <col:16> 'const char *' <BitCast>
+|     `-ImplicitCastExpr 0x7fbab287f550 <col:16> 'char *' <ArrayToPointerDecay>
+|       `-StringLiteral 0x7fbab287f468 <col:16> 'char [17]' lvalue "bbit_calc_dr_d37"
+|-VarDecl 0x7fbab287f590 <line:77:1, line:78:35> line:77:31 used bbit_calc_dr_d47 'const bregdb_bitinfo_t':'const bregdb_bitinfo_t' static cinit
+| `-InitListExpr 0x7fbab287f6c0 <line:78:3, col:35> 'bregdb_bitinfo_t':'bregdb_bitinfo_t'
+|   |-IntegerLiteral 0x7fbab287f5f0 <col:5> 'int' 163259
+|   |-IntegerLiteral 0x7fbab287f610 <col:13> 'int' 5
+|   `-ImplicitCastExpr 0x7fbab287f730 <col:16> 'const char *' <BitCast>
+|     `-ImplicitCastExpr 0x7fbab287f718 <col:16> 'char *' <ArrayToPointerDecay>
+|       `-StringLiteral 0x7fbab287f630 <col:16> 'char [17]' lvalue "bbit_calc_dr_d47"
+|-VarDecl 0x7fbab287f758 <line:81:1, line:82:35> line:81:31 used bbit_calc_dr_d46 'const bregdb_bitinfo_t':'const bregdb_bitinfo_t' static cinit
+| `-InitListExpr 0x7fbab287f888 <line:82:3, col:35> 'bregdb_bitinfo_t':'bregdb_bitinfo_t'
+|   |-IntegerLiteral 0x7fbab287f7b8 <col:5> 'int' 163239
+|   |-IntegerLiteral 0x7fbab287f7d8 <col:13> 'int' 5
+|   `-ImplicitCastExpr 0x7fbab287f8f8 <col:16> 'const char *' <BitCast>
+|     `-ImplicitCastExpr 0x7fbab287f8e0 <col:16> 'char *' <ArrayToPointerDecay>
+|       `-StringLiteral 0x7fbab287f7f8 <col:16> 'char [17]' lvalue "bbit_calc_dr_d46"
+|-VarDecl 0x7fbab287f920 <line:85:1, line:86:35> line:85:31 used bbit_calc_dr_d62 'const bregdb_bitinfo_t':'const bregdb_bitinfo_t' static cinit
+| `-InitListExpr 0x7fbab287fa50 <line:86:3, col:35> 'bregdb_bitinfo_t':'bregdb_bitinfo_t'
+|   |-IntegerLiteral 0x7fbab287f980 <col:5> 'int' 166603
+|   |-IntegerLiteral 0x7fbab287f9a0 <col:13> 'int' 5
+|   `-ImplicitCastExpr 0x7fbab287fac0 <col:16> 'const char *' <BitCast>
+|     `-ImplicitCastExpr 0x7fbab287faa8 <col:16> 'char *' <ArrayToPointerDecay>
+|       `-StringLiteral 0x7fbab287f9c0 <col:16> 'char [17]' lvalue "bbit_calc_dr_d62"
+|-FunctionDecl 0x7fbab287fbe8 <line:92:1, col:34> col:5 used dtyp_is_actact_ 'int (short *)'
+| `-ParmVarDecl 0x7fbab287fb20 <col:21, col:28> col:28 daytyp 'short *'
+|-FunctionDecl 0x7fbab287fe78 <line:93:1, col:70> col:8 used rnd_trunc_numb 'double (double, short, short)'
+| |-ParmVarDecl 0x7fbab287fca0 <col:23, col:30> col:30 in 'double'
+| |-ParmVarDecl 0x7fbab287fd18 <col:34, col:40> col:40 num_digits 'short'
+| `-ParmVarDecl 0x7fbab287fd90 <col:52, col:58> col:58 rnd_or_trunc 'short'
+|-FunctionDecl 0x7fbab28800c0 <line:94:1, col:42> col:6 used datetrn_ 'void (const short *, short *)'
+| |-ParmVarDecl 0x7fbab287ff70 <col:15, col:28> col:28 dt 'const short *'
+| `-ParmVarDecl 0x7fbab287ffe8 <col:32, col:39> col:39 dt2 'short *'
+|-FunctionDecl 0x7fbab28689e8 <line:95:1, col:76> col:7 used difday_ 'short (short *, short *, short *, short *)'
+| |-ParmVarDecl 0x7fbab2880180 <col:15, col:22> col:22 daytyp_in 'short *'
+| |-ParmVarDecl 0x7fbab2868800 <col:33, col:40> col:40 srtdti 'short *'
+| |-ParmVarDecl 0x7fbab2868878 <col:48, col:55> col:55 enddti 'short *'
+| `-ParmVarDecl 0x7fbab28688f0 <col:63, col:70> col:70 ercode 'short *'
+|-FunctionDecl 0x7fbab2868c08 <line:98:8> col:8 implicit used pow 'double (double, double)' extern
+| |-ParmVarDecl 0x7fbab2868ca0 <<invalid sloc>> <invalid sloc> 'double'
+| |-ParmVarDecl 0x7fbab2868d00 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7fbab2868d70 <col:8> Implicit
+| `-NoThrowAttr 0x7fbab2868db8 <col:8> Implicit
+|-FunctionDecl 0x7fbab2868dc8 prev 0x7fbab2868c08 <col:1, col:30> col:8 used pow 'double (double, double)'
+| |-ParmVarDecl 0x7fbab2868ab8 <col:12, col:19> col:19 x 'double'
+| |-ParmVarDecl 0x7fbab2868b30 <col:22, col:29> col:29 y 'double'
+| |-ConstAttr 0x7fbab2868ea8 <col:8> Inherited Implicit
+| `-NoThrowAttr 0x7fbab2868eb8 <col:8> Inherited Implicit
+`-FunctionDecl 0x7fbab2869890 <line:106:1, line:231:1> line:106:6 calc_1566 'void (short, short, short, short *, short *, short *, short *, double, short *, double *, double *, double *, double *, short *)'
+  |-ParmVarDecl 0x7fbab2868ee0 <line:107:3, col:10> col:10 used sCalcType 'short'
+  |-ParmVarDecl 0x7fbab2868f58 <line:108:3, col:10> col:10 used sDayType 'short'
+  |-ParmVarDecl 0x7fbab2868fd0 <line:109:3, col:10> col:10 used sFreq 'short'
+  |-ParmVarDecl 0x7fbab28690b0 <line:110:3, col:22> col:10 used asSettleDt 'short *':'short *'
+  |-ParmVarDecl 0x7fbab2869158 <line:111:3, col:19> col:10 asMtyDt 'short *':'short *'
+  |-ParmVarDecl 0x7fbab2869200 <line:112:3, col:21> col:10 asIssueDt 'short *':'short *'
+  |-ParmVarDecl 0x7fbab28692a8 <line:113:3, col:20> col:10 asFCpnDt 'short *':'short *'
+  |-ParmVarDecl 0x7fbab2869320 <line:114:3, col:10> col:10 dCpn 'double'
+  |-ParmVarDecl 0x7fbab2869398 <line:115:3, col:11> col:11 psNoPer 'short *'
+  |-ParmVarDecl 0x7fbab2869440 <line:116:3, col:11> col:11 pdExt 'double *'
+  |-ParmVarDecl 0x7fbab28694b8 <line:117:3, col:11> col:11 used pdAI 'double *'
+  |-ParmVarDecl 0x7fbab2869530 <line:118:3, col:11> col:11 pdAI2 'double *'
+  |-ParmVarDecl 0x7fbab28695a8 <line:119:3, col:11> col:11 pdFCpn 'double *'
+  |-ParmVarDecl 0x7fbab2869620 <line:120:3, col:11> col:11 psRcode 'short *'
+  `-CompoundStmt 0x7fbab288d230 <line:121:1, line:231:1>
+    |-DeclStmt 0x7fbab2869a48 <line:123:5, col:21>
+    | `-VarDecl 0x7fbab28699b0 <col:5, col:20> col:11 used ercode 'short' cinit
+    |   `-ImplicitCastExpr 0x7fbab2869a30 <col:20> 'short' <IntegralCast>
+    |     `-IntegerLiteral 0x7fbab2869a10 <col:20> 'int' 0
+    |-DeclStmt 0x7fbab2869ad8 <line:124:5, col:17>
+    | `-VarDecl 0x7fbab2869a78 <col:5, col:9> col:9 used isactact 'int'
+    |-DeclStmt 0x7fbab2869ba0 <line:125:5, col:31>
+    | `-VarDecl 0x7fbab2869b08 <col:5, col:30> col:11 used days_to_next_cpn 'short' cinit
+    |   `-ImplicitCastExpr 0x7fbab2869b88 <col:30> 'short' <IntegralCast>
+    |     `-IntegerLiteral 0x7fbab2869b68 <col:30> 'int' 0
+    |-DeclStmt 0x7fbab2869df8 <line:126:5, col:52>
+    | `-VarDecl 0x7fbab2869bd0 <col:5, line:47:61> line:126:17 used discDaytype 'const short' cinit
+    |   `-ImplicitCastExpr 0x7fbab2869de0 <line:47:31, col:61> 'short' <LValueToRValue>
+    |     `-ParenExpr 0x7fbab2869dc0 <col:31, col:61> 'short' lvalue
+    |       `-UnaryOperator 0x7fbab2869da0 <col:32, col:60> 'short' lvalue prefix '*'
+    |         `-ParenExpr 0x7fbab2869d80 <col:33, col:60> 'short *'
+    |           `-ParenExpr 0x7fbab2869d60 <col:34, col:59> 'short *'
+    |             `-BinaryOperator 0x7fbab2869d38 <col:35, col:57> 'short *' '+'
+    |               |-CStyleCastExpr 0x7fbab2869cf0 <col:35, col:45> 'short *' <BitCast>
+    |               | `-UnaryOperator 0x7fbab2869cb8 <col:44, col:45> 'struct calctsdb_st *' prefix '&'
+    |               |   `-DeclRefExpr 0x7fbab2869c30 <col:45> 'struct calctsdb_st':'struct calctsdb_st' lvalue Var 0x7fbab287c490 'calctsdb_' 'struct calctsdb_st':'struct calctsdb_st'
+    |               `-IntegerLiteral 0x7fbab2869d18 <col:57> 'int' 59
+    |-IfStmt 0x7fbab286a2f8 <line:128:5, line:131:52>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-CallExpr 0x7fbab2869f30 <line:68:3, col:54> 'int'
+    | | |-ImplicitCastExpr 0x7fbab2869f18 <col:3> 'int (*)(const bregdb_bitinfo_t *const, const int, const void *const)' <FunctionToPointerDecay>
+    | | | `-DeclRefExpr 0x7fbab2869e10 <col:3> 'int (const bregdb_bitinfo_t *const, const int, const void *const)' Function 0x7fbab287cd48 'bregdb_eval_bbitcxt_bool_rv' 'int (const bregdb_bitinfo_t *const, const int, const void *const)'
+    | | |-UnaryOperator 0x7fbab2869e60 <col:31, col:32> 'const bregdb_bitinfo_t *' prefix '&'
+    | | | `-DeclRefExpr 0x7fbab2869e38 <col:32> 'const bregdb_bitinfo_t':'const bregdb_bitinfo_t' lvalue Var 0x7fbab287d010 'bbit_calc_sx_b24' 'const bregdb_bitinfo_t':'const bregdb_bitinfo_t'
+    | | |-IntegerLiteral 0x7fbab2869e80 <col:50> 'int' 0
+    | | `-ImplicitCastExpr 0x7fbab2869f70 <col:53> 'const void *' <NullToPointer>
+    | |   `-IntegerLiteral 0x7fbab2869ea0 <col:53> 'int' 0
+    | |-BinaryOperator 0x7fbab286a0f8 <line:129:9, col:52> 'int' '='
+    | | |-DeclRefExpr 0x7fbab2869f88 <col:9> 'int' lvalue Var 0x7fbab2869a78 'isactact' 'int'
+    | | `-ParenExpr 0x7fbab286a0d8 <col:20, col:52> 'int'
+    | |   `-BinaryOperator 0x7fbab286a0b0 <col:21, col:51> 'int' '!='
+    | |     |-CallExpr 0x7fbab286a060 <col:21, col:46> 'int'
+    | |     | |-ImplicitCastExpr 0x7fbab286a048 <col:21> 'int (*)(short *)' <FunctionToPointerDecay>
+    | |     | | `-DeclRefExpr 0x7fbab2869fb0 <col:21> 'int (short *)' Function 0x7fbab287fbe8 'dtyp_is_actact_' 'int (short *)'
+    | |     | `-UnaryOperator 0x7fbab286a000 <col:37, col:38> 'short *' prefix '&'
+    | |     |   `-DeclRefExpr 0x7fbab2869fd8 <col:38> 'short' lvalue ParmVar 0x7fbab2868f58 'sDayType' 'short'
+    | |     `-IntegerLiteral 0x7fbab286a090 <col:51> 'int' 0
+    | `-BinaryOperator 0x7fbab286a2d0 <line:131:9, col:52> 'int' '='
+    |   |-DeclRefExpr 0x7fbab286a120 <col:9> 'int' lvalue Var 0x7fbab2869a78 'isactact' 'int'
+    |   `-ParenExpr 0x7fbab286a2b0 <col:20, col:52> 'int'
+    |     `-BinaryOperator 0x7fbab286a288 <col:21, col:50> 'int' '||'
+    |       |-BinaryOperator 0x7fbab286a1c0 <col:21, col:33> 'int' '=='
+    |       | |-ImplicitCastExpr 0x7fbab286a1a8 <col:21> 'int' <IntegralCast>
+    |       | | `-ImplicitCastExpr 0x7fbab286a190 <col:21> 'short' <LValueToRValue>
+    |       | |   `-DeclRefExpr 0x7fbab286a148 <col:21> 'short' lvalue ParmVar 0x7fbab2868f58 'sDayType' 'short'
+    |       | `-IntegerLiteral 0x7fbab286a170 <col:33> 'int' 1
+    |       `-BinaryOperator 0x7fbab286a260 <col:38, col:50> 'int' '=='
+    |         |-ImplicitCastExpr 0x7fbab286a248 <col:38> 'int' <IntegralCast>
+    |         | `-ImplicitCastExpr 0x7fbab286a230 <col:38> 'short' <LValueToRValue>
+    |         |   `-DeclRefExpr 0x7fbab286a1e8 <col:38> 'short' lvalue ParmVar 0x7fbab2868f58 'sDayType' 'short'
+    |         `-IntegerLiteral 0x7fbab286a210 <col:50> 'int' 10
+    |-DeclStmt 0x7fbab286a728 <line:133:5, col:80>
+    | `-VarDecl 0x7fbab286a348 <col:5, col:79> col:11 used days_in_current_period 'short' cinit
+    |   `-CallExpr 0x7fbab286a6e0 <col:36, col:79> 'short'
+    |     |-ImplicitCastExpr 0x7fbab286a6c8 <col:36> 'short (*)(short *, short *, short *, short *)' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x7fbab286a3a8 <col:36> 'short (short *, short *, short *, short *)' Function 0x7fbab28689e8 'difday_' 'short (short *, short *, short *, short *)'
+    |     |-UnaryOperator 0x7fbab286a3f8 <col:44, col:45> 'short *' prefix '&'
+    |     | `-DeclRefExpr 0x7fbab286a3d0 <col:45> 'short' lvalue ParmVar 0x7fbab2868f58 'sDayType' 'short'
+    |     |-ParenExpr 0x7fbab286a540 <line:18:18, col:42> 'short *'
+    |     | `-BinaryOperator 0x7fbab286a518 <col:19, col:40> 'short *' '+'
+    |     |   |-CStyleCastExpr 0x7fbab286a4d0 <col:19, col:29> 'short *' <BitCast>
+    |     |   | `-UnaryOperator 0x7fbab286a498 <col:28, col:29> 'struct fltcom2_st *' prefix '&'
+    |     |   |   `-DeclRefExpr 0x7fbab286a418 <col:29> 'struct fltcom2_st':'struct fltcom2_st' lvalue Var 0x7fbab28795d0 'fltcom2_' 'struct fltcom2_st':'struct fltcom2_st'
+    |     |   `-IntegerLiteral 0x7fbab286a4f8 <col:40> 'int' 17
+    |     |-ParenExpr 0x7fbab286a630 <line:19:18, col:42> 'short *'
+    |     | `-BinaryOperator 0x7fbab286a608 <col:19, col:40> 'short *' '+'
+    |     |   |-CStyleCastExpr 0x7fbab286a5c0 <col:19, col:29> 'short *' <BitCast>
+    |     |   | `-UnaryOperator 0x7fbab286a588 <col:28, col:29> 'struct fltcom2_st *' prefix '&'
+    |     |   |   `-DeclRefExpr 0x7fbab286a560 <col:29> 'struct fltcom2_st':'struct fltcom2_st' lvalue Var 0x7fbab28795d0 'fltcom2_' 'struct fltcom2_st':'struct fltcom2_st'
+    |     |   `-IntegerLiteral 0x7fbab286a5e8 <col:40> 'int' 20
+    |     `-UnaryOperator 0x7fbab286a678 <line:133:72, col:73> 'short *' prefix '&'
+    |       `-DeclRefExpr 0x7fbab286a650 <col:73> 'short' lvalue Var 0x7fbab28699b0 'ercode' 'short'
+    |-DeclStmt 0x7fbab28855a8 <line:134:5, col:80>
+    | `-VarDecl 0x7fbab286a758 <col:5, col:79> col:17 used sfreq1 'const short' cinit
+    |   `-ImplicitCastExpr 0x7fbab2885590 <col:26, col:79> 'short' <IntegralCast>
+    |     `-ParenExpr 0x7fbab2885570 <col:26, col:79> 'int'
+    |       `-BinaryOperator 0x7fbab2885548 <line:45:28, line:134:78> 'int' '&&'
+    |         |-BinaryOperator 0x7fbab2885358 <line:45:28, line:134:49> 'int' '=='
+    |         | |-ImplicitCastExpr 0x7fbab2885340 <line:45:28, col:58> 'int' <IntegralCast>
+    |         | | `-ImplicitCastExpr 0x7fbab2885328 <col:28, col:58> 'short' <LValueToRValue>
+    |         | |   `-ParenExpr 0x7fbab28852e8 <col:28, col:58> 'short' lvalue
+    |         | |     `-UnaryOperator 0x7fbab28852c8 <col:29, col:57> 'short' lvalue prefix '*'
+    |         | |       `-ParenExpr 0x7fbab28852a8 <col:30, col:57> 'short *'
+    |         | |         `-ParenExpr 0x7fbab2885288 <col:31, col:56> 'short *'
+    |         | |           `-BinaryOperator 0x7fbab2885260 <col:32, col:54> 'short *' '+'
+    |         | |             |-CStyleCastExpr 0x7fbab2885218 <col:32, col:42> 'short *' <BitCast>
+    |         | |             | `-UnaryOperator 0x7fbab286a7e0 <col:41, col:42> 'struct calctsdb_st *' prefix '&'
+    |         | |             |   `-DeclRefExpr 0x7fbab286a7b8 <col:42> 'struct calctsdb_st':'struct calctsdb_st' lvalue Var 0x7fbab287c490 'calctsdb_' 'struct calctsdb_st':'struct calctsdb_st'
+    |         | |             `-IntegerLiteral 0x7fbab2885240 <col:54> 'int' 16
+    |         | `-IntegerLiteral 0x7fbab2885308 <line:134:49> 'int' 1
+    |         `-BinaryOperator 0x7fbab2885520 <line:46:30, line:134:78> 'int' '=='
+    |           |-ImplicitCastExpr 0x7fbab2885508 <line:46:30, col:60> 'int' <IntegralCast>
+    |           | `-ImplicitCastExpr 0x7fbab28854f0 <col:30, col:60> 'short' <LValueToRValue>
+    |           |   `-ParenExpr 0x7fbab28854b0 <col:30, col:60> 'short' lvalue
+    |           |     `-UnaryOperator 0x7fbab2885490 <col:31, col:59> 'short' lvalue prefix '*'
+    |           |       `-ParenExpr 0x7fbab2885470 <col:32, col:59> 'short *'
+    |           |         `-ParenExpr 0x7fbab2885450 <col:33, col:58> 'short *'
+    |           |           `-BinaryOperator 0x7fbab2885428 <col:34, col:56> 'short *' '+'
+    |           |             |-CStyleCastExpr 0x7fbab28853e0 <col:34, col:44> 'short *' <BitCast>
+    |           |             | `-UnaryOperator 0x7fbab28853a8 <col:43, col:44> 'struct calctsdb_st *' prefix '&'
+    |           |             |   `-DeclRefExpr 0x7fbab2885380 <col:44> 'struct calctsdb_st':'struct calctsdb_st' lvalue Var 0x7fbab287c490 'calctsdb_' 'struct calctsdb_st':'struct calctsdb_st'
+    |           |             `-IntegerLiteral 0x7fbab2885408 <col:56> 'int' 61
+    |           `-IntegerLiteral 0x7fbab28854d0 <line:134:78> 'int' 1
+    |-ForStmt 0x7fbab288c030 <line:136:5, line:214:5>
+    | |-DeclStmt 0x7fbab2885658 <line:136:10, col:19>
+    | | `-VarDecl 0x7fbab28855d8 <col:10, col:18> col:14 used j 'int' cinit
+    | |   `-IntegerLiteral 0x7fbab2885638 <col:18> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fbab2885888 <col:21, line:37:47> 'int' '<'
+    | | |-ImplicitCastExpr 0x7fbab2885840 <line:136:21> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fbab2885670 <col:21> 'int' lvalue Var 0x7fbab28855d8 'j' 'int'
+    | | `-ImplicitCastExpr 0x7fbab2885870 <line:37:17, col:47> 'int' <IntegralCast>
+    | |   `-ImplicitCastExpr 0x7fbab2885858 <col:17, col:47> 'short' <LValueToRValue>
+    | |     `-ParenExpr 0x7fbab2885820 <col:17, col:47> 'short' lvalue
+    | |       `-UnaryOperator 0x7fbab2885800 <col:18, col:46> 'short' lvalue prefix '*'
+    | |         `-ParenExpr 0x7fbab28857e0 <col:19, col:46> 'short *'
+    | |           `-ParenExpr 0x7fbab28857c0 <col:20, col:45> 'short *'
+    | |             `-BinaryOperator 0x7fbab2885798 <col:21, col:41> 'short *' '+'
+    | |               |-CStyleCastExpr 0x7fbab2885750 <col:21, col:31> 'short *' <BitCast>
+    | |               | `-UnaryOperator 0x7fbab2885718 <col:30, col:31> 'struct cshfcm_st *' prefix '&'
+    | |               |   `-DeclRefExpr 0x7fbab2885698 <col:31> 'struct cshfcm_st':'struct cshfcm_st' lvalue Var 0x7fbab287c200 'cshfcm_' 'struct cshfcm_st':'struct cshfcm_st'
+    | |               `-IntegerLiteral 0x7fbab2885778 <col:41> 'int' 9038
+    | |-UnaryOperator 0x7fbab28858d8 <line:136:34, col:35> 'int' postfix '++'
+    | | `-DeclRefExpr 0x7fbab28858b0 <col:34> 'int' lvalue Var 0x7fbab28855d8 'j' 'int'
+    | `-CompoundStmt 0x7fbab288c008 <col:39, line:214:5>
+    |   |-IfStmt 0x7fbab288b860 <line:138:9, line:208:9>
+    |   | |-<<<NULL>>>
+    |   | |-<<<NULL>>>
+    |   | |-BinaryOperator 0x7fbab2885958 <line:138:12, col:17> 'int' '=='
+    |   | | |-ImplicitCastExpr 0x7fbab2885940 <col:12> 'int' <LValueToRValue>
+    |   | | | `-DeclRefExpr 0x7fbab28858f8 <col:12> 'int' lvalue Var 0x7fbab28855d8 'j' 'int'
+    |   | | `-IntegerLiteral 0x7fbab2885920 <col:17> 'int' 0
+    |   | |-CompoundStmt 0x7fbab2886f20 <col:20, line:153:9>
+    |   | | |-BinaryOperator 0x7fbab2885bf0 <line:139:13, col:77> 'short' '='
+    |   | | | |-DeclRefExpr 0x7fbab2885980 <col:13> 'short' lvalue Var 0x7fbab2869b08 'days_to_next_cpn' 'short'
+    |   | | | `-CallExpr 0x7fbab2885b90 <col:32, col:77> 'short'
+    |   | | |   |-ImplicitCastExpr 0x7fbab2885b78 <col:32> 'short (*)(short *, short *, short *, short *)' <FunctionToPointerDecay>
+    |   | | |   | `-DeclRefExpr 0x7fbab28859a8 <col:32> 'short (short *, short *, short *, short *)' Function 0x7fbab28689e8 'difday_' 'short (short *, short *, short *, short *)'
+    |   | | |   |-UnaryOperator 0x7fbab28859f8 <col:40, col:41> 'short *' prefix '&'
+    |   | | |   | `-DeclRefExpr 0x7fbab28859d0 <col:41> 'short' lvalue ParmVar 0x7fbab2868f58 'sDayType' 'short'
+    |   | | |   |-ImplicitCastExpr 0x7fbab2885bd8 <col:50> 'short *':'short *' <LValueToRValue>
+    |   | | |   | `-DeclRefExpr 0x7fbab2885a18 <col:50> 'short *':'short *' lvalue ParmVar 0x7fbab28690b0 'asSettleDt' 'short *':'short *'
+    |   | | |   |-ParenExpr 0x7fbab2885b10 <line:19:18, col:42> 'short *'
+    |   | | |   | `-BinaryOperator 0x7fbab2885ae8 <col:19, col:40> 'short *' '+'
+    |   | | |   |   |-CStyleCastExpr 0x7fbab2885aa0 <col:19, col:29> 'short *' <BitCast>
+    |   | | |   |   | `-UnaryOperator 0x7fbab2885a68 <col:28, col:29> 'struct fltcom2_st *' prefix '&'
+    |   | | |   |   |   `-DeclRefExpr 0x7fbab2885a40 <col:29> 'struct fltcom2_st':'struct fltcom2_st' lvalue Var 0x7fbab28795d0 'fltcom2_' 'struct fltcom2_st':'struct fltcom2_st'
+    |   | | |   |   `-IntegerLiteral 0x7fbab2885ac8 <col:40> 'int' 20
+    |   | | |   `-UnaryOperator 0x7fbab2885b58 <line:139:70, col:71> 'short *' prefix '&'
+    |   | | |     `-DeclRefExpr 0x7fbab2885b30 <col:71> 'short' lvalue Var 0x7fbab28699b0 'ercode' 'short'
+    |   | | |-IfStmt 0x7fbab2886988 <line:141:13, line:148:13>
+    |   | | | |-<<<NULL>>>
+    |   | | | |-<<<NULL>>>
+    |   | | | |-ImplicitCastExpr 0x7fbab2885c40 <line:141:16> 'int' <LValueToRValue>
+    |   | | | | `-DeclRefExpr 0x7fbab2885c18 <col:16> 'int' lvalue Var 0x7fbab2869a78 'isactact' 'int'
+    |   | | | |-CompoundStmt 0x7fbab2886250 <col:26, line:144:13>
+    |   | | | | |-BinaryOperator 0x7fbab2885f68 <line:38:18, line:142:42> 'double' '='
+    |   | | | | | |-ArraySubscriptExpr 0x7fbab2885d88 <line:38:18, line:142:27> 'double' lvalue
+    |   | | | | | | |-ParenExpr 0x7fbab2885d28 <line:38:18, col:41> 'double *'
+    |   | | | | | | | `-BinaryOperator 0x7fbab2885d00 <col:19, col:40> 'double *' '+'
+    |   | | | | | | |   |-CStyleCastExpr 0x7fbab2885cb8 <col:19, col:30> 'double *' <BitCast>
+    |   | | | | | | |   | `-UnaryOperator 0x7fbab2885c80 <col:29, col:30> 'struct cshfcm_st *' prefix '&'
+    |   | | | | | | |   |   `-DeclRefExpr 0x7fbab2885c58 <col:30> 'struct cshfcm_st':'struct cshfcm_st' lvalue Var 0x7fbab287c200 'cshfcm_' 'struct cshfcm_st':'struct cshfcm_st'
+    |   | | | | | | |   `-IntegerLiteral 0x7fbab2885ce0 <col:40> 'int' 1
+    |   | | | | | | `-ImplicitCastExpr 0x7fbab2885d70 <line:142:26> 'int' <LValueToRValue>
+    |   | | | | | |   `-DeclRefExpr 0x7fbab2885d48 <col:26> 'int' lvalue Var 0x7fbab28855d8 'j' 'int'
+    |   | | | | | `-BinaryOperator 0x7fbab2885f40 <line:20:18, line:142:42> 'double' '/'
+    |   | | | | |   |-ImplicitCastExpr 0x7fbab2885ee0 <line:20:18, col:43> 'double' <LValueToRValue>
+    |   | | | | |   | `-ParenExpr 0x7fbab2885e98 <col:18, col:43> 'double' lvalue
+    |   | | | | |   |   `-UnaryOperator 0x7fbab2885e78 <col:19, col:42> 'double' lvalue prefix '*'
+    |   | | | | |   |     `-ParenExpr 0x7fbab2885e58 <col:20, col:42> 'double *'
+    |   | | | | |   |       `-ParenExpr 0x7fbab2885e38 <col:21, col:41> 'double *'
+    |   | | | | |   |         `-CStyleCastExpr 0x7fbab2885e10 <col:22, col:33> 'double *' <BitCast>
+    |   | | | | |   |           `-UnaryOperator 0x7fbab2885dd8 <col:32, col:33> 'struct fltcom2_st *' prefix '&'
+    |   | | | | |   |             `-DeclRefExpr 0x7fbab2885db0 <col:33> 'struct fltcom2_st':'struct fltcom2_st' lvalue Var 0x7fbab28795d0 'fltcom2_' 'struct fltcom2_st':'struct fltcom2_st'
+    |   | | | | |   `-ImplicitCastExpr 0x7fbab2885f28 <line:142:42> 'double' <IntegralToFloating>
+    |   | | | | |     `-ImplicitCastExpr 0x7fbab2885f10 <col:42> 'int' <IntegralCast>
+    |   | | | | |       `-ImplicitCastExpr 0x7fbab2885ef8 <col:42> 'short' <LValueToRValue>
+    |   | | | | |         `-DeclRefExpr 0x7fbab2885eb8 <col:42> 'short' lvalue ParmVar 0x7fbab2868fd0 'sFreq' 'short'
+    |   | | | | `-BinaryOperator 0x7fbab2886228 <line:39:18, line:143:66> 'double' '='
+    |   | | | |   |-ArraySubscriptExpr 0x7fbab28860c0 <line:39:18, line:143:27> 'double' lvalue
+    |   | | | |   | |-ParenExpr 0x7fbab2886060 <line:39:18, col:44> 'double *'
+    |   | | | |   | | `-BinaryOperator 0x7fbab2886038 <col:19, col:40> 'double *' '+'
+    |   | | | |   | |   |-CStyleCastExpr 0x7fbab2885ff0 <col:19, col:30> 'double *' <BitCast>
+    |   | | | |   | |   | `-UnaryOperator 0x7fbab2885fb8 <col:29, col:30> 'struct cshfcm_st *' prefix '&'
+    |   | | | |   | |   |   `-DeclRefExpr 0x7fbab2885f90 <col:30> 'struct cshfcm_st':'struct cshfcm_st' lvalue Var 0x7fbab287c200 'cshfcm_' 'struct cshfcm_st':'struct cshfcm_st'
+    |   | | | |   | |   `-IntegerLiteral 0x7fbab2886018 <col:40> 'int' 1201
+    |   | | | |   | `-ImplicitCastExpr 0x7fbab28860a8 <line:143:26> 'int' <LValueToRValue>
+    |   | | | |   |   `-DeclRefExpr 0x7fbab2886080 <col:26> 'int' lvalue Var 0x7fbab28855d8 'j' 'int'
+    |   | | | |   `-BinaryOperator 0x7fbab2886200 <col:31, col:66> 'double' '/'
+    |   | | | |     |-CStyleCastExpr 0x7fbab2886140 <col:31, col:39> 'double' <IntegralToFloating>
+    |   | | | |     | `-ImplicitCastExpr 0x7fbab2886128 <col:39> 'short' <LValueToRValue>
+    |   | | | |     |   `-DeclRefExpr 0x7fbab28860e8 <col:39> 'short' lvalue Var 0x7fbab2869b08 'days_to_next_cpn' 'short'
+    |   | | | |     `-CStyleCastExpr 0x7fbab28861c0 <col:58, col:66> 'double' <IntegralToFloating>
+    |   | | | |       `-ImplicitCastExpr 0x7fbab28861a8 <col:66> 'short' <LValueToRValue>
+    |   | | | |         `-DeclRefExpr 0x7fbab2886168 <col:66> 'short' lvalue Var 0x7fbab286a348 'days_in_current_period' 'short'
+    |   | | | `-CompoundStmt 0x7fbab2886960 <line:145:18, line:148:13>
+    |   | | |   |-BinaryOperator 0x7fbab2886588 <line:38:18, line:146:42> 'double' '='
+    |   | | |   | |-ArraySubscriptExpr 0x7fbab28863a8 <line:38:18, line:146:27> 'double' lvalue
+    |   | | |   | | |-ParenExpr 0x7fbab2886348 <line:38:18, col:41> 'double *'
+    |   | | |   | | | `-BinaryOperator 0x7fbab2886320 <col:19, col:40> 'double *' '+'
+    |   | | |   | | |   |-CStyleCastExpr 0x7fbab28862d8 <col:19, col:30> 'double *' <BitCast>
+    |   | | |   | | |   | `-UnaryOperator 0x7fbab28862a0 <col:29, col:30> 'struct cshfcm_st *' prefix '&'
+    |   | | |   | | |   |   `-DeclRefExpr 0x7fbab2886278 <col:30> 'struct cshfcm_st':'struct cshfcm_st' lvalue Var 0x7fbab287c200 'cshfcm_' 'struct cshfcm_st':'struct cshfcm_st'
+    |   | | |   | | |   `-IntegerLiteral 0x7fbab2886300 <col:40> 'int' 1
+    |   | | |   | | `-ImplicitCastExpr 0x7fbab2886390 <line:146:26> 'int' <LValueToRValue>
+    |   | | |   | |   `-DeclRefExpr 0x7fbab2886368 <col:26> 'int' lvalue Var 0x7fbab28855d8 'j' 'int'
+    |   | | |   | `-BinaryOperator 0x7fbab2886560 <line:20:18, line:146:42> 'double' '*'
+    |   | | |   |   |-ImplicitCastExpr 0x7fbab2886500 <line:20:18, col:43> 'double' <LValueToRValue>
+    |   | | |   |   | `-ParenExpr 0x7fbab28864b8 <col:18, col:43> 'double' lvalue
+    |   | | |   |   |   `-UnaryOperator 0x7fbab2886498 <col:19, col:42> 'double' lvalue prefix '*'
+    |   | | |   |   |     `-ParenExpr 0x7fbab2886478 <col:20, col:42> 'double *'
+    |   | | |   |   |       `-ParenExpr 0x7fbab2886458 <col:21, col:41> 'double *'
+    |   | | |   |   |         `-CStyleCastExpr 0x7fbab2886430 <col:22, col:33> 'double *' <BitCast>
+    |   | | |   |   |           `-UnaryOperator 0x7fbab28863f8 <col:32, col:33> 'struct fltcom2_st *' prefix '&'
+    |   | | |   |   |             `-DeclRefExpr 0x7fbab28863d0 <col:33> 'struct fltcom2_st':'struct fltcom2_st' lvalue Var 0x7fbab28795d0 'fltcom2_' 'struct fltcom2_st':'struct fltcom2_st'
+    |   | | |   |   `-ImplicitCastExpr 0x7fbab2886548 <line:146:42> 'double' <IntegralToFloating>
+    |   | | |   |     `-ImplicitCastExpr 0x7fbab2886530 <col:42> 'int' <IntegralCast>
+    |   | | |   |       `-ImplicitCastExpr 0x7fbab2886518 <col:42> 'short' <LValueToRValue>
+    |   | | |   |         `-DeclRefExpr 0x7fbab28864d8 <col:42> 'short' lvalue Var 0x7fbab286a348 'days_in_current_period' 'short'
+    |   | | |   `-BinaryOperator 0x7fbab2886938 <line:39:18, line:147:75> 'double' '='
+    |   | | |     |-ArraySubscriptExpr 0x7fbab28866e0 <line:39:18, line:147:27> 'double' lvalue
+    |   | | |     | |-ParenExpr 0x7fbab2886680 <line:39:18, col:44> 'double *'
+    |   | | |     | | `-BinaryOperator 0x7fbab2886658 <col:19, col:40> 'double *' '+'
+    |   | | |     | |   |-CStyleCastExpr 0x7fbab2886610 <col:19, col:30> 'double *' <BitCast>
+    |   | | |     | |   | `-UnaryOperator 0x7fbab28865d8 <col:29, col:30> 'struct cshfcm_st *' prefix '&'
+    |   | | |     | |   |   `-DeclRefExpr 0x7fbab28865b0 <col:30> 'struct cshfcm_st':'struct cshfcm_st' lvalue Var 0x7fbab287c200 'cshfcm_' 'struct cshfcm_st':'struct cshfcm_st'
+    |   | | |     | |   `-IntegerLiteral 0x7fbab2886638 <col:40> 'int' 1201
+    |   | | |     | `-ImplicitCastExpr 0x7fbab28866c8 <line:147:26> 'int' <LValueToRValue>
+    |   | | |     |   `-DeclRefExpr 0x7fbab28866a0 <col:26> 'int' lvalue Var 0x7fbab28855d8 'j' 'int'
+    |   | | |     `-BinaryOperator 0x7fbab2886910 <col:31, col:75> 'double' '/'
+    |   | | |       |-CStyleCastExpr 0x7fbab2886760 <col:31, col:39> 'double' <IntegralToFloating>
+    |   | | |       | `-ImplicitCastExpr 0x7fbab2886748 <col:39> 'short' <LValueToRValue>
+    |   | | |       |   `-DeclRefExpr 0x7fbab2886708 <col:39> 'short' lvalue Var 0x7fbab2869b08 'days_to_next_cpn' 'short'
+    |   | | |       `-CStyleCastExpr 0x7fbab28868e8 <col:58, col:75> 'double' <IntegralToFloating>
+    |   | | |         `-ParenExpr 0x7fbab28868c8 <col:66, col:75> 'int'
+    |   | | |           `-BinaryOperator 0x7fbab2886858 <col:67, col:69> 'int' '/'
+    |   | | |             |-IntegerLiteral 0x7fbab2886788 <col:67> 'int' 1
+    |   | | |             `-ImplicitCastExpr 0x7fbab28867e8 <col:69> 'int' <IntegralCast>
+    |   | | |               `-ImplicitCastExpr 0x7fbab28867d0 <col:69> 'short' <LValueToRValue>
+    |   | | |                 `-DeclRefExpr 0x7fbab28867a8 <col:69> 'const short' lvalue Var 0x7fbab286a758 'sfreq1' 'const short'
+    |   | | `-IfStmt 0x7fbab2886ee8 <line:150:13, line:152:13>
+    |   | |   |-<<<NULL>>>
+    |   | |   |-<<<NULL>>>
+    |   | |   |-BinaryOperator 0x7fbab2886b60 <line:37:17, line:150:27> 'int' '=='
+    |   | |   | |-ImplicitCastExpr 0x7fbab2886b48 <line:37:17, col:47> 'int' <IntegralCast>
+    |   | |   | | `-ImplicitCastExpr 0x7fbab2886b30 <col:17, col:47> 'short' <LValueToRValue>
+    |   | |   | |   `-ParenExpr 0x7fbab2886af0 <col:17, col:47> 'short' lvalue
+    |   | |   | |     `-UnaryOperator 0x7fbab2886ad0 <col:18, col:46> 'short' lvalue prefix '*'
+    |   | |   | |       `-ParenExpr 0x7fbab2886ab0 <col:19, col:46> 'short *'
+    |   | |   | |         `-ParenExpr 0x7fbab2886a90 <col:20, col:45> 'short *'
+    |   | |   | |           `-BinaryOperator 0x7fbab2886a68 <col:21, col:41> 'short *' '+'
+    |   | |   | |             |-CStyleCastExpr 0x7fbab2886a20 <col:21, col:31> 'short *' <BitCast>
+    |   | |   | |             | `-UnaryOperator 0x7fbab28869e8 <col:30, col:31> 'struct cshfcm_st *' prefix '&'
+    |   | |   | |             |   `-DeclRefExpr 0x7fbab28869c0 <col:31> 'struct cshfcm_st':'struct cshfcm_st' lvalue Var 0x7fbab287c200 'cshfcm_' 'struct cshfcm_st':'struct cshfcm_st'
+    |   | |   | |             `-IntegerLiteral 0x7fbab2886a48 <col:41> 'int' 9038
+    |   | |   | `-IntegerLiteral 0x7fbab2886b10 <line:150:27> 'int' 1
+    |   | |   |-CompoundStmt 0x7fbab2886ec8 <col:30, line:152:13>
+    |   | |   | `-BinaryOperator 0x7fbab2886ea0 <line:39:18, line:151:75> 'double' '='
+    |   | |   |   |-ArraySubscriptExpr 0x7fbab2886cb8 <line:39:18, line:151:27> 'double' lvalue
+    |   | |   |   | |-ParenExpr 0x7fbab2886c58 <line:39:18, col:44> 'double *'
+    |   | |   |   | | `-BinaryOperator 0x7fbab2886c30 <col:19, col:40> 'double *' '+'
+    |   | |   |   | |   |-CStyleCastExpr 0x7fbab2886be8 <col:19, col:30> 'double *' <BitCast>
+    |   | |   |   | |   | `-UnaryOperator 0x7fbab2886bb0 <col:29, col:30> 'struct cshfcm_st *' prefix '&'
+    |   | |   |   | |   |   `-DeclRefExpr 0x7fbab2886b88 <col:30> 'struct cshfcm_st':'struct cshfcm_st' lvalue Var 0x7fbab287c200 'cshfcm_' 'struct cshfcm_st':'struct cshfcm_st'
+    |   | |   |   | |   `-IntegerLiteral 0x7fbab2886c10 <col:40> 'int' 1201
+    |   | |   |   | `-ImplicitCastExpr 0x7fbab2886ca0 <line:151:26> 'int' <LValueToRValue>
+    |   | |   |   |   `-DeclRefExpr 0x7fbab2886c78 <col:26> 'int' lvalue Var 0x7fbab28855d8 'j' 'int'
+    |   | |   |   `-BinaryOperator 0x7fbab2886e78 <col:31, col:75> 'double' '/'
+    |   | |   |     |-CStyleCastExpr 0x7fbab2886d38 <col:31, col:39> 'double' <IntegralToFloating>
+    |   | |   |     | `-ImplicitCastExpr 0x7fbab2886d20 <col:39> 'short' <LValueToRValue>
+    |   | |   |     |   `-DeclRefExpr 0x7fbab2886ce0 <col:39> 'short' lvalue Var 0x7fbab2869b08 'days_to_next_cpn' 'short'
+    |   | |   |     `-ParenExpr 0x7fbab2886e58 <col:58, col:75> 'double'
+    |   | |   |       `-BinaryOperator 0x7fbab2886e30 <col:59, col:69> 'double' '/'
+    |   | |   |         |-CStyleCastExpr 0x7fbab2886d98 <col:59, col:67> 'double' <IntegralToFloating>
+    |   | |   |         | `-IntegerLiteral 0x7fbab2886d60 <col:67> 'int' 1
+    |   | |   |         `-ImplicitCastExpr 0x7fbab2886e18 <col:69> 'double' <IntegralToFloating>
+    |   | |   |           `-ImplicitCastExpr 0x7fbab2886e00 <col:69> 'int' <IntegralCast>
+    |   | |   |             `-ImplicitCastExpr 0x7fbab2886de8 <col:69> 'short' <LValueToRValue>
+    |   | |   |               `-DeclRefExpr 0x7fbab2886dc0 <col:69> 'const short' lvalue Var 0x7fbab286a758 'sfreq1' 'const short'
+    |   | |   `-<<<NULL>>>
+    |   | `-CompoundStmt 0x7fbab288b818 <line:154:14, line:208:9>
+    |   |   |-DeclStmt 0x7fbab2887058 <line:156:13, col:51>
+    |   |   | |-VarDecl 0x7fbab2886f68 <col:13, col:19> col:19 used days_from_settle 'short'
+    |   |   | `-VarDecl 0x7fbab2886fe0 <col:13, col:37> col:37 used days_in_period 'short'
+    |   |   |-IfStmt 0x7fbab2887a90 <line:158:13, line:163:13>
+    |   |   | |-<<<NULL>>>
+    |   |   | |-<<<NULL>>>
+    |   |   | |-CallExpr 0x7fbab2887138 <line:84:3, col:54> 'int'
+    |   |   | | |-ImplicitCastExpr 0x7fbab2887120 <col:3> 'int (*)(const bregdb_bitinfo_t *const, const int, const void *const)' <FunctionToPointerDecay>
+    |   |   | | | `-DeclRefExpr 0x7fbab2887070 <col:3> 'int (const bregdb_bitinfo_t *const, const int, const void *const)' Function 0x7fbab287cd48 'bregdb_eval_bbitcxt_bool_rv' 'int (const bregdb_bitinfo_t *const, const int, const void *const)'
+    |   |   | | |-UnaryOperator 0x7fbab28870c0 <col:31, col:32> 'const bregdb_bitinfo_t *' prefix '&'
+    |   |   | | | `-DeclRefExpr 0x7fbab2887098 <col:32> 'const bregdb_bitinfo_t':'const bregdb_bitinfo_t' lvalue Var 0x7fbab287f758 'bbit_calc_dr_d46' 'const bregdb_bitinfo_t':'const bregdb_bitinfo_t'
+    |   |   | | |-IntegerLiteral 0x7fbab28870e0 <col:50> 'int' 0
+    |   |   | | `-ImplicitCastExpr 0x7fbab2887178 <col:53> 'const void *' <NullToPointer>
+    |   |   | |   `-IntegerLiteral 0x7fbab2887100 <col:53> 'int' 0
+    |   |   | |-CompoundStmt 0x7fbab2887a68 <line:158:42, line:163:13>
+    |   |   | | |-BinaryOperator 0x7fbab28874f0 <line:159:14, line:160:68> 'short' '='
+    |   |   | | | |-DeclRefExpr 0x7fbab2887190 <line:159:14> 'short' lvalue Var 0x7fbab2886f68 'days_from_settle' 'short'
+    |   |   | | | `-CallExpr 0x7fbab2887490 <col:33, line:160:68> 'short'
+    |   |   | | |   |-ImplicitCastExpr 0x7fbab2887478 <line:159:33> 'short (*)(short *, short *, short *, short *)' <FunctionToPointerDecay>
+    |   |   | | |   | `-DeclRefExpr 0x7fbab28871b8 <col:33> 'short (short *, short *, short *, short *)' Function 0x7fbab28689e8 'difday_' 'short (short *, short *, short *, short *)'
+    |   |   | | |   |-UnaryOperator 0x7fbab2887228 <col:41, col:42> 'short *' prefix '&'
+    |   |   | | |   | `-DeclRefExpr 0x7fbab2887200 <col:42> 'short' lvalue ParmVar 0x7fbab2868f58 'sDayType' 'short'
+    |   |   | | |   |-ImplicitCastExpr 0x7fbab28874d8 <col:51> 'short *':'short *' <LValueToRValue>
+    |   |   | | |   | `-DeclRefExpr 0x7fbab2887248 <col:51> 'short *':'short *' lvalue ParmVar 0x7fbab28690b0 'asSettleDt' 'short *':'short *'
+    |   |   | | |   |-UnaryOperator 0x7fbab2887410 <line:160:46, col:59> 'short *' prefix '&'
+    |   |   | | |   | `-ArraySubscriptExpr 0x7fbab28873e8 <line:40:18, line:160:59> 'short' lvalue
+    |   |   | | |   |   |-ParenExpr 0x7fbab2887340 <line:40:18, col:43> 'short *'
+    |   |   | | |   |   | `-BinaryOperator 0x7fbab2887318 <col:19, col:39> 'short *' '+'
+    |   |   | | |   |   |   |-CStyleCastExpr 0x7fbab28872d0 <col:19, col:29> 'short *' <BitCast>
+    |   |   | | |   |   |   | `-UnaryOperator 0x7fbab2887298 <col:28, col:29> 'struct cshfcm_st *' prefix '&'
+    |   |   | | |   |   |   |   `-DeclRefExpr 0x7fbab2887270 <col:29> 'struct cshfcm_st':'struct cshfcm_st' lvalue Var 0x7fbab287c200 'cshfcm_' 'struct cshfcm_st':'struct cshfcm_st'
+    |   |   | | |   |   |   `-IntegerLiteral 0x7fbab28872f8 <col:39> 'int' 7230
+    |   |   | | |   |   `-BinaryOperator 0x7fbab28873c0 <line:160:56, col:58> 'int' '*'
+    |   |   | | |   |     |-ImplicitCastExpr 0x7fbab28873a8 <col:56> 'int' <LValueToRValue>
+    |   |   | | |   |     | `-DeclRefExpr 0x7fbab2887360 <col:56> 'int' lvalue Var 0x7fbab28855d8 'j' 'int'
+    |   |   | | |   |     `-IntegerLiteral 0x7fbab2887388 <col:58> 'int' 3
+    |   |   | | |   `-UnaryOperator 0x7fbab2887458 <col:61, col:62> 'short *' prefix '&'
+    |   |   | | |     `-DeclRefExpr 0x7fbab2887430 <col:62> 'short' lvalue Var 0x7fbab28699b0 'ercode' 'short'
+    |   |   | | `-BinaryOperator 0x7fbab2887a40 <line:161:14, line:162:67> 'short' '='
+    |   |   | |   |-DeclRefExpr 0x7fbab2887518 <line:161:14> 'short' lvalue Var 0x7fbab2886fe0 'days_in_period' 'short'
+    |   |   | |   `-CallExpr 0x7fbab28879f8 <col:32, line:162:67> 'short'
+    |   |   | |     |-ImplicitCastExpr 0x7fbab28879e0 <line:161:32> 'short (*)(short *, short *, short *, short *)' <FunctionToPointerDecay>
+    |   |   | |     | `-DeclRefExpr 0x7fbab2887540 <col:32> 'short (short *, short *, short *, short *)' Function 0x7fbab28689e8 'difday_' 'short (short *, short *, short *, short *)'
+    |   |   | |     |-UnaryOperator 0x7fbab2887590 <col:40, col:41> 'short *' prefix '&'
+    |   |   | |     | `-DeclRefExpr 0x7fbab2887568 <col:41> 'short' lvalue ParmVar 0x7fbab2868f58 'sDayType' 'short'
+    |   |   | |     |-UnaryOperator 0x7fbab28877b8 <col:50, col:67> 'short *' prefix '&'
+    |   |   | |     | `-ArraySubscriptExpr 0x7fbab2887790 <line:40:18, line:161:67> 'short' lvalue
+    |   |   | |     |   |-ParenExpr 0x7fbab2887680 <line:40:18, col:43> 'short *'
+    |   |   | |     |   | `-BinaryOperator 0x7fbab2887658 <col:19, col:39> 'short *' '+'
+    |   |   | |     |   |   |-CStyleCastExpr 0x7fbab2887610 <col:19, col:29> 'short *' <BitCast>
+    |   |   | |     |   |   | `-UnaryOperator 0x7fbab28875d8 <col:28, col:29> 'struct cshfcm_st *' prefix '&'
+    |   |   | |     |   |   |   `-DeclRefExpr 0x7fbab28875b0 <col:29> 'struct cshfcm_st':'struct cshfcm_st' lvalue Var 0x7fbab287c200 'cshfcm_' 'struct cshfcm_st':'struct cshfcm_st'
+    |   |   | |     |   |   `-IntegerLiteral 0x7fbab2887638 <col:39> 'int' 7230
+    |   |   | |     |   `-BinaryOperator 0x7fbab2887768 <line:161:60, col:66> 'int' '*'
+    |   |   | |     |     |-ParenExpr 0x7fbab2887728 <col:60, col:64> 'int'
+    |   |   | |     |     | `-BinaryOperator 0x7fbab2887700 <col:61, col:63> 'int' '-'
+    |   |   | |     |     |   |-ImplicitCastExpr 0x7fbab28876e8 <col:61> 'int' <LValueToRValue>
+    |   |   | |     |     |   | `-DeclRefExpr 0x7fbab28876a0 <col:61> 'int' lvalue Var 0x7fbab28855d8 'j' 'int'
+    |   |   | |     |     |   `-IntegerLiteral 0x7fbab28876c8 <col:63> 'int' 1
+    |   |   | |     |     `-IntegerLiteral 0x7fbab2887748 <col:66> 'int' 3
+    |   |   | |     |-UnaryOperator 0x7fbab2887978 <line:162:45, col:58> 'short *' prefix '&'
+    |   |   | |     | `-ArraySubscriptExpr 0x7fbab2887950 <line:40:18, line:162:58> 'short' lvalue
+    |   |   | |     |   |-ParenExpr 0x7fbab28878a8 <line:40:18, col:43> 'short *'
+    |   |   | |     |   | `-BinaryOperator 0x7fbab2887880 <col:19, col:39> 'short *' '+'
+    |   |   | |     |   |   |-CStyleCastExpr 0x7fbab2887838 <col:19, col:29> 'short *' <BitCast>
+    |   |   | |     |   |   | `-UnaryOperator 0x7fbab2887800 <col:28, col:29> 'struct cshfcm_st *' prefix '&'
+    |   |   | |     |   |   |   `-DeclRefExpr 0x7fbab28877d8 <col:29> 'struct cshfcm_st':'struct cshfcm_st' lvalue Var 0x7fbab287c200 'cshfcm_' 'struct cshfcm_st':'struct cshfcm_st'
+    |   |   | |     |   |   `-IntegerLiteral 0x7fbab2887860 <col:39> 'int' 7230
+    |   |   | |     |   `-BinaryOperator 0x7fbab2887928 <line:162:55, col:57> 'int' '*'
+    |   |   | |     |     |-ImplicitCastExpr 0x7fbab2887910 <col:55> 'int' <LValueToRValue>
+    |   |   | |     |     | `-DeclRefExpr 0x7fbab28878c8 <col:55> 'int' lvalue Var 0x7fbab28855d8 'j' 'int'
+    |   |   | |     |     `-IntegerLiteral 0x7fbab28878f0 <col:57> 'int' 3
+    |   |   | |     `-UnaryOperator 0x7fbab28879c0 <col:60, col:61> 'short *' prefix '&'
+    |   |   | |       `-DeclRefExpr 0x7fbab2887998 <col:61> 'short' lvalue Var 0x7fbab28699b0 'ercode' 'short'
+    |   |   | `-<<<NULL>>>
+    |   |   |-DeclStmt 0x7fbab2887d08 <line:165:13, col:40>
+    |   |   | `-VarDecl 0x7fbab2887ae0 <col:13, line:12:47> line:165:20 used cpn_rate 'double' cinit
+    |   |   |   `-ImplicitCastExpr 0x7fbab2887cf0 <line:12:19, col:47> 'double' <LValueToRValue>
+    |   |   |     `-ParenExpr 0x7fbab2887cd0 <col:19, col:47> 'double' lvalue
+    |   |   |       `-UnaryOperator 0x7fbab2887cb0 <col:20, col:46> 'double' lvalue prefix '*'
+    |   |   |         `-ParenExpr 0x7fbab2887c90 <col:21, col:46> 'double *'
+    |   |   |           `-ParenExpr 0x7fbab2887c70 <col:22, col:45> 'double *'
+    |   |   |             `-BinaryOperator 0x7fbab2887c48 <col:23, col:44> 'double *' '+'
+    |   |   |               |-CStyleCastExpr 0x7fbab2887c00 <col:23, col:34> 'double *' <BitCast>
+    |   |   |               | `-UnaryOperator 0x7fbab2887bc8 <col:33, col:34> 'struct fltcom_st *' prefix '&'
+    |   |   |               |   `-DeclRefExpr 0x7fbab2887b40 <col:34> 'struct fltcom_st':'struct fltcom_st' lvalue Var 0x7fbab2879300 'fltcom_' 'struct fltcom_st':'struct fltcom_st'
+    |   |   |               `-IntegerLiteral 0x7fbab2887c28 <col:44> 'int' 1
+    |   |   |-IfStmt 0x7fbab2888898 <line:167:13, line:172:13>
+    |   |   | |-<<<NULL>>>
+    |   |   | |-<<<NULL>>>
+    |   |   | |-CallExpr 0x7fbab2887de8 <line:88:3, col:54> 'int'
+    |   |   | | |-ImplicitCastExpr 0x7fbab2887dd0 <col:3> 'int (*)(const bregdb_bitinfo_t *const, const int, const void *const)' <FunctionToPointerDecay>
+    |   |   | | | `-DeclRefExpr 0x7fbab2887d20 <col:3> 'int (const bregdb_bitinfo_t *const, const int, const void *const)' Function 0x7fbab287cd48 'bregdb_eval_bbitcxt_bool_rv' 'int (const bregdb_bitinfo_t *const, const int, const void *const)'
+    |   |   | | |-UnaryOperator 0x7fbab2887d70 <col:31, col:32> 'const bregdb_bitinfo_t *' prefix '&'
+    |   |   | | | `-DeclRefExpr 0x7fbab2887d48 <col:32> 'const bregdb_bitinfo_t':'const bregdb_bitinfo_t' lvalue Var 0x7fbab287f920 'bbit_calc_dr_d62' 'const bregdb_bitinfo_t':'const bregdb_bitinfo_t'
+    |   |   | | |-IntegerLiteral 0x7fbab2887d90 <col:50> 'int' 0
+    |   |   | | `-ImplicitCastExpr 0x7fbab2887e28 <col:53> 'const void *' <NullToPointer>
+    |   |   | |   `-IntegerLiteral 0x7fbab2887db0 <col:53> 'int' 0
+    |   |   | |-CompoundStmt 0x7fbab2888478 <line:167:43, line:169:13>
+    |   |   | | `-IfStmt 0x7fbab2888440 <line:168:15, col:89>
+    |   |   | |   |-<<<NULL>>>
+    |   |   | |   |-<<<NULL>>>
+    |   |   | |   |-BinaryOperator 0x7fbab2888258 <col:18, col:57> 'int' '&&'
+    |   |   | |   | |-BinaryOperator 0x7fbab2888000 <col:18, line:21:47> 'int' '<'
+    |   |   | |   | | |-ImplicitCastExpr 0x7fbab2887fb8 <line:168:18> 'int' <LValueToRValue>
+    |   |   | |   | | | `-DeclRefExpr 0x7fbab2887e40 <col:18> 'int' lvalue Var 0x7fbab28855d8 'j' 'int'
+    |   |   | |   | | `-ImplicitCastExpr 0x7fbab2887fe8 <line:21:18, col:47> 'int' <IntegralCast>
+    |   |   | |   | |   `-ImplicitCastExpr 0x7fbab2887fd0 <col:18, col:47> 'short' <LValueToRValue>
+    |   |   | |   | |     `-ParenExpr 0x7fbab2887f98 <col:18, col:47> 'short' lvalue
+    |   |   | |   | |       `-UnaryOperator 0x7fbab2887f78 <col:19, col:46> 'short' lvalue prefix '*'
+    |   |   | |   | |         `-ParenExpr 0x7fbab2887f58 <col:20, col:46> 'short *'
+    |   |   | |   | |           `-ParenExpr 0x7fbab2887f38 <col:21, col:45> 'short *'
+    |   |   | |   | |             `-BinaryOperator 0x7fbab2887f10 <col:22, col:43> 'short *' '+'
+    |   |   | |   | |               |-CStyleCastExpr 0x7fbab2887ec8 <col:22, col:32> 'short *' <BitCast>
+    |   |   | |   | |               | `-UnaryOperator 0x7fbab2887e90 <col:31, col:32> 'struct fltcom2_st *' prefix '&'
+    |   |   | |   | |               |   `-DeclRefExpr 0x7fbab2887e68 <col:32> 'struct fltcom2_st':'struct fltcom2_st' lvalue Var 0x7fbab28795d0 'fltcom2_' 'struct fltcom2_st':'struct fltcom2_st'
+    |   |   | |   | |               `-IntegerLiteral 0x7fbab2887ef0 <col:43> 'int' 12
+    |   |   | |   | `-BinaryOperator 0x7fbab2888230 <line:52:26, line:168:57> 'int' '!='
+    |   |   | |   |   |-ImplicitCastExpr 0x7fbab2888200 <line:52:26, line:168:52> 'double' <LValueToRValue>
+    |   |   | |   |   | `-ArraySubscriptExpr 0x7fbab28881b0 <line:52:26, line:168:52> 'double' lvalue
+    |   |   | |   |   |   |-ParenExpr 0x7fbab2888150 <line:52:26, col:52> 'double *'
+    |   |   | |   |   |   | `-BinaryOperator 0x7fbab2888128 <col:27, col:49> 'double *' '+'
+    |   |   | |   |   |   |   |-CStyleCastExpr 0x7fbab28880e0 <col:27, col:38> 'double *' <BitCast>
+    |   |   | |   |   |   |   | `-UnaryOperator 0x7fbab28880a8 <col:37, col:38> 'struct cf600cm_st *' prefix '&'
+    |   |   | |   |   |   |   |   `-DeclRefExpr 0x7fbab2888028 <col:38> 'struct cf600cm_st':'struct cf600cm_st' lvalue Var 0x7fbab287c720 'cf600cm_' 'struct cf600cm_st':'struct cf600cm_st'
+    |   |   | |   |   |   |   `-IntegerLiteral 0x7fbab2888108 <col:49> 'int' 600
+    |   |   | |   |   |   `-ImplicitCastExpr 0x7fbab2888198 <line:168:51> 'int' <LValueToRValue>
+    |   |   | |   |   |     `-DeclRefExpr 0x7fbab2888170 <col:51> 'int' lvalue Var 0x7fbab28855d8 'j' 'int'
+    |   |   | |   |   `-ImplicitCastExpr 0x7fbab2888218 <col:57> 'double' <IntegralToFloating>
+    |   |   | |   |     `-IntegerLiteral 0x7fbab28881d8 <col:57> 'int' 0
+    |   |   | |   |-BinaryOperator 0x7fbab2888418 <col:60, col:89> 'double' '='
+    |   |   | |   | |-DeclRefExpr 0x7fbab2888280 <col:60> 'double' lvalue Var 0x7fbab2887ae0 'cpn_rate' 'double'
+    |   |   | |   | `-ImplicitCastExpr 0x7fbab2888400 <line:52:26, line:168:89> 'double' <LValueToRValue>
+    |   |   | |   |   `-ArraySubscriptExpr 0x7fbab28883d8 <line:52:26, line:168:89> 'double' lvalue
+    |   |   | |   |     |-ParenExpr 0x7fbab2888378 <line:52:26, col:52> 'double *'
+    |   |   | |   |     | `-BinaryOperator 0x7fbab2888350 <col:27, col:49> 'double *' '+'
+    |   |   | |   |     |   |-CStyleCastExpr 0x7fbab2888308 <col:27, col:38> 'double *' <BitCast>
+    |   |   | |   |     |   | `-UnaryOperator 0x7fbab28882d0 <col:37, col:38> 'struct cf600cm_st *' prefix '&'
+    |   |   | |   |     |   |   `-DeclRefExpr 0x7fbab28882a8 <col:38> 'struct cf600cm_st':'struct cf600cm_st' lvalue Var 0x7fbab287c720 'cf600cm_' 'struct cf600cm_st':'struct cf600cm_st'
+    |   |   | |   |     |   `-IntegerLiteral 0x7fbab2888330 <col:49> 'int' 600
+    |   |   | |   |     `-ImplicitCastExpr 0x7fbab28883c0 <line:168:88> 'int' <LValueToRValue>
+    |   |   | |   |       `-DeclRefExpr 0x7fbab2888398 <col:88> 'int' lvalue Var 0x7fbab28855d8 'j' 'int'
+    |   |   | |   `-<<<NULL>>>
+    |   |   | `-CompoundStmt 0x7fbab2888878 <line:170:18, line:172:13>
+    |   |   |   `-IfStmt 0x7fbab2888840 <line:171:15, col:62>
+    |   |   |     |-<<<NULL>>>
+    |   |   |     |-<<<NULL>>>
+    |   |   |     |-BinaryOperator 0x7fbab2888658 <col:18, line:21:47> 'int' '<'
+    |   |   |     | |-ImplicitCastExpr 0x7fbab2888610 <line:171:18> 'int' <LValueToRValue>
+    |   |   |     | | `-DeclRefExpr 0x7fbab2888498 <col:18> 'int' lvalue Var 0x7fbab28855d8 'j' 'int'
+    |   |   |     | `-ImplicitCastExpr 0x7fbab2888640 <line:21:18, col:47> 'int' <IntegralCast>
+    |   |   |     |   `-ImplicitCastExpr 0x7fbab2888628 <col:18, col:47> 'short' <LValueToRValue>
+    |   |   |     |     `-ParenExpr 0x7fbab28885f0 <col:18, col:47> 'short' lvalue
+    |   |   |     |       `-UnaryOperator 0x7fbab28885d0 <col:19, col:46> 'short' lvalue prefix '*'
+    |   |   |     |         `-ParenExpr 0x7fbab28885b0 <col:20, col:46> 'short *'
+    |   |   |     |           `-ParenExpr 0x7fbab2888590 <col:21, col:45> 'short *'
+    |   |   |     |             `-BinaryOperator 0x7fbab2888568 <col:22, col:43> 'short *' '+'
+    |   |   |     |               |-CStyleCastExpr 0x7fbab2888520 <col:22, col:32> 'short *' <BitCast>
+    |   |   |     |               | `-UnaryOperator 0x7fbab28884e8 <col:31, col:32> 'struct fltcom2_st *' prefix '&'
+    |   |   |     |               |   `-DeclRefExpr 0x7fbab28884c0 <col:32> 'struct fltcom2_st':'struct fltcom2_st' lvalue Var 0x7fbab28795d0 'fltcom2_' 'struct fltcom2_st':'struct fltcom2_st'
+    |   |   |     |               `-IntegerLiteral 0x7fbab2888548 <col:43> 'int' 12
+    |   |   |     |-BinaryOperator 0x7fbab2888818 <line:171:33, col:62> 'double' '='
+    |   |   |     | |-DeclRefExpr 0x7fbab2888680 <col:33> 'double' lvalue Var 0x7fbab2887ae0 'cpn_rate' 'double'
+    |   |   |     | `-ImplicitCastExpr 0x7fbab2888800 <line:52:26, line:171:62> 'double' <LValueToRValue>
+    |   |   |     |   `-ArraySubscriptExpr 0x7fbab28887d8 <line:52:26, line:171:62> 'double' lvalue
+    |   |   |     |     |-ParenExpr 0x7fbab2888778 <line:52:26, col:52> 'double *'
+    |   |   |     |     | `-BinaryOperator 0x7fbab2888750 <col:27, col:49> 'double *' '+'
+    |   |   |     |     |   |-CStyleCastExpr 0x7fbab2888708 <col:27, col:38> 'double *' <BitCast>
+    |   |   |     |     |   | `-UnaryOperator 0x7fbab28886d0 <col:37, col:38> 'struct cf600cm_st *' prefix '&'
+    |   |   |     |     |   |   `-DeclRefExpr 0x7fbab28886a8 <col:38> 'struct cf600cm_st':'struct cf600cm_st' lvalue Var 0x7fbab287c720 'cf600cm_' 'struct cf600cm_st':'struct cf600cm_st'
+    |   |   |     |     |   `-IntegerLiteral 0x7fbab2888730 <col:49> 'int' 600
+    |   |   |     |     `-ImplicitCastExpr 0x7fbab28887c0 <line:171:61> 'int' <LValueToRValue>
+    |   |   |     |       `-DeclRefExpr 0x7fbab2888798 <col:61> 'int' lvalue Var 0x7fbab28855d8 'j' 'int'
+    |   |   |     `-<<<NULL>>>
+    |   |   |-IfStmt 0x7fbab2889b00 <line:174:13, line:184:13>
+    |   |   | |-<<<NULL>>>
+    |   |   | |-<<<NULL>>>
+    |   |   | |-BinaryOperator 0x7fbab2888ca0 <line:76:3, line:174:74> 'int' '&&'
+    |   |   | | |-BinaryOperator 0x7fbab2888bd8 <line:76:3, line:21:47> 'int' '&&'
+    |   |   | | | |-CallExpr 0x7fbab2888998 <line:76:3, col:54> 'int'
+    |   |   | | | | |-ImplicitCastExpr 0x7fbab2888980 <col:3> 'int (*)(const bregdb_bitinfo_t *const, const int, const void *const)' <FunctionToPointerDecay>
+    |   |   | | | | | `-DeclRefExpr 0x7fbab28888d0 <col:3> 'int (const bregdb_bitinfo_t *const, const int, const void *const)' Function 0x7fbab287cd48 'bregdb_eval_bbitcxt_bool_rv' 'int (const bregdb_bitinfo_t *const, const int, const void *const)'
+    |   |   | | | | |-UnaryOperator 0x7fbab2888920 <col:31, col:32> 'const bregdb_bitinfo_t *' prefix '&'
+    |   |   | | | | | `-DeclRefExpr 0x7fbab28888f8 <col:32> 'const bregdb_bitinfo_t':'const bregdb_bitinfo_t' lvalue Var 0x7fbab287f3c8 'bbit_calc_dr_d37' 'const bregdb_bitinfo_t':'const bregdb_bitinfo_t'
+    |   |   | | | | |-IntegerLiteral 0x7fbab2888940 <col:50> 'int' 0
+    |   |   | | | | `-ImplicitCastExpr 0x7fbab28889d8 <col:53> 'const void *' <NullToPointer>
+    |   |   | | | |   `-IntegerLiteral 0x7fbab2888960 <col:53> 'int' 0
+    |   |   | | | `-BinaryOperator 0x7fbab2888bb0 <line:174:44, line:21:47> 'int' '>='
+    |   |   | | |   |-ImplicitCastExpr 0x7fbab2888b68 <line:174:44> 'int' <LValueToRValue>
+    |   |   | | |   | `-DeclRefExpr 0x7fbab28889f0 <col:44> 'int' lvalue Var 0x7fbab28855d8 'j' 'int'
+    |   |   | | |   `-ImplicitCastExpr 0x7fbab2888b98 <line:21:18, col:47> 'int' <IntegralCast>
+    |   |   | | |     `-ImplicitCastExpr 0x7fbab2888b80 <col:18, col:47> 'short' <LValueToRValue>
+    |   |   | | |       `-ParenExpr 0x7fbab2888b48 <col:18, col:47> 'short' lvalue
+    |   |   | | |         `-UnaryOperator 0x7fbab2888b28 <col:19, col:46> 'short' lvalue prefix '*'
+    |   |   | | |           `-ParenExpr 0x7fbab2888b08 <col:20, col:46> 'short *'
+    |   |   | | |             `-ParenExpr 0x7fbab2888ae8 <col:21, col:45> 'short *'
+    |   |   | | |               `-BinaryOperator 0x7fbab2888ac0 <col:22, col:43> 'short *' '+'
+    |   |   | | |                 |-CStyleCastExpr 0x7fbab2888a78 <col:22, col:32> 'short *' <BitCast>
+    |   |   | | |                 | `-UnaryOperator 0x7fbab2888a40 <col:31, col:32> 'struct fltcom2_st *' prefix '&'
+    |   |   | | |                 |   `-DeclRefExpr 0x7fbab2888a18 <col:32> 'struct fltcom2_st':'struct fltcom2_st' lvalue Var 0x7fbab28795d0 'fltcom2_' 'struct fltcom2_st':'struct fltcom2_st'
+    |   |   | | |                 `-IntegerLiteral 0x7fbab2888aa0 <col:43> 'int' 12
+    |   |   | | `-BinaryOperator 0x7fbab2888c78 <line:174:61, col:74> 'int' '=='
+    |   |   | |   |-ImplicitCastExpr 0x7fbab2888c60 <col:61> 'int' <IntegralCast>
+    |   |   | |   | `-ImplicitCastExpr 0x7fbab2888c48 <col:61> 'short' <LValueToRValue>
+    |   |   | |   |   `-DeclRefExpr 0x7fbab2888c00 <col:61> 'short' lvalue ParmVar 0x7fbab2868ee0 'sCalcType' 'short'
+    |   |   | |   `-IntegerLiteral 0x7fbab2888c28 <col:74> 'int' 1570
+    |   |   | |-CompoundStmt 0x7fbab2889ad8 <col:80, line:184:13>
+    |   |   | | |-BinaryOperator 0x7fbab2888fe8 <line:175:17, line:13:45> 'double' '='
+    |   |   | | | |-DeclRefExpr 0x7fbab2888cc8 <line:175:17> 'double' lvalue Var 0x7fbab2887ae0 'cpn_rate' 'double'
+    |   |   | | | `-BinaryOperator 0x7fbab2888fc0 <line:12:19, line:13:45> 'double' '+'
+    |   |   | | |   |-ImplicitCastExpr 0x7fbab2888f90 <line:12:19, col:47> 'double' <LValueToRValue>
+    |   |   | | |   | `-ParenExpr 0x7fbab2888e20 <col:19, col:47> 'double' lvalue
+    |   |   | | |   |   `-UnaryOperator 0x7fbab2888e00 <col:20, col:46> 'double' lvalue prefix '*'
+    |   |   | | |   |     `-ParenExpr 0x7fbab2888de0 <col:21, col:46> 'double *'
+    |   |   | | |   |       `-ParenExpr 0x7fbab2888dc0 <col:22, col:45> 'double *'
+    |   |   | | |   |         `-BinaryOperator 0x7fbab2888d98 <col:23, col:44> 'double *' '+'
+    |   |   | | |   |           |-CStyleCastExpr 0x7fbab2888d50 <col:23, col:34> 'double *' <BitCast>
+    |   |   | | |   |           | `-UnaryOperator 0x7fbab2888d18 <col:33, col:34> 'struct fltcom_st *' prefix '&'
+    |   |   | | |   |           |   `-DeclRefExpr 0x7fbab2888cf0 <col:34> 'struct fltcom_st':'struct fltcom_st' lvalue Var 0x7fbab2879300 'fltcom_' 'struct fltcom_st':'struct fltcom_st'
+    |   |   | | |   |           `-IntegerLiteral 0x7fbab2888d78 <col:44> 'int' 1
+    |   |   | | |   `-ImplicitCastExpr 0x7fbab2888fa8 <line:13:17, col:45> 'double' <LValueToRValue>
+    |   |   | | |     `-ParenExpr 0x7fbab2888f70 <col:17, col:45> 'double' lvalue
+    |   |   | | |       `-UnaryOperator 0x7fbab2888f50 <col:18, col:44> 'double' lvalue prefix '*'
+    |   |   | | |         `-ParenExpr 0x7fbab2888f30 <col:19, col:44> 'double *'
+    |   |   | | |           `-ParenExpr 0x7fbab2888f10 <col:20, col:43> 'double *'
+    |   |   | | |             `-BinaryOperator 0x7fbab2888ee8 <col:21, col:42> 'double *' '+'
+    |   |   | | |               |-CStyleCastExpr 0x7fbab2888ea0 <col:21, col:32> 'double *' <BitCast>
+    |   |   | | |               | `-UnaryOperator 0x7fbab2888e68 <col:31, col:32> 'struct fltcom_st *' prefix '&'
+    |   |   | | |               |   `-DeclRefExpr 0x7fbab2888e40 <col:32> 'struct fltcom_st':'struct fltcom_st' lvalue Var 0x7fbab2879300 'fltcom_' 'struct fltcom_st':'struct fltcom_st'
+    |   |   | | |               `-IntegerLiteral 0x7fbab2888ec8 <col:42> 'int' 2
+    |   |   | | `-IfStmt 0x7fbab2889aa0 <line:177:17, line:183:17>
+    |   |   | |   |-<<<NULL>>>
+    |   |   | |   |-<<<NULL>>>
+    |   |   | |   |-CallExpr 0x7fbab28890d8 <line:72:3, col:54> 'int'
+    |   |   | |   | |-ImplicitCastExpr 0x7fbab28890c0 <col:3> 'int (*)(const bregdb_bitinfo_t *const, const int, const void *const)' <FunctionToPointerDecay>
+    |   |   | |   | | `-DeclRefExpr 0x7fbab2889010 <col:3> 'int (const bregdb_bitinfo_t *const, const int, const void *const)' Function 0x7fbab287cd48 'bregdb_eval_bbitcxt_bool_rv' 'int (const bregdb_bitinfo_t *const, const int, const void *const)'
+    |   |   | |   | |-UnaryOperator 0x7fbab2889060 <col:31, col:32> 'const bregdb_bitinfo_t *' prefix '&'
+    |   |   | |   | | `-DeclRefExpr 0x7fbab2889038 <col:32> 'const bregdb_bitinfo_t':'const bregdb_bitinfo_t' lvalue Var 0x7fbab287f200 'bbit_calc_dr_d36' 'const bregdb_bitinfo_t':'const bregdb_bitinfo_t'
+    |   |   | |   | |-IntegerLiteral 0x7fbab2889080 <col:50> 'int' 0
+    |   |   | |   | `-ImplicitCastExpr 0x7fbab2889118 <col:53> 'const void *' <NullToPointer>
+    |   |   | |   |   `-IntegerLiteral 0x7fbab28890a0 <col:53> 'int' 0
+    |   |   | |   |-CompoundStmt 0x7fbab2889a70 <line:177:46, line:183:17>
+    |   |   | |   | |-DeclStmt 0x7fbab2889568 <line:178:17, line:179:66>
+    |   |   | |   | | `-VarDecl 0x7fbab2889148 <line:178:17, line:179:65> line:178:24 used projected_rate 'double' cinit
+    |   |   | |   | |   `-BinaryOperator 0x7fbab2889540 <col:41, line:179:65> 'double' '-'
+    |   |   | |   | |     |-CallExpr 0x7fbab28894a0 <line:178:41, line:179:61> 'double'
+    |   |   | |   | |     | |-ImplicitCastExpr 0x7fbab2889488 <line:178:41> 'double (*)(double, double)' <FunctionToPointerDecay>
+    |   |   | |   | |     | | `-DeclRefExpr 0x7fbab28891a8 <col:41> 'double (double, double)' Function 0x7fbab2868dc8 'pow' 'double (double, double)'
+    |   |   | |   | |     | |-ParenExpr 0x7fbab28893f0 <col:45, col:65> 'double'
+    |   |   | |   | |     | | `-BinaryOperator 0x7fbab28893c8 <col:46, col:60> 'double' '+'
+    |   |   | |   | |     | |   |-ImplicitCastExpr 0x7fbab28893b0 <col:46> 'double' <IntegralToFloating>
+    |   |   | |   | |     | |   | `-IntegerLiteral 0x7fbab28891d0 <col:46> 'int' 1
+    |   |   | |   | |     | |   `-BinaryOperator 0x7fbab2889388 <line:12:19, line:178:60> 'double' '/'
+    |   |   | |   | |     | |     |-ImplicitCastExpr 0x7fbab2889370 <line:12:19, col:47> 'double' <LValueToRValue>
+    |   |   | |   | |     | |     | `-ParenExpr 0x7fbab2889330 <col:19, col:47> 'double' lvalue
+    |   |   | |   | |     | |     |   `-UnaryOperator 0x7fbab2889310 <col:20, col:46> 'double' lvalue prefix '*'
+    |   |   | |   | |     | |     |     `-ParenExpr 0x7fbab28892f0 <col:21, col:46> 'double *'
+    |   |   | |   | |     | |     |       `-ParenExpr 0x7fbab28892d0 <col:22, col:45> 'double *'
+    |   |   | |   | |     | |     |         `-BinaryOperator 0x7fbab28892a8 <col:23, col:44> 'double *' '+'
+    |   |   | |   | |     | |     |           |-CStyleCastExpr 0x7fbab2889260 <col:23, col:34> 'double *' <BitCast>
+    |   |   | |   | |     | |     |           | `-UnaryOperator 0x7fbab2889228 <col:33, col:34> 'struct fltcom_st *' prefix '&'
+    |   |   | |   | |     | |     |           |   `-DeclRefExpr 0x7fbab2889200 <col:34> 'struct fltcom_st':'struct fltcom_st' lvalue Var 0x7fbab2879300 'fltcom_' 'struct fltcom_st':'struct fltcom_st'
+    |   |   | |   | |     | |     |           `-IntegerLiteral 0x7fbab2889288 <col:44> 'int' 1
+    |   |   | |   | |     | |     `-FloatingLiteral 0x7fbab2889350 <line:178:60> 'double' 1.000000e+02
+    |   |   | |   | |     | `-ImplicitCastExpr 0x7fbab28894f0 <line:179:45, col:60> 'double' <IntegralToFloating>
+    |   |   | |   | |     |   `-ImplicitCastExpr 0x7fbab28894d8 <col:45, col:60> 'short' <LValueToRValue>
+    |   |   | |   | |     |     `-ParenExpr 0x7fbab2889438 <col:45, col:60> 'short' lvalue
+    |   |   | |   | |     |       `-DeclRefExpr 0x7fbab2889410 <col:46> 'short' lvalue Var 0x7fbab2886fe0 'days_in_period' 'short'
+    |   |   | |   | |     `-ImplicitCastExpr 0x7fbab2889528 <col:65> 'double' <IntegralToFloating>
+    |   |   | |   | |       `-IntegerLiteral 0x7fbab2889508 <col:65> 'int' 1
+    |   |   | |   | |-BinaryOperator 0x7fbab2889858 <line:181:17, col:67> 'double' '='
+    |   |   | |   | | |-DeclRefExpr 0x7fbab2889580 <col:17> 'double' lvalue Var 0x7fbab2889148 'projected_rate' 'double'
+    |   |   | |   | | `-BinaryOperator 0x7fbab2889830 <col:34, col:67> 'double' '+'
+    |   |   | |   | |   |-ImplicitCastExpr 0x7fbab2889818 <col:34> 'double' <LValueToRValue>
+    |   |   | |   | |   | `-DeclRefExpr 0x7fbab28895a8 <col:34> 'double' lvalue Var 0x7fbab2889148 'projected_rate' 'double'
+    |   |   | |   | |   `-BinaryOperator 0x7fbab28897f0 <line:13:17, line:181:67> 'double' '*'
+    |   |   | |   | |     |-BinaryOperator 0x7fbab2889758 <line:13:17, line:181:59> 'double' '/'
+    |   |   | |   | |     | |-ImplicitCastExpr 0x7fbab2889740 <line:13:17, col:45> 'double' <LValueToRValue>
+    |   |   | |   | |     | | `-ParenExpr 0x7fbab2889700 <col:17, col:45> 'double' lvalue
+    |   |   | |   | |     | |   `-UnaryOperator 0x7fbab28896e0 <col:18, col:44> 'double' lvalue prefix '*'
+    |   |   | |   | |     | |     `-ParenExpr 0x7fbab28896c0 <col:19, col:44> 'double *'
+    |   |   | |   | |     | |       `-ParenExpr 0x7fbab28896a0 <col:20, col:43> 'double *'
+    |   |   | |   | |     | |         `-BinaryOperator 0x7fbab2889678 <col:21, col:42> 'double *' '+'
+    |   |   | |   | |     | |           |-CStyleCastExpr 0x7fbab2889630 <col:21, col:32> 'double *' <BitCast>
+    |   |   | |   | |     | |           | `-UnaryOperator 0x7fbab28895f8 <col:31, col:32> 'struct fltcom_st *' prefix '&'
+    |   |   | |   | |     | |           |   `-DeclRefExpr 0x7fbab28895d0 <col:32> 'struct fltcom_st':'struct fltcom_st' lvalue Var 0x7fbab2879300 'fltcom_' 'struct fltcom_st':'struct fltcom_st'
+    |   |   | |   | |     | |           `-IntegerLiteral 0x7fbab2889658 <col:42> 'int' 2
+    |   |   | |   | |     | `-FloatingLiteral 0x7fbab2889720 <line:181:59> 'double' 1.000000e+02
+    |   |   | |   | |     `-ImplicitCastExpr 0x7fbab28897d8 <col:67> 'double' <IntegralToFloating>
+    |   |   | |   | |       `-ImplicitCastExpr 0x7fbab28897c0 <col:67> 'int' <IntegralCast>
+    |   |   | |   | |         `-ImplicitCastExpr 0x7fbab28897a8 <col:67> 'short' <LValueToRValue>
+    |   |   | |   | |           `-DeclRefExpr 0x7fbab2889780 <col:67> 'short' lvalue Var 0x7fbab2886fe0 'days_in_period' 'short'
+    |   |   | |   | `-BinaryOperator 0x7fbab2889a48 <line:182:17, col:68> 'double' '='
+    |   |   | |   |   |-DeclRefExpr 0x7fbab2889880 <col:17> 'double' lvalue Var 0x7fbab2887ae0 'cpn_rate' 'double'
+    |   |   | |   |   `-BinaryOperator 0x7fbab2889a20 <col:28, col:68> 'double' '*'
+    |   |   | |   |     |-BinaryOperator 0x7fbab2889920 <col:28, col:34> 'double' '*'
+    |   |   | |   |     | |-ImplicitCastExpr 0x7fbab2889908 <col:28> 'double' <IntegralToFloating>
+    |   |   | |   |     | | `-IntegerLiteral 0x7fbab28898a8 <col:28> 'int' 100
+    |   |   | |   |     | `-ImplicitCastExpr 0x7fbab28898f0 <col:34> 'double' <LValueToRValue>
+    |   |   | |   |     |   `-DeclRefExpr 0x7fbab28898c8 <col:34> 'double' lvalue Var 0x7fbab2889148 'projected_rate' 'double'
+    |   |   | |   |     `-ImplicitCastExpr 0x7fbab2889a08 <col:51, col:68> 'double' <IntegralToFloating>
+    |   |   | |   |       `-ParenExpr 0x7fbab28899e8 <col:51, col:68> 'int'
+    |   |   | |   |         `-BinaryOperator 0x7fbab28899c0 <col:52, col:54> 'int' '/'
+    |   |   | |   |           |-IntegerLiteral 0x7fbab2889948 <col:52> 'int' 1
+    |   |   | |   |           `-ImplicitCastExpr 0x7fbab28899a8 <col:54> 'int' <IntegralCast>
+    |   |   | |   |             `-ImplicitCastExpr 0x7fbab2889990 <col:54> 'short' <LValueToRValue>
+    |   |   | |   |               `-DeclRefExpr 0x7fbab2889968 <col:54> 'short' lvalue Var 0x7fbab2886fe0 'days_in_period' 'short'
+    |   |   | |   `-<<<NULL>>>
+    |   |   | `-<<<NULL>>>
+    |   |   `-IfStmt 0x7fbab288b7e0 <line:187:13, line:206:13>
+    |   |     |-<<<NULL>>>
+    |   |     |-<<<NULL>>>
+    |   |     |-ImplicitCastExpr 0x7fbab2889b60 <line:187:16> 'int' <LValueToRValue>
+    |   |     | `-DeclRefExpr 0x7fbab2889b38 <col:16> 'int' lvalue Var 0x7fbab2869a78 'isactact' 'int'
+    |   |     |-CompoundStmt 0x7fbab288a760 <col:26, line:194:13>
+    |   |     | |-BinaryOperator 0x7fbab2889da8 <line:38:18, line:188:42> 'double' '='
+    |   |     | | |-ArraySubscriptExpr 0x7fbab2889ca8 <line:38:18, line:188:27> 'double' lvalue
+    |   |     | | | |-ParenExpr 0x7fbab2889c48 <line:38:18, col:41> 'double *'
+    |   |     | | | | `-BinaryOperator 0x7fbab2889c20 <col:19, col:40> 'double *' '+'
+    |   |     | | | |   |-CStyleCastExpr 0x7fbab2889bd8 <col:19, col:30> 'double *' <BitCast>
+    |   |     | | | |   | `-UnaryOperator 0x7fbab2889ba0 <col:29, col:30> 'struct cshfcm_st *' prefix '&'
+    |   |     | | | |   |   `-DeclRefExpr 0x7fbab2889b78 <col:30> 'struct cshfcm_st':'struct cshfcm_st' lvalue Var 0x7fbab287c200 'cshfcm_' 'struct cshfcm_st':'struct cshfcm_st'
+    |   |     | | | |   `-IntegerLiteral 0x7fbab2889c00 <col:40> 'int' 1
+    |   |     | | | `-ImplicitCastExpr 0x7fbab2889c90 <line:188:26> 'int' <LValueToRValue>
+    |   |     | | |   `-DeclRefExpr 0x7fbab2889c68 <col:26> 'int' lvalue Var 0x7fbab28855d8 'j' 'int'
+    |   |     | | `-BinaryOperator 0x7fbab2889d80 <col:31, col:42> 'double' '/'
+    |   |     | |   |-ImplicitCastExpr 0x7fbab2889d20 <col:31> 'double' <LValueToRValue>
+    |   |     | |   | `-DeclRefExpr 0x7fbab2889cd0 <col:31> 'double' lvalue Var 0x7fbab2887ae0 'cpn_rate' 'double'
+    |   |     | |   `-ImplicitCastExpr 0x7fbab2889d68 <col:42> 'double' <IntegralToFloating>
+    |   |     | |     `-ImplicitCastExpr 0x7fbab2889d50 <col:42> 'int' <IntegralCast>
+    |   |     | |       `-ImplicitCastExpr 0x7fbab2889d38 <col:42> 'short' <LValueToRValue>
+    |   |     | |         `-DeclRefExpr 0x7fbab2889cf8 <col:42> 'short' lvalue ParmVar 0x7fbab2868fd0 'sFreq' 'short'
+    |   |     | |-BinaryOperator 0x7fbab288a140 <line:39:18, line:189:47> 'double' '='
+    |   |     | | |-ArraySubscriptExpr 0x7fbab2889f00 <line:39:18, line:189:27> 'double' lvalue
+    |   |     | | | |-ParenExpr 0x7fbab2889ea0 <line:39:18, col:44> 'double *'
+    |   |     | | | | `-BinaryOperator 0x7fbab2889e78 <col:19, col:40> 'double *' '+'
+    |   |     | | | |   |-CStyleCastExpr 0x7fbab2889e30 <col:19, col:30> 'double *' <BitCast>
+    |   |     | | | |   | `-UnaryOperator 0x7fbab2889df8 <col:29, col:30> 'struct cshfcm_st *' prefix '&'
+    |   |     | | | |   |   `-DeclRefExpr 0x7fbab2889dd0 <col:30> 'struct cshfcm_st':'struct cshfcm_st' lvalue Var 0x7fbab287c200 'cshfcm_' 'struct cshfcm_st':'struct cshfcm_st'
+    |   |     | | | |   `-IntegerLiteral 0x7fbab2889e58 <col:40> 'int' 1201
+    |   |     | | | `-ImplicitCastExpr 0x7fbab2889ee8 <line:189:26> 'int' <LValueToRValue>
+    |   |     | | |   `-DeclRefExpr 0x7fbab2889ec0 <col:26> 'int' lvalue Var 0x7fbab28855d8 'j' 'int'
+    |   |     | | `-BinaryOperator 0x7fbab288a118 <line:39:18, line:189:47> 'double' '+'
+    |   |     | |   |-ImplicitCastExpr 0x7fbab288a0e8 <line:39:18, line:189:43> 'double' <LValueToRValue>
+    |   |     | |   | `-ArraySubscriptExpr 0x7fbab288a0a0 <line:39:18, line:189:43> 'double' lvalue
+    |   |     | |   |   |-ParenExpr 0x7fbab2889ff8 <line:39:18, col:44> 'double *'
+    |   |     | |   |   | `-BinaryOperator 0x7fbab2889fd0 <col:19, col:40> 'double *' '+'
+    |   |     | |   |   |   |-CStyleCastExpr 0x7fbab2889f88 <col:19, col:30> 'double *' <BitCast>
+    |   |     | |   |   |   | `-UnaryOperator 0x7fbab2889f50 <col:29, col:30> 'struct cshfcm_st *' prefix '&'
+    |   |     | |   |   |   |   `-DeclRefExpr 0x7fbab2889f28 <col:30> 'struct cshfcm_st':'struct cshfcm_st' lvalue Var 0x7fbab287c200 'cshfcm_' 'struct cshfcm_st':'struct cshfcm_st'
+    |   |     | |   |   |   `-IntegerLiteral 0x7fbab2889fb0 <col:40> 'int' 1201
+    |   |     | |   |   `-BinaryOperator 0x7fbab288a078 <line:189:40, col:42> 'int' '-'
+    |   |     | |   |     |-ImplicitCastExpr 0x7fbab288a060 <col:40> 'int' <LValueToRValue>
+    |   |     | |   |     | `-DeclRefExpr 0x7fbab288a018 <col:40> 'int' lvalue Var 0x7fbab28855d8 'j' 'int'
+    |   |     | |   |     `-IntegerLiteral 0x7fbab288a040 <col:42> 'int' 1
+    |   |     | |   `-ImplicitCastExpr 0x7fbab288a100 <col:47> 'double' <IntegralToFloating>
+    |   |     | |     `-IntegerLiteral 0x7fbab288a0c8 <col:47> 'int' 1
+    |   |     | `-IfStmt 0x7fbab288a728 <line:191:17, line:193:17>
+    |   |     |   |-<<<NULL>>>
+    |   |     |   |-<<<NULL>>>
+    |   |     |   |-BinaryOperator 0x7fbab288a388 <line:84:3, line:191:64> 'int' '&&'
+    |   |     |   | |-CallExpr 0x7fbab288a238 <line:84:3, col:54> 'int'
+    |   |     |   | | |-ImplicitCastExpr 0x7fbab288a220 <col:3> 'int (*)(const bregdb_bitinfo_t *const, const int, const void *const)' <FunctionToPointerDecay>
+    |   |     |   | | | `-DeclRefExpr 0x7fbab288a168 <col:3> 'int (const bregdb_bitinfo_t *const, const int, const void *const)' Function 0x7fbab287cd48 'bregdb_eval_bbitcxt_bool_rv' 'int (const bregdb_bitinfo_t *const, const int, const void *const)'
+    |   |     |   | | |-UnaryOperator 0x7fbab288a1b8 <col:31, col:32> 'const bregdb_bitinfo_t *' prefix '&'
+    |   |     |   | | | `-DeclRefExpr 0x7fbab288a190 <col:32> 'const bregdb_bitinfo_t':'const bregdb_bitinfo_t' lvalue Var 0x7fbab287f758 'bbit_calc_dr_d46' 'const bregdb_bitinfo_t':'const bregdb_bitinfo_t'
+    |   |     |   | | |-IntegerLiteral 0x7fbab288a1d8 <col:50> 'int' 0
+    |   |     |   | | `-ImplicitCastExpr 0x7fbab288a278 <col:53> 'const void *' <NullToPointer>
+    |   |     |   | |   `-IntegerLiteral 0x7fbab288a200 <col:53> 'int' 0
+    |   |     |   | `-BinaryOperator 0x7fbab288a308 <line:191:49, col:64> 'int' '!='
+    |   |     |   |   |-ImplicitCastExpr 0x7fbab288a2f0 <col:49> 'int' <IntegralCast>
+    |   |     |   |   | `-ImplicitCastExpr 0x7fbab288a2d8 <col:49> 'short' <LValueToRValue>
+    |   |     |   |   |   `-DeclRefExpr 0x7fbab288a290 <col:49> 'const short' lvalue Var 0x7fbab2869bd0 'discDaytype' 'const short'
+    |   |     |   |   `-IntegerLiteral 0x7fbab288a2b8 <col:64> 'int' 0
+    |   |     |   |-CompoundStmt 0x7fbab288a708 <col:67, line:193:17>
+    |   |     |   | `-BinaryOperator 0x7fbab288a6e0 <line:39:18, line:192:79> 'double' '='
+    |   |     |   |   |-ArraySubscriptExpr 0x7fbab288a4e0 <line:39:18, line:192:31> 'double' lvalue
+    |   |     |   |   | |-ParenExpr 0x7fbab288a480 <line:39:18, col:44> 'double *'
+    |   |     |   |   | | `-BinaryOperator 0x7fbab288a458 <col:19, col:40> 'double *' '+'
+    |   |     |   |   | |   |-CStyleCastExpr 0x7fbab288a410 <col:19, col:30> 'double *' <BitCast>
+    |   |     |   |   | |   | `-UnaryOperator 0x7fbab288a3d8 <col:29, col:30> 'struct cshfcm_st *' prefix '&'
+    |   |     |   |   | |   |   `-DeclRefExpr 0x7fbab288a3b0 <col:30> 'struct cshfcm_st':'struct cshfcm_st' lvalue Var 0x7fbab287c200 'cshfcm_' 'struct cshfcm_st':'struct cshfcm_st'
+    |   |     |   |   | |   `-IntegerLiteral 0x7fbab288a438 <col:40> 'int' 1201
+    |   |     |   |   | `-ImplicitCastExpr 0x7fbab288a4c8 <line:192:30> 'int' <LValueToRValue>
+    |   |     |   |   |   `-DeclRefExpr 0x7fbab288a4a0 <col:30> 'int' lvalue Var 0x7fbab28855d8 'j' 'int'
+    |   |     |   |   `-BinaryOperator 0x7fbab288a6b8 <col:35, col:79> 'double' '/'
+    |   |     |   |     |-CStyleCastExpr 0x7fbab288a560 <col:35, col:43> 'double' <IntegralToFloating>
+    |   |     |   |     | `-ImplicitCastExpr 0x7fbab288a548 <col:43> 'short' <LValueToRValue>
+    |   |     |   |     |   `-DeclRefExpr 0x7fbab288a508 <col:43> 'short' lvalue Var 0x7fbab2886f68 'days_from_settle' 'short'
+    |   |     |   |     `-CStyleCastExpr 0x7fbab288a690 <col:62, col:79> 'double' <IntegralToFloating>
+    |   |     |   |       `-ParenExpr 0x7fbab288a670 <col:70, col:79> 'int'
+    |   |     |   |         `-BinaryOperator 0x7fbab288a600 <col:71, col:73> 'int' '/'
+    |   |     |   |           |-IntegerLiteral 0x7fbab288a588 <col:71> 'int' 1
+    |   |     |   |           `-ImplicitCastExpr 0x7fbab288a5e8 <col:73> 'int' <IntegralCast>
+    |   |     |   |             `-ImplicitCastExpr 0x7fbab288a5d0 <col:73> 'short' <LValueToRValue>
+    |   |     |   |               `-DeclRefExpr 0x7fbab288a5a8 <col:73> 'const short' lvalue Var 0x7fbab286a758 'sfreq1' 'const short'
+    |   |     |   `-<<<NULL>>>
+    |   |     `-CompoundStmt 0x7fbab288b7b0 <line:195:18, line:206:13>
+    |   |       |-IfStmt 0x7fbab288b1b0 <line:196:17, line:202:17>
+    |   |       | |-<<<NULL>>>
+    |   |       | |-<<<NULL>>>
+    |   |       | |-UnaryOperator 0x7fbab288a8b0 <line:196:20, line:84:54> 'int' prefix '!'
+    |   |       | | `-CallExpr 0x7fbab288a858 <col:3, col:54> 'int'
+    |   |       | |   |-ImplicitCastExpr 0x7fbab288a840 <col:3> 'int (*)(const bregdb_bitinfo_t *const, const int, const void *const)' <FunctionToPointerDecay>
+    |   |       | |   | `-DeclRefExpr 0x7fbab288a790 <col:3> 'int (const bregdb_bitinfo_t *const, const int, const void *const)' Function 0x7fbab287cd48 'bregdb_eval_bbitcxt_bool_rv' 'int (const bregdb_bitinfo_t *const, const int, const void *const)'
+    |   |       | |   |-UnaryOperator 0x7fbab288a7e0 <col:31, col:32> 'const bregdb_bitinfo_t *' prefix '&'
+    |   |       | |   | `-DeclRefExpr 0x7fbab288a7b8 <col:32> 'const bregdb_bitinfo_t':'const bregdb_bitinfo_t' lvalue Var 0x7fbab287f758 'bbit_calc_dr_d46' 'const bregdb_bitinfo_t':'const bregdb_bitinfo_t'
+    |   |       | |   |-IntegerLiteral 0x7fbab288a800 <col:50> 'int' 0
+    |   |       | |   `-ImplicitCastExpr 0x7fbab288a898 <col:53> 'const void *' <NullToPointer>
+    |   |       | |     `-IntegerLiteral 0x7fbab288a820 <col:53> 'int' 0
+    |   |       | |-CompoundStmt 0x7fbab288b188 <line:196:47, line:202:17>
+    |   |       | | |-BinaryOperator 0x7fbab288ac10 <line:197:17, line:198:70> 'short' '='
+    |   |       | | | |-DeclRefExpr 0x7fbab288a8d0 <line:197:17> 'short' lvalue Var 0x7fbab2886f68 'days_from_settle' 'short'
+    |   |       | | | `-CallExpr 0x7fbab288abb0 <col:36, line:198:70> 'short'
+    |   |       | | |   |-ImplicitCastExpr 0x7fbab288ab98 <line:197:36> 'short (*)(short *, short *, short *, short *)' <FunctionToPointerDecay>
+    |   |       | | |   | `-DeclRefExpr 0x7fbab288a8f8 <col:36> 'short (short *, short *, short *, short *)' Function 0x7fbab28689e8 'difday_' 'short (short *, short *, short *, short *)'
+    |   |       | | |   |-UnaryOperator 0x7fbab288a948 <col:44, col:45> 'short *' prefix '&'
+    |   |       | | |   | `-DeclRefExpr 0x7fbab288a920 <col:45> 'short' lvalue ParmVar 0x7fbab2868f58 'sDayType' 'short'
+    |   |       | | |   |-ImplicitCastExpr 0x7fbab288abf8 <col:54> 'short *':'short *' <LValueToRValue>
+    |   |       | | |   | `-DeclRefExpr 0x7fbab288a968 <col:54> 'short *':'short *' lvalue ParmVar 0x7fbab28690b0 'asSettleDt' 'short *':'short *'
+    |   |       | | |   |-UnaryOperator 0x7fbab288ab30 <line:198:48, col:61> 'short *' prefix '&'
+    |   |       | | |   | `-ArraySubscriptExpr 0x7fbab288ab08 <line:40:18, line:198:61> 'short' lvalue
+    |   |       | | |   |   |-ParenExpr 0x7fbab288aa60 <line:40:18, col:43> 'short *'
+    |   |       | | |   |   | `-BinaryOperator 0x7fbab288aa38 <col:19, col:39> 'short *' '+'
+    |   |       | | |   |   |   |-CStyleCastExpr 0x7fbab288a9f0 <col:19, col:29> 'short *' <BitCast>
+    |   |       | | |   |   |   | `-UnaryOperator 0x7fbab288a9b8 <col:28, col:29> 'struct cshfcm_st *' prefix '&'
+    |   |       | | |   |   |   |   `-DeclRefExpr 0x7fbab288a990 <col:29> 'struct cshfcm_st':'struct cshfcm_st' lvalue Var 0x7fbab287c200 'cshfcm_' 'struct cshfcm_st':'struct cshfcm_st'
+    |   |       | | |   |   |   `-IntegerLiteral 0x7fbab288aa18 <col:39> 'int' 7230
+    |   |       | | |   |   `-BinaryOperator 0x7fbab288aae0 <line:198:58, col:60> 'int' '*'
+    |   |       | | |   |     |-ImplicitCastExpr 0x7fbab288aac8 <col:58> 'int' <LValueToRValue>
+    |   |       | | |   |     | `-DeclRefExpr 0x7fbab288aa80 <col:58> 'int' lvalue Var 0x7fbab28855d8 'j' 'int'
+    |   |       | | |   |     `-IntegerLiteral 0x7fbab288aaa8 <col:60> 'int' 3
+    |   |       | | |   `-UnaryOperator 0x7fbab288ab78 <col:63, col:64> 'short *' prefix '&'
+    |   |       | | |     `-DeclRefExpr 0x7fbab288ab50 <col:64> 'short' lvalue Var 0x7fbab28699b0 'ercode' 'short'
+    |   |       | | `-BinaryOperator 0x7fbab288b160 <line:199:17, line:200:70> 'short' '='
+    |   |       | |   |-DeclRefExpr 0x7fbab288ac38 <line:199:17> 'short' lvalue Var 0x7fbab2886fe0 'days_in_period' 'short'
+    |   |       | |   `-CallExpr 0x7fbab288b118 <col:35, line:200:70> 'short'
+    |   |       | |     |-ImplicitCastExpr 0x7fbab288b100 <line:199:35> 'short (*)(short *, short *, short *, short *)' <FunctionToPointerDecay>
+    |   |       | |     | `-DeclRefExpr 0x7fbab288ac60 <col:35> 'short (short *, short *, short *, short *)' Function 0x7fbab28689e8 'difday_' 'short (short *, short *, short *, short *)'
+    |   |       | |     |-UnaryOperator 0x7fbab288acb0 <col:43, col:44> 'short *' prefix '&'
+    |   |       | |     | `-DeclRefExpr 0x7fbab288ac88 <col:44> 'short' lvalue ParmVar 0x7fbab2868f58 'sDayType' 'short'
+    |   |       | |     |-UnaryOperator 0x7fbab288aed8 <col:53, col:70> 'short *' prefix '&'
+    |   |       | |     | `-ArraySubscriptExpr 0x7fbab288aeb0 <line:40:18, line:199:70> 'short' lvalue
+    |   |       | |     |   |-ParenExpr 0x7fbab288ada0 <line:40:18, col:43> 'short *'
+    |   |       | |     |   | `-BinaryOperator 0x7fbab288ad78 <col:19, col:39> 'short *' '+'
+    |   |       | |     |   |   |-CStyleCastExpr 0x7fbab288ad30 <col:19, col:29> 'short *' <BitCast>
+    |   |       | |     |   |   | `-UnaryOperator 0x7fbab288acf8 <col:28, col:29> 'struct cshfcm_st *' prefix '&'
+    |   |       | |     |   |   |   `-DeclRefExpr 0x7fbab288acd0 <col:29> 'struct cshfcm_st':'struct cshfcm_st' lvalue Var 0x7fbab287c200 'cshfcm_' 'struct cshfcm_st':'struct cshfcm_st'
+    |   |       | |     |   |   `-IntegerLiteral 0x7fbab288ad58 <col:39> 'int' 7230
+    |   |       | |     |   `-BinaryOperator 0x7fbab288ae88 <line:199:63, col:69> 'int' '*'
+    |   |       | |     |     |-ParenExpr 0x7fbab288ae48 <col:63, col:67> 'int'
+    |   |       | |     |     | `-BinaryOperator 0x7fbab288ae20 <col:64, col:66> 'int' '-'
+    |   |       | |     |     |   |-ImplicitCastExpr 0x7fbab288ae08 <col:64> 'int' <LValueToRValue>
+    |   |       | |     |     |   | `-DeclRefExpr 0x7fbab288adc0 <col:64> 'int' lvalue Var 0x7fbab28855d8 'j' 'int'
+    |   |       | |     |     |   `-IntegerLiteral 0x7fbab288ade8 <col:66> 'int' 1
+    |   |       | |     |     `-IntegerLiteral 0x7fbab288ae68 <col:69> 'int' 3
+    |   |       | |     |-UnaryOperator 0x7fbab288b098 <line:200:48, col:61> 'short *' prefix '&'
+    |   |       | |     | `-ArraySubscriptExpr 0x7fbab288b070 <line:40:18, line:200:61> 'short' lvalue
+    |   |       | |     |   |-ParenExpr 0x7fbab288afc8 <line:40:18, col:43> 'short *'
+    |   |       | |     |   | `-BinaryOperator 0x7fbab288afa0 <col:19, col:39> 'short *' '+'
+    |   |       | |     |   |   |-CStyleCastExpr 0x7fbab288af58 <col:19, col:29> 'short *' <BitCast>
+    |   |       | |     |   |   | `-UnaryOperator 0x7fbab288af20 <col:28, col:29> 'struct cshfcm_st *' prefix '&'
+    |   |       | |     |   |   |   `-DeclRefExpr 0x7fbab288aef8 <col:29> 'struct cshfcm_st':'struct cshfcm_st' lvalue Var 0x7fbab287c200 'cshfcm_' 'struct cshfcm_st':'struct cshfcm_st'
+    |   |       | |     |   |   `-IntegerLiteral 0x7fbab288af80 <col:39> 'int' 7230
+    |   |       | |     |   `-BinaryOperator 0x7fbab288b048 <line:200:58, col:60> 'int' '*'
+    |   |       | |     |     |-ImplicitCastExpr 0x7fbab288b030 <col:58> 'int' <LValueToRValue>
+    |   |       | |     |     | `-DeclRefExpr 0x7fbab288afe8 <col:58> 'int' lvalue Var 0x7fbab28855d8 'j' 'int'
+    |   |       | |     |     `-IntegerLiteral 0x7fbab288b010 <col:60> 'int' 3
+    |   |       | |     `-UnaryOperator 0x7fbab288b0e0 <col:63, col:64> 'short *' prefix '&'
+    |   |       | |       `-DeclRefExpr 0x7fbab288b0b8 <col:64> 'short' lvalue Var 0x7fbab28699b0 'ercode' 'short'
+    |   |       | `-<<<NULL>>>
+    |   |       |-BinaryOperator 0x7fbab288b430 <line:38:18, line:204:42> 'double' '='
+    |   |       | |-ArraySubscriptExpr 0x7fbab288b330 <line:38:18, line:204:27> 'double' lvalue
+    |   |       | | |-ParenExpr 0x7fbab288b2d0 <line:38:18, col:41> 'double *'
+    |   |       | | | `-BinaryOperator 0x7fbab288b2a8 <col:19, col:40> 'double *' '+'
+    |   |       | | |   |-CStyleCastExpr 0x7fbab288b260 <col:19, col:30> 'double *' <BitCast>
+    |   |       | | |   | `-UnaryOperator 0x7fbab288b228 <col:29, col:30> 'struct cshfcm_st *' prefix '&'
+    |   |       | | |   |   `-DeclRefExpr 0x7fbab288b200 <col:30> 'struct cshfcm_st':'struct cshfcm_st' lvalue Var 0x7fbab287c200 'cshfcm_' 'struct cshfcm_st':'struct cshfcm_st'
+    |   |       | | |   `-IntegerLiteral 0x7fbab288b288 <col:40> 'int' 1
+    |   |       | | `-ImplicitCastExpr 0x7fbab288b318 <line:204:26> 'int' <LValueToRValue>
+    |   |       | |   `-DeclRefExpr 0x7fbab288b2f0 <col:26> 'int' lvalue Var 0x7fbab28855d8 'j' 'int'
+    |   |       | `-BinaryOperator 0x7fbab288b408 <col:31, col:42> 'double' '*'
+    |   |       |   |-ImplicitCastExpr 0x7fbab288b3a8 <col:31> 'double' <LValueToRValue>
+    |   |       |   | `-DeclRefExpr 0x7fbab288b358 <col:31> 'double' lvalue Var 0x7fbab2887ae0 'cpn_rate' 'double'
+    |   |       |   `-ImplicitCastExpr 0x7fbab288b3f0 <col:42> 'double' <IntegralToFloating>
+    |   |       |     `-ImplicitCastExpr 0x7fbab288b3d8 <col:42> 'int' <IntegralCast>
+    |   |       |       `-ImplicitCastExpr 0x7fbab288b3c0 <col:42> 'short' <LValueToRValue>
+    |   |       |         `-DeclRefExpr 0x7fbab288b380 <col:42> 'short' lvalue Var 0x7fbab2886fe0 'days_in_period' 'short'
+    |   |       `-BinaryOperator 0x7fbab288b788 <line:39:18, line:205:75> 'double' '='
+    |   |         |-ArraySubscriptExpr 0x7fbab288b588 <line:39:18, line:205:27> 'double' lvalue
+    |   |         | |-ParenExpr 0x7fbab288b528 <line:39:18, col:44> 'double *'
+    |   |         | | `-BinaryOperator 0x7fbab288b500 <col:19, col:40> 'double *' '+'
+    |   |         | |   |-CStyleCastExpr 0x7fbab288b4b8 <col:19, col:30> 'double *' <BitCast>
+    |   |         | |   | `-UnaryOperator 0x7fbab288b480 <col:29, col:30> 'struct cshfcm_st *' prefix '&'
+    |   |         | |   |   `-DeclRefExpr 0x7fbab288b458 <col:30> 'struct cshfcm_st':'struct cshfcm_st' lvalue Var 0x7fbab287c200 'cshfcm_' 'struct cshfcm_st':'struct cshfcm_st'
+    |   |         | |   `-IntegerLiteral 0x7fbab288b4e0 <col:40> 'int' 1201
+    |   |         | `-ImplicitCastExpr 0x7fbab288b570 <line:205:26> 'int' <LValueToRValue>
+    |   |         |   `-DeclRefExpr 0x7fbab288b548 <col:26> 'int' lvalue Var 0x7fbab28855d8 'j' 'int'
+    |   |         `-BinaryOperator 0x7fbab288b760 <col:31, col:75> 'double' '/'
+    |   |           |-CStyleCastExpr 0x7fbab288b608 <col:31, col:39> 'double' <IntegralToFloating>
+    |   |           | `-ImplicitCastExpr 0x7fbab288b5f0 <col:39> 'short' <LValueToRValue>
+    |   |           |   `-DeclRefExpr 0x7fbab288b5b0 <col:39> 'short' lvalue Var 0x7fbab2886f68 'days_from_settle' 'short'
+    |   |           `-CStyleCastExpr 0x7fbab288b738 <col:58, col:75> 'double' <IntegralToFloating>
+    |   |             `-ParenExpr 0x7fbab288b718 <col:66, col:75> 'int'
+    |   |               `-BinaryOperator 0x7fbab288b6a8 <col:67, col:69> 'int' '/'
+    |   |                 |-IntegerLiteral 0x7fbab288b630 <col:67> 'int' 1
+    |   |                 `-ImplicitCastExpr 0x7fbab288b690 <col:69> 'int' <IntegralCast>
+    |   |                   `-ImplicitCastExpr 0x7fbab288b678 <col:69> 'short' <LValueToRValue>
+    |   |                     `-DeclRefExpr 0x7fbab288b650 <col:69> 'const short' lvalue Var 0x7fbab286a758 'sfreq1' 'const short'
+    |   `-IfStmt 0x7fbab288bfd0 <line:210:9, line:212:9>
+    |     |-<<<NULL>>>
+    |     |-<<<NULL>>>
+    |     |-BinaryOperator 0x7fbab288bb80 <line:64:3, line:210:63> 'int' '&&'
+    |     | |-CallExpr 0x7fbab288b960 <line:64:3, col:54> 'int'
+    |     | | |-ImplicitCastExpr 0x7fbab288b948 <col:3> 'int (*)(const bregdb_bitinfo_t *const, const int, const void *const)' <FunctionToPointerDecay>
+    |     | | | `-DeclRefExpr 0x7fbab288b898 <col:3> 'int (const bregdb_bitinfo_t *const, const int, const void *const)' Function 0x7fbab287cd48 'bregdb_eval_bbitcxt_bool_rv' 'int (const bregdb_bitinfo_t *const, const int, const void *const)'
+    |     | | |-UnaryOperator 0x7fbab288b8e8 <col:31, col:32> 'const bregdb_bitinfo_t *' prefix '&'
+    |     | | | `-DeclRefExpr 0x7fbab288b8c0 <col:32> 'const bregdb_bitinfo_t':'const bregdb_bitinfo_t' lvalue Var 0x7fbab287ce08 'bbit_calc_dr_d33' 'const bregdb_bitinfo_t':'const bregdb_bitinfo_t'
+    |     | | |-IntegerLiteral 0x7fbab288b908 <col:50> 'int' 0
+    |     | | `-ImplicitCastExpr 0x7fbab288b9a0 <col:53> 'const void *' <NullToPointer>
+    |     | |   `-IntegerLiteral 0x7fbab288b928 <col:53> 'int' 0
+    |     | `-BinaryOperator 0x7fbab288bb58 <line:45:28, line:210:63> 'int' '!='
+    |     |   |-ImplicitCastExpr 0x7fbab288bb40 <line:45:28, col:58> 'int' <IntegralCast>
+    |     |   | `-ImplicitCastExpr 0x7fbab288bb28 <col:28, col:58> 'short' <LValueToRValue>
+    |     |   |   `-ParenExpr 0x7fbab288bae8 <col:28, col:58> 'short' lvalue
+    |     |   |     `-UnaryOperator 0x7fbab288bac8 <col:29, col:57> 'short' lvalue prefix '*'
+    |     |   |       `-ParenExpr 0x7fbab288baa8 <col:30, col:57> 'short *'
+    |     |   |         `-ParenExpr 0x7fbab288ba88 <col:31, col:56> 'short *'
+    |     |   |           `-BinaryOperator 0x7fbab288ba60 <col:32, col:54> 'short *' '+'
+    |     |   |             |-CStyleCastExpr 0x7fbab288ba18 <col:32, col:42> 'short *' <BitCast>
+    |     |   |             | `-UnaryOperator 0x7fbab288b9e0 <col:41, col:42> 'struct calctsdb_st *' prefix '&'
+    |     |   |             |   `-DeclRefExpr 0x7fbab288b9b8 <col:42> 'struct calctsdb_st':'struct calctsdb_st' lvalue Var 0x7fbab287c490 'calctsdb_' 'struct calctsdb_st':'struct calctsdb_st'
+    |     |   |             `-IntegerLiteral 0x7fbab288ba40 <col:54> 'int' 16
+    |     |   `-IntegerLiteral 0x7fbab288bb08 <line:210:63> 'int' 0
+    |     |-CompoundStmt 0x7fbab288bfb0 <col:66, line:212:9>
+    |     | `-BinaryOperator 0x7fbab288bf88 <line:38:18, line:211:60> 'double' '='
+    |     |   |-ArraySubscriptExpr 0x7fbab288bcd8 <line:38:18, line:211:23> 'double' lvalue
+    |     |   | |-ParenExpr 0x7fbab288bc78 <line:38:18, col:41> 'double *'
+    |     |   | | `-BinaryOperator 0x7fbab288bc50 <col:19, col:40> 'double *' '+'
+    |     |   | |   |-CStyleCastExpr 0x7fbab288bc08 <col:19, col:30> 'double *' <BitCast>
+    |     |   | |   | `-UnaryOperator 0x7fbab288bbd0 <col:29, col:30> 'struct cshfcm_st *' prefix '&'
+    |     |   | |   |   `-DeclRefExpr 0x7fbab288bba8 <col:30> 'struct cshfcm_st':'struct cshfcm_st' lvalue Var 0x7fbab287c200 'cshfcm_' 'struct cshfcm_st':'struct cshfcm_st'
+    |     |   | |   `-IntegerLiteral 0x7fbab288bc30 <col:40> 'int' 1
+    |     |   | `-ImplicitCastExpr 0x7fbab288bcc0 <line:211:22> 'int' <LValueToRValue>
+    |     |   |   `-DeclRefExpr 0x7fbab288bc98 <col:22> 'int' lvalue Var 0x7fbab28855d8 'j' 'int'
+    |     |   `-CallExpr 0x7fbab288bf00 <col:27, col:60> 'double'
+    |     |     |-ImplicitCastExpr 0x7fbab288bee8 <col:27> 'double (*)(double, short, short)' <FunctionToPointerDecay>
+    |     |     | `-DeclRefExpr 0x7fbab288bd00 <col:27> 'double (double, short, short)' Function 0x7fbab287fe78 'rnd_trunc_numb' 'double (double, short, short)'
+    |     |     |-ImplicitCastExpr 0x7fbab288bf40 <line:38:18, line:211:53> 'double' <LValueToRValue>
+    |     |     | `-ArraySubscriptExpr 0x7fbab288be58 <line:38:18, line:211:53> 'double' lvalue
+    |     |     |   |-ParenExpr 0x7fbab288bdf8 <line:38:18, col:41> 'double *'
+    |     |     |   | `-BinaryOperator 0x7fbab288bdd0 <col:19, col:40> 'double *' '+'
+    |     |     |   |   |-CStyleCastExpr 0x7fbab288bd88 <col:19, col:30> 'double *' <BitCast>
+    |     |     |   |   | `-UnaryOperator 0x7fbab288bd50 <col:29, col:30> 'struct cshfcm_st *' prefix '&'
+    |     |     |   |   |   `-DeclRefExpr 0x7fbab288bd28 <col:30> 'struct cshfcm_st':'struct cshfcm_st' lvalue Var 0x7fbab287c200 'cshfcm_' 'struct cshfcm_st':'struct cshfcm_st'
+    |     |     |   |   `-IntegerLiteral 0x7fbab288bdb0 <col:40> 'int' 1
+    |     |     |   `-ImplicitCastExpr 0x7fbab288be40 <line:211:52> 'int' <LValueToRValue>
+    |     |     |     `-DeclRefExpr 0x7fbab288be18 <col:52> 'int' lvalue Var 0x7fbab28855d8 'j' 'int'
+    |     |     |-ImplicitCastExpr 0x7fbab288bf58 <col:56> 'short' <IntegralCast>
+    |     |     | `-IntegerLiteral 0x7fbab288be80 <col:56> 'int' 0
+    |     |     `-ImplicitCastExpr 0x7fbab288bf70 <col:59> 'short' <IntegralCast>
+    |     |       `-IntegerLiteral 0x7fbab288bea0 <col:59> 'int' 0
+    |     `-<<<NULL>>>
+    |-DeclStmt 0x7fbab288c330 <line:217:5, col:72>
+    | `-VarDecl 0x7fbab288c080 <col:5, col:71> col:11 used accrued_days 'short' cinit
+    |   `-CallExpr 0x7fbab288c2d0 <col:26, col:71> 'short'
+    |     |-ImplicitCastExpr 0x7fbab288c2b8 <col:26> 'short (*)(short *, short *, short *, short *)' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x7fbab288c0e0 <col:26> 'short (short *, short *, short *, short *)' Function 0x7fbab28689e8 'difday_' 'short (short *, short *, short *, short *)'
+    |     |-UnaryOperator 0x7fbab288c130 <col:34, col:35> 'short *' prefix '&'
+    |     | `-DeclRefExpr 0x7fbab288c108 <col:35> 'short' lvalue ParmVar 0x7fbab2868f58 'sDayType' 'short'
+    |     |-ParenExpr 0x7fbab288c228 <line:18:18, col:42> 'short *'
+    |     | `-BinaryOperator 0x7fbab288c200 <col:19, col:40> 'short *' '+'
+    |     |   |-CStyleCastExpr 0x7fbab288c1b0 <col:19, col:29> 'short *' <BitCast>
+    |     |   | `-UnaryOperator 0x7fbab288c178 <col:28, col:29> 'struct fltcom2_st *' prefix '&'
+    |     |   |   `-DeclRefExpr 0x7fbab288c150 <col:29> 'struct fltcom2_st':'struct fltcom2_st' lvalue Var 0x7fbab28795d0 'fltcom2_' 'struct fltcom2_st':'struct fltcom2_st'
+    |     |   `-IntegerLiteral 0x7fbab288c1d8 <col:40> 'int' 17
+    |     |-ImplicitCastExpr 0x7fbab288c318 <line:217:53> 'short *':'short *' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7fbab288c248 <col:53> 'short *':'short *' lvalue ParmVar 0x7fbab28690b0 'asSettleDt' 'short *':'short *'
+    |     `-UnaryOperator 0x7fbab288c298 <col:64, col:65> 'short *' prefix '&'
+    |       `-DeclRefExpr 0x7fbab288c270 <col:65> 'short' lvalue Var 0x7fbab28699b0 'ercode' 'short'
+    |-IfStmt 0x7fbab288cd58 <line:219:5, line:226:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-UnaryOperator 0x7fbab288c468 <line:219:8, line:80:54> 'int' prefix '!'
+    | | `-CallExpr 0x7fbab288c410 <col:3, col:54> 'int'
+    | |   |-ImplicitCastExpr 0x7fbab288c3f8 <col:3> 'int (*)(const bregdb_bitinfo_t *const, const int, const void *const)' <FunctionToPointerDecay>
+    | |   | `-DeclRefExpr 0x7fbab288c348 <col:3> 'int (const bregdb_bitinfo_t *const, const int, const void *const)' Function 0x7fbab287cd48 'bregdb_eval_bbitcxt_bool_rv' 'int (const bregdb_bitinfo_t *const, const int, const void *const)'
+    | |   |-UnaryOperator 0x7fbab288c398 <col:31, col:32> 'const bregdb_bitinfo_t *' prefix '&'
+    | |   | `-DeclRefExpr 0x7fbab288c370 <col:32> 'const bregdb_bitinfo_t':'const bregdb_bitinfo_t' lvalue Var 0x7fbab287f590 'bbit_calc_dr_d47' 'const bregdb_bitinfo_t':'const bregdb_bitinfo_t'
+    | |   |-IntegerLiteral 0x7fbab288c3b8 <col:50> 'int' 0
+    | |   `-ImplicitCastExpr 0x7fbab288c450 <col:53> 'const void *' <NullToPointer>
+    | |     `-IntegerLiteral 0x7fbab288c3d8 <col:53> 'int' 0
+    | |-CompoundStmt 0x7fbab288cd38 <line:219:36, line:226:5>
+    | | `-IfStmt 0x7fbab288cd00 <line:220:5, line:225:5>
+    | |   |-<<<NULL>>>
+    | |   |-<<<NULL>>>
+    | |   |-ImplicitCastExpr 0x7fbab288c4b0 <line:220:8> 'int' <LValueToRValue>
+    | |   | `-DeclRefExpr 0x7fbab288c488 <col:8> 'int' lvalue Var 0x7fbab2869a78 'isactact' 'int'
+    | |   |-CompoundStmt 0x7fbab288c888 <col:18, line:222:5>
+    | |   | `-BinaryOperator 0x7fbab288c860 <line:221:9, col:83> 'double' '='
+    | |   |   |-UnaryOperator 0x7fbab288c508 <col:9, col:10> 'double' lvalue prefix '*'
+    | |   |   | `-ImplicitCastExpr 0x7fbab288c4f0 <col:10> 'double *' <LValueToRValue>
+    | |   |   |   `-DeclRefExpr 0x7fbab288c4c8 <col:10> 'double *' lvalue ParmVar 0x7fbab28694b8 'pdAI' 'double *'
+    | |   |   `-BinaryOperator 0x7fbab288c838 <col:17, col:83> 'double' '/'
+    | |   |     |-BinaryOperator 0x7fbab288c770 <col:17, col:37> 'double' '*'
+    | |   |     | |-ParenExpr 0x7fbab288c6e0 <col:17, col:34> 'double'
+    | |   |     | | `-BinaryOperator 0x7fbab288c6b8 <line:20:18, line:221:29> 'double' '/'
+    | |   |     | |   |-ImplicitCastExpr 0x7fbab288c658 <line:20:18, col:43> 'double' <LValueToRValue>
+    | |   |     | |   | `-ParenExpr 0x7fbab288c610 <col:18, col:43> 'double' lvalue
+    | |   |     | |   |   `-UnaryOperator 0x7fbab288c5f0 <col:19, col:42> 'double' lvalue prefix '*'
+    | |   |     | |   |     `-ParenExpr 0x7fbab288c5d0 <col:20, col:42> 'double *'
+    | |   |     | |   |       `-ParenExpr 0x7fbab288c5b0 <col:21, col:41> 'double *'
+    | |   |     | |   |         `-CStyleCastExpr 0x7fbab288c588 <col:22, col:33> 'double *' <BitCast>
+    | |   |     | |   |           `-UnaryOperator 0x7fbab288c550 <col:32, col:33> 'struct fltcom2_st *' prefix '&'
+    | |   |     | |   |             `-DeclRefExpr 0x7fbab288c528 <col:33> 'struct fltcom2_st':'struct fltcom2_st' lvalue Var 0x7fbab28795d0 'fltcom2_' 'struct fltcom2_st':'struct fltcom2_st'
+    | |   |     | |   `-ImplicitCastExpr 0x7fbab288c6a0 <line:221:29> 'double' <IntegralToFloating>
+    | |   |     | |     `-ImplicitCastExpr 0x7fbab288c688 <col:29> 'int' <IntegralCast>
+    | |   |     | |       `-ImplicitCastExpr 0x7fbab288c670 <col:29> 'short' <LValueToRValue>
+    | |   |     | |         `-DeclRefExpr 0x7fbab288c630 <col:29> 'short' lvalue ParmVar 0x7fbab2868fd0 'sFreq' 'short'
+    | |   |     | `-ImplicitCastExpr 0x7fbab288c758 <col:37> 'double' <IntegralToFloating>
+    | |   |     |   `-ImplicitCastExpr 0x7fbab288c740 <col:37> 'int' <IntegralCast>
+    | |   |     |     `-ImplicitCastExpr 0x7fbab288c728 <col:37> 'short' <LValueToRValue>
+    | |   |     |       `-DeclRefExpr 0x7fbab288c700 <col:37> 'short' lvalue Var 0x7fbab288c080 'accrued_days' 'short'
+    | |   |     `-ParenExpr 0x7fbab288c818 <col:52, col:83> 'double'
+    | |   |       `-CStyleCastExpr 0x7fbab288c7f0 <col:53, col:61> 'double' <IntegralToFloating>
+    | |   |         `-ImplicitCastExpr 0x7fbab288c7d8 <col:61> 'short' <LValueToRValue>
+    | |   |           `-DeclRefExpr 0x7fbab288c798 <col:61> 'short' lvalue Var 0x7fbab286a348 'days_in_current_period' 'short'
+    | |   `-CompoundStmt 0x7fbab288cce0 <line:223:9, line:225:5>
+    | |     `-BinaryOperator 0x7fbab288ccb8 <line:224:9, col:68> 'double' '='
+    | |       |-UnaryOperator 0x7fbab288c8e8 <col:9, col:10> 'double' lvalue prefix '*'
+    | |       | `-ImplicitCastExpr 0x7fbab288c8d0 <col:10> 'double *' <LValueToRValue>
+    | |       |   `-DeclRefExpr 0x7fbab288c8a8 <col:10> 'double *' lvalue ParmVar 0x7fbab28694b8 'pdAI' 'double *'
+    | |       `-BinaryOperator 0x7fbab288cc90 <col:17, col:68> 'double' '/'
+    | |         |-BinaryOperator 0x7fbab288cb50 <col:17, col:37> 'double' '*'
+    | |         | |-ParenExpr 0x7fbab288cac0 <col:17, col:34> 'double'
+    | |         | | `-BinaryOperator 0x7fbab288ca98 <line:20:18, line:224:29> 'double' '/'
+    | |         | |   |-ImplicitCastExpr 0x7fbab288ca38 <line:20:18, col:43> 'double' <LValueToRValue>
+    | |         | |   | `-ParenExpr 0x7fbab288c9f0 <col:18, col:43> 'double' lvalue
+    | |         | |   |   `-UnaryOperator 0x7fbab288c9d0 <col:19, col:42> 'double' lvalue prefix '*'
+    | |         | |   |     `-ParenExpr 0x7fbab288c9b0 <col:20, col:42> 'double *'
+    | |         | |   |       `-ParenExpr 0x7fbab288c990 <col:21, col:41> 'double *'
+    | |         | |   |         `-CStyleCastExpr 0x7fbab288c968 <col:22, col:33> 'double *' <BitCast>
+    | |         | |   |           `-UnaryOperator 0x7fbab288c930 <col:32, col:33> 'struct fltcom2_st *' prefix '&'
+    | |         | |   |             `-DeclRefExpr 0x7fbab288c908 <col:33> 'struct fltcom2_st':'struct fltcom2_st' lvalue Var 0x7fbab28795d0 'fltcom2_' 'struct fltcom2_st':'struct fltcom2_st'
+    | |         | |   `-ImplicitCastExpr 0x7fbab288ca80 <line:224:29> 'double' <IntegralToFloating>
+    | |         | |     `-ImplicitCastExpr 0x7fbab288ca68 <col:29> 'int' <IntegralCast>
+    | |         | |       `-ImplicitCastExpr 0x7fbab288ca50 <col:29> 'short' <LValueToRValue>
+    | |         | |         `-DeclRefExpr 0x7fbab288ca10 <col:29> 'short' lvalue ParmVar 0x7fbab2868fd0 'sFreq' 'short'
+    | |         | `-ImplicitCastExpr 0x7fbab288cb38 <col:37> 'double' <IntegralToFloating>
+    | |         |   `-ImplicitCastExpr 0x7fbab288cb20 <col:37> 'int' <IntegralCast>
+    | |         |     `-ImplicitCastExpr 0x7fbab288cb08 <col:37> 'short' <LValueToRValue>
+    | |         |       `-DeclRefExpr 0x7fbab288cae0 <col:37> 'short' lvalue Var 0x7fbab288c080 'accrued_days' 'short'
+    | |         `-ParenExpr 0x7fbab288cc70 <col:52, col:68> 'double'
+    | |           `-BinaryOperator 0x7fbab288cc48 <col:53, col:63> 'double' '/'
+    | |             |-CStyleCastExpr 0x7fbab288cbb0 <col:53, col:61> 'double' <IntegralToFloating>
+    | |             | `-IntegerLiteral 0x7fbab288cb78 <col:61> 'int' 1
+    | |             `-ImplicitCastExpr 0x7fbab288cc30 <col:63> 'double' <IntegralToFloating>
+    | |               `-ImplicitCastExpr 0x7fbab288cc18 <col:63> 'int' <IntegralCast>
+    | |                 `-ImplicitCastExpr 0x7fbab288cc00 <col:63> 'short' <LValueToRValue>
+    | |                   `-DeclRefExpr 0x7fbab288cbd8 <col:63> 'short' lvalue ParmVar 0x7fbab2868fd0 'sFreq' 'short'
+    | `-<<<NULL>>>
+    |-BinaryOperator 0x7fbab288ce30 <line:30:18, line:228:16> 'short' '='
+    | |-MemberExpr 0x7fbab288cdb8 <line:30:18, col:27> 'short' lvalue .cm_exday 0x7fbab28798d8
+    | | `-DeclRefExpr 0x7fbab288cd90 <col:18> 'struct aidatcm_st':'struct aidatcm_st' lvalue Var 0x7fbab2879f60 'aidatcm_' 'struct aidatcm_st':'struct aidatcm_st'
+    | `-ImplicitCastExpr 0x7fbab288ce18 <line:228:16> 'short' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fbab288cdf0 <col:16> 'short' lvalue Var 0x7fbab2869b08 'days_to_next_cpn' 'short'
+    |-BinaryOperator 0x7fbab288cfe0 <line:31:18, line:229:16> 'double' '='
+    | |-MemberExpr 0x7fbab288cf50 <line:31:18, col:27> 'double' lvalue .cm_basis 0x7fbab2879818
+    | | `-DeclRefExpr 0x7fbab288cf28 <col:18> 'struct aidatcm_st':'struct aidatcm_st' lvalue Var 0x7fbab2879f60 'aidatcm_' 'struct aidatcm_st':'struct aidatcm_st'
+    | `-ImplicitCastExpr 0x7fbab288cfc8 <line:229:16> 'double' <IntegralToFloating>
+    |   `-ImplicitCastExpr 0x7fbab288cfb0 <col:16> 'short' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fbab288cf88 <col:16> 'short' lvalue Var 0x7fbab286a348 'days_in_current_period' 'short'
+    `-CallExpr 0x7fbab288d1c0 <line:230:5, col:30> 'void'
+      |-ImplicitCastExpr 0x7fbab288d1a8 <col:5> 'void (*)(const short *, short *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fbab288d008 <col:5> 'void (const short *, short *)' Function 0x7fbab28800c0 'datetrn_' 'void (const short *, short *)'
+      |-ImplicitCastExpr 0x7fbab288d200 <line:18:18, col:42> 'const short *' <BitCast>
+      | `-ParenExpr 0x7fbab288d100 <col:18, col:42> 'short *'
+      |   `-BinaryOperator 0x7fbab288d0d8 <col:19, col:40> 'short *' '+'
+      |     |-CStyleCastExpr 0x7fbab288d090 <col:19, col:29> 'short *' <BitCast>
+      |     | `-UnaryOperator 0x7fbab288d058 <col:28, col:29> 'struct fltcom2_st *' prefix '&'
+      |     |   `-DeclRefExpr 0x7fbab288d030 <col:29> 'struct fltcom2_st':'struct fltcom2_st' lvalue Var 0x7fbab28795d0 'fltcom2_' 'struct fltcom2_st':'struct fltcom2_st'
+      |     `-IntegerLiteral 0x7fbab288d0b8 <col:40> 'int' 17
+      `-ImplicitCastExpr 0x7fbab288d218 <line:32:17, col:26> 'short *' <ArrayToPointerDecay>
+        `-MemberExpr 0x7fbab288d148 <col:17, col:26> 'short [3]' lvalue .cm_prev 0x7fbab2879be0
+          `-DeclRefExpr 0x7fbab288d120 <col:17> 'struct aidatcm_st':'struct aidatcm_st' lvalue Var 0x7fbab2879f60 'aidatcm_' 'struct aidatcm_st':'struct aidatcm_st'

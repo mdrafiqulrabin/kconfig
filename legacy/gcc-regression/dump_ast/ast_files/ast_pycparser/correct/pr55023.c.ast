@@ -1,0 +1,124 @@
+FileAST: 
+  Decl: abort, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  Typedef: int64_t, [], ['typedef']
+    TypeDecl: int64_t, []
+      IdentifierType: ['long', 'long']
+  Decl: None, [], [], []
+    Struct: foo
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['int']
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int64_t']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int64_t']
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['int64_t']
+        TypeDecl: foo, []
+          IdentifierType: ['int64_t']
+    Compound: 
+      Return: 
+        BinaryOp: +
+          BinaryOp: +
+            ID: a
+            ID: b
+          ID: c
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int64_t']
+          Decl: bq, [], [], []
+            TypeDecl: bq, []
+              Struct: foo
+          Decl: cq, [], [], []
+            TypeDecl: cq, []
+              Struct: foo
+        TypeDecl: bar, []
+          IdentifierType: ['int64_t']
+    Compound: 
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['int64_t']
+        BinaryOp: +
+          StructRef: .
+            ID: bq
+            ID: x
+          StructRef: .
+            ID: bq
+            ID: y
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          IdentifierType: ['int64_t']
+        BinaryOp: +
+          StructRef: .
+            ID: cq
+            ID: x
+          StructRef: .
+            ID: cq
+            ID: y
+      Return: 
+        FuncCall: 
+          ID: foo
+          ExprList: 
+            ID: a
+            ID: b
+            ID: c
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['int64_t']
+        Constant: int, 1
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          Struct: foo
+        InitList: 
+          Constant: int, 2
+          Constant: int, 3
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          Struct: foo
+        InitList: 
+          Constant: int, 4
+          Constant: int, 5
+      If: 
+        BinaryOp: !=
+          FuncCall: 
+            ID: bar
+            ExprList: 
+              ID: a
+              ID: b
+              ID: c
+          Constant: int, 15
+        FuncCall: 
+          ID: abort
+      Return: 
+        Constant: int, 0

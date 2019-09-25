@@ -1,0 +1,101 @@
+FileAST: 
+  Decl: g, [], [], []
+    TypeDecl: g, []
+      IdentifierType: ['int']
+  Decl: p, [], [], []
+    TypeDecl: p, []
+      IdentifierType: ['short']
+  Decl: q, [], [], []
+    TypeDecl: q, []
+      IdentifierType: ['short']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['short']
+        ID: p
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['short']
+        ID: q
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['short']
+      If: 
+        ID: a
+        Compound: 
+          Label: label
+            For: 
+              Assignment: =
+                ID: i
+                Constant: int, 0
+              BinaryOp: <
+                ID: i
+                Constant: int, 8
+              UnaryOp: p++
+                ID: i
+              Assignment: ^=
+                ID: b
+                UnaryOp: p++
+                  ID: a
+          If: 
+            UnaryOp: !
+              ID: b
+            Assignment: =
+              ID: g
+              Constant: int, 0
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: bar, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['short']
+        ID: p
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['short']
+        ID: q
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['short']
+      If: 
+        ID: a
+        Compound: 
+          Label: label
+            For: 
+              Assignment: =
+                ID: i
+                Constant: int, 0
+              BinaryOp: <
+                ID: i
+                Constant: int, 8
+              UnaryOp: p++
+                ID: i
+              Assignment: ^=
+                ID: b
+                Assignment: =
+                  ID: a
+                  BinaryOp: +
+                    ID: a
+                    Constant: int, 1
+          If: 
+            UnaryOp: !
+              ID: b
+            Assignment: =
+              ID: g
+              Constant: int, 0

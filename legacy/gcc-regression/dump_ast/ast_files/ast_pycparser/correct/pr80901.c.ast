@@ -1,0 +1,73 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['int']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['int']
+  Decl: d, [], [], []
+    TypeDecl: d, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: fn1, [], [], []
+      FuncDecl: 
+        TypeDecl: fn1, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: f, [], [], []
+        TypeDecl: f, []
+          IdentifierType: ['int']
+      If: 
+        ID: d
+        While: 
+          ID: c
+          Compound: 
+            For: 
+              Assignment: =
+                ID: f
+                Constant: int, 0
+              BinaryOp: <
+                ID: f
+                Constant: int, 1
+              UnaryOp: p++
+                ID: f
+              Compound: 
+                Decl: g, [], [], []
+                  ArrayDecl: []
+                    TypeDecl: g, []
+                      IdentifierType: ['int']
+                    Constant: int, 70
+                  InitList: 
+                    Constant: int, 0
+                If: 
+                  ID: b
+                  EmptyStatement: 
+                  Compound: 
+                    Decl: h, [], [], []
+                      TypeDecl: h, []
+                        IdentifierType: ['int']
+                      UnaryOp: !
+                        ID: b
+                    For: 
+                      ID: h
+                      Assignment: =
+                        ID: h
+                        Constant: int, 1
+                      EmptyStatement: 
+            Return: 
+              Constant: int, 0
+      Return: 
+        ID: a
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: fn1
+      Return: 
+        Constant: int, 0

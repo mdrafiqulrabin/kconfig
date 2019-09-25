@@ -1,9 +1,0 @@
-FileAST: 
-  FuncDef: 
-    Decl: this_function_never_returns, [], [], []
-      FuncDecl: 
-        TypeDecl: this_function_never_returns, []
-          IdentifierType: ['int']
-    Compound: 
-      For: 
-        EmptyStatement: 

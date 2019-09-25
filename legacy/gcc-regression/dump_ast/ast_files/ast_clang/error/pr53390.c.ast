@@ -1,0 +1,101 @@
+c_files/pr53390.c:14:7: error: use of unknown builtin '__builtin_malloc' [-Wimplicit-function-declaration]
+    = __builtin_malloc(var1 * var2 * sizeof(unsigned short));
+      ^
+c_files/pr53390.c:13:19: warning: incompatible integer to pointer conversion initializing 'unsigned short *' with an expression of type 'int' [-Wint-conversion]
+  unsigned short *local_vec
+                  ^
+c_files/pr53390.c:17:18: warning: incompatible integer to pointer conversion assigning to 'unsigned short *' from 'int' [-Wint-conversion]
+  my_table[0].f2 = __builtin_malloc(var1 * sizeof(unsigned short));
+                 ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2 warnings and 1 error generated.
+TranslationUnitDecl 0x7f92410264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9241026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9241026740 '__int128'
+|-TypedefDecl 0x7f9241026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9241026760 'unsigned __int128'
+|-TypedefDecl 0x7f9241026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9241026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9241026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9241026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9241026dc0 'char *'
+|   `-BuiltinType 0x7f9241026560 'char'
+|-TypedefDecl 0x7f92410270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9241027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9241026ee0 'struct __va_list_tag'
+|     `-Record 0x7f9241026e58 '__va_list_tag'
+|-VarDecl 0x7f9241027138 <c_files/pr53390.c:3:1, col:23> col:23 used var1 'unsigned short' extern
+|-VarDecl 0x7f9241077400 <line:4:1, col:12> col:12 used var2 'int' extern
+|-RecordDecl 0x7f9241077460 <line:6:8, line:9:1> line:6:8 struct definition
+| |-FieldDecl 0x7f9241077528 <line:7:3, col:7> col:7 f1 'int'
+| `-FieldDecl 0x7f92410775b0 <line:8:3, col:19> col:19 referenced f2 'unsigned short *'
+|-VarDecl 0x7f92410776b0 <line:6:1, line:9:4> col:4 used my_table 'struct (anonymous struct at c_files/pr53390.c:6:8) *' extern
+|-FunctionDecl 0x7f92410777f0 <line:11:1, line:21:1> line:11:6 foo 'void (void)'
+| `-CompoundStmt 0x7f924107b328 <line:12:1, line:21:1>
+|   |-DeclStmt 0x7f9241077fb0 <line:13:3, line:14:61>
+|   | `-VarDecl 0x7f92410778a0 <line:13:3, line:14:60> line:13:19 used local_vec 'unsigned short *' cinit
+|   |   `-ImplicitCastExpr 0x7f9241077be0 <line:14:7, col:60> 'unsigned short *' <IntegralToPointer>
+|   |     `-CallExpr 0x7f9241077bb0 <col:7, col:60> 'int'
+|   |       |-ImplicitCastExpr 0x7f9241077b98 <col:7> 'int (*)()' <FunctionToPointerDecay>
+|   |       | `-DeclRefExpr 0x7f9241077a08 <col:7> 'int ()' Function 0x7f9241077970 '__builtin_malloc' 'int ()'
+|   |       `-BinaryOperator 0x7f9241077b40 <col:24, col:59> 'unsigned long' '*'
+|   |         |-ImplicitCastExpr 0x7f9241077b28 <col:24, col:31> 'unsigned long' <IntegralCast>
+|   |         | `-BinaryOperator 0x7f9241077ac8 <col:24, col:31> 'int' '*'
+|   |         |   |-ImplicitCastExpr 0x7f9241077a98 <col:24> 'int' <IntegralCast>
+|   |         |   | `-ImplicitCastExpr 0x7f9241077a80 <col:24> 'unsigned short' <LValueToRValue>
+|   |         |   |   `-DeclRefExpr 0x7f9241077a30 <col:24> 'unsigned short' lvalue Var 0x7f9241027138 'var1' 'unsigned short'
+|   |         |   `-ImplicitCastExpr 0x7f9241077ab0 <col:31> 'int' <LValueToRValue>
+|   |         |     `-DeclRefExpr 0x7f9241077a58 <col:31> 'int' lvalue Var 0x7f9241077400 'var2' 'int'
+|   |         `-UnaryExprOrTypeTraitExpr 0x7f9241077b08 <col:38, col:59> 'unsigned long' sizeof 'unsigned short'
+|   |-DeclStmt 0x7f9241078040 <line:15:3, col:19>
+|   | `-VarDecl 0x7f9241077fe0 <col:3, col:18> col:18 used i 'unsigned short'
+|   |-BinaryOperator 0x7f9241078258 <line:17:3, col:66> 'unsigned short *' '='
+|   | |-MemberExpr 0x7f92410780e0 <col:3, col:15> 'unsigned short *' lvalue .f2 0x7f92410775b0
+|   | | `-ArraySubscriptExpr 0x7f92410780b8 <col:3, col:13> 'struct (anonymous struct at c_files/pr53390.c:6:8)':'struct (anonymous at c_files/pr53390.c:6:8)' lvalue
+|   | |   |-ImplicitCastExpr 0x7f92410780a0 <col:3> 'struct (anonymous struct at c_files/pr53390.c:6:8) *' <LValueToRValue>
+|   | |   | `-DeclRefExpr 0x7f9241078058 <col:3> 'struct (anonymous struct at c_files/pr53390.c:6:8) *' lvalue Var 0x7f92410776b0 'my_table' 'struct (anonymous struct at c_files/pr53390.c:6:8) *'
+|   | |   `-IntegerLiteral 0x7f9241078080 <col:12> 'int' 0
+|   | `-ImplicitCastExpr 0x7f9241078240 <col:20, col:66> 'unsigned short *' <IntegralToPointer>
+|   |   `-CallExpr 0x7f9241078210 <col:20, col:66> 'int'
+|   |     |-ImplicitCastExpr 0x7f92410781f8 <col:20> 'int (*)()' <FunctionToPointerDecay>
+|   |     | `-DeclRefExpr 0x7f9241078118 <col:20> 'int ()' Function 0x7f9241077970 '__builtin_malloc' 'int ()'
+|   |     `-BinaryOperator 0x7f92410781d0 <col:37, col:65> 'unsigned long' '*'
+|   |       |-ImplicitCastExpr 0x7f92410781b8 <col:37> 'unsigned long' <IntegralCast>
+|   |       | `-ImplicitCastExpr 0x7f92410781a0 <col:37> 'unsigned short' <LValueToRValue>
+|   |       |   `-DeclRefExpr 0x7f9241078140 <col:37> 'unsigned short' lvalue Var 0x7f9241027138 'var1' 'unsigned short'
+|   |       `-UnaryExprOrTypeTraitExpr 0x7f9241078180 <col:44, col:65> 'unsigned long' sizeof 'unsigned short'
+|   `-ForStmt 0x7f924107b2f0 <line:19:3, line:20:43>
+|     |-BinaryOperator 0x7f92410782e0 <line:19:8, col:12> 'unsigned short' '='
+|     | |-DeclRefExpr 0x7f9241078280 <col:8> 'unsigned short' lvalue Var 0x7f9241077fe0 'i' 'unsigned short'
+|     | `-ImplicitCastExpr 0x7f92410782c8 <col:12> 'unsigned short' <IntegralCast>
+|     |   `-IntegerLiteral 0x7f92410782a8 <col:12> 'int' 0
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7f92410783b8 <col:15, col:19> 'int' '<'
+|     | |-ImplicitCastExpr 0x7f9241078370 <col:15> 'int' <IntegralCast>
+|     | | `-ImplicitCastExpr 0x7f9241078358 <col:15> 'unsigned short' <LValueToRValue>
+|     | |   `-DeclRefExpr 0x7f9241078308 <col:15> 'unsigned short' lvalue Var 0x7f9241077fe0 'i' 'unsigned short'
+|     | `-ImplicitCastExpr 0x7f92410783a0 <col:19> 'int' <IntegralCast>
+|     |   `-ImplicitCastExpr 0x7f9241078388 <col:19> 'unsigned short' <LValueToRValue>
+|     |     `-DeclRefExpr 0x7f9241078330 <col:19> 'unsigned short' lvalue Var 0x7f9241027138 'var1' 'unsigned short'
+|     |-UnaryOperator 0x7f924107b028 <col:25, col:27> 'unsigned short' prefix '++'
+|     | `-DeclRefExpr 0x7f924107b000 <col:27> 'unsigned short' lvalue Var 0x7f9241077fe0 'i' 'unsigned short'
+|     `-BinaryOperator 0x7f924107b2c8 <line:20:5, col:43> 'unsigned short' '='
+|       |-ArraySubscriptExpr 0x7f924107b160 <col:5, col:21> 'unsigned short' lvalue
+|       | |-ImplicitCastExpr 0x7f924107b130 <col:5, col:17> 'unsigned short *' <LValueToRValue>
+|       | | `-MemberExpr 0x7f924107b0d0 <col:5, col:17> 'unsigned short *' lvalue .f2 0x7f92410775b0
+|       | |   `-ArraySubscriptExpr 0x7f924107b0a8 <col:5, col:15> 'struct (anonymous struct at c_files/pr53390.c:6:8)':'struct (anonymous at c_files/pr53390.c:6:8)' lvalue
+|       | |     |-ImplicitCastExpr 0x7f924107b090 <col:5> 'struct (anonymous struct at c_files/pr53390.c:6:8) *' <LValueToRValue>
+|       | |     | `-DeclRefExpr 0x7f924107b048 <col:5> 'struct (anonymous struct at c_files/pr53390.c:6:8) *' lvalue Var 0x7f92410776b0 'my_table' 'struct (anonymous struct at c_files/pr53390.c:6:8) *'
+|       | |     `-IntegerLiteral 0x7f924107b070 <col:14> 'int' 0
+|       | `-ImplicitCastExpr 0x7f924107b148 <col:20> 'unsigned short' <LValueToRValue>
+|       |   `-DeclRefExpr 0x7f924107b108 <col:20> 'unsigned short' lvalue Var 0x7f9241077fe0 'i' 'unsigned short'
+|       `-ImplicitCastExpr 0x7f924107b2b0 <col:25, col:43> 'unsigned short' <LValueToRValue>
+|         `-ArraySubscriptExpr 0x7f924107b288 <col:25, col:43> 'unsigned short' lvalue
+|           |-ImplicitCastExpr 0x7f924107b270 <col:25> 'unsigned short *' <LValueToRValue>
+|           | `-DeclRefExpr 0x7f924107b188 <col:25> 'unsigned short *' lvalue Var 0x7f92410778a0 'local_vec' 'unsigned short *'
+|           `-BinaryOperator 0x7f924107b248 <col:35, col:39> 'int' '*'
+|             |-ImplicitCastExpr 0x7f924107b218 <col:35> 'int' <IntegralCast>
+|             | `-ImplicitCastExpr 0x7f924107b200 <col:35> 'unsigned short' <LValueToRValue>
+|             |   `-DeclRefExpr 0x7f924107b1b0 <col:35> 'unsigned short' lvalue Var 0x7f9241077fe0 'i' 'unsigned short'
+|             `-ImplicitCastExpr 0x7f924107b230 <col:39> 'int' <LValueToRValue>
+|               `-DeclRefExpr 0x7f924107b1d8 <col:39> 'int' lvalue Var 0x7f9241077400 'var2' 'int'
+`-FunctionDecl 0x7f9241077970 <<invalid sloc>> line:14:7 implicit used __builtin_malloc 'int ()'

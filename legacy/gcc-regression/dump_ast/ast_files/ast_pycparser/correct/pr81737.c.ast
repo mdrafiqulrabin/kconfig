@@ -1,0 +1,16 @@
+FileAST: 
+  Decl: a, [], ['extern'], []
+    ArrayDecl: []
+      TypeDecl: a, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: fn1, [], [], []
+      FuncDecl: 
+        TypeDecl: fn1, []
+          IdentifierType: ['void']
+    Compound: 
+      ArrayRef: 
+        BinaryOp: +
+          ID: a
+          Constant: int, 0
+        Constant: int, 1

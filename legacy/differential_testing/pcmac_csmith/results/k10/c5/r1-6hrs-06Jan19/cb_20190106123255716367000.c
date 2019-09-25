@@ -1,0 +1,102 @@
+/*
+ * This is a RANDOMLY GENERATED PROGRAM.
+ *
+ * Generator: csmith 2.3.0
+ * Git version: 30dccd7
+ * Options:   --comma-operators --no-argc --no-bitfields --no-arrays --no-pointers --no-structs --no-unions --no-packed-struct --no-divs --no-muls --no-pre-incr-operator --no-pre-decr-operator --post-incr-operator --no-post-decr-operator --no-unary-plus-operator --no-longlong --no-float --jumps --no-volatiles --compound-assignment --no-consts --no-inline-function --no-volatile-pointers --no-const-pointers --builtins --no-int8 --no-uint8
+ * Seed:      596738998651342081
+ */
+
+
+#define NO_LONGLONG
+
+#include "csmith.h"
+
+
+static long __undefined;
+
+/* --- Struct/Union Declarations --- */
+/* --- GLOBAL VARIABLES --- */
+static int32_t g_4 = (-6);
+static uint16_t g_42 = 65533U;
+
+
+/* --- FORWARD DECLARATIONS --- */
+static uint32_t  func_27(void);
+
+
+/* --- FUNCTIONS --- */
+/* ------------------------------------------ */
+/* 
+ * reads : g_4 g_42
+ * writes: g_4 g_42
+ */
+static uint32_t  func_27(void)
+{ /* block id: 36 */
+    int32_t l_35 = (-2);
+    int32_t l_38 = 0xED383DE4;
+    for (g_4 = 10; (g_4 < 19); g_4++)
+    { /* block id: 39 */
+        uint32_t l_30 = 0x0E6B6CD3;
+        int32_t l_39 = (-10);
+        int32_t l_40 = 0xDB6B7BE2;
+        int32_t l_41 = 0;
+        int32_t l_43 = 1;
+        l_43 &= ((g_42 &= ((((l_30 >= (__builtin_ia32_crc32qi(g_4, g_4) && (l_41 = (safe_add_func_int32_t_s_s(g_4, (g_4 & (safe_sub_func_uint16_t_u_u((l_35 = g_4), ((l_40 = (g_4 , (safe_rshift_func_int16_t_s_s(((l_39 = (l_38 = (-1))) , (-6)), 1)))) < g_4))))))))) | 0x23CE) | g_4) , g_4)) && 0xFB96F37D);
+        return g_42;
+    }
+    return g_4;
+}
+
+
+
+
+/* ---------------------------------------- */
+int main (void)
+{
+    int print_hash_value = 0;
+    platform_main_begin();
+    crc32_gentab();
+    func_27();
+    transparent_crc(g_4, "g_4", print_hash_value);
+    transparent_crc(g_42, "g_42", print_hash_value);
+    platform_main_end(crc32_context ^ 0xFFFFFFFFUL, print_hash_value);
+    return 0;
+}
+
+/************************ statistics *************************
+XXX max struct depth: 0
+breakdown:
+   depth: 0, occurrence: 15
+XXX total union variables: 0
+
+XXX max expression depth: 22
+breakdown:
+   depth: 1, occurrence: 3
+   depth: 2, occurrence: 1
+   depth: 22, occurrence: 1
+
+XXX total number of pointers: 0
+
+XXX times a non-volatile is read: 31
+XXX times a non-volatile is write: 8
+XXX times a volatile is read: 0
+XXX    times read thru a pointer: 0
+XXX times a volatile is write: 0
+XXX    times written thru a pointer: 0
+XXX times a volatile is available for access: 0
+XXX percentage of non-volatile access: 100
+
+XXX forward jumps: 0
+XXX backward jumps: 0
+
+XXX stmts: 4
+XXX max block depth: 1
+breakdown:
+   depth: 0, occurrence: 2
+   depth: 1, occurrence: 2
+
+XXX percentage a fresh-made variable is used: 40.5
+XXX percentage an existing variable is used: 59.5
+********************* end of statistics **********************/
+

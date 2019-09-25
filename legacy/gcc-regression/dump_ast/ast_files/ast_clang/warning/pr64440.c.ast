@@ -1,0 +1,66 @@
+c_files/pr64440.c:10:10: warning: division by zero is undefined [-Wdivision-by-zero]
+  r += x / y; /* { dg-warning "division by zero" } */
+         ^ ~
+c_files/pr64440.c:11:10: warning: division by zero is undefined [-Wdivision-by-zero]
+  r += x / 0; /* { dg-warning "division by zero" } */
+         ^ ~
+c_files/pr64440.c:12:10: warning: remainder by zero is undefined [-Wdivision-by-zero]
+  r += x % y; /* { dg-warning "division by zero" } */
+         ^ ~
+c_files/pr64440.c:13:10: warning: remainder by zero is undefined [-Wdivision-by-zero]
+  r += x % 0; /* { dg-warning "division by zero" } */
+         ^ ~
+4 warnings generated.
+TranslationUnitDecl 0x7fafc10264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fafc1026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fafc1026740 '__int128'
+|-TypedefDecl 0x7fafc1026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fafc1026760 'unsigned __int128'
+|-TypedefDecl 0x7fafc1026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fafc1026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fafc1026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fafc1026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fafc1026dc0 'char *'
+|   `-BuiltinType 0x7fafc1026560 'char'
+|-TypedefDecl 0x7fafc10270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fafc1027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fafc1026ee0 'struct __va_list_tag'
+|     `-Record 0x7fafc1026e58 '__va_list_tag'
+`-FunctionDecl 0x7fafc1825a30 <c_files/pr64440.c:5:1, line:15:1> line:6:1 foo 'int (int)'
+  |-ParmVarDecl 0x7fafc1027138 <col:6, col:10> col:10 used x 'int'
+  `-CompoundStmt 0x7fafc1826100 <line:7:1, line:15:1>
+    |-DeclStmt 0x7fafc1825ba8 <line:8:3, col:18>
+    | `-VarDecl 0x7fafc1825b28 <col:3, col:17> col:13 used y 'const int' cinit
+    |   `-IntegerLiteral 0x7fafc1825b88 <col:17> 'int' 0
+    |-DeclStmt 0x7fafc1825c58 <line:9:3, col:12>
+    | `-VarDecl 0x7fafc1825bd8 <col:3, col:11> col:7 used r 'int' cinit
+    |   `-IntegerLiteral 0x7fafc1825c38 <col:11> 'int' 0
+    |-CompoundAssignOperator 0x7fafc1825d98 <line:10:3, col:12> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+    | |-DeclRefExpr 0x7fafc1825c70 <col:3> 'int' lvalue Var 0x7fafc1825bd8 'r' 'int'
+    | `-BinaryOperator 0x7fafc1825d70 <col:8, col:12> 'int' '/'
+    |   |-ImplicitCastExpr 0x7fafc1825ce8 <col:8> 'int' <LValueToRValue>
+    |   | `-DeclRefExpr 0x7fafc1825c98 <col:8> 'int' lvalue ParmVar 0x7fafc1027138 'x' 'int'
+    |   `-ImplicitCastExpr 0x7fafc1825d00 <col:12> 'int' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fafc1825cc0 <col:12> 'const int' lvalue Var 0x7fafc1825b28 'y' 'const int'
+    |-CompoundAssignOperator 0x7fafc1825e80 <line:11:3, col:12> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+    | |-DeclRefExpr 0x7fafc1825dd0 <col:3> 'int' lvalue Var 0x7fafc1825bd8 'r' 'int'
+    | `-BinaryOperator 0x7fafc1825e58 <col:8, col:12> 'int' '/'
+    |   |-ImplicitCastExpr 0x7fafc1825e40 <col:8> 'int' <LValueToRValue>
+    |   | `-DeclRefExpr 0x7fafc1825df8 <col:8> 'int' lvalue ParmVar 0x7fafc1027138 'x' 'int'
+    |   `-IntegerLiteral 0x7fafc1825e20 <col:12> 'int' 0
+    |-CompoundAssignOperator 0x7fafc1825f88 <line:12:3, col:12> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+    | |-DeclRefExpr 0x7fafc1825eb8 <col:3> 'int' lvalue Var 0x7fafc1825bd8 'r' 'int'
+    | `-BinaryOperator 0x7fafc1825f60 <col:8, col:12> 'int' '%'
+    |   |-ImplicitCastExpr 0x7fafc1825f30 <col:8> 'int' <LValueToRValue>
+    |   | `-DeclRefExpr 0x7fafc1825ee0 <col:8> 'int' lvalue ParmVar 0x7fafc1027138 'x' 'int'
+    |   `-ImplicitCastExpr 0x7fafc1825f48 <col:12> 'int' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fafc1825f08 <col:12> 'const int' lvalue Var 0x7fafc1825b28 'y' 'const int'
+    |-CompoundAssignOperator 0x7fafc1826070 <line:13:3, col:12> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+    | |-DeclRefExpr 0x7fafc1825fc0 <col:3> 'int' lvalue Var 0x7fafc1825bd8 'r' 'int'
+    | `-BinaryOperator 0x7fafc1826048 <col:8, col:12> 'int' '%'
+    |   |-ImplicitCastExpr 0x7fafc1826030 <col:8> 'int' <LValueToRValue>
+    |   | `-DeclRefExpr 0x7fafc1825fe8 <col:8> 'int' lvalue ParmVar 0x7fafc1027138 'x' 'int'
+    |   `-IntegerLiteral 0x7fafc1826010 <col:12> 'int' 0
+    `-ReturnStmt 0x7fafc18260e8 <line:14:3, col:10>
+      `-ImplicitCastExpr 0x7fafc18260d0 <col:10> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7fafc18260a8 <col:10> 'int' lvalue Var 0x7fafc1825bd8 'r' 'int'

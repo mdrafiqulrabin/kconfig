@@ -1,0 +1,37 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: x
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['int']
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['int']
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          IdentifierType: ['int']
+  Decl: a, [], ['extern'], []
+    FuncDecl: 
+      TypeDecl: a, []
+        Struct: x
+  Decl: b, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            Struct: x
+      TypeDecl: b, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: a
+      FuncCall: 
+        ID: b
+        ExprList: 
+          FuncCall: 
+            ID: a

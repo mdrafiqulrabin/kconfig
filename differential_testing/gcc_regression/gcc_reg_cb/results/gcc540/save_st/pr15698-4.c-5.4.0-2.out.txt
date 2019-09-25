@@ -1,7 +1,0 @@
-pr15698-4.c: In function ‘isnan’:
-pr15698-4.c:7:1: error: number of arguments doesn’t match prototype
- int isnan(a) int a; {}  
- ^
-pr15698-4.c:6:5: error: prototype declaration
- int isnan(void);  
-     ^

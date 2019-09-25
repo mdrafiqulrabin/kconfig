@@ -1,0 +1,41 @@
+FileAST: 
+  Decl: labs, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Decl: j, [], [], []
+          TypeDecl: j, []
+            IdentifierType: ['long', 'int']
+      TypeDecl: labs, []
+        IdentifierType: ['long', 'int']
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: a, [], [], []
+        PtrDecl: []
+          TypeDecl: a, []
+            IdentifierType: ['long']
+        Cast: 
+          Typename: None, []
+            PtrDecl: []
+              TypeDecl: None, []
+                IdentifierType: ['long']
+          Constant: string, "empty"
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+        Constant: int, 1441516387
+      Assignment: =
+        ArrayRef: 
+          ID: a
+          ID: i
+        FuncCall: 
+          ID: labs
+          ExprList: 
+            ArrayRef: 
+              ID: a
+              ID: i
+      Return: 
+        Constant: int, 0

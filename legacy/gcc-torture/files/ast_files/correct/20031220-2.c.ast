@@ -1,0 +1,218 @@
+FileAST: 
+  Decl: fabsf, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['float']
+      TypeDecl: fabsf, []
+        IdentifierType: ['float']
+  Typedef: __int32_t, [], ['typedef']
+    TypeDecl: __int32_t, []
+      IdentifierType: ['int']
+  Typedef: __uint32_t, [], ['typedef']
+    TypeDecl: __uint32_t, []
+      IdentifierType: ['unsigned', 'int']
+  Typedef: ieee_float_shape_type, [], ['typedef']
+    TypeDecl: ieee_float_shape_type, []
+      Union: None
+        Decl: value, [], [], []
+          TypeDecl: value, []
+            IdentifierType: ['float']
+        Decl: word, [], [], []
+          TypeDecl: word, []
+            IdentifierType: ['__uint32_t']
+  Decl: __ieee754_expf, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['float']
+      TypeDecl: __ieee754_expf, []
+        IdentifierType: ['float']
+  Decl: __ieee754_sinhf, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['float']
+      TypeDecl: __ieee754_sinhf, []
+        IdentifierType: ['float']
+  Decl: one, ['const'], ['static'], []
+    TypeDecl: one, ['const']
+      IdentifierType: ['float']
+    Constant: float, 1.0
+  Decl: shuge, ['const'], ['static'], []
+    TypeDecl: shuge, ['const']
+      IdentifierType: ['float']
+    Constant: float, 1.0e37
+  FuncDef: 
+    Decl: __ieee754_sinhf, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['float']
+        TypeDecl: __ieee754_sinhf, []
+          IdentifierType: ['float']
+    Compound: 
+      Decl: t, [], [], []
+        TypeDecl: t, []
+          IdentifierType: ['float']
+      Decl: w, [], [], []
+        TypeDecl: w, []
+          IdentifierType: ['float']
+      Decl: h, [], [], []
+        TypeDecl: h, []
+          IdentifierType: ['float']
+      Decl: ix, [], [], []
+        TypeDecl: ix, []
+          IdentifierType: ['__int32_t']
+      Decl: jx, [], [], []
+        TypeDecl: jx, []
+          IdentifierType: ['__int32_t']
+      DoWhile: 
+        Constant: int, 0
+        Compound: 
+          Decl: gf_u, [], [], []
+            TypeDecl: gf_u, []
+              IdentifierType: ['ieee_float_shape_type']
+          Assignment: =
+            StructRef: .
+              ID: gf_u
+              ID: value
+            ID: x
+          Assignment: =
+            ID: jx
+            StructRef: .
+              ID: gf_u
+              ID: word
+      Assignment: =
+        ID: ix
+        BinaryOp: &
+          ID: jx
+          Constant: int, 0x7fffffff
+      If: 
+        BinaryOp: >=
+          ID: ix
+          Constant: int, 0x7f800000
+        Return: 
+          BinaryOp: +
+            ID: x
+            ID: x
+      Assignment: =
+        ID: h
+        Constant: float, 0.5
+      If: 
+        BinaryOp: <
+          ID: jx
+          Constant: int, 0
+        Assignment: =
+          ID: h
+          UnaryOp: -
+            ID: h
+      If: 
+        BinaryOp: <
+          ID: ix
+          Constant: int, 0x41b00000
+        Compound: 
+          If: 
+            BinaryOp: <
+              ID: ix
+              Constant: int, 0x31800000
+            If: 
+              BinaryOp: >
+                BinaryOp: +
+                  ID: shuge
+                  ID: x
+                ID: one
+              Return: 
+                ID: x
+          Assignment: =
+            ID: t
+            FuncCall: 
+              ID: expm1f
+              ExprList: 
+                FuncCall: 
+                  ID: fabsf
+                  ExprList: 
+                    ID: x
+          If: 
+            BinaryOp: <
+              ID: ix
+              Constant: int, 0x3f800000
+            Return: 
+              BinaryOp: *
+                ID: h
+                BinaryOp: -
+                  BinaryOp: *
+                    Cast: 
+                      Typename: None, []
+                        TypeDecl: None, []
+                          IdentifierType: ['float']
+                      Constant: float, 2.0
+                    ID: t
+                  BinaryOp: /
+                    BinaryOp: *
+                      ID: t
+                      ID: t
+                    BinaryOp: +
+                      ID: t
+                      ID: one
+          Return: 
+            BinaryOp: *
+              ID: h
+              BinaryOp: +
+                ID: t
+                BinaryOp: /
+                  ID: t
+                  BinaryOp: +
+                    ID: t
+                    ID: one
+      If: 
+        BinaryOp: <
+          ID: ix
+          Constant: int, 0x42b17180
+        Return: 
+          BinaryOp: *
+            ID: h
+            FuncCall: 
+              ID: __ieee754_expf
+              ExprList: 
+                FuncCall: 
+                  ID: fabsf
+                  ExprList: 
+                    ID: x
+      If: 
+        BinaryOp: <=
+          ID: ix
+          Constant: int, 0x42b2d4fc
+        Compound: 
+          Assignment: =
+            ID: w
+            FuncCall: 
+              ID: __ieee754_expf
+              ExprList: 
+                BinaryOp: *
+                  Cast: 
+                    Typename: None, []
+                      TypeDecl: None, []
+                        IdentifierType: ['float']
+                    Constant: float, 0.5
+                  FuncCall: 
+                    ID: fabsf
+                    ExprList: 
+                      ID: x
+          Assignment: =
+            ID: t
+            BinaryOp: *
+              ID: h
+              ID: w
+          Return: 
+            BinaryOp: *
+              ID: t
+              ID: w
+      Return: 
+        BinaryOp: *
+          ID: x
+          ID: shuge

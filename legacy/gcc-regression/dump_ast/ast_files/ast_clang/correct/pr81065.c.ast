@@ -1,0 +1,38 @@
+TranslationUnitDecl 0x7fd6ae818ad0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd6ae819020 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd6ae818d40 '__int128'
+|-TypedefDecl 0x7fd6ae819090 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd6ae818d60 'unsigned __int128'
+|-TypedefDecl 0x7fd6ae819368 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd6ae819170 'struct __NSConstantString_tag'
+|   `-Record 0x7fd6ae8190e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd6ae819400 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd6ae8193c0 'char *'
+|   `-BuiltinType 0x7fd6ae818b60 'char'
+|-TypedefDecl 0x7fd6ae8196c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd6ae819670 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd6ae8194e0 'struct __va_list_tag'
+|     `-Record 0x7fd6ae819458 '__va_list_tag'
+|-VarDecl 0x7fd6ae819738 <c_files/pr81065.c:4:1, col:19> col:15 used x 'unsigned char' cinit
+| `-ImplicitCastExpr 0x7fd6af025a00 <col:19> 'unsigned char' <IntegralCast>
+|   `-IntegerLiteral 0x7fd6ae8197d8 <col:19> 'int' 154
+|-FunctionDecl 0x7fd6af025a70 <line:5:1, line:8:1> line:5:5 used foo 'int ()'
+| `-CompoundStmt 0x7fd6af025c70 <col:11, line:8:1>
+|   `-ReturnStmt 0x7fd6af025c58 <line:7:3, col:33>
+|     `-BinaryOperator 0x7fd6af025c30 <col:10, col:33> 'int' '*'
+|       |-IntegerLiteral 0x7fd6af025b08 <col:10> 'int' 8575
+|       `-ParenExpr 0x7fd6af025c10 <col:17, col:33> 'int'
+|         `-BinaryOperator 0x7fd6af025be8 <col:18, col:29> 'int' '-'
+|           |-BinaryOperator 0x7fd6af025ba0 <col:18, col:25> 'int' '*'
+|           | |-IntegerLiteral 0x7fd6af025b28 <col:18> 'int' 1652
+|           | `-ImplicitCastExpr 0x7fd6af025b88 <col:25> 'int' <IntegralCast>
+|           |   `-ImplicitCastExpr 0x7fd6af025b70 <col:25> 'unsigned char' <LValueToRValue>
+|           |     `-DeclRefExpr 0x7fd6af025b48 <col:25> 'unsigned char' lvalue Var 0x7fd6ae819738 'x' 'unsigned char'
+|           `-IntegerLiteral 0x7fd6af025bc8 <col:29> 'int' 9057
+`-FunctionDecl 0x7fd6af025cb8 <line:10:1, line:13:1> line:10:5 main 'int ()'
+  `-CompoundStmt 0x7fd6af025e20 <col:12, line:13:1>
+    |-CallExpr 0x7fd6af025dc0 <line:11:3, col:7> 'int'
+    | `-ImplicitCastExpr 0x7fd6af025da8 <col:3> 'int (*)()' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7fd6af025d50 <col:3> 'int ()' Function 0x7fd6af025a70 'foo' 'int ()'
+    `-ReturnStmt 0x7fd6af025e08 <line:12:3, col:10>
+      `-IntegerLiteral 0x7fd6af025de8 <col:10> 'int' 0

@@ -1,0 +1,68 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['int']
+  Decl: d, [], [], []
+    TypeDecl: d, []
+      IdentifierType: ['int']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['float']
+  Decl: memcpy, [], [], []
+    FuncDecl: 
+      PtrDecl: []
+        TypeDecl: memcpy, []
+          IdentifierType: ['void']
+  FuncDef: 
+    Decl: fun1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p1, [], [], []
+            TypeDecl: p1, []
+              IdentifierType: ['int']
+          Decl: p2, [], [], []
+            PtrDecl: []
+              TypeDecl: p2, []
+                IdentifierType: ['unsigned', 'char']
+        TypeDecl: fun1, []
+          IdentifierType: ['int']
+    Compound: 
+      Assignment: =
+        ArrayRef: 
+          ID: p2
+          ID: p1
+        ID: b
+      Return: 
+        ID: a
+  FuncDef: 
+    Decl: fun2, [], [], []
+      FuncDecl: 
+        TypeDecl: fun2, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: e, [], [], []
+        ArrayDecl: []
+          TypeDecl: e, []
+            IdentifierType: ['unsigned', 'char']
+          Constant: int, 16
+      FuncCall: 
+        ID: fun1
+        ExprList: 
+          Constant: int, 16
+          ID: e
+      Assignment: =
+        ID: d
+        ArrayRef: 
+          ID: e
+          ID: d
+      FuncCall: 
+        ID: memcpy
+        ExprList: 
+          UnaryOp: &
+            ID: c
+          ID: e
+          UnaryOp: sizeof
+            ID: e

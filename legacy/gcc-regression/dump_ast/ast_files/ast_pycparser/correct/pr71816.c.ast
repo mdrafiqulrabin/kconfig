@@ -1,0 +1,82 @@
+FileAST: 
+  Decl: ext2fs_resize_mem_p, [], [], []
+    PtrDecl: []
+      TypeDecl: ext2fs_resize_mem_p, []
+        IdentifierType: ['void']
+  Decl: insert_icount_el_icount_1, [], [], []
+    PtrDecl: []
+      TypeDecl: insert_icount_el_icount_1, []
+        Struct: ext2_icount_el
+          Decl: ino, [], [], []
+            TypeDecl: ino, []
+              IdentifierType: ['int']
+  Decl: insert_icount_el_icount, [], [], []
+    TypeDecl: insert_icount_el_icount, []
+      IdentifierType: ['int']
+  Decl: insert_icount_el_new_size, [], [], []
+    TypeDecl: insert_icount_el_new_size, []
+      IdentifierType: ['int']
+  Decl: memcpy, [], [], []
+    FuncDecl: 
+      PtrDecl: []
+        TypeDecl: memcpy, []
+          IdentifierType: ['void']
+  Decl: realloc, [], [], []
+    FuncDecl: 
+      PtrDecl: []
+        TypeDecl: realloc, []
+          IdentifierType: ['void']
+  FuncDef: 
+    Decl: ext2fs_resize_mem, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p1, [], [], []
+            PtrDecl: []
+              TypeDecl: p1, []
+                IdentifierType: ['void']
+        TypeDecl: ext2fs_resize_mem, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: size, [], [], []
+        TypeDecl: size, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      FuncCall: 
+        ID: memcpy
+        ExprList: 
+          UnaryOp: &
+            ID: ext2fs_resize_mem_p
+          ID: p1
+          UnaryOp: sizeof
+            ID: ext2fs_resize_mem_p
+      FuncCall: 
+        ID: realloc
+        ExprList: 
+          UnaryOp: &
+            ID: ext2fs_resize_mem_p
+          ID: size
+      Return: 
+        Constant: int, 0
+  FuncDef: 
+    Decl: insert_icount_el, [], [], []
+      FuncDecl: 
+        PtrDecl: []
+          TypeDecl: insert_icount_el, []
+            Struct: ext2_icount_el
+    Compound: 
+      If: 
+        ID: insert_icount_el_icount
+        Assignment: =
+          ID: insert_icount_el_new_size
+          StructRef: .
+            ArrayRef: 
+              ID: insert_icount_el_icount_1
+              Constant: int, 0
+            ID: ino
+      FuncCall: 
+        ID: ext2fs_resize_mem
+        ExprList: 
+          UnaryOp: &
+            ID: insert_icount_el_icount_1
+      Return: 
+        Constant: int, 0

@@ -1,0 +1,130 @@
+FileAST: 
+  Typedef: uint8_t, [], ['typedef']
+    TypeDecl: uint8_t, []
+      IdentifierType: ['unsigned', 'char']
+  FuncDef: 
+    Decl: border_mirror, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: outer_img, [], [], []
+            PtrDecl: []
+              TypeDecl: outer_img, []
+                IdentifierType: ['uint8_t']
+          Decl: w, [], [], []
+            TypeDecl: w, []
+              IdentifierType: ['int']
+          Decl: h, [], [], []
+            TypeDecl: h, []
+              IdentifierType: ['int']
+          Decl: rb, [], [], []
+            TypeDecl: rb, []
+              IdentifierType: ['int']
+          Decl: border, [], [], []
+            TypeDecl: border, []
+              IdentifierType: ['int']
+        TypeDecl: border_mirror, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: img, [], [], []
+        PtrDecl: []
+          TypeDecl: img, []
+            IdentifierType: ['uint8_t']
+        BinaryOp: +
+          BinaryOp: +
+            ID: outer_img
+            BinaryOp: *
+              ID: border
+              ID: rb
+          ID: border
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['int']
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: y
+          UnaryOp: -
+            ID: border
+        BinaryOp: <
+          ID: y
+          Constant: int, 0
+        UnaryOp: p++
+          ID: y
+        Compound: 
+          For: 
+            Assignment: =
+              ID: x
+              UnaryOp: -
+                ID: border
+            BinaryOp: <
+              ID: x
+              Constant: int, 0
+            UnaryOp: p++
+              ID: x
+            Assignment: =
+              ArrayRef: 
+                ID: img
+                BinaryOp: +
+                  BinaryOp: *
+                    ID: y
+                    ID: rb
+                  ID: x
+              ArrayRef: 
+                ID: img
+                BinaryOp: +
+                  BinaryOp: *
+                    UnaryOp: -
+                      ID: y
+                    ID: rb
+                  UnaryOp: -
+                    ID: x
+          For: 
+            Assignment: =
+              ID: x
+              Constant: int, 0
+            BinaryOp: <
+              ID: x
+              ID: w
+            UnaryOp: p++
+              ID: x
+            Assignment: =
+              ArrayRef: 
+                ID: img
+                BinaryOp: +
+                  BinaryOp: *
+                    ID: y
+                    ID: rb
+                  ID: x
+              ArrayRef: 
+                ID: img
+                BinaryOp: +
+                  BinaryOp: *
+                    UnaryOp: -
+                      ID: y
+                    ID: rb
+                  ID: x
+  FuncDef: 
+    Decl: border_mirror_480, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: outer_img, [], [], []
+            PtrDecl: []
+              TypeDecl: outer_img, []
+                IdentifierType: ['uint8_t']
+        TypeDecl: border_mirror_480, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: border_mirror
+        ExprList: 
+          ID: outer_img
+          Constant: int, 640
+          Constant: int, 480
+          BinaryOp: +
+            Constant: int, 640
+            BinaryOp: *
+              Constant: int, 16
+              Constant: int, 2
+          Constant: int, 16

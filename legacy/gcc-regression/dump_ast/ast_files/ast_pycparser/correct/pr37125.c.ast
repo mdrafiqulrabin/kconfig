@@ -1,0 +1,76 @@
+FileAST: 
+  Decl: abort, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: mod_rhs, [], ['static'], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: rhs, [], [], []
+            TypeDecl: rhs, []
+              IdentifierType: ['int']
+        TypeDecl: mod_rhs, []
+          IdentifierType: ['unsigned', 'int']
+    Compound: 
+      If: 
+        BinaryOp: ==
+          ID: rhs
+          Constant: int, 0
+        Return: 
+          Constant: int, 1
+      Return: 
+        ID: rhs
+  Decl: func_44, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: p_45, [], [], []
+          TypeDecl: p_45, []
+            IdentifierType: ['unsigned', 'int']
+      TypeDecl: func_44, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: func_44, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p_45, [], [], []
+            TypeDecl: p_45, []
+              IdentifierType: ['unsigned', 'int']
+        TypeDecl: func_44, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        UnaryOp: !
+          BinaryOp: %
+            BinaryOp: *
+              ID: p_45
+              UnaryOp: -
+                Constant: int, 9
+            FuncCall: 
+              ID: mod_rhs
+              ExprList: 
+                UnaryOp: -
+                  Constant: int, 9
+        Compound: 
+          FuncCall: 
+            ID: abort
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: func_44
+        ExprList: 
+          Constant: int, 2
+      Return: 
+        Constant: int, 0

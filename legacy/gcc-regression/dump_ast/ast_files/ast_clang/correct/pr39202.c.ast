@@ -1,0 +1,56 @@
+TranslationUnitDecl 0x7fc2a60264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc2a6026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc2a6026740 '__int128'
+|-TypedefDecl 0x7fc2a6026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc2a6026760 'unsigned __int128'
+|-TypedefDecl 0x7fc2a6026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc2a6026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc2a6026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc2a6026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc2a6026dc0 'char *'
+|   `-BuiltinType 0x7fc2a6026560 'char'
+|-TypedefDecl 0x7fc2a60270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc2a6027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc2a6026ee0 'struct __va_list_tag'
+|     `-Record 0x7fc2a6026e58 '__va_list_tag'
+|-RecordDecl 0x7fc2a6027120 <c_files/pr39202.c:1:9, line:7:1> line:1:9 struct definition
+| |-RecordDecl 0x7fc2a6825a00 <line:3:3, line:6:5> line:3:3 union definition
+| | `-FieldDecl 0x7fc2a6825af0 <line:5:7, col:13> col:13 aaa 'int *'
+| `-FieldDecl 0x7fc2a6825b90 <line:3:3, line:6:7> col:7 u 'union (anonymous union at c_files/pr39202.c:3:3)':'union t_a::(anonymous at c_files/pr39202.c:3:3)'
+|-TypedefDecl 0x7fc2a6825c70 <line:1:1, line:7:3> col:3 referenced t_a 'struct t_a':'t_a'
+| `-ElaboratedType 0x7fc2a6825c20 'struct t_a' sugar
+|   `-RecordType 0x7fc2a60271b0 't_a'
+|     `-Record 0x7fc2a6027120 ''
+|-RecordDecl 0x7fc2a6825ce0 <line:9:9, line:12:1> line:9:9 struct definition
+| `-FieldDecl 0x7fc2a6825dc8 <line:11:3, col:18> col:12 bbb 'unsigned int'
+|   `-IntegerLiteral 0x7fc2a6825d90 <col:18> 'int' 1
+|-TypedefDecl 0x7fc2a6825e60 <line:9:1, line:12:3> col:3 referenced t_b 'struct t_b':'t_b'
+| `-ElaboratedType 0x7fc2a6825e10 'struct t_b' sugar
+|   `-RecordType 0x7fc2a6825d70 't_b'
+|     `-Record 0x7fc2a6825ce0 ''
+|-RecordDecl 0x7fc2a6825ed0 <line:14:9, line:20:1> line:14:9 struct definition
+| |-FieldDecl 0x7fc2a6825f98 <line:16:3, col:7> col:7 ccc 'int'
+| |-FieldDecl 0x7fc2a6826010 <line:17:3, col:7> col:7 ddd 't_a':'t_a'
+| |-FieldDecl 0x7fc2a6826090 <line:18:3, col:7> col:7 eee 't_b':'t_b'
+| `-FieldDecl 0x7fc2a68260f0 <line:19:3, col:7> col:7 fff 'int'
+|-TypedefDecl 0x7fc2a6826190 <line:14:1, line:20:3> col:3 referenced t_c 'struct t_c':'t_c'
+| `-ElaboratedType 0x7fc2a6826140 'struct t_c' sugar
+|   `-RecordType 0x7fc2a6825f60 't_c'
+|     `-Record 0x7fc2a6825ed0 ''
+|-RecordDecl 0x7fc2a6826200 <line:22:9, line:26:1> line:22:16 struct t_d definition
+| |-FieldDecl 0x7fc2a68262e0 <line:24:3, col:7> col:7 referenced f1 't_c':'t_c'
+| `-FieldDecl 0x7fc2a6826338 <line:25:3, col:7> col:7 referenced f2 't_c':'t_c'
+|-TypedefDecl 0x7fc2a68264c0 <line:22:1, line:26:3> col:3 referenced t_d 'struct t_d':'struct t_d'
+| `-ElaboratedType 0x7fc2a6826470 'struct t_d' sugar
+|   `-RecordType 0x7fc2a6826290 'struct t_d'
+|     `-Record 0x7fc2a6826200 't_d'
+`-FunctionDecl 0x7fc2a68265f0 <line:28:1, line:32:1> line:28:6 foo 'void (void)'
+  `-CompoundStmt 0x7fc2a6826878 <line:29:1, line:32:1>
+    |-DeclStmt 0x7fc2a6826760 <line:30:3, col:10>
+    | `-VarDecl 0x7fc2a6826700 <col:3, col:7> col:7 used ggg 't_d':'struct t_d'
+    `-BinaryOperator 0x7fc2a6826850 <line:31:3, col:16> 't_c':'t_c' '='
+      |-MemberExpr 0x7fc2a68267a0 <col:3, col:7> 't_c':'t_c' lvalue .f1 0x7fc2a68262e0
+      | `-DeclRefExpr 0x7fc2a6826778 <col:3> 't_d':'struct t_d' lvalue Var 0x7fc2a6826700 'ggg' 't_d':'struct t_d'
+      `-ImplicitCastExpr 0x7fc2a6826838 <col:12, col:16> 't_c':'t_c' <LValueToRValue>
+        `-MemberExpr 0x7fc2a6826800 <col:12, col:16> 't_c':'t_c' lvalue .f2 0x7fc2a6826338
+          `-DeclRefExpr 0x7fc2a68267d8 <col:12> 't_d':'struct t_d' lvalue Var 0x7fc2a6826700 'ggg' 't_d':'struct t_d'

@@ -1,0 +1,41 @@
+TranslationUnitDecl 0x7fb39c8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb39c826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb39c826740 '__int128'
+|-TypedefDecl 0x7fb39c826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb39c826760 'unsigned __int128'
+|-TypedefDecl 0x7fb39c826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb39c826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb39c826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb39c826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb39c826dc0 'char *'
+|   `-BuiltinType 0x7fb39c826560 'char'
+|-TypedefDecl 0x7fb39c8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb39c827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb39c826ee0 'struct __va_list_tag'
+|     `-Record 0x7fb39c826e58 '__va_list_tag'
+|-FunctionDecl 0x7fb39c877430 <c_files/pr68432-2.c:4:1, line:8:1> line:5:1 f1 'float (float)'
+| |-ParmVarDecl 0x7fb39c827138 <col:5, col:11> col:11 used f 'float'
+| `-CompoundStmt 0x7fb39c877760 <line:6:1, line:8:1>
+|   `-ReturnStmt 0x7fb39c877748 <line:7:3, col:28>
+|     `-CallExpr 0x7fb39c877700 <col:10, col:28> 'float'
+|       |-ImplicitCastExpr 0x7fb39c8776e8 <col:10> 'float (*)(float)' <BuiltinFnToFnPtr>
+|       | `-DeclRefExpr 0x7fb39c877668 <col:10> '<builtin fn type>' Function 0x7fb39c877510 '__builtin_rintf' 'float (float)'
+|       `-ImplicitCastExpr 0x7fb39c877730 <col:27> 'float' <LValueToRValue>
+|         `-DeclRefExpr 0x7fb39c877690 <col:27> 'float' lvalue ParmVar 0x7fb39c827138 'f' 'float'
+|-FunctionDecl 0x7fb39c877510 <col:10> col:10 implicit used __builtin_rintf 'float (float)' extern
+| |-ParmVarDecl 0x7fb39c8775a8 <<invalid sloc>> <invalid sloc> 'float'
+| |-NoThrowAttr 0x7fb39c877610 <col:10> Implicit
+| `-ConstAttr 0x7fb39c877658 <col:10> Implicit
+|-FunctionDecl 0x7fb39c877868 <line:10:1, line:14:1> line:11:1 f2 'double (double)'
+| |-ParmVarDecl 0x7fb39c877798 <col:5, col:12> col:12 used f 'double'
+| `-CompoundStmt 0x7fb39c877b50 <line:12:1, line:14:1>
+|   `-ReturnStmt 0x7fb39c877b38 <line:13:3, col:27>
+|     `-CallExpr 0x7fb39c877af0 <col:10, col:27> 'double'
+|       |-ImplicitCastExpr 0x7fb39c877ad8 <col:10> 'double (*)(double)' <BuiltinFnToFnPtr>
+|       | `-DeclRefExpr 0x7fb39c877a60 <col:10> '<builtin fn type>' Function 0x7fb39c877908 '__builtin_rint' 'double (double)'
+|       `-ImplicitCastExpr 0x7fb39c877b20 <col:26> 'double' <LValueToRValue>
+|         `-DeclRefExpr 0x7fb39c877a88 <col:26> 'double' lvalue ParmVar 0x7fb39c877798 'f' 'double'
+`-FunctionDecl 0x7fb39c877908 <col:10> col:10 implicit used __builtin_rint 'double (double)' extern
+  |-ParmVarDecl 0x7fb39c8779a0 <<invalid sloc>> <invalid sloc> 'double'
+  |-NoThrowAttr 0x7fb39c877a08 <col:10> Implicit
+  `-ConstAttr 0x7fb39c877a50 <col:10> Implicit

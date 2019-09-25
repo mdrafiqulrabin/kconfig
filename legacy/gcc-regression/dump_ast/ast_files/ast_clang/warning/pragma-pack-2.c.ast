@@ -1,0 +1,104 @@
+c_files/pragma-pack-2.c:41:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+main()
+^
+1 warning generated.
+TranslationUnitDecl 0x7fbafc0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbafc026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fbafc026740 '__int128'
+|-TypedefDecl 0x7fbafc026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fbafc026760 'unsigned __int128'
+|-TypedefDecl 0x7fbafc026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fbafc026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fbafc026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fbafc026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fbafc026dc0 'char *'
+|   `-BuiltinType 0x7fbafc026560 'char'
+|-TypedefDecl 0x7fbafc0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fbafc027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fbafc026ee0 'struct __va_list_tag'
+|     `-Record 0x7fbafc026e58 '__va_list_tag'
+|-FunctionDecl 0x7fbafc077430 <c_files/pragma-pack-2.c:5:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fbafc0774c8 prev 0x7fbafc077430 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-RecordDecl 0x7fbafc077560 <line:7:1, line:10:1> line:7:1 struct definition
+| |-FieldDecl 0x7fbafc077620 <line:8:9, col:14> col:14 one 'char'
+| `-FieldDecl 0x7fbafc077680 <line:9:9, col:14> col:14 two 'long'
+|-VarDecl 0x7fbafc077720 <line:7:1, line:10:3> col:3 referenced defaultalign 'struct (anonymous struct at c_files/pragma-pack-2.c:7:1)':'struct (anonymous at c_files/pragma-pack-2.c:7:1)'
+|-RecordDecl 0x7fbafc0777f8 <line:15:1, line:18:1> line:15:1 struct definition
+| |-MaxFieldAlignmentAttr 0x7fbafc0778a0 <<invalid sloc>> Implicit 128
+| |-FieldDecl 0x7fbafc0778f8 <line:16:9, col:14> col:14 one 'char'
+| `-FieldDecl 0x7fbafc077958 <line:17:9, col:14> col:14 two 'long'
+|-VarDecl 0x7fbafc0779f0 <line:15:1, line:18:3> col:3 referenced sixteen 'struct (anonymous struct at c_files/pragma-pack-2.c:15:1)':'struct (anonymous at c_files/pragma-pack-2.c:15:1)'
+|-RecordDecl 0x7fbafc077a88 <line:22:1, line:25:1> line:22:1 struct definition
+| |-MaxFieldAlignmentAttr 0x7fbafc077b30 <<invalid sloc>> Implicit 8
+| |-FieldDecl 0x7fbafc077b88 <line:23:9, col:14> col:14 one 'char'
+| `-FieldDecl 0x7fbafc077be8 <line:24:9, col:14> col:14 two 'long'
+|-VarDecl 0x7fbafc077c80 <line:22:1, line:25:3> col:3 referenced two 'struct (anonymous struct at c_files/pragma-pack-2.c:22:1)':'struct (anonymous at c_files/pragma-pack-2.c:22:1)'
+|-RecordDecl 0x7fbafc077d18 <line:29:1, line:32:1> line:29:1 struct definition
+| |-MaxFieldAlignmentAttr 0x7fbafc077dc0 <<invalid sloc>> Implicit 16
+| |-FieldDecl 0x7fbafc077e18 <line:30:9, col:14> col:14 one 'char'
+| `-FieldDecl 0x7fbafc077e78 <line:31:9, col:14> col:14 two 'long'
+|-VarDecl 0x7fbafc077f10 <line:29:1, line:32:3> col:3 referenced three 'struct (anonymous struct at c_files/pragma-pack-2.c:29:1)':'struct (anonymous at c_files/pragma-pack-2.c:29:1)'
+|-RecordDecl 0x7fbafc077f88 <line:36:1, line:39:1> line:36:1 struct definition
+| |-FieldDecl 0x7fbafc078040 <line:37:9, col:14> col:14 one 'char'
+| `-FieldDecl 0x7fbafc0780a0 <line:38:9, col:14> col:14 two 'long'
+|-VarDecl 0x7fbafc078140 <line:36:1, line:39:3> col:3 referenced resetalign 'struct (anonymous struct at c_files/pragma-pack-2.c:36:1)':'struct (anonymous at c_files/pragma-pack-2.c:36:1)'
+`-FunctionDecl 0x7fbafc078210 <line:41:1, line:48:1> line:41:1 main 'int ()'
+  `-CompoundStmt 0x7fbafc07ed10 <line:42:1, line:48:1>
+    |-IfStmt 0x7fbafc07e6e8 <line:43:9, col:58>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fbafc078378 <col:12, col:49> 'int' '<'
+    | | |-UnaryExprOrTypeTraitExpr 0x7fbafc0782f0 <col:12, col:26> 'unsigned long' sizeof
+    | | | `-ParenExpr 0x7fbafc0782d0 <col:18, col:26> 'struct (anonymous struct at c_files/pragma-pack-2.c:15:1)':'struct (anonymous at c_files/pragma-pack-2.c:15:1)' lvalue
+    | | |   `-DeclRefExpr 0x7fbafc0782a8 <col:19> 'struct (anonymous struct at c_files/pragma-pack-2.c:15:1)':'struct (anonymous at c_files/pragma-pack-2.c:15:1)' lvalue Var 0x7fbafc0779f0 'sixteen' 'struct (anonymous struct at c_files/pragma-pack-2.c:15:1)':'struct (anonymous at c_files/pragma-pack-2.c:15:1)'
+    | | `-UnaryExprOrTypeTraitExpr 0x7fbafc078358 <col:30, col:49> 'unsigned long' sizeof
+    | |   `-ParenExpr 0x7fbafc078338 <col:36, col:49> 'struct (anonymous struct at c_files/pragma-pack-2.c:7:1)':'struct (anonymous at c_files/pragma-pack-2.c:7:1)' lvalue
+    | |     `-DeclRefExpr 0x7fbafc078310 <col:37> 'struct (anonymous struct at c_files/pragma-pack-2.c:7:1)':'struct (anonymous at c_files/pragma-pack-2.c:7:1)' lvalue Var 0x7fbafc077720 'defaultalign' 'struct (anonymous struct at c_files/pragma-pack-2.c:7:1)':'struct (anonymous at c_files/pragma-pack-2.c:7:1)'
+    | |-CallExpr 0x7fbafc07e6c0 <col:52, col:58> 'void'
+    | | `-ImplicitCastExpr 0x7fbafc07e6a8 <col:52> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fbafc07e650 <col:52> 'void (void) __attribute__((noreturn))' Function 0x7fbafc0774c8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fbafc07e8d0 <line:44:9, col:55>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fbafc07e7f0 <col:12, col:46> 'int' '>='
+    | | |-UnaryExprOrTypeTraitExpr 0x7fbafc07e768 <col:12, col:22> 'unsigned long' sizeof
+    | | | `-ParenExpr 0x7fbafc07e748 <col:18, col:22> 'struct (anonymous struct at c_files/pragma-pack-2.c:22:1)':'struct (anonymous at c_files/pragma-pack-2.c:22:1)' lvalue
+    | | |   `-DeclRefExpr 0x7fbafc07e720 <col:19> 'struct (anonymous struct at c_files/pragma-pack-2.c:22:1)':'struct (anonymous at c_files/pragma-pack-2.c:22:1)' lvalue Var 0x7fbafc077c80 'two' 'struct (anonymous struct at c_files/pragma-pack-2.c:22:1)':'struct (anonymous at c_files/pragma-pack-2.c:22:1)'
+    | | `-UnaryExprOrTypeTraitExpr 0x7fbafc07e7d0 <col:27, col:46> 'unsigned long' sizeof
+    | |   `-ParenExpr 0x7fbafc07e7b0 <col:33, col:46> 'struct (anonymous struct at c_files/pragma-pack-2.c:7:1)':'struct (anonymous at c_files/pragma-pack-2.c:7:1)' lvalue
+    | |     `-DeclRefExpr 0x7fbafc07e788 <col:34> 'struct (anonymous struct at c_files/pragma-pack-2.c:7:1)':'struct (anonymous at c_files/pragma-pack-2.c:7:1)' lvalue Var 0x7fbafc077720 'defaultalign' 'struct (anonymous struct at c_files/pragma-pack-2.c:7:1)':'struct (anonymous at c_files/pragma-pack-2.c:7:1)'
+    | |-CallExpr 0x7fbafc07e8a8 <col:49, col:55> 'void'
+    | | `-ImplicitCastExpr 0x7fbafc07e890 <col:49> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fbafc07e868 <col:49> 'void (void) __attribute__((noreturn))' Function 0x7fbafc0774c8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fbafc07eab8 <line:45:9, col:48>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fbafc07e9d8 <col:12, col:39> 'int' '<='
+    | | |-UnaryExprOrTypeTraitExpr 0x7fbafc07e950 <col:12, col:24> 'unsigned long' sizeof
+    | | | `-ParenExpr 0x7fbafc07e930 <col:18, col:24> 'struct (anonymous struct at c_files/pragma-pack-2.c:29:1)':'struct (anonymous at c_files/pragma-pack-2.c:29:1)' lvalue
+    | | |   `-DeclRefExpr 0x7fbafc07e908 <col:19> 'struct (anonymous struct at c_files/pragma-pack-2.c:29:1)':'struct (anonymous at c_files/pragma-pack-2.c:29:1)' lvalue Var 0x7fbafc077f10 'three' 'struct (anonymous struct at c_files/pragma-pack-2.c:29:1)':'struct (anonymous at c_files/pragma-pack-2.c:29:1)'
+    | | `-UnaryExprOrTypeTraitExpr 0x7fbafc07e9b8 <col:29, col:39> 'unsigned long' sizeof
+    | |   `-ParenExpr 0x7fbafc07e998 <col:35, col:39> 'struct (anonymous struct at c_files/pragma-pack-2.c:22:1)':'struct (anonymous at c_files/pragma-pack-2.c:22:1)' lvalue
+    | |     `-DeclRefExpr 0x7fbafc07e970 <col:36> 'struct (anonymous struct at c_files/pragma-pack-2.c:22:1)':'struct (anonymous at c_files/pragma-pack-2.c:22:1)' lvalue Var 0x7fbafc077c80 'two' 'struct (anonymous struct at c_files/pragma-pack-2.c:22:1)':'struct (anonymous at c_files/pragma-pack-2.c:22:1)'
+    | |-CallExpr 0x7fbafc07ea90 <col:42, col:48> 'void'
+    | | `-ImplicitCastExpr 0x7fbafc07ea78 <col:42> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fbafc07ea50 <col:42> 'void (void) __attribute__((noreturn))' Function 0x7fbafc0774c8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fbafc07eca0 <line:46:9, col:62>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fbafc07ebc0 <col:12, col:53> 'int' '!='
+    | | |-UnaryExprOrTypeTraitExpr 0x7fbafc07eb38 <col:12, col:29> 'unsigned long' sizeof
+    | | | `-ParenExpr 0x7fbafc07eb18 <col:18, col:29> 'struct (anonymous struct at c_files/pragma-pack-2.c:36:1)':'struct (anonymous at c_files/pragma-pack-2.c:36:1)' lvalue
+    | | |   `-DeclRefExpr 0x7fbafc07eaf0 <col:19> 'struct (anonymous struct at c_files/pragma-pack-2.c:36:1)':'struct (anonymous at c_files/pragma-pack-2.c:36:1)' lvalue Var 0x7fbafc078140 'resetalign' 'struct (anonymous struct at c_files/pragma-pack-2.c:36:1)':'struct (anonymous at c_files/pragma-pack-2.c:36:1)'
+    | | `-UnaryExprOrTypeTraitExpr 0x7fbafc07eba0 <col:34, col:53> 'unsigned long' sizeof
+    | |   `-ParenExpr 0x7fbafc07eb80 <col:40, col:53> 'struct (anonymous struct at c_files/pragma-pack-2.c:7:1)':'struct (anonymous at c_files/pragma-pack-2.c:7:1)' lvalue
+    | |     `-DeclRefExpr 0x7fbafc07eb58 <col:41> 'struct (anonymous struct at c_files/pragma-pack-2.c:7:1)':'struct (anonymous at c_files/pragma-pack-2.c:7:1)' lvalue Var 0x7fbafc077720 'defaultalign' 'struct (anonymous struct at c_files/pragma-pack-2.c:7:1)':'struct (anonymous at c_files/pragma-pack-2.c:7:1)'
+    | |-CallExpr 0x7fbafc07ec78 <col:56, col:62> 'void'
+    | | `-ImplicitCastExpr 0x7fbafc07ec60 <col:56> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fbafc07ec38 <col:56> 'void (void) __attribute__((noreturn))' Function 0x7fbafc0774c8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fbafc07ecf8 <line:47:2, col:9>
+      `-IntegerLiteral 0x7fbafc07ecd8 <col:9> 'int' 0

@@ -1,0 +1,21 @@
+c_files/pragma-float-const-decimal64-1.c:4:14: warning: unknown pragma in STDC namespace [-Wunknown-pragmas]
+#pragma STDC FLOAT_CONST_DECIMAL64 ON   /* { dg-warning "not supported on this target" } */
+             ^
+1 warning generated.
+TranslationUnitDecl 0x7ffc2e8182d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffc2e818820 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ffc2e818540 '__int128'
+|-TypedefDecl 0x7ffc2e818890 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ffc2e818560 'unsigned __int128'
+|-TypedefDecl 0x7ffc2e818b68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ffc2e818970 'struct __NSConstantString_tag'
+|   `-Record 0x7ffc2e8188e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ffc2e818c00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ffc2e818bc0 'char *'
+|   `-BuiltinType 0x7ffc2e818360 'char'
+|-TypedefDecl 0x7ffc2e818ec8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ffc2e818e70 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ffc2e818ce0 'struct __va_list_tag'
+|     `-Record 0x7ffc2e818c58 '__va_list_tag'
+`-VarDecl 0x7ffc2e818f38 <c_files/pragma-float-const-decimal64-1.c:5:1, col:12> col:8 d 'double' cinit
+  `-FloatingLiteral 0x7ffc2e818fd8 <col:12> 'double' 1.000000e+00

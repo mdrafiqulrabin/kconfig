@@ -1,0 +1,65 @@
+FileAST: 
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+        TypeDecl: f, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        BinaryOp: <<
+          BinaryOp: <<
+            ID: a
+            Constant: int, 3
+          Constant: int, 6
+  FuncDef: 
+    Decl: g, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+        TypeDecl: g, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        BinaryOp: <<
+          BinaryOp: >>
+            ID: b
+            Constant: int, 5
+          Constant: int, 5
+  FuncDef: 
+    Decl: h, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['unsigned', 'long', 'long']
+        TypeDecl: h, []
+          IdentifierType: ['unsigned', 'long', 'long']
+    Compound: 
+      Return: 
+        BinaryOp: >>
+          BinaryOp: <<
+            ID: c
+            Constant: int, 60
+          Constant: int, 60
+  FuncDef: 
+    Decl: l, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: d, [], [], []
+            TypeDecl: d, []
+              IdentifierType: ['int']
+        TypeDecl: l, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        BinaryOp: >>
+          BinaryOp: <<
+            ID: d
+            Constant: int, 6
+          Constant: int, 6

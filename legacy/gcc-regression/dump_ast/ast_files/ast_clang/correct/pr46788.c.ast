@@ -1,0 +1,52 @@
+TranslationUnitDecl 0x7ff4060264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff406026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff406026740 '__int128'
+|-TypedefDecl 0x7ff406026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff406026760 'unsigned __int128'
+|-TypedefDecl 0x7ff406026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff406026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff406026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff406026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff406026dc0 'char *'
+|   `-BuiltinType 0x7ff406026560 'char'
+|-TypedefDecl 0x7ff4060270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff406027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff406026ee0 'struct __va_list_tag'
+|     `-Record 0x7ff406026e58 '__va_list_tag'
+|-RecordDecl 0x7ff406027120 <c_files/pr46788.c:5:9, line:13:1> line:5:9 union definition
+| |-FieldDecl 0x7ff406825a00 <line:7:3, col:21> col:21 referenced u_32_value 'unsigned long'
+| |-RecordDecl 0x7ff406825a48 <line:8:3, line:12:3> line:8:3 struct definition
+| | |-FieldDecl 0x7ff406825b08 <line:10:5, col:24> col:24 referenced u_16_value_0 'unsigned short'
+| | `-FieldDecl 0x7ff406825b68 <line:11:5, col:24> col:24 referenced u_16_value_1 'unsigned short'
+| `-FieldDecl 0x7ff406825c00 <line:8:3, line:12:5> col:5 referenced u_16_values 'struct (anonymous struct at c_files/pr46788.c:8:3)':'struct my_union::(anonymous at c_files/pr46788.c:8:3)'
+|-TypedefDecl 0x7ff406825ca0 <line:5:1, line:13:3> col:3 referenced my_union 'union my_union':'my_union'
+| `-ElaboratedType 0x7ff406825c50 'union my_union' sugar
+|   `-RecordType 0x7ff4060271b0 'my_union'
+|     `-Record 0x7ff406027120 ''
+`-FunctionDecl 0x7ff406825e38 <line:16:1, line:26:1> line:16:19 Test 'unsigned long (const unsigned short)'
+  |-ParmVarDecl 0x7ff406825d28 <col:24, col:49> col:49 used wXe 'const unsigned short'
+  `-CompoundStmt 0x7ff4068263e0 <line:17:1, line:26:1>
+    |-DeclStmt 0x7ff406825fb0 <line:18:3, col:21>
+    | `-VarDecl 0x7ff406825f50 <col:3, col:12> col:12 used dwCalcVal 'my_union':'my_union'
+    |-BinaryOperator 0x7ff4068260a0 <line:20:3, col:38> 'unsigned short' '='
+    | |-MemberExpr 0x7ff406826028 <col:3, col:25> 'unsigned short' lvalue .u_16_value_0 0x7ff406825b08
+    | | `-MemberExpr 0x7ff406825ff0 <col:3, col:13> 'struct (anonymous struct at c_files/pr46788.c:8:3)':'struct my_union::(anonymous at c_files/pr46788.c:8:3)' lvalue .u_16_values 0x7ff406825c00
+    | |   `-DeclRefExpr 0x7ff406825fc8 <col:3> 'my_union':'my_union' lvalue Var 0x7ff406825f50 'dwCalcVal' 'my_union':'my_union'
+    | `-ImplicitCastExpr 0x7ff406826088 <col:38> 'unsigned short' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff406826060 <col:38> 'const unsigned short' lvalue ParmVar 0x7ff406825d28 'wXe' 'const unsigned short'
+    |-BinaryOperator 0x7ff406826238 <line:21:3, col:38> 'unsigned short' '='
+    | |-MemberExpr 0x7ff4068261c8 <col:3, col:25> 'unsigned short' lvalue .u_16_value_1 0x7ff406825b68
+    | | `-MemberExpr 0x7ff406826190 <col:3, col:13> 'struct (anonymous struct at c_files/pr46788.c:8:3)':'struct my_union::(anonymous at c_files/pr46788.c:8:3)' lvalue .u_16_values 0x7ff406825c00
+    | |   `-DeclRefExpr 0x7ff406826168 <col:3> 'my_union':'my_union' lvalue Var 0x7ff406825f50 'dwCalcVal' 'my_union':'my_union'
+    | `-ImplicitCastExpr 0x7ff406826220 <col:38> 'unsigned short' <IntegralCast>
+    |   `-IntegerLiteral 0x7ff406826200 <col:38> 'unsigned int' 32768
+    |-CompoundAssignOperator 0x7ff4068262f8 <line:23:3, col:26> 'unsigned long' '/=' ComputeLHSTy='unsigned long' ComputeResultTy='unsigned long'
+    | |-MemberExpr 0x7ff406826288 <col:3, col:13> 'unsigned long' lvalue .u_32_value 0x7ff406825a00
+    | | `-DeclRefExpr 0x7ff406826260 <col:3> 'my_union':'my_union' lvalue Var 0x7ff406825f50 'dwCalcVal' 'my_union':'my_union'
+    | `-ImplicitCastExpr 0x7ff4068262e0 <col:26> 'unsigned long' <IntegralCast>
+    |   `-IntegerLiteral 0x7ff4068262c0 <col:26> 'int' 3
+    `-ReturnStmt 0x7ff4068263c8 <line:25:3, col:31>
+      `-ImplicitCastExpr 0x7ff4068263b0 <col:10, col:31> 'unsigned long' <LValueToRValue>
+        `-ParenExpr 0x7ff406826390 <col:10, col:31> 'unsigned long' lvalue
+          `-MemberExpr 0x7ff406826358 <col:11, col:21> 'unsigned long' lvalue .u_32_value 0x7ff406825a00
+            `-DeclRefExpr 0x7ff406826330 <col:11> 'my_union':'my_union' lvalue Var 0x7ff406825f50 'dwCalcVal' 'my_union':'my_union'

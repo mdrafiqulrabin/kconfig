@@ -1,0 +1,30 @@
+FileAST: 
+  Decl: global, [], [], []
+    TypeDecl: global, []
+      IdentifierType: ['float']
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: z, [], [], []
+        TypeDecl: z, []
+          IdentifierType: ['unsigned', 'long']
+        Constant: int, 1
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['float']
+        UnaryOp: -
+          ID: z
+      Assignment: =
+        ID: global
+        ID: x
+      If: 
+        BinaryOp: <
+          ID: global
+          Constant: int, 0
+        FuncCall: 
+          ID: __builtin_abort
+      Return: 
+        Constant: int, 0

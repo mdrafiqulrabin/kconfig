@@ -1,0 +1,56 @@
+TranslationUnitDecl 0x7fc4940264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc494026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc494026740 '__int128'
+|-TypedefDecl 0x7fc494026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc494026760 'unsigned __int128'
+|-TypedefDecl 0x7fc494026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc494026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc494026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc494026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc494026dc0 'char *'
+|   `-BuiltinType 0x7fc494026560 'char'
+|-TypedefDecl 0x7fc4940270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc494027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc494026ee0 'struct __va_list_tag'
+|     `-Record 0x7fc494026e58 '__va_list_tag'
+|-FunctionDecl 0x7fc494825a00 <c_files/pr52027.c:5:1, line:10:1> line:6:1 used foo 'void (int)'
+| |-ParmVarDecl 0x7fc494027138 <col:6, col:10> col:10 used len 'int'
+| `-CompoundStmt 0x7fc494825fe0 <line:7:1, line:10:1>
+|   |-DeclStmt 0x7fc494825bb8 <line:8:3, col:19>
+|   | `-VarDecl 0x7fc494825b58 <col:3, col:18> col:8 used array 'char [1000]'
+|   `-CallExpr 0x7fc494825f40 <line:9:3, col:34> 'void *'
+|     |-ImplicitCastExpr 0x7fc494825f28 <col:3> 'void *(*)(void *, int, unsigned long)' <BuiltinFnToFnPtr>
+|     | `-DeclRefExpr 0x7fc494825e30 <col:3> '<builtin fn type>' Function 0x7fc494825c18 '__builtin_memset' 'void *(void *, int, unsigned long)'
+|     |-ImplicitCastExpr 0x7fc494825f98 <col:21> 'void *' <BitCast>
+|     | `-ImplicitCastExpr 0x7fc494825f80 <col:21> 'char *' <ArrayToPointerDecay>
+|     |   `-DeclRefExpr 0x7fc494825e58 <col:21> 'char [1000]' lvalue Var 0x7fc494825b58 'array' 'char [1000]'
+|     |-IntegerLiteral 0x7fc494825e80 <col:28> 'int' 0
+|     `-ImplicitCastExpr 0x7fc494825fc8 <col:31> 'unsigned long' <IntegralCast>
+|       `-ImplicitCastExpr 0x7fc494825fb0 <col:31> 'int' <LValueToRValue>
+|         `-DeclRefExpr 0x7fc494825ea0 <col:31> 'int' lvalue ParmVar 0x7fc494027138 'len' 'int'
+|-FunctionDecl 0x7fc494825c18 <col:3> col:3 implicit used __builtin_memset 'void *(void *, int, unsigned long)' extern
+| |-ParmVarDecl 0x7fc494825cb0 <<invalid sloc>> <invalid sloc> 'void *'
+| |-ParmVarDecl 0x7fc494825d10 <<invalid sloc>> <invalid sloc> 'int'
+| |-ParmVarDecl 0x7fc494825d70 <<invalid sloc>> <invalid sloc> 'unsigned long'
+| `-NoThrowAttr 0x7fc494825de8 <col:3> Implicit
+`-FunctionDecl 0x7fc494826060 <line:12:1, line:19:1> line:13:1 main 'int ()'
+  `-CompoundStmt 0x7fc4948263f0 <line:14:1, line:19:1>
+    |-DeclStmt 0x7fc494826170 <line:15:3, col:8>
+    | `-VarDecl 0x7fc494826110 <col:3, col:7> col:7 used i 'int'
+    |-ForStmt 0x7fc494826380 <line:16:3, line:17:11>
+    | |-BinaryOperator 0x7fc4948261d0 <line:16:8, col:12> 'int' '='
+    | | |-DeclRefExpr 0x7fc494826188 <col:8> 'int' lvalue Var 0x7fc494826110 'i' 'int'
+    | | `-IntegerLiteral 0x7fc4948261b0 <col:12> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fc494826258 <col:15, col:19> 'int' '<'
+    | | |-ImplicitCastExpr 0x7fc494826240 <col:15> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fc4948261f8 <col:15> 'int' lvalue Var 0x7fc494826110 'i' 'int'
+    | | `-IntegerLiteral 0x7fc494826220 <col:19> 'int' 1000
+    | |-UnaryOperator 0x7fc4948262a8 <col:25, col:26> 'int' postfix '++'
+    | | `-DeclRefExpr 0x7fc494826280 <col:25> 'int' lvalue Var 0x7fc494826110 'i' 'int'
+    | `-CallExpr 0x7fc494826350 <line:17:5, col:11> 'void'
+    |   |-ImplicitCastExpr 0x7fc494826338 <col:5> 'void (*)(int)' <FunctionToPointerDecay>
+    |   | `-DeclRefExpr 0x7fc4948262c8 <col:5> 'void (int)' Function 0x7fc494825a00 'foo' 'void (int)'
+    |   `-IntegerLiteral 0x7fc4948262f0 <col:10> 'int' 8
+    `-ReturnStmt 0x7fc4948263d8 <line:18:3, col:10>
+      `-IntegerLiteral 0x7fc4948263b8 <col:10> 'int' 0

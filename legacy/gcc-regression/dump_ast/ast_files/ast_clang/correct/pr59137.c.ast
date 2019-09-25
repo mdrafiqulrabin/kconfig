@@ -1,0 +1,96 @@
+TranslationUnitDecl 0x7f7f628264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f7f62826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f7f62826740 '__int128'
+|-TypedefDecl 0x7f7f62826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f7f62826760 'unsigned __int128'
+|-TypedefDecl 0x7f7f62826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f7f62826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f7f62826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f7f62826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f7f62826dc0 'char *'
+|   `-BuiltinType 0x7f7f62826560 'char'
+|-TypedefDecl 0x7f7f628270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f7f62827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f7f62826ee0 'struct __va_list_tag'
+|     `-Record 0x7f7f62826e58 '__va_list_tag'
+|-FunctionDecl 0x7f7f63025a30 <c_files/pr59137.c:4:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7f7f63025ac8 prev 0x7f7f63025a30 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-RecordDecl 0x7f7f63025b60 <line:6:1, line:10:1> line:6:8 struct lispstruct definition
+| |-FieldDecl 0x7f7f63025c28 <line:8:3, col:7> col:7 referenced e 'int'
+| `-FieldDecl 0x7f7f63025c88 <line:9:3, col:7> col:7 referenced t 'int'
+|-VarDecl 0x7f7f63025d20 <line:12:1, col:19> col:19 used Cnil_body 'struct lispstruct':'struct lispstruct'
+|-VarDecl 0x7f7f63025de0 <line:13:1, col:19> col:19 used Ct_body 'struct lispstruct':'struct lispstruct'
+|-VarDecl 0x7f7f63025e58 <line:14:1, col:5> col:5 used nvalues 'int'
+|-FunctionDecl 0x7f7f63026058 <line:16:1, line:27:1> line:17:1 used fLlistp 'struct lispstruct *(struct lispstruct *)'
+| |-ParmVarDecl 0x7f7f63025f40 <col:10, col:29> col:29 used x0 'struct lispstruct *'
+| |-CompoundStmt 0x7f7f63026818 <line:18:1, line:27:1>
+| | |-IfStmt 0x7f7f63026718 <line:19:3, line:24:11>
+| | | |-<<<NULL>>>
+| | | |-<<<NULL>>>
+| | | |-BinaryOperator 0x7f7f630265c0 <line:19:7, line:21:43> 'int' '||'
+| | | | |-BinaryOperator 0x7f7f630261c8 <line:19:7, col:14> 'int' '=='
+| | | | | |-ImplicitCastExpr 0x7f7f630261b0 <col:7> 'struct lispstruct *' <LValueToRValue>
+| | | | | | `-DeclRefExpr 0x7f7f63026140 <col:7> 'struct lispstruct *' lvalue ParmVar 0x7f7f63025f40 'x0' 'struct lispstruct *'
+| | | | | `-UnaryOperator 0x7f7f63026190 <col:13, col:14> 'struct lispstruct *' prefix '&'
+| | | | |   `-DeclRefExpr 0x7f7f63026168 <col:14> 'struct lispstruct':'struct lispstruct' lvalue Var 0x7f7f63025d20 'Cnil_body' 'struct lispstruct':'struct lispstruct'
+| | | | `-ParenExpr 0x7f7f630265a0 <line:20:10, line:21:43> 'int'
+| | | |   `-ConditionalOperator 0x7f7f63026570 <line:20:11, line:21:42> 'int'
+| | | |     |-ParenExpr 0x7f7f630262d0 <line:20:11, col:44> 'int'
+| | | |     | `-BinaryOperator 0x7f7f630262a8 <col:12, col:34> 'int' '>='
+| | | |     |   |-CStyleCastExpr 0x7f7f63026248 <col:12, col:28> 'unsigned long' <PointerToIntegral>
+| | | |     |   | `-ImplicitCastExpr 0x7f7f63026230 <col:28> 'struct lispstruct *' <LValueToRValue>
+| | | |     |   |   `-DeclRefExpr 0x7f7f630261f0 <col:28> 'struct lispstruct *' lvalue ParmVar 0x7f7f63025f40 'x0' 'struct lispstruct *'
+| | | |     |   `-ImplicitCastExpr 0x7f7f63026290 <col:34> 'unsigned long' <IntegralCast>
+| | | |     |     `-IntegerLiteral 0x7f7f63026270 <col:34> 'unsigned int' 2147483648
+| | | |     |-IntegerLiteral 0x7f7f630262f0 <col:48> 'int' 0
+| | | |     `-ParenExpr 0x7f7f63026550 <line:21:6, col:42> 'int'
+| | | |       `-ConditionalOperator 0x7f7f63026520 <col:7, col:41> 'int'
+| | | |         |-UnaryOperator 0x7f7f630263a0 <col:7, col:12> 'int' prefix '!'
+| | | |         | `-ImplicitCastExpr 0x7f7f63026388 <col:8, col:12> 'int' <LValueToRValue>
+| | | |         |   `-MemberExpr 0x7f7f63026350 <col:8, col:12> 'int' lvalue ->e 0x7f7f63025c28
+| | | |         |     `-ImplicitCastExpr 0x7f7f63026338 <col:8> 'struct lispstruct *' <LValueToRValue>
+| | | |         |       `-DeclRefExpr 0x7f7f63026310 <col:8> 'struct lispstruct *' lvalue ParmVar 0x7f7f63025f40 'x0' 'struct lispstruct *'
+| | | |         |-ParenExpr 0x7f7f63026470 <col:16, col:33> 'int'
+| | | |         | `-BinaryOperator 0x7f7f63026448 <col:17, col:24> 'int' '!='
+| | | |         |   |-ImplicitCastExpr 0x7f7f63026430 <col:17> 'struct lispstruct *' <LValueToRValue>
+| | | |         |   | `-DeclRefExpr 0x7f7f630263c0 <col:17> 'struct lispstruct *' lvalue ParmVar 0x7f7f63025f40 'x0' 'struct lispstruct *'
+| | | |         |   `-UnaryOperator 0x7f7f63026410 <col:23, col:24> 'struct lispstruct *' prefix '&'
+| | | |         |     `-DeclRefExpr 0x7f7f630263e8 <col:24> 'struct lispstruct':'struct lispstruct' lvalue Var 0x7f7f63025d20 'Cnil_body' 'struct lispstruct':'struct lispstruct'
+| | | |         `-ImplicitCastExpr 0x7f7f63026508 <col:37, col:41> 'int' <LValueToRValue>
+| | | |           `-MemberExpr 0x7f7f630264d0 <col:37, col:41> 'int' lvalue ->t 0x7f7f63025c88
+| | | |             `-ImplicitCastExpr 0x7f7f630264b8 <col:37> 'struct lispstruct *' <LValueToRValue>
+| | | |               `-DeclRefExpr 0x7f7f63026490 <col:37> 'struct lispstruct *' lvalue ParmVar 0x7f7f63025f40 'x0' 'struct lispstruct *'
+| | | |-BinaryOperator 0x7f7f63026658 <line:22:5, col:11> 'struct lispstruct *' '='
+| | | | |-DeclRefExpr 0x7f7f630265e8 <col:5> 'struct lispstruct *' lvalue ParmVar 0x7f7f63025f40 'x0' 'struct lispstruct *'
+| | | | `-UnaryOperator 0x7f7f63026638 <col:10, col:11> 'struct lispstruct *' prefix '&'
+| | | |   `-DeclRefExpr 0x7f7f63026610 <col:11> 'struct lispstruct':'struct lispstruct' lvalue Var 0x7f7f63025de0 'Ct_body' 'struct lispstruct':'struct lispstruct'
+| | | `-BinaryOperator 0x7f7f630266f0 <line:24:5, col:11> 'struct lispstruct *' '='
+| | |   |-DeclRefExpr 0x7f7f63026680 <col:5> 'struct lispstruct *' lvalue ParmVar 0x7f7f63025f40 'x0' 'struct lispstruct *'
+| | |   `-UnaryOperator 0x7f7f630266d0 <col:10, col:11> 'struct lispstruct *' prefix '&'
+| | |     `-DeclRefExpr 0x7f7f630266a8 <col:11> 'struct lispstruct':'struct lispstruct' lvalue Var 0x7f7f63025d20 'Cnil_body' 'struct lispstruct':'struct lispstruct'
+| | |-BinaryOperator 0x7f7f63026798 <line:25:3, col:13> 'int' '='
+| | | |-DeclRefExpr 0x7f7f63026750 <col:3> 'int' lvalue Var 0x7f7f63025e58 'nvalues' 'int'
+| | | `-IntegerLiteral 0x7f7f63026778 <col:13> 'int' 1
+| | `-ReturnStmt 0x7f7f63026800 <line:26:3, col:10>
+| |   `-ImplicitCastExpr 0x7f7f630267e8 <col:10> 'struct lispstruct *' <LValueToRValue>
+| |     `-DeclRefExpr 0x7f7f630267c0 <col:10> 'struct lispstruct *' lvalue ParmVar 0x7f7f63025f40 'x0' 'struct lispstruct *'
+| `-NoInlineAttr 0x7f7f630260f8 <line:16:37>
+`-FunctionDecl 0x7f7f630268a0 <line:29:1, line:34:1> line:29:5 main 'int ()'
+  `-CompoundStmt 0x7f7f63028be8 <line:30:1, line:34:1>
+    |-IfStmt 0x7f7f63028b78 <line:31:3, line:32:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f7f63028ab8 <line:31:7, col:54> 'int' '!='
+    | | |-CallExpr 0x7f7f63028a40 <col:7, col:48> 'struct lispstruct *'
+    | | | |-ImplicitCastExpr 0x7f7f63028a28 <col:7> 'struct lispstruct *(*)(struct lispstruct *)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7f7f63026938 <col:7> 'struct lispstruct *(struct lispstruct *)' Function 0x7f7f63026058 'fLlistp' 'struct lispstruct *(struct lispstruct *)'
+    | | | `-CStyleCastExpr 0x7f7f630269a8 <col:16, col:38> 'struct lispstruct *' <IntegralToPointer>
+    | | |   `-IntegerLiteral 0x7f7f63026960 <col:38> 'unsigned int' 2684354561
+    | | `-UnaryOperator 0x7f7f63028a98 <col:53, col:54> 'struct lispstruct *' prefix '&'
+    | |   `-DeclRefExpr 0x7f7f63028a70 <col:54> 'struct lispstruct':'struct lispstruct' lvalue Var 0x7f7f63025d20 'Cnil_body' 'struct lispstruct':'struct lispstruct'
+    | |-CallExpr 0x7f7f63028b50 <line:32:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7f7f63028b38 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7f7f63028ae0 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7f7f63025ac8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7f7f63028bd0 <line:33:3, col:10>
+      `-IntegerLiteral 0x7f7f63028bb0 <col:10> 'int' 0

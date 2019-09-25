@@ -1,0 +1,28 @@
+c_files/pr66343-3.c:5:10: fatal error: 'pr66343-3.h' file not found
+#include "pr66343-3.h"
+         ^~~~~~~~~~~~~
+1 error generated.
+TranslationUnitDecl 0x7fe5850264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe585026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe585026740 '__int128'
+|-TypedefDecl 0x7fe585026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe585026760 'unsigned __int128'
+|-TypedefDecl 0x7fe585026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe585026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe585026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe585026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe585026dc0 'char *'
+|   `-BuiltinType 0x7fe585026560 'char'
+|-TypedefDecl 0x7fe5850270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe585027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe585026ee0 'struct __va_list_tag'
+|     `-Record 0x7fe585026e58 '__va_list_tag'
+`-FunctionDecl 0x7fe5850784d0 <c_files/pr66343-3.c:7:1, line:11:1> line:8:1 bar 'void (int, int)'
+  |-ParmVarDecl 0x7fe585027138 <col:6, col:10> col:10 used a 'int'
+  |-ParmVarDecl 0x7fe585078400 <col:13, col:17> col:17 used b 'int'
+  `-CompoundStmt 0x7fe585078660 <line:9:1, line:11:1>
+    `-BinaryOperator 0x7fe585078638 <line:10:3, col:7> 'int' '/'
+      |-ImplicitCastExpr 0x7fe585078608 <col:3> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7fe5850785b8 <col:3> 'int' lvalue ParmVar 0x7fe585027138 'a' 'int'
+      `-ImplicitCastExpr 0x7fe585078620 <col:7> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7fe5850785e0 <col:7> 'int' lvalue ParmVar 0x7fe585078400 'b' 'int'

@@ -1,0 +1,36 @@
+TranslationUnitDecl 0x7fadcd0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fadcd026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fadcd026740 '__int128'
+|-TypedefDecl 0x7fadcd026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fadcd026760 'unsigned __int128'
+|-TypedefDecl 0x7fadcd026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fadcd026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fadcd026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fadcd026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fadcd026dc0 'char *'
+|   `-BuiltinType 0x7fadcd026560 'char'
+|-TypedefDecl 0x7fadcd0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fadcd027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fadcd026ee0 'struct __va_list_tag'
+|     `-Record 0x7fadcd026e58 '__va_list_tag'
+`-FunctionDecl 0x7fadcd825a30 <c_files/pr38661.c:4:1, line:9:1> line:4:13 func 'const char *(int)'
+  |-ParmVarDecl 0x7fadcd027138 <col:18, col:22> col:22 used val 'int'
+  `-CompoundStmt 0x7fadcd825d80 <col:27, line:9:1>
+    `-SwitchStmt 0x7fadcd825b50 <line:5:2, line:8:2>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7fadcd825b38 <line:5:10> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7fadcd825b10 <col:10> 'int' lvalue ParmVar 0x7fadcd027138 'val' 'int'
+      `-CompoundStmt 0x7fadcd825d58 <col:15, line:8:2>
+        |-CaseStmt 0x7fadcd825ba0 <line:6:4, col:29>
+        | |-IntegerLiteral 0x7fadcd825b80 <<built-in>:33:21> 'int' 2147483647
+        | |-<<<NULL>>>
+        | `-ReturnStmt 0x7fadcd825c78 <c_files/pr38661.c:6:22, col:29>
+        |   `-ImplicitCastExpr 0x7fadcd825c60 <col:29> 'const char *' <BitCast>
+        |     `-ImplicitCastExpr 0x7fadcd825c48 <col:29> 'char *' <ArrayToPointerDecay>
+        |       `-StringLiteral 0x7fadcd825c18 <col:29> 'char [4]' lvalue "foo"
+        `-DefaultStmt 0x7fadcd825d38 <line:7:4, col:20>
+          `-ReturnStmt 0x7fadcd825d20 <col:13, col:20>
+            `-ImplicitCastExpr 0x7fadcd825d08 <col:20> 'const char *' <BitCast>
+              `-ImplicitCastExpr 0x7fadcd825cf0 <col:20> 'char *' <ArrayToPointerDecay>
+                `-StringLiteral 0x7fadcd825cc8 <col:20> 'char [1]' lvalue ""

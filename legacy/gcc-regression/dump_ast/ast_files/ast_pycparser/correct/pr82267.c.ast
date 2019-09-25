@@ -1,0 +1,19 @@
+FileAST: 
+  FuncDef: 
+    Decl: stackuse, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: stackuse, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: foo, ['volatile'], [], []
+        TypeDecl: foo, ['volatile']
+          IdentifierType: ['int']
+        Constant: int, 2
+      Return: 
+        BinaryOp: *
+          ID: foo
+          Constant: int, 3

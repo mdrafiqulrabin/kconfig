@@ -1,0 +1,113 @@
+FileAST: 
+  Decl: abort, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  Decl: None, [], [], []
+    Struct: S1
+      Decl: f0, [], [], []
+        TypeDecl: f0, []
+          IdentifierType: ['unsigned']
+      Decl: f1, [], [], []
+        TypeDecl: f1, []
+          IdentifierType: ['unsigned']
+      Decl: f2, [], [], []
+        TypeDecl: f2, []
+          IdentifierType: ['unsigned', 'short']
+      Decl: f3, [], [], []
+        TypeDecl: f3, []
+          IdentifierType: ['unsigned', 'short']
+      Decl: f4, [], [], []
+        TypeDecl: f4, []
+          IdentifierType: ['unsigned']
+        Constant: int, 16
+      Decl: f5, [], [], []
+        TypeDecl: f5, []
+          IdentifierType: ['unsigned']
+      Decl: f6, [], [], []
+        TypeDecl: f6, []
+          IdentifierType: ['unsigned']
+      Decl: f7, ['volatile'], [], []
+        TypeDecl: f7, ['volatile']
+          IdentifierType: ['unsigned']
+        Constant: int, 28
+  Decl: g_76, [], ['static'], []
+    TypeDecl: g_76, []
+      Struct: S1
+  Decl: g_245, [], ['static'], []
+    TypeDecl: g_245, []
+      Struct: S1
+    InitList: 
+      Constant: int, 0
+      Constant: int, 0
+      Constant: int, 0
+      Constant: int, 0
+      Constant: int, 0
+      Constant: int, 0
+      Constant: int, 0
+      Constant: int, 1
+  Decl: g_323, [], ['static'], []
+    TypeDecl: g_323, []
+      IdentifierType: ['signed', 'char']
+    Constant: int, 0x80
+  FuncDef: 
+    Decl: func_1, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: func_1, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: &=
+        StructRef: .
+          ID: g_245
+          ID: f7
+        Constant: int, 1
+      For: 
+        Assignment: =
+          ID: g_323
+          Constant: int, 0
+        BinaryOp: <=
+          ID: g_323
+          UnaryOp: -
+            Constant: int, 1
+        Assignment: -=
+          ID: g_323
+          Constant: int, 2
+        Compound: 
+          Assignment: =
+            ID: g_76
+            ID: g_76
+          Assignment: ^=
+            StructRef: .
+              ID: g_76
+              ID: f4
+            Constant: int, 11
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: func_1
+      If: 
+        BinaryOp: ||
+          BinaryOp: !=
+            ID: g_323
+            Constant: int, 0
+          BinaryOp: !=
+            StructRef: .
+              ID: g_245
+              ID: f7
+            Constant: int, 1
+        FuncCall: 
+          ID: abort
+      Return: 
+        Constant: int, 0

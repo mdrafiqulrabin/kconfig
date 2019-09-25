@@ -1,0 +1,86 @@
+FileAST: 
+  Typedef: uint16, [], ['typedef']
+    TypeDecl: uint16, []
+      IdentifierType: ['unsigned', 'short']
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: w, [], [], []
+            PtrDecl: []
+              TypeDecl: w, []
+                IdentifierType: ['unsigned', 'char']
+        TypeDecl: f, []
+          IdentifierType: ['int']
+    Compound: 
+      ExprList: 
+        Assignment: =
+          ArrayRef: 
+            ID: w
+            Constant: int, 2
+          BinaryOp: &
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['uint16']
+              BinaryOp: |
+                BinaryOp: <<
+                  BinaryOp: &
+                    BinaryOp: +
+                      BinaryOp: %
+                        FuncCall: 
+                          ID: g
+                          ExprList: 
+                            Constant: int, 0
+                        Constant: int, 10000
+                      Constant: int, 42
+                    Constant: int, 0xFF
+                  Constant: int, 8
+                BinaryOp: &
+                  BinaryOp: >>
+                    BinaryOp: +
+                      BinaryOp: %
+                        FuncCall: 
+                          ID: g
+                          ExprList: 
+                            Constant: int, 0
+                        Constant: int, 10000
+                      Constant: int, 42
+                    Constant: int, 8
+                  Constant: int, 0xFF
+            Constant: int, 0xFF
+        Assignment: =
+          ArrayRef: 
+            ID: w
+            Constant: int, 3
+          BinaryOp: >>
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['uint16']
+              BinaryOp: |
+                BinaryOp: <<
+                  BinaryOp: &
+                    BinaryOp: +
+                      BinaryOp: %
+                        FuncCall: 
+                          ID: g
+                          ExprList: 
+                            Constant: int, 0
+                        Constant: int, 10000
+                      Constant: int, 42
+                    Constant: int, 0xFF
+                  Constant: int, 8
+                BinaryOp: &
+                  BinaryOp: >>
+                    BinaryOp: +
+                      BinaryOp: %
+                        FuncCall: 
+                          ID: g
+                          ExprList: 
+                            Constant: int, 0
+                        Constant: int, 10000
+                      Constant: int, 42
+                    Constant: int, 8
+                  Constant: int, 0xFF
+            Constant: int, 8

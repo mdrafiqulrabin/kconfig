@@ -1,0 +1,29 @@
+c_files/pr39779.c:3:6: warning: shift count is negative [-Wshift-count-negative]
+  v1 >>= 0xdebecced;
+     ^   ~~~~~~~~~~
+1 warning generated.
+TranslationUnitDecl 0x7fdcb28264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fdcb2826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fdcb2826740 '__int128'
+|-TypedefDecl 0x7fdcb2826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fdcb2826760 'unsigned __int128'
+|-TypedefDecl 0x7fdcb2826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fdcb2826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fdcb2826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fdcb2826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fdcb2826dc0 'char *'
+|   `-BuiltinType 0x7fdcb2826560 'char'
+|-TypedefDecl 0x7fdcb28270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fdcb2827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fdcb2826ee0 'struct __va_list_tag'
+|     `-Record 0x7fdcb2826e58 '__va_list_tag'
+`-FunctionDecl 0x7fdcb3025a00 <c_files/pr39779.c:1:1, line:5:1> line:1:5 test 'int (char)'
+  |-ParmVarDecl 0x7fdcb2827130 <col:11, col:16> col:16 used v1 'char'
+  `-CompoundStmt 0x7fdcb3025c00 <line:2:1, line:5:1>
+    |-CompoundAssignOperator 0x7fdcb3025b58 <line:3:3, col:10> 'char' '>>=' ComputeLHSTy='int' ComputeResultTy='int'
+    | |-DeclRefExpr 0x7fdcb3025ae0 <col:3> 'char' lvalue ParmVar 0x7fdcb2827130 'v1' 'char'
+    | `-IntegerLiteral 0x7fdcb3025b08 <col:10> 'unsigned int' 3737046253
+    `-ReturnStmt 0x7fdcb3025be8 <line:4:3, col:10>
+      `-ImplicitCastExpr 0x7fdcb3025bd0 <col:10> 'int' <IntegralCast>
+        `-ImplicitCastExpr 0x7fdcb3025bb8 <col:10> 'char' <LValueToRValue>
+          `-DeclRefExpr 0x7fdcb3025b90 <col:10> 'char' lvalue ParmVar 0x7fdcb2827130 'v1' 'char'

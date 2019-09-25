@@ -1,0 +1,71 @@
+FileAST: 
+  Typedef: dp_model_t, [], ['typedef']
+    TypeDecl: dp_model_t, []
+      Struct: None
+        Decl: data_normal3f, [], [], []
+          PtrDecl: []
+            TypeDecl: data_normal3f, []
+              IdentifierType: ['float']
+        Decl: data_texcoordtexture2f, [], [], []
+          PtrDecl: []
+            TypeDecl: data_texcoordtexture2f, []
+              IdentifierType: ['float']
+        Decl: data_texcoordlightmap2f, [], [], []
+          PtrDecl: []
+            TypeDecl: data_texcoordlightmap2f, []
+              IdentifierType: ['float']
+        Decl: data_color4f, [], [], []
+          PtrDecl: []
+            TypeDecl: data_color4f, []
+              IdentifierType: ['float']
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['dp_model_t']
+  Decl: b, [], [], []
+    PtrDecl: []
+      TypeDecl: b, []
+        IdentifierType: ['float']
+  FuncDef: 
+    Decl: fn1, [], [], []
+      FuncDecl: 
+        TypeDecl: fn1, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          IdentifierType: ['int']
+      Assignment: =
+        StructRef: .
+          ID: a
+          ID: data_normal3f
+        BinaryOp: +
+          ID: b
+          BinaryOp: *
+            ID: c
+            Constant: int, 3
+      Assignment: =
+        StructRef: .
+          ID: a
+          ID: data_texcoordtexture2f
+        BinaryOp: +
+          StructRef: .
+            ID: a
+            ID: data_normal3f
+          BinaryOp: *
+            ID: c
+            Constant: int, 3
+      Assignment: =
+        StructRef: .
+          ID: a
+          ID: data_texcoordlightmap2f
+        Assignment: =
+          StructRef: .
+            ID: a
+            ID: data_color4f
+          BinaryOp: +
+            StructRef: .
+              ID: a
+              ID: data_texcoordlightmap2f
+            BinaryOp: *
+              ID: c
+              Constant: int, 2

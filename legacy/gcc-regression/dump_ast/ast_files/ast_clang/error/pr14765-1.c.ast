@@ -1,0 +1,25 @@
+c_files/pr14765-1.c:10:4: error: assigning to 'int' from incompatible type 'void'
+        a = ({}); /* { dg-error "not ignored" "void stmt expr" } */
+          ^ ~~~~
+1 error generated.
+TranslationUnitDecl 0x7fa8920264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa892026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa892026740 '__int128'
+|-TypedefDecl 0x7fa892026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa892026760 'unsigned __int128'
+|-TypedefDecl 0x7fa892026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa892026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa892026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa892026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa892026dc0 'char *'
+|   `-BuiltinType 0x7fa892026560 'char'
+|-TypedefDecl 0x7fa8920270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa892027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa892026ee0 'struct __va_list_tag'
+|     `-Record 0x7fa892026e58 '__va_list_tag'
+|-VarDecl 0x7fa892027138 <c_files/pr14765-1.c:6:1, col:5> col:5 used a 'int'
+`-FunctionDecl 0x7fa89284a848 <line:7:1, line:11:1> line:7:6 fun 'void ()'
+  `-CompoundStmt 0x7fa89284ad60 <line:8:1, line:11:1>
+    `-BinaryOperator 0x7fa89284a928 <line:9:2, col:6> 'int' '='
+      |-DeclRefExpr 0x7fa89284a8e0 <col:2> 'int' lvalue Var 0x7fa892027138 'a' 'int'
+      `-IntegerLiteral 0x7fa89284a908 <col:6> 'int' 0

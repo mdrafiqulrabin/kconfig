@@ -1,0 +1,75 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: a
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['unsigned', 'int']
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['unsigned', 'int']
+  Decl: p, [], [], []
+    PtrDecl: ['const']
+      TypeDecl: p, []
+        Struct: a
+    Cast: 
+      Typename: None, []
+        PtrDecl: []
+          TypeDecl: None, []
+            Struct: a
+      Constant: int, 0x4A004100
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['unsigned', 'int']
+        Constant: int, 0
+      Decl: x, [], [], []
+        ArrayDecl: []
+          PtrDecl: ['const']
+            TypeDecl: x, []
+              IdentifierType: ['unsigned', 'int']
+        InitList: 
+          UnaryOp: &
+            StructRef: ->
+              ID: p
+              ID: a
+          UnaryOp: &
+            StructRef: ->
+              ID: p
+              ID: b
+          Constant: int, 0
+      Assignment: =
+        UnaryOp: *
+          Cast: 
+            Typename: None, ['volatile']
+              PtrDecl: []
+                TypeDecl: None, ['volatile']
+                  IdentifierType: ['unsigned', 'int']
+            ArrayRef: 
+              ID: x
+              ID: i
+        Cast: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['unsigned', 'int']
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['unsigned', 'int']
+            UnaryOp: *
+              Cast: 
+                Typename: None, ['volatile']
+                  PtrDecl: []
+                    TypeDecl: None, ['volatile']
+                      IdentifierType: ['unsigned', 'int']
+                ArrayRef: 
+                  ID: x
+                  ID: i

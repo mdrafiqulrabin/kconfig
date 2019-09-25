@@ -1,0 +1,45 @@
+c_files/pr68090.c:9:3: error: variable-sized object may not be initialized
+  (int[i]) { 0 }; /* { dg-error "compound literal has variable size" } */
+  ^~~~~~~~~~~~~~
+c_files/pr68090.c:10:3: error: variable-sized object may not be initialized
+  (int[(0, i)]) { 0 }; /* { dg-error "compound literal has variable size" } */
+  ^~~~~~~~~~~~~~~~~~~
+c_files/pr68090.c:11:11: error: variable-sized object may not be initialized
+  (int [][i]){ 0 }; /* { dg-error "compound literal has variable size" } */
+          ^
+c_files/pr68090.c:8:3: warning: expression result unused [-Wunused-value]
+  (int[(0, 1)]) { 0 }; /* { dg-error "compound literal has variable size" } */
+  ^~~~~~~~~~~~~~~~~~~
+c_files/pr68090.c:12:3: warning: expression result unused [-Wunused-value]
+  (int [][(1, 2)]){ 0 }; /* { dg-error "compound literal has variable size" } */
+  ^~~~~~~~~~~~~~~~~~~~~
+2 warnings and 3 errors generated.
+TranslationUnitDecl 0x7fc0688264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc068826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc068826740 '__int128'
+|-TypedefDecl 0x7fc068826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc068826760 'unsigned __int128'
+|-TypedefDecl 0x7fc068826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc068826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc068826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc068826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc068826dc0 'char *'
+|   `-BuiltinType 0x7fc068826560 'char'
+|-TypedefDecl 0x7fc0688270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc068827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc068826ee0 'struct __va_list_tag'
+|     `-Record 0x7fc068826e58 '__va_list_tag'
+`-FunctionDecl 0x7fc068877400 <c_files/pr68090.c:5:1, line:13:1> line:6:1 fn 'void (int)'
+  |-ParmVarDecl 0x7fc068827138 <col:5, col:9> col:9 used i 'int'
+  `-CompoundStmt 0x7fc068877e20 <line:7:1, line:13:1>
+    |-ImplicitCastExpr 0x7fc0688776d8 <line:8:3, col:21> 'int *' <ArrayToPointerDecay>
+    | `-CompoundLiteralExpr 0x7fc068877680 <col:3, col:21> 'int [1]' lvalue
+    |   `-InitListExpr 0x7fc068877638 <col:17, col:21> 'int [1]'
+    |     `-IntegerLiteral 0x7fc0688775d0 <col:19> 'int' 0
+    `-ImplicitCastExpr 0x7fc068877e08 <line:12:3, col:23> 'int (*)[2]' <ArrayToPointerDecay>
+      `-CompoundLiteralExpr 0x7fc068877db8 <col:3, col:23> 'int [1][2]' lvalue
+        `-InitListExpr 0x7fc068877cd8 <col:19, col:23> 'int [1][2]'
+          `-InitListExpr 0x7fc068877d18 <col:21> 'int [2]'
+            |-array filler
+            | `-ImplicitValueInitExpr 0x7fc068877da8 <<invalid sloc>> 'int'
+            `-IntegerLiteral 0x7fc068877c70 <col:21> 'int' 0

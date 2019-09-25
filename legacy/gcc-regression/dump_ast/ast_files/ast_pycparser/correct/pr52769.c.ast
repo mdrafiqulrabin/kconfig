@@ -1,0 +1,45 @@
+FileAST: 
+  Typedef: foo_t, [], ['typedef']
+    TypeDecl: foo_t, []
+      Struct: None
+        Decl: should_be_zero, [], [], []
+          TypeDecl: should_be_zero, []
+            IdentifierType: ['int']
+        Decl: s, [], [], []
+          ArrayDecl: []
+            TypeDecl: s, []
+              IdentifierType: ['char']
+            Constant: int, 6
+        Decl: x, [], [], []
+          TypeDecl: x, []
+            IdentifierType: ['int']
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: foo, ['volatile'], [], []
+        TypeDecl: foo, ['volatile']
+          IdentifierType: ['foo_t']
+        InitList: 
+          NamedInitializer: 
+            Constant: string, "123456"
+            ID: s
+          NamedInitializer: 
+            Constant: int, 2
+            ID: x
+      If: 
+        BinaryOp: !=
+          StructRef: .
+            ID: foo
+            ID: should_be_zero
+          Constant: int, 0
+        FuncCall: 
+          ID: __builtin_abort
+      Return: 
+        Constant: int, 0

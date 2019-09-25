@@ -1,0 +1,16 @@
+FileAST: 
+  FuncDef: 
+    Decl: _mm_clflush, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: __A, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: __A, ['const']
+                IdentifierType: ['void']
+        TypeDecl: _mm_clflush, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: __builtin_ia32_clflush
+        ExprList: 
+          ID: __A

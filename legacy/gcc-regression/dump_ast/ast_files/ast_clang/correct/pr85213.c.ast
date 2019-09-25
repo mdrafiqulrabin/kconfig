@@ -1,0 +1,48 @@
+TranslationUnitDecl 0x7fd45a8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd45a826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd45a826740 '__int128'
+|-TypedefDecl 0x7fd45a826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd45a826760 'unsigned __int128'
+|-TypedefDecl 0x7fd45a826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd45a826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd45a826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd45a826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd45a826dc0 'char *'
+|   `-BuiltinType 0x7fd45a826560 'char'
+|-TypedefDecl 0x7fd45a8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd45a827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd45a826ee0 'struct __va_list_tag'
+|     `-Record 0x7fd45a826e58 '__va_list_tag'
+|-FunctionDecl 0x7fd45b025a30 <c_files/pr85213.c:5:1, line:9:1> line:6:1 foo 'int (int)'
+| |-ParmVarDecl 0x7fd45a827138 <col:6, col:10> col:10 used x 'int'
+| `-CompoundStmt 0x7fd45b026080 <line:7:1, line:9:1>
+|   `-ReturnStmt 0x7fd45b026068 <line:8:3, col:69>
+|     `-BinaryOperator 0x7fd45b026040 <col:10, col:69> 'int' '<<'
+|       |-BinaryOperator 0x7fd45b025ff8 <col:10, col:64> 'int' '*'
+|       | |-ParenExpr 0x7fd45b025f98 <col:10, col:59> 'int'
+|       | | `-BinaryOperator 0x7fd45b025f70 <col:11, col:58> 'int' '=='
+|       | |   |-CallExpr 0x7fd45b025ed0 <col:11, col:53> 'long'
+|       | |   | |-ImplicitCastExpr 0x7fd45b025eb8 <col:11> 'long (*)(long, long)' <BuiltinFnToFnPtr>
+|       | |   | | `-DeclRefExpr 0x7fd45b025d10 <col:11> '<builtin fn type>' Function 0x7fd45b025b50 '__builtin_expect' 'long (long, long)'
+|       | |   | |-ImplicitCastExpr 0x7fd45b025f08 <col:29, col:49> 'long' <IntegralCast>
+|       | |   | | `-ConditionalOperator 0x7fd45b025e40 <col:29, col:49> 'int'
+|       | |   | |   |-StmtExpr 0x7fd45b025de0 <col:29, col:41> 'int'
+|       | |   | |   | `-CompoundStmt 0x7fd45b025dc0 <col:30, col:40>
+|       | |   | |   |   `-BinaryOperator 0x7fd45b025d98 <col:32, col:37> 'int' '!='
+|       | |   | |   |     |-ImplicitCastExpr 0x7fd45b025d80 <col:32> 'int' <LValueToRValue>
+|       | |   | |   |     | `-DeclRefExpr 0x7fd45b025d38 <col:32> 'int' lvalue ParmVar 0x7fd45a827138 'x' 'int'
+|       | |   | |   |     `-IntegerLiteral 0x7fd45b025d60 <col:37> 'int' 0
+|       | |   | |   |-IntegerLiteral 0x7fd45b025e00 <col:45> 'int' 0
+|       | |   | |   `-IntegerLiteral 0x7fd45b025e20 <col:49> 'int' 1
+|       | |   | `-ImplicitCastExpr 0x7fd45b025f20 <col:52> 'long' <IntegralCast>
+|       | |   |   `-IntegerLiteral 0x7fd45b025e70 <col:52> 'int' 3
+|       | |   `-ImplicitCastExpr 0x7fd45b025f58 <col:58> 'long' <IntegralCast>
+|       | |     `-IntegerLiteral 0x7fd45b025f38 <col:58> 'int' 0
+|       | `-UnaryOperator 0x7fd45b025fd8 <col:63, col:64> 'int' prefix '-'
+|       |   `-IntegerLiteral 0x7fd45b025fb8 <col:64> 'int' 1
+|       `-IntegerLiteral 0x7fd45b026020 <col:69> 'int' 0
+`-FunctionDecl 0x7fd45b025b50 <col:11> col:11 implicit used __builtin_expect 'long (long, long)' extern
+  |-ParmVarDecl 0x7fd45b025be8 <<invalid sloc>> <invalid sloc> 'long'
+  |-ParmVarDecl 0x7fd45b025c48 <<invalid sloc>> <invalid sloc> 'long'
+  |-NoThrowAttr 0x7fd45b025cb8 <col:11> Implicit
+  `-ConstAttr 0x7fd45b025d00 <col:11> Implicit

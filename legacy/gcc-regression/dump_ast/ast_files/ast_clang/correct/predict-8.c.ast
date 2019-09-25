@@ -1,0 +1,31 @@
+TranslationUnitDecl 0x7f93bf0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f93bf026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f93bf026740 '__int128'
+|-TypedefDecl 0x7f93bf026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f93bf026760 'unsigned __int128'
+|-TypedefDecl 0x7f93bf026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f93bf026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f93bf026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f93bf026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f93bf026dc0 'char *'
+|   `-BuiltinType 0x7f93bf026560 'char'
+|-TypedefDecl 0x7f93bf0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f93bf027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f93bf026ee0 'struct __va_list_tag'
+|     `-Record 0x7f93bf026e58 '__va_list_tag'
+`-FunctionDecl 0x7f93bf825ad8 <c_files/predict-8.c:4:1, line:9:1> line:4:5 foo 'int (float, float)'
+  |-ParmVarDecl 0x7f93bf027138 <col:9, col:15> col:15 used a 'float'
+  |-ParmVarDecl 0x7f93bf825a00 <col:18, col:24> col:24 used b 'float'
+  `-CompoundStmt 0x7f93bf825d10 <col:27, line:9:1>
+    `-IfStmt 0x7f93bf825cd8 <line:5:3, line:8:12>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7f93bf825c40 <line:5:7, col:12> 'int' '=='
+      | |-ImplicitCastExpr 0x7f93bf825c10 <col:7> 'float' <LValueToRValue>
+      | | `-DeclRefExpr 0x7f93bf825bc0 <col:7> 'float' lvalue ParmVar 0x7f93bf027138 'a' 'float'
+      | `-ImplicitCastExpr 0x7f93bf825c28 <col:12> 'float' <LValueToRValue>
+      |   `-DeclRefExpr 0x7f93bf825be8 <col:12> 'float' lvalue ParmVar 0x7f93bf825a00 'b' 'float'
+      |-ReturnStmt 0x7f93bf825c88 <line:6:5, col:12>
+      | `-IntegerLiteral 0x7f93bf825c68 <col:12> 'int' 1
+      `-ReturnStmt 0x7f93bf825cc0 <line:8:5, col:12>
+        `-IntegerLiteral 0x7f93bf825ca0 <col:12> 'int' 2

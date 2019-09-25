@@ -1,0 +1,41 @@
+FileAST: 
+  Decl: nonvolvar, [], [], []
+    ArrayDecl: []
+      TypeDecl: nonvolvar, []
+        IdentifierType: ['unsigned']
+      Constant: int, 2
+  FuncDef: 
+    Decl: test, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: arg, [], [], []
+            TypeDecl: arg, []
+              IdentifierType: ['int']
+        TypeDecl: test, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: v, [], [], []
+        TypeDecl: v, []
+          IdentifierType: ['unsigned']
+        UnaryOp: *
+          Cast: 
+            Typename: None, ['volatile']
+              PtrDecl: []
+                TypeDecl: None, ['volatile']
+                  IdentifierType: ['unsigned']
+            UnaryOp: &
+              ArrayRef: 
+                ID: nonvolvar
+                ID: arg
+      Assignment: =
+        UnaryOp: *
+          Cast: 
+            Typename: None, ['volatile']
+              PtrDecl: []
+                TypeDecl: None, ['volatile']
+                  IdentifierType: ['unsigned']
+            UnaryOp: &
+              ArrayRef: 
+                ID: nonvolvar
+                ID: arg
+        ID: v

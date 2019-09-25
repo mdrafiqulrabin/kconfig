@@ -1,0 +1,28 @@
+TranslationUnitDecl 0x7f85f08264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f85f0826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f85f0826740 '__int128'
+|-TypedefDecl 0x7f85f0826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f85f0826760 'unsigned __int128'
+|-TypedefDecl 0x7f85f0826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f85f0826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f85f0826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f85f0826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f85f0826dc0 'char *'
+|   `-BuiltinType 0x7f85f0826560 'char'
+|-TypedefDecl 0x7f85f08270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f85f0827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f85f0826ee0 'struct __va_list_tag'
+|     `-Record 0x7f85f0826e58 '__va_list_tag'
+|-FunctionDecl 0x7f85f1025b10 <c_files/pr35503-3.c:4:1, col:33> col:6 used f 'void (int *, int *__restrict)'
+| |-ParmVarDecl 0x7f85f0827160 <col:8, col:13> col:13 x 'int *'
+| `-ParmVarDecl 0x7f85f1025a00 <col:16, col:32> col:32 y 'int *__restrict'
+`-FunctionDecl 0x7f85f1025cd0 <line:6:1, line:9:1> line:6:6 foo 'void (int)'
+  |-ParmVarDecl 0x7f85f1025c10 <col:10, col:14> col:14 used a 'int'
+  `-CompoundStmt 0x7f85f1025ed8 <line:7:1, line:9:1>
+    `-CallExpr 0x7f85f1025ea0 <line:8:3, col:12> 'void'
+      |-ImplicitCastExpr 0x7f85f1025e88 <col:3> 'void (*)(int *, int *__restrict)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7f85f1025d70 <col:3> 'void (int *, int *__restrict)' Function 0x7f85f1025b10 'f' 'void (int *, int *__restrict)'
+      |-UnaryOperator 0x7f85f1025dc0 <col:6, col:7> 'int *' prefix '&'
+      | `-DeclRefExpr 0x7f85f1025d98 <col:7> 'int' lvalue ParmVar 0x7f85f1025c10 'a' 'int'
+      `-UnaryOperator 0x7f85f1025e08 <col:10, col:11> 'int *' prefix '&'
+        `-DeclRefExpr 0x7f85f1025de0 <col:11> 'int' lvalue ParmVar 0x7f85f1025c10 'a' 'int'

@@ -1,0 +1,112 @@
+FileAST: 
+  Decl: heap, [], ['static'], []
+    ArrayDecl: []
+      TypeDecl: heap, []
+        IdentifierType: ['int']
+      BinaryOp: +
+        BinaryOp: *
+          Constant: int, 2
+          BinaryOp: +
+            BinaryOp: +
+              Constant: int, 256
+              Constant: int, 1
+            Constant: int, 29
+        Constant: int, 1
+  Decl: heap_len, [], ['static'], []
+    TypeDecl: heap_len, []
+      IdentifierType: ['int']
+  Decl: heap_max, [], ['static'], []
+    TypeDecl: heap_max, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: elems, [], [], []
+            TypeDecl: elems, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: n, [], [], []
+        TypeDecl: n, []
+          IdentifierType: ['int']
+      Decl: m, [], [], []
+        TypeDecl: m, []
+          IdentifierType: ['int']
+      Decl: max_code, [], [], []
+        TypeDecl: max_code, []
+          IdentifierType: ['int']
+        UnaryOp: -
+          Constant: int, 1
+      Decl: node, [], [], []
+        TypeDecl: node, []
+          IdentifierType: ['int']
+        ID: elems
+      ExprList: 
+        Assignment: =
+          ID: heap_len
+          Constant: int, 0
+        Assignment: =
+          ID: heap_max
+          BinaryOp: +
+            BinaryOp: *
+              Constant: int, 2
+              BinaryOp: +
+                BinaryOp: +
+                  Constant: int, 256
+                  Constant: int, 1
+                Constant: int, 29
+            Constant: int, 1
+      For: 
+        Assignment: =
+          ID: n
+          Constant: int, 0
+        BinaryOp: <
+          ID: n
+          ID: elems
+        UnaryOp: p++
+          ID: n
+        Assignment: =
+          ArrayRef: 
+            ID: heap
+            UnaryOp: ++
+              ID: heap_len
+          Assignment: =
+            ID: max_code
+            ID: n
+      DoWhile: 
+        BinaryOp: >=
+          ID: heap_len
+          Constant: int, 2
+        Compound: 
+          Assignment: =
+            ID: n
+            ArrayRef: 
+              ID: heap
+              Constant: int, 1
+          Assignment: =
+            ArrayRef: 
+              ID: heap
+              Constant: int, 1
+            ArrayRef: 
+              ID: heap
+              UnaryOp: p--
+                ID: heap_len
+          Assignment: =
+            ID: m
+            ArrayRef: 
+              ID: heap
+              Constant: int, 1
+          Assignment: =
+            ArrayRef: 
+              ID: heap
+              UnaryOp: --
+                ID: heap_max
+            ID: n
+          Assignment: =
+            ArrayRef: 
+              ID: heap
+              UnaryOp: --
+                ID: heap_max
+            ID: m

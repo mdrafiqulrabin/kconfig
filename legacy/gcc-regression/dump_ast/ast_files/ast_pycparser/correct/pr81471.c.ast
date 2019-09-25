@@ -1,0 +1,40 @@
+FileAST: 
+  FuncDef: 
+    Decl: rotl, [], ['static'], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['unsigned', 'int']
+          Decl: k, [], [], []
+            TypeDecl: k, []
+              IdentifierType: ['int']
+        TypeDecl: rotl, []
+          IdentifierType: ['unsigned', 'int']
+    Compound: 
+      Return: 
+        BinaryOp: |
+          BinaryOp: <<
+            ID: x
+            ID: k
+          BinaryOp: >>
+            ID: x
+            BinaryOp: -
+              Constant: int, 32
+              ID: k
+  FuncDef: 
+    Decl: test, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: z, [], [], []
+            TypeDecl: z, []
+              IdentifierType: ['unsigned', 'int']
+        TypeDecl: test, []
+          IdentifierType: ['unsigned', 'long', 'long']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: rotl
+          ExprList: 
+            ID: z
+            Constant: int, 55

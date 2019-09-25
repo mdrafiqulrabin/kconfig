@@ -1,0 +1,46 @@
+TranslationUnitDecl 0x7fe1fc0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe1fc026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe1fc026740 '__int128'
+|-TypedefDecl 0x7fe1fc026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe1fc026760 'unsigned __int128'
+|-TypedefDecl 0x7fe1fc026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe1fc026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe1fc026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe1fc026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe1fc026dc0 'char *'
+|   `-BuiltinType 0x7fe1fc026560 'char'
+|-TypedefDecl 0x7fe1fc0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe1fc027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe1fc026ee0 'struct __va_list_tag'
+|     `-Record 0x7fe1fc026e58 '__va_list_tag'
+`-FunctionDecl 0x7fe1fc825ad8 <c_files/pr25485.c:6:1, line:14:1> line:7:1 foo 'int (int, int)'
+  |-ParmVarDecl 0x7fe1fc027138 <col:6, col:10> col:10 used a 'int'
+  |-ParmVarDecl 0x7fe1fc825a00 <col:13, col:17> col:17 used b 'int'
+  `-CompoundStmt 0x7fe1fc825e98 <line:8:1, line:14:1>
+    |-IfStmt 0x7fe1fc825c80 <line:9:3, line:10:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fe1fc825c20 <line:9:7, col:11> 'int' '>'
+    | | |-ImplicitCastExpr 0x7fe1fc825c08 <col:7> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fe1fc825bc0 <col:7> 'int' lvalue ParmVar 0x7fe1fc027138 'a' 'int'
+    | | `-IntegerLiteral 0x7fe1fc825be8 <col:11> 'int' 50
+    | |-ReturnStmt 0x7fe1fc825c68 <line:10:5, col:12>
+    | | `-IntegerLiteral 0x7fe1fc825c48 <col:12> 'int' 19
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fe1fc825e28 <line:11:3, line:12:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fe1fc825dc8 <line:11:7, col:21> 'int' '&&'
+    | | |-BinaryOperator 0x7fe1fc825d18 <col:7, col:11> 'int' '>'
+    | | | |-ImplicitCastExpr 0x7fe1fc825d00 <col:7> 'int' <LValueToRValue>
+    | | | | `-DeclRefExpr 0x7fe1fc825cb8 <col:7> 'int' lvalue ParmVar 0x7fe1fc027138 'a' 'int'
+    | | | `-IntegerLiteral 0x7fe1fc825ce0 <col:11> 'int' 63
+    | | `-BinaryOperator 0x7fe1fc825da0 <col:17, col:21> 'int' '<'
+    | |   |-ImplicitCastExpr 0x7fe1fc825d88 <col:17> 'int' <LValueToRValue>
+    | |   | `-DeclRefExpr 0x7fe1fc825d40 <col:17> 'int' lvalue ParmVar 0x7fe1fc825a00 'b' 'int'
+    | |   `-IntegerLiteral 0x7fe1fc825d68 <col:21> 'int' 50
+    | |-ReturnStmt 0x7fe1fc825e10 <line:12:5, col:12>
+    | | `-IntegerLiteral 0x7fe1fc825df0 <col:12> 'int' 17
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fe1fc825e80 <line:13:3, col:10>
+      `-IntegerLiteral 0x7fe1fc825e60 <col:10> 'int' 31

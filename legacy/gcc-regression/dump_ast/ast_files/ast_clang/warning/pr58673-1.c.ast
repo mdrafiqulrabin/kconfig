@@ -1,0 +1,411 @@
+c_files/pr58673-1.c:65:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+c_files/pr58673-1.c:74:31: warning: comparison of constant -1 with expression of type 'enum bytecode_opcode' is always true [-Wtautological-constant-out-of-range-compare]
+  for (i = 0; optab[i].opcode != -1; ++i)
+              ~~~~~~~~~~~~~~~ ^  ~~
+2 warnings generated.
+TranslationUnitDecl 0x7fc1188264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc118826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc118826740 '__int128'
+|-TypedefDecl 0x7fc118826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc118826760 'unsigned __int128'
+|-TypedefDecl 0x7fc118826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc118826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc118826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc118826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc118826dc0 'char *'
+|   `-BuiltinType 0x7fc118826560 'char'
+|-TypedefDecl 0x7fc1188270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc118827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc118826ee0 'struct __va_list_tag'
+|     `-Record 0x7fc118826e58 '__va_list_tag'
+|-EnumDecl 0x7fc118827120 <c_files/pr58673-1.c:7:1, line:11:1> line:7:6 typecode
+| |-EnumConstantDecl 0x7fc119025a00 <line:9:3> col:3 QIcode 'int'
+| |-EnumConstantDecl 0x7fc119025a48 <col:11> col:11 QUcode 'int'
+| |-EnumConstantDecl 0x7fc119025a90 <col:19> col:19 HIcode 'int'
+| |-EnumConstantDecl 0x7fc119025ad8 <col:27> col:27 HUcode 'int'
+| |-EnumConstantDecl 0x7fc119025b20 <col:35> col:35 SIcode 'int'
+| |-EnumConstantDecl 0x7fc119025b68 <col:43> col:43 SUcode 'int'
+| |-EnumConstantDecl 0x7fc119025bb0 <col:51> col:51 DIcode 'int'
+| |-EnumConstantDecl 0x7fc119025bf8 <col:59> col:59 DUcode 'int'
+| |-EnumConstantDecl 0x7fc119025c40 <col:67> col:67 SFcode 'int'
+| |-EnumConstantDecl 0x7fc119025c88 <line:10:5> col:5 DFcode 'int'
+| |-EnumConstantDecl 0x7fc119025cd0 <col:13> col:13 XFcode 'int'
+| |-EnumConstantDecl 0x7fc119025d18 <col:21> col:21 Pcode 'int'
+| |-EnumConstantDecl 0x7fc119025d60 <col:28> col:28 Tcode 'int'
+| `-EnumConstantDecl 0x7fc119025da8 <col:35> col:35 referenced LAST_AND_UNUSED_TYPECODE 'int'
+|-EnumDecl 0x7fc119025df0 <line:12:1, line:45:1> line:12:6 bytecode_opcode
+| |-EnumConstantDecl 0x7fc119025eb0 <line:14:3> col:3 neverneverland 'int'
+| |-EnumConstantDecl 0x7fc119025ef8 <col:19> col:19 drop 'int'
+| |-EnumConstantDecl 0x7fc119025f40 <col:25> col:25 duplicate 'int'
+| |-EnumConstantDecl 0x7fc119025f88 <col:36> col:36 over 'int'
+| |-EnumConstantDecl 0x7fc119025fd0 <col:42> col:42 setstackSI 'int'
+| |-EnumConstantDecl 0x7fc119026018 <col:54> col:54 adjstackSI 'int'
+| |-EnumConstantDecl 0x7fc119026060 <col:66> col:66 constQI 'int'
+| |-EnumConstantDecl 0x7fc1190260a8 <line:15:5> col:5 constHI 'int'
+| |-EnumConstantDecl 0x7fc1190260f0 <col:14> col:14 constSI 'int'
+| |-EnumConstantDecl 0x7fc119026138 <col:23> col:23 constDI 'int'
+| |-EnumConstantDecl 0x7fc119026180 <col:32> col:32 constSF 'int'
+| |-EnumConstantDecl 0x7fc1190261c8 <col:41> col:41 constDF 'int'
+| |-EnumConstantDecl 0x7fc119026210 <col:50> col:50 constXF 'int'
+| |-EnumConstantDecl 0x7fc119026258 <col:59> col:59 constP 'int'
+| |-EnumConstantDecl 0x7fc1190262a0 <col:67> col:67 loadQI 'int'
+| |-EnumConstantDecl 0x7fc1190262e8 <line:16:5> col:5 loadHI 'int'
+| |-EnumConstantDecl 0x7fc119026330 <col:13> col:13 loadSI 'int'
+| |-EnumConstantDecl 0x7fc119026378 <col:21> col:21 loadDI 'int'
+| |-EnumConstantDecl 0x7fc1190263c0 <col:29> col:29 loadSF 'int'
+| |-EnumConstantDecl 0x7fc119026408 <col:37> col:37 loadDF 'int'
+| |-EnumConstantDecl 0x7fc119026450 <col:45> col:45 loadXF 'int'
+| |-EnumConstantDecl 0x7fc119026498 <col:53> col:53 loadP 'int'
+| |-EnumConstantDecl 0x7fc1190264e0 <col:60> col:60 storeQI 'int'
+| |-EnumConstantDecl 0x7fc119026528 <col:69> col:69 storeHI 'int'
+| |-EnumConstantDecl 0x7fc119026570 <line:17:5> col:5 storeSI 'int'
+| |-EnumConstantDecl 0x7fc1190265b8 <col:14> col:14 storeDI 'int'
+| |-EnumConstantDecl 0x7fc119026600 <col:23> col:23 storeSF 'int'
+| |-EnumConstantDecl 0x7fc119026648 <col:32> col:32 storeDF 'int'
+| |-EnumConstantDecl 0x7fc119026690 <col:41> col:41 storeXF 'int'
+| |-EnumConstantDecl 0x7fc1190266d8 <col:50> col:50 storeP 'int'
+| |-EnumConstantDecl 0x7fc119026720 <col:58> col:58 storeBLK 'int'
+| |-EnumConstantDecl 0x7fc119026768 <col:68> col:68 clearBLK 'int'
+| |-EnumConstantDecl 0x7fc1190267b0 <line:18:5> col:5 addconstPSI 'int'
+| |-EnumConstantDecl 0x7fc1190267f8 <col:18> col:18 newlocalSI 'int'
+| |-EnumConstantDecl 0x7fc119026840 <col:30> col:30 localP 'int'
+| |-EnumConstantDecl 0x7fc119026888 <col:38> col:38 argP 'int'
+| |-EnumConstantDecl 0x7fc1190268d0 <col:44> col:44 convertQIHI 'int'
+| |-EnumConstantDecl 0x7fc119026918 <col:57> col:57 convertHISI 'int'
+| |-EnumConstantDecl 0x7fc119026960 <line:19:5> col:5 convertSIDI 'int'
+| |-EnumConstantDecl 0x7fc1190269a8 <col:18> col:18 convertQISI 'int'
+| |-EnumConstantDecl 0x7fc11902b800 <col:31> col:31 convertQUHU 'int'
+| |-EnumConstantDecl 0x7fc11902b848 <col:44> col:44 convertHUSU 'int'
+| |-EnumConstantDecl 0x7fc11902b890 <col:57> col:57 convertSUDU 'int'
+| |-EnumConstantDecl 0x7fc11902b8d8 <line:20:5> col:5 convertQUSU 'int'
+| |-EnumConstantDecl 0x7fc11902b920 <col:18> col:18 convertSFDF 'int'
+| |-EnumConstantDecl 0x7fc11902b968 <col:31> col:31 convertDFXF 'int'
+| |-EnumConstantDecl 0x7fc11902b9b0 <col:44> col:44 convertHIQI 'int'
+| |-EnumConstantDecl 0x7fc11902b9f8 <col:57> col:57 convertSIHI 'int'
+| |-EnumConstantDecl 0x7fc11902ba40 <line:21:5> col:5 convertDISI 'int'
+| |-EnumConstantDecl 0x7fc11902ba88 <col:18> col:18 convertSIQI 'int'
+| |-EnumConstantDecl 0x7fc11902bad0 <col:31> col:31 convertSUQU 'int'
+| |-EnumConstantDecl 0x7fc11902bb18 <col:44> col:44 convertDFSF 'int'
+| |-EnumConstantDecl 0x7fc11902bb60 <col:57> col:57 convertXFDF 'int'
+| |-EnumConstantDecl 0x7fc11902bba8 <line:22:5> col:5 convertSISF 'int'
+| |-EnumConstantDecl 0x7fc11902bbf0 <col:18> col:18 convertSIDF 'int'
+| |-EnumConstantDecl 0x7fc11902bc38 <col:31> col:31 convertSIXF 'int'
+| |-EnumConstantDecl 0x7fc11902bc80 <col:44> col:44 convertSUSF 'int'
+| |-EnumConstantDecl 0x7fc11902bcc8 <col:57> col:57 convertSUDF 'int'
+| |-EnumConstantDecl 0x7fc11902bd10 <line:23:5> col:5 convertSUXF 'int'
+| |-EnumConstantDecl 0x7fc11902bd58 <col:18> col:18 convertDISF 'int'
+| |-EnumConstantDecl 0x7fc11902bda0 <col:31> col:31 convertDIDF 'int'
+| |-EnumConstantDecl 0x7fc11902bde8 <col:44> col:44 convertDIXF 'int'
+| |-EnumConstantDecl 0x7fc11902be30 <col:57> col:57 convertDUSF 'int'
+| |-EnumConstantDecl 0x7fc11902be78 <line:24:5> col:5 convertDUDF 'int'
+| |-EnumConstantDecl 0x7fc11902bec0 <col:18> col:18 convertDUXF 'int'
+| |-EnumConstantDecl 0x7fc11902bf08 <col:31> col:31 convertSFSI 'int'
+| |-EnumConstantDecl 0x7fc11902bf50 <col:44> col:44 convertDFSI 'int'
+| |-EnumConstantDecl 0x7fc11902bf98 <col:57> col:57 convertXFSI 'int'
+| |-EnumConstantDecl 0x7fc11902bfe0 <line:25:5> col:5 convertSFSU 'int'
+| |-EnumConstantDecl 0x7fc11902c028 <col:18> col:18 convertDFSU 'int'
+| |-EnumConstantDecl 0x7fc11902c070 <col:31> col:31 convertXFSU 'int'
+| |-EnumConstantDecl 0x7fc11902c0b8 <col:44> col:44 convertSFDI 'int'
+| |-EnumConstantDecl 0x7fc11902c100 <col:57> col:57 convertDFDI 'int'
+| |-EnumConstantDecl 0x7fc11902c148 <line:26:5> col:5 convertXFDI 'int'
+| |-EnumConstantDecl 0x7fc11902c190 <col:18> col:18 convertSFDU 'int'
+| |-EnumConstantDecl 0x7fc11902c1d8 <col:31> col:31 convertDFDU 'int'
+| |-EnumConstantDecl 0x7fc11902c220 <col:44> col:44 convertXFDU 'int'
+| |-EnumConstantDecl 0x7fc11902c268 <col:57> col:57 convertPSI 'int'
+| |-EnumConstantDecl 0x7fc11902c2b0 <line:27:5> col:5 convertSIP 'int'
+| |-EnumConstantDecl 0x7fc11902c2f8 <col:17> col:17 convertSIT 'int'
+| |-EnumConstantDecl 0x7fc11902c340 <col:29> col:29 convertDIT 'int'
+| |-EnumConstantDecl 0x7fc11902c388 <col:41> col:41 convertSFT 'int'
+| |-EnumConstantDecl 0x7fc11902c3d0 <col:53> col:53 convertDFT 'int'
+| |-EnumConstantDecl 0x7fc11902c418 <col:65> col:65 convertXFT 'int'
+| |-EnumConstantDecl 0x7fc11902c460 <line:28:5> col:5 convertPT 'int'
+| |-EnumConstantDecl 0x7fc11902c4a8 <col:16> col:16 zxloadBI 'int'
+| |-EnumConstantDecl 0x7fc11902c4f0 <col:26> col:26 sxloadBI 'int'
+| |-EnumConstantDecl 0x7fc11902c538 <col:36> col:36 sstoreBI 'int'
+| |-EnumConstantDecl 0x7fc11902c580 <col:46> col:46 addSI 'int'
+| |-EnumConstantDecl 0x7fc11902c5c8 <col:53> col:53 addDI 'int'
+| |-EnumConstantDecl 0x7fc11902c610 <col:60> col:60 addSF 'int'
+| |-EnumConstantDecl 0x7fc11902c658 <col:67> col:67 addDF 'int'
+| |-EnumConstantDecl 0x7fc11902c6a0 <line:29:5> col:5 addXF 'int'
+| |-EnumConstantDecl 0x7fc11902c6e8 <col:12> col:12 addPSI 'int'
+| |-EnumConstantDecl 0x7fc11902c730 <col:20> col:20 subSI 'int'
+| |-EnumConstantDecl 0x7fc11902c778 <col:27> col:27 subDI 'int'
+| |-EnumConstantDecl 0x7fc119026a00 <col:34> col:34 subSF 'int'
+| |-EnumConstantDecl 0x7fc119026a48 <col:41> col:41 subDF 'int'
+| |-EnumConstantDecl 0x7fc119026a90 <col:48> col:48 subXF 'int'
+| |-EnumConstantDecl 0x7fc119026ad8 <col:55> col:55 subPP 'int'
+| |-EnumConstantDecl 0x7fc119026b20 <col:62> col:62 mulSI 'int'
+| |-EnumConstantDecl 0x7fc119026b68 <col:69> col:69 mulDI 'int'
+| |-EnumConstantDecl 0x7fc119026bb0 <line:30:5> col:5 mulSU 'int'
+| |-EnumConstantDecl 0x7fc119026bf8 <col:12> col:12 mulDU 'int'
+| |-EnumConstantDecl 0x7fc119026c40 <col:19> col:19 mulSF 'int'
+| |-EnumConstantDecl 0x7fc119026c88 <col:26> col:26 mulDF 'int'
+| |-EnumConstantDecl 0x7fc119026cd0 <col:33> col:33 mulXF 'int'
+| |-EnumConstantDecl 0x7fc119026d18 <col:40> col:40 divSI 'int'
+| |-EnumConstantDecl 0x7fc119026d60 <col:47> col:47 divDI 'int'
+| |-EnumConstantDecl 0x7fc119026da8 <col:54> col:54 divSU 'int'
+| |-EnumConstantDecl 0x7fc119026df0 <col:61> col:61 divDU 'int'
+| |-EnumConstantDecl 0x7fc119026e38 <col:68> col:68 divSF 'int'
+| |-EnumConstantDecl 0x7fc119026e80 <line:31:5> col:5 divDF 'int'
+| |-EnumConstantDecl 0x7fc119026ec8 <col:12> col:12 divXF 'int'
+| |-EnumConstantDecl 0x7fc119026f10 <col:19> col:19 modSI 'int'
+| |-EnumConstantDecl 0x7fc119026f58 <col:26> col:26 modDI 'int'
+| |-EnumConstantDecl 0x7fc119026fa0 <col:33> col:33 modSU 'int'
+| |-EnumConstantDecl 0x7fc119026fe8 <col:40> col:40 modDU 'int'
+| |-EnumConstantDecl 0x7fc119027030 <col:47> col:47 andSI 'int'
+| |-EnumConstantDecl 0x7fc119027078 <col:54> col:54 andDI 'int'
+| |-EnumConstantDecl 0x7fc1190270c0 <col:61> col:61 iorSI 'int'
+| |-EnumConstantDecl 0x7fc119027108 <col:68> col:68 iorDI 'int'
+| |-EnumConstantDecl 0x7fc119027150 <line:32:5> col:5 xorSI 'int'
+| |-EnumConstantDecl 0x7fc119027198 <col:12> col:12 xorDI 'int'
+| |-EnumConstantDecl 0x7fc1190271e0 <col:19> col:19 lshiftSI 'int'
+| |-EnumConstantDecl 0x7fc119027228 <col:29> col:29 lshiftSU 'int'
+| |-EnumConstantDecl 0x7fc119027270 <col:39> col:39 lshiftDI 'int'
+| |-EnumConstantDecl 0x7fc1190272b8 <col:49> col:49 lshiftDU 'int'
+| |-EnumConstantDecl 0x7fc119027300 <col:59> col:59 rshiftSI 'int'
+| |-EnumConstantDecl 0x7fc119027348 <col:69> col:69 rshiftSU 'int'
+| |-EnumConstantDecl 0x7fc119027390 <line:33:5> col:5 rshiftDI 'int'
+| |-EnumConstantDecl 0x7fc1190273d8 <col:15> col:15 rshiftDU 'int'
+| |-EnumConstantDecl 0x7fc119027420 <col:25> col:25 ltSI 'int'
+| |-EnumConstantDecl 0x7fc119027468 <col:31> col:31 ltSU 'int'
+| |-EnumConstantDecl 0x7fc1190274b0 <col:37> col:37 ltDI 'int'
+| |-EnumConstantDecl 0x7fc1190274f8 <col:43> col:43 ltDU 'int'
+| |-EnumConstantDecl 0x7fc119027540 <col:49> col:49 ltSF 'int'
+| |-EnumConstantDecl 0x7fc119027588 <col:55> col:55 ltDF 'int'
+| |-EnumConstantDecl 0x7fc1190275d0 <col:61> col:61 ltXF 'int'
+| |-EnumConstantDecl 0x7fc119027618 <col:67> col:67 ltP 'int'
+| |-EnumConstantDecl 0x7fc119027660 <col:72> col:72 leSI 'int'
+| |-EnumConstantDecl 0x7fc1190276a8 <line:34:5> col:5 leSU 'int'
+| |-EnumConstantDecl 0x7fc1190276f0 <col:11> col:11 leDI 'int'
+| |-EnumConstantDecl 0x7fc119027738 <col:17> col:17 leDU 'int'
+| |-EnumConstantDecl 0x7fc119027780 <col:23> col:23 leSF 'int'
+| |-EnumConstantDecl 0x7fc1190277c8 <col:29> col:29 leDF 'int'
+| |-EnumConstantDecl 0x7fc119027810 <col:35> col:35 leXF 'int'
+| |-EnumConstantDecl 0x7fc119027858 <col:41> col:41 leP 'int'
+| |-EnumConstantDecl 0x7fc1190278a0 <col:46> col:46 geSI 'int'
+| |-EnumConstantDecl 0x7fc1190278e8 <col:52> col:52 geSU 'int'
+| |-EnumConstantDecl 0x7fc119027930 <col:58> col:58 geDI 'int'
+| |-EnumConstantDecl 0x7fc119027978 <col:64> col:64 geDU 'int'
+| |-EnumConstantDecl 0x7fc119028a00 <col:70> col:70 geSF 'int'
+| |-EnumConstantDecl 0x7fc119028a48 <line:35:5> col:5 geDF 'int'
+| |-EnumConstantDecl 0x7fc119028a90 <col:11> col:11 geXF 'int'
+| |-EnumConstantDecl 0x7fc119028ad8 <col:17> col:17 geP 'int'
+| |-EnumConstantDecl 0x7fc119028b20 <col:22> col:22 gtSI 'int'
+| |-EnumConstantDecl 0x7fc119028b68 <col:28> col:28 gtSU 'int'
+| |-EnumConstantDecl 0x7fc119028bb0 <col:34> col:34 gtDI 'int'
+| |-EnumConstantDecl 0x7fc119028bf8 <col:40> col:40 gtDU 'int'
+| |-EnumConstantDecl 0x7fc119028c40 <col:46> col:46 gtSF 'int'
+| |-EnumConstantDecl 0x7fc119028c88 <col:52> col:52 gtDF 'int'
+| |-EnumConstantDecl 0x7fc119028cd0 <col:58> col:58 gtXF 'int'
+| |-EnumConstantDecl 0x7fc119028d18 <col:64> col:64 gtP 'int'
+| |-EnumConstantDecl 0x7fc119028d60 <col:69> col:69 eqSI 'int'
+| |-EnumConstantDecl 0x7fc119028da8 <line:36:5> col:5 eqDI 'int'
+| |-EnumConstantDecl 0x7fc119028df0 <col:11> col:11 eqSF 'int'
+| |-EnumConstantDecl 0x7fc119028e38 <col:17> col:17 eqDF 'int'
+| |-EnumConstantDecl 0x7fc119028e80 <col:23> col:23 eqXF 'int'
+| |-EnumConstantDecl 0x7fc119028ec8 <col:29> col:29 eqP 'int'
+| |-EnumConstantDecl 0x7fc119028f10 <col:34> col:34 neSI 'int'
+| |-EnumConstantDecl 0x7fc119028f58 <col:40> col:40 neDI 'int'
+| |-EnumConstantDecl 0x7fc119028fa0 <col:46> col:46 neSF 'int'
+| |-EnumConstantDecl 0x7fc119028fe8 <col:52> col:52 neDF 'int'
+| |-EnumConstantDecl 0x7fc119029030 <col:58> col:58 neXF 'int'
+| |-EnumConstantDecl 0x7fc119029078 <col:64> col:64 neP 'int'
+| |-EnumConstantDecl 0x7fc1190290c0 <col:69> col:69 negSI 'int'
+| |-EnumConstantDecl 0x7fc119029108 <line:37:5> col:5 negDI 'int'
+| |-EnumConstantDecl 0x7fc119029150 <col:12> col:12 negSF 'int'
+| |-EnumConstantDecl 0x7fc119029198 <col:19> col:19 negDF 'int'
+| |-EnumConstantDecl 0x7fc1190291e0 <col:26> col:26 negXF 'int'
+| |-EnumConstantDecl 0x7fc119029228 <col:33> col:33 notSI 'int'
+| |-EnumConstantDecl 0x7fc119029270 <col:40> col:40 notDI 'int'
+| |-EnumConstantDecl 0x7fc1190292b8 <col:47> col:47 notT 'int'
+| |-EnumConstantDecl 0x7fc119029300 <col:53> col:53 predecQI 'int'
+| |-EnumConstantDecl 0x7fc119029348 <col:63> col:63 predecHI 'int'
+| |-EnumConstantDecl 0x7fc119029390 <line:38:5> col:5 predecSI 'int'
+| |-EnumConstantDecl 0x7fc1190293d8 <col:15> col:15 predecDI 'int'
+| |-EnumConstantDecl 0x7fc119029420 <col:25> col:25 predecP 'int'
+| |-EnumConstantDecl 0x7fc119029468 <col:34> col:34 predecSF 'int'
+| |-EnumConstantDecl 0x7fc1190294b0 <col:44> col:44 predecDF 'int'
+| |-EnumConstantDecl 0x7fc1190294f8 <col:54> col:54 predecXF 'int'
+| |-EnumConstantDecl 0x7fc119029540 <col:64> col:64 predecBI 'int'
+| |-EnumConstantDecl 0x7fc119029588 <line:39:5> col:5 preincQI 'int'
+| |-EnumConstantDecl 0x7fc1190295d0 <col:15> col:15 preincHI 'int'
+| |-EnumConstantDecl 0x7fc119029618 <col:25> col:25 preincSI 'int'
+| |-EnumConstantDecl 0x7fc119029660 <col:35> col:35 preincDI 'int'
+| |-EnumConstantDecl 0x7fc1190296a8 <col:45> col:45 preincP 'int'
+| |-EnumConstantDecl 0x7fc1190296f0 <col:54> col:54 preincSF 'int'
+| |-EnumConstantDecl 0x7fc119029738 <col:64> col:64 preincDF 'int'
+| |-EnumConstantDecl 0x7fc119029780 <line:40:5> col:5 preincXF 'int'
+| |-EnumConstantDecl 0x7fc1190297c8 <col:15> col:15 preincBI 'int'
+| |-EnumConstantDecl 0x7fc119029810 <col:25> col:25 postdecQI 'int'
+| |-EnumConstantDecl 0x7fc119029858 <col:36> col:36 postdecHI 'int'
+| |-EnumConstantDecl 0x7fc1190298a0 <col:47> col:47 postdecSI 'int'
+| |-EnumConstantDecl 0x7fc1190298e8 <col:58> col:58 postdecDI 'int'
+| |-EnumConstantDecl 0x7fc119029930 <col:69> col:69 postdecP 'int'
+| |-EnumConstantDecl 0x7fc119029978 <line:41:5> col:5 postdecSF 'int'
+| |-EnumConstantDecl 0x7fc11902d800 <col:16> col:16 postdecDF 'int'
+| |-EnumConstantDecl 0x7fc11902d848 <col:27> col:27 postdecXF 'int'
+| |-EnumConstantDecl 0x7fc11902d890 <col:38> col:38 postdecBI 'int'
+| |-EnumConstantDecl 0x7fc11902d8d8 <col:49> col:49 postincQI 'int'
+| |-EnumConstantDecl 0x7fc11902d920 <col:60> col:60 postincHI 'int'
+| |-EnumConstantDecl 0x7fc11902d968 <line:42:5> col:5 postincSI 'int'
+| |-EnumConstantDecl 0x7fc11902d9b0 <col:16> col:16 postincDI 'int'
+| |-EnumConstantDecl 0x7fc11902d9f8 <col:27> col:27 postincP 'int'
+| |-EnumConstantDecl 0x7fc11902da40 <col:37> col:37 postincSF 'int'
+| |-EnumConstantDecl 0x7fc11902da88 <col:48> col:48 postincDF 'int'
+| |-EnumConstantDecl 0x7fc11902dad0 <col:59> col:59 postincXF 'int'
+| |-EnumConstantDecl 0x7fc11902db18 <line:43:5> col:5 postincBI 'int'
+| |-EnumConstantDecl 0x7fc11902db60 <col:16> col:16 xjumpif 'int'
+| |-EnumConstantDecl 0x7fc11902dba8 <col:25> col:25 xjumpifnot 'int'
+| |-EnumConstantDecl 0x7fc11902dbf0 <col:37> col:37 jump 'int'
+| |-EnumConstantDecl 0x7fc11902dc38 <col:43> col:43 jumpP 'int'
+| |-EnumConstantDecl 0x7fc11902dc80 <col:50> col:50 caseSI 'int'
+| |-EnumConstantDecl 0x7fc11902dcc8 <col:58> col:58 caseSU 'int'
+| |-EnumConstantDecl 0x7fc11902dd10 <col:66> col:66 caseDI 'int'
+| |-EnumConstantDecl 0x7fc11902dd58 <line:44:5> col:5 caseDU 'int'
+| |-EnumConstantDecl 0x7fc11902dda0 <col:13> col:13 call 'int'
+| |-EnumConstantDecl 0x7fc11902dde8 <col:19> col:19 returnP 'int'
+| |-EnumConstantDecl 0x7fc11902de30 <col:28> col:28 ret 'int'
+| |-EnumConstantDecl 0x7fc11902de78 <col:33> col:33 linenote 'int'
+| `-EnumConstantDecl 0x7fc11902dec0 <col:43> col:43 LAST_AND_UNUSED_OPCODE 'int'
+|-RecordDecl 0x7fc11902df08 <line:46:1, line:50:1> line:46:8 struct binary_operator definition
+| |-FieldDecl 0x7fc11902e000 <line:48:3, col:24> col:24 referenced opcode 'enum bytecode_opcode':'enum bytecode_opcode'
+| `-FieldDecl 0x7fc11902e0a0 <line:49:3, col:17> col:17 referenced arg0 'enum typecode':'enum typecode'
+|-RecordDecl 0x7fc11902e0e8 <line:51:8, line:55:1> line:51:15 struct conversion_recipe definition
+| |-FieldDecl 0x7fc11902e1d0 <line:53:3, col:18> col:18 referenced opcodes 'unsigned char *'
+| `-FieldDecl 0x7fc11902e230 <line:54:3, col:7> col:7 cost 'int'
+|-VarDecl 0x7fc11902e548 <line:51:1, line:57:37> line:56:1 used conversion_recipe 'struct conversion_recipe [13][13]' static
+|-FunctionDecl 0x7fc119035a00 <line:58:1, line:65:1> line:59:1 used deduce_conversion 'struct conversion_recipe (unsigned int, unsigned int)' static
+| |-ParmVarDecl 0x7fc11902e620 <line:60:6, col:20> col:20 used from 'enum typecode':'enum typecode'
+| |-ParmVarDecl 0x7fc11902e6a0 <col:6, col:26> col:26 used to 'enum typecode':'enum typecode'
+| `-CompoundStmt 0x7fc1190361e0 <line:61:1, line:65:1>
+|   `-ParenExpr 0x7fc1190361c0 <line:62:3, line:64:37> 'int'
+|     `-ConditionalOperator 0x7fc119036190 <line:62:4, line:64:36> 'int'
+|       |-ImplicitCastExpr 0x7fc119036178 <line:62:4, line:63:4> 'unsigned char *' <LValueToRValue>
+|       | `-MemberExpr 0x7fc119035d08 <line:62:4, line:63:4> 'unsigned char *' lvalue .opcodes 0x7fc11902e1d0
+|       |   `-ArraySubscriptExpr 0x7fc119035ce0 <line:62:4, col:42> 'struct conversion_recipe':'struct conversion_recipe' lvalue
+|       |     |-ImplicitCastExpr 0x7fc119035cc8 <col:4, col:32> 'struct conversion_recipe *' <ArrayToPointerDecay>
+|       |     | `-ArraySubscriptExpr 0x7fc119035bc0 <col:4, col:32> 'struct conversion_recipe [13]' lvalue
+|       |     |   |-ImplicitCastExpr 0x7fc119035ba8 <col:4> 'struct conversion_recipe (*)[13]' <ArrayToPointerDecay>
+|       |     |   | `-DeclRefExpr 0x7fc119035aa8 <col:4> 'struct conversion_recipe [13][13]' lvalue Var 0x7fc11902e548 'conversion_recipe' 'struct conversion_recipe [13][13]'
+|       |     |   `-CStyleCastExpr 0x7fc119035b28 <col:22, col:28> 'int' <IntegralCast>
+|       |     |     `-ImplicitCastExpr 0x7fc119035b10 <col:28> 'enum typecode':'enum typecode' <LValueToRValue>
+|       |     |       `-DeclRefExpr 0x7fc119035ad0 <col:28> 'enum typecode':'enum typecode' lvalue ParmVar 0x7fc11902e620 'from' 'enum typecode':'enum typecode'
+|       |     `-CStyleCastExpr 0x7fc119035c40 <col:34, col:40> 'int' <IntegralCast>
+|       |       `-ImplicitCastExpr 0x7fc119035c28 <col:40> 'enum typecode':'enum typecode' <LValueToRValue>
+|       |         `-DeclRefExpr 0x7fc119035be8 <col:40> 'enum typecode':'enum typecode' lvalue ParmVar 0x7fc11902e6a0 'to' 'enum typecode':'enum typecode'
+|       |-IntegerLiteral 0x7fc119035d40 <line:63:14> 'int' 0
+|       `-ParenExpr 0x7fc119036158 <col:18, line:64:36> 'int'
+|         `-BinaryOperator 0x7fc119036130 <line:63:19, line:64:35> 'int' ','
+|           |-BinaryOperator 0x7fc1190360e8 <line:63:19, line:64:32> 'struct conversion_recipe':'struct conversion_recipe' '='
+|           | |-ArraySubscriptExpr 0x7fc119035ee0 <line:63:19, col:57> 'struct conversion_recipe':'struct conversion_recipe' lvalue
+|           | | |-ImplicitCastExpr 0x7fc119035ec8 <col:19, col:47> 'struct conversion_recipe *' <ArrayToPointerDecay>
+|           | | | `-ArraySubscriptExpr 0x7fc119035e20 <col:19, col:47> 'struct conversion_recipe [13]' lvalue
+|           | | |   |-ImplicitCastExpr 0x7fc119035e08 <col:19> 'struct conversion_recipe (*)[13]' <ArrayToPointerDecay>
+|           | | |   | `-DeclRefExpr 0x7fc119035d60 <col:19> 'struct conversion_recipe [13][13]' lvalue Var 0x7fc11902e548 'conversion_recipe' 'struct conversion_recipe [13][13]'
+|           | | |   `-CStyleCastExpr 0x7fc119035de0 <col:37, col:43> 'int' <IntegralCast>
+|           | | |     `-ImplicitCastExpr 0x7fc119035dc8 <col:43> 'enum typecode':'enum typecode' <LValueToRValue>
+|           | | |       `-DeclRefExpr 0x7fc119035d88 <col:43> 'enum typecode':'enum typecode' lvalue ParmVar 0x7fc11902e620 'from' 'enum typecode':'enum typecode'
+|           | | `-CStyleCastExpr 0x7fc119035ea0 <col:49, col:55> 'int' <IntegralCast>
+|           | |   `-ImplicitCastExpr 0x7fc119035e88 <col:55> 'enum typecode':'enum typecode' <LValueToRValue>
+|           | |     `-DeclRefExpr 0x7fc119035e48 <col:55> 'enum typecode':'enum typecode' lvalue ParmVar 0x7fc11902e6a0 'to' 'enum typecode':'enum typecode'
+|           | `-CallExpr 0x7fc119036050 <line:64:5, col:32> 'struct conversion_recipe':'struct conversion_recipe'
+|           |   |-ImplicitCastExpr 0x7fc119036038 <col:5> 'struct conversion_recipe (*)()' <FunctionToPointerDecay>
+|           |   | `-DeclRefExpr 0x7fc119035f68 <col:5> 'struct conversion_recipe ()' Function 0x7fc119035a00 'deduce_conversion' 'struct conversion_recipe (unsigned int, unsigned int)'
+|           |   |-ImplicitCastExpr 0x7fc1190360a0 <col:24> 'unsigned int' <IntegralCast>
+|           |   | `-ImplicitCastExpr 0x7fc119036088 <col:24> 'enum typecode':'enum typecode' <LValueToRValue>
+|           |   |   `-DeclRefExpr 0x7fc119035f90 <col:24> 'enum typecode':'enum typecode' lvalue ParmVar 0x7fc11902e620 'from' 'enum typecode':'enum typecode'
+|           |   `-ImplicitCastExpr 0x7fc1190360d0 <col:30> 'unsigned int' <IntegralCast>
+|           |     `-ImplicitCastExpr 0x7fc1190360b8 <col:30> 'enum typecode':'enum typecode' <LValueToRValue>
+|           |       `-DeclRefExpr 0x7fc119035fb8 <col:30> 'enum typecode':'enum typecode' lvalue ParmVar 0x7fc11902e6a0 'to' 'enum typecode':'enum typecode'
+|           `-IntegerLiteral 0x7fc119036110 <col:35> 'int' 0
+`-FunctionDecl 0x7fc119036600 <line:67:1, line:80:1> line:68:1 bc_expand_binary_operation 'void (struct binary_operator *, int, int, int)'
+  |-ParmVarDecl 0x7fc1190364c0 <line:70:6, col:35> col:29 used optab 'struct binary_operator *':'struct binary_operator *'
+  |-ParmVarDecl 0x7fc119036218 <line:69:6, col:10> col:10 resulttype 'int'
+  |-ParmVarDecl 0x7fc119036290 <col:6, col:22> col:22 arg0 'int'
+  |-ParmVarDecl 0x7fc119036308 <col:6, col:28> col:28 arg1 'int'
+  `-CompoundStmt 0x7fc1190374a8 <line:71:1, line:80:1>
+    |-DeclStmt 0x7fc1190368c0 <line:72:3, col:31>
+    | |-VarDecl 0x7fc1190366d0 <col:3, col:7> col:7 used i 'int'
+    | |-VarDecl 0x7fc119036748 <col:3, col:10> col:10 besti 'int'
+    | |-VarDecl 0x7fc1190367c0 <col:3, col:17> col:17 cost 'int'
+    | `-VarDecl 0x7fc119036838 <col:3, col:23> col:23 bestcost 'int'
+    |-DeclStmt 0x7fc119036a00 <line:73:3, col:37>
+    | |-VarDecl 0x7fc1190368f8 <col:3, col:17> col:17 resultcode 'enum typecode':'enum typecode'
+    | `-VarDecl 0x7fc119036978 <col:3, col:29> col:29 used arg0code 'enum typecode':'enum typecode'
+    `-ForStmt 0x7fc119037470 <line:74:3, line:79:5>
+      |-BinaryOperator 0x7fc119036a60 <line:74:8, col:12> 'int' '='
+      | |-DeclRefExpr 0x7fc119036a18 <col:8> 'int' lvalue Var 0x7fc1190366d0 'i' 'int'
+      | `-IntegerLiteral 0x7fc119036a40 <col:12> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fc119036bf0 <col:15, col:35> 'int' '!='
+      | |-ImplicitCastExpr 0x7fc119036bc0 <col:15, col:24> 'unsigned int' <IntegralCast>
+      | | `-ImplicitCastExpr 0x7fc119036ba8 <col:15, col:24> 'enum bytecode_opcode':'enum bytecode_opcode' <LValueToRValue>
+      | |   `-MemberExpr 0x7fc119036b30 <col:15, col:24> 'enum bytecode_opcode':'enum bytecode_opcode' lvalue .opcode 0x7fc11902e000
+      | |     `-ArraySubscriptExpr 0x7fc119036b08 <col:15, col:22> 'struct binary_operator':'struct binary_operator' lvalue
+      | |       |-ImplicitCastExpr 0x7fc119036ad8 <col:15> 'struct binary_operator *':'struct binary_operator *' <LValueToRValue>
+      | |       | `-DeclRefExpr 0x7fc119036a88 <col:15> 'struct binary_operator *':'struct binary_operator *' lvalue ParmVar 0x7fc1190364c0 'optab' 'struct binary_operator *':'struct binary_operator *'
+      | |       `-ImplicitCastExpr 0x7fc119036af0 <col:21> 'int' <LValueToRValue>
+      | |         `-DeclRefExpr 0x7fc119036ab0 <col:21> 'int' lvalue Var 0x7fc1190366d0 'i' 'int'
+      | `-ImplicitCastExpr 0x7fc119036bd8 <col:34, col:35> 'unsigned int' <IntegralCast>
+      |   `-UnaryOperator 0x7fc119036b88 <col:34, col:35> 'int' prefix '-'
+      |     `-IntegerLiteral 0x7fc119036b68 <col:35> 'int' 1
+      |-UnaryOperator 0x7fc119036c40 <col:38, col:40> 'int' prefix '++'
+      | `-DeclRefExpr 0x7fc119036c18 <col:40> 'int' lvalue Var 0x7fc1190366d0 'i' 'int'
+      `-CompoundStmt 0x7fc119037450 <line:75:5, line:79:5>
+        `-ParenExpr 0x7fc119037430 <line:76:7, line:78:56> 'int'
+          `-ConditionalOperator 0x7fc119037400 <line:76:8, line:78:55> 'int'
+            |-ImplicitCastExpr 0x7fc1190373e8 <line:76:8, line:77:8> 'unsigned char *' <LValueToRValue>
+            | `-MemberExpr 0x7fc119036ec0 <line:76:8, line:77:8> 'unsigned char *' lvalue .opcodes 0x7fc11902e1d0
+            |   `-ArraySubscriptExpr 0x7fc119036e98 <line:76:8, col:61> 'struct conversion_recipe':'struct conversion_recipe' lvalue
+            |     |-ImplicitCastExpr 0x7fc119036e80 <col:8, col:40> 'struct conversion_recipe *' <ArrayToPointerDecay>
+            |     | `-ArraySubscriptExpr 0x7fc119036d20 <col:8, col:40> 'struct conversion_recipe [13]' lvalue
+            |     |   |-ImplicitCastExpr 0x7fc119036d08 <col:8> 'struct conversion_recipe (*)[13]' <ArrayToPointerDecay>
+            |     |   | `-DeclRefExpr 0x7fc119036c60 <col:8> 'struct conversion_recipe [13][13]' lvalue Var 0x7fc11902e548 'conversion_recipe' 'struct conversion_recipe [13][13]'
+            |     |   `-CStyleCastExpr 0x7fc119036ce0 <col:26, col:32> 'int' <IntegralCast>
+            |     |     `-ImplicitCastExpr 0x7fc119036cc8 <col:32> 'enum typecode':'enum typecode' <LValueToRValue>
+            |     |       `-DeclRefExpr 0x7fc119036c88 <col:32> 'enum typecode':'enum typecode' lvalue Var 0x7fc119036978 'arg0code' 'enum typecode':'enum typecode'
+            |     `-CStyleCastExpr 0x7fc119036e58 <col:42, col:57> 'int' <IntegralCast>
+            |       `-ImplicitCastExpr 0x7fc119036e40 <col:48, col:57> 'enum typecode':'enum typecode' <LValueToRValue>
+            |         `-MemberExpr 0x7fc119036df0 <col:48, col:57> 'enum typecode':'enum typecode' lvalue .arg0 0x7fc11902e0a0
+            |           `-ArraySubscriptExpr 0x7fc119036dc8 <col:48, col:55> 'struct binary_operator':'struct binary_operator' lvalue
+            |             |-ImplicitCastExpr 0x7fc119036d98 <col:48> 'struct binary_operator *':'struct binary_operator *' <LValueToRValue>
+            |             | `-DeclRefExpr 0x7fc119036d48 <col:48> 'struct binary_operator *':'struct binary_operator *' lvalue ParmVar 0x7fc1190364c0 'optab' 'struct binary_operator *':'struct binary_operator *'
+            |             `-ImplicitCastExpr 0x7fc119036db0 <col:54> 'int' <LValueToRValue>
+            |               `-DeclRefExpr 0x7fc119036d70 <col:54> 'int' lvalue Var 0x7fc1190366d0 'i' 'int'
+            |-IntegerLiteral 0x7fc119036ef8 <line:77:18> 'int' 0
+            `-ParenExpr 0x7fc1190373c8 <col:22, line:78:55> 'int'
+              `-BinaryOperator 0x7fc1190373a0 <line:77:23, line:78:54> 'int' ','
+                |-BinaryOperator 0x7fc119037358 <line:77:23, line:78:51> 'struct conversion_recipe':'struct conversion_recipe' '='
+                | |-ArraySubscriptExpr 0x7fc119037150 <line:77:23, col:76> 'struct conversion_recipe':'struct conversion_recipe' lvalue
+                | | |-ImplicitCastExpr 0x7fc119037138 <col:23, col:55> 'struct conversion_recipe *' <ArrayToPointerDecay>
+                | | | `-ArraySubscriptExpr 0x7fc119036fd8 <col:23, col:55> 'struct conversion_recipe [13]' lvalue
+                | | |   |-ImplicitCastExpr 0x7fc119036fc0 <col:23> 'struct conversion_recipe (*)[13]' <ArrayToPointerDecay>
+                | | |   | `-DeclRefExpr 0x7fc119036f18 <col:23> 'struct conversion_recipe [13][13]' lvalue Var 0x7fc11902e548 'conversion_recipe' 'struct conversion_recipe [13][13]'
+                | | |   `-CStyleCastExpr 0x7fc119036f98 <col:41, col:47> 'int' <IntegralCast>
+                | | |     `-ImplicitCastExpr 0x7fc119036f80 <col:47> 'enum typecode':'enum typecode' <LValueToRValue>
+                | | |       `-DeclRefExpr 0x7fc119036f40 <col:47> 'enum typecode':'enum typecode' lvalue Var 0x7fc119036978 'arg0code' 'enum typecode':'enum typecode'
+                | | `-CStyleCastExpr 0x7fc119037110 <col:57, col:72> 'int' <IntegralCast>
+                | |   `-ImplicitCastExpr 0x7fc1190370f8 <col:63, col:72> 'enum typecode':'enum typecode' <LValueToRValue>
+                | |     `-MemberExpr 0x7fc1190370a8 <col:63, col:72> 'enum typecode':'enum typecode' lvalue .arg0 0x7fc11902e0a0
+                | |       `-ArraySubscriptExpr 0x7fc119037080 <col:63, col:70> 'struct binary_operator':'struct binary_operator' lvalue
+                | |         |-ImplicitCastExpr 0x7fc119037050 <col:63> 'struct binary_operator *':'struct binary_operator *' <LValueToRValue>
+                | |         | `-DeclRefExpr 0x7fc119037000 <col:63> 'struct binary_operator *':'struct binary_operator *' lvalue ParmVar 0x7fc1190364c0 'optab' 'struct binary_operator *':'struct binary_operator *'
+                | |         `-ImplicitCastExpr 0x7fc119037068 <col:69> 'int' <LValueToRValue>
+                | |           `-DeclRefExpr 0x7fc119037028 <col:69> 'int' lvalue Var 0x7fc1190366d0 'i' 'int'
+                | `-CallExpr 0x7fc1190372c0 <line:78:9, col:51> 'struct conversion_recipe':'struct conversion_recipe'
+                |   |-ImplicitCastExpr 0x7fc1190372a8 <col:9> 'struct conversion_recipe (*)()' <FunctionToPointerDecay>
+                |   | `-DeclRefExpr 0x7fc119037178 <col:9> 'struct conversion_recipe ()' Function 0x7fc119035a00 'deduce_conversion' 'struct conversion_recipe (unsigned int, unsigned int)'
+                |   |-ImplicitCastExpr 0x7fc119037310 <col:28> 'unsigned int' <IntegralCast>
+                |   | `-ImplicitCastExpr 0x7fc1190372f8 <col:28> 'enum typecode':'enum typecode' <LValueToRValue>
+                |   |   `-DeclRefExpr 0x7fc1190371a0 <col:28> 'enum typecode':'enum typecode' lvalue Var 0x7fc119036978 'arg0code' 'enum typecode':'enum typecode'
+                |   `-ImplicitCastExpr 0x7fc119037340 <col:38, col:47> 'unsigned int' <IntegralCast>
+                |     `-ImplicitCastExpr 0x7fc119037328 <col:38, col:47> 'enum typecode':'enum typecode' <LValueToRValue>
+                |       `-MemberExpr 0x7fc119037270 <col:38, col:47> 'enum typecode':'enum typecode' lvalue .arg0 0x7fc11902e0a0
+                |         `-ArraySubscriptExpr 0x7fc119037248 <col:38, col:45> 'struct binary_operator':'struct binary_operator' lvalue
+                |           |-ImplicitCastExpr 0x7fc119037218 <col:38> 'struct binary_operator *':'struct binary_operator *' <LValueToRValue>
+                |           | `-DeclRefExpr 0x7fc1190371c8 <col:38> 'struct binary_operator *':'struct binary_operator *' lvalue ParmVar 0x7fc1190364c0 'optab' 'struct binary_operator *':'struct binary_operator *'
+                |           `-ImplicitCastExpr 0x7fc119037230 <col:44> 'int' <LValueToRValue>
+                |             `-DeclRefExpr 0x7fc1190371f0 <col:44> 'int' lvalue Var 0x7fc1190366d0 'i' 'int'
+                `-IntegerLiteral 0x7fc119037380 <col:54> 'int' 0

@@ -1,0 +1,48 @@
+FileAST: 
+  Decl: a, [], [], []
+    PtrDecl: []
+      TypeDecl: a, []
+        Struct: A
+          Decl: inode, [], [], []
+            TypeDecl: inode, []
+              IdentifierType: ['int']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['int']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: fn1, [], [], []
+      FuncDecl: 
+        TypeDecl: fn1, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      While: 
+        ID: b
+        Compound: 
+          If: 
+            StructRef: ->
+              ID: a
+              ID: inode
+            UnaryOp: p++
+              ID: d
+          Assignment: =
+            ID: a
+            Constant: int, 0
+      Assignment: =
+        ID: c
+        BinaryOp: -
+          ID: d
+          Constant: int, 1
+      For: 
+        BinaryOp: >=
+          ID: c
+          Constant: int, 0
+        UnaryOp: p--
+          ID: c
+        EmptyStatement: 

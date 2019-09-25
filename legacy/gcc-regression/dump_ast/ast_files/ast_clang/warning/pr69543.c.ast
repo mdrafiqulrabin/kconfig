@@ -1,0 +1,36 @@
+c_files/pr69543.c:15:3: warning: unknown warning group '-Wmaybe-uninitialized', ignored [-Wunknown-warning-option]
+  YY_IGNORE_MAYBE_UNINITIALIZED_BEGIN
+  ^
+c_files/pr69543.c:8:5: note: expanded from macro 'YY_IGNORE_MAYBE_UNINITIALIZED_BEGIN'
+    _Pragma ("GCC diagnostic ignored \"-Wmaybe-uninitialized\"")
+    ^
+<scratch space>:6:25: note: expanded from here
+ GCC diagnostic ignored "-Wmaybe-uninitialized"
+                        ^
+1 warning generated.
+TranslationUnitDecl 0x7fae778264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fae77826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fae77826740 '__int128'
+|-TypedefDecl 0x7fae77826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fae77826760 'unsigned __int128'
+|-TypedefDecl 0x7fae77826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fae77826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fae77826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fae77826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fae77826dc0 'char *'
+|   `-BuiltinType 0x7fae77826560 'char'
+|-TypedefDecl 0x7fae778270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fae77827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fae77826ee0 'struct __va_list_tag'
+|     `-Record 0x7fae77826e58 '__va_list_tag'
+`-FunctionDecl 0x7fae78812a00 <c_files/pr69543.c:12:1, line:18:1> line:12:6 test 'void (char)'
+  |-ParmVarDecl 0x7fae77827130 <col:12, col:17> col:17 used yylval 'char'
+  `-CompoundStmt 0x7fae78812c40 <line:13:1, line:18:1>
+    |-DeclStmt 0x7fae78812b58 <line:14:3, col:14>
+    | `-VarDecl 0x7fae78812af8 <col:3, col:9> col:9 used yyvsp 'char *'
+    `-BinaryOperator 0x7fae78812c18 <line:16:3, col:14> 'char' '='
+      |-UnaryOperator 0x7fae78812bb8 <col:3, col:6> 'char' lvalue prefix '*'
+      | `-UnaryOperator 0x7fae78812b98 <col:4, col:6> 'char *' prefix '++'
+      |   `-DeclRefExpr 0x7fae78812b70 <col:6> 'char *' lvalue Var 0x7fae78812af8 'yyvsp' 'char *'
+      `-ImplicitCastExpr 0x7fae78812c00 <col:14> 'char' <LValueToRValue>
+        `-DeclRefExpr 0x7fae78812bd8 <col:14> 'char' lvalue ParmVar 0x7fae77827130 'yylval' 'char'

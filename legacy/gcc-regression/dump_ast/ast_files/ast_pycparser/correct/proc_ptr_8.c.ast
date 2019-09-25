@@ -1,0 +1,33 @@
+FileAST: 
+  Decl: funpointer, [], [], []
+    PtrDecl: []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['int']
+        TypeDecl: funpointer, []
+          IdentifierType: ['int']
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: t, [], [], []
+            TypeDecl: t, []
+              IdentifierType: ['int']
+        TypeDecl: f, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        BinaryOp: *
+          ID: t
+          Constant: int, 3
+  FuncDef: 
+    Decl: init, [], [], []
+      FuncDecl: 
+        TypeDecl: init, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        ID: funpointer
+        ID: f

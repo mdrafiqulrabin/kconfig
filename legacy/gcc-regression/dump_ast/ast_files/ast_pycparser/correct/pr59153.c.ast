@@ -1,0 +1,30 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: f, [], [], []
+            TypeDecl: f, []
+              IdentifierType: ['float']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: z, [], [], []
+        TypeDecl: z, []
+          Union: None
+            Decl: f, [], [], []
+              TypeDecl: f, []
+                IdentifierType: ['float']
+            Decl: i, [], [], []
+              TypeDecl: i, []
+                IdentifierType: ['int']
+        InitList: 
+          NamedInitializer: 
+            ID: f
+            ID: f
+      Return: 
+        BinaryOp: -
+          StructRef: .
+            ID: z
+            ID: i
+          Constant: int, 1

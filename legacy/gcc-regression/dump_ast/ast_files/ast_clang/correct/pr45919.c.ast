@@ -1,0 +1,32 @@
+TranslationUnitDecl 0x7f7ee80264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f7ee8026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f7ee8026740 '__int128'
+|-TypedefDecl 0x7f7ee8026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f7ee8026760 'unsigned __int128'
+|-TypedefDecl 0x7f7ee8026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f7ee8026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f7ee8026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f7ee8026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f7ee8026dc0 'char *'
+|   `-BuiltinType 0x7f7ee8026560 'char'
+|-TypedefDecl 0x7f7ee80270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f7ee8027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f7ee8026ee0 'struct __va_list_tag'
+|     `-Record 0x7f7ee8026e58 '__va_list_tag'
+|-RecordDecl 0x7f7ee8027120 <c_files/pr45919.c:3:7, col:34> col:14 struct S definition
+| |-FieldDecl 0x7f7ee8825a00 <col:18, col:22> col:22 a 'int'
+| `-FieldDecl 0x7f7ee8825aa0 <col:25, col:31> col:29 referenced b 'int []'
+|-VarDecl 0x7f7ee8825b40 <col:1, col:50> col:36 used s 'const struct S':'const struct S' cinit
+| `-InitListExpr 0x7f7ee8825cb8 <col:40, col:50> 'struct S':'struct S'
+|   |-IntegerLiteral 0x7f7ee8825be0 <col:42> 'int' 0
+|   `-InitListExpr 0x7f7ee8825d08 <col:45, col:49> 'int [1]'
+|     `-IntegerLiteral 0x7f7ee8825c00 <col:47> 'int' 0
+`-FunctionDecl 0x7f7ee8825e68 <line:5:1, line:9:1> line:6:1 foo 'int (void)'
+  `-CompoundStmt 0x7f7ee8826018 <line:7:1, line:9:1>
+    `-ReturnStmt 0x7f7ee8826000 <line:8:3, col:15>
+      `-ImplicitCastExpr 0x7f7ee8825fe8 <col:10, col:15> 'int' <LValueToRValue>
+        `-ArraySubscriptExpr 0x7f7ee8825fc0 <col:10, col:15> 'const int' lvalue
+          |-ImplicitCastExpr 0x7f7ee8825fa8 <col:10, col:12> 'const int *' <ArrayToPointerDecay>
+          | `-MemberExpr 0x7f7ee8825f28 <col:10, col:12> 'int const[]' lvalue .b 0x7f7ee8825aa0
+          |   `-DeclRefExpr 0x7f7ee8825f00 <col:10> 'const struct S':'const struct S' lvalue Var 0x7f7ee8825b40 's' 'const struct S':'const struct S'
+          `-IntegerLiteral 0x7f7ee8825f60 <col:14> 'int' 0

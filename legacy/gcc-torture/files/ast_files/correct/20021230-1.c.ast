@@ -1,0 +1,24 @@
+FileAST: 
+  Decl: r, [], [], []
+    TypeDecl: r, []
+      IdentifierType: ['int']
+  Decl: t, [], [], []
+    TypeDecl: t, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: initRGB, [], ['static'], []
+      FuncDecl: 
+        TypeDecl: initRGB, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        ID: t
+        BinaryOp: <<
+          BinaryOp: &
+            BinaryOp: /
+              BinaryOp: *
+                ID: r
+                Constant: int, 255
+              Constant: int, 3
+            Constant: int, 0xff
+          Constant: int, 16

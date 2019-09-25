@@ -1,0 +1,85 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['signed', 'char']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['signed', 'char']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['int']
+  Decl: d, [], [], []
+    TypeDecl: d, []
+      IdentifierType: ['short']
+  FuncDef: 
+    Decl: fn1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p1, [], [], []
+            TypeDecl: p1, []
+              IdentifierType: ['int']
+        TypeDecl: fn1, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: e, [], [], []
+        TypeDecl: e, []
+          IdentifierType: ['short']
+        Constant: int, 4
+      Decl: f, [], [], []
+        TypeDecl: f, []
+          IdentifierType: ['int']
+      Assignment: =
+        ID: d
+        Constant: int, 0
+      For: 
+        BinaryOp: <=
+          ID: d
+          Constant: int, 0
+        UnaryOp: p++
+          ID: d
+        Assignment: =
+          ID: e
+          Constant: int, 0
+      If: 
+        ID: e
+        Goto: L1
+      Label: L2
+        If: 
+          ID: p1
+          Compound: 
+            Assignment: =
+              ID: a
+              Constant: int, 9
+            For: 
+              ID: a
+              UnaryOp: ++
+                ID: a
+              Compound: 
+                Assignment: =
+                  ID: f
+                  Constant: int, 5
+                For: 
+                  BinaryOp: !=
+                    ID: f
+                    Constant: int, 32
+                  UnaryOp: ++
+                    ID: f
+                  Assignment: =
+                    ID: c
+                    Constant: int, 8
+                Label: L1
+                  If: 
+                    ID: b
+                    Goto: L2
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: fn1
+        ExprList: 
+          Constant: int, 1
+      Return: 
+        Constant: int, 0

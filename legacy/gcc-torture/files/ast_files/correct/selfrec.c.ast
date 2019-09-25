@@ -1,0 +1,18 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: a
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        BinaryOp: *
+          FuncCall: 
+            ID: foo
+            ExprList: 
+              BinaryOp: -
+                ID: a
+                Constant: int, 1
+          ID: a

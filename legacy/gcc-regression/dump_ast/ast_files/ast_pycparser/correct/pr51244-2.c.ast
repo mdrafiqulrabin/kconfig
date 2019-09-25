@@ -1,0 +1,58 @@
+FileAST: 
+  FuncDef: 
+    Decl: testfunc_00, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            PtrDecl: []
+              TypeDecl: a, []
+                IdentifierType: ['int']
+          Decl: b, [], [], []
+            PtrDecl: []
+              TypeDecl: b, []
+                IdentifierType: ['int']
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['int']
+          Decl: d, [], [], []
+            TypeDecl: d, []
+              IdentifierType: ['int']
+        TypeDecl: testfunc_00, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        ArrayRef: 
+          ID: b
+          Constant: int, 0
+        BinaryOp: !=
+          ArrayRef: 
+            ID: a
+            Constant: int, 0
+          ID: c
+      Assignment: =
+        ArrayRef: 
+          ID: b
+          Constant: int, 1
+        BinaryOp: !=
+          ArrayRef: 
+            ID: a
+            Constant: int, 1
+          ID: d
+      Assignment: =
+        ArrayRef: 
+          ID: b
+          Constant: int, 2
+        BinaryOp: !=
+          ArrayRef: 
+            ID: a
+            Constant: int, 2
+          ID: c
+      Assignment: =
+        ArrayRef: 
+          ID: b
+          Constant: int, 3
+        BinaryOp: !=
+          ArrayRef: 
+            ID: a
+            Constant: int, 3
+          ID: d

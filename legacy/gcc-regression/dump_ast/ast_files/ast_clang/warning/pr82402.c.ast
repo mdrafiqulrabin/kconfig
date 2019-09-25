@@ -1,0 +1,76 @@
+c_files/pr82402.c:12:18: warning: control reaches end of non-void function [-Wreturn-type]
+int c () { b (); }
+                 ^
+c_files/pr82402.c:20:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+2 warnings generated.
+TranslationUnitDecl 0x7fac528264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fac52826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fac52826740 '__int128'
+|-TypedefDecl 0x7fac52826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fac52826760 'unsigned __int128'
+|-TypedefDecl 0x7fac52826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fac52826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fac52826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fac52826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fac52826dc0 'char *'
+|   `-BuiltinType 0x7fac52826560 'char'
+|-TypedefDecl 0x7fac528270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fac52827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fac52826ee0 'struct __va_list_tag'
+|     `-Record 0x7fac52826e58 '__va_list_tag'
+|-TypedefDecl 0x7fac528271a0 <c_files/pr82402.c:3:1, col:22> col:13 referenced jmp_buf 'int [1]'
+| `-ConstantArrayType 0x7fac52827140 'int [1]' 1 
+|   `-BuiltinType 0x7fac528265c0 'int'
+|-FunctionDecl 0x7fac53025b20 <line:5:13> col:13 implicit used exit 'void (int) __attribute__((noreturn))' extern
+| `-ParmVarDecl 0x7fac53025bb8 <<invalid sloc>> <invalid sloc> 'int'
+|-FunctionDecl 0x7fac53025c20 prev 0x7fac53025b20 <col:1, col:51> col:13 used exit 'void (int) __attribute__((noreturn))' extern
+| `-ParmVarDecl 0x7fac53025a18 <col:18> col:21 'int'
+|-FunctionDecl 0x7fac53025e58 <line:6:1, col:62> col:12 used setjmpx 'int (int *)' extern
+| |-ParmVarDecl 0x7fac53025d50 <col:20> col:27 'int *':'int *'
+| `-ReturnsTwiceAttr 0x7fac53025ef8 <col:44>
+|-VarDecl 0x7fac53025f90 <line:8:1, col:9> col:9 used jbAnagram 'jmp_buf':'int [1]'
+|-VarDecl 0x7fac53026070 <line:9:1, col:8> col:5 used a 'int [6]'
+|-VarDecl 0x7fac530260e8 <line:10:1, col:5> col:5 used d 'int'
+|-FunctionDecl 0x7fac530261a0 <line:11:1, col:22> col:5 used b 'int ()'
+| `-CompoundStmt 0x7fac530262f0 <col:10, col:22>
+|   `-CallExpr 0x7fac530262c0 <col:12, col:19> 'void'
+|     |-ImplicitCastExpr 0x7fac530262a8 <col:12> 'void (*)(int) __attribute__((noreturn))' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fac53026238 <col:12> 'void (int) __attribute__((noreturn))' Function 0x7fac53025c20 'exit' 'void (int) __attribute__((noreturn))'
+|     `-IntegerLiteral 0x7fac53026260 <col:18> 'int' 1
+|-FunctionDecl 0x7fac53026338 <line:12:1, col:18> col:5 used c 'int ()'
+| `-CompoundStmt 0x7fac53026468 <col:10, col:18>
+|   `-CallExpr 0x7fac53026440 <col:12, col:15> 'int'
+|     `-ImplicitCastExpr 0x7fac53026428 <col:12> 'int (*)()' <FunctionToPointerDecay>
+|       `-DeclRefExpr 0x7fac530263d0 <col:12> 'int ()' Function 0x7fac530261a0 'b' 'int ()'
+`-FunctionDecl 0x7fac530264b0 <line:13:1, line:20:1> line:13:5 e 'int ()'
+  `-CompoundStmt 0x7fac53026988 <line:14:1, line:20:1>
+    |-DeclStmt 0x7fac530265e0 <line:15:3, col:12>
+    | `-VarDecl 0x7fac53026560 <col:3, col:11> col:7 used f 'int' cinit
+    |   `-IntegerLiteral 0x7fac530265c0 <col:11> 'int' 0
+    |-ForStmt 0x7fac530267d8 <line:16:3, line:17:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fac53026658 <line:16:10, col:14> 'int' '<'
+    | | |-ImplicitCastExpr 0x7fac53026640 <col:10> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fac530265f8 <col:10> 'int' lvalue Var 0x7fac53026560 'f' 'int'
+    | | `-IntegerLiteral 0x7fac53026620 <col:14> 'int' 6
+    | |-UnaryOperator 0x7fac530266a8 <col:17, col:18> 'int' postfix '++'
+    | | `-DeclRefExpr 0x7fac53026680 <col:17> 'int' lvalue Var 0x7fac53026560 'f' 'int'
+    | `-BinaryOperator 0x7fac530267b0 <line:17:5, col:12> 'int' '='
+    |   |-ArraySubscriptExpr 0x7fac53026748 <col:5, col:8> 'int' lvalue
+    |   | |-ImplicitCastExpr 0x7fac53026718 <col:5> 'int *' <ArrayToPointerDecay>
+    |   | | `-DeclRefExpr 0x7fac530266c8 <col:5> 'int [6]' lvalue Var 0x7fac53026070 'a' 'int [6]'
+    |   | `-ImplicitCastExpr 0x7fac53026730 <col:7> 'int' <LValueToRValue>
+    |   |   `-DeclRefExpr 0x7fac530266f0 <col:7> 'int' lvalue Var 0x7fac53026560 'f' 'int'
+    |   `-ImplicitCastExpr 0x7fac53026798 <col:12> 'int' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fac53026770 <col:12> 'int' lvalue Var 0x7fac530260e8 'd' 'int'
+    |-CallExpr 0x7fac53026850 <line:18:3, col:6> 'int'
+    | `-ImplicitCastExpr 0x7fac53026838 <col:3> 'int (*)()' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7fac53026810 <col:3> 'int ()' Function 0x7fac53026338 'c' 'int ()'
+    `-CallExpr 0x7fac53026940 <line:19:3, col:21> 'int'
+      |-ImplicitCastExpr 0x7fac53026928 <col:3> 'int (*)(int *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fac53026878 <col:3> 'int (int *)' Function 0x7fac53025e58 'setjmpx' 'int (int *)'
+      `-ImplicitCastExpr 0x7fac53026970 <col:12> 'int *' <ArrayToPointerDecay>
+        `-DeclRefExpr 0x7fac530268a0 <col:12> 'jmp_buf':'int [1]' lvalue Var 0x7fac53025f90 'jbAnagram' 'jmp_buf':'int [1]'

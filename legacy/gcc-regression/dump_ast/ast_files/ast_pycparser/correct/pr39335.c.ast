@@ -1,0 +1,92 @@
+FileAST: 
+  Typedef: byte, [], ['typedef']
+    TypeDecl: byte, []
+      IdentifierType: ['unsigned', 'char']
+  Typedef: gx_device, [], ['typedef']
+    TypeDecl: gx_device, []
+      Struct: gx_device_s
+  Typedef: gs_devn_params, [], ['typedef']
+    TypeDecl: gs_devn_params, []
+      Struct: gs_devn_params_s
+  Typedef: gs_devn_params_t, [], ['typedef']
+    TypeDecl: gs_devn_params_t, []
+      Struct: gs_devn_params_s
+        Decl: compressed_color_list, [], [], []
+          PtrDecl: []
+            TypeDecl: compressed_color_list, []
+              Struct: compressed_color_list_s
+  FuncDef: 
+    Decl: devn_unpack_row, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: dev, [], [], []
+            PtrDecl: []
+              TypeDecl: dev, []
+                IdentifierType: ['gx_device']
+          Decl: num_comp, [], [], []
+            TypeDecl: num_comp, []
+              IdentifierType: ['int']
+          Decl: pdevn_params, [], [], []
+            PtrDecl: []
+              TypeDecl: pdevn_params, []
+                IdentifierType: ['gs_devn_params']
+          Decl: width, [], [], []
+            TypeDecl: width, []
+              IdentifierType: ['int']
+          Decl: in, [], [], []
+            PtrDecl: []
+              TypeDecl: in, []
+                IdentifierType: ['byte']
+          Decl: out, [], [], []
+            PtrDecl: []
+              TypeDecl: out, []
+                IdentifierType: ['byte']
+        TypeDecl: devn_unpack_row, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: comp_num, [], [], []
+        TypeDecl: comp_num, []
+          IdentifierType: ['int']
+      Decl: pixel_num, [], [], []
+        TypeDecl: pixel_num, []
+          IdentifierType: ['int']
+      If: 
+        BinaryOp: ==
+          StructRef: ->
+            ID: pdevn_params
+            ID: compressed_color_list
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['void']
+            Constant: int, 0
+        Compound: 
+          For: 
+            Assignment: =
+              ID: pixel_num
+              Constant: int, 0
+            BinaryOp: <
+              ID: pixel_num
+              ID: width
+            UnaryOp: p++
+              ID: pixel_num
+            For: 
+              Assignment: =
+                ID: i
+                Constant: int, 0
+              BinaryOp: <
+                ID: i
+                ID: num_comp
+              UnaryOp: p++
+                ID: i
+              Assignment: =
+                UnaryOp: *
+                  UnaryOp: p++
+                    ID: out
+                UnaryOp: *
+                  UnaryOp: p++
+                    ID: in

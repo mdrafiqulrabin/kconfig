@@ -1,0 +1,18 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        TypeDecl: foo, []
+          IdentifierType: ['_Bool']
+    Compound: 
+      Decl: f, [], [], []
+        PtrDecl: []
+          FuncDecl: 
+            TypeDecl: f, []
+              IdentifierType: ['_Bool']
+        ID: __builtin_abs
+      Return: 
+        FuncCall: 
+          ID: f
+          ExprList: 
+            Constant: int, 0

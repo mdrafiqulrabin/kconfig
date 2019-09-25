@@ -1,0 +1,552 @@
+FileAST: 
+  Typedef: R_len_t, [], ['typedef']
+    TypeDecl: R_len_t, []
+      IdentifierType: ['int']
+  Typedef: SEXPTYPE, [], ['typedef']
+    TypeDecl: SEXPTYPE, []
+      IdentifierType: ['unsigned', 'int']
+  Decl: None, [], [], []
+    Struct: sxpinfo_struct
+      Decl: type, [], [], []
+        TypeDecl: type, []
+          IdentifierType: ['SEXPTYPE']
+        Constant: int, 5
+  Decl: None, [], [], []
+    Struct: vecsxp_struct
+      Decl: length, [], [], []
+        TypeDecl: length, []
+          IdentifierType: ['R_len_t']
+      Decl: truelength, [], [], []
+        TypeDecl: truelength, []
+          IdentifierType: ['R_len_t']
+  Decl: None, [], [], []
+    Struct: listsxp_struct
+      Decl: carval, [], [], []
+        PtrDecl: []
+          TypeDecl: carval, []
+            Struct: SEXPREC
+      Decl: cdrval, [], [], []
+        PtrDecl: []
+          TypeDecl: cdrval, []
+            Struct: SEXPREC
+      Decl: tagval, [], [], []
+        PtrDecl: []
+          TypeDecl: tagval, []
+            Struct: SEXPREC
+  Typedef: SEXPREC, [], ['typedef']
+    TypeDecl: SEXPREC, []
+      Struct: SEXPREC
+        Decl: sxpinfo, [], [], []
+          TypeDecl: sxpinfo, []
+            Struct: sxpinfo_struct
+        Decl: u, [], [], []
+          TypeDecl: u, []
+            Union: None
+              Decl: listsxp, [], [], []
+                TypeDecl: listsxp, []
+                  Struct: listsxp_struct
+  Typedef: SEXP, [], ['typedef']
+    PtrDecl: []
+      TypeDecl: SEXP, []
+        Struct: SEXPREC
+          Decl: sxpinfo, [], [], []
+            TypeDecl: sxpinfo, []
+              Struct: sxpinfo_struct
+          Decl: u, [], [], []
+            TypeDecl: u, []
+              Union: None
+                Decl: listsxp, [], [], []
+                  TypeDecl: listsxp, []
+                    Struct: listsxp_struct
+  Typedef: VECTOR_SEXPREC, [], ['typedef']
+    TypeDecl: VECTOR_SEXPREC, []
+      Struct: VECTOR_SEXPREC
+        Decl: vecsxp, [], [], []
+          TypeDecl: vecsxp, []
+            Struct: vecsxp_struct
+  Typedef: VECSEXP, [], ['typedef']
+    PtrDecl: []
+      TypeDecl: VECSEXP, []
+        Struct: VECTOR_SEXPREC
+          Decl: vecsxp, [], [], []
+            TypeDecl: vecsxp, []
+              Struct: vecsxp_struct
+  Typedef: SEXPREC_ALIGN, [], ['typedef']
+    TypeDecl: SEXPREC_ALIGN, []
+      Union: None
+        Decl: s, [], [], []
+          TypeDecl: s, []
+            IdentifierType: ['VECTOR_SEXPREC']
+        Decl: align, [], [], []
+          TypeDecl: align, []
+            IdentifierType: ['double']
+  Decl: R_NilValue, [], ['extern'], []
+    TypeDecl: R_NilValue, []
+      IdentifierType: ['SEXP']
+  Decl: R_MissingArg, [], ['extern'], []
+    TypeDecl: R_MissingArg, []
+      IdentifierType: ['SEXP']
+  Decl: Rf_envlength, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: rho, [], [], []
+          TypeDecl: rho, []
+            IdentifierType: ['SEXP']
+      TypeDecl: Rf_envlength, []
+        IdentifierType: ['int']
+  Decl: Rf_protect, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['SEXP']
+      TypeDecl: Rf_protect, []
+        IdentifierType: ['SEXP']
+  Decl: Rf_translateChar, ['const'], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['SEXP']
+      PtrDecl: []
+        TypeDecl: Rf_translateChar, ['const']
+          IdentifierType: ['char']
+  FuncDef: 
+    Decl: Rf_length, [], [], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: s, [], [], []
+            TypeDecl: s, []
+              IdentifierType: ['SEXP']
+        TypeDecl: Rf_length, []
+          IdentifierType: ['R_len_t']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Switch: 
+        StructRef: .
+          StructRef: ->
+            ID: s
+            ID: sxpinfo
+          ID: type
+        Compound: 
+          Case: 
+            Constant: int, 0
+            Return: 
+              Constant: int, 0
+          Case: 
+            Constant: int, 24
+            Return: 
+              StructRef: .
+                StructRef: ->
+                  Cast: 
+                    Typename: None, []
+                      TypeDecl: None, []
+                        IdentifierType: ['VECSEXP']
+                    ID: s
+                  ID: vecsxp
+                ID: length
+          Case: 
+            Constant: int, 6
+          Case: 
+            Constant: int, 17
+            Assignment: =
+              ID: i
+              Constant: int, 0
+            While: 
+              BinaryOp: &&
+                BinaryOp: !=
+                  ID: s
+                  Cast: 
+                    Typename: None, []
+                      PtrDecl: []
+                        TypeDecl: None, []
+                          IdentifierType: ['void']
+                    Constant: int, 0
+                BinaryOp: !=
+                  ID: s
+                  ID: R_NilValue
+              Compound: 
+                UnaryOp: p++
+                  ID: i
+                Assignment: =
+                  ID: s
+                  StructRef: .
+                    StructRef: .
+                      StructRef: ->
+                        ID: s
+                        ID: u
+                      ID: listsxp
+                    ID: cdrval
+            Return: 
+              ID: i
+          Case: 
+            Constant: int, 4
+            Return: 
+              FuncCall: 
+                ID: Rf_envlength
+                ExprList: 
+                  ID: s
+          Default: 
+            Return: 
+              Constant: int, 1
+  FuncDef: 
+    Decl: Rf_lang3, [], [], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: s, [], [], []
+            TypeDecl: s, []
+              IdentifierType: ['SEXP']
+          Decl: t, [], [], []
+            TypeDecl: t, []
+              IdentifierType: ['SEXP']
+          Decl: u, [], [], []
+            TypeDecl: u, []
+              IdentifierType: ['SEXP']
+        TypeDecl: Rf_lang3, []
+          IdentifierType: ['SEXP']
+    Compound: 
+      Return: 
+        ID: s
+  Typedef: CCODE, [], ['typedef']
+    PtrDecl: []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['SEXP']
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['SEXP']
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['SEXP']
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['SEXP']
+        TypeDecl: CCODE, []
+          IdentifierType: ['SEXP']
+  Decl: PlusSymbol, [], ['static'], []
+    TypeDecl: PlusSymbol, []
+      IdentifierType: ['SEXP']
+  Decl: MinusSymbol, [], ['static'], []
+    TypeDecl: MinusSymbol, []
+      IdentifierType: ['SEXP']
+  Decl: DivideSymbol, [], ['static'], []
+    TypeDecl: DivideSymbol, []
+      IdentifierType: ['SEXP']
+  Decl: isZero, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: s, [], [], []
+          TypeDecl: s, []
+            IdentifierType: ['SEXP']
+      TypeDecl: isZero, []
+        IdentifierType: ['int']
+  Decl: PP, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: s, [], [], []
+          TypeDecl: s, []
+            IdentifierType: ['SEXP']
+      TypeDecl: PP, []
+        IdentifierType: ['SEXP']
+  Decl: AddParens, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: expr, [], [], []
+          TypeDecl: expr, []
+            IdentifierType: ['SEXP']
+      TypeDecl: AddParens, []
+        IdentifierType: ['SEXP']
+  Decl: Rf_install, [], [], []
+    FuncDecl: 
+      TypeDecl: Rf_install, []
+        IdentifierType: ['SEXP']
+  FuncDef: 
+    Decl: isUminus, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: s, [], [], []
+            TypeDecl: s, []
+              IdentifierType: ['SEXP']
+        TypeDecl: isUminus, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: &&
+          BinaryOp: ==
+            StructRef: .
+              StructRef: ->
+                ID: s
+                ID: sxpinfo
+              ID: type
+            Constant: int, 6
+          BinaryOp: ==
+            StructRef: .
+              StructRef: .
+                StructRef: ->
+                  ID: s
+                  ID: u
+                ID: listsxp
+              ID: carval
+            ID: MinusSymbol
+        Compound: 
+          Switch: 
+            FuncCall: 
+              ID: Rf_length
+              ExprList: 
+                ID: s
+            Compound: 
+              Case: 
+                Constant: int, 2
+                Return: 
+                  Constant: int, 1
+              Case: 
+                Constant: int, 3
+                If: 
+                  BinaryOp: ==
+                    StructRef: .
+                      StructRef: .
+                        StructRef: ->
+                          StructRef: .
+                            StructRef: .
+                              StructRef: ->
+                                StructRef: .
+                                  StructRef: .
+                                    StructRef: ->
+                                      ID: s
+                                      ID: u
+                                    ID: listsxp
+                                  ID: cdrval
+                                ID: u
+                              ID: listsxp
+                            ID: cdrval
+                          ID: u
+                        ID: listsxp
+                      ID: carval
+                    ID: R_MissingArg
+                  Return: 
+                    Constant: int, 1
+                  Return: 
+                    Constant: int, 0
+        Return: 
+          Constant: int, 0
+  FuncDef: 
+    Decl: simplify, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: fun, [], [], []
+            TypeDecl: fun, []
+              IdentifierType: ['SEXP']
+          Decl: arg1, [], [], []
+            TypeDecl: arg1, []
+              IdentifierType: ['SEXP']
+          Decl: arg2, [], [], []
+            TypeDecl: arg2, []
+              IdentifierType: ['SEXP']
+        TypeDecl: simplify, []
+          IdentifierType: ['SEXP']
+    Compound: 
+      Decl: ans, [], [], []
+        TypeDecl: ans, []
+          IdentifierType: ['SEXP']
+      If: 
+        BinaryOp: ==
+          ID: fun
+          ID: PlusSymbol
+        Compound: 
+          If: 
+            FuncCall: 
+              ID: isZero
+              ExprList: 
+                ID: arg1
+            Assignment: =
+              ID: ans
+              ID: arg2
+            If: 
+              FuncCall: 
+                ID: isUminus
+                ExprList: 
+                  ID: arg1
+              Assignment: =
+                ID: ans
+                FuncCall: 
+                  ID: simplify
+                  ExprList: 
+                    ID: MinusSymbol
+                    ID: arg2
+                    StructRef: .
+                      StructRef: .
+                        StructRef: ->
+                          StructRef: .
+                            StructRef: .
+                              StructRef: ->
+                                ID: arg1
+                                ID: u
+                              ID: listsxp
+                            ID: cdrval
+                          ID: u
+                        ID: listsxp
+                      ID: carval
+              If: 
+                FuncCall: 
+                  ID: isUminus
+                  ExprList: 
+                    ID: arg2
+                Assignment: =
+                  ID: ans
+                  FuncCall: 
+                    ID: simplify
+                    ExprList: 
+                      ID: MinusSymbol
+                      ID: arg1
+                      StructRef: .
+                        StructRef: .
+                          StructRef: ->
+                            StructRef: .
+                              StructRef: .
+                                StructRef: ->
+                                  ID: arg2
+                                  ID: u
+                                ID: listsxp
+                              ID: cdrval
+                            ID: u
+                          ID: listsxp
+                        ID: carval
+        If: 
+          BinaryOp: ==
+            ID: fun
+            ID: DivideSymbol
+          Compound: 
+            Assignment: =
+              ID: ans
+              FuncCall: 
+                ID: Rf_lang3
+                ExprList: 
+                  ID: DivideSymbol
+                  ID: arg1
+                  ID: arg2
+      Return: 
+        ID: ans
+  FuncDef: 
+    Decl: D, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: expr, [], [], []
+            TypeDecl: expr, []
+              IdentifierType: ['SEXP']
+          Decl: var, [], [], []
+            TypeDecl: var, []
+              IdentifierType: ['SEXP']
+        TypeDecl: D, []
+          IdentifierType: ['SEXP']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: simplify
+          ExprList: 
+            ID: PlusSymbol
+            FuncCall: 
+              ID: PP
+              ExprList: 
+                FuncCall: 
+                  ID: D
+                  ExprList: 
+                    StructRef: .
+                      StructRef: .
+                        StructRef: ->
+                          StructRef: .
+                            StructRef: .
+                              StructRef: ->
+                                ID: expr
+                                ID: u
+                              ID: listsxp
+                            ID: cdrval
+                          ID: u
+                        ID: listsxp
+                      ID: carval
+                    ID: var
+            FuncCall: 
+              ID: PP
+              ExprList: 
+                FuncCall: 
+                  ID: D
+                  ExprList: 
+                    StructRef: .
+                      StructRef: .
+                        StructRef: ->
+                          StructRef: .
+                            StructRef: .
+                              StructRef: ->
+                                StructRef: .
+                                  StructRef: .
+                                    StructRef: ->
+                                      ID: expr
+                                      ID: u
+                                    ID: listsxp
+                                  ID: cdrval
+                                ID: u
+                              ID: listsxp
+                            ID: cdrval
+                          ID: u
+                        ID: listsxp
+                      ID: carval
+                    ID: var
+  FuncDef: 
+    Decl: do_D, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: call, [], [], []
+            TypeDecl: call, []
+              IdentifierType: ['SEXP']
+          Decl: op, [], [], []
+            TypeDecl: op, []
+              IdentifierType: ['SEXP']
+          Decl: args, [], [], []
+            TypeDecl: args, []
+              IdentifierType: ['SEXP']
+          Decl: env, [], [], []
+            TypeDecl: env, []
+              IdentifierType: ['SEXP']
+        TypeDecl: do_D, []
+          IdentifierType: ['SEXP']
+    Compound: 
+      Decl: expr, [], [], []
+        TypeDecl: expr, []
+          IdentifierType: ['SEXP']
+      Decl: var, [], [], []
+        TypeDecl: var, []
+          IdentifierType: ['SEXP']
+      Assignment: =
+        ID: var
+        FuncCall: 
+          ID: Rf_install
+      Assignment: =
+        ID: expr
+        StructRef: .
+          StructRef: .
+            StructRef: ->
+              ID: args
+              ID: u
+            ID: listsxp
+          ID: carval
+      FuncCall: 
+        ID: Rf_protect
+        ExprList: 
+          Assignment: =
+            ID: expr
+            FuncCall: 
+              ID: D
+              ExprList: 
+                ID: expr
+                ID: var
+      Assignment: =
+        ID: expr
+        FuncCall: 
+          ID: AddParens
+          ExprList: 
+            ID: expr
+      Return: 
+        ID: expr

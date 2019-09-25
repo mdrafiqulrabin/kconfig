@@ -1,0 +1,31 @@
+FileAST: 
+  Decl: u, [], ['extern'], []
+    TypeDecl: u, []
+      IdentifierType: ['unsigned', 'int']
+  FuncDef: 
+    Decl: b, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['int']
+        TypeDecl: b, []
+          IdentifierType: ['void']
+    Compound: 
+      Switch: 
+        ID: c
+        Compound: 
+          Case: 
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['int']
+              BinaryOp: |
+                Constant: int, 2
+                TernaryOp: 
+                  BinaryOp: <
+                    Constant: int, 4
+                    Constant: int, 8
+                  Constant: int, 8
+                  ID: u
+            EmptyStatement: 

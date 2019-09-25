@@ -1,0 +1,1181 @@
+TranslationUnitDecl 0x7fe4bf8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe4bf826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe4bf826740 '__int128'
+|-TypedefDecl 0x7fe4bf826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe4bf826760 'unsigned __int128'
+|-TypedefDecl 0x7fe4bf826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe4bf826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe4bf826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe4bf826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe4bf826dc0 'char *'
+|   `-BuiltinType 0x7fe4bf826560 'char'
+|-TypedefDecl 0x7fe4bf8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe4bf827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe4bf826ee0 'struct __va_list_tag'
+|     `-Record 0x7fe4bf826e58 '__va_list_tag'
+|-RecordDecl 0x7fe4bf827120 <c_files/pr19080.c:1:9, col:51> col:9 union definition
+| |-FieldDecl 0x7fe4bf025a00 <col:17, col:21> col:21 referenced ioport 'int'
+| `-FieldDecl 0x7fe4bf025a90 <col:29, col:44> col:44 referenced maddr 'volatile char *'
+|-TypedefDecl 0x7fe4bf025b30 <col:1, col:53> col:53 referenced bus_space_handle_t 'union bus_space_handle_t':'bus_space_handle_t'
+| `-ElaboratedType 0x7fe4bf025ae0 'union bus_space_handle_t' sugar
+|   `-RecordType 0x7fe4bf8271b0 'bus_space_handle_t'
+|     `-Record 0x7fe4bf827120 ''
+|-RecordDecl 0x7fe4bf025ba0 <line:2:1, col:36> col:8 struct scb definition
+| `-FieldDecl 0x7fe4bf025c90 <col:14, col:30> col:30 referenced hscb 'unsigned short *'
+|-RecordDecl 0x7fe4bf025cd8 <line:3:1, line:10:1> line:3:8 struct ahd_softc definition
+| |-FieldDecl 0x7fe4bf025e00 <line:5:3, col:13> col:7 referenced tags 'int [2]'
+| |-FieldDecl 0x7fe4bf025f78 <line:6:3, col:28> col:22 referenced bshs 'bus_space_handle_t [2]'
+| |-FieldDecl 0x7fe4bf025fd8 <line:7:3, col:7> col:7 referenced dst_mode 'int'
+| |-FieldDecl 0x7fe4bf026038 <line:8:3, col:7> col:7 referenced src_mode 'int'
+| `-FieldDecl 0x7fe4bf026098 <line:9:3, col:7> col:7 referenced flags 'int'
+|-FunctionDecl 0x7fe4bf026240 <line:11:1, col:19> col:6 used outb 'void (int, int)'
+| |-ParmVarDecl 0x7fe4bf0260f8 <col:11> col:14 'int'
+| `-ParmVarDecl 0x7fe4bf026170 <col:16> col:19 'int'
+|-FunctionDecl 0x7fe4bf0264e8 <line:13:1, col:30> col:5 used foo_inb 'int (struct ahd_softc *)'
+| `-ParmVarDecl 0x7fe4bf0263e0 <col:13, col:29> col:30 'struct ahd_softc *'
+|-FunctionDecl 0x7fe4bf0266f8 <line:14:1, col:26> col:5 used foo_int_int 'int (int, int)'
+| |-ParmVarDecl 0x7fe4bf0265a0 <col:18> col:21 'int'
+| `-ParmVarDecl 0x7fe4bf026618 <col:23> col:26 'int'
+|-FunctionDecl 0x7fe4bf026858 <line:15:1, col:30> col:5 used ahd_inb 'int (struct ahd_softc *)'
+| `-ParmVarDecl 0x7fe4bf0267c8 <col:13, col:29> col:30 'struct ahd_softc *'
+|-FunctionDecl 0x7fe4bf026a00 <line:16:1, col:33> col:5 used ahd_scb_active_in_fifo 'int (void)'
+`-FunctionDecl 0x7fe4bf026ce0 <line:18:1, line:115:1> line:18:6 ahd_flush_qoutfifo 'void (struct ahd_softc *, struct scb *)'
+  |-ParmVarDecl 0x7fe4bf026ac0 <col:26, col:44> col:44 used ahd 'struct ahd_softc *'
+  |-ParmVarDecl 0x7fe4bf026bd0 <col:49, col:61> col:61 used scb 'struct scb *'
+  `-CompoundStmt 0x7fe4bf035e18 <line:19:1, line:115:1>
+    |-DeclStmt 0x7fe4bf027050 <line:20:3, col:37>
+    | |-VarDecl 0x7fe4bf026da0 <col:3, col:7> col:7 used src 'int'
+    | |-VarDecl 0x7fe4bf026e18 <col:3, col:12> col:12 used dst 'int'
+    | |-VarDecl 0x7fe4bf026ec0 <col:3, col:23> col:18 used a 'int *' cinit
+    | | `-UnaryOperator 0x7fe4bf026f48 <col:22, col:23> 'int *' prefix '&'
+    | |   `-DeclRefExpr 0x7fe4bf026f20 <col:23> 'int' lvalue Var 0x7fe4bf026da0 'src' 'int'
+    | `-VarDecl 0x7fe4bf026f80 <col:3, col:34> col:29 used b 'int *' cinit
+    |   `-UnaryOperator 0x7fe4bf027008 <col:33, col:34> 'int *' prefix '&'
+    |     `-DeclRefExpr 0x7fe4bf026fe0 <col:34> 'int' lvalue Var 0x7fe4bf026e18 'dst' 'int'
+    |-BinaryOperator 0x7fe4bf0271b8 <col:39, col:52> 'int' ','
+    | |-BinaryOperator 0x7fe4bf0270e8 <col:39, col:44> 'int' '='
+    | | |-UnaryOperator 0x7fe4bf0270a8 <col:39, col:40> 'int' lvalue prefix '*'
+    | | | `-ImplicitCastExpr 0x7fe4bf027090 <col:40> 'int *' <LValueToRValue>
+    | | |   `-DeclRefExpr 0x7fe4bf027068 <col:40> 'int *' lvalue Var 0x7fe4bf026ec0 'a' 'int *'
+    | | `-IntegerLiteral 0x7fe4bf0270c8 <col:44> 'int' 1
+    | `-BinaryOperator 0x7fe4bf027190 <col:47, col:52> 'int' '='
+    |   |-UnaryOperator 0x7fe4bf027150 <col:47, col:48> 'int' lvalue prefix '*'
+    |   | `-ImplicitCastExpr 0x7fe4bf027138 <col:48> 'int *' <LValueToRValue>
+    |   |   `-DeclRefExpr 0x7fe4bf027110 <col:48> 'int *' lvalue Var 0x7fe4bf026f80 'b' 'int *'
+    |   `-IntegerLiteral 0x7fe4bf027170 <col:52> 'int' 1
+    |-DeclStmt 0x7fe4bf0272e8 <line:21:3, col:12>
+    | |-VarDecl 0x7fe4bf0271f8 <col:3, col:7> col:7 used bb 'int'
+    | `-VarDecl 0x7fe4bf027270 <col:3, col:11> col:11 used p 'int'
+    |-IfStmt 0x7fe4bf027828 <line:23:3, line:24:58>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fe4bf0273b0 <line:23:7, col:24> 'int' '=='
+    | | |-ImplicitCastExpr 0x7fe4bf027398 <col:7, col:12> 'int' <LValueToRValue>
+    | | | `-MemberExpr 0x7fe4bf027340 <col:7, col:12> 'int' lvalue ->src_mode 0x7fe4bf026038
+    | | |   `-ImplicitCastExpr 0x7fe4bf027328 <col:7> 'struct ahd_softc *' <LValueToRValue>
+    | | |     `-DeclRefExpr 0x7fe4bf027300 <col:7> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    | | `-IntegerLiteral 0x7fe4bf027378 <col:24> 'int' 1
+    | |-CompoundStmt 0x7fe4bf027800 <line:24:5, col:58>
+    | | |-DeclStmt 0x7fe4bf027670 <col:7, col:41>
+    | | | |-VarDecl 0x7fe4bf0273f0 <col:7, col:11> col:11 used src 'int'
+    | | | |-VarDecl 0x7fe4bf027468 <col:7, col:16> col:16 used dst 'int'
+    | | | |-VarDecl 0x7fe4bf0274e0 <col:7, col:27> col:22 used a 'int *' cinit
+    | | | | `-UnaryOperator 0x7fe4bf027568 <col:26, col:27> 'int *' prefix '&'
+    | | | |   `-DeclRefExpr 0x7fe4bf027540 <col:27> 'int' lvalue Var 0x7fe4bf0273f0 'src' 'int'
+    | | | `-VarDecl 0x7fe4bf0275a0 <col:7, col:38> col:33 used b 'int *' cinit
+    | | |   `-UnaryOperator 0x7fe4bf027628 <col:37, col:38> 'int *' prefix '&'
+    | | |     `-DeclRefExpr 0x7fe4bf027600 <col:38> 'int' lvalue Var 0x7fe4bf027468 'dst' 'int'
+    | | `-BinaryOperator 0x7fe4bf0277d8 <col:43, col:56> 'int' ','
+    | |   |-BinaryOperator 0x7fe4bf027708 <col:43, col:48> 'int' '='
+    | |   | |-UnaryOperator 0x7fe4bf0276c8 <col:43, col:44> 'int' lvalue prefix '*'
+    | |   | | `-ImplicitCastExpr 0x7fe4bf0276b0 <col:44> 'int *' <LValueToRValue>
+    | |   | |   `-DeclRefExpr 0x7fe4bf027688 <col:44> 'int *' lvalue Var 0x7fe4bf0274e0 'a' 'int *'
+    | |   | `-IntegerLiteral 0x7fe4bf0276e8 <col:48> 'int' 1
+    | |   `-BinaryOperator 0x7fe4bf0277b0 <col:51, col:56> 'int' '='
+    | |     |-UnaryOperator 0x7fe4bf027770 <col:51, col:52> 'int' lvalue prefix '*'
+    | |     | `-ImplicitCastExpr 0x7fe4bf027758 <col:52> 'int *' <LValueToRValue>
+    | |     |   `-DeclRefExpr 0x7fe4bf027730 <col:52> 'int *' lvalue Var 0x7fe4bf0275a0 'b' 'int *'
+    | |     `-IntegerLiteral 0x7fe4bf027790 <col:56> 'int' 1
+    | `-<<<NULL>>>
+    |-CallExpr 0x7fe4bf0279c0 <line:25:3, col:44> 'int'
+    | |-ImplicitCastExpr 0x7fe4bf0279a8 <col:3> 'int (*)(int, int)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fe4bf027860 <col:3> 'int (int, int)' Function 0x7fe4bf0266f8 'foo_int_int' 'int (int, int)'
+    | |-ImplicitCastExpr 0x7fe4bf02d000 <col:16, col:21> 'int' <LValueToRValue>
+    | | `-MemberExpr 0x7fe4bf0278c8 <col:16, col:21> 'int' lvalue ->src_mode 0x7fe4bf026038
+    | |   `-ImplicitCastExpr 0x7fe4bf0278b0 <col:16> 'struct ahd_softc *' <LValueToRValue>
+    | |     `-DeclRefExpr 0x7fe4bf027888 <col:16> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    | `-ImplicitCastExpr 0x7fe4bf02d018 <col:31, col:36> 'int' <LValueToRValue>
+    |   `-MemberExpr 0x7fe4bf027940 <col:31, col:36> 'int' lvalue ->dst_mode 0x7fe4bf025fd8
+    |     `-ImplicitCastExpr 0x7fe4bf027928 <col:31> 'struct ahd_softc *' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fe4bf027900 <col:31> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    |-BinaryOperator 0x7fe4bf02d078 <line:26:3, col:7> 'int' '='
+    | |-DeclRefExpr 0x7fe4bf02d030 <col:3> 'int' lvalue Var 0x7fe4bf027270 'p' 'int'
+    | `-IntegerLiteral 0x7fe4bf02d058 <col:7> 'int' 1
+    |-IfStmt 0x7fe4bf02dcb8 <line:27:3, line:33:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fe4bf02d270 <line:27:7, col:46> 'int' '&&'
+    | | |-BinaryOperator 0x7fe4bf02d150 <col:7, col:24> 'int' '=='
+    | | | |-ImplicitCastExpr 0x7fe4bf02d138 <col:7, col:12> 'int' <LValueToRValue>
+    | | | | `-MemberExpr 0x7fe4bf02d0e0 <col:7, col:12> 'int' lvalue ->src_mode 0x7fe4bf026038
+    | | | |   `-ImplicitCastExpr 0x7fe4bf02d0c8 <col:7> 'struct ahd_softc *' <LValueToRValue>
+    | | | |     `-DeclRefExpr 0x7fe4bf02d0a0 <col:7> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    | | | `-IntegerLiteral 0x7fe4bf02d118 <col:24> 'int' 2
+    | | `-BinaryOperator 0x7fe4bf02d248 <col:29, col:46> 'int' '=='
+    | |   |-ImplicitCastExpr 0x7fe4bf02d218 <col:29, col:34> 'int' <LValueToRValue>
+    | |   | `-MemberExpr 0x7fe4bf02d1b8 <col:29, col:34> 'int' lvalue ->dst_mode 0x7fe4bf025fd8
+    | |   |   `-ImplicitCastExpr 0x7fe4bf02d1a0 <col:29> 'struct ahd_softc *' <LValueToRValue>
+    | |   |     `-DeclRefExpr 0x7fe4bf02d178 <col:29> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    | |   `-ImplicitCastExpr 0x7fe4bf02d230 <col:46> 'int' <LValueToRValue>
+    | |     `-DeclRefExpr 0x7fe4bf02d1f0 <col:46> 'int' lvalue Var 0x7fe4bf027270 'p' 'int'
+    | |-CompoundStmt 0x7fe4bf02dc80 <line:28:5, line:33:5>
+    | | |-IfStmt 0x7fe4bf02d5b0 <line:29:7, col:50>
+    | | | |-<<<NULL>>>
+    | | | |-<<<NULL>>>
+    | | | |-BinaryOperator 0x7fe4bf02d3a8 <col:11, col:27> 'int' '=='
+    | | | | |-ImplicitCastExpr 0x7fe4bf02d390 <col:11, col:22> 'int' <LValueToRValue>
+    | | | | | `-ArraySubscriptExpr 0x7fe4bf02d348 <col:11, col:22> 'int' lvalue
+    | | | | |   |-ImplicitCastExpr 0x7fe4bf02d330 <col:11, col:16> 'int *' <ArrayToPointerDecay>
+    | | | | |   | `-MemberExpr 0x7fe4bf02d2d8 <col:11, col:16> 'int [2]' lvalue ->tags 0x7fe4bf025e00
+    | | | | |   |   `-ImplicitCastExpr 0x7fe4bf02d2c0 <col:11> 'struct ahd_softc *' <LValueToRValue>
+    | | | | |   |     `-DeclRefExpr 0x7fe4bf02d298 <col:11> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    | | | | |   `-IntegerLiteral 0x7fe4bf02d310 <col:21> 'int' 0
+    | | | | `-IntegerLiteral 0x7fe4bf02d370 <col:27> 'int' 1
+    | | | |-ImplicitCastExpr 0x7fe4bf02d598 <col:30, col:50> 'char' <LValueToRValue>
+    | | | | `-UnaryOperator 0x7fe4bf02d578 <col:30, col:50> 'volatile char' lvalue prefix '*'
+    | | | |   `-ImplicitCastExpr 0x7fe4bf02d560 <col:31, col:50> 'volatile char *' <LValueToRValue>
+    | | | |     `-ParenExpr 0x7fe4bf02d540 <col:31, col:50> 'volatile char *' lvalue
+    | | | |       `-MemberExpr 0x7fe4bf02d508 <col:32, col:45> 'volatile char *' lvalue .maddr 0x7fe4bf025a90
+    | | | |         `-ArraySubscriptExpr 0x7fe4bf02d4e0 <col:32, col:43> 'bus_space_handle_t':'bus_space_handle_t' lvalue
+    | | | |           |-ImplicitCastExpr 0x7fe4bf02d4c8 <col:32, col:37> 'bus_space_handle_t *' <ArrayToPointerDecay>
+    | | | |           | `-MemberExpr 0x7fe4bf02d410 <col:32, col:37> 'bus_space_handle_t [2]' lvalue ->bshs 0x7fe4bf025f78
+    | | | |           |   `-ImplicitCastExpr 0x7fe4bf02d3f8 <col:32> 'struct ahd_softc *' <LValueToRValue>
+    | | | |           |     `-DeclRefExpr 0x7fe4bf02d3d0 <col:32> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    | | | |           `-IntegerLiteral 0x7fe4bf02d448 <col:42> 'int' 0
+    | | | `-<<<NULL>>>
+    | | |-CallExpr 0x7fe4bf02d780 <line:30:9, col:38> 'void'
+    | | | |-ImplicitCastExpr 0x7fe4bf02d768 <col:9> 'void (*)(int, int)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7fe4bf02d5e8 <col:9> 'void (int, int)' Function 0x7fe4bf026240 'outb' 'void (int, int)'
+    | | | |-IntegerLiteral 0x7fe4bf02d610 <col:15> 'int' 1
+    | | | `-ImplicitCastExpr 0x7fe4bf02d7b8 <col:18, col:31> 'int' <LValueToRValue>
+    | | |   `-MemberExpr 0x7fe4bf02d708 <col:18, col:31> 'int' lvalue .ioport 0x7fe4bf025a00
+    | | |     `-ArraySubscriptExpr 0x7fe4bf02d6e0 <col:18, col:29> 'bus_space_handle_t':'bus_space_handle_t' lvalue
+    | | |       |-ImplicitCastExpr 0x7fe4bf02d6c8 <col:18, col:23> 'bus_space_handle_t *' <ArrayToPointerDecay>
+    | | |       | `-MemberExpr 0x7fe4bf02d670 <col:18, col:23> 'bus_space_handle_t [2]' lvalue ->bshs 0x7fe4bf025f78
+    | | |       |   `-ImplicitCastExpr 0x7fe4bf02d658 <col:18> 'struct ahd_softc *' <LValueToRValue>
+    | | |       |     `-DeclRefExpr 0x7fe4bf02d630 <col:18> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    | | |       `-IntegerLiteral 0x7fe4bf02d6a8 <col:28> 'int' 0
+    | | |-IfStmt 0x7fe4bf02da88 <line:31:7, col:50>
+    | | | |-<<<NULL>>>
+    | | | |-<<<NULL>>>
+    | | | |-BinaryOperator 0x7fe4bf02d8e0 <col:11, col:27> 'int' '=='
+    | | | | |-ImplicitCastExpr 0x7fe4bf02d8c8 <col:11, col:22> 'int' <LValueToRValue>
+    | | | | | `-ArraySubscriptExpr 0x7fe4bf02d880 <col:11, col:22> 'int' lvalue
+    | | | | |   |-ImplicitCastExpr 0x7fe4bf02d868 <col:11, col:16> 'int *' <ArrayToPointerDecay>
+    | | | | |   | `-MemberExpr 0x7fe4bf02d810 <col:11, col:16> 'int [2]' lvalue ->tags 0x7fe4bf025e00
+    | | | | |   |   `-ImplicitCastExpr 0x7fe4bf02d7f8 <col:11> 'struct ahd_softc *' <LValueToRValue>
+    | | | | |   |     `-DeclRefExpr 0x7fe4bf02d7d0 <col:11> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    | | | | |   `-IntegerLiteral 0x7fe4bf02d848 <col:21> 'int' 0
+    | | | | `-IntegerLiteral 0x7fe4bf02d8a8 <col:27> 'int' 1
+    | | | |-ImplicitCastExpr 0x7fe4bf02da70 <col:30, col:50> 'char' <LValueToRValue>
+    | | | | `-UnaryOperator 0x7fe4bf02da50 <col:30, col:50> 'volatile char' lvalue prefix '*'
+    | | | |   `-ImplicitCastExpr 0x7fe4bf02da38 <col:31, col:50> 'volatile char *' <LValueToRValue>
+    | | | |     `-ParenExpr 0x7fe4bf02da18 <col:31, col:50> 'volatile char *' lvalue
+    | | | |       `-MemberExpr 0x7fe4bf02d9e0 <col:32, col:45> 'volatile char *' lvalue .maddr 0x7fe4bf025a90
+    | | | |         `-ArraySubscriptExpr 0x7fe4bf02d9b8 <col:32, col:43> 'bus_space_handle_t':'bus_space_handle_t' lvalue
+    | | | |           |-ImplicitCastExpr 0x7fe4bf02d9a0 <col:32, col:37> 'bus_space_handle_t *' <ArrayToPointerDecay>
+    | | | |           | `-MemberExpr 0x7fe4bf02d948 <col:32, col:37> 'bus_space_handle_t [2]' lvalue ->bshs 0x7fe4bf025f78
+    | | | |           |   `-ImplicitCastExpr 0x7fe4bf02d930 <col:32> 'struct ahd_softc *' <LValueToRValue>
+    | | | |           |     `-DeclRefExpr 0x7fe4bf02d908 <col:32> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    | | | |           `-IntegerLiteral 0x7fe4bf02d980 <col:42> 'int' 0
+    | | | `-<<<NULL>>>
+    | | `-CallExpr 0x7fe4bf02dc30 <line:32:9, col:38> 'void'
+    | |   |-ImplicitCastExpr 0x7fe4bf02dc18 <col:9> 'void (*)(int, int)' <FunctionToPointerDecay>
+    | |   | `-DeclRefExpr 0x7fe4bf02dac0 <col:9> 'void (int, int)' Function 0x7fe4bf026240 'outb' 'void (int, int)'
+    | |   |-IntegerLiteral 0x7fe4bf02dae8 <col:15> 'int' 1
+    | |   `-ImplicitCastExpr 0x7fe4bf02dc68 <col:18, col:31> 'int' <LValueToRValue>
+    | |     `-MemberExpr 0x7fe4bf02dbe0 <col:18, col:31> 'int' lvalue .ioport 0x7fe4bf025a00
+    | |       `-ArraySubscriptExpr 0x7fe4bf02dbb8 <col:18, col:29> 'bus_space_handle_t':'bus_space_handle_t' lvalue
+    | |         |-ImplicitCastExpr 0x7fe4bf02dba0 <col:18, col:23> 'bus_space_handle_t *' <ArrayToPointerDecay>
+    | |         | `-MemberExpr 0x7fe4bf02db48 <col:18, col:23> 'bus_space_handle_t [2]' lvalue ->bshs 0x7fe4bf025f78
+    | |         |   `-ImplicitCastExpr 0x7fe4bf02db30 <col:18> 'struct ahd_softc *' <LValueToRValue>
+    | |         |     `-DeclRefExpr 0x7fe4bf02db08 <col:18> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    | |         `-IntegerLiteral 0x7fe4bf02db80 <col:28> 'int' 0
+    | `-<<<NULL>>>
+    |-BinaryOperator 0x7fe4bf02dd88 <line:34:3, col:19> 'int' '='
+    | |-MemberExpr 0x7fe4bf02dd30 <col:3, col:8> 'int' lvalue ->src_mode 0x7fe4bf026038
+    | | `-ImplicitCastExpr 0x7fe4bf02dd18 <col:3> 'struct ahd_softc *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fe4bf02dcf0 <col:3> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    | `-IntegerLiteral 0x7fe4bf02dd68 <col:19> 'int' 1
+    |-BinaryOperator 0x7fe4bf02de48 <line:35:3, col:19> 'int' '='
+    | |-MemberExpr 0x7fe4bf02ddf0 <col:3, col:8> 'int' lvalue ->dst_mode 0x7fe4bf025fd8
+    | | `-ImplicitCastExpr 0x7fe4bf02ddd8 <col:3> 'struct ahd_softc *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fe4bf02ddb0 <col:3> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    | `-IntegerLiteral 0x7fe4bf02de28 <col:19> 'int' 2
+    |-WhileStmt 0x7fe4bf0338a8 <line:36:3, line:90:3>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fe4bf02e000 <line:36:10, col:36> 'int' '!='
+    | | |-ParenExpr 0x7fe4bf02dfc0 <col:10, col:31> 'int'
+    | | | `-BinaryOperator 0x7fe4bf02df98 <col:11, col:27> 'int' '&'
+    | | |   |-CallExpr 0x7fe4bf02df30 <col:11, col:23> 'int'
+    | | |   | |-ImplicitCastExpr 0x7fe4bf02df18 <col:11> 'int (*)(struct ahd_softc *)' <FunctionToPointerDecay>
+    | | |   | | `-DeclRefExpr 0x7fe4bf02de70 <col:11> 'int (struct ahd_softc *)' Function 0x7fe4bf026858 'ahd_inb' 'int (struct ahd_softc *)'
+    | | |   | `-ImplicitCastExpr 0x7fe4bf02df60 <col:20> 'struct ahd_softc *' <LValueToRValue>
+    | | |   |   `-DeclRefExpr 0x7fe4bf02de98 <col:20> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    | | |   `-IntegerLiteral 0x7fe4bf02df78 <col:27> 'int' 1
+    | | `-IntegerLiteral 0x7fe4bf02dfe0 <col:36> 'int' 0
+    | `-CompoundStmt 0x7fe4bf033778 <line:37:3, line:90:3>
+    |   |-BinaryOperator 0x7fe4bf02e070 <line:38:5, col:9> 'int' '='
+    |   | |-DeclRefExpr 0x7fe4bf02e028 <col:5> 'int' lvalue Var 0x7fe4bf027270 'p' 'int'
+    |   | `-IntegerLiteral 0x7fe4bf02e050 <col:9> 'int' 1
+    |   |-IfStmt 0x7fe4bf02ec28 <line:39:5, line:45:7>
+    |   | |-<<<NULL>>>
+    |   | |-<<<NULL>>>
+    |   | |-BinaryOperator 0x7fe4bf02e268 <line:39:9, col:48> 'int' '&&'
+    |   | | |-BinaryOperator 0x7fe4bf02e148 <col:9, col:26> 'int' '=='
+    |   | | | |-ImplicitCastExpr 0x7fe4bf02e130 <col:9, col:14> 'int' <LValueToRValue>
+    |   | | | | `-MemberExpr 0x7fe4bf02e0d8 <col:9, col:14> 'int' lvalue ->src_mode 0x7fe4bf026038
+    |   | | | |   `-ImplicitCastExpr 0x7fe4bf02e0c0 <col:9> 'struct ahd_softc *' <LValueToRValue>
+    |   | | | |     `-DeclRefExpr 0x7fe4bf02e098 <col:9> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    |   | | | `-IntegerLiteral 0x7fe4bf02e110 <col:26> 'int' 2
+    |   | | `-BinaryOperator 0x7fe4bf02e240 <col:31, col:48> 'int' '=='
+    |   | |   |-ImplicitCastExpr 0x7fe4bf02e210 <col:31, col:36> 'int' <LValueToRValue>
+    |   | |   | `-MemberExpr 0x7fe4bf02e1b0 <col:31, col:36> 'int' lvalue ->dst_mode 0x7fe4bf025fd8
+    |   | |   |   `-ImplicitCastExpr 0x7fe4bf02e198 <col:31> 'struct ahd_softc *' <LValueToRValue>
+    |   | |   |     `-DeclRefExpr 0x7fe4bf02e170 <col:31> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    |   | |   `-ImplicitCastExpr 0x7fe4bf02e228 <col:48> 'int' <LValueToRValue>
+    |   | |     `-DeclRefExpr 0x7fe4bf02e1e8 <col:48> 'int' lvalue Var 0x7fe4bf027270 'p' 'int'
+    |   | |-CompoundStmt 0x7fe4bf02ebf0 <line:40:7, line:45:7>
+    |   | | |-IfStmt 0x7fe4bf02e548 <line:41:9, col:52>
+    |   | | | |-<<<NULL>>>
+    |   | | | |-<<<NULL>>>
+    |   | | | |-BinaryOperator 0x7fe4bf02e3a0 <col:13, col:29> 'int' '=='
+    |   | | | | |-ImplicitCastExpr 0x7fe4bf02e388 <col:13, col:24> 'int' <LValueToRValue>
+    |   | | | | | `-ArraySubscriptExpr 0x7fe4bf02e340 <col:13, col:24> 'int' lvalue
+    |   | | | | |   |-ImplicitCastExpr 0x7fe4bf02e328 <col:13, col:18> 'int *' <ArrayToPointerDecay>
+    |   | | | | |   | `-MemberExpr 0x7fe4bf02e2d0 <col:13, col:18> 'int [2]' lvalue ->tags 0x7fe4bf025e00
+    |   | | | | |   |   `-ImplicitCastExpr 0x7fe4bf02e2b8 <col:13> 'struct ahd_softc *' <LValueToRValue>
+    |   | | | | |   |     `-DeclRefExpr 0x7fe4bf02e290 <col:13> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    |   | | | | |   `-IntegerLiteral 0x7fe4bf02e308 <col:23> 'int' 0
+    |   | | | | `-IntegerLiteral 0x7fe4bf02e368 <col:29> 'int' 1
+    |   | | | |-ImplicitCastExpr 0x7fe4bf02e530 <col:32, col:52> 'char' <LValueToRValue>
+    |   | | | | `-UnaryOperator 0x7fe4bf02e510 <col:32, col:52> 'volatile char' lvalue prefix '*'
+    |   | | | |   `-ImplicitCastExpr 0x7fe4bf02e4f8 <col:33, col:52> 'volatile char *' <LValueToRValue>
+    |   | | | |     `-ParenExpr 0x7fe4bf02e4d8 <col:33, col:52> 'volatile char *' lvalue
+    |   | | | |       `-MemberExpr 0x7fe4bf02e4a0 <col:34, col:47> 'volatile char *' lvalue .maddr 0x7fe4bf025a90
+    |   | | | |         `-ArraySubscriptExpr 0x7fe4bf02e478 <col:34, col:45> 'bus_space_handle_t':'bus_space_handle_t' lvalue
+    |   | | | |           |-ImplicitCastExpr 0x7fe4bf02e460 <col:34, col:39> 'bus_space_handle_t *' <ArrayToPointerDecay>
+    |   | | | |           | `-MemberExpr 0x7fe4bf02e408 <col:34, col:39> 'bus_space_handle_t [2]' lvalue ->bshs 0x7fe4bf025f78
+    |   | | | |           |   `-ImplicitCastExpr 0x7fe4bf02e3f0 <col:34> 'struct ahd_softc *' <LValueToRValue>
+    |   | | | |           |     `-DeclRefExpr 0x7fe4bf02e3c8 <col:34> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    |   | | | |           `-IntegerLiteral 0x7fe4bf02e440 <col:44> 'int' 0
+    |   | | | `-<<<NULL>>>
+    |   | | |-CallExpr 0x7fe4bf02e6f0 <line:42:11, col:40> 'void'
+    |   | | | |-ImplicitCastExpr 0x7fe4bf02e6d8 <col:11> 'void (*)(int, int)' <FunctionToPointerDecay>
+    |   | | | | `-DeclRefExpr 0x7fe4bf02e580 <col:11> 'void (int, int)' Function 0x7fe4bf026240 'outb' 'void (int, int)'
+    |   | | | |-IntegerLiteral 0x7fe4bf02e5a8 <col:17> 'int' 1
+    |   | | | `-ImplicitCastExpr 0x7fe4bf02e728 <col:20, col:33> 'int' <LValueToRValue>
+    |   | | |   `-MemberExpr 0x7fe4bf02e6a0 <col:20, col:33> 'int' lvalue .ioport 0x7fe4bf025a00
+    |   | | |     `-ArraySubscriptExpr 0x7fe4bf02e678 <col:20, col:31> 'bus_space_handle_t':'bus_space_handle_t' lvalue
+    |   | | |       |-ImplicitCastExpr 0x7fe4bf02e660 <col:20, col:25> 'bus_space_handle_t *' <ArrayToPointerDecay>
+    |   | | |       | `-MemberExpr 0x7fe4bf02e608 <col:20, col:25> 'bus_space_handle_t [2]' lvalue ->bshs 0x7fe4bf025f78
+    |   | | |       |   `-ImplicitCastExpr 0x7fe4bf02e5f0 <col:20> 'struct ahd_softc *' <LValueToRValue>
+    |   | | |       |     `-DeclRefExpr 0x7fe4bf02e5c8 <col:20> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    |   | | |       `-IntegerLiteral 0x7fe4bf02e640 <col:30> 'int' 0
+    |   | | |-IfStmt 0x7fe4bf02e9f8 <line:43:9, col:52>
+    |   | | | |-<<<NULL>>>
+    |   | | | |-<<<NULL>>>
+    |   | | | |-BinaryOperator 0x7fe4bf02e850 <col:13, col:29> 'int' '=='
+    |   | | | | |-ImplicitCastExpr 0x7fe4bf02e838 <col:13, col:24> 'int' <LValueToRValue>
+    |   | | | | | `-ArraySubscriptExpr 0x7fe4bf02e7f0 <col:13, col:24> 'int' lvalue
+    |   | | | | |   |-ImplicitCastExpr 0x7fe4bf02e7d8 <col:13, col:18> 'int *' <ArrayToPointerDecay>
+    |   | | | | |   | `-MemberExpr 0x7fe4bf02e780 <col:13, col:18> 'int [2]' lvalue ->tags 0x7fe4bf025e00
+    |   | | | | |   |   `-ImplicitCastExpr 0x7fe4bf02e768 <col:13> 'struct ahd_softc *' <LValueToRValue>
+    |   | | | | |   |     `-DeclRefExpr 0x7fe4bf02e740 <col:13> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    |   | | | | |   `-IntegerLiteral 0x7fe4bf02e7b8 <col:23> 'int' 0
+    |   | | | | `-IntegerLiteral 0x7fe4bf02e818 <col:29> 'int' 1
+    |   | | | |-ImplicitCastExpr 0x7fe4bf02e9e0 <col:32, col:52> 'char' <LValueToRValue>
+    |   | | | | `-UnaryOperator 0x7fe4bf02e9c0 <col:32, col:52> 'volatile char' lvalue prefix '*'
+    |   | | | |   `-ImplicitCastExpr 0x7fe4bf02e9a8 <col:33, col:52> 'volatile char *' <LValueToRValue>
+    |   | | | |     `-ParenExpr 0x7fe4bf02e988 <col:33, col:52> 'volatile char *' lvalue
+    |   | | | |       `-MemberExpr 0x7fe4bf02e950 <col:34, col:47> 'volatile char *' lvalue .maddr 0x7fe4bf025a90
+    |   | | | |         `-ArraySubscriptExpr 0x7fe4bf02e928 <col:34, col:45> 'bus_space_handle_t':'bus_space_handle_t' lvalue
+    |   | | | |           |-ImplicitCastExpr 0x7fe4bf02e910 <col:34, col:39> 'bus_space_handle_t *' <ArrayToPointerDecay>
+    |   | | | |           | `-MemberExpr 0x7fe4bf02e8b8 <col:34, col:39> 'bus_space_handle_t [2]' lvalue ->bshs 0x7fe4bf025f78
+    |   | | | |           |   `-ImplicitCastExpr 0x7fe4bf02e8a0 <col:34> 'struct ahd_softc *' <LValueToRValue>
+    |   | | | |           |     `-DeclRefExpr 0x7fe4bf02e878 <col:34> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    |   | | | |           `-IntegerLiteral 0x7fe4bf02e8f0 <col:44> 'int' 0
+    |   | | | `-<<<NULL>>>
+    |   | | `-CallExpr 0x7fe4bf02eba0 <line:44:11, col:40> 'void'
+    |   | |   |-ImplicitCastExpr 0x7fe4bf02eb88 <col:11> 'void (*)(int, int)' <FunctionToPointerDecay>
+    |   | |   | `-DeclRefExpr 0x7fe4bf02ea30 <col:11> 'void (int, int)' Function 0x7fe4bf026240 'outb' 'void (int, int)'
+    |   | |   |-IntegerLiteral 0x7fe4bf02ea58 <col:17> 'int' 1
+    |   | |   `-ImplicitCastExpr 0x7fe4bf02ebd8 <col:20, col:33> 'int' <LValueToRValue>
+    |   | |     `-MemberExpr 0x7fe4bf02eb50 <col:20, col:33> 'int' lvalue .ioport 0x7fe4bf025a00
+    |   | |       `-ArraySubscriptExpr 0x7fe4bf02eb28 <col:20, col:31> 'bus_space_handle_t':'bus_space_handle_t' lvalue
+    |   | |         |-ImplicitCastExpr 0x7fe4bf02eb10 <col:20, col:25> 'bus_space_handle_t *' <ArrayToPointerDecay>
+    |   | |         | `-MemberExpr 0x7fe4bf02eab8 <col:20, col:25> 'bus_space_handle_t [2]' lvalue ->bshs 0x7fe4bf025f78
+    |   | |         |   `-ImplicitCastExpr 0x7fe4bf02eaa0 <col:20> 'struct ahd_softc *' <LValueToRValue>
+    |   | |         |     `-DeclRefExpr 0x7fe4bf02ea78 <col:20> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    |   | |         `-IntegerLiteral 0x7fe4bf02eaf0 <col:30> 'int' 0
+    |   | `-<<<NULL>>>
+    |   |-BinaryOperator 0x7fe4bf02ecf8 <line:46:5, col:21> 'int' '='
+    |   | |-MemberExpr 0x7fe4bf02eca0 <col:5, col:10> 'int' lvalue ->src_mode 0x7fe4bf026038
+    |   | | `-ImplicitCastExpr 0x7fe4bf02ec88 <col:5> 'struct ahd_softc *' <LValueToRValue>
+    |   | |   `-DeclRefExpr 0x7fe4bf02ec60 <col:5> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    |   | `-IntegerLiteral 0x7fe4bf02ecd8 <col:21> 'int' 1
+    |   |-BinaryOperator 0x7fe4bf02edb8 <line:47:5, col:21> 'int' '='
+    |   | |-MemberExpr 0x7fe4bf02ed60 <col:5, col:10> 'int' lvalue ->dst_mode 0x7fe4bf025fd8
+    |   | | `-ImplicitCastExpr 0x7fe4bf02ed48 <col:5> 'struct ahd_softc *' <LValueToRValue>
+    |   | |   `-DeclRefExpr 0x7fe4bf02ed20 <col:5> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    |   | `-IntegerLiteral 0x7fe4bf02ed98 <col:21> 'int' 2
+    |   |-IfStmt 0x7fe4bf02eec8 <line:48:5, line:49:7>
+    |   | |-<<<NULL>>>
+    |   | |-<<<NULL>>>
+    |   | |-BinaryOperator 0x7fe4bf02ee98 <line:48:9, col:38> 'int' '=='
+    |   | | |-CallExpr 0x7fe4bf02ee50 <col:9, col:33> 'int'
+    |   | | | `-ImplicitCastExpr 0x7fe4bf02ee38 <col:9> 'int (*)(void)' <FunctionToPointerDecay>
+    |   | | |   `-DeclRefExpr 0x7fe4bf02ede0 <col:9> 'int (void)' Function 0x7fe4bf026a00 'ahd_scb_active_in_fifo' 'int (void)'
+    |   | | `-IntegerLiteral 0x7fe4bf02ee78 <col:38> 'int' 0
+    |   | |-ContinueStmt 0x7fe4bf02eec0 <line:49:7>
+    |   | `-<<<NULL>>>
+    |   |-BinaryOperator 0x7fe4bf02ef48 <line:50:5, col:9> 'int' '='
+    |   | |-DeclRefExpr 0x7fe4bf02ef00 <col:5> 'int' lvalue Var 0x7fe4bf027270 'p' 'int'
+    |   | `-IntegerLiteral 0x7fe4bf02ef28 <col:9> 'int' 1
+    |   |-IfStmt 0x7fe4bf02fb18 <line:51:5, line:57:7>
+    |   | |-<<<NULL>>>
+    |   | |-<<<NULL>>>
+    |   | |-BinaryOperator 0x7fe4bf02f158 <line:51:9, col:48> 'int' '&&'
+    |   | | |-BinaryOperator 0x7fe4bf02f038 <col:9, col:26> 'int' '=='
+    |   | | | |-ImplicitCastExpr 0x7fe4bf02f020 <col:9, col:14> 'int' <LValueToRValue>
+    |   | | | | `-MemberExpr 0x7fe4bf02efb0 <col:9, col:14> 'int' lvalue ->src_mode 0x7fe4bf026038
+    |   | | | |   `-ImplicitCastExpr 0x7fe4bf02ef98 <col:9> 'struct ahd_softc *' <LValueToRValue>
+    |   | | | |     `-DeclRefExpr 0x7fe4bf02ef70 <col:9> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    |   | | | `-IntegerLiteral 0x7fe4bf02f000 <col:26> 'int' 2
+    |   | | `-BinaryOperator 0x7fe4bf02f130 <col:31, col:48> 'int' '=='
+    |   | |   |-ImplicitCastExpr 0x7fe4bf02f100 <col:31, col:36> 'int' <LValueToRValue>
+    |   | |   | `-MemberExpr 0x7fe4bf02f0a0 <col:31, col:36> 'int' lvalue ->dst_mode 0x7fe4bf025fd8
+    |   | |   |   `-ImplicitCastExpr 0x7fe4bf02f088 <col:31> 'struct ahd_softc *' <LValueToRValue>
+    |   | |   |     `-DeclRefExpr 0x7fe4bf02f060 <col:31> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    |   | |   `-ImplicitCastExpr 0x7fe4bf02f118 <col:48> 'int' <LValueToRValue>
+    |   | |     `-DeclRefExpr 0x7fe4bf02f0d8 <col:48> 'int' lvalue Var 0x7fe4bf027270 'p' 'int'
+    |   | |-CompoundStmt 0x7fe4bf02fae0 <line:52:7, line:57:7>
+    |   | | |-IfStmt 0x7fe4bf02f438 <line:53:9, col:52>
+    |   | | | |-<<<NULL>>>
+    |   | | | |-<<<NULL>>>
+    |   | | | |-BinaryOperator 0x7fe4bf02f290 <col:13, col:29> 'int' '=='
+    |   | | | | |-ImplicitCastExpr 0x7fe4bf02f278 <col:13, col:24> 'int' <LValueToRValue>
+    |   | | | | | `-ArraySubscriptExpr 0x7fe4bf02f230 <col:13, col:24> 'int' lvalue
+    |   | | | | |   |-ImplicitCastExpr 0x7fe4bf02f218 <col:13, col:18> 'int *' <ArrayToPointerDecay>
+    |   | | | | |   | `-MemberExpr 0x7fe4bf02f1c0 <col:13, col:18> 'int [2]' lvalue ->tags 0x7fe4bf025e00
+    |   | | | | |   |   `-ImplicitCastExpr 0x7fe4bf02f1a8 <col:13> 'struct ahd_softc *' <LValueToRValue>
+    |   | | | | |   |     `-DeclRefExpr 0x7fe4bf02f180 <col:13> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    |   | | | | |   `-IntegerLiteral 0x7fe4bf02f1f8 <col:23> 'int' 0
+    |   | | | | `-IntegerLiteral 0x7fe4bf02f258 <col:29> 'int' 1
+    |   | | | |-ImplicitCastExpr 0x7fe4bf02f420 <col:32, col:52> 'char' <LValueToRValue>
+    |   | | | | `-UnaryOperator 0x7fe4bf02f400 <col:32, col:52> 'volatile char' lvalue prefix '*'
+    |   | | | |   `-ImplicitCastExpr 0x7fe4bf02f3e8 <col:33, col:52> 'volatile char *' <LValueToRValue>
+    |   | | | |     `-ParenExpr 0x7fe4bf02f3c8 <col:33, col:52> 'volatile char *' lvalue
+    |   | | | |       `-MemberExpr 0x7fe4bf02f390 <col:34, col:47> 'volatile char *' lvalue .maddr 0x7fe4bf025a90
+    |   | | | |         `-ArraySubscriptExpr 0x7fe4bf02f368 <col:34, col:45> 'bus_space_handle_t':'bus_space_handle_t' lvalue
+    |   | | | |           |-ImplicitCastExpr 0x7fe4bf02f350 <col:34, col:39> 'bus_space_handle_t *' <ArrayToPointerDecay>
+    |   | | | |           | `-MemberExpr 0x7fe4bf02f2f8 <col:34, col:39> 'bus_space_handle_t [2]' lvalue ->bshs 0x7fe4bf025f78
+    |   | | | |           |   `-ImplicitCastExpr 0x7fe4bf02f2e0 <col:34> 'struct ahd_softc *' <LValueToRValue>
+    |   | | | |           |     `-DeclRefExpr 0x7fe4bf02f2b8 <col:34> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    |   | | | |           `-IntegerLiteral 0x7fe4bf02f330 <col:44> 'int' 0
+    |   | | | `-<<<NULL>>>
+    |   | | |-CallExpr 0x7fe4bf02f5e0 <line:54:11, col:40> 'void'
+    |   | | | |-ImplicitCastExpr 0x7fe4bf02f5c8 <col:11> 'void (*)(int, int)' <FunctionToPointerDecay>
+    |   | | | | `-DeclRefExpr 0x7fe4bf02f470 <col:11> 'void (int, int)' Function 0x7fe4bf026240 'outb' 'void (int, int)'
+    |   | | | |-IntegerLiteral 0x7fe4bf02f498 <col:17> 'int' 1
+    |   | | | `-ImplicitCastExpr 0x7fe4bf02f618 <col:20, col:33> 'int' <LValueToRValue>
+    |   | | |   `-MemberExpr 0x7fe4bf02f590 <col:20, col:33> 'int' lvalue .ioport 0x7fe4bf025a00
+    |   | | |     `-ArraySubscriptExpr 0x7fe4bf02f568 <col:20, col:31> 'bus_space_handle_t':'bus_space_handle_t' lvalue
+    |   | | |       |-ImplicitCastExpr 0x7fe4bf02f550 <col:20, col:25> 'bus_space_handle_t *' <ArrayToPointerDecay>
+    |   | | |       | `-MemberExpr 0x7fe4bf02f4f8 <col:20, col:25> 'bus_space_handle_t [2]' lvalue ->bshs 0x7fe4bf025f78
+    |   | | |       |   `-ImplicitCastExpr 0x7fe4bf02f4e0 <col:20> 'struct ahd_softc *' <LValueToRValue>
+    |   | | |       |     `-DeclRefExpr 0x7fe4bf02f4b8 <col:20> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    |   | | |       `-IntegerLiteral 0x7fe4bf02f530 <col:30> 'int' 0
+    |   | | |-IfStmt 0x7fe4bf02f8e8 <line:55:9, col:52>
+    |   | | | |-<<<NULL>>>
+    |   | | | |-<<<NULL>>>
+    |   | | | |-BinaryOperator 0x7fe4bf02f740 <col:13, col:29> 'int' '=='
+    |   | | | | |-ImplicitCastExpr 0x7fe4bf02f728 <col:13, col:24> 'int' <LValueToRValue>
+    |   | | | | | `-ArraySubscriptExpr 0x7fe4bf02f6e0 <col:13, col:24> 'int' lvalue
+    |   | | | | |   |-ImplicitCastExpr 0x7fe4bf02f6c8 <col:13, col:18> 'int *' <ArrayToPointerDecay>
+    |   | | | | |   | `-MemberExpr 0x7fe4bf02f670 <col:13, col:18> 'int [2]' lvalue ->tags 0x7fe4bf025e00
+    |   | | | | |   |   `-ImplicitCastExpr 0x7fe4bf02f658 <col:13> 'struct ahd_softc *' <LValueToRValue>
+    |   | | | | |   |     `-DeclRefExpr 0x7fe4bf02f630 <col:13> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    |   | | | | |   `-IntegerLiteral 0x7fe4bf02f6a8 <col:23> 'int' 0
+    |   | | | | `-IntegerLiteral 0x7fe4bf02f708 <col:29> 'int' 1
+    |   | | | |-ImplicitCastExpr 0x7fe4bf02f8d0 <col:32, col:52> 'char' <LValueToRValue>
+    |   | | | | `-UnaryOperator 0x7fe4bf02f8b0 <col:32, col:52> 'volatile char' lvalue prefix '*'
+    |   | | | |   `-ImplicitCastExpr 0x7fe4bf02f898 <col:33, col:52> 'volatile char *' <LValueToRValue>
+    |   | | | |     `-ParenExpr 0x7fe4bf02f878 <col:33, col:52> 'volatile char *' lvalue
+    |   | | | |       `-MemberExpr 0x7fe4bf02f840 <col:34, col:47> 'volatile char *' lvalue .maddr 0x7fe4bf025a90
+    |   | | | |         `-ArraySubscriptExpr 0x7fe4bf02f818 <col:34, col:45> 'bus_space_handle_t':'bus_space_handle_t' lvalue
+    |   | | | |           |-ImplicitCastExpr 0x7fe4bf02f800 <col:34, col:39> 'bus_space_handle_t *' <ArrayToPointerDecay>
+    |   | | | |           | `-MemberExpr 0x7fe4bf02f7a8 <col:34, col:39> 'bus_space_handle_t [2]' lvalue ->bshs 0x7fe4bf025f78
+    |   | | | |           |   `-ImplicitCastExpr 0x7fe4bf02f790 <col:34> 'struct ahd_softc *' <LValueToRValue>
+    |   | | | |           |     `-DeclRefExpr 0x7fe4bf02f768 <col:34> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    |   | | | |           `-IntegerLiteral 0x7fe4bf02f7e0 <col:44> 'int' 0
+    |   | | | `-<<<NULL>>>
+    |   | | `-CallExpr 0x7fe4bf02fa90 <line:56:11, col:40> 'void'
+    |   | |   |-ImplicitCastExpr 0x7fe4bf02fa78 <col:11> 'void (*)(int, int)' <FunctionToPointerDecay>
+    |   | |   | `-DeclRefExpr 0x7fe4bf02f920 <col:11> 'void (int, int)' Function 0x7fe4bf026240 'outb' 'void (int, int)'
+    |   | |   |-IntegerLiteral 0x7fe4bf02f948 <col:17> 'int' 1
+    |   | |   `-ImplicitCastExpr 0x7fe4bf02fac8 <col:20, col:33> 'int' <LValueToRValue>
+    |   | |     `-MemberExpr 0x7fe4bf02fa40 <col:20, col:33> 'int' lvalue .ioport 0x7fe4bf025a00
+    |   | |       `-ArraySubscriptExpr 0x7fe4bf02fa18 <col:20, col:31> 'bus_space_handle_t':'bus_space_handle_t' lvalue
+    |   | |         |-ImplicitCastExpr 0x7fe4bf02fa00 <col:20, col:25> 'bus_space_handle_t *' <ArrayToPointerDecay>
+    |   | |         | `-MemberExpr 0x7fe4bf02f9a8 <col:20, col:25> 'bus_space_handle_t [2]' lvalue ->bshs 0x7fe4bf025f78
+    |   | |         |   `-ImplicitCastExpr 0x7fe4bf02f990 <col:20> 'struct ahd_softc *' <LValueToRValue>
+    |   | |         |     `-DeclRefExpr 0x7fe4bf02f968 <col:20> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    |   | |         `-IntegerLiteral 0x7fe4bf02f9e0 <col:30> 'int' 0
+    |   | `-<<<NULL>>>
+    |   |-BinaryOperator 0x7fe4bf02fbe8 <line:58:5, col:21> 'int' '='
+    |   | |-MemberExpr 0x7fe4bf02fb90 <col:5, col:10> 'int' lvalue ->src_mode 0x7fe4bf026038
+    |   | | `-ImplicitCastExpr 0x7fe4bf02fb78 <col:5> 'struct ahd_softc *' <LValueToRValue>
+    |   | |   `-DeclRefExpr 0x7fe4bf02fb50 <col:5> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    |   | `-IntegerLiteral 0x7fe4bf02fbc8 <col:21> 'int' 1
+    |   |-BinaryOperator 0x7fe4bf02fca8 <line:59:5, col:21> 'int' '='
+    |   | |-MemberExpr 0x7fe4bf02fc50 <col:5, col:10> 'int' lvalue ->dst_mode 0x7fe4bf025fd8
+    |   | | `-ImplicitCastExpr 0x7fe4bf02fc38 <col:5> 'struct ahd_softc *' <LValueToRValue>
+    |   | |   `-DeclRefExpr 0x7fe4bf02fc10 <col:5> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    |   | `-IntegerLiteral 0x7fe4bf02fc88 <col:21> 'int' 2
+    |   |-IfStmt 0x7fe4bf02ff88 <line:60:5, col:48>
+    |   | |-<<<NULL>>>
+    |   | |-<<<NULL>>>
+    |   | |-BinaryOperator 0x7fe4bf02fde0 <col:9, col:25> 'int' '=='
+    |   | | |-ImplicitCastExpr 0x7fe4bf02fdc8 <col:9, col:20> 'int' <LValueToRValue>
+    |   | | | `-ArraySubscriptExpr 0x7fe4bf02fd80 <col:9, col:20> 'int' lvalue
+    |   | | |   |-ImplicitCastExpr 0x7fe4bf02fd68 <col:9, col:14> 'int *' <ArrayToPointerDecay>
+    |   | | |   | `-MemberExpr 0x7fe4bf02fd10 <col:9, col:14> 'int [2]' lvalue ->tags 0x7fe4bf025e00
+    |   | | |   |   `-ImplicitCastExpr 0x7fe4bf02fcf8 <col:9> 'struct ahd_softc *' <LValueToRValue>
+    |   | | |   |     `-DeclRefExpr 0x7fe4bf02fcd0 <col:9> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    |   | | |   `-IntegerLiteral 0x7fe4bf02fd48 <col:19> 'int' 0
+    |   | | `-IntegerLiteral 0x7fe4bf02fda8 <col:25> 'int' 1
+    |   | |-ImplicitCastExpr 0x7fe4bf02ff70 <col:28, col:48> 'char' <LValueToRValue>
+    |   | | `-UnaryOperator 0x7fe4bf02ff50 <col:28, col:48> 'volatile char' lvalue prefix '*'
+    |   | |   `-ImplicitCastExpr 0x7fe4bf02ff38 <col:29, col:48> 'volatile char *' <LValueToRValue>
+    |   | |     `-ParenExpr 0x7fe4bf02ff18 <col:29, col:48> 'volatile char *' lvalue
+    |   | |       `-MemberExpr 0x7fe4bf02fee0 <col:30, col:43> 'volatile char *' lvalue .maddr 0x7fe4bf025a90
+    |   | |         `-ArraySubscriptExpr 0x7fe4bf02feb8 <col:30, col:41> 'bus_space_handle_t':'bus_space_handle_t' lvalue
+    |   | |           |-ImplicitCastExpr 0x7fe4bf02fea0 <col:30, col:35> 'bus_space_handle_t *' <ArrayToPointerDecay>
+    |   | |           | `-MemberExpr 0x7fe4bf02fe48 <col:30, col:35> 'bus_space_handle_t [2]' lvalue ->bshs 0x7fe4bf025f78
+    |   | |           |   `-ImplicitCastExpr 0x7fe4bf02fe30 <col:30> 'struct ahd_softc *' <LValueToRValue>
+    |   | |           |     `-DeclRefExpr 0x7fe4bf02fe08 <col:30> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    |   | |           `-IntegerLiteral 0x7fe4bf02fe80 <col:40> 'int' 0
+    |   | `-<<<NULL>>>
+    |   |-CallExpr 0x7fe4bf030148 <line:61:7, col:36> 'void'
+    |   | |-ImplicitCastExpr 0x7fe4bf030130 <col:7> 'void (*)(int, int)' <FunctionToPointerDecay>
+    |   | | `-DeclRefExpr 0x7fe4bf02ffc0 <col:7> 'void (int, int)' Function 0x7fe4bf026240 'outb' 'void (int, int)'
+    |   | |-IntegerLiteral 0x7fe4bf030000 <col:13> 'int' 1
+    |   | `-ImplicitCastExpr 0x7fe4bf030180 <col:16, col:29> 'int' <LValueToRValue>
+    |   |   `-MemberExpr 0x7fe4bf0300f8 <col:16, col:29> 'int' lvalue .ioport 0x7fe4bf025a00
+    |   |     `-ArraySubscriptExpr 0x7fe4bf0300d0 <col:16, col:27> 'bus_space_handle_t':'bus_space_handle_t' lvalue
+    |   |       |-ImplicitCastExpr 0x7fe4bf0300b8 <col:16, col:21> 'bus_space_handle_t *' <ArrayToPointerDecay>
+    |   |       | `-MemberExpr 0x7fe4bf030060 <col:16, col:21> 'bus_space_handle_t [2]' lvalue ->bshs 0x7fe4bf025f78
+    |   |       |   `-ImplicitCastExpr 0x7fe4bf030048 <col:16> 'struct ahd_softc *' <LValueToRValue>
+    |   |       |     `-DeclRefExpr 0x7fe4bf030020 <col:16> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    |   |       `-IntegerLiteral 0x7fe4bf030098 <col:26> 'int' 0
+    |   |-IfStmt 0x7fe4bf030450 <line:62:5, col:48>
+    |   | |-<<<NULL>>>
+    |   | |-<<<NULL>>>
+    |   | |-BinaryOperator 0x7fe4bf0302a8 <col:9, col:25> 'int' '=='
+    |   | | |-ImplicitCastExpr 0x7fe4bf030290 <col:9, col:20> 'int' <LValueToRValue>
+    |   | | | `-ArraySubscriptExpr 0x7fe4bf030248 <col:9, col:20> 'int' lvalue
+    |   | | |   |-ImplicitCastExpr 0x7fe4bf030230 <col:9, col:14> 'int *' <ArrayToPointerDecay>
+    |   | | |   | `-MemberExpr 0x7fe4bf0301d8 <col:9, col:14> 'int [2]' lvalue ->tags 0x7fe4bf025e00
+    |   | | |   |   `-ImplicitCastExpr 0x7fe4bf0301c0 <col:9> 'struct ahd_softc *' <LValueToRValue>
+    |   | | |   |     `-DeclRefExpr 0x7fe4bf030198 <col:9> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    |   | | |   `-IntegerLiteral 0x7fe4bf030210 <col:19> 'int' 0
+    |   | | `-IntegerLiteral 0x7fe4bf030270 <col:25> 'int' 1
+    |   | |-ImplicitCastExpr 0x7fe4bf030438 <col:28, col:48> 'char' <LValueToRValue>
+    |   | | `-UnaryOperator 0x7fe4bf030418 <col:28, col:48> 'volatile char' lvalue prefix '*'
+    |   | |   `-ImplicitCastExpr 0x7fe4bf030400 <col:29, col:48> 'volatile char *' <LValueToRValue>
+    |   | |     `-ParenExpr 0x7fe4bf0303e0 <col:29, col:48> 'volatile char *' lvalue
+    |   | |       `-MemberExpr 0x7fe4bf0303a8 <col:30, col:43> 'volatile char *' lvalue .maddr 0x7fe4bf025a90
+    |   | |         `-ArraySubscriptExpr 0x7fe4bf030380 <col:30, col:41> 'bus_space_handle_t':'bus_space_handle_t' lvalue
+    |   | |           |-ImplicitCastExpr 0x7fe4bf030368 <col:30, col:35> 'bus_space_handle_t *' <ArrayToPointerDecay>
+    |   | |           | `-MemberExpr 0x7fe4bf030310 <col:30, col:35> 'bus_space_handle_t [2]' lvalue ->bshs 0x7fe4bf025f78
+    |   | |           |   `-ImplicitCastExpr 0x7fe4bf0302f8 <col:30> 'struct ahd_softc *' <LValueToRValue>
+    |   | |           |     `-DeclRefExpr 0x7fe4bf0302d0 <col:30> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    |   | |           `-IntegerLiteral 0x7fe4bf030348 <col:40> 'int' 0
+    |   | `-<<<NULL>>>
+    |   |-CallExpr 0x7fe4bf0305f8 <line:63:7, col:36> 'void'
+    |   | |-ImplicitCastExpr 0x7fe4bf0305e0 <col:7> 'void (*)(int, int)' <FunctionToPointerDecay>
+    |   | | `-DeclRefExpr 0x7fe4bf030488 <col:7> 'void (int, int)' Function 0x7fe4bf026240 'outb' 'void (int, int)'
+    |   | |-IntegerLiteral 0x7fe4bf0304b0 <col:13> 'int' 1
+    |   | `-ImplicitCastExpr 0x7fe4bf030630 <col:16, col:29> 'int' <LValueToRValue>
+    |   |   `-MemberExpr 0x7fe4bf0305a8 <col:16, col:29> 'int' lvalue .ioport 0x7fe4bf025a00
+    |   |     `-ArraySubscriptExpr 0x7fe4bf030580 <col:16, col:27> 'bus_space_handle_t':'bus_space_handle_t' lvalue
+    |   |       |-ImplicitCastExpr 0x7fe4bf030568 <col:16, col:21> 'bus_space_handle_t *' <ArrayToPointerDecay>
+    |   |       | `-MemberExpr 0x7fe4bf030510 <col:16, col:21> 'bus_space_handle_t [2]' lvalue ->bshs 0x7fe4bf025f78
+    |   |       |   `-ImplicitCastExpr 0x7fe4bf0304f8 <col:16> 'struct ahd_softc *' <LValueToRValue>
+    |   |       |     `-DeclRefExpr 0x7fe4bf0304d0 <col:16> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    |   |       `-IntegerLiteral 0x7fe4bf030548 <col:26> 'int' 0
+    |   |-IfStmt 0x7fe4bf030838 <line:64:5, line:65:19>
+    |   | |-<<<NULL>>>
+    |   | |-<<<NULL>>>
+    |   | |-BinaryOperator 0x7fe4bf030760 <line:64:9, col:29> 'int' '!='
+    |   | | |-ParenExpr 0x7fe4bf030720 <col:9, col:24> 'int'
+    |   | | | `-BinaryOperator 0x7fe4bf0306f8 <col:10, col:23> 'int' '&'
+    |   | | |   |-ImplicitCastExpr 0x7fe4bf0306e0 <col:10, col:15> 'int' <LValueToRValue>
+    |   | | |   | `-MemberExpr 0x7fe4bf030688 <col:10, col:15> 'int' lvalue ->flags 0x7fe4bf026098
+    |   | | |   |   `-ImplicitCastExpr 0x7fe4bf030670 <col:10> 'struct ahd_softc *' <LValueToRValue>
+    |   | | |   |     `-DeclRefExpr 0x7fe4bf030648 <col:10> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    |   | | |   `-IntegerLiteral 0x7fe4bf0306c0 <col:23> 'int' 1
+    |   | | `-IntegerLiteral 0x7fe4bf030740 <col:29> 'int' 0
+    |   | |-CallExpr 0x7fe4bf0307f0 <line:65:7, col:19> 'int'
+    |   | | |-ImplicitCastExpr 0x7fe4bf0307d8 <col:7> 'int (*)(struct ahd_softc *)' <FunctionToPointerDecay>
+    |   | | | `-DeclRefExpr 0x7fe4bf030788 <col:7> 'int (struct ahd_softc *)' Function 0x7fe4bf0264e8 'foo_inb' 'int (struct ahd_softc *)'
+    |   | | `-ImplicitCastExpr 0x7fe4bf030820 <col:16> 'struct ahd_softc *' <LValueToRValue>
+    |   | |   `-DeclRefExpr 0x7fe4bf0307b0 <col:16> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    |   | `-<<<NULL>>>
+    |   |-IfStmt 0x7fe4bf030a60 <line:66:5, line:67:19>
+    |   | |-<<<NULL>>>
+    |   | |-<<<NULL>>>
+    |   | |-BinaryOperator 0x7fe4bf030988 <line:66:9, col:29> 'int' '!='
+    |   | | |-ParenExpr 0x7fe4bf030948 <col:9, col:24> 'int'
+    |   | | | `-BinaryOperator 0x7fe4bf030920 <col:10, col:23> 'int' '&'
+    |   | | |   |-ImplicitCastExpr 0x7fe4bf030908 <col:10, col:15> 'int' <LValueToRValue>
+    |   | | |   | `-MemberExpr 0x7fe4bf0308b0 <col:10, col:15> 'int' lvalue ->flags 0x7fe4bf026098
+    |   | | |   |   `-ImplicitCastExpr 0x7fe4bf030898 <col:10> 'struct ahd_softc *' <LValueToRValue>
+    |   | | |   |     `-DeclRefExpr 0x7fe4bf030870 <col:10> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    |   | | |   `-IntegerLiteral 0x7fe4bf0308e8 <col:23> 'int' 1
+    |   | | `-IntegerLiteral 0x7fe4bf030968 <col:29> 'int' 0
+    |   | |-CallExpr 0x7fe4bf030a18 <line:67:7, col:19> 'int'
+    |   | | |-ImplicitCastExpr 0x7fe4bf030a00 <col:7> 'int (*)(struct ahd_softc *)' <FunctionToPointerDecay>
+    |   | | | `-DeclRefExpr 0x7fe4bf0309b0 <col:7> 'int (struct ahd_softc *)' Function 0x7fe4bf0264e8 'foo_inb' 'int (struct ahd_softc *)'
+    |   | | `-ImplicitCastExpr 0x7fe4bf030a48 <col:16> 'struct ahd_softc *' <LValueToRValue>
+    |   | |   `-DeclRefExpr 0x7fe4bf0309d8 <col:16> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    |   | `-<<<NULL>>>
+    |   |-IfStmt 0x7fe4bf030c88 <line:68:5, line:69:19>
+    |   | |-<<<NULL>>>
+    |   | |-<<<NULL>>>
+    |   | |-BinaryOperator 0x7fe4bf030bb0 <line:68:9, col:29> 'int' '!='
+    |   | | |-ParenExpr 0x7fe4bf030b70 <col:9, col:24> 'int'
+    |   | | | `-BinaryOperator 0x7fe4bf030b48 <col:10, col:23> 'int' '&'
+    |   | | |   |-ImplicitCastExpr 0x7fe4bf030b30 <col:10, col:15> 'int' <LValueToRValue>
+    |   | | |   | `-MemberExpr 0x7fe4bf030ad8 <col:10, col:15> 'int' lvalue ->flags 0x7fe4bf026098
+    |   | | |   |   `-ImplicitCastExpr 0x7fe4bf030ac0 <col:10> 'struct ahd_softc *' <LValueToRValue>
+    |   | | |   |     `-DeclRefExpr 0x7fe4bf030a98 <col:10> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    |   | | |   `-IntegerLiteral 0x7fe4bf030b10 <col:23> 'int' 1
+    |   | | `-IntegerLiteral 0x7fe4bf030b90 <col:29> 'int' 0
+    |   | |-CallExpr 0x7fe4bf030c40 <line:69:7, col:19> 'int'
+    |   | | |-ImplicitCastExpr 0x7fe4bf030c28 <col:7> 'int (*)(struct ahd_softc *)' <FunctionToPointerDecay>
+    |   | | | `-DeclRefExpr 0x7fe4bf030bd8 <col:7> 'int (struct ahd_softc *)' Function 0x7fe4bf0264e8 'foo_inb' 'int (struct ahd_softc *)'
+    |   | | `-ImplicitCastExpr 0x7fe4bf030c70 <col:16> 'struct ahd_softc *' <LValueToRValue>
+    |   | |   `-DeclRefExpr 0x7fe4bf030c00 <col:16> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    |   | `-<<<NULL>>>
+    |   |-IfStmt 0x7fe4bf030f78 <line:70:5, col:48>
+    |   | |-<<<NULL>>>
+    |   | |-<<<NULL>>>
+    |   | |-BinaryOperator 0x7fe4bf030dd0 <col:9, col:25> 'int' '=='
+    |   | | |-ImplicitCastExpr 0x7fe4bf030db8 <col:9, col:20> 'int' <LValueToRValue>
+    |   | | | `-ArraySubscriptExpr 0x7fe4bf030d70 <col:9, col:20> 'int' lvalue
+    |   | | |   |-ImplicitCastExpr 0x7fe4bf030d58 <col:9, col:14> 'int *' <ArrayToPointerDecay>
+    |   | | |   | `-MemberExpr 0x7fe4bf030d00 <col:9, col:14> 'int [2]' lvalue ->tags 0x7fe4bf025e00
+    |   | | |   |   `-ImplicitCastExpr 0x7fe4bf030ce8 <col:9> 'struct ahd_softc *' <LValueToRValue>
+    |   | | |   |     `-DeclRefExpr 0x7fe4bf030cc0 <col:9> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    |   | | |   `-IntegerLiteral 0x7fe4bf030d38 <col:19> 'int' 0
+    |   | | `-IntegerLiteral 0x7fe4bf030d98 <col:25> 'int' 1
+    |   | |-ImplicitCastExpr 0x7fe4bf030f60 <col:28, col:48> 'char' <LValueToRValue>
+    |   | | `-UnaryOperator 0x7fe4bf030f40 <col:28, col:48> 'volatile char' lvalue prefix '*'
+    |   | |   `-ImplicitCastExpr 0x7fe4bf030f28 <col:29, col:48> 'volatile char *' <LValueToRValue>
+    |   | |     `-ParenExpr 0x7fe4bf030f08 <col:29, col:48> 'volatile char *' lvalue
+    |   | |       `-MemberExpr 0x7fe4bf030ed0 <col:30, col:43> 'volatile char *' lvalue .maddr 0x7fe4bf025a90
+    |   | |         `-ArraySubscriptExpr 0x7fe4bf030ea8 <col:30, col:41> 'bus_space_handle_t':'bus_space_handle_t' lvalue
+    |   | |           |-ImplicitCastExpr 0x7fe4bf030e90 <col:30, col:35> 'bus_space_handle_t *' <ArrayToPointerDecay>
+    |   | |           | `-MemberExpr 0x7fe4bf030e38 <col:30, col:35> 'bus_space_handle_t [2]' lvalue ->bshs 0x7fe4bf025f78
+    |   | |           |   `-ImplicitCastExpr 0x7fe4bf030e20 <col:30> 'struct ahd_softc *' <LValueToRValue>
+    |   | |           |     `-DeclRefExpr 0x7fe4bf030df8 <col:30> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    |   | |           `-IntegerLiteral 0x7fe4bf030e70 <col:40> 'int' 0
+    |   | `-<<<NULL>>>
+    |   |-CallExpr 0x7fe4bf031128 <line:71:7, col:36> 'void'
+    |   | |-ImplicitCastExpr 0x7fe4bf031110 <col:7> 'void (*)(int, int)' <FunctionToPointerDecay>
+    |   | | `-DeclRefExpr 0x7fe4bf030fb0 <col:7> 'void (int, int)' Function 0x7fe4bf026240 'outb' 'void (int, int)'
+    |   | |-IntegerLiteral 0x7fe4bf030fd8 <col:13> 'int' 1
+    |   | `-ImplicitCastExpr 0x7fe4bf031160 <col:16, col:29> 'int' <LValueToRValue>
+    |   |   `-MemberExpr 0x7fe4bf0310d8 <col:16, col:29> 'int' lvalue .ioport 0x7fe4bf025a00
+    |   |     `-ArraySubscriptExpr 0x7fe4bf0310b0 <col:16, col:27> 'bus_space_handle_t':'bus_space_handle_t' lvalue
+    |   |       |-ImplicitCastExpr 0x7fe4bf031098 <col:16, col:21> 'bus_space_handle_t *' <ArrayToPointerDecay>
+    |   |       | `-MemberExpr 0x7fe4bf031040 <col:16, col:21> 'bus_space_handle_t [2]' lvalue ->bshs 0x7fe4bf025f78
+    |   |       |   `-ImplicitCastExpr 0x7fe4bf031028 <col:16> 'struct ahd_softc *' <LValueToRValue>
+    |   |       |     `-DeclRefExpr 0x7fe4bf031000 <col:16> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    |   |       `-IntegerLiteral 0x7fe4bf031078 <col:26> 'int' 0
+    |   |-IfStmt 0x7fe4bf031430 <line:72:5, col:48>
+    |   | |-<<<NULL>>>
+    |   | |-<<<NULL>>>
+    |   | |-BinaryOperator 0x7fe4bf031288 <col:9, col:25> 'int' '=='
+    |   | | |-ImplicitCastExpr 0x7fe4bf031270 <col:9, col:20> 'int' <LValueToRValue>
+    |   | | | `-ArraySubscriptExpr 0x7fe4bf031228 <col:9, col:20> 'int' lvalue
+    |   | | |   |-ImplicitCastExpr 0x7fe4bf031210 <col:9, col:14> 'int *' <ArrayToPointerDecay>
+    |   | | |   | `-MemberExpr 0x7fe4bf0311b8 <col:9, col:14> 'int [2]' lvalue ->tags 0x7fe4bf025e00
+    |   | | |   |   `-ImplicitCastExpr 0x7fe4bf0311a0 <col:9> 'struct ahd_softc *' <LValueToRValue>
+    |   | | |   |     `-DeclRefExpr 0x7fe4bf031178 <col:9> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    |   | | |   `-IntegerLiteral 0x7fe4bf0311f0 <col:19> 'int' 0
+    |   | | `-IntegerLiteral 0x7fe4bf031250 <col:25> 'int' 1
+    |   | |-ImplicitCastExpr 0x7fe4bf031418 <col:28, col:48> 'char' <LValueToRValue>
+    |   | | `-UnaryOperator 0x7fe4bf0313f8 <col:28, col:48> 'volatile char' lvalue prefix '*'
+    |   | |   `-ImplicitCastExpr 0x7fe4bf0313e0 <col:29, col:48> 'volatile char *' <LValueToRValue>
+    |   | |     `-ParenExpr 0x7fe4bf0313c0 <col:29, col:48> 'volatile char *' lvalue
+    |   | |       `-MemberExpr 0x7fe4bf031388 <col:30, col:43> 'volatile char *' lvalue .maddr 0x7fe4bf025a90
+    |   | |         `-ArraySubscriptExpr 0x7fe4bf031360 <col:30, col:41> 'bus_space_handle_t':'bus_space_handle_t' lvalue
+    |   | |           |-ImplicitCastExpr 0x7fe4bf031348 <col:30, col:35> 'bus_space_handle_t *' <ArrayToPointerDecay>
+    |   | |           | `-MemberExpr 0x7fe4bf0312f0 <col:30, col:35> 'bus_space_handle_t [2]' lvalue ->bshs 0x7fe4bf025f78
+    |   | |           |   `-ImplicitCastExpr 0x7fe4bf0312d8 <col:30> 'struct ahd_softc *' <LValueToRValue>
+    |   | |           |     `-DeclRefExpr 0x7fe4bf0312b0 <col:30> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    |   | |           `-IntegerLiteral 0x7fe4bf031328 <col:40> 'int' 0
+    |   | `-<<<NULL>>>
+    |   |-CallExpr 0x7fe4bf0315d8 <line:73:7, col:36> 'void'
+    |   | |-ImplicitCastExpr 0x7fe4bf0315c0 <col:7> 'void (*)(int, int)' <FunctionToPointerDecay>
+    |   | | `-DeclRefExpr 0x7fe4bf031468 <col:7> 'void (int, int)' Function 0x7fe4bf026240 'outb' 'void (int, int)'
+    |   | |-IntegerLiteral 0x7fe4bf031490 <col:13> 'int' 1
+    |   | `-ImplicitCastExpr 0x7fe4bf031610 <col:16, col:29> 'int' <LValueToRValue>
+    |   |   `-MemberExpr 0x7fe4bf031588 <col:16, col:29> 'int' lvalue .ioport 0x7fe4bf025a00
+    |   |     `-ArraySubscriptExpr 0x7fe4bf031560 <col:16, col:27> 'bus_space_handle_t':'bus_space_handle_t' lvalue
+    |   |       |-ImplicitCastExpr 0x7fe4bf031548 <col:16, col:21> 'bus_space_handle_t *' <ArrayToPointerDecay>
+    |   |       | `-MemberExpr 0x7fe4bf0314f0 <col:16, col:21> 'bus_space_handle_t [2]' lvalue ->bshs 0x7fe4bf025f78
+    |   |       |   `-ImplicitCastExpr 0x7fe4bf0314d8 <col:16> 'struct ahd_softc *' <LValueToRValue>
+    |   |       |     `-DeclRefExpr 0x7fe4bf0314b0 <col:16> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    |   |       `-IntegerLiteral 0x7fe4bf031528 <col:26> 'int' 0
+    |   |-IfStmt 0x7fe4bf031818 <line:74:5, line:75:19>
+    |   | |-<<<NULL>>>
+    |   | |-<<<NULL>>>
+    |   | |-BinaryOperator 0x7fe4bf031740 <line:74:9, col:29> 'int' '!='
+    |   | | |-ParenExpr 0x7fe4bf031700 <col:9, col:24> 'int'
+    |   | | | `-BinaryOperator 0x7fe4bf0316d8 <col:10, col:23> 'int' '&'
+    |   | | |   |-ImplicitCastExpr 0x7fe4bf0316c0 <col:10, col:15> 'int' <LValueToRValue>
+    |   | | |   | `-MemberExpr 0x7fe4bf031668 <col:10, col:15> 'int' lvalue ->flags 0x7fe4bf026098
+    |   | | |   |   `-ImplicitCastExpr 0x7fe4bf031650 <col:10> 'struct ahd_softc *' <LValueToRValue>
+    |   | | |   |     `-DeclRefExpr 0x7fe4bf031628 <col:10> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    |   | | |   `-IntegerLiteral 0x7fe4bf0316a0 <col:23> 'int' 1
+    |   | | `-IntegerLiteral 0x7fe4bf031720 <col:29> 'int' 0
+    |   | |-CallExpr 0x7fe4bf0317d0 <line:75:7, col:19> 'int'
+    |   | | |-ImplicitCastExpr 0x7fe4bf0317b8 <col:7> 'int (*)(struct ahd_softc *)' <FunctionToPointerDecay>
+    |   | | | `-DeclRefExpr 0x7fe4bf031768 <col:7> 'int (struct ahd_softc *)' Function 0x7fe4bf0264e8 'foo_inb' 'int (struct ahd_softc *)'
+    |   | | `-ImplicitCastExpr 0x7fe4bf031800 <col:16> 'struct ahd_softc *' <LValueToRValue>
+    |   | |   `-DeclRefExpr 0x7fe4bf031790 <col:16> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    |   | `-<<<NULL>>>
+    |   |-IfStmt 0x7fe4bf031b08 <line:76:5, col:48>
+    |   | |-<<<NULL>>>
+    |   | |-<<<NULL>>>
+    |   | |-BinaryOperator 0x7fe4bf031960 <col:9, col:25> 'int' '=='
+    |   | | |-ImplicitCastExpr 0x7fe4bf031948 <col:9, col:20> 'int' <LValueToRValue>
+    |   | | | `-ArraySubscriptExpr 0x7fe4bf031900 <col:9, col:20> 'int' lvalue
+    |   | | |   |-ImplicitCastExpr 0x7fe4bf0318e8 <col:9, col:14> 'int *' <ArrayToPointerDecay>
+    |   | | |   | `-MemberExpr 0x7fe4bf031890 <col:9, col:14> 'int [2]' lvalue ->tags 0x7fe4bf025e00
+    |   | | |   |   `-ImplicitCastExpr 0x7fe4bf031878 <col:9> 'struct ahd_softc *' <LValueToRValue>
+    |   | | |   |     `-DeclRefExpr 0x7fe4bf031850 <col:9> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    |   | | |   `-IntegerLiteral 0x7fe4bf0318c8 <col:19> 'int' 0
+    |   | | `-IntegerLiteral 0x7fe4bf031928 <col:25> 'int' 1
+    |   | |-ImplicitCastExpr 0x7fe4bf031af0 <col:28, col:48> 'char' <LValueToRValue>
+    |   | | `-UnaryOperator 0x7fe4bf031ad0 <col:28, col:48> 'volatile char' lvalue prefix '*'
+    |   | |   `-ImplicitCastExpr 0x7fe4bf031ab8 <col:29, col:48> 'volatile char *' <LValueToRValue>
+    |   | |     `-ParenExpr 0x7fe4bf031a98 <col:29, col:48> 'volatile char *' lvalue
+    |   | |       `-MemberExpr 0x7fe4bf031a60 <col:30, col:43> 'volatile char *' lvalue .maddr 0x7fe4bf025a90
+    |   | |         `-ArraySubscriptExpr 0x7fe4bf031a38 <col:30, col:41> 'bus_space_handle_t':'bus_space_handle_t' lvalue
+    |   | |           |-ImplicitCastExpr 0x7fe4bf031a20 <col:30, col:35> 'bus_space_handle_t *' <ArrayToPointerDecay>
+    |   | |           | `-MemberExpr 0x7fe4bf0319c8 <col:30, col:35> 'bus_space_handle_t [2]' lvalue ->bshs 0x7fe4bf025f78
+    |   | |           |   `-ImplicitCastExpr 0x7fe4bf0319b0 <col:30> 'struct ahd_softc *' <LValueToRValue>
+    |   | |           |     `-DeclRefExpr 0x7fe4bf031988 <col:30> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    |   | |           `-IntegerLiteral 0x7fe4bf031a00 <col:40> 'int' 0
+    |   | `-<<<NULL>>>
+    |   |-CallExpr 0x7fe4bf031cb0 <line:77:7, col:36> 'void'
+    |   | |-ImplicitCastExpr 0x7fe4bf031c98 <col:7> 'void (*)(int, int)' <FunctionToPointerDecay>
+    |   | | `-DeclRefExpr 0x7fe4bf031b40 <col:7> 'void (int, int)' Function 0x7fe4bf026240 'outb' 'void (int, int)'
+    |   | |-IntegerLiteral 0x7fe4bf031b68 <col:13> 'int' 1
+    |   | `-ImplicitCastExpr 0x7fe4bf031ce8 <col:16, col:29> 'int' <LValueToRValue>
+    |   |   `-MemberExpr 0x7fe4bf031c60 <col:16, col:29> 'int' lvalue .ioport 0x7fe4bf025a00
+    |   |     `-ArraySubscriptExpr 0x7fe4bf031c38 <col:16, col:27> 'bus_space_handle_t':'bus_space_handle_t' lvalue
+    |   |       |-ImplicitCastExpr 0x7fe4bf031c20 <col:16, col:21> 'bus_space_handle_t *' <ArrayToPointerDecay>
+    |   |       | `-MemberExpr 0x7fe4bf031bc8 <col:16, col:21> 'bus_space_handle_t [2]' lvalue ->bshs 0x7fe4bf025f78
+    |   |       |   `-ImplicitCastExpr 0x7fe4bf031bb0 <col:16> 'struct ahd_softc *' <LValueToRValue>
+    |   |       |     `-DeclRefExpr 0x7fe4bf031b88 <col:16> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    |   |       `-IntegerLiteral 0x7fe4bf031c00 <col:26> 'int' 0
+    |   |-IfStmt 0x7fe4bf031fb8 <line:78:5, col:48>
+    |   | |-<<<NULL>>>
+    |   | |-<<<NULL>>>
+    |   | |-BinaryOperator 0x7fe4bf031e10 <col:9, col:25> 'int' '=='
+    |   | | |-ImplicitCastExpr 0x7fe4bf031df8 <col:9, col:20> 'int' <LValueToRValue>
+    |   | | | `-ArraySubscriptExpr 0x7fe4bf031db0 <col:9, col:20> 'int' lvalue
+    |   | | |   |-ImplicitCastExpr 0x7fe4bf031d98 <col:9, col:14> 'int *' <ArrayToPointerDecay>
+    |   | | |   | `-MemberExpr 0x7fe4bf031d40 <col:9, col:14> 'int [2]' lvalue ->tags 0x7fe4bf025e00
+    |   | | |   |   `-ImplicitCastExpr 0x7fe4bf031d28 <col:9> 'struct ahd_softc *' <LValueToRValue>
+    |   | | |   |     `-DeclRefExpr 0x7fe4bf031d00 <col:9> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    |   | | |   `-IntegerLiteral 0x7fe4bf031d78 <col:19> 'int' 0
+    |   | | `-IntegerLiteral 0x7fe4bf031dd8 <col:25> 'int' 1
+    |   | |-ImplicitCastExpr 0x7fe4bf031fa0 <col:28, col:48> 'char' <LValueToRValue>
+    |   | | `-UnaryOperator 0x7fe4bf031f80 <col:28, col:48> 'volatile char' lvalue prefix '*'
+    |   | |   `-ImplicitCastExpr 0x7fe4bf031f68 <col:29, col:48> 'volatile char *' <LValueToRValue>
+    |   | |     `-ParenExpr 0x7fe4bf031f48 <col:29, col:48> 'volatile char *' lvalue
+    |   | |       `-MemberExpr 0x7fe4bf031f10 <col:30, col:43> 'volatile char *' lvalue .maddr 0x7fe4bf025a90
+    |   | |         `-ArraySubscriptExpr 0x7fe4bf031ee8 <col:30, col:41> 'bus_space_handle_t':'bus_space_handle_t' lvalue
+    |   | |           |-ImplicitCastExpr 0x7fe4bf031ed0 <col:30, col:35> 'bus_space_handle_t *' <ArrayToPointerDecay>
+    |   | |           | `-MemberExpr 0x7fe4bf031e78 <col:30, col:35> 'bus_space_handle_t [2]' lvalue ->bshs 0x7fe4bf025f78
+    |   | |           |   `-ImplicitCastExpr 0x7fe4bf031e60 <col:30> 'struct ahd_softc *' <LValueToRValue>
+    |   | |           |     `-DeclRefExpr 0x7fe4bf031e38 <col:30> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    |   | |           `-IntegerLiteral 0x7fe4bf031eb0 <col:40> 'int' 0
+    |   | `-<<<NULL>>>
+    |   |-CallExpr 0x7fe4bf032170 <line:79:7, col:36> 'void'
+    |   | |-ImplicitCastExpr 0x7fe4bf032158 <col:7> 'void (*)(int, int)' <FunctionToPointerDecay>
+    |   | | `-DeclRefExpr 0x7fe4bf032000 <col:7> 'void (int, int)' Function 0x7fe4bf026240 'outb' 'void (int, int)'
+    |   | |-IntegerLiteral 0x7fe4bf032028 <col:13> 'int' 1
+    |   | `-ImplicitCastExpr 0x7fe4bf0321a8 <col:16, col:29> 'int' <LValueToRValue>
+    |   |   `-MemberExpr 0x7fe4bf032120 <col:16, col:29> 'int' lvalue .ioport 0x7fe4bf025a00
+    |   |     `-ArraySubscriptExpr 0x7fe4bf0320f8 <col:16, col:27> 'bus_space_handle_t':'bus_space_handle_t' lvalue
+    |   |       |-ImplicitCastExpr 0x7fe4bf0320e0 <col:16, col:21> 'bus_space_handle_t *' <ArrayToPointerDecay>
+    |   |       | `-MemberExpr 0x7fe4bf032088 <col:16, col:21> 'bus_space_handle_t [2]' lvalue ->bshs 0x7fe4bf025f78
+    |   |       |   `-ImplicitCastExpr 0x7fe4bf032070 <col:16> 'struct ahd_softc *' <LValueToRValue>
+    |   |       |     `-DeclRefExpr 0x7fe4bf032048 <col:16> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    |   |       `-IntegerLiteral 0x7fe4bf0320c0 <col:26> 'int' 0
+    |   |-BinaryOperator 0x7fe4bf032308 <line:80:5, col:23> 'int' '='
+    |   | |-DeclRefExpr 0x7fe4bf0321c0 <col:5> 'int' lvalue Var 0x7fe4bf0271f8 'bb' 'int'
+    |   | `-ImplicitCastExpr 0x7fe4bf0322f0 <col:10, col:23> 'int' <IntegralCast>
+    |   |   `-ImplicitCastExpr 0x7fe4bf0322d8 <col:10, col:23> 'unsigned short' <LValueToRValue>
+    |   |     `-ParenExpr 0x7fe4bf0322b8 <col:10, col:23> 'unsigned short' lvalue
+    |   |       `-UnaryOperator 0x7fe4bf032298 <col:11, col:22> 'unsigned short' lvalue prefix '*'
+    |   |         `-ImplicitCastExpr 0x7fe4bf032280 <col:12, col:22> 'unsigned short *' <LValueToRValue>
+    |   |           `-ParenExpr 0x7fe4bf032260 <col:12, col:22> 'unsigned short *' lvalue
+    |   |             `-MemberExpr 0x7fe4bf032228 <col:13, col:18> 'unsigned short *' lvalue ->hscb 0x7fe4bf025c90
+    |   |               `-ImplicitCastExpr 0x7fe4bf032210 <col:13> 'struct scb *' <LValueToRValue>
+    |   |                 `-DeclRefExpr 0x7fe4bf0321e8 <col:13> 'struct scb *' lvalue ParmVar 0x7fe4bf026bd0 'scb' 'struct scb *'
+    |   |-IfStmt 0x7fe4bf0325e8 <line:81:5, col:48>
+    |   | |-<<<NULL>>>
+    |   | |-<<<NULL>>>
+    |   | |-BinaryOperator 0x7fe4bf032440 <col:9, col:25> 'int' '=='
+    |   | | |-ImplicitCastExpr 0x7fe4bf032428 <col:9, col:20> 'int' <LValueToRValue>
+    |   | | | `-ArraySubscriptExpr 0x7fe4bf0323e0 <col:9, col:20> 'int' lvalue
+    |   | | |   |-ImplicitCastExpr 0x7fe4bf0323c8 <col:9, col:14> 'int *' <ArrayToPointerDecay>
+    |   | | |   | `-MemberExpr 0x7fe4bf032370 <col:9, col:14> 'int [2]' lvalue ->tags 0x7fe4bf025e00
+    |   | | |   |   `-ImplicitCastExpr 0x7fe4bf032358 <col:9> 'struct ahd_softc *' <LValueToRValue>
+    |   | | |   |     `-DeclRefExpr 0x7fe4bf032330 <col:9> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    |   | | |   `-IntegerLiteral 0x7fe4bf0323a8 <col:19> 'int' 0
+    |   | | `-IntegerLiteral 0x7fe4bf032408 <col:25> 'int' 1
+    |   | |-ImplicitCastExpr 0x7fe4bf0325d0 <col:28, col:48> 'char' <LValueToRValue>
+    |   | | `-UnaryOperator 0x7fe4bf0325b0 <col:28, col:48> 'volatile char' lvalue prefix '*'
+    |   | |   `-ImplicitCastExpr 0x7fe4bf032598 <col:29, col:48> 'volatile char *' <LValueToRValue>
+    |   | |     `-ParenExpr 0x7fe4bf032578 <col:29, col:48> 'volatile char *' lvalue
+    |   | |       `-MemberExpr 0x7fe4bf032540 <col:30, col:43> 'volatile char *' lvalue .maddr 0x7fe4bf025a90
+    |   | |         `-ArraySubscriptExpr 0x7fe4bf032518 <col:30, col:41> 'bus_space_handle_t':'bus_space_handle_t' lvalue
+    |   | |           |-ImplicitCastExpr 0x7fe4bf032500 <col:30, col:35> 'bus_space_handle_t *' <ArrayToPointerDecay>
+    |   | |           | `-MemberExpr 0x7fe4bf0324a8 <col:30, col:35> 'bus_space_handle_t [2]' lvalue ->bshs 0x7fe4bf025f78
+    |   | |           |   `-ImplicitCastExpr 0x7fe4bf032490 <col:30> 'struct ahd_softc *' <LValueToRValue>
+    |   | |           |     `-DeclRefExpr 0x7fe4bf032468 <col:30> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    |   | |           `-IntegerLiteral 0x7fe4bf0324e0 <col:40> 'int' 0
+    |   | `-<<<NULL>>>
+    |   |-CallExpr 0x7fe4bf032790 <line:82:7, col:36> 'void'
+    |   | |-ImplicitCastExpr 0x7fe4bf032778 <col:7> 'void (*)(int, int)' <FunctionToPointerDecay>
+    |   | | `-DeclRefExpr 0x7fe4bf032620 <col:7> 'void (int, int)' Function 0x7fe4bf026240 'outb' 'void (int, int)'
+    |   | |-IntegerLiteral 0x7fe4bf032648 <col:13> 'int' 1
+    |   | `-ImplicitCastExpr 0x7fe4bf0327c8 <col:16, col:29> 'int' <LValueToRValue>
+    |   |   `-MemberExpr 0x7fe4bf032740 <col:16, col:29> 'int' lvalue .ioport 0x7fe4bf025a00
+    |   |     `-ArraySubscriptExpr 0x7fe4bf032718 <col:16, col:27> 'bus_space_handle_t':'bus_space_handle_t' lvalue
+    |   |       |-ImplicitCastExpr 0x7fe4bf032700 <col:16, col:21> 'bus_space_handle_t *' <ArrayToPointerDecay>
+    |   |       | `-MemberExpr 0x7fe4bf0326a8 <col:16, col:21> 'bus_space_handle_t [2]' lvalue ->bshs 0x7fe4bf025f78
+    |   |       |   `-ImplicitCastExpr 0x7fe4bf032690 <col:16> 'struct ahd_softc *' <LValueToRValue>
+    |   |       |     `-DeclRefExpr 0x7fe4bf032668 <col:16> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    |   |       `-IntegerLiteral 0x7fe4bf0326e0 <col:26> 'int' 0
+    |   |-IfStmt 0x7fe4bf032a98 <line:83:5, col:48>
+    |   | |-<<<NULL>>>
+    |   | |-<<<NULL>>>
+    |   | |-BinaryOperator 0x7fe4bf0328f0 <col:9, col:25> 'int' '=='
+    |   | | |-ImplicitCastExpr 0x7fe4bf0328d8 <col:9, col:20> 'int' <LValueToRValue>
+    |   | | | `-ArraySubscriptExpr 0x7fe4bf032890 <col:9, col:20> 'int' lvalue
+    |   | | |   |-ImplicitCastExpr 0x7fe4bf032878 <col:9, col:14> 'int *' <ArrayToPointerDecay>
+    |   | | |   | `-MemberExpr 0x7fe4bf032820 <col:9, col:14> 'int [2]' lvalue ->tags 0x7fe4bf025e00
+    |   | | |   |   `-ImplicitCastExpr 0x7fe4bf032808 <col:9> 'struct ahd_softc *' <LValueToRValue>
+    |   | | |   |     `-DeclRefExpr 0x7fe4bf0327e0 <col:9> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    |   | | |   `-IntegerLiteral 0x7fe4bf032858 <col:19> 'int' 0
+    |   | | `-IntegerLiteral 0x7fe4bf0328b8 <col:25> 'int' 1
+    |   | |-ImplicitCastExpr 0x7fe4bf032a80 <col:28, col:48> 'char' <LValueToRValue>
+    |   | | `-UnaryOperator 0x7fe4bf032a60 <col:28, col:48> 'volatile char' lvalue prefix '*'
+    |   | |   `-ImplicitCastExpr 0x7fe4bf032a48 <col:29, col:48> 'volatile char *' <LValueToRValue>
+    |   | |     `-ParenExpr 0x7fe4bf032a28 <col:29, col:48> 'volatile char *' lvalue
+    |   | |       `-MemberExpr 0x7fe4bf0329f0 <col:30, col:43> 'volatile char *' lvalue .maddr 0x7fe4bf025a90
+    |   | |         `-ArraySubscriptExpr 0x7fe4bf0329c8 <col:30, col:41> 'bus_space_handle_t':'bus_space_handle_t' lvalue
+    |   | |           |-ImplicitCastExpr 0x7fe4bf0329b0 <col:30, col:35> 'bus_space_handle_t *' <ArrayToPointerDecay>
+    |   | |           | `-MemberExpr 0x7fe4bf032958 <col:30, col:35> 'bus_space_handle_t [2]' lvalue ->bshs 0x7fe4bf025f78
+    |   | |           |   `-ImplicitCastExpr 0x7fe4bf032940 <col:30> 'struct ahd_softc *' <LValueToRValue>
+    |   | |           |     `-DeclRefExpr 0x7fe4bf032918 <col:30> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    |   | |           `-IntegerLiteral 0x7fe4bf032990 <col:40> 'int' 0
+    |   | `-<<<NULL>>>
+    |   |-CallExpr 0x7fe4bf032c40 <line:84:7, col:36> 'void'
+    |   | |-ImplicitCastExpr 0x7fe4bf032c28 <col:7> 'void (*)(int, int)' <FunctionToPointerDecay>
+    |   | | `-DeclRefExpr 0x7fe4bf032ad0 <col:7> 'void (int, int)' Function 0x7fe4bf026240 'outb' 'void (int, int)'
+    |   | |-IntegerLiteral 0x7fe4bf032af8 <col:13> 'int' 1
+    |   | `-ImplicitCastExpr 0x7fe4bf032c78 <col:16, col:29> 'int' <LValueToRValue>
+    |   |   `-MemberExpr 0x7fe4bf032bf0 <col:16, col:29> 'int' lvalue .ioport 0x7fe4bf025a00
+    |   |     `-ArraySubscriptExpr 0x7fe4bf032bc8 <col:16, col:27> 'bus_space_handle_t':'bus_space_handle_t' lvalue
+    |   |       |-ImplicitCastExpr 0x7fe4bf032bb0 <col:16, col:21> 'bus_space_handle_t *' <ArrayToPointerDecay>
+    |   |       | `-MemberExpr 0x7fe4bf032b58 <col:16, col:21> 'bus_space_handle_t [2]' lvalue ->bshs 0x7fe4bf025f78
+    |   |       |   `-ImplicitCastExpr 0x7fe4bf032b40 <col:16> 'struct ahd_softc *' <LValueToRValue>
+    |   |       |     `-DeclRefExpr 0x7fe4bf032b18 <col:16> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    |   |       `-IntegerLiteral 0x7fe4bf032b90 <col:26> 'int' 0
+    |   |-BinaryOperator 0x7fe4bf032dd8 <line:85:5, col:23> 'int' '='
+    |   | |-DeclRefExpr 0x7fe4bf032c90 <col:5> 'int' lvalue Var 0x7fe4bf0271f8 'bb' 'int'
+    |   | `-ImplicitCastExpr 0x7fe4bf032dc0 <col:10, col:23> 'int' <IntegralCast>
+    |   |   `-ImplicitCastExpr 0x7fe4bf032da8 <col:10, col:23> 'unsigned short' <LValueToRValue>
+    |   |     `-ParenExpr 0x7fe4bf032d88 <col:10, col:23> 'unsigned short' lvalue
+    |   |       `-UnaryOperator 0x7fe4bf032d68 <col:11, col:22> 'unsigned short' lvalue prefix '*'
+    |   |         `-ImplicitCastExpr 0x7fe4bf032d50 <col:12, col:22> 'unsigned short *' <LValueToRValue>
+    |   |           `-ParenExpr 0x7fe4bf032d30 <col:12, col:22> 'unsigned short *' lvalue
+    |   |             `-MemberExpr 0x7fe4bf032cf8 <col:13, col:18> 'unsigned short *' lvalue ->hscb 0x7fe4bf025c90
+    |   |               `-ImplicitCastExpr 0x7fe4bf032ce0 <col:13> 'struct scb *' <LValueToRValue>
+    |   |                 `-DeclRefExpr 0x7fe4bf032cb8 <col:13> 'struct scb *' lvalue ParmVar 0x7fe4bf026bd0 'scb' 'struct scb *'
+    |   |-IfStmt 0x7fe4bf0330d0 <line:86:5, col:48>
+    |   | |-<<<NULL>>>
+    |   | |-<<<NULL>>>
+    |   | |-BinaryOperator 0x7fe4bf032f10 <col:9, col:25> 'int' '=='
+    |   | | |-ImplicitCastExpr 0x7fe4bf032ef8 <col:9, col:20> 'int' <LValueToRValue>
+    |   | | | `-ArraySubscriptExpr 0x7fe4bf032eb0 <col:9, col:20> 'int' lvalue
+    |   | | |   |-ImplicitCastExpr 0x7fe4bf032e98 <col:9, col:14> 'int *' <ArrayToPointerDecay>
+    |   | | |   | `-MemberExpr 0x7fe4bf032e40 <col:9, col:14> 'int [2]' lvalue ->tags 0x7fe4bf025e00
+    |   | | |   |   `-ImplicitCastExpr 0x7fe4bf032e28 <col:9> 'struct ahd_softc *' <LValueToRValue>
+    |   | | |   |     `-DeclRefExpr 0x7fe4bf032e00 <col:9> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    |   | | |   `-IntegerLiteral 0x7fe4bf032e78 <col:19> 'int' 0
+    |   | | `-IntegerLiteral 0x7fe4bf032ed8 <col:25> 'int' 1
+    |   | |-ImplicitCastExpr 0x7fe4bf0330b8 <col:28, col:48> 'char' <LValueToRValue>
+    |   | | `-UnaryOperator 0x7fe4bf033098 <col:28, col:48> 'volatile char' lvalue prefix '*'
+    |   | |   `-ImplicitCastExpr 0x7fe4bf033080 <col:29, col:48> 'volatile char *' <LValueToRValue>
+    |   | |     `-ParenExpr 0x7fe4bf033060 <col:29, col:48> 'volatile char *' lvalue
+    |   | |       `-MemberExpr 0x7fe4bf033028 <col:30, col:43> 'volatile char *' lvalue .maddr 0x7fe4bf025a90
+    |   | |         `-ArraySubscriptExpr 0x7fe4bf033000 <col:30, col:41> 'bus_space_handle_t':'bus_space_handle_t' lvalue
+    |   | |           |-ImplicitCastExpr 0x7fe4bf032fd0 <col:30, col:35> 'bus_space_handle_t *' <ArrayToPointerDecay>
+    |   | |           | `-MemberExpr 0x7fe4bf032f78 <col:30, col:35> 'bus_space_handle_t [2]' lvalue ->bshs 0x7fe4bf025f78
+    |   | |           |   `-ImplicitCastExpr 0x7fe4bf032f60 <col:30> 'struct ahd_softc *' <LValueToRValue>
+    |   | |           |     `-DeclRefExpr 0x7fe4bf032f38 <col:30> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    |   | |           `-IntegerLiteral 0x7fe4bf032fb0 <col:40> 'int' 0
+    |   | `-<<<NULL>>>
+    |   |-CallExpr 0x7fe4bf033278 <line:87:7, col:36> 'void'
+    |   | |-ImplicitCastExpr 0x7fe4bf033260 <col:7> 'void (*)(int, int)' <FunctionToPointerDecay>
+    |   | | `-DeclRefExpr 0x7fe4bf033108 <col:7> 'void (int, int)' Function 0x7fe4bf026240 'outb' 'void (int, int)'
+    |   | |-IntegerLiteral 0x7fe4bf033130 <col:13> 'int' 1
+    |   | `-ImplicitCastExpr 0x7fe4bf0332b0 <col:16, col:29> 'int' <LValueToRValue>
+    |   |   `-MemberExpr 0x7fe4bf033228 <col:16, col:29> 'int' lvalue .ioport 0x7fe4bf025a00
+    |   |     `-ArraySubscriptExpr 0x7fe4bf033200 <col:16, col:27> 'bus_space_handle_t':'bus_space_handle_t' lvalue
+    |   |       |-ImplicitCastExpr 0x7fe4bf0331e8 <col:16, col:21> 'bus_space_handle_t *' <ArrayToPointerDecay>
+    |   |       | `-MemberExpr 0x7fe4bf033190 <col:16, col:21> 'bus_space_handle_t [2]' lvalue ->bshs 0x7fe4bf025f78
+    |   |       |   `-ImplicitCastExpr 0x7fe4bf033178 <col:16> 'struct ahd_softc *' <LValueToRValue>
+    |   |       |     `-DeclRefExpr 0x7fe4bf033150 <col:16> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    |   |       `-IntegerLiteral 0x7fe4bf0331c8 <col:26> 'int' 0
+    |   |-IfStmt 0x7fe4bf033580 <line:88:5, col:48>
+    |   | |-<<<NULL>>>
+    |   | |-<<<NULL>>>
+    |   | |-BinaryOperator 0x7fe4bf0333d8 <col:9, col:25> 'int' '=='
+    |   | | |-ImplicitCastExpr 0x7fe4bf0333c0 <col:9, col:20> 'int' <LValueToRValue>
+    |   | | | `-ArraySubscriptExpr 0x7fe4bf033378 <col:9, col:20> 'int' lvalue
+    |   | | |   |-ImplicitCastExpr 0x7fe4bf033360 <col:9, col:14> 'int *' <ArrayToPointerDecay>
+    |   | | |   | `-MemberExpr 0x7fe4bf033308 <col:9, col:14> 'int [2]' lvalue ->tags 0x7fe4bf025e00
+    |   | | |   |   `-ImplicitCastExpr 0x7fe4bf0332f0 <col:9> 'struct ahd_softc *' <LValueToRValue>
+    |   | | |   |     `-DeclRefExpr 0x7fe4bf0332c8 <col:9> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    |   | | |   `-IntegerLiteral 0x7fe4bf033340 <col:19> 'int' 0
+    |   | | `-IntegerLiteral 0x7fe4bf0333a0 <col:25> 'int' 1
+    |   | |-ImplicitCastExpr 0x7fe4bf033568 <col:28, col:48> 'char' <LValueToRValue>
+    |   | | `-UnaryOperator 0x7fe4bf033548 <col:28, col:48> 'volatile char' lvalue prefix '*'
+    |   | |   `-ImplicitCastExpr 0x7fe4bf033530 <col:29, col:48> 'volatile char *' <LValueToRValue>
+    |   | |     `-ParenExpr 0x7fe4bf033510 <col:29, col:48> 'volatile char *' lvalue
+    |   | |       `-MemberExpr 0x7fe4bf0334d8 <col:30, col:43> 'volatile char *' lvalue .maddr 0x7fe4bf025a90
+    |   | |         `-ArraySubscriptExpr 0x7fe4bf0334b0 <col:30, col:41> 'bus_space_handle_t':'bus_space_handle_t' lvalue
+    |   | |           |-ImplicitCastExpr 0x7fe4bf033498 <col:30, col:35> 'bus_space_handle_t *' <ArrayToPointerDecay>
+    |   | |           | `-MemberExpr 0x7fe4bf033440 <col:30, col:35> 'bus_space_handle_t [2]' lvalue ->bshs 0x7fe4bf025f78
+    |   | |           |   `-ImplicitCastExpr 0x7fe4bf033428 <col:30> 'struct ahd_softc *' <LValueToRValue>
+    |   | |           |     `-DeclRefExpr 0x7fe4bf033400 <col:30> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    |   | |           `-IntegerLiteral 0x7fe4bf033478 <col:40> 'int' 0
+    |   | `-<<<NULL>>>
+    |   `-CallExpr 0x7fe4bf033728 <line:89:7, col:36> 'void'
+    |     |-ImplicitCastExpr 0x7fe4bf033710 <col:7> 'void (*)(int, int)' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x7fe4bf0335b8 <col:7> 'void (int, int)' Function 0x7fe4bf026240 'outb' 'void (int, int)'
+    |     |-IntegerLiteral 0x7fe4bf0335e0 <col:13> 'int' 1
+    |     `-ImplicitCastExpr 0x7fe4bf033760 <col:16, col:29> 'int' <LValueToRValue>
+    |       `-MemberExpr 0x7fe4bf0336d8 <col:16, col:29> 'int' lvalue .ioport 0x7fe4bf025a00
+    |         `-ArraySubscriptExpr 0x7fe4bf0336b0 <col:16, col:27> 'bus_space_handle_t':'bus_space_handle_t' lvalue
+    |           |-ImplicitCastExpr 0x7fe4bf033698 <col:16, col:21> 'bus_space_handle_t *' <ArrayToPointerDecay>
+    |           | `-MemberExpr 0x7fe4bf033640 <col:16, col:21> 'bus_space_handle_t [2]' lvalue ->bshs 0x7fe4bf025f78
+    |           |   `-ImplicitCastExpr 0x7fe4bf033628 <col:16> 'struct ahd_softc *' <LValueToRValue>
+    |           |     `-DeclRefExpr 0x7fe4bf033600 <col:16> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    |           `-IntegerLiteral 0x7fe4bf033678 <col:26> 'int' 0
+    |-IfStmt 0x7fe4bf033b80 <line:91:3, col:46>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fe4bf0339d8 <col:7, col:23> 'int' '=='
+    | | |-ImplicitCastExpr 0x7fe4bf0339c0 <col:7, col:18> 'int' <LValueToRValue>
+    | | | `-ArraySubscriptExpr 0x7fe4bf033978 <col:7, col:18> 'int' lvalue
+    | | |   |-ImplicitCastExpr 0x7fe4bf033960 <col:7, col:12> 'int *' <ArrayToPointerDecay>
+    | | |   | `-MemberExpr 0x7fe4bf033908 <col:7, col:12> 'int [2]' lvalue ->tags 0x7fe4bf025e00
+    | | |   |   `-ImplicitCastExpr 0x7fe4bf0338f0 <col:7> 'struct ahd_softc *' <LValueToRValue>
+    | | |   |     `-DeclRefExpr 0x7fe4bf0338c8 <col:7> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    | | |   `-IntegerLiteral 0x7fe4bf033940 <col:17> 'int' 0
+    | | `-IntegerLiteral 0x7fe4bf0339a0 <col:23> 'int' 1
+    | |-ImplicitCastExpr 0x7fe4bf033b68 <col:26, col:46> 'char' <LValueToRValue>
+    | | `-UnaryOperator 0x7fe4bf033b48 <col:26, col:46> 'volatile char' lvalue prefix '*'
+    | |   `-ImplicitCastExpr 0x7fe4bf033b30 <col:27, col:46> 'volatile char *' <LValueToRValue>
+    | |     `-ParenExpr 0x7fe4bf033b10 <col:27, col:46> 'volatile char *' lvalue
+    | |       `-MemberExpr 0x7fe4bf033ad8 <col:28, col:41> 'volatile char *' lvalue .maddr 0x7fe4bf025a90
+    | |         `-ArraySubscriptExpr 0x7fe4bf033ab0 <col:28, col:39> 'bus_space_handle_t':'bus_space_handle_t' lvalue
+    | |           |-ImplicitCastExpr 0x7fe4bf033a98 <col:28, col:33> 'bus_space_handle_t *' <ArrayToPointerDecay>
+    | |           | `-MemberExpr 0x7fe4bf033a40 <col:28, col:33> 'bus_space_handle_t [2]' lvalue ->bshs 0x7fe4bf025f78
+    | |           |   `-ImplicitCastExpr 0x7fe4bf033a28 <col:28> 'struct ahd_softc *' <LValueToRValue>
+    | |           |     `-DeclRefExpr 0x7fe4bf033a00 <col:28> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    | |           `-IntegerLiteral 0x7fe4bf033a78 <col:38> 'int' 0
+    | `-<<<NULL>>>
+    |-CallExpr 0x7fe4bf033d28 <line:92:5, col:34> 'void'
+    | |-ImplicitCastExpr 0x7fe4bf033d10 <col:5> 'void (*)(int, int)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fe4bf033bb8 <col:5> 'void (int, int)' Function 0x7fe4bf026240 'outb' 'void (int, int)'
+    | |-IntegerLiteral 0x7fe4bf033be0 <col:11> 'int' 1
+    | `-ImplicitCastExpr 0x7fe4bf033d60 <col:14, col:27> 'int' <LValueToRValue>
+    |   `-MemberExpr 0x7fe4bf033cd8 <col:14, col:27> 'int' lvalue .ioport 0x7fe4bf025a00
+    |     `-ArraySubscriptExpr 0x7fe4bf033cb0 <col:14, col:25> 'bus_space_handle_t':'bus_space_handle_t' lvalue
+    |       |-ImplicitCastExpr 0x7fe4bf033c98 <col:14, col:19> 'bus_space_handle_t *' <ArrayToPointerDecay>
+    |       | `-MemberExpr 0x7fe4bf033c40 <col:14, col:19> 'bus_space_handle_t [2]' lvalue ->bshs 0x7fe4bf025f78
+    |       |   `-ImplicitCastExpr 0x7fe4bf033c28 <col:14> 'struct ahd_softc *' <LValueToRValue>
+    |       |     `-DeclRefExpr 0x7fe4bf033c00 <col:14> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    |       `-IntegerLiteral 0x7fe4bf033c78 <col:24> 'int' 0
+    |-IfStmt 0x7fe4bf034038 <line:93:3, col:46>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fe4bf033e88 <col:7, col:23> 'int' '=='
+    | | |-ImplicitCastExpr 0x7fe4bf033e70 <col:7, col:18> 'int' <LValueToRValue>
+    | | | `-ArraySubscriptExpr 0x7fe4bf033e28 <col:7, col:18> 'int' lvalue
+    | | |   |-ImplicitCastExpr 0x7fe4bf033e10 <col:7, col:12> 'int *' <ArrayToPointerDecay>
+    | | |   | `-MemberExpr 0x7fe4bf033db8 <col:7, col:12> 'int [2]' lvalue ->tags 0x7fe4bf025e00
+    | | |   |   `-ImplicitCastExpr 0x7fe4bf033da0 <col:7> 'struct ahd_softc *' <LValueToRValue>
+    | | |   |     `-DeclRefExpr 0x7fe4bf033d78 <col:7> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    | | |   `-IntegerLiteral 0x7fe4bf033df0 <col:17> 'int' 0
+    | | `-IntegerLiteral 0x7fe4bf033e50 <col:23> 'int' 1
+    | |-ImplicitCastExpr 0x7fe4bf034020 <col:26, col:46> 'char' <LValueToRValue>
+    | | `-UnaryOperator 0x7fe4bf034000 <col:26, col:46> 'volatile char' lvalue prefix '*'
+    | |   `-ImplicitCastExpr 0x7fe4bf033fe0 <col:27, col:46> 'volatile char *' <LValueToRValue>
+    | |     `-ParenExpr 0x7fe4bf033fc0 <col:27, col:46> 'volatile char *' lvalue
+    | |       `-MemberExpr 0x7fe4bf033f88 <col:28, col:41> 'volatile char *' lvalue .maddr 0x7fe4bf025a90
+    | |         `-ArraySubscriptExpr 0x7fe4bf033f60 <col:28, col:39> 'bus_space_handle_t':'bus_space_handle_t' lvalue
+    | |           |-ImplicitCastExpr 0x7fe4bf033f48 <col:28, col:33> 'bus_space_handle_t *' <ArrayToPointerDecay>
+    | |           | `-MemberExpr 0x7fe4bf033ef0 <col:28, col:33> 'bus_space_handle_t [2]' lvalue ->bshs 0x7fe4bf025f78
+    | |           |   `-ImplicitCastExpr 0x7fe4bf033ed8 <col:28> 'struct ahd_softc *' <LValueToRValue>
+    | |           |     `-DeclRefExpr 0x7fe4bf033eb0 <col:28> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    | |           `-IntegerLiteral 0x7fe4bf033f28 <col:38> 'int' 0
+    | `-<<<NULL>>>
+    |-CallExpr 0x7fe4bf0341e0 <line:94:5, col:34> 'void'
+    | |-ImplicitCastExpr 0x7fe4bf0341c8 <col:5> 'void (*)(int, int)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fe4bf034070 <col:5> 'void (int, int)' Function 0x7fe4bf026240 'outb' 'void (int, int)'
+    | |-IntegerLiteral 0x7fe4bf034098 <col:11> 'int' 1
+    | `-ImplicitCastExpr 0x7fe4bf034218 <col:14, col:27> 'int' <LValueToRValue>
+    |   `-MemberExpr 0x7fe4bf034190 <col:14, col:27> 'int' lvalue .ioport 0x7fe4bf025a00
+    |     `-ArraySubscriptExpr 0x7fe4bf034168 <col:14, col:25> 'bus_space_handle_t':'bus_space_handle_t' lvalue
+    |       |-ImplicitCastExpr 0x7fe4bf034150 <col:14, col:19> 'bus_space_handle_t *' <ArrayToPointerDecay>
+    |       | `-MemberExpr 0x7fe4bf0340f8 <col:14, col:19> 'bus_space_handle_t [2]' lvalue ->bshs 0x7fe4bf025f78
+    |       |   `-ImplicitCastExpr 0x7fe4bf0340e0 <col:14> 'struct ahd_softc *' <LValueToRValue>
+    |       |     `-DeclRefExpr 0x7fe4bf0340b8 <col:14> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    |       `-IntegerLiteral 0x7fe4bf034130 <col:24> 'int' 0
+    |-BinaryOperator 0x7fe4bf034278 <line:95:3, col:7> 'int' '='
+    | |-DeclRefExpr 0x7fe4bf034230 <col:3> 'int' lvalue Var 0x7fe4bf027270 'p' 'int'
+    | `-IntegerLiteral 0x7fe4bf034258 <col:7> 'int' 1
+    |-IfStmt 0x7fe4bf034e30 <line:96:3, line:102:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fe4bf034470 <line:96:7, col:46> 'int' '&&'
+    | | |-BinaryOperator 0x7fe4bf034350 <col:7, col:24> 'int' '=='
+    | | | |-ImplicitCastExpr 0x7fe4bf034338 <col:7, col:12> 'int' <LValueToRValue>
+    | | | | `-MemberExpr 0x7fe4bf0342e0 <col:7, col:12> 'int' lvalue ->src_mode 0x7fe4bf026038
+    | | | |   `-ImplicitCastExpr 0x7fe4bf0342c8 <col:7> 'struct ahd_softc *' <LValueToRValue>
+    | | | |     `-DeclRefExpr 0x7fe4bf0342a0 <col:7> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    | | | `-IntegerLiteral 0x7fe4bf034318 <col:24> 'int' 2
+    | | `-BinaryOperator 0x7fe4bf034448 <col:29, col:46> 'int' '=='
+    | |   |-ImplicitCastExpr 0x7fe4bf034418 <col:29, col:34> 'int' <LValueToRValue>
+    | |   | `-MemberExpr 0x7fe4bf0343b8 <col:29, col:34> 'int' lvalue ->dst_mode 0x7fe4bf025fd8
+    | |   |   `-ImplicitCastExpr 0x7fe4bf0343a0 <col:29> 'struct ahd_softc *' <LValueToRValue>
+    | |   |     `-DeclRefExpr 0x7fe4bf034378 <col:29> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    | |   `-ImplicitCastExpr 0x7fe4bf034430 <col:46> 'int' <LValueToRValue>
+    | |     `-DeclRefExpr 0x7fe4bf0343f0 <col:46> 'int' lvalue Var 0x7fe4bf027270 'p' 'int'
+    | |-CompoundStmt 0x7fe4bf034df8 <line:97:5, line:102:5>
+    | | |-IfStmt 0x7fe4bf034750 <line:98:7, col:50>
+    | | | |-<<<NULL>>>
+    | | | |-<<<NULL>>>
+    | | | |-BinaryOperator 0x7fe4bf0345a8 <col:11, col:27> 'int' '=='
+    | | | | |-ImplicitCastExpr 0x7fe4bf034590 <col:11, col:22> 'int' <LValueToRValue>
+    | | | | | `-ArraySubscriptExpr 0x7fe4bf034548 <col:11, col:22> 'int' lvalue
+    | | | | |   |-ImplicitCastExpr 0x7fe4bf034530 <col:11, col:16> 'int *' <ArrayToPointerDecay>
+    | | | | |   | `-MemberExpr 0x7fe4bf0344d8 <col:11, col:16> 'int [2]' lvalue ->tags 0x7fe4bf025e00
+    | | | | |   |   `-ImplicitCastExpr 0x7fe4bf0344c0 <col:11> 'struct ahd_softc *' <LValueToRValue>
+    | | | | |   |     `-DeclRefExpr 0x7fe4bf034498 <col:11> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    | | | | |   `-IntegerLiteral 0x7fe4bf034510 <col:21> 'int' 0
+    | | | | `-IntegerLiteral 0x7fe4bf034570 <col:27> 'int' 1
+    | | | |-ImplicitCastExpr 0x7fe4bf034738 <col:30, col:50> 'char' <LValueToRValue>
+    | | | | `-UnaryOperator 0x7fe4bf034718 <col:30, col:50> 'volatile char' lvalue prefix '*'
+    | | | |   `-ImplicitCastExpr 0x7fe4bf034700 <col:31, col:50> 'volatile char *' <LValueToRValue>
+    | | | |     `-ParenExpr 0x7fe4bf0346e0 <col:31, col:50> 'volatile char *' lvalue
+    | | | |       `-MemberExpr 0x7fe4bf0346a8 <col:32, col:45> 'volatile char *' lvalue .maddr 0x7fe4bf025a90
+    | | | |         `-ArraySubscriptExpr 0x7fe4bf034680 <col:32, col:43> 'bus_space_handle_t':'bus_space_handle_t' lvalue
+    | | | |           |-ImplicitCastExpr 0x7fe4bf034668 <col:32, col:37> 'bus_space_handle_t *' <ArrayToPointerDecay>
+    | | | |           | `-MemberExpr 0x7fe4bf034610 <col:32, col:37> 'bus_space_handle_t [2]' lvalue ->bshs 0x7fe4bf025f78
+    | | | |           |   `-ImplicitCastExpr 0x7fe4bf0345f8 <col:32> 'struct ahd_softc *' <LValueToRValue>
+    | | | |           |     `-DeclRefExpr 0x7fe4bf0345d0 <col:32> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    | | | |           `-IntegerLiteral 0x7fe4bf034648 <col:42> 'int' 0
+    | | | `-<<<NULL>>>
+    | | |-CallExpr 0x7fe4bf0348f8 <line:99:9, col:38> 'void'
+    | | | |-ImplicitCastExpr 0x7fe4bf0348e0 <col:9> 'void (*)(int, int)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7fe4bf034788 <col:9> 'void (int, int)' Function 0x7fe4bf026240 'outb' 'void (int, int)'
+    | | | |-IntegerLiteral 0x7fe4bf0347b0 <col:15> 'int' 1
+    | | | `-ImplicitCastExpr 0x7fe4bf034930 <col:18, col:31> 'int' <LValueToRValue>
+    | | |   `-MemberExpr 0x7fe4bf0348a8 <col:18, col:31> 'int' lvalue .ioport 0x7fe4bf025a00
+    | | |     `-ArraySubscriptExpr 0x7fe4bf034880 <col:18, col:29> 'bus_space_handle_t':'bus_space_handle_t' lvalue
+    | | |       |-ImplicitCastExpr 0x7fe4bf034868 <col:18, col:23> 'bus_space_handle_t *' <ArrayToPointerDecay>
+    | | |       | `-MemberExpr 0x7fe4bf034810 <col:18, col:23> 'bus_space_handle_t [2]' lvalue ->bshs 0x7fe4bf025f78
+    | | |       |   `-ImplicitCastExpr 0x7fe4bf0347f8 <col:18> 'struct ahd_softc *' <LValueToRValue>
+    | | |       |     `-DeclRefExpr 0x7fe4bf0347d0 <col:18> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    | | |       `-IntegerLiteral 0x7fe4bf034848 <col:28> 'int' 0
+    | | |-IfStmt 0x7fe4bf034c00 <line:100:7, col:50>
+    | | | |-<<<NULL>>>
+    | | | |-<<<NULL>>>
+    | | | |-BinaryOperator 0x7fe4bf034a58 <col:11, col:27> 'int' '=='
+    | | | | |-ImplicitCastExpr 0x7fe4bf034a40 <col:11, col:22> 'int' <LValueToRValue>
+    | | | | | `-ArraySubscriptExpr 0x7fe4bf0349f8 <col:11, col:22> 'int' lvalue
+    | | | | |   |-ImplicitCastExpr 0x7fe4bf0349e0 <col:11, col:16> 'int *' <ArrayToPointerDecay>
+    | | | | |   | `-MemberExpr 0x7fe4bf034988 <col:11, col:16> 'int [2]' lvalue ->tags 0x7fe4bf025e00
+    | | | | |   |   `-ImplicitCastExpr 0x7fe4bf034970 <col:11> 'struct ahd_softc *' <LValueToRValue>
+    | | | | |   |     `-DeclRefExpr 0x7fe4bf034948 <col:11> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    | | | | |   `-IntegerLiteral 0x7fe4bf0349c0 <col:21> 'int' 0
+    | | | | `-IntegerLiteral 0x7fe4bf034a20 <col:27> 'int' 1
+    | | | |-ImplicitCastExpr 0x7fe4bf034be8 <col:30, col:50> 'char' <LValueToRValue>
+    | | | | `-UnaryOperator 0x7fe4bf034bc8 <col:30, col:50> 'volatile char' lvalue prefix '*'
+    | | | |   `-ImplicitCastExpr 0x7fe4bf034bb0 <col:31, col:50> 'volatile char *' <LValueToRValue>
+    | | | |     `-ParenExpr 0x7fe4bf034b90 <col:31, col:50> 'volatile char *' lvalue
+    | | | |       `-MemberExpr 0x7fe4bf034b58 <col:32, col:45> 'volatile char *' lvalue .maddr 0x7fe4bf025a90
+    | | | |         `-ArraySubscriptExpr 0x7fe4bf034b30 <col:32, col:43> 'bus_space_handle_t':'bus_space_handle_t' lvalue
+    | | | |           |-ImplicitCastExpr 0x7fe4bf034b18 <col:32, col:37> 'bus_space_handle_t *' <ArrayToPointerDecay>
+    | | | |           | `-MemberExpr 0x7fe4bf034ac0 <col:32, col:37> 'bus_space_handle_t [2]' lvalue ->bshs 0x7fe4bf025f78
+    | | | |           |   `-ImplicitCastExpr 0x7fe4bf034aa8 <col:32> 'struct ahd_softc *' <LValueToRValue>
+    | | | |           |     `-DeclRefExpr 0x7fe4bf034a80 <col:32> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    | | | |           `-IntegerLiteral 0x7fe4bf034af8 <col:42> 'int' 0
+    | | | `-<<<NULL>>>
+    | | `-CallExpr 0x7fe4bf034da8 <line:101:9, col:38> 'void'
+    | |   |-ImplicitCastExpr 0x7fe4bf034d90 <col:9> 'void (*)(int, int)' <FunctionToPointerDecay>
+    | |   | `-DeclRefExpr 0x7fe4bf034c38 <col:9> 'void (int, int)' Function 0x7fe4bf026240 'outb' 'void (int, int)'
+    | |   |-IntegerLiteral 0x7fe4bf034c60 <col:15> 'int' 1
+    | |   `-ImplicitCastExpr 0x7fe4bf034de0 <col:18, col:31> 'int' <LValueToRValue>
+    | |     `-MemberExpr 0x7fe4bf034d58 <col:18, col:31> 'int' lvalue .ioport 0x7fe4bf025a00
+    | |       `-ArraySubscriptExpr 0x7fe4bf034d30 <col:18, col:29> 'bus_space_handle_t':'bus_space_handle_t' lvalue
+    | |         |-ImplicitCastExpr 0x7fe4bf034d18 <col:18, col:23> 'bus_space_handle_t *' <ArrayToPointerDecay>
+    | |         | `-MemberExpr 0x7fe4bf034cc0 <col:18, col:23> 'bus_space_handle_t [2]' lvalue ->bshs 0x7fe4bf025f78
+    | |         |   `-ImplicitCastExpr 0x7fe4bf034ca8 <col:18> 'struct ahd_softc *' <LValueToRValue>
+    | |         |     `-DeclRefExpr 0x7fe4bf034c80 <col:18> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    | |         `-IntegerLiteral 0x7fe4bf034cf8 <col:28> 'int' 0
+    | `-<<<NULL>>>
+    |-BinaryOperator 0x7fe4bf034f00 <line:103:3, col:19> 'int' '='
+    | |-MemberExpr 0x7fe4bf034ea8 <col:3, col:8> 'int' lvalue ->src_mode 0x7fe4bf026038
+    | | `-ImplicitCastExpr 0x7fe4bf034e90 <col:3> 'struct ahd_softc *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fe4bf034e68 <col:3> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    | `-IntegerLiteral 0x7fe4bf034ee0 <col:19> 'int' 1
+    |-BinaryOperator 0x7fe4bf034fc0 <line:104:3, col:19> 'int' '='
+    | |-MemberExpr 0x7fe4bf034f68 <col:3, col:8> 'int' lvalue ->dst_mode 0x7fe4bf025fd8
+    | | `-ImplicitCastExpr 0x7fe4bf034f50 <col:3> 'struct ahd_softc *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fe4bf034f28 <col:3> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    | `-IntegerLiteral 0x7fe4bf034fa0 <col:19> 'int' 2
+    |-IfStmt 0x7fe4bf035b90 <line:105:3, line:111:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fe4bf0351d0 <line:105:7, col:46> 'int' '&&'
+    | | |-BinaryOperator 0x7fe4bf0350b0 <col:7, col:24> 'int' '=='
+    | | | |-ImplicitCastExpr 0x7fe4bf035098 <col:7, col:12> 'int' <LValueToRValue>
+    | | | | `-MemberExpr 0x7fe4bf035040 <col:7, col:12> 'int' lvalue ->src_mode 0x7fe4bf026038
+    | | | |   `-ImplicitCastExpr 0x7fe4bf035028 <col:7> 'struct ahd_softc *' <LValueToRValue>
+    | | | |     `-DeclRefExpr 0x7fe4bf035000 <col:7> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    | | | `-IntegerLiteral 0x7fe4bf035078 <col:24> 'int' 2
+    | | `-BinaryOperator 0x7fe4bf0351a8 <col:29, col:46> 'int' '=='
+    | |   |-ImplicitCastExpr 0x7fe4bf035178 <col:29, col:34> 'int' <LValueToRValue>
+    | |   | `-MemberExpr 0x7fe4bf035118 <col:29, col:34> 'int' lvalue ->dst_mode 0x7fe4bf025fd8
+    | |   |   `-ImplicitCastExpr 0x7fe4bf035100 <col:29> 'struct ahd_softc *' <LValueToRValue>
+    | |   |     `-DeclRefExpr 0x7fe4bf0350d8 <col:29> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    | |   `-ImplicitCastExpr 0x7fe4bf035190 <col:46> 'int' <LValueToRValue>
+    | |     `-DeclRefExpr 0x7fe4bf035150 <col:46> 'int' lvalue Var 0x7fe4bf026e18 'dst' 'int'
+    | |-CompoundStmt 0x7fe4bf035b58 <line:106:5, line:111:5>
+    | | |-IfStmt 0x7fe4bf0354b0 <line:107:7, col:50>
+    | | | |-<<<NULL>>>
+    | | | |-<<<NULL>>>
+    | | | |-BinaryOperator 0x7fe4bf035308 <col:11, col:27> 'int' '=='
+    | | | | |-ImplicitCastExpr 0x7fe4bf0352f0 <col:11, col:22> 'int' <LValueToRValue>
+    | | | | | `-ArraySubscriptExpr 0x7fe4bf0352a8 <col:11, col:22> 'int' lvalue
+    | | | | |   |-ImplicitCastExpr 0x7fe4bf035290 <col:11, col:16> 'int *' <ArrayToPointerDecay>
+    | | | | |   | `-MemberExpr 0x7fe4bf035238 <col:11, col:16> 'int [2]' lvalue ->tags 0x7fe4bf025e00
+    | | | | |   |   `-ImplicitCastExpr 0x7fe4bf035220 <col:11> 'struct ahd_softc *' <LValueToRValue>
+    | | | | |   |     `-DeclRefExpr 0x7fe4bf0351f8 <col:11> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    | | | | |   `-IntegerLiteral 0x7fe4bf035270 <col:21> 'int' 0
+    | | | | `-IntegerLiteral 0x7fe4bf0352d0 <col:27> 'int' 1
+    | | | |-ImplicitCastExpr 0x7fe4bf035498 <col:30, col:50> 'char' <LValueToRValue>
+    | | | | `-UnaryOperator 0x7fe4bf035478 <col:30, col:50> 'volatile char' lvalue prefix '*'
+    | | | |   `-ImplicitCastExpr 0x7fe4bf035460 <col:31, col:50> 'volatile char *' <LValueToRValue>
+    | | | |     `-ParenExpr 0x7fe4bf035440 <col:31, col:50> 'volatile char *' lvalue
+    | | | |       `-MemberExpr 0x7fe4bf035408 <col:32, col:45> 'volatile char *' lvalue .maddr 0x7fe4bf025a90
+    | | | |         `-ArraySubscriptExpr 0x7fe4bf0353e0 <col:32, col:43> 'bus_space_handle_t':'bus_space_handle_t' lvalue
+    | | | |           |-ImplicitCastExpr 0x7fe4bf0353c8 <col:32, col:37> 'bus_space_handle_t *' <ArrayToPointerDecay>
+    | | | |           | `-MemberExpr 0x7fe4bf035370 <col:32, col:37> 'bus_space_handle_t [2]' lvalue ->bshs 0x7fe4bf025f78
+    | | | |           |   `-ImplicitCastExpr 0x7fe4bf035358 <col:32> 'struct ahd_softc *' <LValueToRValue>
+    | | | |           |     `-DeclRefExpr 0x7fe4bf035330 <col:32> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    | | | |           `-IntegerLiteral 0x7fe4bf0353a8 <col:42> 'int' 0
+    | | | `-<<<NULL>>>
+    | | |-CallExpr 0x7fe4bf035658 <line:108:9, col:38> 'void'
+    | | | |-ImplicitCastExpr 0x7fe4bf035640 <col:9> 'void (*)(int, int)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7fe4bf0354e8 <col:9> 'void (int, int)' Function 0x7fe4bf026240 'outb' 'void (int, int)'
+    | | | |-IntegerLiteral 0x7fe4bf035510 <col:15> 'int' 1
+    | | | `-ImplicitCastExpr 0x7fe4bf035690 <col:18, col:31> 'int' <LValueToRValue>
+    | | |   `-MemberExpr 0x7fe4bf035608 <col:18, col:31> 'int' lvalue .ioport 0x7fe4bf025a00
+    | | |     `-ArraySubscriptExpr 0x7fe4bf0355e0 <col:18, col:29> 'bus_space_handle_t':'bus_space_handle_t' lvalue
+    | | |       |-ImplicitCastExpr 0x7fe4bf0355c8 <col:18, col:23> 'bus_space_handle_t *' <ArrayToPointerDecay>
+    | | |       | `-MemberExpr 0x7fe4bf035570 <col:18, col:23> 'bus_space_handle_t [2]' lvalue ->bshs 0x7fe4bf025f78
+    | | |       |   `-ImplicitCastExpr 0x7fe4bf035558 <col:18> 'struct ahd_softc *' <LValueToRValue>
+    | | |       |     `-DeclRefExpr 0x7fe4bf035530 <col:18> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    | | |       `-IntegerLiteral 0x7fe4bf0355a8 <col:28> 'int' 0
+    | | |-IfStmt 0x7fe4bf035960 <line:109:7, col:50>
+    | | | |-<<<NULL>>>
+    | | | |-<<<NULL>>>
+    | | | |-BinaryOperator 0x7fe4bf0357b8 <col:11, col:27> 'int' '=='
+    | | | | |-ImplicitCastExpr 0x7fe4bf0357a0 <col:11, col:22> 'int' <LValueToRValue>
+    | | | | | `-ArraySubscriptExpr 0x7fe4bf035758 <col:11, col:22> 'int' lvalue
+    | | | | |   |-ImplicitCastExpr 0x7fe4bf035740 <col:11, col:16> 'int *' <ArrayToPointerDecay>
+    | | | | |   | `-MemberExpr 0x7fe4bf0356e8 <col:11, col:16> 'int [2]' lvalue ->tags 0x7fe4bf025e00
+    | | | | |   |   `-ImplicitCastExpr 0x7fe4bf0356d0 <col:11> 'struct ahd_softc *' <LValueToRValue>
+    | | | | |   |     `-DeclRefExpr 0x7fe4bf0356a8 <col:11> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    | | | | |   `-IntegerLiteral 0x7fe4bf035720 <col:21> 'int' 0
+    | | | | `-IntegerLiteral 0x7fe4bf035780 <col:27> 'int' 1
+    | | | |-ImplicitCastExpr 0x7fe4bf035948 <col:30, col:50> 'char' <LValueToRValue>
+    | | | | `-UnaryOperator 0x7fe4bf035928 <col:30, col:50> 'volatile char' lvalue prefix '*'
+    | | | |   `-ImplicitCastExpr 0x7fe4bf035910 <col:31, col:50> 'volatile char *' <LValueToRValue>
+    | | | |     `-ParenExpr 0x7fe4bf0358f0 <col:31, col:50> 'volatile char *' lvalue
+    | | | |       `-MemberExpr 0x7fe4bf0358b8 <col:32, col:45> 'volatile char *' lvalue .maddr 0x7fe4bf025a90
+    | | | |         `-ArraySubscriptExpr 0x7fe4bf035890 <col:32, col:43> 'bus_space_handle_t':'bus_space_handle_t' lvalue
+    | | | |           |-ImplicitCastExpr 0x7fe4bf035878 <col:32, col:37> 'bus_space_handle_t *' <ArrayToPointerDecay>
+    | | | |           | `-MemberExpr 0x7fe4bf035820 <col:32, col:37> 'bus_space_handle_t [2]' lvalue ->bshs 0x7fe4bf025f78
+    | | | |           |   `-ImplicitCastExpr 0x7fe4bf035808 <col:32> 'struct ahd_softc *' <LValueToRValue>
+    | | | |           |     `-DeclRefExpr 0x7fe4bf0357e0 <col:32> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    | | | |           `-IntegerLiteral 0x7fe4bf035858 <col:42> 'int' 0
+    | | | `-<<<NULL>>>
+    | | `-CallExpr 0x7fe4bf035b08 <line:110:9, col:38> 'void'
+    | |   |-ImplicitCastExpr 0x7fe4bf035af0 <col:9> 'void (*)(int, int)' <FunctionToPointerDecay>
+    | |   | `-DeclRefExpr 0x7fe4bf035998 <col:9> 'void (int, int)' Function 0x7fe4bf026240 'outb' 'void (int, int)'
+    | |   |-IntegerLiteral 0x7fe4bf0359c0 <col:15> 'int' 1
+    | |   `-ImplicitCastExpr 0x7fe4bf035b40 <col:18, col:31> 'int' <LValueToRValue>
+    | |     `-MemberExpr 0x7fe4bf035ab8 <col:18, col:31> 'int' lvalue .ioport 0x7fe4bf025a00
+    | |       `-ArraySubscriptExpr 0x7fe4bf035a90 <col:18, col:29> 'bus_space_handle_t':'bus_space_handle_t' lvalue
+    | |         |-ImplicitCastExpr 0x7fe4bf035a78 <col:18, col:23> 'bus_space_handle_t *' <ArrayToPointerDecay>
+    | |         | `-MemberExpr 0x7fe4bf035a20 <col:18, col:23> 'bus_space_handle_t [2]' lvalue ->bshs 0x7fe4bf025f78
+    | |         |   `-ImplicitCastExpr 0x7fe4bf035a08 <col:18> 'struct ahd_softc *' <LValueToRValue>
+    | |         |     `-DeclRefExpr 0x7fe4bf0359e0 <col:18> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    | |         `-IntegerLiteral 0x7fe4bf035a58 <col:28> 'int' 0
+    | `-<<<NULL>>>
+    |-BinaryOperator 0x7fe4bf035c60 <line:112:3, col:19> 'int' '='
+    | |-MemberExpr 0x7fe4bf035c08 <col:3, col:8> 'int' lvalue ->src_mode 0x7fe4bf026038
+    | | `-ImplicitCastExpr 0x7fe4bf035bf0 <col:3> 'struct ahd_softc *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fe4bf035bc8 <col:3> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    | `-IntegerLiteral 0x7fe4bf035c40 <col:19> 'int' 1
+    |-BinaryOperator 0x7fe4bf035d20 <line:113:3, col:19> 'int' '='
+    | |-MemberExpr 0x7fe4bf035cc8 <col:3, col:8> 'int' lvalue ->dst_mode 0x7fe4bf025fd8
+    | | `-ImplicitCastExpr 0x7fe4bf035cb0 <col:3> 'struct ahd_softc *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fe4bf035c88 <col:3> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+    | `-IntegerLiteral 0x7fe4bf035d00 <col:19> 'int' 2
+    `-CompoundAssignOperator 0x7fe4bf035de0 <line:114:3, col:17> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+      |-MemberExpr 0x7fe4bf035d88 <col:3, col:8> 'int' lvalue ->flags 0x7fe4bf026098
+      | `-ImplicitCastExpr 0x7fe4bf035d70 <col:3> 'struct ahd_softc *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fe4bf035d48 <col:3> 'struct ahd_softc *' lvalue ParmVar 0x7fe4bf026ac0 'ahd' 'struct ahd_softc *'
+      `-IntegerLiteral 0x7fe4bf035dc0 <col:17> 'int' 1

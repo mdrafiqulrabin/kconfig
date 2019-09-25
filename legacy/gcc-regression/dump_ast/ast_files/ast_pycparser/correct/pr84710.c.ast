@@ -1,0 +1,33 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['char']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          IdentifierType: ['int']
+      Assignment: =
+        ID: b
+        FuncCall: 
+          ID: __builtin_mul_overflow
+          ExprList: 
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['char']
+              ID: d
+            Constant: int, 0xfe
+            UnaryOp: &
+              ID: a

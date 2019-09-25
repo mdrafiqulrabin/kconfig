@@ -1,0 +1,69 @@
+FileAST: 
+  Decl: qsz, [], ['static'], []
+    TypeDecl: qsz, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: specqsort, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: base
+          ID: n
+          ID: size
+          ID: compar
+        TypeDecl: specqsort, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: c, [], ['register'], []
+        TypeDecl: c, []
+          IdentifierType: ['char']
+      Decl: i, [], ['register'], []
+        PtrDecl: []
+          TypeDecl: i, []
+            IdentifierType: ['char']
+      Decl: j, [], ['register'], []
+        PtrDecl: []
+          TypeDecl: j, []
+            IdentifierType: ['char']
+      Decl: lo, [], ['register'], []
+        PtrDecl: []
+          TypeDecl: lo, []
+            IdentifierType: ['char']
+      Decl: hi, [], ['register'], []
+        PtrDecl: []
+          TypeDecl: hi, []
+            IdentifierType: ['char']
+      Assignment: =
+        ID: qsz
+        ID: size
+      For: 
+        ExprList: 
+          Assignment: =
+            ID: i
+            ID: base
+          Assignment: =
+            ID: hi
+            BinaryOp: +
+              ID: base
+              ID: qsz
+        BinaryOp: <
+          ID: i
+          ID: hi
+        Compound: 
+          Assignment: =
+            UnaryOp: *
+              UnaryOp: p++
+                ID: i
+            ID: c
+    Decl: n, [], [], []
+      TypeDecl: n, []
+        IdentifierType: ['int']
+    Decl: size, [], [], []
+      TypeDecl: size, []
+        IdentifierType: ['int']
+    Decl: compar, [], [], []
+      TypeDecl: compar, []
+        IdentifierType: ['int']
+    Decl: base, [], [], []
+      PtrDecl: []
+        TypeDecl: base, []
+          IdentifierType: ['char']

@@ -1,0 +1,43 @@
+FileAST: 
+  FuncDef: 
+    Decl: DOSMEM_FillIsrTable, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: isr, [], [], []
+            PtrDecl: []
+              TypeDecl: isr, []
+                IdentifierType: ['int']
+        TypeDecl: DOSMEM_FillIsrTable, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 256
+        UnaryOp: p++
+          ID: i
+        Assignment: =
+          ArrayRef: 
+            ID: isr
+            ID: i
+          BinaryOp: |
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['short']
+              BinaryOp: &
+                BinaryOp: *
+                  ID: i
+                  Constant: int, 4
+                Constant: int, 0xFFFF
+            BinaryOp: <<
+              BinaryOp: &
+                Constant: int, 0xf000
+                Constant: int, 0xFFFF
+              Constant: int, 16

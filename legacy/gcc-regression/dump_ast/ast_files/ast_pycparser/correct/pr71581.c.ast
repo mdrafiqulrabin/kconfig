@@ -1,0 +1,46 @@
+FileAST: 
+  FuncDef: 
+    Decl: f1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: f1, []
+          IdentifierType: ['_Complex', 'float']
+    Compound: 
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['float']
+      Return: 
+        ID: x
+  FuncDef: 
+    Decl: f2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: f2, []
+          IdentifierType: ['_Complex', 'double']
+    Compound: 
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['double']
+      Return: 
+        ID: x
+  FuncDef: 
+    Decl: f3, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: f3, []
+          IdentifierType: ['_Complex', 'int']
+    Compound: 
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['int']
+      Return: 
+        ID: x

@@ -1,0 +1,77 @@
+FileAST: 
+  Typedef: z, [], ['typedef']
+    TypeDecl: z, []
+      Struct: None
+        Decl: t1, [], [], []
+          PtrDecl: []
+            TypeDecl: t1, []
+              IdentifierType: ['void']
+        Decl: t2, [], [], []
+          PtrDecl: []
+            TypeDecl: t2, []
+              IdentifierType: ['void']
+        Decl: t3, [], [], []
+          PtrDecl: []
+            TypeDecl: t3, []
+              IdentifierType: ['void']
+  Decl: y, ['volatile'], ['extern'], []
+    TypeDecl: y, ['volatile']
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], ['static'], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            PtrDecl: []
+              TypeDecl: x, []
+                IdentifierType: ['z']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        StructRef: ->
+          ID: x
+          ID: t1
+        UnaryOp: &
+          StructRef: ->
+            ID: x
+            ID: t2
+      Assignment: =
+        StructRef: ->
+          ID: x
+          ID: t2
+        Cast: 
+          Typename: None, []
+            PtrDecl: []
+              TypeDecl: None, []
+                IdentifierType: ['void']
+          Constant: int, 0
+      Assignment: =
+        StructRef: ->
+          ID: x
+          ID: t3
+        UnaryOp: &
+          StructRef: ->
+            ID: x
+            ID: t1
+  Decl: v, [], ['extern'], []
+    TypeDecl: v, []
+      IdentifierType: ['z']
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: bar, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        ID: y
+        Constant: int, 0
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          UnaryOp: &
+            ID: v

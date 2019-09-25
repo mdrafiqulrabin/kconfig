@@ -1,0 +1,29 @@
+c_files/pr21419.c:6:36: error: invalid lvalue in asm output
+  __asm__ __volatile__ ("" : "=m" (i)); /* { dg-error "read-only variable" } */
+                                   ^
+c_files/pr21419.c:12:36: error: invalid lvalue in asm output
+  __asm__ __volatile__ ("" : "=r" (set)); /* { dg-error "read-only parameter" } */
+                                   ^~~
+2 errors generated.
+TranslationUnitDecl 0x7fd9ab0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd9ab026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd9ab026740 '__int128'
+|-TypedefDecl 0x7fd9ab026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd9ab026760 'unsigned __int128'
+|-TypedefDecl 0x7fd9ab026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd9ab026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd9ab026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd9ab026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd9ab026dc0 'char *'
+|   `-BuiltinType 0x7fd9ab026560 'char'
+|-TypedefDecl 0x7fd9ab0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd9ab027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd9ab026ee0 'struct __va_list_tag'
+|     `-Record 0x7fd9ab026e58 '__va_list_tag'
+|-VarDecl 0x7fd9ab027138 <c_files/pr21419.c:2:1, col:15> col:11 used i 'const int' cinit
+| `-IntegerLiteral 0x7fd9ab0271d8 <col:15> 'int' 0
+|-FunctionDecl 0x7fd9ab0774c0 <line:4:1, line:8:1> line:4:6 f 'void (void)'
+| `-CompoundStmt 0x7fd9ab077650 <line:5:1, line:8:1>
+`-FunctionDecl 0x7fd9ab077780 <line:10:1, line:13:1> line:10:6 g 'void (const int)'
+  |-ParmVarDecl 0x7fd9ab077680 <col:8, col:18> col:18 used set 'const int'
+  `-CompoundStmt 0x7fd9ab0778a0 <line:11:1, line:13:1>

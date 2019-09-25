@@ -1,0 +1,151 @@
+FileAST: 
+  Decl: f, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, ['const']
+          PtrDecl: []
+            TypeDecl: None, ['const']
+              IdentifierType: ['char']
+        EllipsisParam: 
+      TypeDecl: f, []
+        IdentifierType: ['void']
+  Decl: g, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: g, []
+        IdentifierType: ['int']
+  Decl: p, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      PtrDecl: []
+        TypeDecl: p, []
+          IdentifierType: ['void']
+  Decl: isymBase, [], [], []
+    TypeDecl: isymBase, []
+      IdentifierType: ['int']
+  Decl: ilineBase, [], [], []
+    TypeDecl: ilineBase, []
+      IdentifierType: ['int']
+  Decl: sym_hdr, [], [], []
+    TypeDecl: sym_hdr, []
+      IdentifierType: ['int']
+  Decl: want_line, [], [], []
+    TypeDecl: want_line, []
+      IdentifierType: ['int']
+  Decl: proc_desc, [], [], []
+    TypeDecl: proc_desc, []
+      IdentifierType: ['int']
+  Decl: lines, [], [], []
+    PtrDecl: []
+      TypeDecl: lines, []
+        IdentifierType: ['char']
+  FuncDef: 
+    Decl: print_file_desc, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: fdp, [], [], []
+            PtrDecl: []
+              TypeDecl: fdp, []
+                IdentifierType: ['int']
+        TypeDecl: print_file_desc, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: str_base, [], [], []
+        PtrDecl: []
+          TypeDecl: str_base, []
+            IdentifierType: ['char']
+        FuncCall: 
+          ID: p
+      Decl: symi, [], [], []
+        TypeDecl: symi, []
+          IdentifierType: ['int']
+      Decl: pdi, [], [], []
+        TypeDecl: pdi, []
+          IdentifierType: ['int']
+        FuncCall: 
+          ID: g
+      For: 
+        Assignment: =
+          ID: symi
+          Constant: int, 0
+        ID: isymBase
+        Compound: 
+          Decl: proc_ptr, [], [], []
+            TypeDecl: proc_ptr, []
+              IdentifierType: ['int']
+            BinaryOp: +
+              ID: proc_desc
+              ID: pdi
+          FuncCall: 
+            ID: f
+            ExprList: 
+              Constant: string, "1"
+              ID: isymBase
+              BinaryOp: +
+                ID: proc_ptr
+                UnaryOp: *
+                  ID: fdp
+              ID: str_base
+          If: 
+            BinaryOp: &&
+              ID: want_line
+              UnaryOp: *
+                ID: fdp
+            Compound: 
+              Decl: delta, [], [], []
+                TypeDecl: delta, []
+                  IdentifierType: ['int']
+              Decl: cur_line, [], [], []
+                TypeDecl: cur_line, []
+                  IdentifierType: ['long']
+                ID: proc_ptr
+              Decl: line_ptr, [], [], []
+                PtrDecl: []
+                  TypeDecl: line_ptr, []
+                    IdentifierType: ['char']
+                BinaryOp: +
+                  ID: lines
+                  ID: proc_ptr
+              Decl: line_end, [], [], []
+                PtrDecl: []
+                  TypeDecl: line_end, []
+                    IdentifierType: ['char']
+                FuncCall: 
+                  ID: p
+              FuncCall: 
+                ID: f
+                ExprList: 
+                  Constant: string, "2"
+                  ID: sym_hdr
+              While: 
+                BinaryOp: <
+                  ID: line_ptr
+                  ID: line_end
+                Compound: 
+                  Assignment: =
+                    ID: delta
+                    UnaryOp: *
+                      ID: line_ptr
+                  If: 
+                    ID: delta
+                    UnaryOp: p++
+                      ID: line_ptr
+                    Assignment: =
+                      ID: delta
+                      BinaryOp: ^
+                        ArrayRef: 
+                          ID: line_ptr
+                          Constant: int, 1
+                        Constant: int, 0x8000
+                  FuncCall: 
+                    ID: f
+                    ExprList: 
+                      Constant: string, "3"
+                      ID: cur_line
+                      ID: delta

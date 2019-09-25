@@ -1,0 +1,30 @@
+FileAST: 
+  FuncDef: 
+    Decl: _bfd_xcoff_canonicalize_dynamic_reloc, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: l_symndx, [], [], []
+            TypeDecl: l_symndx, []
+              IdentifierType: ['unsigned', 'long', 'long']
+        TypeDecl: _bfd_xcoff_canonicalize_dynamic_reloc, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: <
+          ID: l_symndx
+          Constant: int, 3
+        Compound: 
+          Switch: 
+            ID: l_symndx
+            Compound: 
+              Case: 
+                Constant: int, 0
+              Case: 
+                Constant: int, 1
+                Break: 
+              Case: 
+                Constant: int, 2
+                FuncCall: 
+                  ID: _bfd_abort
+                  ExprList: 
+                    Constant: string, "HI"

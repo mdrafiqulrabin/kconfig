@@ -1,0 +1,137 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: S
+      Decl: s, [], [], []
+        ArrayDecl: []
+          TypeDecl: s, []
+            IdentifierType: ['char']
+          Constant: int, 256
+  FuncDef: 
+    Decl: foo, [], ['static'], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Switch: 
+        ID: x
+        Compound: 
+          Case: 
+            Constant: int, 1
+          Case: 
+            Constant: int, 2
+            Return: 
+              Constant: int, 3
+          Case: 
+            Constant: int, 3
+          Case: 
+            Constant: int, 4
+            Return: 
+              Constant: int, 2
+          Case: 
+            Constant: int, 5
+            Switch: 
+              ID: y
+              Compound: 
+                Case: 
+                  Constant: int, 4
+                  Return: 
+                    Constant: int, 1
+      Return: 
+        Constant: int, 0
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            PtrDecl: []
+              TypeDecl: x, []
+                Struct: S
+          Decl: y, [], [], []
+            PtrDecl: []
+              TypeDecl: y, []
+                IdentifierType: ['int']
+          Decl: z, [], [], []
+            PtrDecl: []
+              TypeDecl: z, []
+                IdentifierType: ['int']
+          Decl: w, [], [], []
+            PtrDecl: []
+              PtrDecl: []
+                TypeDecl: w, []
+                  IdentifierType: ['int']
+        TypeDecl: bar, []
+          IdentifierType: ['void']
+    Compound: 
+      Switch: 
+        TernaryOp: 
+          UnaryOp: *
+            ID: y
+          ArrayRef: 
+            StructRef: ->
+              ID: x
+              ID: s
+            UnaryOp: *
+              ID: y
+          FuncCall: 
+            ID: foo
+            ExprList: 
+              ArrayRef: 
+                ID: y
+                Constant: int, 1
+              ArrayRef: 
+                ID: y
+                Constant: int, 0
+        Compound: 
+          Case: 
+            Constant: int, 3
+            If: 
+              BinaryOp: ==
+                BinaryOp: +
+                  ID: y
+                  Constant: int, 2
+                ID: z
+              For: 
+                Compound: 
+                  Assignment: +=
+                    ID: y
+                    Constant: int, 2
+                  Switch: 
+                    TernaryOp: 
+                      UnaryOp: *
+                        ID: y
+                      ArrayRef: 
+                        StructRef: ->
+                          ID: x
+                          ID: s
+                        UnaryOp: *
+                          ID: y
+                      FuncCall: 
+                        ID: foo
+                        ExprList: 
+                          ArrayRef: 
+                            ID: y
+                            Constant: int, 1
+                          ArrayRef: 
+                            ID: y
+                            Constant: int, 0
+                    Compound: 
+                      Case: 
+                        Constant: int, 6
+                        Break: 
+                      Default: 
+                        Assignment: =
+                          UnaryOp: *
+                            ID: w
+                          ID: y
+                  If: 
+                    BinaryOp: ==
+                      ID: y
+                      ID: z
+                    Break: 

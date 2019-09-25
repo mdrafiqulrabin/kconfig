@@ -1,0 +1,119 @@
+FileAST: 
+  FuncDef: 
+    Decl: ffesum, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: ffesum, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: ch, [], [], []
+        ArrayDecl: []
+          TypeDecl: ch, []
+            IdentifierType: ['int']
+          Constant: int, 4
+      Decl: ii, [], [], []
+        TypeDecl: ii, []
+          IdentifierType: ['int']
+      Decl: jj, [], [], []
+        TypeDecl: jj, []
+          IdentifierType: ['int']
+      Decl: kk, [], [], []
+        TypeDecl: kk, []
+          IdentifierType: ['int']
+      Decl: asc, [], [], []
+        ArrayDecl: []
+          TypeDecl: asc, []
+            IdentifierType: ['char']
+          Constant: int, 32
+      For: 
+        Assignment: =
+          ID: ii
+          Constant: int, 0
+        BinaryOp: <
+          ID: ii
+          Constant: int, 4
+        UnaryOp: p++
+          ID: ii
+        Compound: 
+          For: 
+            Assignment: =
+              ID: jj
+              Constant: int, 0
+            BinaryOp: <
+              ID: jj
+              Constant: int, 4
+            UnaryOp: p++
+              ID: jj
+            Assignment: =
+              ArrayRef: 
+                ID: ch
+                ID: jj
+              ID: ii
+          For: 
+            Assignment: =
+              ID: kk
+              Constant: int, 0
+            BinaryOp: <
+              ID: kk
+              Constant: int, 13
+            UnaryOp: p++
+              ID: kk
+            For: 
+              Assignment: =
+                ID: jj
+                Constant: int, 0
+              BinaryOp: <
+                ID: jj
+                Constant: int, 4
+              Assignment: +=
+                ID: jj
+                Constant: int, 2
+              If: 
+                BinaryOp: ||
+                  Cast: 
+                    Typename: None, []
+                      TypeDecl: None, []
+                        IdentifierType: ['unsigned', 'char']
+                    ArrayRef: 
+                      ID: ch
+                      ID: jj
+                  Cast: 
+                    Typename: None, []
+                      TypeDecl: None, []
+                        IdentifierType: ['unsigned', 'char']
+                    ArrayRef: 
+                      ID: ch
+                      BinaryOp: +
+                        ID: jj
+                        Constant: int, 1
+                UnaryOp: p++
+                  ArrayRef: 
+                    ID: ch
+                    ID: jj
+          For: 
+            Assignment: =
+              ID: jj
+              Constant: int, 0
+            BinaryOp: <
+              ID: jj
+              Constant: int, 4
+            UnaryOp: p++
+              ID: jj
+            Assignment: =
+              ArrayRef: 
+                ID: asc
+                BinaryOp: +
+                  BinaryOp: *
+                    Constant: int, 4
+                    ID: jj
+                  ID: ii
+              ArrayRef: 
+                ID: ch
+                ID: jj
+      Return: 
+        ArrayRef: 
+          ID: asc
+          Constant: int, 0

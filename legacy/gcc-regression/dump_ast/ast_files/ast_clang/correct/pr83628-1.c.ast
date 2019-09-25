@@ -1,0 +1,39 @@
+TranslationUnitDecl 0x7fee198264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fee19826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fee19826740 '__int128'
+|-TypedefDecl 0x7fee19826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fee19826760 'unsigned __int128'
+|-TypedefDecl 0x7fee19826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fee19826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fee19826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fee19826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fee19826dc0 'char *'
+|   `-BuiltinType 0x7fee19826560 'char'
+|-TypedefDecl 0x7fee198270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fee19827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fee19826ee0 'struct __va_list_tag'
+|     `-Record 0x7fee19826e58 '__va_list_tag'
+|-TypedefDecl 0x7fee19827138 <c_files/pr83628-1.c:5:1, col:23> col:23 referenced size_t 'unsigned long'
+| `-BuiltinType 0x7fee19826680 'unsigned long'
+|-FunctionDecl 0x7fee198775a8 <line:7:1, line:11:1> line:8:1 get_int 'int (int *, size_t)'
+| |-ParmVarDecl 0x7fee19877400 <col:10, col:15> col:15 used p 'int *'
+| |-ParmVarDecl 0x7fee19877490 <col:18, col:25> col:25 used idx 'size_t':'unsigned long'
+| `-CompoundStmt 0x7fee19877768 <line:9:1, line:11:1>
+|   `-ReturnStmt 0x7fee19877750 <line:10:3, col:15>
+|     `-ImplicitCastExpr 0x7fee19877738 <col:10, col:15> 'int' <LValueToRValue>
+|       `-ArraySubscriptExpr 0x7fee19877710 <col:10, col:15> 'int' lvalue
+|         |-ImplicitCastExpr 0x7fee198776e0 <col:10> 'int *' <LValueToRValue>
+|         | `-DeclRefExpr 0x7fee19877690 <col:10> 'int *' lvalue ParmVar 0x7fee19877400 'p' 'int *'
+|         `-ImplicitCastExpr 0x7fee198776f8 <col:12> 'size_t':'unsigned long' <LValueToRValue>
+|           `-DeclRefExpr 0x7fee198776b8 <col:12> 'size_t':'unsigned long' lvalue ParmVar 0x7fee19877490 'idx' 'size_t':'unsigned long'
+`-FunctionDecl 0x7fee19877958 <line:13:1, line:17:1> line:14:1 get_long 'long (long *, size_t)'
+  |-ParmVarDecl 0x7fee198777d0 <col:11, col:17> col:17 used p 'long *'
+  |-ParmVarDecl 0x7fee19877840 <col:20, col:27> col:27 used idx 'size_t':'unsigned long'
+  `-CompoundStmt 0x7fee19877ad8 <line:15:1, line:17:1>
+    `-ReturnStmt 0x7fee19877ac0 <line:16:3, col:15>
+      `-ImplicitCastExpr 0x7fee19877aa8 <col:10, col:15> 'long' <LValueToRValue>
+        `-ArraySubscriptExpr 0x7fee19877a80 <col:10, col:15> 'long' lvalue
+          |-ImplicitCastExpr 0x7fee19877a50 <col:10> 'long *' <LValueToRValue>
+          | `-DeclRefExpr 0x7fee19877a00 <col:10> 'long *' lvalue ParmVar 0x7fee198777d0 'p' 'long *'
+          `-ImplicitCastExpr 0x7fee19877a68 <col:12> 'size_t':'unsigned long' <LValueToRValue>
+            `-DeclRefExpr 0x7fee19877a28 <col:12> 'size_t':'unsigned long' lvalue ParmVar 0x7fee19877840 'idx' 'size_t':'unsigned long'

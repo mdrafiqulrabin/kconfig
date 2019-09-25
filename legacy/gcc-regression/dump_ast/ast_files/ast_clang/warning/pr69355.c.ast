@@ -1,0 +1,124 @@
+c_files/pr69355.c:16:25: warning: unknown attribute 'noclone' ignored [-Wunknown-attributes]
+struct S __attribute__((noclone, noinline))
+                        ^
+1 warning generated.
+TranslationUnitDecl 0x7f92150264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9215026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9215026740 '__int128'
+|-TypedefDecl 0x7f9215026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9215026760 'unsigned __int128'
+|-TypedefDecl 0x7f9215026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9215026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9215026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9215026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9215026dc0 'char *'
+|   `-BuiltinType 0x7f9215026560 'char'
+|-TypedefDecl 0x7f92150270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9215027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9215026ee0 'struct __va_list_tag'
+|     `-Record 0x7f9215026e58 '__va_list_tag'
+|-RecordDecl 0x7f9215027120 <c_files/pr69355.c:4:1, line:8:1> line:4:8 struct S definition
+| |-FieldDecl 0x7f9215077400 <line:6:3, col:9> col:9 referenced a 'void *'
+| `-FieldDecl 0x7f9215077460 <line:7:3, col:15> col:15 referenced b 'long double'
+|-RecordDecl 0x7f92150774a8 <line:10:1, line:14:1> line:10:8 struct Z definition
+| |-PackedAttr 0x7f9215077610 <line:14:18>
+| |-FieldDecl 0x7f9215077568 <line:12:3, col:13> col:13 referenced l 'long long'
+| `-FieldDecl 0x7f92150775c8 <line:13:3, col:9> col:9 referenced s 'short'
+|-FunctionDecl 0x7f92150778d0 <line:16:1, line:23:1> line:17:1 used foo 'struct S (void *, struct Z *)'
+| |-ParmVarDecl 0x7f9215077670 <col:6, col:12> col:12 used v 'void *'
+| |-ParmVarDecl 0x7f9215077780 <col:15, col:25> col:25 used z 'struct Z *'
+| |-CompoundStmt 0x7f9215077d70 <line:18:1, line:23:1>
+| | |-DeclStmt 0x7f9215077a80 <line:19:3, col:13>
+| | | `-VarDecl 0x7f9215077a20 <col:3, col:12> col:12 used t 'struct S':'struct S'
+| | |-BinaryOperator 0x7f9215077b38 <line:20:3, col:9> 'void *' '='
+| | | |-MemberExpr 0x7f9215077ac0 <col:3, col:5> 'void *' lvalue .a 0x7f9215077400
+| | | | `-DeclRefExpr 0x7f9215077a98 <col:3> 'struct S':'struct S' lvalue Var 0x7f9215077a20 't' 'struct S':'struct S'
+| | | `-ImplicitCastExpr 0x7f9215077b20 <col:9> 'void *' <LValueToRValue>
+| | |   `-DeclRefExpr 0x7f9215077af8 <col:9> 'void *' lvalue ParmVar 0x7f9215077670 'v' 'void *'
+| | |-BinaryOperator 0x7f9215077cf0 <line:21:3, col:25> 'struct Z':'struct Z' '='
+| | | |-UnaryOperator 0x7f9215077c58 <col:3, col:20> 'struct Z':'struct Z' lvalue prefix '*'
+| | | | `-CStyleCastExpr 0x7f9215077c30 <col:4, col:20> 'struct Z *' <BitCast>
+| | | |   `-UnaryOperator 0x7f9215077be8 <col:17, col:20> 'long double *' prefix '&'
+| | | |     `-MemberExpr 0x7f9215077b88 <col:18, col:20> 'long double' lvalue .b 0x7f9215077460
+| | | |       `-DeclRefExpr 0x7f9215077b60 <col:18> 'struct S':'struct S' lvalue Var 0x7f9215077a20 't' 'struct S':'struct S'
+| | | `-ImplicitCastExpr 0x7f9215077cd8 <col:24, col:25> 'struct Z':'struct Z' <LValueToRValue>
+| | |   `-UnaryOperator 0x7f9215077cb8 <col:24, col:25> 'struct Z':'struct Z' lvalue prefix '*'
+| | |     `-ImplicitCastExpr 0x7f9215077ca0 <col:25> 'struct Z *' <LValueToRValue>
+| | |       `-DeclRefExpr 0x7f9215077c78 <col:25> 'struct Z *' lvalue ParmVar 0x7f9215077780 'z' 'struct Z *'
+| | `-ReturnStmt 0x7f9215077d58 <line:22:3, col:10>
+| |   `-ImplicitCastExpr 0x7f9215077d40 <col:10> 'struct S':'struct S' <LValueToRValue>
+| |     `-DeclRefExpr 0x7f9215077d18 <col:10> 'struct S':'struct S' lvalue Var 0x7f9215077a20 't' 'struct S':'struct S'
+| `-NoInlineAttr 0x7f9215077978 <line:16:34>
+|-VarDecl 0x7f9215077dc8 <line:25:1, col:10> col:10 used gz 'struct Z':'struct Z'
+|-FunctionDecl 0x7f9215077fb8 <line:27:1, line:44:1> line:28:1 main 'int (int, char **)'
+| |-ParmVarDecl 0x7f9215077e40 <col:7, col:11> col:11 argc 'int'
+| |-ParmVarDecl 0x7f9215077ee0 <col:17, col:24> col:24 argv 'char **'
+| `-CompoundStmt 0x7f921507ac68 <line:29:1, line:44:1>
+|   |-DeclStmt 0x7f92150780e0 <line:30:3, col:13>
+|   | `-VarDecl 0x7f9215078080 <col:3, col:12> col:12 used s 'struct S':'struct S'
+|   |-IfStmt 0x7f9215078220 <line:32:3, line:33:12>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f9215078170 <line:32:7, col:46> 'int' '<'
+|   | | |-UnaryExprOrTypeTraitExpr 0x7f9215078110 <col:7, col:26> 'unsigned long' sizeof 'long double'
+|   | | `-UnaryExprOrTypeTraitExpr 0x7f9215078150 <col:30, col:46> 'unsigned long' sizeof 'struct Z':'struct Z'
+|   | |-ReturnStmt 0x7f9215078208 <line:33:5, col:12>
+|   | | `-IntegerLiteral 0x7f92150781e8 <col:12> 'int' 0
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x7f92150782f0 <line:35:3, col:10> 'long long' '='
+|   | |-MemberExpr 0x7f9215078280 <col:3, col:6> 'long long' lvalue .l 0x7f9215077568
+|   | | `-DeclRefExpr 0x7f9215078258 <col:3> 'struct Z':'struct Z' lvalue Var 0x7f9215077dc8 'gz' 'struct Z':'struct Z'
+|   | `-ImplicitCastExpr 0x7f92150782d8 <col:10> 'long long' <IntegralCast>
+|   |   `-IntegerLiteral 0x7f92150782b8 <col:10> 'int' 48879
+|   |-BinaryOperator 0x7f92150783b0 <line:36:3, col:10> 'short' '='
+|   | |-MemberExpr 0x7f9215078340 <col:3, col:6> 'short' lvalue .s 0x7f92150775c8
+|   | | `-DeclRefExpr 0x7f9215078318 <col:3> 'struct Z':'struct Z' lvalue Var 0x7f9215077dc8 'gz' 'struct Z':'struct Z'
+|   | `-ImplicitCastExpr 0x7f9215078398 <col:10> 'short' <IntegralCast>
+|   |   `-IntegerLiteral 0x7f9215078378 <col:10> 'int' 171
+|   |-BinaryOperator 0x7f921507a578 <line:38:3, col:27> 'struct S':'struct S' '='
+|   | |-DeclRefExpr 0x7f92150783d8 <col:3> 'struct S':'struct S' lvalue Var 0x7f9215078080 's' 'struct S':'struct S'
+|   | `-CallExpr 0x7f921507a540 <col:7, col:27> 'struct S':'struct S'
+|   |   |-ImplicitCastExpr 0x7f921507a528 <col:7> 'struct S (*)(void *, struct Z *)' <FunctionToPointerDecay>
+|   |   | `-DeclRefExpr 0x7f921507a400 <col:7> 'struct S (void *, struct Z *)' Function 0x7f92150778d0 'foo' 'struct S (void *, struct Z *)'
+|   |   |-CStyleCastExpr 0x7f921507a460 <col:12, col:21> 'void *' <NullToPointer>
+|   |   | `-IntegerLiteral 0x7f921507a428 <col:21> 'int' 0
+|   |   `-UnaryOperator 0x7f921507a4b0 <col:24, col:25> 'struct Z *' prefix '&'
+|   |     `-DeclRefExpr 0x7f921507a488 <col:25> 'struct Z':'struct Z' lvalue Var 0x7f9215077dc8 'gz' 'struct Z':'struct Z'
+|   |-IfStmt 0x7f921507abf8 <line:40:3, line:42:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f921507aa20 <line:40:7, line:41:41> 'int' '||'
+|   | | |-ParenExpr 0x7f921507a780 <line:40:7, col:38> 'int'
+|   | | | `-BinaryOperator 0x7f921507a758 <col:8, col:37> 'int' '!='
+|   | | |   |-ImplicitCastExpr 0x7f921507a728 <col:8, col:29> 'long long' <LValueToRValue>
+|   | | |   | `-MemberExpr 0x7f921507a690 <col:8, col:29> 'long long' lvalue ->l 0x7f9215077568
+|   | | |   |   `-ParenExpr 0x7f921507a670 <col:8, col:26> 'struct Z *'
+|   | | |   |     `-CStyleCastExpr 0x7f921507a648 <col:9, col:25> 'struct Z *' <BitCast>
+|   | | |   |       `-UnaryOperator 0x7f921507a600 <col:22, col:25> 'long double *' prefix '&'
+|   | | |   |         `-MemberExpr 0x7f921507a5c8 <col:23, col:25> 'long double' lvalue .b 0x7f9215077460
+|   | | |   |           `-DeclRefExpr 0x7f921507a5a0 <col:23> 'struct S':'struct S' lvalue Var 0x7f9215078080 's' 'struct S':'struct S'
+|   | | |   `-ImplicitCastExpr 0x7f921507a740 <col:34, col:37> 'long long' <LValueToRValue>
+|   | | |     `-MemberExpr 0x7f921507a6f0 <col:34, col:37> 'long long' lvalue .l 0x7f9215077568
+|   | | |       `-DeclRefExpr 0x7f921507a6c8 <col:34> 'struct Z':'struct Z' lvalue Var 0x7f9215077dc8 'gz' 'struct Z':'struct Z'
+|   | | `-ParenExpr 0x7f921507a9b0 <line:41:10, col:41> 'int'
+|   | |   `-BinaryOperator 0x7f921507a988 <col:11, col:40> 'int' '!='
+|   | |     |-ImplicitCastExpr 0x7f921507a940 <col:11, col:32> 'int' <IntegralCast>
+|   | |     | `-ImplicitCastExpr 0x7f921507a928 <col:11, col:32> 'short' <LValueToRValue>
+|   | |     |   `-MemberExpr 0x7f921507a890 <col:11, col:32> 'short' lvalue ->s 0x7f92150775c8
+|   | |     |     `-ParenExpr 0x7f921507a870 <col:11, col:29> 'struct Z *'
+|   | |     |       `-CStyleCastExpr 0x7f921507a848 <col:12, col:28> 'struct Z *' <BitCast>
+|   | |     |         `-UnaryOperator 0x7f921507a800 <col:25, col:28> 'long double *' prefix '&'
+|   | |     |           `-MemberExpr 0x7f921507a7c8 <col:26, col:28> 'long double' lvalue .b 0x7f9215077460
+|   | |     |             `-DeclRefExpr 0x7f921507a7a0 <col:26> 'struct S':'struct S' lvalue Var 0x7f9215078080 's' 'struct S':'struct S'
+|   | |     `-ImplicitCastExpr 0x7f921507a970 <col:37, col:40> 'int' <IntegralCast>
+|   | |       `-ImplicitCastExpr 0x7f921507a958 <col:37, col:40> 'short' <LValueToRValue>
+|   | |         `-MemberExpr 0x7f921507a8f0 <col:37, col:40> 'short' lvalue .s 0x7f92150775c8
+|   | |           `-DeclRefExpr 0x7f921507a8c8 <col:37> 'struct Z':'struct Z' lvalue Var 0x7f9215077dc8 'gz' 'struct Z':'struct Z'
+|   | |-CallExpr 0x7f921507abd0 <line:42:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7f921507abb8 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7f921507ab60 <col:5> '<builtin fn type>' Function 0x7f921507aa80 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f921507ac50 <line:43:3, col:10>
+|     `-IntegerLiteral 0x7f921507ac30 <col:10> 'int' 0
+`-FunctionDecl 0x7f921507aa80 <line:42:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7f921507ab18 <col:5> Implicit

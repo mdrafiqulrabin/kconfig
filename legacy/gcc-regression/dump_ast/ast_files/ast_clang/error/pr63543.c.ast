@@ -1,0 +1,60 @@
+c_files/pr63543.c:10:11: error: incomplete definition of type 'struct S'
+  return s->a /* { dg-error "dereferencing pointer to incomplete type .struct S." } */
+         ~^
+c_files/pr63543.c:4:8: note: forward declaration of 'struct S'
+struct S;
+       ^
+c_files/pr63543.c:11:6: error: incomplete definition of type 'struct S'
+         + s->b
+           ~^
+c_files/pr63543.c:4:8: note: forward declaration of 'struct S'
+struct S;
+       ^
+c_files/pr63543.c:12:6: error: incomplete definition of type 'struct S'
+         + s->c;
+           ~^
+c_files/pr63543.c:4:8: note: forward declaration of 'struct S'
+struct S;
+       ^
+c_files/pr63543.c:18:11: error: incomplete definition of type 'union U'
+  return u->a /* { dg-error "dereferencing pointer to incomplete type .union U." } */
+         ~^
+c_files/pr63543.c:5:7: note: forward declaration of 'union U'
+union U;
+      ^
+c_files/pr63543.c:19:6: error: incomplete definition of type 'union U'
+         + u->a
+           ~^
+c_files/pr63543.c:5:7: note: forward declaration of 'union U'
+union U;
+      ^
+c_files/pr63543.c:20:6: error: incomplete definition of type 'union U'
+         + u->a;
+           ~^
+c_files/pr63543.c:5:7: note: forward declaration of 'union U'
+union U;
+      ^
+6 errors generated.
+TranslationUnitDecl 0x7fa43b8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa43b826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa43b826740 '__int128'
+|-TypedefDecl 0x7fa43b826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa43b826760 'unsigned __int128'
+|-TypedefDecl 0x7fa43b826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa43b826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa43b826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa43b826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa43b826dc0 'char *'
+|   `-BuiltinType 0x7fa43b826560 'char'
+|-TypedefDecl 0x7fa43b8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa43b827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa43b826ee0 'struct __va_list_tag'
+|     `-Record 0x7fa43b826e58 '__va_list_tag'
+|-RecordDecl 0x7fa43b827120 <c_files/pr63543.c:4:1, col:8> col:8 struct S
+|-RecordDecl 0x7fa43c025a00 <line:5:1, col:7> col:7 union U
+|-FunctionDecl 0x7fa43c025c68 <line:7:1, line:13:1> line:8:1 f1 'int (struct S *)'
+| |-ParmVarDecl 0x7fa43c025b60 <col:5, col:15> col:15 used s 'struct S *'
+| `-CompoundStmt 0x7fa43c0261c0 <line:9:1, line:13:1>
+`-FunctionDecl 0x7fa43c026398 <line:15:1, line:21:1> line:16:1 f2 'int (union U *)'
+  |-ParmVarDecl 0x7fa43c026290 <col:5, col:14> col:14 used u 'union U *'
+  `-CompoundStmt 0x7fa43c0264f8 <line:17:1, line:21:1>

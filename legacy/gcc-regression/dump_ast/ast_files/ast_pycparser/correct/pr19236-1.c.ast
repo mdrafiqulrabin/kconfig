@@ -1,0 +1,47 @@
+FileAST: 
+  Decl: log1pf, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['float']
+      TypeDecl: log1pf, []
+        IdentifierType: ['float']
+  Decl: log1p, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['double']
+      TypeDecl: log1p, []
+        IdentifierType: ['double']
+  FuncDef: 
+    Decl: testf, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: __x, [], [], []
+            TypeDecl: __x, []
+              IdentifierType: ['float']
+        TypeDecl: testf, []
+          IdentifierType: ['float']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: log1pf
+          ExprList: 
+            Constant: float, 1.0
+  FuncDef: 
+    Decl: test, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: __x, [], [], []
+            TypeDecl: __x, []
+              IdentifierType: ['double']
+        TypeDecl: test, []
+          IdentifierType: ['double']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: log1p
+          ExprList: 
+            Constant: float, 1.0

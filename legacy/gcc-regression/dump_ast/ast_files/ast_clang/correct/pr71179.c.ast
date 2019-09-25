@@ -1,0 +1,28 @@
+TranslationUnitDecl 0x7fe7e40264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe7e4026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe7e4026740 '__int128'
+|-TypedefDecl 0x7fe7e4026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe7e4026760 'unsigned __int128'
+|-TypedefDecl 0x7fe7e4026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe7e4026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe7e4026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe7e4026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe7e4026dc0 'char *'
+|   `-BuiltinType 0x7fe7e4026560 'char'
+|-TypedefDecl 0x7fe7e40270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe7e4027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe7e4026ee0 'struct __va_list_tag'
+|     `-Record 0x7fe7e4026e58 '__va_list_tag'
+|-TypedefDecl 0x7fe7e4027178 <c_files/pr71179.c:4:1, col:15> col:15 referenced __m128 '__attribute__((__vector_size__(4 * sizeof(float)))) float'
+| |-VectorType 0x7fe7e4027140 '__attribute__((__vector_size__(4 * sizeof(float)))) float' 4
+| | `-BuiltinType 0x7fe7e40266c0 'float'
+| `-MayAliasAttr 0x7fe7e40271d0 <col:60>
+`-FunctionDecl 0x7fe7e4078570 <line:6:1, line:9:1> line:6:8 foo '__m128 (__m128)'
+  |-ParmVarDecl 0x7fe7e4078470 <col:13, col:20> col:20 used a '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+  `-CompoundStmt 0x7fe7e4078710 <line:7:1, line:9:1>
+    `-ReturnStmt 0x7fe7e40786f8 <line:8:3, col:14>
+      `-BinaryOperator 0x7fe7e40786d0 <col:10, col:14> '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float' '+'
+        |-ImplicitCastExpr 0x7fe7e40786a0 <col:10> '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float' <LValueToRValue>
+        | `-DeclRefExpr 0x7fe7e4078650 <col:10> '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue ParmVar 0x7fe7e4078470 'a' '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+        `-ImplicitCastExpr 0x7fe7e40786b8 <col:14> '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float' <LValueToRValue>
+          `-DeclRefExpr 0x7fe7e4078678 <col:14> '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue ParmVar 0x7fe7e4078470 'a' '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float'

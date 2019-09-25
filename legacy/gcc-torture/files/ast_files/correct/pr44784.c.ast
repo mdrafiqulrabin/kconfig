@@ -1,0 +1,210 @@
+FileAST: 
+  Typedef: rtx, [], ['typedef']
+    PtrDecl: []
+      TypeDecl: rtx, []
+        Struct: rtx_def
+  Decl: None, [], [], []
+    Enum: rtx_code
+      EnumeratorList: 
+        Enumerator: SUBREG
+  Typedef: rtunion, [], ['typedef']
+    TypeDecl: rtunion, []
+      Union: rtunion_def
+        Decl: rtint, [], [], []
+          TypeDecl: rtint, []
+            IdentifierType: ['long']
+        Decl: rtuint, [], [], []
+          TypeDecl: rtuint, []
+            IdentifierType: ['unsigned', 'long']
+        Decl: rtx, [], [], []
+          TypeDecl: rtx, []
+            IdentifierType: ['rtx']
+  Decl: None, [], [], []
+    Struct: rtx_def
+      Decl: code, [], [], []
+        TypeDecl: code, []
+          Enum: rtx_code
+        Constant: int, 8
+      Decl: fld, [], [], []
+        ArrayDecl: []
+          TypeDecl: fld, []
+            IdentifierType: ['rtunion']
+          Constant: int, 1
+  Typedef: sbitmap, [], ['typedef']
+    PtrDecl: []
+      TypeDecl: sbitmap, []
+        Struct: simple_bitmap_def
+          Decl: elms, [], [], []
+            ArrayDecl: []
+              TypeDecl: elms, []
+                IdentifierType: ['unsigned', 'long', 'long']
+              Constant: int, 1
+  Decl: None, [], [], []
+    Struct: df_link
+      Decl: next, [], [], []
+        PtrDecl: []
+          TypeDecl: next, []
+            Struct: df_link
+      Decl: reg, [], [], []
+        TypeDecl: reg, []
+          IdentifierType: ['rtx']
+  Typedef: latticevalue, [], ['typedef']
+    TypeDecl: latticevalue, []
+      Enum: None
+        EnumeratorList: 
+          Enumerator: UNDEFINED
+          Enumerator: CONSTANT
+          Enumerator: VARYING
+  Typedef: value, [], ['typedef']
+    TypeDecl: value, []
+      Struct: None
+        Decl: lattice_val, [], [], []
+          TypeDecl: lattice_val, []
+            IdentifierType: ['latticevalue']
+  Decl: values, [], ['static'], []
+    PtrDecl: []
+      TypeDecl: values, []
+        IdentifierType: ['value']
+  Decl: ssa_edges, [], ['static'], []
+    TypeDecl: ssa_edges, []
+      IdentifierType: ['sbitmap']
+  FuncDef: 
+    Decl: defs_to_varying, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: start, [], [], []
+            PtrDecl: []
+              TypeDecl: start, []
+                Struct: df_link
+        TypeDecl: defs_to_varying, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: currdef, [], [], []
+        PtrDecl: []
+          TypeDecl: currdef, []
+            Struct: df_link
+      For: 
+        Assignment: =
+          ID: currdef
+          ID: start
+        ID: currdef
+        Assignment: =
+          ID: currdef
+          StructRef: ->
+            ID: currdef
+            ID: next
+        Compound: 
+          Decl: reg, [], [], []
+            TypeDecl: reg, []
+              IdentifierType: ['rtx']
+            StructRef: ->
+              ID: currdef
+              ID: reg
+          If: 
+            BinaryOp: !=
+              StructRef: .
+                ArrayRef: 
+                  ID: values
+                  StructRef: .
+                    ArrayRef: 
+                      StructRef: ->
+                        TernaryOp: 
+                          BinaryOp: ==
+                            StructRef: ->
+                              ID: reg
+                              ID: code
+                            ID: SUBREG
+                          StructRef: .
+                            ArrayRef: 
+                              StructRef: ->
+                                ID: reg
+                                ID: fld
+                              Constant: int, 0
+                            ID: rtx
+                          ID: reg
+                        ID: fld
+                      Constant: int, 0
+                    ID: rtuint
+                ID: lattice_val
+              ID: VARYING
+            Assignment: |=
+              ArrayRef: 
+                StructRef: ->
+                  ID: ssa_edges
+                  ID: elms
+                BinaryOp: /
+                  StructRef: .
+                    ArrayRef: 
+                      StructRef: ->
+                        TernaryOp: 
+                          BinaryOp: ==
+                            StructRef: ->
+                              ID: reg
+                              ID: code
+                            ID: SUBREG
+                          StructRef: .
+                            ArrayRef: 
+                              StructRef: ->
+                                ID: reg
+                                ID: fld
+                              Constant: int, 0
+                            ID: rtx
+                          ID: reg
+                        ID: fld
+                      Constant: int, 0
+                    ID: rtuint
+                  Constant: int, 64
+              BinaryOp: <<
+                Cast: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['unsigned', 'long', 'long']
+                  Constant: int, 1
+                BinaryOp: %
+                  StructRef: .
+                    ArrayRef: 
+                      StructRef: ->
+                        TernaryOp: 
+                          BinaryOp: ==
+                            StructRef: ->
+                              ID: reg
+                              ID: code
+                            ID: SUBREG
+                          StructRef: .
+                            ArrayRef: 
+                              StructRef: ->
+                                ID: reg
+                                ID: fld
+                              Constant: int, 0
+                            ID: rtx
+                          ID: reg
+                        ID: fld
+                      Constant: int, 0
+                    ID: rtuint
+                  Constant: int, 64
+          Assignment: =
+            StructRef: .
+              ArrayRef: 
+                ID: values
+                StructRef: .
+                  ArrayRef: 
+                    StructRef: ->
+                      TernaryOp: 
+                        BinaryOp: ==
+                          StructRef: ->
+                            ID: reg
+                            ID: code
+                          ID: SUBREG
+                        StructRef: .
+                          ArrayRef: 
+                            StructRef: ->
+                              ID: reg
+                              ID: fld
+                            Constant: int, 0
+                          ID: rtx
+                        ID: reg
+                      ID: fld
+                    Constant: int, 0
+                  ID: rtuint
+              ID: lattice_val
+            ID: VARYING

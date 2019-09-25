@@ -1,0 +1,35 @@
+FileAST: 
+  Decl: vs_data, [], [], []
+    ArrayDecl: []
+      TypeDecl: vs_data, []
+        IdentifierType: ['float']
+      Constant: int, 75
+  FuncDef: 
+    Decl: vis_clear_data, [], [], []
+      FuncDecl: 
+        TypeDecl: vis_clear_data, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: vis_type, [], [], []
+        TypeDecl: vis_type, []
+          IdentifierType: ['int']
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 75
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          Assignment: =
+            ArrayRef: 
+              ID: vs_data
+              ID: i
+            BinaryOp: ==
+              ID: vis_type
+              Constant: int, 1

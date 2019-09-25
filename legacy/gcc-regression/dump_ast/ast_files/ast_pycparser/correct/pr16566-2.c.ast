@@ -1,0 +1,28 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: A
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: x, [], [], []
+        ArrayDecl: []
+          TypeDecl: x, []
+            IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              Struct: A
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        ArrayRef: 
+          StructRef: .
+            ExprList: 
+              ID: a
+              ID: a
+            ID: x
+          Constant: int, 0

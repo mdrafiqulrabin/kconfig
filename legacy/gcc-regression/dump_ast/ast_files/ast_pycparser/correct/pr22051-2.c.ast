@@ -1,0 +1,34 @@
+FileAST: 
+  Decl: arf, [], [], []
+    FuncDecl: 
+      PtrDecl: []
+        TypeDecl: arf, []
+          IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: q, [], [], []
+            PtrDecl: []
+              FuncDecl: 
+                ParamList: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['void']
+                TypeDecl: q, []
+                  IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: r, [], [], []
+        TypeDecl: r, []
+          IdentifierType: ['int']
+        ID: q
+      If: 
+        BinaryOp: !=
+          ID: r
+          Constant: int, 0
+        Return: 
+          Constant: int, 1
+        Return: 
+          Constant: int, 2

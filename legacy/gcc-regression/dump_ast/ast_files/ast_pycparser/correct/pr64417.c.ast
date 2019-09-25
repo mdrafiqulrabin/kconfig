@@ -1,0 +1,90 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: foo
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['int']
+      Decl: y, [], [], []
+        ArrayDecl: []
+          TypeDecl: y, []
+            IdentifierType: ['char']
+  Decl: None, [], [], []
+    Struct: bar
+      Decl: f, [], [], []
+        TypeDecl: f, []
+          Struct: foo
+  Decl: None, [], [], []
+    Struct: baz
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          Struct: bar
+  Decl: a1, [], [], []
+    TypeDecl: a1, []
+      Struct: foo
+    InitList: 
+      Constant: int, 1
+      Constant: string, "abc"
+  Decl: a2, [], [], []
+    TypeDecl: a2, []
+      Struct: foo
+    InitList: 
+      Constant: int, 1
+      InitList: 
+        Constant: string, "abc"
+  Decl: b1, [], [], []
+    ArrayDecl: []
+      TypeDecl: b1, []
+        Struct: foo
+    InitList: 
+      InitList: 
+        Constant: int, 1
+        Constant: string, "abc"
+  Decl: b2, [], [], []
+    ArrayDecl: []
+      TypeDecl: b2, []
+        Struct: foo
+    InitList: 
+      InitList: 
+        Constant: int, 1
+        InitList: 
+          Constant: string, "abc"
+  Decl: c1, [], [], []
+    ArrayDecl: []
+      TypeDecl: c1, []
+        Struct: bar
+    InitList: 
+      InitList: 
+        InitList: 
+          Constant: int, 1
+          Constant: string, "abc"
+  Decl: c2, [], [], []
+    ArrayDecl: []
+      TypeDecl: c2, []
+        Struct: bar
+    InitList: 
+      InitList: 
+        InitList: 
+          Constant: int, 1
+          InitList: 
+            Constant: string, "abc"
+  Decl: d1, [], [], []
+    ArrayDecl: []
+      TypeDecl: d1, []
+        Struct: baz
+    InitList: 
+      InitList: 
+        InitList: 
+          InitList: 
+            Constant: int, 1
+            Constant: string, "abc"
+  Decl: d2, [], [], []
+    ArrayDecl: []
+      TypeDecl: d2, []
+        Struct: baz
+    InitList: 
+      InitList: 
+        InitList: 
+          InitList: 
+            Constant: int, 1
+            InitList: 
+              Constant: string, "abc"

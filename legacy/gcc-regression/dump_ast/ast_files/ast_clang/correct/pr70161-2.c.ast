@@ -1,0 +1,17 @@
+TranslationUnitDecl 0x7fb9520198d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb952019e20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb952019b40 '__int128'
+|-TypedefDecl 0x7fb952019e90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb952019b60 'unsigned __int128'
+|-TypedefDecl 0x7fb95201a168 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb952019f70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb952019ee8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb95201a200 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb95201a1c0 'char *'
+|   `-BuiltinType 0x7fb952019960 'char'
+|-TypedefDecl 0x7fb95201a4c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb95201a470 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb95201a2e0 'struct __va_list_tag'
+|     `-Record 0x7fb95201a258 '__va_list_tag'
+`-FunctionDecl 0x7fb95206d400 <c_files/pr70161-2.c:4:1, line:7:1> line:5:1 foo 'void (void)'
+  `-CompoundStmt 0x7fb95206d4d8 <line:6:1, line:7:1>

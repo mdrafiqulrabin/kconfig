@@ -1,0 +1,75 @@
+TranslationUnitDecl 0x7f8b038264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8b03826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8b03826740 '__int128'
+|-TypedefDecl 0x7f8b03826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8b03826760 'unsigned __int128'
+|-TypedefDecl 0x7f8b03826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8b03826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8b03826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8b03826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8b03826dc0 'char *'
+|   `-BuiltinType 0x7f8b03826560 'char'
+|-TypedefDecl 0x7f8b038270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8b03827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8b03826ee0 'struct __va_list_tag'
+|     `-Record 0x7f8b03826e58 '__va_list_tag'
+|-RecordDecl 0x7f8b03827120 <c_files/pr34448.c:1:9, col:16> col:16 struct chunk_t
+|-TypedefDecl 0x7f8b04025a20 <col:1, col:24> col:24 referenced chunk_t 'struct chunk_t':'struct chunk_t'
+| `-ElaboratedType 0x7f8b038271d0 'struct chunk_t' sugar
+|   `-RecordType 0x7f8b038271b0 'struct chunk_t'
+|     `-Record 0x7f8b04025a90 'chunk_t'
+|-RecordDecl 0x7f8b04025a90 prev 0x7f8b03827120 <line:2:1, line:6:1> line:2:8 struct chunk_t definition
+| |-FieldDecl 0x7f8b04025b60 <line:4:3, col:18> col:18 ptr 'unsigned char *'
+| `-FieldDecl 0x7f8b04025bc0 <line:5:3, col:21> col:21 len 'unsigned long'
+|-FunctionDecl 0x7f8b04025d40 <line:7:1, col:41> col:16 used asn1_wrap 'chunk_t (chunk_t, ...)' extern
+| `-ParmVarDecl 0x7f8b04025c40 <col:27, col:35> col:35 c 'chunk_t':'struct chunk_t'
+|-RecordDecl 0x7f8b04025e20 <line:8:9, col:16> col:16 struct linked_list_t
+|-TypedefDecl 0x7f8b04025f20 <col:1, col:30> col:30 referenced linked_list_t 'struct linked_list_t':'struct linked_list_t'
+| `-ElaboratedType 0x7f8b04025ed0 'struct linked_list_t' sugar
+|   `-RecordType 0x7f8b04025eb0 'struct linked_list_t'
+|     `-Record 0x7f8b04025e20 'linked_list_t'
+|-FunctionDecl 0x7f8b04026120 <line:9:1, col:51> col:9 used ietfAttr_list_encode 'chunk_t (linked_list_t *)'
+| `-ParmVarDecl 0x7f8b04026018 <col:31, col:47> col:47 list 'linked_list_t *'
+|-VarDecl 0x7f8b040261d0 <line:10:1, col:23> col:23 used groups 'linked_list_t *' extern
+|-VarDecl 0x7f8b04026280 <line:11:1, line:13:1> line:11:22 used ASN1_group_oid_str 'unsigned char [1]' static cinit
+| `-InitListExpr 0x7f8b04026348 <col:45, line:13:1> 'unsigned char [1]'
+|   `-ImplicitCastExpr 0x7f8b04026388 <line:12:5> 'unsigned char' <IntegralCast>
+|     `-IntegerLiteral 0x7f8b040262e0 <col:5> 'int' 6
+|-VarDecl 0x7f8b040263f8 <line:14:1, line:16:1> line:14:22 used ASN1_group_oid 'const chunk_t':'const struct chunk_t' static cinit
+| `-InitListExpr 0x7f8b04026538 <col:39, line:16:1> 'chunk_t':'struct chunk_t'
+|   |-ImplicitCastExpr 0x7f8b04026588 <line:15:3> 'unsigned char *' <ArrayToPointerDecay>
+|   | `-DeclRefExpr 0x7f8b04026458 <col:3> 'unsigned char [1]' lvalue Var 0x7f8b04026280 'ASN1_group_oid_str' 'unsigned char [1]'
+|   `-UnaryExprOrTypeTraitExpr 0x7f8b040264c8 <col:23, col:49> 'unsigned long' sizeof
+|     `-ParenExpr 0x7f8b040264a8 <col:30, col:49> 'unsigned char [1]' lvalue
+|       `-DeclRefExpr 0x7f8b04026480 <col:31> 'unsigned char [1]' lvalue Var 0x7f8b04026280 'ASN1_group_oid_str' 'unsigned char [1]'
+|-FunctionDecl 0x7f8b04026730 <line:17:1, line:21:1> line:18:1 used build_attribute_type 'chunk_t (const chunk_t, chunk_t)' static
+| |-ParmVarDecl 0x7f8b040265b0 <col:23, col:37> col:37 used type 'const chunk_t':'const struct chunk_t'
+| |-ParmVarDecl 0x7f8b04026620 <col:43, col:51> col:51 content 'chunk_t':'struct chunk_t'
+| `-CompoundStmt 0x7f8b04026830 <line:19:1, line:21:1>
+|   `-ReturnStmt 0x7f8b04026818 <line:20:3, col:10>
+|     `-ImplicitCastExpr 0x7f8b04026800 <col:10> 'chunk_t':'struct chunk_t' <LValueToRValue>
+|       `-DeclRefExpr 0x7f8b040267d8 <col:10> 'const chunk_t':'const struct chunk_t' lvalue ParmVar 0x7f8b040265b0 'type' 'const chunk_t':'const struct chunk_t'
+|-FunctionDecl 0x7f8b04026940 <line:22:1, line:27:1> line:23:1 used build_attributes 'chunk_t (void)' static
+| `-CompoundStmt 0x7f8b0402bed8 <line:24:1, line:27:1>
+|   `-ReturnStmt 0x7f8b0402bec0 <line:25:3, line:26:38>
+|     `-CallExpr 0x7f8b0402be90 <line:25:10, line:26:38> 'chunk_t':'struct chunk_t'
+|       |-ImplicitCastExpr 0x7f8b0402be78 <line:25:10> 'chunk_t (*)(chunk_t, ...)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7f8b040269d8 <col:10> 'chunk_t (chunk_t, ...)' Function 0x7f8b04025d40 'asn1_wrap' 'chunk_t (chunk_t, ...)'
+|       `-CallExpr 0x7f8b0402bdd0 <col:21, line:26:37> 'chunk_t':'struct chunk_t'
+|         |-ImplicitCastExpr 0x7f8b0402bdb8 <line:25:21> 'chunk_t (*)(const chunk_t, chunk_t)' <FunctionToPointerDecay>
+|         | `-DeclRefExpr 0x7f8b0402bc00 <col:21> 'chunk_t (const chunk_t, chunk_t)' Function 0x7f8b04026730 'build_attribute_type' 'chunk_t (const chunk_t, chunk_t)'
+|         |-ImplicitCastExpr 0x7f8b0402be08 <col:43> 'chunk_t':'struct chunk_t' <LValueToRValue>
+|         | `-DeclRefExpr 0x7f8b0402bc28 <col:43> 'const chunk_t':'const struct chunk_t' lvalue Var 0x7f8b040263f8 'ASN1_group_oid' 'const chunk_t':'const struct chunk_t'
+|         `-CallExpr 0x7f8b0402bd10 <line:26:8, col:36> 'chunk_t':'struct chunk_t'
+|           |-ImplicitCastExpr 0x7f8b0402bcf8 <col:8> 'chunk_t (*)(linked_list_t *)' <FunctionToPointerDecay>
+|           | `-DeclRefExpr 0x7f8b0402bc50 <col:8> 'chunk_t (linked_list_t *)' Function 0x7f8b04026120 'ietfAttr_list_encode' 'chunk_t (linked_list_t *)'
+|           `-ImplicitCastExpr 0x7f8b0402bd40 <col:30> 'linked_list_t *' <LValueToRValue>
+|             `-DeclRefExpr 0x7f8b0402bc78 <col:30> 'linked_list_t *' lvalue Var 0x7f8b040261d0 'groups' 'linked_list_t *'
+`-FunctionDecl 0x7f8b0402bfc0 <line:28:1, line:31:1> line:28:6 build_attr_cert 'void (void)'
+  `-CompoundStmt 0x7f8b0402c190 <line:29:1, line:31:1>
+    `-CallExpr 0x7f8b0402c160 <line:30:3, col:33> 'chunk_t':'struct chunk_t'
+      |-ImplicitCastExpr 0x7f8b0402c148 <col:3> 'chunk_t (*)(chunk_t, ...)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7f8b0402c058 <col:3> 'chunk_t (chunk_t, ...)' Function 0x7f8b04025d40 'asn1_wrap' 'chunk_t (chunk_t, ...)'
+      `-CallExpr 0x7f8b0402c120 <col:14, col:32> 'chunk_t':'struct chunk_t'
+        `-ImplicitCastExpr 0x7f8b0402c108 <col:14> 'chunk_t (*)(void)' <FunctionToPointerDecay>
+          `-DeclRefExpr 0x7f8b0402c080 <col:14> 'chunk_t (void)' Function 0x7f8b04026940 'build_attributes' 'chunk_t (void)'

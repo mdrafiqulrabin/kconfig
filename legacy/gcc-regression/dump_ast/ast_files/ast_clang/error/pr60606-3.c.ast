@@ -1,0 +1,28 @@
+c_files/pr60606-3.c:7:32: error: unknown register name 'cc' in asm
+  register unsigned int r asm ("cc"); /* { dg-error "not general enough|suitable for data type" } */
+                               ^
+1 error generated.
+TranslationUnitDecl 0x7faa9c8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7faa9c826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7faa9c826740 '__int128'
+|-TypedefDecl 0x7faa9c826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7faa9c826760 'unsigned __int128'
+|-TypedefDecl 0x7faa9c826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7faa9c826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7faa9c826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7faa9c826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7faa9c826dc0 'char *'
+|   `-BuiltinType 0x7faa9c826560 'char'
+|-TypedefDecl 0x7faa9c8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7faa9c827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7faa9c826ee0 'struct __va_list_tag'
+|     `-Record 0x7faa9c826e58 '__va_list_tag'
+`-FunctionDecl 0x7faa9d025a00 <c_files/pr60606-3.c:4:1, line:9:1> line:5:1 f 'int (void)'
+  `-CompoundStmt 0x7faa9d025ca0 <line:6:1, line:9:1>
+    |-DeclStmt 0x7faa9d025c18 <line:7:3, col:37>
+    | `-VarDecl 0x7faa9d025b60 <col:3, col:25> col:25 used r 'unsigned int' register
+    |   `-AsmLabelAttr 0x7faa9d025bc0 <col:32> "cc"
+    `-ReturnStmt 0x7faa9d025c88 <line:8:3, col:10>
+      `-ImplicitCastExpr 0x7faa9d025c70 <col:10> 'int' <IntegralCast>
+        `-ImplicitCastExpr 0x7faa9d025c58 <col:10> 'unsigned int' <LValueToRValue>
+          `-DeclRefExpr 0x7faa9d025c30 <col:10> 'unsigned int' lvalue Var 0x7faa9d025b60 'r' 'unsigned int'

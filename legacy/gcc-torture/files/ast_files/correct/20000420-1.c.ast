@@ -1,0 +1,66 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: z_candidate
+      Decl: next, [], [], []
+        PtrDecl: []
+          TypeDecl: next, []
+            Struct: z_candidate
+      Decl: viable, [], [], []
+        TypeDecl: viable, []
+          IdentifierType: ['int']
+  Decl: pedantic, [], [], []
+    TypeDecl: pedantic, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: splice_viable, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          ID: cands
+        PtrDecl: []
+          TypeDecl: splice_viable, []
+            Struct: z_candidate
+    Compound: 
+      Decl: p, [], [], []
+        PtrDecl: []
+          PtrDecl: []
+            TypeDecl: p, []
+              Struct: z_candidate
+        UnaryOp: &
+          ID: cands
+      For: 
+        UnaryOp: *
+          ID: p
+        Compound: 
+          If: 
+            TernaryOp: 
+              ID: pedantic
+              BinaryOp: ==
+                StructRef: ->
+                  UnaryOp: *
+                    ID: p
+                  ID: viable
+                Constant: int, 1
+              StructRef: ->
+                UnaryOp: *
+                  ID: p
+                ID: viable
+            Assignment: =
+              ID: p
+              UnaryOp: &
+                StructRef: ->
+                  UnaryOp: *
+                    ID: p
+                  ID: next
+            Assignment: =
+              UnaryOp: *
+                ID: p
+              StructRef: ->
+                UnaryOp: *
+                  ID: p
+                ID: next
+      Return: 
+        ID: cands
+    Decl: cands, [], [], []
+      PtrDecl: []
+        TypeDecl: cands, []
+          Struct: z_candidate

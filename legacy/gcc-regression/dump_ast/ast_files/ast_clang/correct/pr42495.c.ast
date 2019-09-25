@@ -1,0 +1,86 @@
+TranslationUnitDecl 0x7ff4b70264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff4b7026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff4b7026740 '__int128'
+|-TypedefDecl 0x7ff4b7026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff4b7026760 'unsigned __int128'
+|-TypedefDecl 0x7ff4b7026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff4b7026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff4b7026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff4b7026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff4b7026dc0 'char *'
+|   `-BuiltinType 0x7ff4b7026560 'char'
+|-TypedefDecl 0x7ff4b70270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff4b7027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff4b7026ee0 'struct __va_list_tag'
+|     `-Record 0x7ff4b7026e58 '__va_list_tag'
+|-RecordDecl 0x7ff4b7027120 <c_files/pr42495.c:7:1, line:9:1> line:7:8 struct st_a definition
+| `-FieldDecl 0x7ff4b7825a00 <line:8:4, col:8> col:8 referenced data 'int'
+|-RecordDecl 0x7ff4b7825a48 <line:11:1, line:14:1> line:11:8 struct st_b definition
+| |-FieldDecl 0x7ff4b7825ba0 <line:12:4, col:17> col:17 referenced p_a 'struct st_a *'
+| `-FieldDecl 0x7ff4b7825ca0 <line:13:5, col:18> col:18 next 'struct st_b *'
+|-VarDecl 0x7ff4b7825d08 <line:16:1, col:20> col:20 used gObj 'struct st_b':'struct st_b' extern
+|-FunctionDecl 0x7ff4b7825f60 <line:17:1, col:34> col:13 used foo 'void (int, struct st_b *)' extern
+| |-ParmVarDecl 0x7ff4b7825dc0 <col:17> col:20 'int'
+| `-ParmVarDecl 0x7ff4b7825e48 <col:22, col:33> col:34 'struct st_b *'
+`-FunctionDecl 0x7ff4b7826138 <line:19:1, line:31:1> line:19:5 goo 'int (struct st_b *)'
+  |-ParmVarDecl 0x7ff4b7826030 <col:9, col:23> col:23 used obj 'struct st_b *'
+  `-CompoundStmt 0x7ff4b7826a68 <col:28, line:31:1>
+    |-DeclStmt 0x7ff4b7826260 <line:20:4, col:19>
+    | `-VarDecl 0x7ff4b7826200 <col:4, col:17> col:17 used pa 'struct st_a *'
+    |-IfStmt 0x7ff4b78265d8 <line:21:4, line:23:4>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7ff4b7826360 <line:21:8, col:26> 'int' '!='
+    | | |-ImplicitCastExpr 0x7ff4b7826348 <col:8, col:18> 'int' <LValueToRValue>
+    | | | `-MemberExpr 0x7ff4b78262f0 <col:8, col:18> 'int' lvalue ->data 0x7ff4b7825a00
+    | | |   `-ImplicitCastExpr 0x7ff4b78262d8 <col:8, col:13> 'struct st_a *' <LValueToRValue>
+    | | |     `-MemberExpr 0x7ff4b78262a0 <col:8, col:13> 'struct st_a *' lvalue .p_a 0x7ff4b7825ba0
+    | | |       `-DeclRefExpr 0x7ff4b7826278 <col:8> 'struct st_b':'struct st_b' lvalue Var 0x7ff4b7825d08 'gObj' 'struct st_b':'struct st_b'
+    | | `-IntegerLiteral 0x7ff4b7826328 <col:26> 'int' 0
+    | |-CompoundStmt 0x7ff4b78265b8 <col:29, line:23:4>
+    | | `-CallExpr 0x7ff4b7826550 <line:22:6, col:29> 'void'
+    | |   |-ImplicitCastExpr 0x7ff4b7826538 <col:6> 'void (*)(int, struct st_b *)' <FunctionToPointerDecay>
+    | |   | `-DeclRefExpr 0x7ff4b78263d8 <col:6> 'void (int, struct st_b *)' Function 0x7ff4b7825f60 'foo' 'void (int, struct st_b *)'
+    | |   |-ImplicitCastExpr 0x7ff4b7826588 <col:10, col:20> 'int' <LValueToRValue>
+    | |   | `-MemberExpr 0x7ff4b7826478 <col:10, col:20> 'int' lvalue ->data 0x7ff4b7825a00
+    | |   |   `-ImplicitCastExpr 0x7ff4b7826460 <col:10, col:15> 'struct st_a *' <LValueToRValue>
+    | |   |     `-MemberExpr 0x7ff4b7826428 <col:10, col:15> 'struct st_a *' lvalue .p_a 0x7ff4b7825ba0
+    | |   |       `-DeclRefExpr 0x7ff4b7826400 <col:10> 'struct st_b':'struct st_b' lvalue Var 0x7ff4b7825d08 'gObj' 'struct st_b':'struct st_b'
+    | |   `-ImplicitCastExpr 0x7ff4b78265a0 <col:26> 'struct st_b *' <LValueToRValue>
+    | |     `-DeclRefExpr 0x7ff4b78264b0 <col:26> 'struct st_b *' lvalue ParmVar 0x7ff4b7826030 'obj' 'struct st_b *'
+    | `-<<<NULL>>>
+    |-BinaryOperator 0x7ff4b78266c8 <line:24:4, col:14> 'struct st_a *' '='
+    | |-DeclRefExpr 0x7ff4b7826610 <col:4> 'struct st_a *' lvalue Var 0x7ff4b7826200 'pa' 'struct st_a *'
+    | `-ImplicitCastExpr 0x7ff4b78266b0 <col:9, col:14> 'struct st_a *' <LValueToRValue>
+    |   `-MemberExpr 0x7ff4b7826678 <col:9, col:14> 'struct st_a *' lvalue ->p_a 0x7ff4b7825ba0
+    |     `-ImplicitCastExpr 0x7ff4b7826660 <col:9> 'struct st_b *' <LValueToRValue>
+    |       `-DeclRefExpr 0x7ff4b7826638 <col:9> 'struct st_b *' lvalue ParmVar 0x7ff4b7826030 'obj' 'struct st_b *'
+    |-IfStmt 0x7ff4b7826958 <line:25:4, line:29:4>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7ff4b7826768 <line:25:8, col:14> 'int' '=='
+    | | |-ImplicitCastExpr 0x7ff4b7826738 <col:8> 'struct st_a *' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7ff4b78266f0 <col:8> 'struct st_a *' lvalue Var 0x7ff4b7826200 'pa' 'struct st_a *'
+    | | `-ImplicitCastExpr 0x7ff4b7826750 <col:14> 'struct st_a *' <NullToPointer>
+    | |   `-IntegerLiteral 0x7ff4b7826718 <col:14> 'int' 0
+    | |-CompoundStmt 0x7ff4b78267c8 <col:17, line:27:4>
+    | | `-ReturnStmt 0x7ff4b78267b0 <line:26:6, col:13>
+    | |   `-IntegerLiteral 0x7ff4b7826790 <col:13> 'int' 0
+    | `-IfStmt 0x7ff4b7826920 <line:27:11, line:29:4>
+    |   |-<<<NULL>>>
+    |   |-<<<NULL>>>
+    |   |-BinaryOperator 0x7ff4b78268a0 <line:27:15, col:26> 'int' '=='
+    |   | |-ImplicitCastExpr 0x7ff4b7826870 <col:15> 'struct st_a *' <LValueToRValue>
+    |   | | `-DeclRefExpr 0x7ff4b78267e8 <col:15> 'struct st_a *' lvalue Var 0x7ff4b7826200 'pa' 'struct st_a *'
+    |   | `-ImplicitCastExpr 0x7ff4b7826888 <col:21, col:26> 'struct st_a *' <LValueToRValue>
+    |   |   `-MemberExpr 0x7ff4b7826838 <col:21, col:26> 'struct st_a *' lvalue .p_a 0x7ff4b7825ba0
+    |   |     `-DeclRefExpr 0x7ff4b7826810 <col:21> 'struct st_b':'struct st_b' lvalue Var 0x7ff4b7825d08 'gObj' 'struct st_b':'struct st_b'
+    |   |-CompoundStmt 0x7ff4b7826900 <col:31, line:29:4>
+    |   | `-ReturnStmt 0x7ff4b78268e8 <line:28:6, col:13>
+    |   |   `-IntegerLiteral 0x7ff4b78268c8 <col:13> 'int' 0
+    |   `-<<<NULL>>>
+    `-ReturnStmt 0x7ff4b7826a50 <line:30:4, col:15>
+      `-ImplicitCastExpr 0x7ff4b7826a38 <col:11, col:15> 'int' <LValueToRValue>
+        `-MemberExpr 0x7ff4b7826a00 <col:11, col:15> 'int' lvalue ->data 0x7ff4b7825a00
+          `-ImplicitCastExpr 0x7ff4b78269b8 <col:11> 'struct st_a *' <LValueToRValue>
+            `-DeclRefExpr 0x7ff4b7826990 <col:11> 'struct st_a *' lvalue Var 0x7ff4b7826200 'pa' 'struct st_a *'

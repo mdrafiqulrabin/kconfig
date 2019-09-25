@@ -1,0 +1,378 @@
+FileAST: 
+  Typedef: t, [], ['typedef']
+    PtrDecl: []
+      TypeDecl: t, []
+        Struct: None
+          Decl: i, [], [], []
+            PtrDecl: []
+              TypeDecl: i, []
+                Struct: None
+                  Decl: d, [], [], []
+                    PtrDecl: []
+                      TypeDecl: d, []
+                        IdentifierType: ['char']
+                  Decl: b, [], [], []
+                    TypeDecl: b, []
+                      IdentifierType: ['int']
+  Decl: f, [], [], []
+    FuncDecl: 
+      TypeDecl: f, []
+        IdentifierType: ['double']
+  FuncDef: 
+    Decl: g, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: p
+        TypeDecl: g, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['short']
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['short']
+      Decl: delta, [], [], []
+        TypeDecl: delta, []
+          IdentifierType: ['short']
+      Decl: s, [], [], []
+        TypeDecl: s, []
+          IdentifierType: ['short']
+      Decl: w, [], [], []
+        TypeDecl: w, []
+          IdentifierType: ['short']
+      Decl: h, [], [], []
+        TypeDecl: h, []
+          IdentifierType: ['short']
+      Decl: fx, [], [], []
+        TypeDecl: fx, []
+          IdentifierType: ['short']
+      Decl: fy, [], [], []
+        TypeDecl: fy, []
+          IdentifierType: ['short']
+      Decl: tx, [], [], []
+        TypeDecl: tx, []
+          IdentifierType: ['short']
+      Decl: ty, [], [], []
+        TypeDecl: ty, []
+          IdentifierType: ['short']
+      Decl: q1, [], [], []
+        TypeDecl: q1, []
+          IdentifierType: ['int']
+      Decl: q2, [], [], []
+        TypeDecl: q2, []
+          IdentifierType: ['int']
+      Decl: q3, [], [], []
+        TypeDecl: q3, []
+          IdentifierType: ['int']
+      Decl: q4, [], [], []
+        TypeDecl: q4, []
+          IdentifierType: ['int']
+      Assignment: =
+        ID: h
+        FuncCall: 
+          ID: f
+          ExprList: 
+            BinaryOp: +
+              BinaryOp: /
+                BinaryOp: -
+                  ID: ty
+                  ID: fy
+                Constant: float, 2.0
+              Constant: float, 0.5
+      Assignment: =
+        ID: s
+        BinaryOp: %
+          TernaryOp: 
+            BinaryOp: <
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['int']
+                Cast: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['short']
+                  BinaryOp: -
+                    ID: tx
+                    ID: fx
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['int']
+                Cast: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['short']
+                  BinaryOp: -
+                    ID: ty
+                    ID: fy
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['short']
+              BinaryOp: -
+                ID: tx
+                ID: fx
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['short']
+              BinaryOp: -
+                ID: ty
+                ID: fy
+          Constant: int, 2
+      Assignment: =
+        ID: delta
+        BinaryOp: -
+          TernaryOp: 
+            BinaryOp: <
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['int']
+                ID: w
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['int']
+                ID: h
+            ID: w
+            ID: h
+          ID: s
+      For: 
+        Assignment: =
+          ID: x
+          Constant: int, 0
+        BinaryOp: <=
+          ID: x
+          ID: delta
+        UnaryOp: p++
+          ID: x
+        For: 
+          Assignment: =
+            ID: y
+            BinaryOp: -
+              Constant: int, 1
+              ID: s
+          BinaryOp: <=
+            ID: y
+            ID: delta
+          UnaryOp: p++
+            ID: y
+          Compound: 
+            Assignment: =
+              ID: q1
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['int']
+                TernaryOp: 
+                  BinaryOp: &
+                    UnaryOp: *
+                      BinaryOp: +
+                        BinaryOp: +
+                          StructRef: ->
+                            StructRef: ->
+                              ID: p
+                              ID: i
+                            ID: d
+                          BinaryOp: /
+                            BinaryOp: +
+                              BinaryOp: +
+                                ID: fx
+                                ID: w
+                              ID: x
+                            Constant: int, 8
+                        BinaryOp: *
+                          BinaryOp: +
+                            BinaryOp: +
+                              ID: fy
+                              ID: h
+                            ID: y
+                          StructRef: ->
+                            StructRef: ->
+                              ID: p
+                              ID: i
+                            ID: b
+                    BinaryOp: <<
+                      Constant: int, 1
+                      BinaryOp: %
+                        BinaryOp: +
+                          BinaryOp: +
+                            ID: fx
+                            ID: w
+                          ID: x
+                        Constant: int, 8
+                  Constant: int, 1
+                  Constant: int, 0
+            Assignment: =
+              ID: q2
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['int']
+                TernaryOp: 
+                  BinaryOp: &
+                    UnaryOp: *
+                      BinaryOp: +
+                        BinaryOp: +
+                          StructRef: ->
+                            StructRef: ->
+                              ID: p
+                              ID: i
+                            ID: d
+                          BinaryOp: /
+                            BinaryOp: +
+                              BinaryOp: +
+                                ID: fx
+                                ID: w
+                              ID: y
+                            Constant: int, 8
+                        BinaryOp: *
+                          BinaryOp: -
+                            BinaryOp: -
+                              BinaryOp: +
+                                ID: fy
+                                ID: h
+                              ID: s
+                            ID: x
+                          StructRef: ->
+                            StructRef: ->
+                              ID: p
+                              ID: i
+                            ID: b
+                    BinaryOp: <<
+                      Constant: int, 1
+                      BinaryOp: %
+                        BinaryOp: +
+                          BinaryOp: +
+                            ID: fx
+                            ID: w
+                          ID: y
+                        Constant: int, 8
+                  Constant: int, 1
+                  Constant: int, 0
+            Assignment: =
+              ID: q3
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['int']
+                TernaryOp: 
+                  BinaryOp: &
+                    UnaryOp: *
+                      BinaryOp: +
+                        BinaryOp: +
+                          StructRef: ->
+                            StructRef: ->
+                              ID: p
+                              ID: i
+                            ID: d
+                          BinaryOp: /
+                            BinaryOp: -
+                              BinaryOp: -
+                                BinaryOp: +
+                                  ID: fx
+                                  ID: w
+                                ID: s
+                              ID: x
+                            Constant: int, 8
+                        BinaryOp: *
+                          BinaryOp: -
+                            BinaryOp: -
+                              BinaryOp: +
+                                ID: fy
+                                ID: h
+                              ID: s
+                            ID: y
+                          StructRef: ->
+                            StructRef: ->
+                              ID: p
+                              ID: i
+                            ID: b
+                    BinaryOp: <<
+                      Constant: int, 1
+                      BinaryOp: %
+                        BinaryOp: -
+                          BinaryOp: -
+                            BinaryOp: +
+                              ID: fx
+                              ID: w
+                            ID: s
+                          ID: x
+                        Constant: int, 8
+                  Constant: int, 1
+                  Constant: int, 0
+            Assignment: =
+              ID: q4
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['int']
+                TernaryOp: 
+                  BinaryOp: &
+                    UnaryOp: *
+                      BinaryOp: +
+                        BinaryOp: +
+                          StructRef: ->
+                            StructRef: ->
+                              ID: p
+                              ID: i
+                            ID: d
+                          BinaryOp: /
+                            BinaryOp: -
+                              BinaryOp: -
+                                BinaryOp: +
+                                  ID: fx
+                                  ID: w
+                                ID: s
+                              ID: y
+                            Constant: int, 8
+                        BinaryOp: *
+                          BinaryOp: +
+                            BinaryOp: +
+                              ID: fy
+                              ID: h
+                            ID: x
+                          StructRef: ->
+                            StructRef: ->
+                              ID: p
+                              ID: i
+                            ID: b
+                    BinaryOp: <<
+                      Constant: int, 1
+                      BinaryOp: %
+                        BinaryOp: -
+                          BinaryOp: -
+                            BinaryOp: +
+                              ID: fx
+                              ID: w
+                            ID: s
+                          ID: y
+                        Constant: int, 8
+                  Constant: int, 1
+                  Constant: int, 0
+            If: 
+              BinaryOp: !=
+                ID: q4
+                ID: q1
+              FuncCall: 
+                ID: ff
+                ExprList: 
+                  ID: p
+                  BinaryOp: -
+                    BinaryOp: -
+                      BinaryOp: +
+                        ID: fx
+                        ID: w
+                      ID: s
+                    ID: y
+                  BinaryOp: +
+                    BinaryOp: +
+                      ID: fy
+                      ID: h
+                    ID: x
+    Decl: p, [], [], []
+      TypeDecl: p, []
+        IdentifierType: ['t']

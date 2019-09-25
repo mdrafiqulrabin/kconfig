@@ -1,0 +1,53 @@
+FileAST: 
+  Decl: foo, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['unsigned', 'long', 'int']
+      TypeDecl: foo, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: test, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            PtrDecl: []
+              TypeDecl: x, []
+                IdentifierType: ['int']
+        TypeDecl: test, []
+          IdentifierType: ['long']
+    Compound: 
+      Decl: sx, [], [], []
+        TypeDecl: sx, []
+          IdentifierType: ['unsigned', 'long']
+      Decl: xprec, [], [], []
+        TypeDecl: xprec, []
+          IdentifierType: ['unsigned', 'long']
+      Assignment: =
+        ID: sx
+        TernaryOp: 
+          BinaryOp: >=
+            UnaryOp: *
+              ID: x
+            Constant: int, 0
+          UnaryOp: *
+            ID: x
+          UnaryOp: -
+            UnaryOp: *
+              ID: x
+      Assignment: =
+        ID: xprec
+        BinaryOp: *
+          ID: sx
+          Constant: int, 64
+      If: 
+        BinaryOp: <
+          ID: sx
+          Constant: int, 16384
+        FuncCall: 
+          ID: foo
+          ExprList: 
+            ID: sx
+      Return: 
+        ID: xprec

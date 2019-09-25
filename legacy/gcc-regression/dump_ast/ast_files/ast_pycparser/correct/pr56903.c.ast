@@ -1,0 +1,82 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: b, [], [], []
+    PtrDecl: []
+      TypeDecl: b, []
+        IdentifierType: ['int']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['int']
+  Decl: fn1, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      PtrDecl: []
+        TypeDecl: fn1, []
+          Struct: S
+            Decl: s, [], [], []
+              TypeDecl: s, []
+                IdentifierType: ['int']
+              Constant: int, 1
+  Decl: fn3, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: fn3, []
+        IdentifierType: ['int']
+  Decl: fn4, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['int']
+      TypeDecl: fn4, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: fn2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: fn2, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: e, [], [], []
+        TypeDecl: e, []
+          IdentifierType: ['int']
+        FuncCall: 
+          ID: fn3
+      Decl: f, [], [], []
+        TypeDecl: f, []
+          IdentifierType: ['char']
+        BinaryOp: +
+          ID: c
+          BinaryOp: *
+            StructRef: ->
+              FuncCall: 
+                ID: fn1
+              ID: s
+            Constant: int, 4
+      If: 
+        BinaryOp: &&
+          UnaryOp: *
+            ID: b
+          BinaryOp: ==
+            ID: f
+            ID: e
+        Assignment: =
+          ID: a
+          UnaryOp: *
+            ID: b
+      FuncCall: 
+        ID: fn4
+        ExprList: 
+          ID: b

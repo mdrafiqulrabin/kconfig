@@ -1,0 +1,15 @@
+FileAST: 
+  FuncDef: 
+    Decl: test, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['float']
+        TypeDecl: test, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        BinaryOp: *
+          ID: a
+          ID: a

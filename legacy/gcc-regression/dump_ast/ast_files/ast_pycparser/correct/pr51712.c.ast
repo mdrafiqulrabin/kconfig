@@ -1,0 +1,42 @@
+FileAST: 
+  Decl: None, [], [], []
+    Enum: test_enum
+      EnumeratorList: 
+        Enumerator: FOO
+        Enumerator: BAR
+  FuncDef: 
+    Decl: valid, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: arg, [], [], []
+            TypeDecl: arg, []
+              Enum: test_enum
+        TypeDecl: valid, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        BinaryOp: &&
+          BinaryOp: >=
+            ID: arg
+            Constant: int, 0
+          BinaryOp: <=
+            ID: arg
+            ID: BAR
+  FuncDef: 
+    Decl: valid2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: arg2, [], [], []
+            TypeDecl: arg2, []
+              IdentifierType: ['unsigned', 'int']
+        TypeDecl: valid2, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        BinaryOp: &&
+          BinaryOp: >=
+            ID: arg2
+            ID: FOO
+          BinaryOp: <=
+            ID: arg2
+            ID: BAR

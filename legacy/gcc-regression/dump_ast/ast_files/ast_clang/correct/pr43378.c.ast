@@ -1,0 +1,49 @@
+TranslationUnitDecl 0x7fba5d8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fba5d826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fba5d826740 '__int128'
+|-TypedefDecl 0x7fba5d826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fba5d826760 'unsigned __int128'
+|-TypedefDecl 0x7fba5d826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fba5d826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fba5d826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fba5d826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fba5d826dc0 'char *'
+|   `-BuiltinType 0x7fba5d826560 'char'
+|-TypedefDecl 0x7fba5d8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fba5d827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fba5d826ee0 'struct __va_list_tag'
+|     `-Record 0x7fba5d826e58 '__va_list_tag'
+|-FunctionDecl 0x7fba5d877560 <c_files/pr43378.c:4:1, col:24> col:6 used bar 'void (int, int, int)'
+| |-ParmVarDecl 0x7fba5d827138 <col:11> col:14 'int'
+| |-ParmVarDecl 0x7fba5d877400 <col:16> col:19 'int'
+| `-ParmVarDecl 0x7fba5d877478 <col:21> col:24 'int'
+`-FunctionDecl 0x7fba5d8777f0 <line:5:1, line:13:1> line:5:6 foo 'void (int, int, int)'
+  |-ParmVarDecl 0x7fba5d877668 <col:11, col:15> col:15 used left 'int'
+  |-ParmVarDecl 0x7fba5d8776e0 <col:21, col:25> col:25 used rite 'int'
+  |-ParmVarDecl 0x7fba5d877758 <col:31, col:35> col:35 used element 'int'
+  `-CompoundStmt 0x7fba5d877c48 <line:6:1, line:13:1>
+    `-WhileStmt 0x7fba5d877c28 <line:7:3, line:12:5>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fba5d877920 <line:7:10, col:18> 'int' '<='
+      | |-ImplicitCastExpr 0x7fba5d8778f0 <col:10> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fba5d8778a0 <col:10> 'int' lvalue ParmVar 0x7fba5d877668 'left' 'int'
+      | `-ImplicitCastExpr 0x7fba5d877908 <col:18> 'int' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fba5d8778c8 <col:18> 'int' lvalue ParmVar 0x7fba5d8776e0 'rite' 'int'
+      `-CompoundStmt 0x7fba5d877bf8 <line:8:5, line:12:5>
+        |-CompoundAssignOperator 0x7fba5d8779b0 <line:9:7, col:15> 'int' '-=' ComputeLHSTy='int' ComputeResultTy='int'
+        | |-DeclRefExpr 0x7fba5d877948 <col:7> 'int' lvalue ParmVar 0x7fba5d8776e0 'rite' 'int'
+        | `-ImplicitCastExpr 0x7fba5d877998 <col:15> 'int' <LValueToRValue>
+        |   `-DeclRefExpr 0x7fba5d877970 <col:15> 'int' lvalue ParmVar 0x7fba5d877758 'element' 'int'
+        |-CallExpr 0x7fba5d877ad0 <line:10:7, col:31> 'void'
+        | |-ImplicitCastExpr 0x7fba5d877ab8 <col:7> 'void (*)(int, int, int)' <FunctionToPointerDecay>
+        | | `-DeclRefExpr 0x7fba5d8779e8 <col:7> 'void (int, int, int)' Function 0x7fba5d877560 'bar' 'void (int, int, int)'
+        | |-ImplicitCastExpr 0x7fba5d877b10 <col:12> 'int' <LValueToRValue>
+        | | `-DeclRefExpr 0x7fba5d877a10 <col:12> 'int' lvalue ParmVar 0x7fba5d877668 'left' 'int'
+        | |-ImplicitCastExpr 0x7fba5d877b28 <col:18> 'int' <LValueToRValue>
+        | | `-DeclRefExpr 0x7fba5d877a38 <col:18> 'int' lvalue ParmVar 0x7fba5d8776e0 'rite' 'int'
+        | `-ImplicitCastExpr 0x7fba5d877b40 <col:24> 'int' <LValueToRValue>
+        |   `-DeclRefExpr 0x7fba5d877a60 <col:24> 'int' lvalue ParmVar 0x7fba5d877758 'element' 'int'
+        `-CompoundAssignOperator 0x7fba5d877bc0 <line:11:7, col:15> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+          |-DeclRefExpr 0x7fba5d877b58 <col:7> 'int' lvalue ParmVar 0x7fba5d877668 'left' 'int'
+          `-ImplicitCastExpr 0x7fba5d877ba8 <col:15> 'int' <LValueToRValue>
+            `-DeclRefExpr 0x7fba5d877b80 <col:15> 'int' lvalue ParmVar 0x7fba5d877758 'element' 'int'

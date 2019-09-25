@@ -1,0 +1,30 @@
+c_files/pr79758.c:4:15: error: use of undeclared identifier 'a'
+void fn1 (int[a]) { }; /* { dg-error "undeclared here|parameter name omitted" } */
+              ^
+c_files/pr79758.c:4:14: error: parameter name omitted
+void fn1 (int[a]) { }; /* { dg-error "undeclared here|parameter name omitted" } */
+             ^
+2 errors generated.
+TranslationUnitDecl 0x7fd5fc025ad0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd5fc026020 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd5fc025d40 '__int128'
+|-TypedefDecl 0x7fd5fc026090 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd5fc025d60 'unsigned __int128'
+|-TypedefDecl 0x7fd5fc026368 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd5fc026170 'struct __NSConstantString_tag'
+|   `-Record 0x7fd5fc0260e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd5fc026400 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd5fc0263c0 'char *'
+|   `-BuiltinType 0x7fd5fc025b60 'char'
+|-TypedefDecl 0x7fd5fc0266c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd5fc026670 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd5fc0264e0 'struct __va_list_tag'
+|     `-Record 0x7fd5fc026458 '__va_list_tag'
+|-FunctionDecl 0x7fd5fc826228 <c_files/pr79758.c:4:1, col:21> col:6 invalid fn1 'void (int)'
+| |-ParmVarDecl 0x7fd5fc026760 <col:11, <invalid sloc>> col:14 invalid 'int'
+| `-CompoundStmt 0x7fd5fc8262c8 <col:19, col:21>
+|-EmptyDecl 0x7fd5fc8262e0 <col:22> col:22
+|-FunctionDecl 0x7fd5fc8263a0 <line:5:1, col:16> col:6 invalid fn1 'void (int)'
+| |-ParmVarDecl 0x7fd5fc826318 <col:11> col:11 b 'int'
+| `-CompoundStmt 0x7fd5fc826440 <col:14, col:16>
+`-EmptyDecl 0x7fd5fc826458 <col:17> col:17

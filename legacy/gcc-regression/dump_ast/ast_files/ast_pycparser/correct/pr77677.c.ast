@@ -1,0 +1,50 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: fn1, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p1, [], [], []
+            TypeDecl: p1, []
+              IdentifierType: ['short']
+        TypeDecl: fn1, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        ID: a
+        UnaryOp: -
+          ID: p1
+      If: 
+        BinaryOp: ||
+          ID: a
+          ID: b
+        FuncCall: 
+          ID: __builtin_printf
+          ExprList: 
+            Constant: string, "%d\n"
+            ID: b
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: c, [], [], []
+        ArrayDecl: []
+          TypeDecl: c, []
+            IdentifierType: ['int']
+        InitList: 
+          Constant: int, 40000
+      FuncCall: 
+        ID: fn1
+        ExprList: 
+          ArrayRef: 
+            ID: c
+            Constant: int, 0
+      Return: 
+        Constant: int, 0

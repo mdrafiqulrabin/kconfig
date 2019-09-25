@@ -1,0 +1,3 @@
+FileAST: 
+  Pragma: omp declare reduction (+ : char[] : omp_out += omp_in)  
+  Pragma: omp declare reduction (+ : char() : omp_out += omp_in)  

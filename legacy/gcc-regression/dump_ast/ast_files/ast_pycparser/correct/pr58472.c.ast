@@ -1,0 +1,45 @@
+FileAST: 
+  Decl: a, [], [], []
+    ArrayDecl: []
+      TypeDecl: a, []
+        IdentifierType: ['float']
+      Constant: int, 1024
+  Decl: b, [], [], []
+    ArrayDecl: []
+      TypeDecl: b, []
+        IdentifierType: ['float']
+      Constant: int, 1024
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        TypeDecl: foo, []
+          IdentifierType: ['float']
+    Compound: 
+      Decl: s, [], [], []
+        TypeDecl: s, []
+          IdentifierType: ['float']
+        Constant: float, 0.f
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['unsigned', 'int']
+      Pragma: omp simd reduction(+:s)
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 1024
+        UnaryOp: ++
+          ID: i
+        Assignment: +=
+          ID: s
+          BinaryOp: *
+            ArrayRef: 
+              ID: a
+              ID: i
+            ArrayRef: 
+              ID: b
+              ID: i
+      Return: 
+        ID: s

@@ -1,0 +1,52 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: optab
+      Decl: code, [], [], []
+        TypeDecl: code, []
+          IdentifierType: ['unsigned']
+  Decl: optab_table, [], [], []
+    ArrayDecl: []
+      TypeDecl: optab_table, []
+        Struct: optab
+      Constant: int, 1
+  FuncDef: 
+    Decl: init_optab, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: op, [], [], []
+            PtrDecl: []
+              TypeDecl: op, []
+                Struct: optab
+        TypeDecl: init_optab, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        StructRef: ->
+          ID: op
+          ID: code
+        Constant: int, 0xdead
+  FuncDef: 
+    Decl: set_conv_libfunc, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: set_conv_libfunc, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: init_optab
+        ExprList: 
+          UnaryOp: &
+            ArrayRef: 
+              ID: optab_table
+              Constant: int, 0
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        Constant: int, 0

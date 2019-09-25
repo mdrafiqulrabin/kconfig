@@ -1,0 +1,84 @@
+FileAST: 
+  Typedef: A, [], ['typedef']
+    ArrayDecl: []
+      TypeDecl: A, []
+        IdentifierType: ['int']
+  Decl: s, [], [], []
+    TypeDecl: s, []
+      Struct: S
+        Decl: i, [], [], []
+          TypeDecl: i, []
+            IdentifierType: ['int']
+        Decl: a, [], [], []
+          ArrayDecl: []
+            TypeDecl: a, []
+              IdentifierType: ['A']
+            Constant: int, 5
+  Decl: foo, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Decl: p, [], [], []
+          ArrayDecl: []
+            ArrayDecl: []
+              TypeDecl: p, []
+                IdentifierType: ['int']
+            Constant: int, 2
+      TypeDecl: foo, []
+        IdentifierType: ['void']
+  Decl: bar, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Decl: p, [], [], []
+          ArrayDecl: []
+            TypeDecl: p, []
+              IdentifierType: ['A']
+            Constant: int, 2
+      TypeDecl: bar, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            ArrayDecl: []
+              ArrayDecl: []
+                TypeDecl: p, []
+                  IdentifierType: ['int']
+              Constant: int, 2
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            ArrayDecl: []
+              TypeDecl: p, []
+                IdentifierType: ['A']
+              Constant: int, 2
+        TypeDecl: bar, []
+          IdentifierType: ['void']
+    Compound: 
+  Decl: None, [], [], []
+    Struct: T
+  Decl: t, [], [], []
+    ArrayDecl: []
+      TypeDecl: t, []
+        Struct: T
+      Constant: int, 5
+  Decl: u, [], [], []
+    ArrayDecl: []
+      TypeDecl: u, []
+        Struct: U
+    InitList: 
+      InitList: 
+        Constant: string, "abc"
+  Typedef: TT, [], ['typedef']
+    TypeDecl: TT, []
+      Struct: T
+  Decl: tt, [], [], []
+    ArrayDecl: []
+      TypeDecl: tt, []
+        IdentifierType: ['TT']
+      Constant: int, 5

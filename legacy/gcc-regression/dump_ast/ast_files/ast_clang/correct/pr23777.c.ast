@@ -1,0 +1,47 @@
+TranslationUnitDecl 0x7f95d30264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f95d3026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f95d3026740 '__int128'
+|-TypedefDecl 0x7f95d3026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f95d3026760 'unsigned __int128'
+|-TypedefDecl 0x7f95d3026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f95d3026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f95d3026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f95d3026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f95d3026dc0 'char *'
+|   `-BuiltinType 0x7f95d3026560 'char'
+|-TypedefDecl 0x7f95d30270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f95d3027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f95d3026ee0 'struct __va_list_tag'
+|     `-Record 0x7f95d3026e58 '__va_list_tag'
+|-FunctionDecl 0x7f95d3825a28 <c_files/pr23777.c:4:1, col:28> col:13 used f 'void (char *const *)' extern
+| `-ParmVarDecl 0x7f95d3027160 <col:15, col:27> col:28 'char *const *'
+`-FunctionDecl 0x7f95d3825c10 <line:5:1, line:13:1> line:5:6 g 'void (char **)'
+  |-ParmVarDecl 0x7f95d3825b50 <col:9, col:16> col:16 used o 'char **'
+  `-CompoundStmt 0x7f95d3826248 <line:6:1, line:13:1>
+    |-DeclStmt 0x7f95d3825ed8 <line:7:3, col:61>
+    | `-VarDecl 0x7f95d3825d30 <col:3, col:60> col:28 used multilib_exclusions_raw 'const char *const [1]' static cinit
+    |   `-InitListExpr 0x7f95d3825df8 <col:56, col:60> 'const char *const [1]'
+    |     `-ImplicitCastExpr 0x7f95d3825e38 <col:58> 'const char *const' <NullToPointer>
+    |       `-IntegerLiteral 0x7f95d3825d90 <col:58> 'int' 0
+    |-DeclStmt 0x7f95d3825fd0 <line:8:3, col:49>
+    | `-VarDecl 0x7f95d3825f30 <col:3, col:26> col:22 used q 'const char *const *' cinit
+    |   `-ImplicitCastExpr 0x7f95d3825fb8 <col:26> 'const char *const *' <ArrayToPointerDecay>
+    |     `-DeclRefExpr 0x7f95d3825f90 <col:26> 'const char *const [1]' lvalue Var 0x7f95d3825d30 'multilib_exclusions_raw' 'const char *const [1]'
+    |-CallExpr 0x7f95d3826080 <line:10:3, col:7> 'void'
+    | |-ImplicitCastExpr 0x7f95d3826068 <col:3> 'void (*)(char *const *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7f95d3825fe8 <col:3> 'void (char *const *)' Function 0x7f95d3825a28 'f' 'void (char *const *)'
+    | `-ImplicitCastExpr 0x7f95d38260c8 <col:6> 'char *const *' <BitCast>
+    |   `-ImplicitCastExpr 0x7f95d38260b0 <col:6> 'char **' <LValueToRValue>
+    |     `-DeclRefExpr 0x7f95d3826010 <col:6> 'char **' lvalue ParmVar 0x7f95d3825b50 'o' 'char **'
+    `-WhileStmt 0x7f95d3826228 <line:11:3, line:12:9>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7f95d3826148 <line:11:10, col:12> 'const char *' <LValueToRValue>
+      | `-UnaryOperator 0x7f95d3826128 <col:10, col:12> 'const char *const' lvalue prefix '*'
+      |   `-UnaryOperator 0x7f95d3826108 <col:11, col:12> 'const char *const *' postfix '++'
+      |     `-DeclRefExpr 0x7f95d38260e0 <col:11> 'const char *const *' lvalue Var 0x7f95d3825f30 'q' 'const char *const *'
+      `-CallExpr 0x7f95d38261c8 <line:12:5, col:9> 'void'
+        |-ImplicitCastExpr 0x7f95d38261b0 <col:5> 'void (*)(char *const *)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7f95d3826160 <col:5> 'void (char *const *)' Function 0x7f95d3825a28 'f' 'void (char *const *)'
+        `-ImplicitCastExpr 0x7f95d3826210 <col:8> 'char *const *' <BitCast>
+          `-ImplicitCastExpr 0x7f95d38261f8 <col:8> 'char **' <LValueToRValue>
+            `-DeclRefExpr 0x7f95d3826188 <col:8> 'char **' lvalue ParmVar 0x7f95d3825b50 'o' 'char **'

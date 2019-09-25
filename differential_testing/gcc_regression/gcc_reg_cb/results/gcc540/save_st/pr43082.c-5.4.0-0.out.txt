@@ -1,4 +1,0 @@
-pr43082.c: In function ‘foo’:
-pr43082.c:7:7: error: void value not ignored as it ought to be
-   if (x ? (void)(0) : (void)(1))  
-       ^

@@ -1,4 +1,0 @@
-pr54760-4.c: In function ‘test01’:
-pr54760-4.c:11:8: error: __builtin_thread_pointer is not supported on this target
-   int* p = (int*)__builtin_thread_pointer ();
-        ^

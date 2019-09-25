@@ -1,0 +1,163 @@
+FileAST: 
+  Typedef: __int32_t, [], ['typedef']
+    TypeDecl: __int32_t, []
+      IdentifierType: ['signed', 'int']
+  Typedef: __uint32_t, [], ['typedef']
+    TypeDecl: __uint32_t, []
+      IdentifierType: ['unsigned', 'int']
+  Typedef: ieee_float_shape_type, [], ['typedef']
+    TypeDecl: ieee_float_shape_type, []
+      Union: None
+        Decl: value, [], [], []
+          TypeDecl: value, []
+            IdentifierType: ['float']
+        Decl: word, [], [], []
+          TypeDecl: word, []
+            IdentifierType: ['__uint32_t']
+  Decl: two23, ['const'], ['static'], []
+    TypeDecl: two23, ['const']
+      IdentifierType: ['float']
+    Constant: float, 8.3886080000e+06
+  Decl: pi, ['const'], ['static'], []
+    TypeDecl: pi, ['const']
+      IdentifierType: ['float']
+    Constant: float, 3.1415927410e+00
+  Decl: zero, ['const'], ['static'], []
+    TypeDecl: zero, ['const']
+      IdentifierType: ['float']
+    Constant: float, 0.0000000000e+00
+  FuncDef: 
+    Decl: sin_pif, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['float']
+        TypeDecl: sin_pif, []
+          IdentifierType: ['float']
+    Compound: 
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['float']
+        Constant: int, 0
+      Decl: z, [], [], []
+        TypeDecl: z, []
+          IdentifierType: ['float']
+        Constant: int, 0
+      Decl: n, [], [], []
+        TypeDecl: n, []
+          IdentifierType: ['__int32_t']
+        Constant: int, 0
+      Decl: ix, [], [], []
+        TypeDecl: ix, []
+          IdentifierType: ['__int32_t']
+        Constant: int, 0
+      DoWhile: 
+        Constant: int, 0
+        Compound: 
+          Decl: gf_u, [], [], []
+            TypeDecl: gf_u, []
+              IdentifierType: ['ieee_float_shape_type']
+            InitList: 
+              Constant: int, 0
+          Assignment: =
+            ID: ix
+            StructRef: .
+              ID: gf_u
+              ID: word
+      If: 
+        BinaryOp: ==
+          ID: z
+          ID: y
+        Compound: 
+          If: 
+            BinaryOp: <
+              ID: ix
+              Constant: int, 0x4b800000
+            Compound: 
+              If: 
+                BinaryOp: <
+                  ID: ix
+                  Constant: int, 0x4b000000
+                Assignment: =
+                  ID: z
+                  BinaryOp: +
+                    ID: y
+                    ID: two23
+              DoWhile: 
+                Constant: int, 0
+                Compound: 
+                  Decl: gf_u, [], [], []
+                    TypeDecl: gf_u, []
+                      IdentifierType: ['ieee_float_shape_type']
+                  Assignment: =
+                    StructRef: .
+                      ID: gf_u
+                      ID: value
+                    ID: z
+                  Assignment: =
+                    ID: n
+                    StructRef: .
+                      ID: gf_u
+                      ID: word
+      If: 
+        BinaryOp: ==
+          ID: n
+          Constant: int, 0
+        Assignment: =
+          ID: y
+          FuncCall: 
+            ID: __kernel_sinf
+            ExprList: 
+              BinaryOp: *
+                ID: pi
+                ID: y
+              ID: zero
+              Constant: int, 0
+  FuncDef: 
+    Decl: __ieee754_lgammaf_r, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['float']
+          Decl: signgamp, [], [], []
+            PtrDecl: []
+              TypeDecl: signgamp, []
+                IdentifierType: ['int']
+        TypeDecl: __ieee754_lgammaf_r, []
+          IdentifierType: ['float']
+    Compound: 
+      Decl: t, [], [], []
+        TypeDecl: t, []
+          IdentifierType: ['float']
+        Constant: int, 0
+      Decl: hx, [], [], []
+        TypeDecl: hx, []
+          IdentifierType: ['__int32_t']
+        Constant: int, 0
+      DoWhile: 
+        Constant: int, 0
+        Compound: 
+          Decl: gf_u, [], [], []
+            TypeDecl: gf_u, []
+              IdentifierType: ['ieee_float_shape_type']
+            InitList: 
+              Constant: int, 0
+          Assignment: =
+            ID: hx
+            StructRef: .
+              ID: gf_u
+              ID: word
+      If: 
+        BinaryOp: <
+          ID: hx
+          Constant: int, 0
+        Assignment: =
+          ID: t
+          FuncCall: 
+            ID: sin_pif
+            ExprList: 
+              ID: x
+      Return: 
+        Constant: int, 0

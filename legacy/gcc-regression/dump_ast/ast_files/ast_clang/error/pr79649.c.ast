@@ -1,0 +1,115 @@
+c_files/pr79649.c:11:28: error: expected ')'
+f1 (unsigned char __seg_gs *s, size_t n)
+                           ^
+c_files/pr79649.c:11:4: note: to match this '('
+f1 (unsigned char __seg_gs *s, size_t n)
+   ^
+c_files/pr79649.c:13:26: error: use of undeclared identifier 'n'
+  for (size_t i = 0; i < n; ++i)
+                         ^
+c_files/pr79649.c:14:5: error: use of undeclared identifier 's'
+    s[i] = 0;
+    ^
+c_files/pr79649.c:18:28: error: expected ')'
+f2 (unsigned char __seg_gs *__restrict d, unsigned char __seg_gs *__restrict s, size_t n)
+                           ^
+c_files/pr79649.c:18:4: note: to match this '('
+f2 (unsigned char __seg_gs *__restrict d, unsigned char __seg_gs *__restrict s, size_t n)
+   ^
+c_files/pr79649.c:20:26: error: use of undeclared identifier 'n'
+  for (size_t i = 0; i < n; ++i)
+                         ^
+c_files/pr79649.c:21:5: error: use of undeclared identifier 'd'
+    d[i] = s[i];
+    ^
+c_files/pr79649.c:21:12: error: use of undeclared identifier 's'
+    d[i] = s[i];
+           ^
+c_files/pr79649.c:25:28: error: expected ')'
+f3 (unsigned char __seg_gs *__restrict d, unsigned char *__restrict s, size_t n)
+                           ^
+c_files/pr79649.c:25:4: note: to match this '('
+f3 (unsigned char __seg_gs *__restrict d, unsigned char *__restrict s, size_t n)
+   ^
+c_files/pr79649.c:27:26: error: use of undeclared identifier 'n'
+  for (size_t i = 0; i < n; ++i)
+                         ^
+c_files/pr79649.c:28:5: error: use of undeclared identifier 'd'
+    d[i] = s[i];
+    ^
+c_files/pr79649.c:28:12: error: use of undeclared identifier 's'
+    d[i] = s[i];
+           ^
+c_files/pr79649.c:32:57: error: expected ')'
+f4 (unsigned char *__restrict d, unsigned char __seg_gs *__restrict s, size_t n)
+                                                        ^
+c_files/pr79649.c:32:4: note: to match this '('
+f4 (unsigned char *__restrict d, unsigned char __seg_gs *__restrict s, size_t n)
+   ^
+c_files/pr79649.c:34:26: error: use of undeclared identifier 'n'
+  for (size_t i = 0; i < n; ++i)
+                         ^
+c_files/pr79649.c:35:12: error: use of undeclared identifier 's'
+    d[i] = s[i];
+           ^
+c_files/pr79649.c:39:28: error: expected ')'
+f5 (unsigned char __seg_gs *__restrict d, unsigned char __seg_fs *__restrict s, size_t n)
+                           ^
+c_files/pr79649.c:39:4: note: to match this '('
+f5 (unsigned char __seg_gs *__restrict d, unsigned char __seg_fs *__restrict s, size_t n)
+   ^
+c_files/pr79649.c:41:26: error: use of undeclared identifier 'n'
+  for (size_t i = 0; i < n; ++i)
+                         ^
+c_files/pr79649.c:42:5: error: use of undeclared identifier 'd'
+    d[i] = s[i];
+    ^
+c_files/pr79649.c:42:12: error: use of undeclared identifier 's'
+    d[i] = s[i];
+           ^
+c_files/pr79649.c:46:25: error: expected ';' after top level declarator
+extern struct A __seg_gs a;
+                        ^
+                        ;
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
+TranslationUnitDecl 0x7fb7930264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb793026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb793026740 '__int128'
+|-TypedefDecl 0x7fb793026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb793026760 'unsigned __int128'
+|-TypedefDecl 0x7fb793026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb793026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb793026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb793026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb793026dc0 'char *'
+|   `-BuiltinType 0x7fb793026560 'char'
+|-TypedefDecl 0x7fb7930270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb793027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb793026ee0 'struct __va_list_tag'
+|     `-Record 0x7fb793026e58 '__va_list_tag'
+|-TypedefDecl 0x7fb793027138 <c_files/pr79649.c:8:1, col:23> col:23 referenced size_t 'unsigned long'
+| `-BuiltinType 0x7fb793026680 'unsigned long'
+|-FunctionDecl 0x7fb793825ac0 <line:10:1, line:15:1> line:11:1 f1 'void (unsigned char)'
+| |-ParmVarDecl 0x7fb793825a00 <col:5, col:19> col:19 __seg_gs 'unsigned char'
+| `-CompoundStmt 0x7fb793825d60 <line:12:1, line:15:1>
+|-FunctionDecl 0x7fb793825e18 <line:17:1, line:22:1> line:18:1 f2 'void (unsigned char)'
+| |-ParmVarDecl 0x7fb793825d90 <col:5, col:19> col:19 __seg_gs 'unsigned char'
+| `-CompoundStmt 0x7fb7938260b0 <line:19:1, line:22:1>
+|-FunctionDecl 0x7fb793826168 <line:24:1, line:29:1> line:25:1 f3 'void (unsigned char)'
+| |-ParmVarDecl 0x7fb7938260e0 <col:5, col:19> col:19 __seg_gs 'unsigned char'
+| `-CompoundStmt 0x7fb793826400 <line:26:1, line:29:1>
+|-FunctionDecl 0x7fb7938265f0 <line:31:1, line:36:1> line:32:1 f4 'void (unsigned char *__restrict, unsigned char)'
+| |-ParmVarDecl 0x7fb793826460 <col:5, col:31> col:31 used d 'unsigned char *__restrict'
+| |-ParmVarDecl 0x7fb7938264d8 <col:34, col:48> col:48 __seg_gs 'unsigned char'
+| `-CompoundStmt 0x7fb793826910 <line:33:1, line:36:1>
+|-FunctionDecl 0x7fb793828200 <line:38:1, line:43:1> line:39:1 f5 'void (unsigned char)'
+| |-ParmVarDecl 0x7fb793826940 <col:5, col:19> col:19 __seg_gs 'unsigned char'
+| `-CompoundStmt 0x7fb793828498 <line:40:1, line:43:1>
+|-RecordDecl 0x7fb7938284b0 <line:45:1, col:33> col:8 struct A definition
+| |-FieldDecl 0x7fb793828578 <col:12, col:16> col:16 a 'int'
+| `-FieldDecl 0x7fb793828638 <col:19, col:30> col:24 b 'char [1024]'
+|-VarDecl 0x7fb7938286d0 <line:46:1, col:17> col:17 __seg_gs 'struct A':'struct A' extern
+`-FunctionDecl 0x7fb793828840 <line:48:1, line:53:1> line:49:1 f6 'void (size_t)'
+  |-ParmVarDecl 0x7fb793828740 <col:5, col:12> col:12 used n 'size_t':'unsigned long'
+  `-CompoundStmt 0x7fb793828ad8 <line:50:1, line:53:1>

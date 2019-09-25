@@ -1,0 +1,233 @@
+c_files/pr70307.c:12:23: warning: expression result unused [-Wunused-value]
+  return i <= (v4si){(0, 0)};
+                      ^
+c_files/pr70307.c:19:20: warning: expression result unused [-Wunused-value]
+  r = i <= (v4si){(0, 0)};
+                   ^
+c_files/pr70307.c:26:28: warning: expression result unused [-Wunused-value]
+  return foo (i <= (v4si){(0, 0)});
+                           ^
+c_files/pr70307.c:33:36: warning: expression result unused [-Wunused-value]
+  struct S s = { .v = i <= (v4si){(0, 0)} };
+                                   ^
+c_files/pr70307.c:40:18: warning: expression result unused [-Wunused-value]
+  return (v4si){(1, i++)} == (v4si){(0, 0)};
+                 ^
+c_files/pr70307.c:40:38: warning: expression result unused [-Wunused-value]
+  return (v4si){(1, i++)} == (v4si){(0, 0)};
+                                     ^
+c_files/pr70307.c:47:15: warning: expression result unused [-Wunused-value]
+  r = (v4si){(1, i++)} == (v4si){(0, 0)};
+              ^
+c_files/pr70307.c:47:35: warning: expression result unused [-Wunused-value]
+  r = (v4si){(1, i++)} == (v4si){(0, 0)};
+                                  ^
+c_files/pr70307.c:54:23: warning: expression result unused [-Wunused-value]
+  return foo ((v4si){(1, i++)} == (v4si){(0, 0)});
+                      ^
+c_files/pr70307.c:54:43: warning: expression result unused [-Wunused-value]
+  return foo ((v4si){(1, i++)} == (v4si){(0, 0)});
+                                          ^
+c_files/pr70307.c:61:31: warning: expression result unused [-Wunused-value]
+  struct S s = { .v = (v4si){(1, i++)} == (v4si){(0, 0)} };
+                              ^
+c_files/pr70307.c:61:51: warning: expression result unused [-Wunused-value]
+  struct S s = { .v = (v4si){(1, i++)} == (v4si){(0, 0)} };
+                                                  ^
+12 warnings generated.
+TranslationUnitDecl 0x7fa7818264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa781826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa781826740 '__int128'
+|-TypedefDecl 0x7fa781826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa781826760 'unsigned __int128'
+|-TypedefDecl 0x7fa781826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa781826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa781826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa781826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa781826dc0 'char *'
+|   `-BuiltinType 0x7fa781826560 'char'
+|-TypedefDecl 0x7fa7818270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa781827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa781826ee0 'struct __va_list_tag'
+|     `-Record 0x7fa781826e58 '__va_list_tag'
+|-TypedefDecl 0x7fa781827178 <c_files/pr70307.c:5:1, col:13> col:13 referenced v4si '__attribute__((__vector_size__(4 * sizeof(int)))) int'
+| `-VectorType 0x7fa781827140 '__attribute__((__vector_size__(4 * sizeof(int)))) int' 4
+|   `-BuiltinType 0x7fa7818265c0 'int'
+|-FunctionDecl 0x7fa782026b00 <line:7:1, col:15> col:6 used foo 'v4si (v4si)'
+| `-ParmVarDecl 0x7fa782026a00 <col:11> col:15 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+|-FunctionDecl 0x7fa782026d00 <line:9:1, line:13:1> line:10:1 fn1 'v4si (int)'
+| |-ParmVarDecl 0x7fa782026bf8 <col:6, col:10> col:10 used i 'int'
+| `-CompoundStmt 0x7fa782026fe8 <line:11:1, line:13:1>
+|   `-ReturnStmt 0x7fa782026fd0 <line:12:3, col:28>
+|     `-BinaryOperator 0x7fa782026fa8 <col:10, col:28> '__attribute__((__vector_size__(4 * sizeof(int)))) int' '<='
+|       |-ImplicitCastExpr 0x7fa782026f90 <col:10> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' <VectorSplat>
+|       | `-ImplicitCastExpr 0x7fa782026f60 <col:10> 'int' <LValueToRValue>
+|       |   `-DeclRefExpr 0x7fa782026da0 <col:10> 'int' lvalue ParmVar 0x7fa782026bf8 'i' 'int'
+|       `-ImplicitCastExpr 0x7fa782026f78 <col:15, col:28> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' <LValueToRValue>
+|         `-CompoundLiteralExpr 0x7fa782026f38 <col:15, col:28> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue
+|           `-InitListExpr 0x7fa782026ea8 <col:21, col:28> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+|             `-ParenExpr 0x7fa782026e40 <col:22, col:27> 'int'
+|               `-BinaryOperator 0x7fa782026e18 <col:23, col:26> 'int' ','
+|                 |-IntegerLiteral 0x7fa782026dd8 <col:23> 'int' 0
+|                 `-IntegerLiteral 0x7fa782026df8 <col:26> 'int' 0
+|-FunctionDecl 0x7fa7820270a8 <line:15:1, line:21:1> line:16:1 fn2 'v4si (int)'
+| |-ParmVarDecl 0x7fa782027020 <col:6, col:10> col:10 used i 'int'
+| `-CompoundStmt 0x7fa7820274a8 <line:17:1, line:21:1>
+|   |-DeclStmt 0x7fa7820271b8 <line:18:3, col:9>
+|   | `-VarDecl 0x7fa782027158 <col:3, col:8> col:8 used r 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+|   |-BinaryOperator 0x7fa782027428 <line:19:3, col:25> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' '='
+|   | |-DeclRefExpr 0x7fa7820271d0 <col:3> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue Var 0x7fa782027158 'r' 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+|   | `-BinaryOperator 0x7fa782027400 <col:7, col:25> '__attribute__((__vector_size__(4 * sizeof(int)))) int' '<='
+|   |   |-ImplicitCastExpr 0x7fa7820273e8 <col:7> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' <VectorSplat>
+|   |   | `-ImplicitCastExpr 0x7fa7820273b8 <col:7> 'int' <LValueToRValue>
+|   |   |   `-DeclRefExpr 0x7fa7820271f8 <col:7> 'int' lvalue ParmVar 0x7fa782027020 'i' 'int'
+|   |   `-ImplicitCastExpr 0x7fa7820273d0 <col:12, col:25> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' <LValueToRValue>
+|   |     `-CompoundLiteralExpr 0x7fa782027390 <col:12, col:25> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue
+|   |       `-InitListExpr 0x7fa782027300 <col:18, col:25> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+|   |         `-ParenExpr 0x7fa782027298 <col:19, col:24> 'int'
+|   |           `-BinaryOperator 0x7fa782027270 <col:20, col:23> 'int' ','
+|   |             |-IntegerLiteral 0x7fa782027230 <col:20> 'int' 0
+|   |             `-IntegerLiteral 0x7fa782027250 <col:23> 'int' 0
+|   `-ReturnStmt 0x7fa782027490 <line:20:3, col:10>
+|     `-ImplicitCastExpr 0x7fa782027478 <col:10> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' <LValueToRValue>
+|       `-DeclRefExpr 0x7fa782027450 <col:10> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue Var 0x7fa782027158 'r' 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+|-FunctionDecl 0x7fa782027578 <line:23:1, line:27:1> line:24:1 fn3 'v4si (int)'
+| |-ParmVarDecl 0x7fa7820274f0 <col:6, col:10> col:10 used i 'int'
+| `-CompoundStmt 0x7fa782027928 <line:25:1, line:27:1>
+|   `-ReturnStmt 0x7fa782027910 <line:26:3, col:34>
+|     `-CallExpr 0x7fa7820278e0 <col:10, col:34> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+|       |-ImplicitCastExpr 0x7fa7820278c8 <col:10> 'v4si (*)(v4si)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fa782027618 <col:10> 'v4si (v4si)' Function 0x7fa782026b00 'foo' 'v4si (v4si)'
+|       `-BinaryOperator 0x7fa782027848 <col:15, col:33> '__attribute__((__vector_size__(4 * sizeof(int)))) int' '<='
+|         |-ImplicitCastExpr 0x7fa782027830 <col:15> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' <VectorSplat>
+|         | `-ImplicitCastExpr 0x7fa782027800 <col:15> 'int' <LValueToRValue>
+|         |   `-DeclRefExpr 0x7fa782027640 <col:15> 'int' lvalue ParmVar 0x7fa7820274f0 'i' 'int'
+|         `-ImplicitCastExpr 0x7fa782027818 <col:20, col:33> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' <LValueToRValue>
+|           `-CompoundLiteralExpr 0x7fa7820277d8 <col:20, col:33> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue
+|             `-InitListExpr 0x7fa782027748 <col:26, col:33> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+|               `-ParenExpr 0x7fa7820276e0 <col:27, col:32> 'int'
+|                 `-BinaryOperator 0x7fa7820276b8 <col:28, col:31> 'int' ','
+|                   |-IntegerLiteral 0x7fa782027678 <col:28> 'int' 0
+|                   `-IntegerLiteral 0x7fa782027698 <col:31> 'int' 0
+|-FunctionDecl 0x7fa782028a00 <line:29:1, line:35:1> line:30:1 fn4 'v4si (int)'
+| |-ParmVarDecl 0x7fa782027960 <col:6, col:10> col:10 used i 'int'
+| `-CompoundStmt 0x7fa782029018 <line:31:1, line:35:1>
+|   |-DeclStmt 0x7fa782028ba8 <line:32:3, col:23>
+|   | `-RecordDecl 0x7fa782028aa0 <col:3, col:22> col:10 struct S definition
+|   |   `-FieldDecl 0x7fa782028b60 <col:14, col:19> col:19 referenced v 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+|   |-DeclStmt 0x7fa782028f70 <line:33:3, col:44>
+|   | `-VarDecl 0x7fa782028c10 <col:3, col:43> col:12 used s 'struct S':'struct S' cinit
+|   |   `-InitListExpr 0x7fa782028f28 <col:16, col:43> 'struct S':'struct S'
+|   |     `-BinaryOperator 0x7fa782028e78 <col:23, col:41> '__attribute__((__vector_size__(4 * sizeof(int)))) int' '<='
+|   |       |-ImplicitCastExpr 0x7fa782028e60 <col:23> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' <VectorSplat>
+|   |       | `-ImplicitCastExpr 0x7fa782028e30 <col:23> 'int' <LValueToRValue>
+|   |       |   `-DeclRefExpr 0x7fa782028c70 <col:23> 'int' lvalue ParmVar 0x7fa782027960 'i' 'int'
+|   |       `-ImplicitCastExpr 0x7fa782028e48 <col:28, col:41> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' <LValueToRValue>
+|   |         `-CompoundLiteralExpr 0x7fa782028e08 <col:28, col:41> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue
+|   |           `-InitListExpr 0x7fa782028d78 <col:34, col:41> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+|   |             `-ParenExpr 0x7fa782028d10 <col:35, col:40> 'int'
+|   |               `-BinaryOperator 0x7fa782028ce8 <col:36, col:39> 'int' ','
+|   |                 |-IntegerLiteral 0x7fa782028ca8 <col:36> 'int' 0
+|   |                 `-IntegerLiteral 0x7fa782028cc8 <col:39> 'int' 0
+|   `-ReturnStmt 0x7fa782029000 <line:34:3, col:12>
+|     `-ImplicitCastExpr 0x7fa782028fe8 <col:10, col:12> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' <LValueToRValue>
+|       `-MemberExpr 0x7fa782028fb0 <col:10, col:12> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue .v 0x7fa782028b60
+|         `-DeclRefExpr 0x7fa782028f88 <col:10> 'struct S':'struct S' lvalue Var 0x7fa782028c10 's' 'struct S':'struct S'
+|-FunctionDecl 0x7fa7820290e8 <line:37:1, line:41:1> line:38:1 fn5 'v4si (int)'
+| |-ParmVarDecl 0x7fa782029060 <col:6, col:10> col:10 used i 'int'
+| `-CompoundStmt 0x7fa782029550 <line:39:1, line:41:1>
+|   `-ReturnStmt 0x7fa782029538 <line:40:3, col:43>
+|     `-BinaryOperator 0x7fa782029510 <col:10, col:43> '__attribute__((__vector_size__(4 * sizeof(int)))) int' '=='
+|       |-ImplicitCastExpr 0x7fa7820294e0 <col:10, col:25> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' <LValueToRValue>
+|       | `-CompoundLiteralExpr 0x7fa782029320 <col:10, col:25> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue
+|       |   `-InitListExpr 0x7fa782029290 <col:16, col:25> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+|       |     `-ParenExpr 0x7fa782029228 <col:17, col:24> 'int'
+|       |       `-BinaryOperator 0x7fa782029200 <col:18, col:22> 'int' ','
+|       |         |-IntegerLiteral 0x7fa782029198 <col:18> 'int' 1
+|       |         `-UnaryOperator 0x7fa7820291e0 <col:21, col:22> 'int' postfix '++'
+|       |           `-DeclRefExpr 0x7fa7820291b8 <col:21> 'int' lvalue ParmVar 0x7fa782029060 'i' 'int'
+|       `-ImplicitCastExpr 0x7fa7820294f8 <col:30, col:43> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' <LValueToRValue>
+|         `-CompoundLiteralExpr 0x7fa7820294b8 <col:30, col:43> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue
+|           `-InitListExpr 0x7fa782029428 <col:36, col:43> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+|             `-ParenExpr 0x7fa7820293c0 <col:37, col:42> 'int'
+|               `-BinaryOperator 0x7fa782029398 <col:38, col:41> 'int' ','
+|                 |-IntegerLiteral 0x7fa782029358 <col:38> 'int' 0
+|                 `-IntegerLiteral 0x7fa782029378 <col:41> 'int' 0
+|-FunctionDecl 0x7fa782029610 <line:43:1, line:49:1> line:44:1 fn6 'v4si (int)'
+| |-ParmVarDecl 0x7fa782029588 <col:6, col:10> col:10 used i 'int'
+| `-CompoundStmt 0x7fa782029b90 <line:45:1, line:49:1>
+|   |-DeclStmt 0x7fa782029720 <line:46:3, col:9>
+|   | `-VarDecl 0x7fa7820296c0 <col:3, col:8> col:8 used r 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+|   |-BinaryOperator 0x7fa782029b10 <line:47:3, col:40> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' '='
+|   | |-DeclRefExpr 0x7fa782029738 <col:3> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue Var 0x7fa7820296c0 'r' 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+|   | `-BinaryOperator 0x7fa782029ae8 <col:7, col:40> '__attribute__((__vector_size__(4 * sizeof(int)))) int' '=='
+|   |   |-ImplicitCastExpr 0x7fa782029ab8 <col:7, col:22> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' <LValueToRValue>
+|   |   | `-CompoundLiteralExpr 0x7fa7820298f8 <col:7, col:22> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue
+|   |   |   `-InitListExpr 0x7fa782029868 <col:13, col:22> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+|   |   |     `-ParenExpr 0x7fa782029800 <col:14, col:21> 'int'
+|   |   |       `-BinaryOperator 0x7fa7820297d8 <col:15, col:19> 'int' ','
+|   |   |         |-IntegerLiteral 0x7fa782029770 <col:15> 'int' 1
+|   |   |         `-UnaryOperator 0x7fa7820297b8 <col:18, col:19> 'int' postfix '++'
+|   |   |           `-DeclRefExpr 0x7fa782029790 <col:18> 'int' lvalue ParmVar 0x7fa782029588 'i' 'int'
+|   |   `-ImplicitCastExpr 0x7fa782029ad0 <col:27, col:40> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' <LValueToRValue>
+|   |     `-CompoundLiteralExpr 0x7fa782029a90 <col:27, col:40> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue
+|   |       `-InitListExpr 0x7fa782029a00 <col:33, col:40> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+|   |         `-ParenExpr 0x7fa782029998 <col:34, col:39> 'int'
+|   |           `-BinaryOperator 0x7fa782029970 <col:35, col:38> 'int' ','
+|   |             |-IntegerLiteral 0x7fa782029930 <col:35> 'int' 0
+|   |             `-IntegerLiteral 0x7fa782029950 <col:38> 'int' 0
+|   `-ReturnStmt 0x7fa782029b78 <line:48:3, col:10>
+|     `-ImplicitCastExpr 0x7fa782029b60 <col:10> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' <LValueToRValue>
+|       `-DeclRefExpr 0x7fa782029b38 <col:10> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue Var 0x7fa7820296c0 'r' 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+|-FunctionDecl 0x7fa782029c60 <line:51:1, line:55:1> line:52:1 fn7 'v4si (int)'
+| |-ParmVarDecl 0x7fa782029bd8 <col:6, col:10> col:10 used i 'int'
+| `-CompoundStmt 0x7fa78202a138 <line:53:1, line:55:1>
+|   `-ReturnStmt 0x7fa78202a120 <line:54:3, col:49>
+|     `-CallExpr 0x7fa78202a0f0 <col:10, col:49> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+|       |-ImplicitCastExpr 0x7fa78202a0d8 <col:10> 'v4si (*)(v4si)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fa782029d00 <col:10> 'v4si (v4si)' Function 0x7fa782026b00 'foo' 'v4si (v4si)'
+|       `-BinaryOperator 0x7fa78202a0b0 <col:15, col:48> '__attribute__((__vector_size__(4 * sizeof(int)))) int' '=='
+|         |-ImplicitCastExpr 0x7fa78202a080 <col:15, col:30> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' <LValueToRValue>
+|         | `-CompoundLiteralExpr 0x7fa782029ec0 <col:15, col:30> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue
+|         |   `-InitListExpr 0x7fa782029e30 <col:21, col:30> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+|         |     `-ParenExpr 0x7fa782029dc8 <col:22, col:29> 'int'
+|         |       `-BinaryOperator 0x7fa782029da0 <col:23, col:27> 'int' ','
+|         |         |-IntegerLiteral 0x7fa782029d38 <col:23> 'int' 1
+|         |         `-UnaryOperator 0x7fa782029d80 <col:26, col:27> 'int' postfix '++'
+|         |           `-DeclRefExpr 0x7fa782029d58 <col:26> 'int' lvalue ParmVar 0x7fa782029bd8 'i' 'int'
+|         `-ImplicitCastExpr 0x7fa78202a098 <col:35, col:48> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' <LValueToRValue>
+|           `-CompoundLiteralExpr 0x7fa78202a058 <col:35, col:48> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue
+|             `-InitListExpr 0x7fa782029fc8 <col:41, col:48> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+|               `-ParenExpr 0x7fa782029f60 <col:42, col:47> 'int'
+|                 `-BinaryOperator 0x7fa782029f38 <col:43, col:46> 'int' ','
+|                   |-IntegerLiteral 0x7fa782029ef8 <col:43> 'int' 0
+|                   `-IntegerLiteral 0x7fa782029f18 <col:46> 'int' 0
+`-FunctionDecl 0x7fa78202a1f8 <line:57:1, line:63:1> line:58:1 fn8 'v4si (int)'
+  |-ParmVarDecl 0x7fa78202a170 <col:6, col:10> col:10 used i 'int'
+  `-CompoundStmt 0x7fa78202a988 <line:59:1, line:63:1>
+    |-DeclStmt 0x7fa78202a398 <line:60:3, col:23>
+    | `-RecordDecl 0x7fa78202a298 <col:3, col:22> col:10 struct S definition
+    |   `-FieldDecl 0x7fa78202a350 <col:14, col:19> col:19 referenced v 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+    |-DeclStmt 0x7fa78202a8e0 <line:61:3, col:59>
+    | `-VarDecl 0x7fa78202a400 <col:3, col:58> col:12 used s 'struct S':'struct S' cinit
+    |   `-InitListExpr 0x7fa78202a898 <col:16, col:58> 'struct S':'struct S'
+    |     `-BinaryOperator 0x7fa78202a7e8 <col:23, col:56> '__attribute__((__vector_size__(4 * sizeof(int)))) int' '=='
+    |       |-ImplicitCastExpr 0x7fa78202a7b8 <col:23, col:38> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' <LValueToRValue>
+    |       | `-CompoundLiteralExpr 0x7fa78202a5f8 <col:23, col:38> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue
+    |       |   `-InitListExpr 0x7fa78202a568 <col:29, col:38> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+    |       |     `-ParenExpr 0x7fa78202a500 <col:30, col:37> 'int'
+    |       |       `-BinaryOperator 0x7fa78202a4d8 <col:31, col:35> 'int' ','
+    |       |         |-IntegerLiteral 0x7fa78202a470 <col:31> 'int' 1
+    |       |         `-UnaryOperator 0x7fa78202a4b8 <col:34, col:35> 'int' postfix '++'
+    |       |           `-DeclRefExpr 0x7fa78202a490 <col:34> 'int' lvalue ParmVar 0x7fa78202a170 'i' 'int'
+    |       `-ImplicitCastExpr 0x7fa78202a7d0 <col:43, col:56> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' <LValueToRValue>
+    |         `-CompoundLiteralExpr 0x7fa78202a790 <col:43, col:56> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue
+    |           `-InitListExpr 0x7fa78202a700 <col:49, col:56> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+    |             `-ParenExpr 0x7fa78202a698 <col:50, col:55> 'int'
+    |               `-BinaryOperator 0x7fa78202a670 <col:51, col:54> 'int' ','
+    |                 |-IntegerLiteral 0x7fa78202a630 <col:51> 'int' 0
+    |                 `-IntegerLiteral 0x7fa78202a650 <col:54> 'int' 0
+    `-ReturnStmt 0x7fa78202a970 <line:62:3, col:12>
+      `-ImplicitCastExpr 0x7fa78202a958 <col:10, col:12> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' <LValueToRValue>
+        `-MemberExpr 0x7fa78202a920 <col:10, col:12> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue .v 0x7fa78202a350
+          `-DeclRefExpr 0x7fa78202a8f8 <col:10> 'struct S':'struct S' lvalue Var 0x7fa78202a400 's' 'struct S':'struct S'

@@ -1,0 +1,43 @@
+c_files/pr54103-4.c:4:3: warning: expression result unused [-Wunused-value]
+  0 / 0 && 1 ? : 0;
+  ^~~~~~~~~~~~~~~~
+c_files/pr54103-4.c:4:5: warning: division by zero is undefined [-Wdivision-by-zero]
+  0 / 0 && 1 ? : 0;
+    ^ ~
+2 warnings generated.
+TranslationUnitDecl 0x7f8a448264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8a44826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8a44826740 '__int128'
+|-TypedefDecl 0x7f8a44826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8a44826760 'unsigned __int128'
+|-TypedefDecl 0x7f8a44826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8a44826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8a44826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8a44826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8a44826dc0 'char *'
+|   `-BuiltinType 0x7f8a44826560 'char'
+|-TypedefDecl 0x7f8a448270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8a44827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8a44826ee0 'struct __va_list_tag'
+|     `-Record 0x7f8a44826e58 '__va_list_tag'
+`-FunctionDecl 0x7f8a45025a00 <c_files/pr54103-4.c:1:1, line:5:1> line:2:1 f 'void (void)'
+  `-CompoundStmt 0x7f8a45025c08 <line:3:1, line:5:1>
+    `-BinaryConditionalOperator 0x7f8a45025bc8 <line:4:3, col:18> 'int'
+      |-BinaryOperator 0x7f8a45025b60 <col:3, col:12> 'int' '&&'
+      | |-BinaryOperator 0x7f8a45025b18 <col:3, col:7> 'int' '/'
+      | | |-IntegerLiteral 0x7f8a45025ad8 <col:3> 'int' 0
+      | | `-IntegerLiteral 0x7f8a45025af8 <col:7> 'int' 0
+      | `-IntegerLiteral 0x7f8a45025b40 <col:12> 'int' 1
+      |-OpaqueValueExpr 0x7f8a45025ba8 <col:3, col:12> 'int'
+      | `-BinaryOperator 0x7f8a45025b60 <col:3, col:12> 'int' '&&'
+      |   |-BinaryOperator 0x7f8a45025b18 <col:3, col:7> 'int' '/'
+      |   | |-IntegerLiteral 0x7f8a45025ad8 <col:3> 'int' 0
+      |   | `-IntegerLiteral 0x7f8a45025af8 <col:7> 'int' 0
+      |   `-IntegerLiteral 0x7f8a45025b40 <col:12> 'int' 1
+      |-OpaqueValueExpr 0x7f8a45025ba8 <col:3, col:12> 'int'
+      | `-BinaryOperator 0x7f8a45025b60 <col:3, col:12> 'int' '&&'
+      |   |-BinaryOperator 0x7f8a45025b18 <col:3, col:7> 'int' '/'
+      |   | |-IntegerLiteral 0x7f8a45025ad8 <col:3> 'int' 0
+      |   | `-IntegerLiteral 0x7f8a45025af8 <col:7> 'int' 0
+      |   `-IntegerLiteral 0x7f8a45025b40 <col:12> 'int' 1
+      `-IntegerLiteral 0x7f8a45025b88 <col:18> 'int' 0

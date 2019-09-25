@@ -1,0 +1,23 @@
+TranslationUnitDecl 0x7fc7130264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc713026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc713026740 '__int128'
+|-TypedefDecl 0x7fc713026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc713026760 'unsigned __int128'
+|-TypedefDecl 0x7fc713026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc713026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc713026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc713026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc713026dc0 'char *'
+|   `-BuiltinType 0x7fc713026560 'char'
+|-TypedefDecl 0x7fc7130270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc713027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc713026ee0 'struct __va_list_tag'
+|     `-Record 0x7fc713026e58 '__va_list_tag'
+|-RecordDecl 0x7fc713027120 <c_files/pr66068.c:3:1, col:8> col:8 struct S
+|-VarDecl 0x7fc713077420 <col:1, col:10> col:10 a 'struct S':'struct S'
+|-VarDecl 0x7fc7130774f8 <line:4:1, col:16> col:16 b 'const struct S':'const struct S'
+|-RecordDecl 0x7fc713077558 prev 0x7fc713027120 <line:5:1, line:7:1> line:5:8 struct S definition
+|-RecordDecl 0x7fc7130775e0 <line:9:1, col:7> col:7 union U
+|-VarDecl 0x7fc7130776e0 <col:1, col:9> col:9 c 'union U':'union U'
+|-VarDecl 0x7fc713077778 <line:10:1, col:15> col:15 d 'const union U':'const union U'
+`-RecordDecl 0x7fc7130777d8 prev 0x7fc7130775e0 <line:11:1, line:13:1> line:11:7 union U definition

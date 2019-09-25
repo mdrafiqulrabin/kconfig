@@ -1,0 +1,62 @@
+TranslationUnitDecl 0x7f98640264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9864026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9864026740 '__int128'
+|-TypedefDecl 0x7f9864026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9864026760 'unsigned __int128'
+|-TypedefDecl 0x7f9864026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9864026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9864026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9864026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9864026dc0 'char *'
+|   `-BuiltinType 0x7f9864026560 'char'
+|-TypedefDecl 0x7f98640270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9864027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9864026ee0 'struct __va_list_tag'
+|     `-Record 0x7f9864026e58 '__va_list_tag'
+|-VarDecl 0x7f9864027138 <c_files/pr79740.c:3:1, col:5> col:5 used a 'int'
+|-VarDecl 0x7f9864825a00 <line:4:1, col:7> col:7 used b 'short'
+|-FunctionDecl 0x7f9864825b48 <line:5:1, col:48> col:7 used fn1 'short (unsigned short)'
+| |-ParmVarDecl 0x7f9864825a78 <col:11, col:26> col:26 used p1 'unsigned short'
+| `-CompoundStmt 0x7f9864825cd8 <col:30, col:48>
+|   `-ReturnStmt 0x7f9864825cc0 <col:32, col:45>
+|     `-ImplicitCastExpr 0x7f9864825ca8 <col:39, col:45> 'short' <IntegralCast>
+|       `-BinaryOperator 0x7f9864825c80 <col:39, col:45> 'int' '<<'
+|         |-ImplicitCastExpr 0x7f9864825c50 <col:39> 'int' <IntegralCast>
+|         | `-ImplicitCastExpr 0x7f9864825c38 <col:39> 'unsigned short' <LValueToRValue>
+|         |   `-DeclRefExpr 0x7f9864825be8 <col:39> 'unsigned short' lvalue ParmVar 0x7f9864825a78 'p1' 'unsigned short'
+|         `-ImplicitCastExpr 0x7f9864825c68 <col:45> 'int' <LValueToRValue>
+|           `-DeclRefExpr 0x7f9864825c10 <col:45> 'int' lvalue Var 0x7f9864027138 'a' 'int'
+`-FunctionDecl 0x7f9864825d50 <line:7:1, line:19:1> line:7:5 main 'int ()'
+  `-CompoundStmt 0x7f98648262a8 <line:8:1, line:19:1>
+    |-DeclStmt 0x7f9864825e60 <line:9:3, col:10>
+    | `-VarDecl 0x7f9864825e00 <col:3, col:9> col:9 used c 'short'
+    |-DeclStmt 0x7f9864825f10 <line:10:3, col:12>
+    | `-VarDecl 0x7f9864825e90 <col:3, col:11> col:7 used d 'int' cinit
+    |   `-IntegerLiteral 0x7f9864825ef0 <col:11> 'int' 4
+    |-ForStmt 0x7f98648261f0 <line:11:3, line:16:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7f9864825f50 <line:11:10> 'short' <LValueToRValue>
+    | | `-DeclRefExpr 0x7f9864825f28 <col:10> 'short' lvalue Var 0x7f9864825a00 'b' 'short'
+    | |-<<<NULL>>>
+    | `-CompoundStmt 0x7f98648261c0 <line:12:5, line:16:5>
+    |   |-BinaryOperator 0x7f9864826030 <line:13:7, col:15> 'short' '='
+    |   | |-DeclRefExpr 0x7f9864825f68 <col:7> 'short' lvalue Var 0x7f9864825e00 'c' 'short'
+    |   | `-ImplicitCastExpr 0x7f9864826018 <col:11, col:15> 'short' <IntegralCast>
+    |   |   `-BinaryOperator 0x7f9864825ff0 <col:11, col:15> 'int' '+'
+    |   |     |-ImplicitCastExpr 0x7f9864825fd8 <col:11> 'int' <LValueToRValue>
+    |   |     | `-DeclRefExpr 0x7f9864825f90 <col:11> 'int' lvalue Var 0x7f9864825e90 'd' 'int'
+    |   |     `-IntegerLiteral 0x7f9864825fb8 <col:15> 'int' 1
+    |   |-CallExpr 0x7f98648260f0 <line:14:7, col:12> 'short'
+    |   | |-ImplicitCastExpr 0x7f98648260d8 <col:7> 'short (*)(unsigned short)' <FunctionToPointerDecay>
+    |   | | `-DeclRefExpr 0x7f9864826058 <col:7> 'short (unsigned short)' Function 0x7f9864825b48 'fn1' 'short (unsigned short)'
+    |   | `-ImplicitCastExpr 0x7f9864826138 <col:11> 'unsigned short' <IntegralCast>
+    |   |   `-ImplicitCastExpr 0x7f9864826120 <col:11> 'short' <LValueToRValue>
+    |   |     `-DeclRefExpr 0x7f9864826080 <col:11> 'short' lvalue Var 0x7f9864825e00 'c' 'short'
+    |   `-BinaryOperator 0x7f9864826198 <line:15:7, col:11> 'int' '='
+    |     |-DeclRefExpr 0x7f9864826150 <col:7> 'int' lvalue Var 0x7f9864825e90 'd' 'int'
+    |     `-IntegerLiteral 0x7f9864826178 <col:11> 'int' 0
+    |-UnaryOperator 0x7f9864826250 <line:17:3, col:4> 'int' postfix '++'
+    | `-DeclRefExpr 0x7f9864826228 <col:3> 'int' lvalue Var 0x7f9864825e90 'd' 'int'
+    `-ReturnStmt 0x7f9864826290 <line:18:3, col:10>
+      `-IntegerLiteral 0x7f9864826270 <col:10> 'int' 0

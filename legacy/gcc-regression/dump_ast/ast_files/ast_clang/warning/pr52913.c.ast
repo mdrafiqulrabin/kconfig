@@ -1,0 +1,61 @@
+c_files/pr52913.c:14:7: warning: add explicit braces to avoid dangling else [-Wdangling-else]
+      else
+      ^
+1 warning generated.
+TranslationUnitDecl 0x7fefe10264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fefe1026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fefe1026740 '__int128'
+|-TypedefDecl 0x7fefe1026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fefe1026760 'unsigned __int128'
+|-TypedefDecl 0x7fefe1026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fefe1026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fefe1026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fefe1026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fefe1026dc0 'char *'
+|   `-BuiltinType 0x7fefe1026560 'char'
+|-TypedefDecl 0x7fefe10270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fefe1027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fefe1026ee0 'struct __va_list_tag'
+|     `-Record 0x7fefe1026e58 '__va_list_tag'
+|-VarDecl 0x7fefe1027138 <c_files/pr52913.c:3:1, col:5> col:5 used a 'int'
+|-VarDecl 0x7fefe1825a00 <col:1, col:8> col:8 used b 'int'
+|-VarDecl 0x7fefe1825a78 <col:1, col:11> col:11 used c 'int'
+|-VarDecl 0x7fefe1825af0 <col:1, col:14> col:14 used d 'int'
+|-VarDecl 0x7fefe1825b68 <col:1, col:17> col:17 used e 'int'
+`-FunctionDecl 0x7fefe1825c48 <line:4:1, line:18:1> line:5:1 fn1 'void ()'
+  `-CompoundStmt 0x7fefe1826168 <line:6:1, line:18:1>
+    |-LabelStmt 0x7fefe1825d98 <line:7:1, line:8:7> 'lbl_101'
+    | `-BinaryOperator 0x7fefe1825d28 <col:3, col:7> 'int' '='
+    |   |-DeclRefExpr 0x7fefe1825ce0 <col:3> 'int' lvalue Var 0x7fefe1825b68 'e' 'int'
+    |   `-IntegerLiteral 0x7fefe1825d08 <col:7> 'int' 0
+    |-LabelStmt 0x7fefe18260c8 <line:9:1, line:15:2> 'lbl_274'
+    | `-ForStmt 0x7fefe1826048 <line:10:3, line:15:2>
+    |   |-BinaryOperator 0x7fefe1825df8 <line:10:8, col:12> 'int' '='
+    |   | |-DeclRefExpr 0x7fefe1825db0 <col:8> 'int' lvalue Var 0x7fefe1825a78 'c' 'int'
+    |   | `-IntegerLiteral 0x7fefe1825dd8 <col:12> 'int' 0
+    |   |-<<<NULL>>>
+    |   |-BinaryOperator 0x7fefe1825e80 <col:15, col:19> 'int' '<'
+    |   | |-ImplicitCastExpr 0x7fefe1825e68 <col:15> 'int' <LValueToRValue>
+    |   | | `-DeclRefExpr 0x7fefe1825e20 <col:15> 'int' lvalue Var 0x7fefe1825a78 'c' 'int'
+    |   | `-IntegerLiteral 0x7fefe1825e48 <col:19> 'int' 1
+    |   |-BinaryOperator 0x7fefe1825f10 <col:22, col:26> 'int' '='
+    |   | |-DeclRefExpr 0x7fefe1825ea8 <col:22> 'int' lvalue Var 0x7fefe1825a78 'c' 'int'
+    |   | `-ImplicitCastExpr 0x7fefe1825ef8 <col:26> 'int' <LValueToRValue>
+    |   |   `-DeclRefExpr 0x7fefe1825ed0 <col:26> 'int' lvalue Var 0x7fefe1027138 'a' 'int'
+    |   `-IfStmt 0x7fefe1826010 <line:11:5, line:15:2>
+    |     |-<<<NULL>>>
+    |     |-<<<NULL>>>
+    |     |-ImplicitCastExpr 0x7fefe1825f60 <line:11:9> 'int' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7fefe1825f38 <col:9> 'int' lvalue Var 0x7fefe1825af0 'd' 'int'
+    |     |-IfStmt 0x7fefe1825fd8 <line:12:7, line:15:2>
+    |     | |-<<<NULL>>>
+    |     | |-<<<NULL>>>
+    |     | |-ImplicitCastExpr 0x7fefe1825fa0 <line:12:11> 'int' <LValueToRValue>
+    |     | | `-DeclRefExpr 0x7fefe1825f78 <col:11> 'int' lvalue Var 0x7fefe1825a00 'b' 'int'
+    |     | |-GotoStmt 0x7fefe1825fb8 <line:13:2, col:7> 'lbl_101' 0x7fefe1825d50
+    |     | `-BreakStmt 0x7fefe1825fd0 <line:15:2>
+    |     `-<<<NULL>>>
+    |-BinaryOperator 0x7fefe1826128 <line:16:3, col:7> 'int' '='
+    | |-DeclRefExpr 0x7fefe18260e0 <col:3> 'int' lvalue Var 0x7fefe1825af0 'd' 'int'
+    | `-IntegerLiteral 0x7fefe1826108 <col:7> 'int' 1
+    `-GotoStmt 0x7fefe1826150 <line:17:3, col:8> 'lbl_274' 0x7fefe1826080

@@ -1,0 +1,66 @@
+FileAST: 
+  Typedef: __int32_t, [], ['typedef']
+    TypeDecl: __int32_t, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: __kernel_rem_pio2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: prec, [], [], []
+            TypeDecl: prec, []
+              IdentifierType: ['int']
+        TypeDecl: __kernel_rem_pio2, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['__int32_t']
+      Decl: jz, [], [], []
+        TypeDecl: jz, []
+          IdentifierType: ['__int32_t']
+      Decl: fw, [], [], []
+        TypeDecl: fw, []
+          IdentifierType: ['double']
+      Decl: fq, [], [], []
+        ArrayDecl: []
+          TypeDecl: fq, []
+            IdentifierType: ['double']
+          Constant: int, 20
+      Switch: 
+        ID: prec
+        Compound: 
+          Case: 
+            Constant: int, 2
+            Assignment: =
+              ID: fw
+              Constant: float, 0.0
+          Case: 
+            Constant: int, 3
+            For: 
+              Assignment: =
+                ID: i
+                ID: jz
+              BinaryOp: >
+                ID: i
+                Constant: int, 0
+              UnaryOp: p--
+                ID: i
+              Compound: 
+                Assignment: =
+                  ID: fw
+                  BinaryOp: +
+                    ArrayRef: 
+                      ID: fq
+                      BinaryOp: -
+                        ID: i
+                        Constant: int, 1
+                    ArrayRef: 
+                      ID: fq
+                      ID: i
+                Assignment: =
+                  ArrayRef: 
+                    ID: fq
+                    BinaryOp: -
+                      ID: i
+                      Constant: int, 1
+                  ID: fw

@@ -1,0 +1,25 @@
+FileAST: 
+  Decl: None, [], [], []
+    Union: u
+      Decl: None, [], [], []
+        Struct: None
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+  Decl: foo, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              Union: u
+      TypeDecl: foo, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        Constant: int, 0

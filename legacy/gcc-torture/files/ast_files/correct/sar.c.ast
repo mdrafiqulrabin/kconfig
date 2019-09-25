@@ -1,0 +1,29 @@
+FileAST: 
+  Decl: foo, [], [], []
+    ArrayDecl: []
+      TypeDecl: foo, []
+        Struct: foo
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['char']
+      Constant: int, 100
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Assignment: =
+        StructRef: .
+          ArrayRef: 
+            ID: foo
+            Constant: int, 1
+          ID: a
+        Constant: char, '1'
+      Assignment: =
+        StructRef: .
+          ArrayRef: 
+            ID: foo
+            Constant: int, 2
+          ID: a
+        Constant: char, '2'

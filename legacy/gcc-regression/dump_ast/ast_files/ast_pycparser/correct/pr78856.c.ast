@@ -1,0 +1,104 @@
+FileAST: 
+  Decl: exit, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: exit, []
+        IdentifierType: ['void']
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['int']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['int']
+  Decl: d, [], [], []
+    TypeDecl: d, []
+      IdentifierType: ['int']
+  Decl: e, [], [], []
+    TypeDecl: e, []
+      IdentifierType: ['int']
+  Decl: f, [], [], []
+    ArrayDecl: []
+      TypeDecl: f, []
+        IdentifierType: ['int']
+      Constant: int, 3
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      While: 
+        ID: d
+        While: 
+          Constant: int, 1
+          EmptyStatement: 
+      Decl: g, [], [], []
+        TypeDecl: g, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      Decl: h, [], [], []
+        TypeDecl: h, []
+          IdentifierType: ['int']
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      For: 
+        BinaryOp: <
+          ID: g
+          Constant: int, 21
+        Assignment: +=
+          ID: g
+          Constant: int, 9
+        Compound: 
+          Decl: j, [], [], []
+            TypeDecl: j, []
+              IdentifierType: ['int']
+            Constant: int, 1
+          For: 
+            Assignment: =
+              ID: h
+              Constant: int, 0
+            BinaryOp: <
+              ID: h
+              Constant: int, 3
+            UnaryOp: p++
+              ID: h
+            Assignment: =
+              ArrayRef: 
+                ID: f
+                ID: h
+              Constant: int, 1
+          For: 
+            BinaryOp: <
+              ID: j
+              Constant: int, 10
+            UnaryOp: p++
+              ID: j
+            Compound: 
+              Assignment: =
+                ID: d
+                BinaryOp: &&
+                  ID: i
+                  TernaryOp: 
+                    ID: b
+                    Constant: int, 0
+                    ID: c
+              Assignment: =
+                ID: i
+                Constant: int, 1
+              If: 
+                ID: g
+                Assignment: =
+                  ID: a
+                  ID: e
+      FuncCall: 
+        ID: exit
+        ExprList: 
+          Constant: int, 0

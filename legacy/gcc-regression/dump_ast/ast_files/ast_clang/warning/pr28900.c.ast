@@ -1,0 +1,83 @@
+c_files/pr28900.c:14:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+1 warning generated.
+TranslationUnitDecl 0x7f81cf025ad0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f81cf026020 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f81cf025d40 '__int128'
+|-TypedefDecl 0x7f81cf026090 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f81cf025d60 'unsigned __int128'
+|-TypedefDecl 0x7f81cf026368 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f81cf026170 'struct __NSConstantString_tag'
+|   `-Record 0x7f81cf0260e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f81cf026400 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f81cf0263c0 'char *'
+|   `-BuiltinType 0x7f81cf025b60 'char'
+|-TypedefDecl 0x7f81cf0266c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f81cf026670 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f81cf0264e0 'struct __va_list_tag'
+|     `-Record 0x7f81cf026458 '__va_list_tag'
+`-FunctionDecl 0x7f81ce826430 <c_files/pr28900.c:4:1, line:14:1> line:4:5 synths_ 'int (float *)'
+  |-ParmVarDecl 0x7f81cf026760 <col:15, col:23> col:23 used rc 'float *'
+  `-CompoundStmt 0x7f81ce826e48 <line:5:1, line:14:1>
+    |-DeclStmt 0x7f81ce826618 <line:6:3, col:15>
+    | |-VarDecl 0x7f81ce826528 <col:3, col:9> col:9 used r1 'float'
+    | `-VarDecl 0x7f81ce8265a0 <col:3, col:13> col:13 used r2 'float'
+    |-DeclStmt 0x7f81ce8266a8 <line:7:3, col:8>
+    | `-VarDecl 0x7f81ce826648 <col:3, col:7> col:7 used i 'int'
+    `-ForStmt 0x7f81ce826e10 <line:8:3, line:13:5>
+      |-BinaryOperator 0x7f81ce826708 <line:8:8, col:12> 'int' '='
+      | |-DeclRefExpr 0x7f81ce8266c0 <col:8> 'int' lvalue Var 0x7f81ce826648 'i' 'int'
+      | `-IntegerLiteral 0x7f81ce8266e8 <col:12> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7f81ce826790 <col:15, col:19> 'int' '<'
+      | |-ImplicitCastExpr 0x7f81ce826778 <col:15> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7f81ce826730 <col:15> 'int' lvalue Var 0x7f81ce826648 'i' 'int'
+      | `-IntegerLiteral 0x7f81ce826758 <col:19> 'int' 128
+      |-UnaryOperator 0x7f81ce8267e0 <col:24, col:26> 'int' prefix '++'
+      | `-DeclRefExpr 0x7f81ce8267b8 <col:26> 'int' lvalue Var 0x7f81ce826648 'i' 'int'
+      `-CompoundStmt 0x7f81ce826de0 <line:9:5, line:13:5>
+        |-BinaryOperator 0x7f81ce8268e8 <line:10:7, col:16> 'float' '='
+        | |-DeclRefExpr 0x7f81ce826800 <col:7> 'float' lvalue Var 0x7f81ce8265a0 'r2' 'float'
+        | `-ImplicitCastExpr 0x7f81ce8268d0 <col:12, col:16> 'float' <LValueToRValue>
+        |   `-ArraySubscriptExpr 0x7f81ce8268a8 <col:12, col:16> 'float' lvalue
+        |     |-ImplicitCastExpr 0x7f81ce826878 <col:12> 'float *' <LValueToRValue>
+        |     | `-DeclRefExpr 0x7f81ce826828 <col:12> 'float *' lvalue ParmVar 0x7f81cf026760 'rc' 'float *'
+        |     `-ImplicitCastExpr 0x7f81ce826890 <col:15> 'int' <LValueToRValue>
+        |       `-DeclRefExpr 0x7f81ce826850 <col:15> 'int' lvalue Var 0x7f81ce826648 'i' 'int'
+        |-BinaryOperator 0x7f81ce826af0 <line:11:7, col:43> 'float' '='
+        | |-DeclRefExpr 0x7f81ce826910 <col:7> 'float' lvalue Var 0x7f81ce826528 'r1' 'float'
+        | `-ParenExpr 0x7f81ce826ad0 <col:12, col:43> 'float'
+        |   `-ConditionalOperator 0x7f81ce826aa0 <col:13, col:42> 'float'
+        |     |-BinaryOperator 0x7f81ce8269d8 <col:13, col:26> 'int' '<='
+        |     | |-ImplicitCastExpr 0x7f81ce8269c0 <col:13, col:16> 'float' <LValueToRValue>
+        |     | | `-ParenExpr 0x7f81ce826960 <col:13, col:16> 'float' lvalue
+        |     | |   `-DeclRefExpr 0x7f81ce826938 <col:14> 'float' lvalue Var 0x7f81ce8265a0 'r2' 'float'
+        |     | `-ParenExpr 0x7f81ce8269a0 <col:21, col:26> 'float'
+        |     |   `-FloatingLiteral 0x7f81ce826980 <col:22> 'float' 9.900000e-01
+        |     |-ImplicitCastExpr 0x7f81ce826a88 <col:30, col:33> 'float' <LValueToRValue>
+        |     | `-ParenExpr 0x7f81ce826a28 <col:30, col:33> 'float' lvalue
+        |     |   `-DeclRefExpr 0x7f81ce826a00 <col:31> 'float' lvalue Var 0x7f81ce8265a0 'r2' 'float'
+        |     `-ParenExpr 0x7f81ce826a68 <col:37, col:42> 'float'
+        |       `-FloatingLiteral 0x7f81ce826a48 <col:38> 'float' 9.900000e-01
+        `-BinaryOperator 0x7f81ce826db8 <line:12:7, col:48> 'float' '='
+          |-ArraySubscriptExpr 0x7f81ce826b98 <col:7, col:11> 'float' lvalue
+          | |-ImplicitCastExpr 0x7f81ce826b68 <col:7> 'float *' <LValueToRValue>
+          | | `-DeclRefExpr 0x7f81ce826b18 <col:7> 'float *' lvalue ParmVar 0x7f81cf026760 'rc' 'float *'
+          | `-ImplicitCastExpr 0x7f81ce826b80 <col:10> 'int' <LValueToRValue>
+          |   `-DeclRefExpr 0x7f81ce826b40 <col:10> 'int' lvalue Var 0x7f81ce826648 'i' 'int'
+          `-ParenExpr 0x7f81ce826d98 <col:15, col:48> 'float'
+            `-ConditionalOperator 0x7f81ce826d68 <col:16, col:47> 'float'
+              |-BinaryOperator 0x7f81ce826c80 <col:16, col:30> 'int' '>='
+              | |-ImplicitCastExpr 0x7f81ce826c68 <col:16, col:19> 'float' <LValueToRValue>
+              | | `-ParenExpr 0x7f81ce826be8 <col:16, col:19> 'float' lvalue
+              | |   `-DeclRefExpr 0x7f81ce826bc0 <col:17> 'float' lvalue Var 0x7f81ce826528 'r1' 'float'
+              | `-ParenExpr 0x7f81ce826c48 <col:24, col:30> 'float'
+              |   `-UnaryOperator 0x7f81ce826c28 <col:25, col:26> 'float' prefix '-'
+              |     `-FloatingLiteral 0x7f81ce826c08 <col:26> 'float' 9.900000e-01
+              |-ImplicitCastExpr 0x7f81ce826d50 <col:34, col:37> 'float' <LValueToRValue>
+              | `-ParenExpr 0x7f81ce826cd0 <col:34, col:37> 'float' lvalue
+              |   `-DeclRefExpr 0x7f81ce826ca8 <col:35> 'float' lvalue Var 0x7f81ce826528 'r1' 'float'
+              `-ParenExpr 0x7f81ce826d30 <col:41, col:47> 'float'
+                `-UnaryOperator 0x7f81ce826d10 <col:42, col:43> 'float' prefix '-'
+                  `-FloatingLiteral 0x7f81ce826cf0 <col:43> 'float' 9.900000e-01

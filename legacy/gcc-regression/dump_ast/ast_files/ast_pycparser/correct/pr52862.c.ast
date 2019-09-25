@@ -1,0 +1,39 @@
+FileAST: 
+  Decl: ASMAtomicWritePtrVoid, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: pv, ['const'], [], []
+          PtrDecl: []
+            TypeDecl: pv, ['const']
+              IdentifierType: ['void']
+      TypeDecl: ASMAtomicWritePtrVoid, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: rtThreadDestroy, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: rtThreadDestroy, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: pvTypeChecked, [], [], []
+        PtrDecl: ['const']
+          TypeDecl: pvTypeChecked, []
+            IdentifierType: ['void']
+        Cast: 
+          Typename: None, []
+            PtrDecl: []
+              TypeDecl: None, []
+                IdentifierType: ['void']
+          Constant: int, 0
+      FuncCall: 
+        ID: ASMAtomicWritePtrVoid
+        ExprList: 
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['void']
+            ID: pvTypeChecked

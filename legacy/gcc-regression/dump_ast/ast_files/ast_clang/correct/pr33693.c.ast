@@ -1,0 +1,29 @@
+TranslationUnitDecl 0x7f80a60264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f80a6026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f80a6026740 '__int128'
+|-TypedefDecl 0x7f80a6026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f80a6026760 'unsigned __int128'
+|-TypedefDecl 0x7f80a6026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f80a6026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f80a6026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f80a6026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f80a6026dc0 'char *'
+|   `-BuiltinType 0x7f80a6026560 'char'
+|-TypedefDecl 0x7f80a60270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f80a6027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f80a6026ee0 'struct __va_list_tag'
+|     `-Record 0x7f80a6026e58 '__va_list_tag'
+`-FunctionDecl 0x7f80a6825ad8 <c_files/pr33693.c:5:1, line:8:1> line:5:15 modify_field 'unsigned long (unsigned long, long)'
+  |-ParmVarDecl 0x7f80a6027138 <col:29, col:43> col:43 used mask 'unsigned long'
+  |-ParmVarDecl 0x7f80a6825a00 <col:49, col:54> col:54 used fieldval 'long'
+  `-CompoundStmt 0x7f80a6825cf8 <line:6:1, line:8:1>
+    `-ReturnStmt 0x7f80a6825ce0 <line:7:3, col:28>
+      `-ParenExpr 0x7f80a6825cc0 <col:10, col:28> 'unsigned long'
+        `-BinaryOperator 0x7f80a6825c98 <col:11, col:24> 'unsigned long' '&'
+          |-ImplicitCastExpr 0x7f80a6825c80 <col:11, col:12> 'unsigned long' <IntegralCast>
+          | `-UnaryOperator 0x7f80a6825c00 <col:11, col:12> 'long' prefix '~'
+          |   `-ImplicitCastExpr 0x7f80a6825be8 <col:12> 'long' <LValueToRValue>
+          |     `-DeclRefExpr 0x7f80a6825bc0 <col:12> 'long' lvalue ParmVar 0x7f80a6825a00 'fieldval' 'long'
+          `-UnaryOperator 0x7f80a6825c60 <col:23, col:24> 'unsigned long' prefix '~'
+            `-ImplicitCastExpr 0x7f80a6825c48 <col:24> 'unsigned long' <LValueToRValue>
+              `-DeclRefExpr 0x7f80a6825c20 <col:24> 'unsigned long' lvalue ParmVar 0x7f80a6027138 'mask' 'unsigned long'

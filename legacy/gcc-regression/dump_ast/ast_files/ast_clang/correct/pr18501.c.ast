@@ -1,0 +1,43 @@
+TranslationUnitDecl 0x7f97038264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9703826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9703826740 '__int128'
+|-TypedefDecl 0x7f9703826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9703826760 'unsigned __int128'
+|-TypedefDecl 0x7f9703826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9703826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9703826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9703826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9703826dc0 'char *'
+|   `-BuiltinType 0x7f9703826560 'char'
+|-TypedefDecl 0x7f97038270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9703827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9703826ee0 'struct __va_list_tag'
+|     `-Record 0x7f9703826e58 '__va_list_tag'
+|-FunctionDecl 0x7f9704025a00 <c_files/pr18501.c:6:1, col:24> col:10 used bmp_iter_set 'unsigned int ()'
+|-FunctionDecl 0x7f9704025ba8 <line:7:1, col:20> col:5 used something 'int (void)'
+`-FunctionDecl 0x7f9704025d00 <line:9:1, line:20:1> line:10:1 bitmap_print_value_set 'void (void)'
+  `-CompoundStmt 0x7f97040260c8 <line:11:1, line:20:1>
+    |-DeclStmt 0x7f9704025e10 <line:12:3, col:17>
+    | `-VarDecl 0x7f9704025db0 <col:3, col:12> col:12 used first 'unsigned int'
+    `-ForStmt 0x7f9704026090 <line:14:3, line:19:5>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-CallExpr 0x7f9704025e90 <line:14:10, col:24> 'unsigned int'
+      | `-ImplicitCastExpr 0x7f9704025e78 <col:10> 'unsigned int (*)()' <FunctionToPointerDecay>
+      |   `-DeclRefExpr 0x7f9704025e28 <col:10> 'unsigned int ()' Function 0x7f9704025a00 'bmp_iter_set' 'unsigned int ()'
+      |-<<<NULL>>>
+      `-CompoundStmt 0x7f9704026068 <line:15:5, line:19:5>
+        |-IfStmt 0x7f9704025fa8 <line:16:7, line:17:13>
+        | |-<<<NULL>>>
+        | |-<<<NULL>>>
+        | |-UnaryOperator 0x7f9704025ef8 <line:16:11, col:12> 'int' prefix '!'
+        | | `-ImplicitCastExpr 0x7f9704025ee0 <col:12> 'unsigned int' <LValueToRValue>
+        | |   `-DeclRefExpr 0x7f9704025eb8 <col:12> 'unsigned int' lvalue Var 0x7f9704025db0 'first' 'unsigned int'
+        | |-CallExpr 0x7f9704025f80 <line:17:2, col:13> 'int'
+        | | `-ImplicitCastExpr 0x7f9704025f68 <col:2> 'int (*)(void)' <FunctionToPointerDecay>
+        | |   `-DeclRefExpr 0x7f9704025f18 <col:2> 'int (void)' Function 0x7f9704025ba8 'something' 'int (void)'
+        | `-<<<NULL>>>
+        `-BinaryOperator 0x7f9704026040 <line:18:7, col:15> 'unsigned int' '='
+          |-DeclRefExpr 0x7f9704025fe0 <col:7> 'unsigned int' lvalue Var 0x7f9704025db0 'first' 'unsigned int'
+          `-ImplicitCastExpr 0x7f9704026028 <col:15> 'unsigned int' <IntegralCast>
+            `-IntegerLiteral 0x7f9704026008 <col:15> 'int' 0

@@ -1,0 +1,33 @@
+TranslationUnitDecl 0x7f9b808164d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9b80816a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9b80816740 '__int128'
+|-TypedefDecl 0x7f9b80816a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9b80816760 'unsigned __int128'
+|-TypedefDecl 0x7f9b80816d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9b80816b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9b80816ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9b80816e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9b80816dc0 'char *'
+|   `-BuiltinType 0x7f9b80816560 'char'
+|-TypedefDecl 0x7f9b808170c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9b80817070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9b80816ee0 'struct __va_list_tag'
+|     `-Record 0x7f9b80816e58 '__va_list_tag'
+|-RecordDecl 0x7f9b80817120 <c_files/pr64067.c:3:1, col:19> col:8 struct S definition
+| `-FieldDecl 0x7f9b80035c00 <col:12, col:16> col:16 referenced s 'int'
+|-VarDecl 0x7f9b80035d40 <line:4:1, col:49> col:12 used v 'int *const [1]' cinit
+| `-InitListExpr 0x7f9b80036008 <col:19, col:49> 'int *const [1]'
+|   `-UnaryOperator 0x7f9b80035fa0 <col:21, col:47> 'int *' prefix '&'
+|     `-MemberExpr 0x7f9b80035f68 <col:22, col:47> 'int' lvalue .s 0x7f9b80035c00
+|       `-ParenExpr 0x7f9b80035f48 <col:22, col:45> 'struct S':'struct S' lvalue
+|         `-CompoundLiteralExpr 0x7f9b80035f20 <col:23, col:44> 'struct S':'struct S' lvalue
+|           `-InitListExpr 0x7f9b80035ed8 <col:34, col:44> 'struct S':'struct S'
+|             `-IntegerLiteral 0x7f9b80035e30 <col:41> 'int' 42
+`-FunctionDecl 0x7f9b80036168 <line:6:1, line:10:1> line:7:1 foo 'int *(void)'
+  `-CompoundStmt 0x7f9b800362e8 <line:8:1, line:10:1>
+    `-ReturnStmt 0x7f9b800362d0 <line:9:3, col:13>
+      `-ImplicitCastExpr 0x7f9b800362b8 <col:10, col:13> 'int *' <LValueToRValue>
+        `-ArraySubscriptExpr 0x7f9b80036290 <col:10, col:13> 'int *const' lvalue
+          |-ImplicitCastExpr 0x7f9b80036278 <col:10> 'int *const *' <ArrayToPointerDecay>
+          | `-DeclRefExpr 0x7f9b80036200 <col:10> 'int *const [1]' lvalue Var 0x7f9b80035d40 'v' 'int *const [1]'
+          `-IntegerLiteral 0x7f9b80036228 <col:12> 'int' 0

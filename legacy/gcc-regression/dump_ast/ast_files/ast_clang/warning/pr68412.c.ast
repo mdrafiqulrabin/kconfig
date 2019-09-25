@@ -1,0 +1,115 @@
+c_files/pr68412.c:10:19: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+  return i == (-1 << 8); /* { dg-warning "left shift of negative value" } */
+               ~~ ^
+c_files/pr68412.c:16:18: warning: shift count >= width of type [-Wshift-count-overflow]
+  return i == (1 << M); /* { dg-warning "left shift count" } */
+                 ^  ~
+c_files/pr68412.c:22:18: warning: signed shift result (0x500000000) requires 36 bits to represent, but 'int' only has 32 bits [-Wshift-overflow]
+  return i == 10 << (M - 1); /* { dg-warning "requires" } */
+              ~~ ^  ~~~~~~~
+c_files/pr68412.c:28:17: warning: shift count is negative [-Wshift-count-negative]
+  return i == 1 << -1; /* { dg-warning "left shift count" } */
+                ^  ~~
+c_files/pr68412.c:34:17: warning: shift count >= width of type [-Wshift-count-overflow]
+  return i == 1 >> M; /* { dg-warning "right shift count" } */
+                ^  ~
+c_files/pr68412.c:40:17: warning: shift count is negative [-Wshift-count-negative]
+  return i == 1 >> -1; /* { dg-warning "right shift count" } */
+                ^  ~~
+6 warnings generated.
+TranslationUnitDecl 0x7ff6498264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff649826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff649826740 '__int128'
+|-TypedefDecl 0x7ff649826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff649826760 'unsigned __int128'
+|-TypedefDecl 0x7ff649826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff649826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff649826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff649826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff649826dc0 'char *'
+|   `-BuiltinType 0x7ff649826560 'char'
+|-TypedefDecl 0x7ff6498270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff649827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff649826ee0 'struct __va_list_tag'
+|     `-Record 0x7ff649826e58 '__va_list_tag'
+|-FunctionDecl 0x7ff649877430 <c_files/pr68412.c:7:1, line:11:1> line:8:1 fn1 'int (int)'
+| |-ParmVarDecl 0x7ff649827138 <col:6, col:10> col:10 used i 'int'
+| `-CompoundStmt 0x7ff649877638 <line:9:1, line:11:1>
+|   `-ReturnStmt 0x7ff649877620 <line:10:3, col:23>
+|     `-BinaryOperator 0x7ff6498775f8 <col:10, col:23> 'int' '=='
+|       |-ImplicitCastExpr 0x7ff6498775e0 <col:10> 'int' <LValueToRValue>
+|       | `-DeclRefExpr 0x7ff649877510 <col:10> 'int' lvalue ParmVar 0x7ff649827138 'i' 'int'
+|       `-ParenExpr 0x7ff6498775c0 <col:15, col:23> 'int'
+|         `-BinaryOperator 0x7ff649877598 <col:16, col:22> 'int' '<<'
+|           |-UnaryOperator 0x7ff649877558 <col:16, col:17> 'int' prefix '-'
+|           | `-IntegerLiteral 0x7ff649877538 <col:17> 'int' 1
+|           `-IntegerLiteral 0x7ff649877578 <col:22> 'int' 8
+|-FunctionDecl 0x7ff649877700 <line:13:1, line:17:1> line:14:1 fn2 'int (int)'
+| |-ParmVarDecl 0x7ff649877670 <col:6, col:10> col:10 used i 'int'
+| `-CompoundStmt 0x7ff649877940 <line:15:1, line:17:1>
+|   `-ReturnStmt 0x7ff649877928 <line:16:3, col:22>
+|     `-BinaryOperator 0x7ff649877900 <col:10, col:22> 'int' '=='
+|       |-ImplicitCastExpr 0x7ff6498778e8 <col:10> 'int' <LValueToRValue>
+|       | `-DeclRefExpr 0x7ff6498777a0 <col:10> 'int' lvalue ParmVar 0x7ff649877670 'i' 'int'
+|       `-ParenExpr 0x7ff6498778c8 <col:15, col:22> 'int'
+|         `-BinaryOperator 0x7ff6498778a0 <col:16, line:5:39> 'int' '<<'
+|           |-IntegerLiteral 0x7ff6498777c8 <line:16:16> 'int' 1
+|           `-ParenExpr 0x7ff649877880 <line:5:11, col:39> 'unsigned long'
+|             `-BinaryOperator 0x7ff649877858 <col:12, <built-in>:30:22> 'unsigned long' '*'
+|               |-UnaryExprOrTypeTraitExpr 0x7ff649877800 <c_files/pr68412.c:5:12, col:23> 'unsigned long' sizeof 'int'
+|               `-ImplicitCastExpr 0x7ff649877840 <<built-in>:30:22> 'unsigned long' <IntegralCast>
+|                 `-IntegerLiteral 0x7ff649877820 <col:22> 'int' 8
+|-FunctionDecl 0x7ff649877a08 <c_files/pr68412.c:19:1, line:23:1> line:20:1 fn3 'int (int)'
+| |-ParmVarDecl 0x7ff649877978 <col:6, col:10> col:10 used i 'int'
+| `-CompoundStmt 0x7ff649878060 <line:21:1, line:23:1>
+|   `-ReturnStmt 0x7ff649878048 <line:22:3, col:27>
+|     `-BinaryOperator 0x7ff649878020 <col:10, col:27> 'int' '=='
+|       |-ImplicitCastExpr 0x7ff649878008 <col:10> 'int' <LValueToRValue>
+|       | `-DeclRefExpr 0x7ff649877aa8 <col:10> 'int' lvalue ParmVar 0x7ff649877978 'i' 'int'
+|       `-BinaryOperator 0x7ff649877fe0 <col:15, col:27> 'int' '<<'
+|         |-IntegerLiteral 0x7ff649877ad0 <col:15> 'int' 10
+|         `-ParenExpr 0x7ff649877c08 <col:21, col:27> 'unsigned long'
+|           `-BinaryOperator 0x7ff649877be0 <line:5:11, line:22:26> 'unsigned long' '-'
+|             |-ParenExpr 0x7ff649877b88 <line:5:11, col:39> 'unsigned long'
+|             | `-BinaryOperator 0x7ff649877b60 <col:12, <built-in>:30:22> 'unsigned long' '*'
+|             |   |-UnaryExprOrTypeTraitExpr 0x7ff649877b08 <c_files/pr68412.c:5:12, col:23> 'unsigned long' sizeof 'int'
+|             |   `-ImplicitCastExpr 0x7ff649877b48 <<built-in>:30:22> 'unsigned long' <IntegralCast>
+|             |     `-IntegerLiteral 0x7ff649877b28 <col:22> 'int' 8
+|             `-ImplicitCastExpr 0x7ff649877bc8 <c_files/pr68412.c:22:26> 'unsigned long' <IntegralCast>
+|               `-IntegerLiteral 0x7ff649877ba8 <col:26> 'int' 1
+|-FunctionDecl 0x7ff649878128 <line:25:1, line:29:1> line:26:1 fn4 'int (int)'
+| |-ParmVarDecl 0x7ff649878098 <col:6, col:10> col:10 used i 'int'
+| `-CompoundStmt 0x7ff6498782d0 <line:27:1, line:29:1>
+|   `-ReturnStmt 0x7ff6498782b8 <line:28:3, col:21>
+|     `-BinaryOperator 0x7ff649878290 <col:10, col:21> 'int' '=='
+|       |-ImplicitCastExpr 0x7ff649878278 <col:10> 'int' <LValueToRValue>
+|       | `-DeclRefExpr 0x7ff6498781c8 <col:10> 'int' lvalue ParmVar 0x7ff649878098 'i' 'int'
+|       `-BinaryOperator 0x7ff649878250 <col:15, col:21> 'int' '<<'
+|         |-IntegerLiteral 0x7ff6498781f0 <col:15> 'int' 1
+|         `-UnaryOperator 0x7ff649878230 <col:20, col:21> 'int' prefix '-'
+|           `-IntegerLiteral 0x7ff649878210 <col:21> 'int' 1
+|-FunctionDecl 0x7ff649879400 <line:31:1, line:35:1> line:32:1 fn5 'int (int)'
+| |-ParmVarDecl 0x7ff649878308 <col:6, col:10> col:10 used i 'int'
+| `-CompoundStmt 0x7ff649879620 <line:33:1, line:35:1>
+|   `-ReturnStmt 0x7ff649879608 <line:34:3, line:5:39>
+|     `-BinaryOperator 0x7ff6498795e0 <line:34:10, line:5:39> 'int' '=='
+|       |-ImplicitCastExpr 0x7ff6498795c8 <line:34:10> 'int' <LValueToRValue>
+|       | `-DeclRefExpr 0x7ff6498794a0 <col:10> 'int' lvalue ParmVar 0x7ff649878308 'i' 'int'
+|       `-BinaryOperator 0x7ff6498795a0 <col:15, line:5:39> 'int' '>>'
+|         |-IntegerLiteral 0x7ff6498794c8 <line:34:15> 'int' 1
+|         `-ParenExpr 0x7ff649879580 <line:5:11, col:39> 'unsigned long'
+|           `-BinaryOperator 0x7ff649879558 <col:12, <built-in>:30:22> 'unsigned long' '*'
+|             |-UnaryExprOrTypeTraitExpr 0x7ff649879500 <c_files/pr68412.c:5:12, col:23> 'unsigned long' sizeof 'int'
+|             `-ImplicitCastExpr 0x7ff649879540 <<built-in>:30:22> 'unsigned long' <IntegralCast>
+|               `-IntegerLiteral 0x7ff649879520 <col:22> 'int' 8
+`-FunctionDecl 0x7ff6498796e8 <c_files/pr68412.c:37:1, line:41:1> line:38:1 fn6 'int (int)'
+  |-ParmVarDecl 0x7ff649879658 <col:6, col:10> col:10 used i 'int'
+  `-CompoundStmt 0x7ff649879890 <line:39:1, line:41:1>
+    `-ReturnStmt 0x7ff649879878 <line:40:3, col:21>
+      `-BinaryOperator 0x7ff649879850 <col:10, col:21> 'int' '=='
+        |-ImplicitCastExpr 0x7ff649879838 <col:10> 'int' <LValueToRValue>
+        | `-DeclRefExpr 0x7ff649879788 <col:10> 'int' lvalue ParmVar 0x7ff649879658 'i' 'int'
+        `-BinaryOperator 0x7ff649879810 <col:15, col:21> 'int' '>>'
+          |-IntegerLiteral 0x7ff6498797b0 <col:15> 'int' 1
+          `-UnaryOperator 0x7ff6498797f0 <col:20, col:21> 'int' prefix '-'
+            `-IntegerLiteral 0x7ff6498797d0 <col:21> 'int' 1

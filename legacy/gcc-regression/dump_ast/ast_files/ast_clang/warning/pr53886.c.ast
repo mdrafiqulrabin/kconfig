@@ -1,0 +1,266 @@
+c_files/pr53886.c:33:7: warning: implicit declaration of function 'ERR_put_error' is invalid in C99 [-Wimplicit-function-declaration]
+      ERR_put_error (16, (192), ((3 | 64)),
+      ^
+c_files/pr53886.c:58:14: warning: implicit declaration of function 'i2d_EC_PRIVATEKEY' is invalid in C99 [-Wimplicit-function-declaration]
+  if ((ret = i2d_EC_PRIVATEKEY (priv_key, out)) == 0)
+             ^
+c_files/pr53886.c:64:5: warning: implicit declaration of function 'CRYPTO_free' is invalid in C99 [-Wimplicit-function-declaration]
+    CRYPTO_free (buffer);
+    ^
+3 warnings generated.
+TranslationUnitDecl 0x7f8f740264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8f74026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8f74026740 '__int128'
+|-TypedefDecl 0x7f8f74026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8f74026760 'unsigned __int128'
+|-TypedefDecl 0x7f8f74026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8f74026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8f74026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8f74026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8f74026dc0 'char *'
+|   `-BuiltinType 0x7f8f74026560 'char'
+|-TypedefDecl 0x7f8f740270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8f74027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8f74026ee0 'struct __va_list_tag'
+|     `-Record 0x7f8f74026e58 '__va_list_tag'
+|-RecordDecl 0x7f8f74027120 <c_files/pr53886.c:2:9, col:16> col:16 struct asn1_string_st
+|-TypedefDecl 0x7f8f74825a20 <col:1, col:31> col:31 referenced ASN1_BIT_STRING 'struct asn1_string_st':'struct asn1_string_st'
+| `-ElaboratedType 0x7f8f740271d0 'struct asn1_string_st' sugar
+|   `-RecordType 0x7f8f740271b0 'struct asn1_string_st'
+|     `-Record 0x7f8f74027120 'asn1_string_st'
+|-RecordDecl 0x7f8f74825a90 <line:3:9, col:16> col:16 struct bignum_st
+|-TypedefDecl 0x7f8f74825b90 <col:1, col:26> col:26 referenced BIGNUM 'struct bignum_st':'struct bignum_st'
+| `-ElaboratedType 0x7f8f74825b40 'struct bignum_st' sugar
+|   `-RecordType 0x7f8f74825b20 'struct bignum_st'
+|     `-Record 0x7f8f74825a90 'bignum_st'
+|-RecordDecl 0x7f8f74825c00 <line:4:9, col:16> col:16 struct ec_group_st
+|-TypedefDecl 0x7f8f74825d00 <col:1, col:28> col:28 referenced EC_GROUP 'struct ec_group_st':'struct ec_group_st'
+| `-ElaboratedType 0x7f8f74825cb0 'struct ec_group_st' sugar
+|   `-RecordType 0x7f8f74825c90 'struct ec_group_st'
+|     `-Record 0x7f8f74825c00 'ec_group_st'
+|-RecordDecl 0x7f8f74825d70 <line:5:9, col:16> col:16 struct ec_key_st
+|-TypedefDecl 0x7f8f74825e70 <col:1, col:26> col:26 referenced EC_KEY 'struct ec_key_st':'struct ec_key_st'
+| `-ElaboratedType 0x7f8f74825e20 'struct ec_key_st' sugar
+|   `-RecordType 0x7f8f74825e00 'struct ec_key_st'
+|     `-Record 0x7f8f74825ee0 'ec_key_st'
+|-RecordDecl 0x7f8f74825ee0 prev 0x7f8f74825d70 <line:7:1, line:12:1> line:7:8 struct ec_key_st definition
+| |-FieldDecl 0x7f8f74825ff8 <line:9:3, col:13> col:13 referenced group 'EC_GROUP *'
+| |-FieldDecl 0x7f8f748260c8 <line:10:3, col:11> col:11 referenced priv_key 'BIGNUM *'
+| `-FieldDecl 0x7f8f74826128 <line:11:3, col:16> col:16 referenced enc_flag 'unsigned int'
+|-VarDecl 0x7f8f74826190 <line:7:1, line:13:1> col:1 X9_62_PENTANOMIAL 'struct ec_key_st':'struct ec_key_st'
+|-RecordDecl 0x7f8f74826248 <line:14:9, line:17:1> line:14:16 struct ec_privatekey_st definition
+| `-FieldDecl 0x7f8f74826378 <line:16:3, col:20> col:20 referenced publicKey 'ASN1_BIT_STRING *'
+|-TypedefDecl 0x7f8f74826410 <line:14:1, line:18:1> col:1 referenced EC_PRIVATEKEY 'struct ec_privatekey_st':'struct ec_privatekey_st'
+| `-ElaboratedType 0x7f8f748263c0 'struct ec_privatekey_st' sugar
+|   `-RecordType 0x7f8f748262d0 'struct ec_privatekey_st'
+|     `-Record 0x7f8f74826248 'ec_privatekey_st'
+|-FunctionDecl 0x7f8f748265f0 <line:20:1, col:46> col:23 used EC_PRIVATEKEY_new 'EC_PRIVATEKEY *(void)' extern
+|-FunctionDecl 0x7f8f748267a0 <line:21:1, col:47> col:13 used EC_PRIVATEKEY_free 'void (EC_PRIVATEKEY *)' extern
+| `-ParmVarDecl 0x7f8f74826698 <col:33, col:46> col:47 'EC_PRIVATEKEY *'
+|-FunctionDecl 0x7f8f74826b28 <line:22:1, col:64> col:23 used CRYPTO_realloc 'unsigned char *(char *, int, const char *, int)' extern
+| |-ParmVarDecl 0x7f8f74826858 <col:39, col:43> col:44 'char *'
+| |-ParmVarDecl 0x7f8f748268d0 <col:45> col:48 'int'
+| |-ParmVarDecl 0x7f8f74826948 <col:49, col:59> col:60 'const char *'
+| `-ParmVarDecl 0x7f8f74826a00 <col:61> col:64 'int'
+|-FunctionDecl 0x7f8f74826e38 <line:24:1, line:68:1> line:25:1 i2d_ECPrivateKey 'int (EC_KEY *, unsigned char **)'
+| |-ParmVarDecl 0x7f8f74826c68 <col:19, col:28> col:28 used a 'EC_KEY *'
+| |-ParmVarDecl 0x7f8f74826d18 <col:31, col:47> col:47 used out 'unsigned char **'
+| `-CompoundStmt 0x7f8f74829d08 <line:26:1, line:68:1>
+|   |-DeclStmt 0x7f8f74827028 <line:27:3, col:22>
+|   | |-VarDecl 0x7f8f74826ef8 <col:3, col:13> col:7 used ret 'int' cinit
+|   | | `-IntegerLiteral 0x7f8f74826f58 <col:13> 'int' 0
+|   | `-VarDecl 0x7f8f74826f90 <col:3, col:21> col:16 used ok 'int' cinit
+|   |   `-IntegerLiteral 0x7f8f74826ff0 <col:21> 'int' 0
+|   |-DeclStmt 0x7f8f748270f0 <line:28:3, col:28>
+|   | `-VarDecl 0x7f8f74827058 <col:3, col:27> col:18 used buffer 'unsigned char *' cinit
+|   |   `-ImplicitCastExpr 0x7f8f748270d8 <col:27> 'unsigned char *' <NullToPointer>
+|   |     `-IntegerLiteral 0x7f8f748270b8 <col:27> 'int' 0
+|   |-DeclStmt 0x7f8f74827248 <line:29:3, col:32>
+|   | |-VarDecl 0x7f8f74827120 <col:3, col:22> col:12 used buf_len 'unsigned int' cinit
+|   | | `-ImplicitCastExpr 0x7f8f748271a0 <col:22> 'unsigned int' <IntegralCast>
+|   | |   `-IntegerLiteral 0x7f8f74827180 <col:22> 'int' 0
+|   | `-VarDecl 0x7f8f748271d0 <col:3, col:25> col:25 used tmp_len 'unsigned int'
+|   |-DeclStmt 0x7f8f74827308 <line:30:3, col:30>
+|   | `-VarDecl 0x7f8f74827270 <col:3, col:29> col:18 used priv_key 'EC_PRIVATEKEY *' cinit
+|   |   `-ImplicitCastExpr 0x7f8f748272f0 <col:29> 'EC_PRIVATEKEY *' <NullToPointer>
+|   |     `-IntegerLiteral 0x7f8f748272d0 <col:29> 'int' 0
+|   |-IfStmt 0x7f8f748279c0 <line:31:3, line:37:5>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f8f748275c8 <line:31:7, col:49> 'int' '||'
+|   | | |-BinaryOperator 0x7f8f748274b0 <col:7, col:29> 'int' '||'
+|   | | | |-BinaryOperator 0x7f8f74827398 <col:7, col:12> 'int' '=='
+|   | | | | |-ImplicitCastExpr 0x7f8f74827368 <col:7> 'EC_KEY *' <LValueToRValue>
+|   | | | | | `-DeclRefExpr 0x7f8f74827320 <col:7> 'EC_KEY *' lvalue ParmVar 0x7f8f74826c68 'a' 'EC_KEY *'
+|   | | | | `-ImplicitCastExpr 0x7f8f74827380 <col:12> 'EC_KEY *' <NullToPointer>
+|   | | | |   `-IntegerLiteral 0x7f8f74827348 <col:12> 'int' 0
+|   | | | `-BinaryOperator 0x7f8f74827488 <col:17, col:29> 'int' '=='
+|   | | |   |-ImplicitCastExpr 0x7f8f74827458 <col:17, col:20> 'EC_GROUP *' <LValueToRValue>
+|   | | |   | `-MemberExpr 0x7f8f74827400 <col:17, col:20> 'EC_GROUP *' lvalue ->group 0x7f8f74825ff8
+|   | | |   |   `-ImplicitCastExpr 0x7f8f748273e8 <col:17> 'EC_KEY *' <LValueToRValue>
+|   | | |   |     `-DeclRefExpr 0x7f8f748273c0 <col:17> 'EC_KEY *' lvalue ParmVar 0x7f8f74826c68 'a' 'EC_KEY *'
+|   | | |   `-ImplicitCastExpr 0x7f8f74827470 <col:29> 'EC_GROUP *' <NullToPointer>
+|   | | |     `-IntegerLiteral 0x7f8f74827438 <col:29> 'int' 0
+|   | | `-BinaryOperator 0x7f8f748275a0 <col:34, col:49> 'int' '=='
+|   | |   |-ImplicitCastExpr 0x7f8f74827570 <col:34, col:37> 'BIGNUM *' <LValueToRValue>
+|   | |   | `-MemberExpr 0x7f8f74827518 <col:34, col:37> 'BIGNUM *' lvalue ->priv_key 0x7f8f748260c8
+|   | |   |   `-ImplicitCastExpr 0x7f8f74827500 <col:34> 'EC_KEY *' <LValueToRValue>
+|   | |   |     `-DeclRefExpr 0x7f8f748274d8 <col:34> 'EC_KEY *' lvalue ParmVar 0x7f8f74826c68 'a' 'EC_KEY *'
+|   | |   `-ImplicitCastExpr 0x7f8f74827588 <col:49> 'BIGNUM *' <NullToPointer>
+|   | |     `-IntegerLiteral 0x7f8f74827550 <col:49> 'int' 0
+|   | |-CompoundStmt 0x7f8f74827998 <line:32:5, line:37:5>
+|   | | |-CallExpr 0x7f8f748278d0 <line:33:7, line:35:12> 'int'
+|   | | | |-ImplicitCastExpr 0x7f8f748278b8 <line:33:7> 'int (*)()' <FunctionToPointerDecay>
+|   | | | | `-DeclRefExpr 0x7f8f748276d8 <col:7> 'int ()' Function 0x7f8f74827640 'ERR_put_error' 'int ()'
+|   | | | |-IntegerLiteral 0x7f8f74827700 <col:22> 'int' 16
+|   | | | |-ParenExpr 0x7f8f74827740 <col:26, col:30> 'int'
+|   | | | | `-IntegerLiteral 0x7f8f74827720 <col:27> 'int' 192
+|   | | | |-ParenExpr 0x7f8f748277e8 <col:33, col:42> 'int'
+|   | | | | `-ParenExpr 0x7f8f748277c8 <col:34, col:41> 'int'
+|   | | | |   `-BinaryOperator 0x7f8f748277a0 <col:35, col:39> 'int' '|'
+|   | | | |     |-IntegerLiteral 0x7f8f74827760 <col:35> 'int' 3
+|   | | | |     `-IntegerLiteral 0x7f8f74827780 <col:39> 'int' 64
+|   | | | |-ImplicitCastExpr 0x7f8f74827920 <line:34:8> 'char *' <ArrayToPointerDecay>
+|   | | | | `-StringLiteral 0x7f8f74827848 <col:8> 'char [1]' lvalue ""
+|   | | | `-IntegerLiteral 0x7f8f74827870 <line:35:8> 'int' 1234
+|   | | `-GotoStmt 0x7f8f74827980 <line:36:7, col:12> 'err' 0x7f8f74827938
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7f8f74827dc8 <line:38:3, line:44:5>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f8f74827b68 <line:38:7, col:44> 'int' '=='
+|   | | |-ParenExpr 0x7f8f74827b10 <col:7, col:39> 'EC_PRIVATEKEY *'
+|   | | | `-BinaryOperator 0x7f8f74827ae8 <col:8, col:38> 'EC_PRIVATEKEY *' '='
+|   | | |   |-DeclRefExpr 0x7f8f74827a00 <col:8> 'EC_PRIVATEKEY *' lvalue Var 0x7f8f74827270 'priv_key' 'EC_PRIVATEKEY *'
+|   | | |   `-CallExpr 0x7f8f74827ac0 <col:19, col:38> 'EC_PRIVATEKEY *'
+|   | | |     `-ImplicitCastExpr 0x7f8f74827aa8 <col:19> 'EC_PRIVATEKEY *(*)(void)' <FunctionToPointerDecay>
+|   | | |       `-DeclRefExpr 0x7f8f74827a28 <col:19> 'EC_PRIVATEKEY *(void)' Function 0x7f8f748265f0 'EC_PRIVATEKEY_new' 'EC_PRIVATEKEY *(void)'
+|   | | `-ImplicitCastExpr 0x7f8f74827b50 <col:44> 'EC_PRIVATEKEY *' <NullToPointer>
+|   | |   `-IntegerLiteral 0x7f8f74827b30 <col:44> 'int' 0
+|   | |-CompoundStmt 0x7f8f74827da0 <line:39:5, line:44:5>
+|   | | |-CallExpr 0x7f8f74827d20 <line:40:7, line:42:12> 'int'
+|   | | | |-ImplicitCastExpr 0x7f8f74827d08 <line:40:7> 'int (*)()' <FunctionToPointerDecay>
+|   | | | | `-DeclRefExpr 0x7f8f74827b90 <col:7> 'int ()' Function 0x7f8f74827640 'ERR_put_error' 'int ()'
+|   | | | |-IntegerLiteral 0x7f8f74827bb8 <col:22> 'int' 16
+|   | | | |-ParenExpr 0x7f8f74827bf8 <col:26, col:30> 'int'
+|   | | | | `-IntegerLiteral 0x7f8f74827bd8 <col:27> 'int' 192
+|   | | | |-ParenExpr 0x7f8f74827ca0 <col:33, col:42> 'int'
+|   | | | | `-ParenExpr 0x7f8f74827c80 <col:34, col:41> 'int'
+|   | | | |   `-BinaryOperator 0x7f8f74827c58 <col:35, col:39> 'int' '|'
+|   | | | |     |-IntegerLiteral 0x7f8f74827c18 <col:35> 'int' 1
+|   | | | |     `-IntegerLiteral 0x7f8f74827c38 <col:39> 'int' 64
+|   | | | |-ImplicitCastExpr 0x7f8f74827d70 <line:41:8> 'char *' <ArrayToPointerDecay>
+|   | | | | `-StringLiteral 0x7f8f74827cc0 <col:8> 'char [1]' lvalue ""
+|   | | | `-IntegerLiteral 0x7f8f74827ce8 <line:42:8> 'int' 1241
+|   | | `-GotoStmt 0x7f8f74827d88 <line:43:7, col:12> 'err' 0x7f8f74827938
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7f8f74828508 <line:45:3, line:57:5>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f8f74827f10 <line:45:7, col:28> 'int' prefix '!'
+|   | | `-ParenExpr 0x7f8f74827ef0 <col:8, col:28> 'unsigned int'
+|   | |   `-BinaryOperator 0x7f8f74827ec8 <col:9, col:23> 'unsigned int' '&'
+|   | |     |-ImplicitCastExpr 0x7f8f74827e98 <col:9, col:12> 'unsigned int' <LValueToRValue>
+|   | |     | `-MemberExpr 0x7f8f74827e40 <col:9, col:12> 'unsigned int' lvalue ->enc_flag 0x7f8f74826128
+|   | |     |   `-ImplicitCastExpr 0x7f8f74827e28 <col:9> 'EC_KEY *' <LValueToRValue>
+|   | |     |     `-DeclRefExpr 0x7f8f74827e00 <col:9> 'EC_KEY *' lvalue ParmVar 0x7f8f74826c68 'a' 'EC_KEY *'
+|   | |     `-ImplicitCastExpr 0x7f8f74827eb0 <col:23> 'unsigned int' <IntegralCast>
+|   | |       `-IntegerLiteral 0x7f8f74827e78 <col:23> 'int' 2
+|   | |-CompoundStmt 0x7f8f748284e0 <line:46:5, line:57:5>
+|   | | |-IfStmt 0x7f8f74828058 <line:47:7, line:50:2>
+|   | | | |-<<<NULL>>>
+|   | | | |-<<<NULL>>>
+|   | | | |-BinaryOperator 0x7f8f74827ff8 <line:47:11, col:34> 'int' '=='
+|   | | | | |-ImplicitCastExpr 0x7f8f74827fc8 <col:11, col:21> 'ASN1_BIT_STRING *' <LValueToRValue>
+|   | | | | | `-MemberExpr 0x7f8f74827f70 <col:11, col:21> 'ASN1_BIT_STRING *' lvalue ->publicKey 0x7f8f74826378
+|   | | | | |   `-ImplicitCastExpr 0x7f8f74827f58 <col:11> 'EC_PRIVATEKEY *' <LValueToRValue>
+|   | | | | |     `-DeclRefExpr 0x7f8f74827f30 <col:11> 'EC_PRIVATEKEY *' lvalue Var 0x7f8f74827270 'priv_key' 'EC_PRIVATEKEY *'
+|   | | | | `-ImplicitCastExpr 0x7f8f74827fe0 <col:34> 'ASN1_BIT_STRING *' <NullToPointer>
+|   | | | |   `-IntegerLiteral 0x7f8f74827fa8 <col:34> 'int' 0
+|   | | | |-CompoundStmt 0x7f8f74828038 <line:48:2, line:50:2>
+|   | | | | `-GotoStmt 0x7f8f74828020 <line:49:4, col:9> 'err' 0x7f8f74827938
+|   | | | `-<<<NULL>>>
+|   | | `-IfStmt 0x7f8f748284a8 <line:51:7, line:56:2>
+|   | |   |-<<<NULL>>>
+|   | |   |-<<<NULL>>>
+|   | |   |-BinaryOperator 0x7f8f74828110 <line:51:11, col:21> 'int' '>'
+|   | |   | |-ImplicitCastExpr 0x7f8f748280e0 <col:11> 'unsigned int' <LValueToRValue>
+|   | |   | | `-DeclRefExpr 0x7f8f74828090 <col:11> 'unsigned int' lvalue Var 0x7f8f748271d0 'tmp_len' 'unsigned int'
+|   | |   | `-ImplicitCastExpr 0x7f8f748280f8 <col:21> 'unsigned int' <LValueToRValue>
+|   | |   |   `-DeclRefExpr 0x7f8f748280b8 <col:21> 'unsigned int' lvalue Var 0x7f8f74827120 'buf_len' 'unsigned int'
+|   | |   |-CompoundStmt 0x7f8f74828480 <line:52:2, line:56:2>
+|   | |   | |-DeclStmt 0x7f8f748283d8 <line:53:4, line:54:63>
+|   | |   | | `-VarDecl 0x7f8f74828150 <line:53:4, line:54:62> line:53:19 used tmp_buffer 'unsigned char *' cinit
+|   | |   | |   `-CallExpr 0x7f8f74828360 <line:54:6, col:62> 'unsigned char *'
+|   | |   | |     |-ImplicitCastExpr 0x7f8f74828348 <col:6> 'unsigned char *(*)(char *, int, const char *, int)' <FunctionToPointerDecay>
+|   | |   | |     | `-DeclRefExpr 0x7f8f748281b0 <col:6> 'unsigned char *(char *, int, const char *, int)' Function 0x7f8f74826b28 'CRYPTO_realloc' 'unsigned char *(char *, int, const char *, int)'
+|   | |   | |     |-CStyleCastExpr 0x7f8f74828230 <col:22, col:31> 'char *' <BitCast>
+|   | |   | |     | `-ImplicitCastExpr 0x7f8f74828218 <col:31> 'unsigned char *' <LValueToRValue>
+|   | |   | |     |   `-DeclRefExpr 0x7f8f748281d8 <col:31> 'unsigned char *' lvalue Var 0x7f8f74827058 'buffer' 'unsigned char *'
+|   | |   | |     |-CStyleCastExpr 0x7f8f748282b0 <col:39, col:45> 'int' <IntegralCast>
+|   | |   | |     | `-ImplicitCastExpr 0x7f8f74828298 <col:45> 'unsigned int' <LValueToRValue>
+|   | |   | |     |   `-DeclRefExpr 0x7f8f74828258 <col:45> 'unsigned int' lvalue Var 0x7f8f748271d0 'tmp_len' 'unsigned int'
+|   | |   | |     |-ImplicitCastExpr 0x7f8f748283c0 <col:54> 'const char *' <BitCast>
+|   | |   | |     | `-ImplicitCastExpr 0x7f8f748283a8 <col:54> 'char *' <ArrayToPointerDecay>
+|   | |   | |     |   `-StringLiteral 0x7f8f748282d8 <col:54> 'char [1]' lvalue ""
+|   | |   | |     `-IntegerLiteral 0x7f8f74828300 <col:58> 'int' 1293
+|   | |   | `-BinaryOperator 0x7f8f74828458 <line:55:4, col:13> 'unsigned char *' '='
+|   | |   |   |-DeclRefExpr 0x7f8f748283f0 <col:4> 'unsigned char *' lvalue Var 0x7f8f74827058 'buffer' 'unsigned char *'
+|   | |   |   `-ImplicitCastExpr 0x7f8f74828440 <col:13> 'unsigned char *' <LValueToRValue>
+|   | |   |     `-DeclRefExpr 0x7f8f74828418 <col:13> 'unsigned char *' lvalue Var 0x7f8f74828150 'tmp_buffer' 'unsigned char *'
+|   | |   `-<<<NULL>>>
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7f8f748287c8 <line:58:3, line:60:5>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f8f74828788 <line:58:7, col:52> 'int' '=='
+|   | | |-ParenExpr 0x7f8f74828748 <col:7, col:47> 'int'
+|   | | | `-BinaryOperator 0x7f8f74828720 <col:8, col:46> 'int' '='
+|   | | |   |-DeclRefExpr 0x7f8f74828540 <col:8> 'int' lvalue Var 0x7f8f74826ef8 'ret' 'int'
+|   | | |   `-CallExpr 0x7f8f748286b8 <col:14, col:46> 'int'
+|   | | |     |-ImplicitCastExpr 0x7f8f748286a0 <col:14> 'int (*)()' <FunctionToPointerDecay>
+|   | | |     | `-DeclRefExpr 0x7f8f74828628 <col:14> 'int ()' Function 0x7f8f74828590 'i2d_EC_PRIVATEKEY' 'int ()'
+|   | | |     |-ImplicitCastExpr 0x7f8f748286f0 <col:33> 'EC_PRIVATEKEY *' <LValueToRValue>
+|   | | |     | `-DeclRefExpr 0x7f8f74828650 <col:33> 'EC_PRIVATEKEY *' lvalue Var 0x7f8f74827270 'priv_key' 'EC_PRIVATEKEY *'
+|   | | |     `-ImplicitCastExpr 0x7f8f74828708 <col:43> 'unsigned char **' <LValueToRValue>
+|   | | |       `-DeclRefExpr 0x7f8f74828678 <col:43> 'unsigned char **' lvalue ParmVar 0x7f8f74826d18 'out' 'unsigned char **'
+|   | | `-IntegerLiteral 0x7f8f74828768 <col:52> 'int' 0
+|   | |-CompoundStmt 0x7f8f748287b0 <line:59:5, line:60:5>
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x7f8f74828848 <line:61:3, col:8> 'int' '='
+|   | |-DeclRefExpr 0x7f8f74828800 <col:3> 'int' lvalue Var 0x7f8f74826f90 'ok' 'int'
+|   | `-IntegerLiteral 0x7f8f74828828 <col:8> 'int' 1
+|   |-LabelStmt 0x7f8f74829a60 <line:62:1, line:64:24> 'err'
+|   | `-IfStmt 0x7f8f74829a28 <line:63:3, line:64:24>
+|   |   |-<<<NULL>>>
+|   |   |-<<<NULL>>>
+|   |   |-ImplicitCastExpr 0x7f8f74828898 <line:63:7> 'unsigned char *' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7f8f74828870 <col:7> 'unsigned char *' lvalue Var 0x7f8f74827058 'buffer' 'unsigned char *'
+|   |   |-CallExpr 0x7f8f748289d8 <line:64:5, col:24> 'int'
+|   |   | |-ImplicitCastExpr 0x7f8f748289c0 <col:5> 'int (*)()' <FunctionToPointerDecay>
+|   |   | | `-DeclRefExpr 0x7f8f74828970 <col:5> 'int ()' Function 0x7f8f748288d8 'CRYPTO_free' 'int ()'
+|   |   | `-ImplicitCastExpr 0x7f8f74829a10 <col:18> 'unsigned char *' <LValueToRValue>
+|   |   |   `-DeclRefExpr 0x7f8f74828998 <col:18> 'unsigned char *' lvalue Var 0x7f8f74827058 'buffer' 'unsigned char *'
+|   |   `-<<<NULL>>>
+|   |-IfStmt 0x7f8f74829bc8 <line:65:3, line:66:33>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7f8f74829aa0 <line:65:7> 'EC_PRIVATEKEY *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f8f74829a78 <col:7> 'EC_PRIVATEKEY *' lvalue Var 0x7f8f74827270 'priv_key' 'EC_PRIVATEKEY *'
+|   | |-CallExpr 0x7f8f74829b80 <line:66:5, col:33> 'void'
+|   | | |-ImplicitCastExpr 0x7f8f74829b68 <col:5> 'void (*)(EC_PRIVATEKEY *)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f8f74829ab8 <col:5> 'void (EC_PRIVATEKEY *)' Function 0x7f8f748267a0 'EC_PRIVATEKEY_free' 'void (EC_PRIVATEKEY *)'
+|   | | `-ImplicitCastExpr 0x7f8f74829bb0 <col:25> 'EC_PRIVATEKEY *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f8f74829ae0 <col:25> 'EC_PRIVATEKEY *' lvalue Var 0x7f8f74827270 'priv_key' 'EC_PRIVATEKEY *'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f8f74829cf0 <line:67:3, col:23>
+|     `-ParenExpr 0x7f8f74829cd0 <col:10, col:23> 'int'
+|       `-ConditionalOperator 0x7f8f74829ca0 <col:11, col:22> 'int'
+|         |-ImplicitCastExpr 0x7f8f74829c70 <col:11> 'int' <LValueToRValue>
+|         | `-DeclRefExpr 0x7f8f74829c00 <col:11> 'int' lvalue Var 0x7f8f74826f90 'ok' 'int'
+|         |-ImplicitCastExpr 0x7f8f74829c88 <col:16> 'int' <LValueToRValue>
+|         | `-DeclRefExpr 0x7f8f74829c28 <col:16> 'int' lvalue Var 0x7f8f74826ef8 'ret' 'int'
+|         `-IntegerLiteral 0x7f8f74829c50 <col:22> 'int' 0
+|-FunctionDecl 0x7f8f74827640 <<invalid sloc>> line:33:7 implicit used ERR_put_error 'int ()'
+|-FunctionDecl 0x7f8f74828590 <<invalid sloc>> line:58:14 implicit used i2d_EC_PRIVATEKEY 'int ()'
+`-FunctionDecl 0x7f8f748288d8 <<invalid sloc>> line:64:5 implicit used CRYPTO_free 'int ()'

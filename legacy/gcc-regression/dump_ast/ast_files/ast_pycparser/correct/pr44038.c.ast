@@ -1,0 +1,61 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: Ustr
+      Decl: data, [], [], []
+        ArrayDecl: []
+          TypeDecl: data, []
+            IdentifierType: ['char']
+          Constant: int, 1
+  Decl: ustr_xi__embed_val_get, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['char']
+      TypeDecl: ustr_xi__embed_val_get, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: ustr_len, [], ['static'], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: s1, [], [], []
+            PtrDecl: []
+              TypeDecl: s1, []
+                Struct: Ustr
+        TypeDecl: ustr_len, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: ustr_xi__embed_val_get
+          ExprList: 
+            StructRef: ->
+              ID: s1
+              ID: data
+  Decl: s1, [], ['static'], []
+    PtrDecl: []
+      TypeDecl: s1, []
+        Struct: Ustr
+    Cast: 
+      Typename: None, []
+        PtrDecl: []
+          TypeDecl: None, []
+            Struct: Ustr
+      Constant: string, ""
+  FuncDef: 
+    Decl: tst, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: cstr, [], [], []
+            PtrDecl: []
+              TypeDecl: cstr, []
+                IdentifierType: ['char']
+        TypeDecl: tst, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: ustr_len
+          ExprList: 
+            ID: s1

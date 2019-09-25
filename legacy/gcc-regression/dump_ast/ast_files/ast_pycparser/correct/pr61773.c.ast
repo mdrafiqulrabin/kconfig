@@ -1,0 +1,61 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            PtrDecl: []
+              PtrDecl: []
+                TypeDecl: x, []
+                  IdentifierType: ['char']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: p, [], [], []
+        PtrDecl: []
+          TypeDecl: p, []
+            IdentifierType: ['char']
+        FuncCall: 
+          ID: __builtin_malloc
+          ExprList: 
+            Constant: int, 64
+      Decl: q, [], [], []
+        PtrDecl: []
+          TypeDecl: q, []
+            IdentifierType: ['char']
+        FuncCall: 
+          ID: __builtin_malloc
+          ExprList: 
+            Constant: int, 64
+      FuncCall: 
+        ID: __builtin_strcat
+        ExprList: 
+          ID: q
+          Constant: string, "abcde"
+      FuncCall: 
+        ID: __builtin_strcat
+        ExprList: 
+          ID: p
+          Constant: string, "ab"
+      Assignment: =
+        ArrayRef: 
+          ID: p
+          Constant: int, 1
+        ArrayRef: 
+          ID: q
+          Constant: int, 3
+      FuncCall: 
+        ID: __builtin_strcat
+        ExprList: 
+          ID: p
+          ID: q
+      Assignment: =
+        ArrayRef: 
+          ID: x
+          Constant: int, 0
+        ID: p
+      Assignment: =
+        ArrayRef: 
+          ID: x
+          Constant: int, 1
+        ID: q

@@ -1,0 +1,512 @@
+c_files/pr39740.c:113:1: warning: control may reach end of non-void function [-Wreturn-type]
+}
+^
+1 warning generated.
+TranslationUnitDecl 0x7fd2c98264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd2c9826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd2c9826740 '__int128'
+|-TypedefDecl 0x7fd2c9826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd2c9826760 'unsigned __int128'
+|-TypedefDecl 0x7fd2c9826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd2c9826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd2c9826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd2c9826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd2c9826dc0 'char *'
+|   `-BuiltinType 0x7fd2c9826560 'char'
+|-TypedefDecl 0x7fd2c98270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd2c9827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd2c9826ee0 'struct __va_list_tag'
+|     `-Record 0x7fd2c9826e58 '__va_list_tag'
+|-TypedefDecl 0x7fd2c9827138 <c_files/pr39740.c:4:1, col:13> col:13 referenced R_len_t 'int'
+| `-BuiltinType 0x7fd2c98265c0 'int'
+|-TypedefDecl 0x7fd2c98271a8 <line:5:1, col:22> col:22 referenced SEXPTYPE 'unsigned int'
+| `-BuiltinType 0x7fd2c9826660 'unsigned int'
+|-RecordDecl 0x7fd2ca025a00 <line:6:1, line:9:1> line:6:8 struct sxpinfo_struct definition
+| `-FieldDecl 0x7fd2ca025b00 <line:8:3, col:17> col:12 referenced type 'SEXPTYPE':'unsigned int'
+|   `-IntegerLiteral 0x7fd2ca025ad0 <col:17> 'int' 5
+|-RecordDecl 0x7fd2ca025b48 <line:11:1, line:15:1> line:11:8 struct vecsxp_struct definition
+| |-FieldDecl 0x7fd2ca025c20 <line:13:3, col:11> col:11 referenced length 'R_len_t':'int'
+| `-FieldDecl 0x7fd2ca025c78 <line:14:3, col:11> col:11 truelength 'R_len_t':'int'
+|-RecordDecl 0x7fd2ca025cc0 <line:17:1, line:22:1> line:17:8 struct listsxp_struct definition
+| |-RecordDecl 0x7fd2ca025d70 parent 0x7fd2c98264d0 <line:19:3, col:10> col:10 struct SEXPREC
+| |-FieldDecl 0x7fd2ca025ee0 <col:3, col:19> col:19 referenced carval 'struct SEXPREC *'
+| |-FieldDecl 0x7fd2ca025f50 <line:20:3, col:19> col:19 referenced cdrval 'struct SEXPREC *'
+| `-FieldDecl 0x7fd2ca025fc0 <line:21:3, col:19> col:19 tagval 'struct SEXPREC *'
+|-RecordDecl 0x7fd2ca026008 prev 0x7fd2ca025d70 <line:24:9, line:31:1> line:24:16 struct SEXPREC definition
+| |-FieldDecl 0x7fd2ca0260e0 <line:26:3, col:25> col:25 referenced sxpinfo 'struct sxpinfo_struct':'struct sxpinfo_struct'
+| |-RecordDecl 0x7fd2ca026128 <line:27:3, line:30:3> line:27:3 union definition
+| | `-FieldDecl 0x7fd2ca026220 <line:29:5, col:27> col:27 referenced listsxp 'struct listsxp_struct':'struct listsxp_struct'
+| `-FieldDecl 0x7fd2ca026310 <line:27:3, line:30:5> col:5 referenced u 'union (anonymous union at c_files/pr39740.c:27:3)':'union SEXPREC::(anonymous at c_files/pr39740.c:27:3)'
+|-TypedefDecl 0x7fd2ca0263c0 <line:24:1, line:31:3> col:3 SEXPREC 'struct SEXPREC':'struct SEXPREC'
+| `-ElaboratedType 0x7fd2ca025e30 'struct SEXPREC' sugar
+|   `-RecordType 0x7fd2ca025e00 'struct SEXPREC'
+|     `-Record 0x7fd2ca026008 'SEXPREC'
+|-TypedefDecl 0x7fd2ca026440 <line:24:1, line:31:13> col:13 referenced SEXP 'struct SEXPREC *'
+| `-PointerType 0x7fd2ca025e90 'struct SEXPREC *'
+|   `-ElaboratedType 0x7fd2ca025e30 'struct SEXPREC' sugar
+|     `-RecordType 0x7fd2ca025e00 'struct SEXPREC'
+|       `-Record 0x7fd2ca026008 'SEXPREC'
+|-RecordDecl 0x7fd2ca0264b8 <line:33:9, line:36:1> line:33:16 struct VECTOR_SEXPREC definition
+| `-FieldDecl 0x7fd2ca0265b0 <line:35:3, col:24> col:24 referenced vecsxp 'struct vecsxp_struct':'struct vecsxp_struct'
+|-TypedefDecl 0x7fd2ca0266a0 <line:33:1, line:36:3> col:3 referenced VECTOR_SEXPREC 'struct VECTOR_SEXPREC':'struct VECTOR_SEXPREC'
+| `-ElaboratedType 0x7fd2ca026650 'struct VECTOR_SEXPREC' sugar
+|   `-RecordType 0x7fd2ca026540 'struct VECTOR_SEXPREC'
+|     `-Record 0x7fd2ca0264b8 'VECTOR_SEXPREC'
+|-TypedefDecl 0x7fd2ca026780 <line:33:1, line:36:20> col:20 referenced VECSEXP 'struct VECTOR_SEXPREC *'
+| `-PointerType 0x7fd2ca026730 'struct VECTOR_SEXPREC *'
+|   `-ElaboratedType 0x7fd2ca026650 'struct VECTOR_SEXPREC' sugar
+|     `-RecordType 0x7fd2ca026540 'struct VECTOR_SEXPREC'
+|       `-Record 0x7fd2ca0264b8 'VECTOR_SEXPREC'
+|-RecordDecl 0x7fd2ca0267f8 <line:38:9, line:42:1> line:38:9 union definition
+| |-FieldDecl 0x7fd2ca0268d0 <line:40:3, col:18> col:18 s 'VECTOR_SEXPREC':'struct VECTOR_SEXPREC'
+| `-FieldDecl 0x7fd2ca026930 <line:41:3, col:10> col:10 align 'double'
+|-TypedefDecl 0x7fd2ca02bc20 <line:38:1, line:42:3> col:3 SEXPREC_ALIGN 'union SEXPREC_ALIGN':'SEXPREC_ALIGN'
+| `-ElaboratedType 0x7fd2ca0269c0 'union SEXPREC_ALIGN' sugar
+|   `-RecordType 0x7fd2ca026880 'SEXPREC_ALIGN'
+|     `-Record 0x7fd2ca0267f8 ''
+|-VarDecl 0x7fd2ca02bcc0 <line:44:1, col:13> col:13 used R_NilValue 'SEXP':'struct SEXPREC *' extern
+|-VarDecl 0x7fd2ca02bd70 <line:45:1, col:13> col:13 used R_MissingArg 'SEXP':'struct SEXPREC *' extern
+|-FunctionDecl 0x7fd2ca02bee8 <line:47:1, col:27> col:5 used Rf_envlength 'int (SEXP)'
+| `-ParmVarDecl 0x7fd2ca02bde0 <col:19, col:24> col:24 rho 'SEXP':'struct SEXPREC *'
+|-FunctionDecl 0x7fd2ca02c0a0 <line:48:1, col:22> col:6 used Rf_protect 'SEXP (SEXP)'
+| `-ParmVarDecl 0x7fd2ca02bf98 <col:18> col:22 'SEXP':'struct SEXPREC *'
+|-FunctionDecl 0x7fd2ca02c258 <line:49:1, col:35> col:13 Rf_translateChar 'const char *(SEXP)'
+| `-ParmVarDecl 0x7fd2ca02c150 <col:31> col:35 'SEXP':'struct SEXPREC *'
+|-FunctionDecl 0x7fd2ca02c3d0 <line:51:1, line:75:1> line:52:1 used Rf_length 'R_len_t (SEXP)' inline
+| |-ParmVarDecl 0x7fd2ca02c308 <col:12, col:17> col:17 used s 'SEXP':'struct SEXPREC *'
+| `-CompoundStmt 0x7fd2ca02e098 <line:53:1, line:75:1>
+|   |-DeclStmt 0x7fd2ca02c4e8 <line:54:3, col:8>
+|   | `-VarDecl 0x7fd2ca02c488 <col:3, col:7> col:7 used i 'int'
+|   `-SwitchStmt 0x7fd2ca02c620 <line:55:3, line:74:5>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-ImplicitCastExpr 0x7fd2ca02c608 <line:55:11, col:29> 'int' <IntegralCast>
+|     | `-ImplicitCastExpr 0x7fd2ca02c5f0 <col:11, col:29> 'SEXPTYPE':'unsigned int' <LValueToRValue>
+|     |   `-ParenExpr 0x7fd2ca02c5d0 <col:11, col:29> 'SEXPTYPE':'unsigned int' lvalue bitfield
+|     |     `-MemberExpr 0x7fd2ca02c598 <col:12, col:25> 'SEXPTYPE':'unsigned int' lvalue bitfield .type 0x7fd2ca025b00
+|     |       `-MemberExpr 0x7fd2ca02c560 <col:12, col:17> 'struct sxpinfo_struct':'struct sxpinfo_struct' lvalue ->sxpinfo 0x7fd2ca0260e0
+|     |         `-ImplicitCastExpr 0x7fd2ca02c548 <col:12, col:14> 'SEXP':'struct SEXPREC *' <LValueToRValue>
+|     |           `-ParenExpr 0x7fd2ca02c528 <col:12, col:14> 'SEXP':'struct SEXPREC *' lvalue
+|     |             `-DeclRefExpr 0x7fd2ca02c500 <col:13> 'SEXP':'struct SEXPREC *' lvalue ParmVar 0x7fd2ca02c308 's' 'SEXP':'struct SEXPREC *'
+|     `-CompoundStmt 0x7fd2ca02e048 <line:56:5, line:74:5>
+|       |-CaseStmt 0x7fd2ca02c670 <line:57:5, line:58:14>
+|       | |-IntegerLiteral 0x7fd2ca02c650 <line:57:10> 'int' 0
+|       | |-<<<NULL>>>
+|       | `-ReturnStmt 0x7fd2ca02c6c8 <line:58:7, col:14>
+|       |   `-IntegerLiteral 0x7fd2ca02c6a8 <col:14> 'int' 0
+|       |-CaseStmt 0x7fd2ca02c700 <line:59:5, line:60:45>
+|       | |-IntegerLiteral 0x7fd2ca02c6e0 <line:59:10> 'int' 24
+|       | |-<<<NULL>>>
+|       | `-ReturnStmt 0x7fd2ca02c8f0 <line:60:7, col:45>
+|       |   `-ImplicitCastExpr 0x7fd2ca02c8d8 <col:14, col:45> 'R_len_t':'int' <LValueToRValue>
+|       |     `-ParenExpr 0x7fd2ca02c8b8 <col:14, col:45> 'R_len_t':'int' lvalue
+|       |       `-MemberExpr 0x7fd2ca02c880 <col:15, col:39> 'R_len_t':'int' lvalue .length 0x7fd2ca025c20
+|       |         `-MemberExpr 0x7fd2ca02c848 <col:15, col:32> 'struct vecsxp_struct':'struct vecsxp_struct' lvalue ->vecsxp 0x7fd2ca0265b0
+|       |           `-ParenExpr 0x7fd2ca02c828 <col:15, col:29> 'VECSEXP':'struct VECTOR_SEXPREC *'
+|       |             `-CStyleCastExpr 0x7fd2ca02c800 <col:16, col:28> 'VECSEXP':'struct VECTOR_SEXPREC *' <BitCast>
+|       |               `-ImplicitCastExpr 0x7fd2ca02c7e8 <col:26, col:28> 'SEXP':'struct SEXPREC *' <LValueToRValue>
+|       |                 `-ParenExpr 0x7fd2ca02c7c8 <col:26, col:28> 'SEXP':'struct SEXPREC *' lvalue
+|       |                   `-DeclRefExpr 0x7fd2ca02c760 <col:27> 'SEXP':'struct SEXPREC *' lvalue ParmVar 0x7fd2ca02c308 's' 'SEXP':'struct SEXPREC *'
+|       |-CaseStmt 0x7fd2ca02c928 <line:61:5, line:63:11>
+|       | |-IntegerLiteral 0x7fd2ca02c908 <line:61:10> 'int' 6
+|       | |-<<<NULL>>>
+|       | `-CaseStmt 0x7fd2ca02c980 <line:62:5, line:63:11>
+|       |   |-IntegerLiteral 0x7fd2ca02c960 <line:62:10> 'int' 17
+|       |   |-<<<NULL>>>
+|       |   `-BinaryOperator 0x7fd2ca02ca00 <line:63:7, col:11> 'int' '='
+|       |     |-DeclRefExpr 0x7fd2ca02c9b8 <col:7> 'int' lvalue Var 0x7fd2ca02c488 'i' 'int'
+|       |     `-IntegerLiteral 0x7fd2ca02c9e0 <col:11> 'int' 0
+|       |-WhileStmt 0x7fd2ca02de00 <line:64:7, line:68:2>
+|       | |-<<<NULL>>>
+|       | |-BinaryOperator 0x7fd2ca02cbd0 <line:64:14, col:40> 'int' '&&'
+|       | | |-BinaryOperator 0x7fd2ca02cb00 <col:14, col:30> 'int' '!='
+|       | | | |-ImplicitCastExpr 0x7fd2ca02cad0 <col:14> 'SEXP':'struct SEXPREC *' <LValueToRValue>
+|       | | | | `-DeclRefExpr 0x7fd2ca02ca28 <col:14> 'SEXP':'struct SEXPREC *' lvalue ParmVar 0x7fd2ca02c308 's' 'SEXP':'struct SEXPREC *'
+|       | | | `-ImplicitCastExpr 0x7fd2ca02cae8 <col:19, col:30> 'SEXP':'struct SEXPREC *' <BitCast>
+|       | | |   `-ParenExpr 0x7fd2ca02cab0 <col:19, col:30> 'void *'
+|       | | |     `-CStyleCastExpr 0x7fd2ca02ca88 <col:20, col:29> 'void *' <NullToPointer>
+|       | | |       `-IntegerLiteral 0x7fd2ca02ca50 <col:29> 'int' 0
+|       | | `-BinaryOperator 0x7fd2ca02cba8 <col:35, col:40> 'int' '!='
+|       | |   |-ImplicitCastExpr 0x7fd2ca02cb78 <col:35> 'SEXP':'struct SEXPREC *' <LValueToRValue>
+|       | |   | `-DeclRefExpr 0x7fd2ca02cb28 <col:35> 'SEXP':'struct SEXPREC *' lvalue ParmVar 0x7fd2ca02c308 's' 'SEXP':'struct SEXPREC *'
+|       | |   `-ImplicitCastExpr 0x7fd2ca02cb90 <col:40> 'SEXP':'struct SEXPREC *' <LValueToRValue>
+|       | |     `-DeclRefExpr 0x7fd2ca02cb50 <col:40> 'SEXP':'struct SEXPREC *' lvalue Var 0x7fd2ca02bcc0 'R_NilValue' 'SEXP':'struct SEXPREC *'
+|       | `-CompoundStmt 0x7fd2ca02ddd8 <line:65:2, line:68:2>
+|       |   |-UnaryOperator 0x7fd2ca02dc28 <line:66:4, col:5> 'int' postfix '++'
+|       |   | `-DeclRefExpr 0x7fd2ca02dc00 <col:4> 'int' lvalue Var 0x7fd2ca02c488 'i' 'int'
+|       |   `-BinaryOperator 0x7fd2ca02ddb0 <line:67:4, col:30> 'SEXP':'struct SEXPREC *' '='
+|       |     |-DeclRefExpr 0x7fd2ca02dc48 <col:4> 'SEXP':'struct SEXPREC *' lvalue ParmVar 0x7fd2ca02c308 's' 'SEXP':'struct SEXPREC *'
+|       |     `-ImplicitCastExpr 0x7fd2ca02dd98 <col:8, col:30> 'struct SEXPREC *' <LValueToRValue>
+|       |       `-ParenExpr 0x7fd2ca02dd78 <col:8, col:30> 'struct SEXPREC *' lvalue
+|       |         `-MemberExpr 0x7fd2ca02dd40 <col:9, col:24> 'struct SEXPREC *' lvalue .cdrval 0x7fd2ca025f50
+|       |           `-MemberExpr 0x7fd2ca02dd08 <col:9, col:16> 'struct listsxp_struct':'struct listsxp_struct' lvalue .listsxp 0x7fd2ca026220
+|       |             `-MemberExpr 0x7fd2ca02dcd0 <col:9, col:14> 'union (anonymous union at c_files/pr39740.c:27:3)':'union SEXPREC::(anonymous at c_files/pr39740.c:27:3)' lvalue ->u 0x7fd2ca026310
+|       |               `-ImplicitCastExpr 0x7fd2ca02dcb8 <col:9, col:11> 'SEXP':'struct SEXPREC *' <LValueToRValue>
+|       |                 `-ParenExpr 0x7fd2ca02dc98 <col:9, col:11> 'SEXP':'struct SEXPREC *' lvalue
+|       |                   `-DeclRefExpr 0x7fd2ca02dc70 <col:10> 'SEXP':'struct SEXPREC *' lvalue ParmVar 0x7fd2ca02c308 's' 'SEXP':'struct SEXPREC *'
+|       |-ReturnStmt 0x7fd2ca02de60 <line:69:7, col:14>
+|       | `-ImplicitCastExpr 0x7fd2ca02de48 <col:14> 'int' <LValueToRValue>
+|       |   `-DeclRefExpr 0x7fd2ca02de20 <col:14> 'int' lvalue Var 0x7fd2ca02c488 'i' 'int'
+|       |-CaseStmt 0x7fd2ca02de98 <line:70:5, line:71:29>
+|       | |-IntegerLiteral 0x7fd2ca02de78 <line:70:10> 'int' 4
+|       | |-<<<NULL>>>
+|       | `-ReturnStmt 0x7fd2ca02dfd8 <line:71:7, col:29>
+|       |   `-CallExpr 0x7fd2ca02df90 <col:14, col:29> 'int'
+|       |     |-ImplicitCastExpr 0x7fd2ca02df78 <col:14> 'int (*)(SEXP)' <FunctionToPointerDecay>
+|       |     | `-DeclRefExpr 0x7fd2ca02ded0 <col:14> 'int (SEXP)' Function 0x7fd2ca02bee8 'Rf_envlength' 'int (SEXP)'
+|       |     `-ImplicitCastExpr 0x7fd2ca02dfc0 <col:28> 'SEXP':'struct SEXPREC *' <LValueToRValue>
+|       |       `-DeclRefExpr 0x7fd2ca02def8 <col:28> 'SEXP':'struct SEXPREC *' lvalue ParmVar 0x7fd2ca02c308 's' 'SEXP':'struct SEXPREC *'
+|       `-DefaultStmt 0x7fd2ca02e028 <line:72:5, line:73:14>
+|         `-ReturnStmt 0x7fd2ca02e010 <col:7, col:14>
+|           `-IntegerLiteral 0x7fd2ca02dff0 <col:14> 'int' 1
+|-FunctionDecl 0x7fd2ca02e2e0 <line:77:1, line:81:1> line:78:1 used Rf_lang3 'SEXP (SEXP, SEXP, SEXP)' inline
+| |-ParmVarDecl 0x7fd2ca02e0d0 <col:11, col:16> col:16 used s 'SEXP':'struct SEXPREC *'
+| |-ParmVarDecl 0x7fd2ca02e140 <col:19, col:24> col:24 t 'SEXP':'struct SEXPREC *'
+| |-ParmVarDecl 0x7fd2ca02e1b0 <col:27, col:32> col:32 u 'SEXP':'struct SEXPREC *'
+| `-CompoundStmt 0x7fd2ca02e3e8 <line:79:1, line:81:1>
+|   `-ReturnStmt 0x7fd2ca02e3d0 <line:80:3, col:10>
+|     `-ImplicitCastExpr 0x7fd2ca02e3b8 <col:10> 'SEXP':'struct SEXPREC *' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd2ca02e390 <col:10> 'SEXP':'struct SEXPREC *' lvalue ParmVar 0x7fd2ca02e0d0 's' 'SEXP':'struct SEXPREC *'
+|-TypedefDecl 0x7fd2ca02e748 <line:83:1, col:46> col:16 CCODE 'SEXP (*)(SEXP, SEXP, SEXP, SEXP)'
+| `-PointerType 0x7fd2ca02e6d0 'SEXP (*)(SEXP, SEXP, SEXP, SEXP)'
+|   `-ParenType 0x7fd2ca02e670 'SEXP (SEXP, SEXP, SEXP, SEXP)' sugar
+|     `-FunctionProtoType 0x7fd2ca02e620 'SEXP (SEXP, SEXP, SEXP, SEXP)' cdecl
+|       |-TypedefType 0x7fd2ca02bc90 'SEXP' sugar
+|       | |-Typedef 0x7fd2ca026440 'SEXP'
+|       | `-PointerType 0x7fd2ca025e90 'struct SEXPREC *'
+|       |   `-ElaboratedType 0x7fd2ca025e30 'struct SEXPREC' sugar
+|       |     `-RecordType 0x7fd2ca025e00 'struct SEXPREC'
+|       |       `-Record 0x7fd2ca026008 'SEXPREC'
+|       |-TypedefType 0x7fd2ca02bc90 'SEXP' sugar
+|       | |-Typedef 0x7fd2ca026440 'SEXP'
+|       | `-PointerType 0x7fd2ca025e90 'struct SEXPREC *'
+|       |   `-ElaboratedType 0x7fd2ca025e30 'struct SEXPREC' sugar
+|       |     `-RecordType 0x7fd2ca025e00 'struct SEXPREC'
+|       |       `-Record 0x7fd2ca026008 'SEXPREC'
+|       |-TypedefType 0x7fd2ca02bc90 'SEXP' sugar
+|       | |-Typedef 0x7fd2ca026440 'SEXP'
+|       | `-PointerType 0x7fd2ca025e90 'struct SEXPREC *'
+|       |   `-ElaboratedType 0x7fd2ca025e30 'struct SEXPREC' sugar
+|       |     `-RecordType 0x7fd2ca025e00 'struct SEXPREC'
+|       |       `-Record 0x7fd2ca026008 'SEXPREC'
+|       |-TypedefType 0x7fd2ca02bc90 'SEXP' sugar
+|       | |-Typedef 0x7fd2ca026440 'SEXP'
+|       | `-PointerType 0x7fd2ca025e90 'struct SEXPREC *'
+|       |   `-ElaboratedType 0x7fd2ca025e30 'struct SEXPREC' sugar
+|       |     `-RecordType 0x7fd2ca025e00 'struct SEXPREC'
+|       |       `-Record 0x7fd2ca026008 'SEXPREC'
+|       `-TypedefType 0x7fd2ca02bc90 'SEXP' sugar
+|         |-Typedef 0x7fd2ca026440 'SEXP'
+|         `-PointerType 0x7fd2ca025e90 'struct SEXPREC *'
+|           `-ElaboratedType 0x7fd2ca025e30 'struct SEXPREC' sugar
+|             `-RecordType 0x7fd2ca025e00 'struct SEXPREC'
+|               `-Record 0x7fd2ca026008 'SEXPREC'
+|-VarDecl 0x7fd2ca02e7b0 <line:85:1, col:13> col:13 used PlusSymbol 'SEXP':'struct SEXPREC *' static
+|-VarDecl 0x7fd2ca02e820 <line:86:1, col:13> col:13 used MinusSymbol 'SEXP':'struct SEXPREC *' static
+|-VarDecl 0x7fd2ca02e890 <line:87:1, col:13> col:13 used DivideSymbol 'SEXP':'struct SEXPREC *' static
+|-FunctionDecl 0x7fd2ca02e990 <line:89:1, col:19> col:5 used isZero 'int (SEXP)'
+| `-ParmVarDecl 0x7fd2ca02e900 <col:13, col:18> col:18 s 'SEXP':'struct SEXPREC *'
+|-FunctionDecl 0x7fd2ca02eac8 <line:90:1, col:16> col:6 used PP 'SEXP (SEXP)'
+| `-ParmVarDecl 0x7fd2ca02ea40 <col:10, col:15> col:15 s 'SEXP':'struct SEXPREC *'
+|-FunctionDecl 0x7fd2ca030400 <line:91:1, col:26> col:6 used AddParens 'SEXP (SEXP)'
+| `-ParmVarDecl 0x7fd2ca02eb78 <col:17, col:22> col:22 expr 'SEXP':'struct SEXPREC *'
+|-FunctionDecl 0x7fd2ca030518 <line:92:1, col:18> col:6 used Rf_install 'SEXP ()'
+|-FunctionDecl 0x7fd2ca030650 <line:94:1, line:113:1> line:95:1 used isUminus 'int (SEXP)' static
+| |-ParmVarDecl 0x7fd2ca0305c0 <col:11, col:16> col:16 used s 'SEXP':'struct SEXPREC *'
+| `-CompoundStmt 0x7fd2ca031128 <line:96:1, line:113:1>
+|   `-IfStmt 0x7fd2ca0310f0 <line:97:3, line:112:12>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7fd2ca030a00 <line:97:7, col:62> 'int' '&&'
+|     | |-BinaryOperator 0x7fd2ca030830 <col:7, col:30> 'int' '=='
+|     | | |-ImplicitCastExpr 0x7fd2ca030818 <col:7, col:25> 'int' <IntegralCast>
+|     | | | `-ImplicitCastExpr 0x7fd2ca030800 <col:7, col:25> 'SEXPTYPE':'unsigned int' <LValueToRValue>
+|     | | |   `-ParenExpr 0x7fd2ca0307c0 <col:7, col:25> 'SEXPTYPE':'unsigned int' lvalue bitfield
+|     | | |     `-MemberExpr 0x7fd2ca030788 <col:8, col:21> 'SEXPTYPE':'unsigned int' lvalue bitfield .type 0x7fd2ca025b00
+|     | | |       `-MemberExpr 0x7fd2ca030750 <col:8, col:13> 'struct sxpinfo_struct':'struct sxpinfo_struct' lvalue ->sxpinfo 0x7fd2ca0260e0
+|     | | |         `-ImplicitCastExpr 0x7fd2ca030738 <col:8, col:10> 'SEXP':'struct SEXPREC *' <LValueToRValue>
+|     | | |           `-ParenExpr 0x7fd2ca030718 <col:8, col:10> 'SEXP':'struct SEXPREC *' lvalue
+|     | | |             `-DeclRefExpr 0x7fd2ca0306f0 <col:9> 'SEXP':'struct SEXPREC *' lvalue ParmVar 0x7fd2ca0305c0 's' 'SEXP':'struct SEXPREC *'
+|     | | `-IntegerLiteral 0x7fd2ca0307e0 <col:30> 'int' 6
+|     | `-BinaryOperator 0x7fd2ca0309d8 <col:35, col:62> 'int' '=='
+|     |   |-ImplicitCastExpr 0x7fd2ca0309a8 <col:35, col:57> 'struct SEXPREC *' <LValueToRValue>
+|     |   | `-ParenExpr 0x7fd2ca030960 <col:35, col:57> 'struct SEXPREC *' lvalue
+|     |   |   `-MemberExpr 0x7fd2ca030928 <col:36, col:51> 'struct SEXPREC *' lvalue .carval 0x7fd2ca025ee0
+|     |   |     `-MemberExpr 0x7fd2ca0308f0 <col:36, col:43> 'struct listsxp_struct':'struct listsxp_struct' lvalue .listsxp 0x7fd2ca026220
+|     |   |       `-MemberExpr 0x7fd2ca0308b8 <col:36, col:41> 'union (anonymous union at c_files/pr39740.c:27:3)':'union SEXPREC::(anonymous at c_files/pr39740.c:27:3)' lvalue ->u 0x7fd2ca026310
+|     |   |         `-ImplicitCastExpr 0x7fd2ca0308a0 <col:36, col:38> 'SEXP':'struct SEXPREC *' <LValueToRValue>
+|     |   |           `-ParenExpr 0x7fd2ca030880 <col:36, col:38> 'SEXP':'struct SEXPREC *' lvalue
+|     |   |             `-DeclRefExpr 0x7fd2ca030858 <col:37> 'SEXP':'struct SEXPREC *' lvalue ParmVar 0x7fd2ca0305c0 's' 'SEXP':'struct SEXPREC *'
+|     |   `-ImplicitCastExpr 0x7fd2ca0309c0 <col:62> 'SEXP':'struct SEXPREC *' <LValueToRValue>
+|     |     `-DeclRefExpr 0x7fd2ca030980 <col:62> 'SEXP':'struct SEXPREC *' lvalue Var 0x7fd2ca02e820 'MinusSymbol' 'SEXP':'struct SEXPREC *'
+|     |-CompoundStmt 0x7fd2ca031098 <line:98:5, line:110:5>
+|     | `-SwitchStmt 0x7fd2ca030b08 <line:99:7, line:109:2>
+|     |   |-<<<NULL>>>
+|     |   |-<<<NULL>>>
+|     |   |-CallExpr 0x7fd2ca030ac0 <line:99:15, col:27> 'R_len_t':'int'
+|     |   | |-ImplicitCastExpr 0x7fd2ca030aa8 <col:15> 'R_len_t (*)(SEXP)' <FunctionToPointerDecay>
+|     |   | | `-DeclRefExpr 0x7fd2ca030a28 <col:15> 'R_len_t (SEXP)' Function 0x7fd2ca02c3d0 'Rf_length' 'R_len_t (SEXP)'
+|     |   | `-ImplicitCastExpr 0x7fd2ca030af0 <col:26> 'SEXP':'struct SEXPREC *' <LValueToRValue>
+|     |   |   `-DeclRefExpr 0x7fd2ca030a50 <col:26> 'SEXP':'struct SEXPREC *' lvalue ParmVar 0x7fd2ca0305c0 's' 'SEXP':'struct SEXPREC *'
+|     |   `-CompoundStmt 0x7fd2ca031070 <line:100:2, line:109:2>
+|     |     |-CaseStmt 0x7fd2ca030b58 <line:101:2, line:102:11>
+|     |     | |-IntegerLiteral 0x7fd2ca030b38 <line:101:7> 'int' 2
+|     |     | |-<<<NULL>>>
+|     |     | `-ReturnStmt 0x7fd2ca030bb0 <line:102:4, col:11>
+|     |     |   `-IntegerLiteral 0x7fd2ca030b90 <col:11> 'int' 1
+|     |     `-CaseStmt 0x7fd2ca030be8 <line:103:2, line:108:13>
+|     |       |-IntegerLiteral 0x7fd2ca030bc8 <line:103:7> 'int' 3
+|     |       |-<<<NULL>>>
+|     |       `-IfStmt 0x7fd2ca031038 <line:104:4, line:108:13>
+|     |         |-<<<NULL>>>
+|     |         |-<<<NULL>>>
+|     |         |-BinaryOperator 0x7fd2ca030fa0 <line:104:8, line:105:20> 'int' '=='
+|     |         | |-ImplicitCastExpr 0x7fd2ca030f70 <line:104:8, line:105:15> 'struct SEXPREC *' <LValueToRValue>
+|     |         | | `-ParenExpr 0x7fd2ca030f28 <line:104:8, line:105:15> 'struct SEXPREC *' lvalue
+|     |         | |   `-MemberExpr 0x7fd2ca030ef0 <line:104:9, line:105:9> 'struct SEXPREC *' lvalue .carval 0x7fd2ca025ee0
+|     |         | |     `-MemberExpr 0x7fd2ca030eb8 <line:104:9, col:60> 'struct listsxp_struct':'struct listsxp_struct' lvalue .listsxp 0x7fd2ca026220
+|     |         | |       `-MemberExpr 0x7fd2ca030e80 <col:9, col:58> 'union (anonymous union at c_files/pr39740.c:27:3)':'union SEXPREC::(anonymous at c_files/pr39740.c:27:3)' lvalue ->u 0x7fd2ca026310
+|     |         | |         `-ImplicitCastExpr 0x7fd2ca030e68 <col:9, col:55> 'struct SEXPREC *' <LValueToRValue>
+|     |         | |           `-ParenExpr 0x7fd2ca030e48 <col:9, col:55> 'struct SEXPREC *' lvalue
+|     |         | |             `-ParenExpr 0x7fd2ca030e28 <col:10, col:54> 'struct SEXPREC *' lvalue
+|     |         | |               `-MemberExpr 0x7fd2ca030df0 <col:11, col:48> 'struct SEXPREC *' lvalue .cdrval 0x7fd2ca025f50
+|     |         | |                 `-MemberExpr 0x7fd2ca030db8 <col:11, col:40> 'struct listsxp_struct':'struct listsxp_struct' lvalue .listsxp 0x7fd2ca026220
+|     |         | |                   `-MemberExpr 0x7fd2ca030d80 <col:11, col:38> 'union (anonymous union at c_files/pr39740.c:27:3)':'union SEXPREC::(anonymous at c_files/pr39740.c:27:3)' lvalue ->u 0x7fd2ca026310
+|     |         | |                     `-ImplicitCastExpr 0x7fd2ca030d68 <col:11, col:35> 'struct SEXPREC *' <LValueToRValue>
+|     |         | |                       `-ParenExpr 0x7fd2ca030d48 <col:11, col:35> 'struct SEXPREC *' lvalue
+|     |         | |                         `-ParenExpr 0x7fd2ca030d28 <col:12, col:34> 'struct SEXPREC *' lvalue
+|     |         | |                           `-MemberExpr 0x7fd2ca030cf0 <col:13, col:28> 'struct SEXPREC *' lvalue .cdrval 0x7fd2ca025f50
+|     |         | |                             `-MemberExpr 0x7fd2ca030cb8 <col:13, col:20> 'struct listsxp_struct':'struct listsxp_struct' lvalue .listsxp 0x7fd2ca026220
+|     |         | |                               `-MemberExpr 0x7fd2ca030c80 <col:13, col:18> 'union (anonymous union at c_files/pr39740.c:27:3)':'union SEXPREC::(anonymous at c_files/pr39740.c:27:3)' lvalue ->u 0x7fd2ca026310
+|     |         | |                                 `-ImplicitCastExpr 0x7fd2ca030c68 <col:13, col:15> 'SEXP':'struct SEXPREC *' <LValueToRValue>
+|     |         | |                                   `-ParenExpr 0x7fd2ca030c48 <col:13, col:15> 'SEXP':'struct SEXPREC *' lvalue
+|     |         | |                                     `-DeclRefExpr 0x7fd2ca030c20 <col:14> 'SEXP':'struct SEXPREC *' lvalue ParmVar 0x7fd2ca0305c0 's' 'SEXP':'struct SEXPREC *'
+|     |         | `-ImplicitCastExpr 0x7fd2ca030f88 <line:105:20> 'SEXP':'struct SEXPREC *' <LValueToRValue>
+|     |         |   `-DeclRefExpr 0x7fd2ca030f48 <col:20> 'SEXP':'struct SEXPREC *' lvalue Var 0x7fd2ca02bd70 'R_MissingArg' 'SEXP':'struct SEXPREC *'
+|     |         |-ReturnStmt 0x7fd2ca030fe8 <line:106:6, col:13>
+|     |         | `-IntegerLiteral 0x7fd2ca030fc8 <col:13> 'int' 1
+|     |         `-ReturnStmt 0x7fd2ca031020 <line:108:6, col:13>
+|     |           `-IntegerLiteral 0x7fd2ca031000 <col:13> 'int' 0
+|     `-ReturnStmt 0x7fd2ca0310d8 <line:112:5, col:12>
+|       `-IntegerLiteral 0x7fd2ca0310b8 <col:12> 'int' 0
+|-FunctionDecl 0x7fd2ca0312d0 <line:115:1, line:138:1> line:116:1 used simplify 'SEXP (SEXP, SEXP, SEXP)' static
+| |-ParmVarDecl 0x7fd2ca031158 <col:11, col:16> col:16 used fun 'SEXP':'struct SEXPREC *'
+| |-ParmVarDecl 0x7fd2ca0311c8 <col:21, col:26> col:26 used arg1 'SEXP':'struct SEXPREC *'
+| |-ParmVarDecl 0x7fd2ca031238 <col:32, col:37> col:37 used arg2 'SEXP':'struct SEXPREC *'
+| `-CompoundStmt 0x7fd2ca02fec8 <line:117:1, line:138:1>
+|   |-DeclStmt 0x7fd2ca02f000 <line:118:3, col:11>
+|   | `-VarDecl 0x7fd2ca031390 <col:3, col:8> col:8 used ans 'SEXP':'struct SEXPREC *'
+|   |-IfStmt 0x7fd2ca02fe38 <line:119:3, line:135:5>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fd2ca02f098 <line:119:7, col:14> 'int' '=='
+|   | | |-ImplicitCastExpr 0x7fd2ca02f068 <col:7> 'SEXP':'struct SEXPREC *' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fd2ca02f018 <col:7> 'SEXP':'struct SEXPREC *' lvalue ParmVar 0x7fd2ca031158 'fun' 'SEXP':'struct SEXPREC *'
+|   | | `-ImplicitCastExpr 0x7fd2ca02f080 <col:14> 'SEXP':'struct SEXPREC *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7fd2ca02f040 <col:14> 'SEXP':'struct SEXPREC *' lvalue Var 0x7fd2ca02e7b0 'PlusSymbol' 'SEXP':'struct SEXPREC *'
+|   | |-CompoundStmt 0x7fd2ca02fb88 <line:120:5, line:131:5>
+|   | | `-IfStmt 0x7fd2ca02fb50 <line:121:7, line:130:55>
+|   | |   |-<<<NULL>>>
+|   | |   |-<<<NULL>>>
+|   | |   |-CallExpr 0x7fd2ca02f128 <line:121:11, col:23> 'int'
+|   | |   | |-ImplicitCastExpr 0x7fd2ca02f110 <col:11> 'int (*)(SEXP)' <FunctionToPointerDecay>
+|   | |   | | `-DeclRefExpr 0x7fd2ca02f0c0 <col:11> 'int (SEXP)' Function 0x7fd2ca02e990 'isZero' 'int (SEXP)'
+|   | |   | `-ImplicitCastExpr 0x7fd2ca02f158 <col:19> 'SEXP':'struct SEXPREC *' <LValueToRValue>
+|   | |   |   `-DeclRefExpr 0x7fd2ca02f0e8 <col:19> 'SEXP':'struct SEXPREC *' lvalue ParmVar 0x7fd2ca0311c8 'arg1' 'SEXP':'struct SEXPREC *'
+|   | |   |-BinaryOperator 0x7fd2ca02f1d8 <line:122:2, col:8> 'SEXP':'struct SEXPREC *' '='
+|   | |   | |-DeclRefExpr 0x7fd2ca02f170 <col:2> 'SEXP':'struct SEXPREC *' lvalue Var 0x7fd2ca031390 'ans' 'SEXP':'struct SEXPREC *'
+|   | |   | `-ImplicitCastExpr 0x7fd2ca02f1c0 <col:8> 'SEXP':'struct SEXPREC *' <LValueToRValue>
+|   | |   |   `-DeclRefExpr 0x7fd2ca02f198 <col:8> 'SEXP':'struct SEXPREC *' lvalue ParmVar 0x7fd2ca031238 'arg2' 'SEXP':'struct SEXPREC *'
+|   | |   `-IfStmt 0x7fd2ca02fb18 <line:123:12, line:130:55>
+|   | |     |-<<<NULL>>>
+|   | |     |-<<<NULL>>>
+|   | |     |-CallExpr 0x7fd2ca02f268 <line:123:16, col:30> 'int'
+|   | |     | |-ImplicitCastExpr 0x7fd2ca02f250 <col:16> 'int (*)(SEXP)' <FunctionToPointerDecay>
+|   | |     | | `-DeclRefExpr 0x7fd2ca02f200 <col:16> 'int (SEXP)' Function 0x7fd2ca030650 'isUminus' 'int (SEXP)'
+|   | |     | `-ImplicitCastExpr 0x7fd2ca02f298 <col:26> 'SEXP':'struct SEXPREC *' <LValueToRValue>
+|   | |     |   `-DeclRefExpr 0x7fd2ca02f228 <col:26> 'SEXP':'struct SEXPREC *' lvalue ParmVar 0x7fd2ca0311c8 'arg1' 'SEXP':'struct SEXPREC *'
+|   | |     |-BinaryOperator 0x7fd2ca02f678 <line:124:2, line:126:55> 'SEXP':'struct SEXPREC *' '='
+|   | |     | |-DeclRefExpr 0x7fd2ca02f2b0 <line:124:2> 'SEXP':'struct SEXPREC *' lvalue Var 0x7fd2ca031390 'ans' 'SEXP':'struct SEXPREC *'
+|   | |     | `-CallExpr 0x7fd2ca02f5f0 <line:125:4, line:126:55> 'SEXP':'struct SEXPREC *'
+|   | |     |   |-ImplicitCastExpr 0x7fd2ca02f5d8 <line:125:4> 'SEXP (*)(SEXP, SEXP, SEXP)' <FunctionToPointerDecay>
+|   | |     |   | `-DeclRefExpr 0x7fd2ca02f2d8 <col:4> 'SEXP (SEXP, SEXP, SEXP)' Function 0x7fd2ca0312d0 'simplify' 'SEXP (SEXP, SEXP, SEXP)'
+|   | |     |   |-ImplicitCastExpr 0x7fd2ca02f630 <col:14> 'SEXP':'struct SEXPREC *' <LValueToRValue>
+|   | |     |   | `-DeclRefExpr 0x7fd2ca02f300 <col:14> 'SEXP':'struct SEXPREC *' lvalue Var 0x7fd2ca02e820 'MinusSymbol' 'SEXP':'struct SEXPREC *'
+|   | |     |   |-ImplicitCastExpr 0x7fd2ca02f648 <col:27> 'SEXP':'struct SEXPREC *' <LValueToRValue>
+|   | |     |   | `-DeclRefExpr 0x7fd2ca02f328 <col:27> 'SEXP':'struct SEXPREC *' lvalue ParmVar 0x7fd2ca031238 'arg2' 'SEXP':'struct SEXPREC *'
+|   | |     |   `-ImplicitCastExpr 0x7fd2ca02f660 <line:126:7, col:54> 'struct SEXPREC *' <LValueToRValue>
+|   | |     |     `-ParenExpr 0x7fd2ca02f558 <col:7, col:54> 'struct SEXPREC *' lvalue
+|   | |     |       `-MemberExpr 0x7fd2ca02f520 <col:8, col:48> 'struct SEXPREC *' lvalue .carval 0x7fd2ca025ee0
+|   | |     |         `-MemberExpr 0x7fd2ca02f4e8 <col:8, col:40> 'struct listsxp_struct':'struct listsxp_struct' lvalue .listsxp 0x7fd2ca026220
+|   | |     |           `-MemberExpr 0x7fd2ca02f4b0 <col:8, col:38> 'union (anonymous union at c_files/pr39740.c:27:3)':'union SEXPREC::(anonymous at c_files/pr39740.c:27:3)' lvalue ->u 0x7fd2ca026310
+|   | |     |             `-ImplicitCastExpr 0x7fd2ca02f498 <col:8, col:35> 'struct SEXPREC *' <LValueToRValue>
+|   | |     |               `-ParenExpr 0x7fd2ca02f478 <col:8, col:35> 'struct SEXPREC *' lvalue
+|   | |     |                 `-ParenExpr 0x7fd2ca02f458 <col:9, col:34> 'struct SEXPREC *' lvalue
+|   | |     |                   `-MemberExpr 0x7fd2ca02f420 <col:10, col:28> 'struct SEXPREC *' lvalue .cdrval 0x7fd2ca025f50
+|   | |     |                     `-MemberExpr 0x7fd2ca02f3e8 <col:10, col:20> 'struct listsxp_struct':'struct listsxp_struct' lvalue .listsxp 0x7fd2ca026220
+|   | |     |                       `-MemberExpr 0x7fd2ca02f3b0 <col:10, col:18> 'union (anonymous union at c_files/pr39740.c:27:3)':'union SEXPREC::(anonymous at c_files/pr39740.c:27:3)' lvalue ->u 0x7fd2ca026310
+|   | |     |                         `-ImplicitCastExpr 0x7fd2ca02f398 <col:10, col:15> 'SEXP':'struct SEXPREC *' <LValueToRValue>
+|   | |     |                           `-ParenExpr 0x7fd2ca02f378 <col:10, col:15> 'SEXP':'struct SEXPREC *' lvalue
+|   | |     |                             `-DeclRefExpr 0x7fd2ca02f350 <col:11> 'SEXP':'struct SEXPREC *' lvalue ParmVar 0x7fd2ca0311c8 'arg1' 'SEXP':'struct SEXPREC *'
+|   | |     `-IfStmt 0x7fd2ca02fae0 <line:127:12, line:130:55>
+|   | |       |-<<<NULL>>>
+|   | |       |-<<<NULL>>>
+|   | |       |-CallExpr 0x7fd2ca02f708 <line:127:16, col:30> 'int'
+|   | |       | |-ImplicitCastExpr 0x7fd2ca02f6f0 <col:16> 'int (*)(SEXP)' <FunctionToPointerDecay>
+|   | |       | | `-DeclRefExpr 0x7fd2ca02f6a0 <col:16> 'int (SEXP)' Function 0x7fd2ca030650 'isUminus' 'int (SEXP)'
+|   | |       | `-ImplicitCastExpr 0x7fd2ca02f738 <col:26> 'SEXP':'struct SEXPREC *' <LValueToRValue>
+|   | |       |   `-DeclRefExpr 0x7fd2ca02f6c8 <col:26> 'SEXP':'struct SEXPREC *' lvalue ParmVar 0x7fd2ca031238 'arg2' 'SEXP':'struct SEXPREC *'
+|   | |       |-BinaryOperator 0x7fd2ca02fab8 <line:128:2, line:130:55> 'SEXP':'struct SEXPREC *' '='
+|   | |       | |-DeclRefExpr 0x7fd2ca02f750 <line:128:2> 'SEXP':'struct SEXPREC *' lvalue Var 0x7fd2ca031390 'ans' 'SEXP':'struct SEXPREC *'
+|   | |       | `-CallExpr 0x7fd2ca02fa30 <line:129:4, line:130:55> 'SEXP':'struct SEXPREC *'
+|   | |       |   |-ImplicitCastExpr 0x7fd2ca02fa18 <line:129:4> 'SEXP (*)(SEXP, SEXP, SEXP)' <FunctionToPointerDecay>
+|   | |       |   | `-DeclRefExpr 0x7fd2ca02f778 <col:4> 'SEXP (SEXP, SEXP, SEXP)' Function 0x7fd2ca0312d0 'simplify' 'SEXP (SEXP, SEXP, SEXP)'
+|   | |       |   |-ImplicitCastExpr 0x7fd2ca02fa70 <col:14> 'SEXP':'struct SEXPREC *' <LValueToRValue>
+|   | |       |   | `-DeclRefExpr 0x7fd2ca02f7a0 <col:14> 'SEXP':'struct SEXPREC *' lvalue Var 0x7fd2ca02e820 'MinusSymbol' 'SEXP':'struct SEXPREC *'
+|   | |       |   |-ImplicitCastExpr 0x7fd2ca02fa88 <col:27> 'SEXP':'struct SEXPREC *' <LValueToRValue>
+|   | |       |   | `-DeclRefExpr 0x7fd2ca02f7c8 <col:27> 'SEXP':'struct SEXPREC *' lvalue ParmVar 0x7fd2ca0311c8 'arg1' 'SEXP':'struct SEXPREC *'
+|   | |       |   `-ImplicitCastExpr 0x7fd2ca02faa0 <line:130:7, col:54> 'struct SEXPREC *' <LValueToRValue>
+|   | |       |     `-ParenExpr 0x7fd2ca02f9f8 <col:7, col:54> 'struct SEXPREC *' lvalue
+|   | |       |       `-MemberExpr 0x7fd2ca02f9c0 <col:8, col:48> 'struct SEXPREC *' lvalue .carval 0x7fd2ca025ee0
+|   | |       |         `-MemberExpr 0x7fd2ca02f988 <col:8, col:40> 'struct listsxp_struct':'struct listsxp_struct' lvalue .listsxp 0x7fd2ca026220
+|   | |       |           `-MemberExpr 0x7fd2ca02f950 <col:8, col:38> 'union (anonymous union at c_files/pr39740.c:27:3)':'union SEXPREC::(anonymous at c_files/pr39740.c:27:3)' lvalue ->u 0x7fd2ca026310
+|   | |       |             `-ImplicitCastExpr 0x7fd2ca02f938 <col:8, col:35> 'struct SEXPREC *' <LValueToRValue>
+|   | |       |               `-ParenExpr 0x7fd2ca02f918 <col:8, col:35> 'struct SEXPREC *' lvalue
+|   | |       |                 `-ParenExpr 0x7fd2ca02f8f8 <col:9, col:34> 'struct SEXPREC *' lvalue
+|   | |       |                   `-MemberExpr 0x7fd2ca02f8c0 <col:10, col:28> 'struct SEXPREC *' lvalue .cdrval 0x7fd2ca025f50
+|   | |       |                     `-MemberExpr 0x7fd2ca02f888 <col:10, col:20> 'struct listsxp_struct':'struct listsxp_struct' lvalue .listsxp 0x7fd2ca026220
+|   | |       |                       `-MemberExpr 0x7fd2ca02f850 <col:10, col:18> 'union (anonymous union at c_files/pr39740.c:27:3)':'union SEXPREC::(anonymous at c_files/pr39740.c:27:3)' lvalue ->u 0x7fd2ca026310
+|   | |       |                         `-ImplicitCastExpr 0x7fd2ca02f838 <col:10, col:15> 'SEXP':'struct SEXPREC *' <LValueToRValue>
+|   | |       |                           `-ParenExpr 0x7fd2ca02f818 <col:10, col:15> 'SEXP':'struct SEXPREC *' lvalue
+|   | |       |                             `-DeclRefExpr 0x7fd2ca02f7f0 <col:11> 'SEXP':'struct SEXPREC *' lvalue ParmVar 0x7fd2ca031238 'arg2' 'SEXP':'struct SEXPREC *'
+|   | |       `-<<<NULL>>>
+|   | `-IfStmt 0x7fd2ca02fe00 <line:132:8, line:135:5>
+|   |   |-<<<NULL>>>
+|   |   |-<<<NULL>>>
+|   |   |-BinaryOperator 0x7fd2ca02fc28 <line:132:12, col:19> 'int' '=='
+|   |   | |-ImplicitCastExpr 0x7fd2ca02fbf8 <col:12> 'SEXP':'struct SEXPREC *' <LValueToRValue>
+|   |   | | `-DeclRefExpr 0x7fd2ca02fba8 <col:12> 'SEXP':'struct SEXPREC *' lvalue ParmVar 0x7fd2ca031158 'fun' 'SEXP':'struct SEXPREC *'
+|   |   | `-ImplicitCastExpr 0x7fd2ca02fc10 <col:19> 'SEXP':'struct SEXPREC *' <LValueToRValue>
+|   |   |   `-DeclRefExpr 0x7fd2ca02fbd0 <col:19> 'SEXP':'struct SEXPREC *' lvalue Var 0x7fd2ca02e890 'DivideSymbol' 'SEXP':'struct SEXPREC *'
+|   |   |-CompoundStmt 0x7fd2ca02fde0 <line:133:5, line:135:5>
+|   |   | `-BinaryOperator 0x7fd2ca02fdb8 <line:134:7, col:47> 'SEXP':'struct SEXPREC *' '='
+|   |   |   |-DeclRefExpr 0x7fd2ca02fc50 <col:7> 'SEXP':'struct SEXPREC *' lvalue Var 0x7fd2ca031390 'ans' 'SEXP':'struct SEXPREC *'
+|   |   |   `-CallExpr 0x7fd2ca02fd30 <col:13, col:47> 'SEXP':'struct SEXPREC *'
+|   |   |     |-ImplicitCastExpr 0x7fd2ca02fd18 <col:13> 'SEXP (*)(SEXP, SEXP, SEXP)' <FunctionToPointerDecay>
+|   |   |     | `-DeclRefExpr 0x7fd2ca02fc78 <col:13> 'SEXP (SEXP, SEXP, SEXP)' Function 0x7fd2ca02e2e0 'Rf_lang3' 'SEXP (SEXP, SEXP, SEXP)'
+|   |   |     |-ImplicitCastExpr 0x7fd2ca02fd70 <col:23> 'SEXP':'struct SEXPREC *' <LValueToRValue>
+|   |   |     | `-DeclRefExpr 0x7fd2ca02fca0 <col:23> 'SEXP':'struct SEXPREC *' lvalue Var 0x7fd2ca02e890 'DivideSymbol' 'SEXP':'struct SEXPREC *'
+|   |   |     |-ImplicitCastExpr 0x7fd2ca02fd88 <col:37> 'SEXP':'struct SEXPREC *' <LValueToRValue>
+|   |   |     | `-DeclRefExpr 0x7fd2ca02fcc8 <col:37> 'SEXP':'struct SEXPREC *' lvalue ParmVar 0x7fd2ca0311c8 'arg1' 'SEXP':'struct SEXPREC *'
+|   |   |     `-ImplicitCastExpr 0x7fd2ca02fda0 <col:43> 'SEXP':'struct SEXPREC *' <LValueToRValue>
+|   |   |       `-DeclRefExpr 0x7fd2ca02fcf0 <col:43> 'SEXP':'struct SEXPREC *' lvalue ParmVar 0x7fd2ca031238 'arg2' 'SEXP':'struct SEXPREC *'
+|   |   `-<<<NULL>>>
+|   `-ReturnStmt 0x7fd2ca02feb0 <line:137:3, col:10>
+|     `-ImplicitCastExpr 0x7fd2ca02fe98 <col:10> 'SEXP':'struct SEXPREC *' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd2ca02fe70 <col:10> 'SEXP':'struct SEXPREC *' lvalue Var 0x7fd2ca031390 'ans' 'SEXP':'struct SEXPREC *'
+|-FunctionDecl 0x7fd2ca0324b0 <line:141:1, line:151:1> line:142:1 used D 'SEXP (SEXP, SEXP)' static
+| |-ParmVarDecl 0x7fd2ca02ff08 <col:4, col:9> col:9 used expr 'SEXP':'struct SEXPREC *'
+| |-ParmVarDecl 0x7fd2ca02ff78 <col:15, col:20> col:20 used var 'SEXP':'struct SEXPREC *'
+| `-CompoundStmt 0x7fd2ca032ec0 <line:143:1, line:151:1>
+|   `-ReturnStmt 0x7fd2ca032ea8 <line:144:3, line:150:29>
+|     `-CallExpr 0x7fd2ca032e50 <line:144:10, line:150:29> 'SEXP':'struct SEXPREC *'
+|       |-ImplicitCastExpr 0x7fd2ca032e38 <line:144:10> 'SEXP (*)(SEXP, SEXP, SEXP)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fd2ca032558 <col:10> 'SEXP (SEXP, SEXP, SEXP)' Function 0x7fd2ca0312d0 'simplify' 'SEXP (SEXP, SEXP, SEXP)'
+|       |-ImplicitCastExpr 0x7fd2ca032e90 <col:20> 'SEXP':'struct SEXPREC *' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fd2ca032580 <col:20> 'SEXP':'struct SEXPREC *' lvalue Var 0x7fd2ca02e7b0 'PlusSymbol' 'SEXP':'struct SEXPREC *'
+|       |-CallExpr 0x7fd2ca0329a0 <line:145:6, line:147:8> 'SEXP':'struct SEXPREC *'
+|       | |-ImplicitCastExpr 0x7fd2ca032988 <line:145:6> 'SEXP (*)(SEXP)' <FunctionToPointerDecay>
+|       | | `-DeclRefExpr 0x7fd2ca0325a8 <col:6> 'SEXP (SEXP)' Function 0x7fd2ca02eac8 'PP' 'SEXP (SEXP)'
+|       | `-CallExpr 0x7fd2ca0328c0 <col:10, line:147:7> 'SEXP':'struct SEXPREC *'
+|       |   |-ImplicitCastExpr 0x7fd2ca0328a8 <line:145:10> 'SEXP (*)(SEXP, SEXP)' <FunctionToPointerDecay>
+|       |   | `-DeclRefExpr 0x7fd2ca0325d0 <col:10> 'SEXP (SEXP, SEXP)' Function 0x7fd2ca0324b0 'D' 'SEXP (SEXP, SEXP)'
+|       |   |-ImplicitCastExpr 0x7fd2ca0328f8 <line:146:11, col:58> 'struct SEXPREC *' <LValueToRValue>
+|       |   | `-ParenExpr 0x7fd2ca032800 <col:11, col:58> 'struct SEXPREC *' lvalue
+|       |   |   `-MemberExpr 0x7fd2ca0327c8 <col:12, col:52> 'struct SEXPREC *' lvalue .carval 0x7fd2ca025ee0
+|       |   |     `-MemberExpr 0x7fd2ca032790 <col:12, col:44> 'struct listsxp_struct':'struct listsxp_struct' lvalue .listsxp 0x7fd2ca026220
+|       |   |       `-MemberExpr 0x7fd2ca032758 <col:12, col:42> 'union (anonymous union at c_files/pr39740.c:27:3)':'union SEXPREC::(anonymous at c_files/pr39740.c:27:3)' lvalue ->u 0x7fd2ca026310
+|       |   |         `-ImplicitCastExpr 0x7fd2ca032740 <col:12, col:39> 'struct SEXPREC *' <LValueToRValue>
+|       |   |           `-ParenExpr 0x7fd2ca032720 <col:12, col:39> 'struct SEXPREC *' lvalue
+|       |   |             `-ParenExpr 0x7fd2ca032700 <col:13, col:38> 'struct SEXPREC *' lvalue
+|       |   |               `-MemberExpr 0x7fd2ca0326c8 <col:14, col:32> 'struct SEXPREC *' lvalue .cdrval 0x7fd2ca025f50
+|       |   |                 `-MemberExpr 0x7fd2ca032690 <col:14, col:24> 'struct listsxp_struct':'struct listsxp_struct' lvalue .listsxp 0x7fd2ca026220
+|       |   |                   `-MemberExpr 0x7fd2ca032658 <col:14, col:22> 'union (anonymous union at c_files/pr39740.c:27:3)':'union SEXPREC::(anonymous at c_files/pr39740.c:27:3)' lvalue ->u 0x7fd2ca026310
+|       |   |                     `-ImplicitCastExpr 0x7fd2ca032640 <col:14, col:19> 'SEXP':'struct SEXPREC *' <LValueToRValue>
+|       |   |                       `-ParenExpr 0x7fd2ca032620 <col:14, col:19> 'SEXP':'struct SEXPREC *' lvalue
+|       |   |                         `-DeclRefExpr 0x7fd2ca0325f8 <col:15> 'SEXP':'struct SEXPREC *' lvalue ParmVar 0x7fd2ca02ff08 'expr' 'SEXP':'struct SEXPREC *'
+|       |   `-ImplicitCastExpr 0x7fd2ca032910 <line:147:4> 'SEXP':'struct SEXPREC *' <LValueToRValue>
+|       |     `-DeclRefExpr 0x7fd2ca032820 <col:4> 'SEXP':'struct SEXPREC *' lvalue ParmVar 0x7fd2ca02ff78 'var' 'SEXP':'struct SEXPREC *'
+|       `-CallExpr 0x7fd2ca032e08 <line:148:6, line:150:28> 'SEXP':'struct SEXPREC *'
+|         |-ImplicitCastExpr 0x7fd2ca032df0 <line:148:6> 'SEXP (*)(SEXP)' <FunctionToPointerDecay>
+|         | `-DeclRefExpr 0x7fd2ca0329d0 <col:6> 'SEXP (SEXP)' Function 0x7fd2ca02eac8 'PP' 'SEXP (SEXP)'
+|         `-CallExpr 0x7fd2ca032d88 <col:10, line:150:27> 'SEXP':'struct SEXPREC *'
+|           |-ImplicitCastExpr 0x7fd2ca032d70 <line:148:10> 'SEXP (*)(SEXP, SEXP)' <FunctionToPointerDecay>
+|           | `-DeclRefExpr 0x7fd2ca0329f8 <col:10> 'SEXP (SEXP, SEXP)' Function 0x7fd2ca0324b0 'D' 'SEXP (SEXP, SEXP)'
+|           |-ImplicitCastExpr 0x7fd2ca032dc0 <line:149:11, line:150:21> 'struct SEXPREC *' <LValueToRValue>
+|           | `-ParenExpr 0x7fd2ca032d28 <line:149:11, line:150:21> 'struct SEXPREC *' lvalue
+|           |   `-MemberExpr 0x7fd2ca032cf0 <line:149:12, line:150:15> 'struct SEXPREC *' lvalue .carval 0x7fd2ca025ee0
+|           |     `-MemberExpr 0x7fd2ca032cb8 <line:149:12, line:150:7> 'struct listsxp_struct':'struct listsxp_struct' lvalue .listsxp 0x7fd2ca026220
+|           |       `-MemberExpr 0x7fd2ca032c80 <line:149:12, line:150:5> 'union (anonymous union at c_files/pr39740.c:27:3)':'union SEXPREC::(anonymous at c_files/pr39740.c:27:3)' lvalue ->u 0x7fd2ca026310
+|           |         `-ImplicitCastExpr 0x7fd2ca032c68 <line:149:12, col:61> 'struct SEXPREC *' <LValueToRValue>
+|           |           `-ParenExpr 0x7fd2ca032c48 <col:12, col:61> 'struct SEXPREC *' lvalue
+|           |             `-ParenExpr 0x7fd2ca032c28 <col:13, col:60> 'struct SEXPREC *' lvalue
+|           |               `-MemberExpr 0x7fd2ca032bf0 <col:14, col:54> 'struct SEXPREC *' lvalue .cdrval 0x7fd2ca025f50
+|           |                 `-MemberExpr 0x7fd2ca032bb8 <col:14, col:46> 'struct listsxp_struct':'struct listsxp_struct' lvalue .listsxp 0x7fd2ca026220
+|           |                   `-MemberExpr 0x7fd2ca032b80 <col:14, col:44> 'union (anonymous union at c_files/pr39740.c:27:3)':'union SEXPREC::(anonymous at c_files/pr39740.c:27:3)' lvalue ->u 0x7fd2ca026310
+|           |                     `-ImplicitCastExpr 0x7fd2ca032b68 <col:14, col:41> 'struct SEXPREC *' <LValueToRValue>
+|           |                       `-ParenExpr 0x7fd2ca032b48 <col:14, col:41> 'struct SEXPREC *' lvalue
+|           |                         `-ParenExpr 0x7fd2ca032b28 <col:15, col:40> 'struct SEXPREC *' lvalue
+|           |                           `-MemberExpr 0x7fd2ca032af0 <col:16, col:34> 'struct SEXPREC *' lvalue .cdrval 0x7fd2ca025f50
+|           |                             `-MemberExpr 0x7fd2ca032ab8 <col:16, col:26> 'struct listsxp_struct':'struct listsxp_struct' lvalue .listsxp 0x7fd2ca026220
+|           |                               `-MemberExpr 0x7fd2ca032a80 <col:16, col:24> 'union (anonymous union at c_files/pr39740.c:27:3)':'union SEXPREC::(anonymous at c_files/pr39740.c:27:3)' lvalue ->u 0x7fd2ca026310
+|           |                                 `-ImplicitCastExpr 0x7fd2ca032a68 <col:16, col:21> 'SEXP':'struct SEXPREC *' <LValueToRValue>
+|           |                                   `-ParenExpr 0x7fd2ca032a48 <col:16, col:21> 'SEXP':'struct SEXPREC *' lvalue
+|           |                                     `-DeclRefExpr 0x7fd2ca032a20 <col:17> 'SEXP':'struct SEXPREC *' lvalue ParmVar 0x7fd2ca02ff08 'expr' 'SEXP':'struct SEXPREC *'
+|           `-ImplicitCastExpr 0x7fd2ca032dd8 <line:150:24> 'SEXP':'struct SEXPREC *' <LValueToRValue>
+|             `-DeclRefExpr 0x7fd2ca032d48 <col:24> 'SEXP':'struct SEXPREC *' lvalue ParmVar 0x7fd2ca02ff78 'var' 'SEXP':'struct SEXPREC *'
+`-FunctionDecl 0x7fd2ca0330e0 <line:153:1, line:162:1> line:154:1 do_D 'SEXP (SEXP, SEXP, SEXP, SEXP)'
+  |-ParmVarDecl 0x7fd2ca032ef0 <col:7, col:12> col:12 call 'SEXP':'struct SEXPREC *'
+  |-ParmVarDecl 0x7fd2ca032f60 <col:18, col:23> col:23 op 'SEXP':'struct SEXPREC *'
+  |-ParmVarDecl 0x7fd2ca032fd0 <col:27, col:32> col:32 used args 'SEXP':'struct SEXPREC *'
+  |-ParmVarDecl 0x7fd2ca033040 <col:38, col:43> col:43 env 'SEXP':'struct SEXPREC *'
+  `-CompoundStmt 0x7fd2ca031878 <line:155:1, line:162:1>
+    |-DeclStmt 0x7fd2ca033290 <line:156:3, col:17>
+    | |-VarDecl 0x7fd2ca0331a8 <col:3, col:8> col:8 used expr 'SEXP':'struct SEXPREC *'
+    | `-VarDecl 0x7fd2ca033218 <col:3, col:14> col:14 used var 'SEXP':'struct SEXPREC *'
+    |-BinaryOperator 0x7fd2ca033398 <line:157:3, col:21> 'SEXP':'struct SEXPREC *' '='
+    | |-DeclRefExpr 0x7fd2ca0332a8 <col:3> 'SEXP':'struct SEXPREC *' lvalue Var 0x7fd2ca033218 'var' 'SEXP':'struct SEXPREC *'
+    | `-CallExpr 0x7fd2ca033370 <col:9, col:21> 'SEXP':'struct SEXPREC *'
+    |   `-ImplicitCastExpr 0x7fd2ca033358 <col:9> 'SEXP (*)()' <FunctionToPointerDecay>
+    |     `-DeclRefExpr 0x7fd2ca0332d0 <col:9> 'SEXP ()' Function 0x7fd2ca030518 'Rf_install' 'SEXP ()'
+    |-BinaryOperator 0x7fd2ca031540 <line:158:3, col:35> 'SEXP':'struct SEXPREC *' '='
+    | |-DeclRefExpr 0x7fd2ca0333c0 <col:3> 'SEXP':'struct SEXPREC *' lvalue Var 0x7fd2ca0331a8 'expr' 'SEXP':'struct SEXPREC *'
+    | `-ImplicitCastExpr 0x7fd2ca031528 <col:10, col:35> 'struct SEXPREC *' <LValueToRValue>
+    |   `-ParenExpr 0x7fd2ca031508 <col:10, col:35> 'struct SEXPREC *' lvalue
+    |     `-MemberExpr 0x7fd2ca0314d0 <col:11, col:29> 'struct SEXPREC *' lvalue .carval 0x7fd2ca025ee0
+    |       `-MemberExpr 0x7fd2ca031498 <col:11, col:21> 'struct listsxp_struct':'struct listsxp_struct' lvalue .listsxp 0x7fd2ca026220
+    |         `-MemberExpr 0x7fd2ca031460 <col:11, col:19> 'union (anonymous union at c_files/pr39740.c:27:3)':'union SEXPREC::(anonymous at c_files/pr39740.c:27:3)' lvalue ->u 0x7fd2ca026310
+    |           `-ImplicitCastExpr 0x7fd2ca031448 <col:11, col:16> 'SEXP':'struct SEXPREC *' <LValueToRValue>
+    |             `-ParenExpr 0x7fd2ca031428 <col:11, col:16> 'SEXP':'struct SEXPREC *' lvalue
+    |               `-DeclRefExpr 0x7fd2ca031400 <col:12> 'SEXP':'struct SEXPREC *' lvalue ParmVar 0x7fd2ca032fd0 'args' 'SEXP':'struct SEXPREC *'
+    |-CallExpr 0x7fd2ca0316f0 <line:159:3, col:35> 'SEXP':'struct SEXPREC *'
+    | |-ImplicitCastExpr 0x7fd2ca0316d8 <col:3> 'SEXP (*)(SEXP)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fd2ca031568 <col:3> 'SEXP (SEXP)' Function 0x7fd2ca02c0a0 'Rf_protect' 'SEXP (SEXP)'
+    | `-BinaryOperator 0x7fd2ca0316b0 <col:15, col:34> 'SEXP':'struct SEXPREC *' '='
+    |   |-DeclRefExpr 0x7fd2ca031590 <col:15> 'SEXP':'struct SEXPREC *' lvalue Var 0x7fd2ca0331a8 'expr' 'SEXP':'struct SEXPREC *'
+    |   `-CallExpr 0x7fd2ca031648 <col:22, col:34> 'SEXP':'struct SEXPREC *'
+    |     |-ImplicitCastExpr 0x7fd2ca031630 <col:22> 'SEXP (*)(SEXP, SEXP)' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x7fd2ca0315b8 <col:22> 'SEXP (SEXP, SEXP)' Function 0x7fd2ca0324b0 'D' 'SEXP (SEXP, SEXP)'
+    |     |-ImplicitCastExpr 0x7fd2ca031680 <col:25> 'SEXP':'struct SEXPREC *' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7fd2ca0315e0 <col:25> 'SEXP':'struct SEXPREC *' lvalue Var 0x7fd2ca0331a8 'expr' 'SEXP':'struct SEXPREC *'
+    |     `-ImplicitCastExpr 0x7fd2ca031698 <col:31> 'SEXP':'struct SEXPREC *' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fd2ca031608 <col:31> 'SEXP':'struct SEXPREC *' lvalue Var 0x7fd2ca033218 'var' 'SEXP':'struct SEXPREC *'
+    |-BinaryOperator 0x7fd2ca0317f8 <line:160:3, col:25> 'SEXP':'struct SEXPREC *' '='
+    | |-DeclRefExpr 0x7fd2ca031720 <col:3> 'SEXP':'struct SEXPREC *' lvalue Var 0x7fd2ca0331a8 'expr' 'SEXP':'struct SEXPREC *'
+    | `-CallExpr 0x7fd2ca0317b0 <col:10, col:25> 'SEXP':'struct SEXPREC *'
+    |   |-ImplicitCastExpr 0x7fd2ca031798 <col:10> 'SEXP (*)(SEXP)' <FunctionToPointerDecay>
+    |   | `-DeclRefExpr 0x7fd2ca031748 <col:10> 'SEXP (SEXP)' Function 0x7fd2ca030400 'AddParens' 'SEXP (SEXP)'
+    |   `-ImplicitCastExpr 0x7fd2ca0317e0 <col:21> 'SEXP':'struct SEXPREC *' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fd2ca031770 <col:21> 'SEXP':'struct SEXPREC *' lvalue Var 0x7fd2ca0331a8 'expr' 'SEXP':'struct SEXPREC *'
+    `-ReturnStmt 0x7fd2ca031860 <line:161:3, col:10>
+      `-ImplicitCastExpr 0x7fd2ca031848 <col:10> 'SEXP':'struct SEXPREC *' <LValueToRValue>
+        `-DeclRefExpr 0x7fd2ca031820 <col:10> 'SEXP':'struct SEXPREC *' lvalue Var 0x7fd2ca0331a8 'expr' 'SEXP':'struct SEXPREC *'

@@ -1,0 +1,47 @@
+TranslationUnitDecl 0x7fc3fa8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc3fa826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc3fa826740 '__int128'
+|-TypedefDecl 0x7fc3fa826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc3fa826760 'unsigned __int128'
+|-TypedefDecl 0x7fc3fa826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc3fa826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc3fa826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc3fa826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc3fa826dc0 'char *'
+|   `-BuiltinType 0x7fc3fa826560 'char'
+|-TypedefDecl 0x7fc3fa8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc3fa827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc3fa826ee0 'struct __va_list_tag'
+|     `-Record 0x7fc3fa826e58 '__va_list_tag'
+|-RecordDecl 0x7fc3fa827120 <c_files/pr65680.c:4:1, line:7:1> line:4:8 struct S definition
+| `-FieldDecl 0x7fc3fa877418 <line:6:3, col:11> col:7 referenced f 'int'
+|   `-IntegerLiteral 0x7fc3fa8271d0 <col:11> 'int' 1
+|-VarDecl 0x7fc3fa877658 <line:4:1, line:7:26> col:3 used a 'struct S [100000000000000001][3]'
+|-FunctionDecl 0x7fc3fa8777d0 <line:9:1, line:14:1> line:10:1 foo 'void (void)'
+| `-CompoundStmt 0x7fc3fa877bc0 <line:11:1, line:14:1>
+|   |-DeclStmt 0x7fc3fa877998 <line:12:3, col:21>
+|   | `-VarDecl 0x7fc3fa877888 <col:3, col:20> col:12 used b 'struct S':'struct S' cinit
+|   |   `-InitListExpr 0x7fc3fa877950 <col:16, col:20> 'struct S':'struct S'
+|   |     `-IntegerLiteral 0x7fc3fa8778e8 <col:18> 'int' 0
+|   `-BinaryOperator 0x7fc3fa877b98 <line:13:3, col:30> 'struct S':'struct S' '='
+|     |-ArraySubscriptExpr 0x7fc3fa877b30 <col:3, col:26> 'struct S':'struct S' lvalue
+|     | |-ImplicitCastExpr 0x7fc3fa877b18 <col:3, col:23> 'struct S *' <ArrayToPointerDecay>
+|     | | `-ArraySubscriptExpr 0x7fc3fa877a70 <col:3, col:23> 'struct S [3]' lvalue
+|     | |   |-ImplicitCastExpr 0x7fc3fa877a58 <col:3> 'struct S (*)[3]' <ArrayToPointerDecay>
+|     | |   | `-DeclRefExpr 0x7fc3fa8779b0 <col:3> 'struct S [100000000000000001][3]' lvalue Var 0x7fc3fa877658 'a' 'struct S [100000000000000001][3]'
+|     | |   `-IntegerLiteral 0x7fc3fa8779d8 <col:5> 'long' 100000000000000000
+|     | `-IntegerLiteral 0x7fc3fa877a98 <col:25> 'int' 0
+|     `-ImplicitCastExpr 0x7fc3fa877b80 <col:30> 'struct S':'struct S' <LValueToRValue>
+|       `-DeclRefExpr 0x7fc3fa877b58 <col:30> 'struct S':'struct S' lvalue Var 0x7fc3fa877888 'b' 'struct S':'struct S'
+`-FunctionDecl 0x7fc3fa877c78 <line:16:1, line:20:1> line:17:1 bar 'void (void)'
+  `-CompoundStmt 0x7fc3fa877e78 <line:18:1, line:20:1>
+    `-BinaryOperator 0x7fc3fa877e50 <line:19:3, col:32> 'int' '='
+      |-MemberExpr 0x7fc3fa877df8 <col:3, col:28> 'int' lvalue bitfield .f 0x7fc3fa877418
+      | `-ArraySubscriptExpr 0x7fc3fa877dd0 <col:3, col:26> 'struct S':'struct S' lvalue
+      |   |-ImplicitCastExpr 0x7fc3fa877db8 <col:3, col:23> 'struct S *' <ArrayToPointerDecay>
+      |   | `-ArraySubscriptExpr 0x7fc3fa877d70 <col:3, col:23> 'struct S [3]' lvalue
+      |   |   |-ImplicitCastExpr 0x7fc3fa877d58 <col:3> 'struct S (*)[3]' <ArrayToPointerDecay>
+      |   |   | `-DeclRefExpr 0x7fc3fa877d10 <col:3> 'struct S [100000000000000001][3]' lvalue Var 0x7fc3fa877658 'a' 'struct S [100000000000000001][3]'
+      |   |   `-IntegerLiteral 0x7fc3fa877d38 <col:5> 'long' 100000000000000000
+      |   `-IntegerLiteral 0x7fc3fa877d98 <col:25> 'int' 0
+      `-IntegerLiteral 0x7fc3fa877e30 <col:32> 'int' 1

@@ -1,0 +1,39 @@
+FileAST: 
+  Typedef: value, [], ['typedef']
+    TypeDecl: value, []
+      IdentifierType: ['unsigned', 'long', 'long']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: v, [], [], []
+            PtrDecl: []
+              TypeDecl: v, []
+                IdentifierType: ['value']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+  FuncDef: 
+    Decl: test, [], [], []
+      FuncDecl: 
+        TypeDecl: test, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: v, [], [], []
+        TypeDecl: v, []
+          IdentifierType: ['value']
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          UnaryOp: &
+            ID: v
+      If: 
+        BinaryOp: ==
+          UnaryOp: p--
+            ID: v
+          Constant: int, 1
+        FuncCall: 
+          ID: foo
+          ExprList: 
+            UnaryOp: &
+              ID: v

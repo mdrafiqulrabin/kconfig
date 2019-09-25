@@ -1,0 +1,65 @@
+FileAST: 
+  FuncDef: 
+    Decl: mac, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: a, ['const']
+                IdentifierType: ['short']
+          Decl: b, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: b, ['const']
+                IdentifierType: ['short']
+          Decl: sqr, [], [], []
+            TypeDecl: sqr, []
+              IdentifierType: ['int']
+          Decl: sum, [], [], []
+            PtrDecl: []
+              TypeDecl: sum, []
+                IdentifierType: ['int']
+        TypeDecl: mac, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: dotp, [], [], []
+        TypeDecl: dotp, []
+          IdentifierType: ['int']
+        UnaryOp: *
+          ID: sum
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 150
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          Assignment: +=
+            ID: dotp
+            BinaryOp: *
+              ArrayRef: 
+                ID: b
+                ID: i
+              ArrayRef: 
+                ID: a
+                ID: i
+          Assignment: +=
+            ID: sqr
+            BinaryOp: *
+              ArrayRef: 
+                ID: b
+                ID: i
+              ArrayRef: 
+                ID: b
+                ID: i
+      Assignment: =
+        UnaryOp: *
+          ID: sum
+        ID: dotp
+      Return: 
+        ID: sqr

@@ -1,0 +1,11 @@
+pr67984.c: In function ‘foo’:
+pr67984.c:6:3: error: ‘for’ loop initial declarations are only allowed in C99 mode
+   for (int n = 0; n < N; ++n)
+   ^
+pr67984.c:6:3: note: use option -std=c99 or -std=gnu99 to compile your code
+pr67984.c:11:3: error: ‘for’ loop initial declarations are only allowed in C99 mode
+   for (unsigned int k = 1; k < N; ++k) {
+   ^
+pr67984.c:13:5: error: ‘for’ loop initial declarations are only allowed in C99 mode
+     for (int n = 0; n < N; ++n)
+     ^

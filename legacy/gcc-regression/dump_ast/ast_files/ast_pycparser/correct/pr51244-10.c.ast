@@ -1,0 +1,49 @@
+FileAST: 
+  FuncDef: 
+    Decl: test_00, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            PtrDecl: []
+              TypeDecl: p, []
+                IdentifierType: ['int']
+        TypeDecl: test_00, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: nr, [], [], []
+        TypeDecl: nr, []
+          IdentifierType: ['int']
+        Constant: int, 15
+      Decl: addr, ['volatile'], [], []
+        PtrDecl: []
+          TypeDecl: addr, ['volatile']
+            IdentifierType: ['char']
+        Cast: 
+          Typename: None, ['volatile']
+            PtrDecl: []
+              TypeDecl: None, ['volatile']
+                IdentifierType: ['char']
+          UnaryOp: &
+            ArrayRef: 
+              ID: p
+              Constant: int, 1
+      If: 
+        BinaryOp: ==
+          BinaryOp: &
+            ArrayRef: 
+              ID: addr
+              BinaryOp: ^
+                BinaryOp: >>
+                  ID: nr
+                  Constant: int, 3
+                Constant: int, 7
+            BinaryOp: <<
+              Constant: int, 1
+              BinaryOp: &
+                ID: nr
+                Constant: int, 7
+          Constant: int, 0
+        Return: 
+          Constant: int, 40
+        Return: 
+          Constant: int, 50

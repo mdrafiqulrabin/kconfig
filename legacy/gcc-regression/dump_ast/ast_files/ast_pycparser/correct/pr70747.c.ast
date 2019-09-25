@@ -1,0 +1,35 @@
+FileAST: 
+  Decl: a, [], [], []
+    PtrDecl: []
+      TypeDecl: a, []
+        IdentifierType: ['int']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: fn1, [], [], []
+      FuncDecl: 
+        TypeDecl: fn1, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        ID: a
+        FuncCall: 
+          ID: __builtin_malloc
+          ExprList: 
+            BinaryOp: *
+              UnaryOp: sizeof
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['int']
+              Constant: int, 2
+      Assignment: =
+        ID: b
+        BinaryOp: ==
+          UnaryOp: &
+            ArrayRef: 
+              ID: a
+              Constant: int, 1
+          ExprList: 
+            Constant: int, 0
+            Constant: int, 0

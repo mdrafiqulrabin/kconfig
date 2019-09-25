@@ -1,0 +1,2046 @@
+FileAST: 
+  Typedef: complex, [], ['typedef']
+    TypeDecl: complex, []
+      Struct: None
+        Decl: real, [], [], []
+          TypeDecl: real, []
+            IdentifierType: ['double']
+        Decl: imag, [], [], []
+          TypeDecl: imag, []
+            IdentifierType: ['double']
+  Typedef: double_complex, [], ['typedef']
+    TypeDecl: double_complex, []
+      Struct: None
+        Decl: real, [], [], []
+          TypeDecl: real, []
+            IdentifierType: ['double']
+        Decl: imag, [], [], []
+          TypeDecl: imag, []
+            IdentifierType: ['double']
+  Decl: cmplx, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: x, [], [], []
+          TypeDecl: x, []
+            IdentifierType: ['double']
+        Decl: y, [], [], []
+          TypeDecl: y, []
+            IdentifierType: ['double']
+      TypeDecl: cmplx, []
+        IdentifierType: ['complex']
+  Decl: cadd, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: a, [], [], []
+          PtrDecl: []
+            TypeDecl: a, []
+              IdentifierType: ['complex']
+        Decl: b, [], [], []
+          PtrDecl: []
+            TypeDecl: b, []
+              IdentifierType: ['complex']
+      TypeDecl: cadd, []
+        IdentifierType: ['complex']
+  Decl: cmul, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: a, [], [], []
+          PtrDecl: []
+            TypeDecl: a, []
+              IdentifierType: ['complex']
+        Decl: b, [], [], []
+          PtrDecl: []
+            TypeDecl: b, []
+              IdentifierType: ['complex']
+      TypeDecl: cmul, []
+        IdentifierType: ['complex']
+  Decl: csub, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: a, [], [], []
+          PtrDecl: []
+            TypeDecl: a, []
+              IdentifierType: ['complex']
+        Decl: b, [], [], []
+          PtrDecl: []
+            TypeDecl: b, []
+              IdentifierType: ['complex']
+      TypeDecl: csub, []
+        IdentifierType: ['complex']
+  Decl: cdiv, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: a, [], [], []
+          PtrDecl: []
+            TypeDecl: a, []
+              IdentifierType: ['complex']
+        Decl: b, [], [], []
+          PtrDecl: []
+            TypeDecl: b, []
+              IdentifierType: ['complex']
+      TypeDecl: cdiv, []
+        IdentifierType: ['complex']
+  Decl: conjg, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: a, [], [], []
+          PtrDecl: []
+            TypeDecl: a, []
+              IdentifierType: ['complex']
+      TypeDecl: conjg, []
+        IdentifierType: ['complex']
+  Decl: ce_itheta, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: theta, [], [], []
+          TypeDecl: theta, []
+            IdentifierType: ['double']
+      TypeDecl: ce_itheta, []
+        IdentifierType: ['complex']
+  Decl: dcmplx, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: x, [], [], []
+          TypeDecl: x, []
+            IdentifierType: ['double']
+        Decl: y, [], [], []
+          TypeDecl: y, []
+            IdentifierType: ['double']
+      TypeDecl: dcmplx, []
+        IdentifierType: ['double_complex']
+  Decl: dcadd, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: a, [], [], []
+          PtrDecl: []
+            TypeDecl: a, []
+              IdentifierType: ['double_complex']
+        Decl: b, [], [], []
+          PtrDecl: []
+            TypeDecl: b, []
+              IdentifierType: ['double_complex']
+      TypeDecl: dcadd, []
+        IdentifierType: ['double_complex']
+  Decl: dcmul, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: a, [], [], []
+          PtrDecl: []
+            TypeDecl: a, []
+              IdentifierType: ['double_complex']
+        Decl: b, [], [], []
+          PtrDecl: []
+            TypeDecl: b, []
+              IdentifierType: ['double_complex']
+      TypeDecl: dcmul, []
+        IdentifierType: ['double_complex']
+  Decl: dcsub, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: a, [], [], []
+          PtrDecl: []
+            TypeDecl: a, []
+              IdentifierType: ['double_complex']
+        Decl: b, [], [], []
+          PtrDecl: []
+            TypeDecl: b, []
+              IdentifierType: ['double_complex']
+      TypeDecl: dcsub, []
+        IdentifierType: ['double_complex']
+  Decl: dcdiv, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: a, [], [], []
+          PtrDecl: []
+            TypeDecl: a, []
+              IdentifierType: ['double_complex']
+        Decl: b, [], [], []
+          PtrDecl: []
+            TypeDecl: b, []
+              IdentifierType: ['double_complex']
+      TypeDecl: dcdiv, []
+        IdentifierType: ['double_complex']
+  Decl: dconjg, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: a, [], [], []
+          PtrDecl: []
+            TypeDecl: a, []
+              IdentifierType: ['double_complex']
+      TypeDecl: dconjg, []
+        IdentifierType: ['double_complex']
+  Decl: dcexp, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: a, [], [], []
+          PtrDecl: []
+            TypeDecl: a, []
+              IdentifierType: ['double_complex']
+      TypeDecl: dcexp, []
+        IdentifierType: ['double_complex']
+  Decl: dclog, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: a, [], [], []
+          PtrDecl: []
+            TypeDecl: a, []
+              IdentifierType: ['double_complex']
+      TypeDecl: dclog, []
+        IdentifierType: ['double_complex']
+  Decl: dcsqrt, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: z, [], [], []
+          PtrDecl: []
+            TypeDecl: z, []
+              IdentifierType: ['double_complex']
+      TypeDecl: dcsqrt, []
+        IdentifierType: ['double_complex']
+  Decl: dce_itheta, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: theta, [], [], []
+          TypeDecl: theta, []
+            IdentifierType: ['double']
+      TypeDecl: dce_itheta, []
+        IdentifierType: ['double_complex']
+  Typedef: double_prn, [], ['typedef']
+    TypeDecl: double_prn, []
+      Struct: None
+        Decl: r0, [], [], []
+          TypeDecl: r0, []
+            IdentifierType: ['unsigned', 'long']
+        Decl: r1, [], [], []
+          TypeDecl: r1, []
+            IdentifierType: ['unsigned', 'long']
+        Decl: r2, [], [], []
+          TypeDecl: r2, []
+            IdentifierType: ['unsigned', 'long']
+        Decl: r3, [], [], []
+          TypeDecl: r3, []
+            IdentifierType: ['unsigned', 'long']
+        Decl: r4, [], [], []
+          TypeDecl: r4, []
+            IdentifierType: ['unsigned', 'long']
+        Decl: r5, [], [], []
+          TypeDecl: r5, []
+            IdentifierType: ['unsigned', 'long']
+        Decl: r6, [], [], []
+          TypeDecl: r6, []
+            IdentifierType: ['unsigned', 'long']
+        Decl: multiplier, [], [], []
+          TypeDecl: multiplier, []
+            IdentifierType: ['unsigned', 'long']
+        Decl: addend, [], [], []
+          TypeDecl: addend, []
+            IdentifierType: ['unsigned', 'long']
+        Decl: ic_state, [], [], []
+          TypeDecl: ic_state, []
+            IdentifierType: ['unsigned', 'long']
+        Decl: scale, [], [], []
+          TypeDecl: scale, []
+            IdentifierType: ['double']
+  Decl: myrand, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: prn_pt, [], [], []
+          PtrDecl: []
+            TypeDecl: prn_pt, []
+              IdentifierType: ['double_prn']
+      TypeDecl: myrand, []
+        IdentifierType: ['double']
+  Typedef: su3_matrix, [], ['typedef']
+    TypeDecl: su3_matrix, []
+      Struct: None
+        Decl: e, [], [], []
+          ArrayDecl: []
+            ArrayDecl: []
+              TypeDecl: e, []
+                IdentifierType: ['complex']
+              Constant: int, 3
+            Constant: int, 3
+  Typedef: su3_vector, [], ['typedef']
+    TypeDecl: su3_vector, []
+      Struct: None
+        Decl: c, [], [], []
+          ArrayDecl: []
+            TypeDecl: c, []
+              IdentifierType: ['complex']
+            Constant: int, 3
+  Typedef: anti_hermitmat, [], ['typedef']
+    TypeDecl: anti_hermitmat, []
+      Struct: None
+        Decl: m01, [], [], []
+          TypeDecl: m01, []
+            IdentifierType: ['complex']
+        Decl: m02, [], [], []
+          TypeDecl: m02, []
+            IdentifierType: ['complex']
+        Decl: m12, [], [], []
+          TypeDecl: m12, []
+            IdentifierType: ['complex']
+        Decl: m00im, [], [], []
+          TypeDecl: m00im, []
+            IdentifierType: ['double']
+        Decl: m11im, [], [], []
+          TypeDecl: m11im, []
+            IdentifierType: ['double']
+        Decl: m22im, [], [], []
+          TypeDecl: m22im, []
+            IdentifierType: ['double']
+        Decl: space, [], [], []
+          TypeDecl: space, []
+            IdentifierType: ['double']
+  Typedef: su2_matrix, [], ['typedef']
+    TypeDecl: su2_matrix, []
+      Struct: None
+        Decl: e, [], [], []
+          ArrayDecl: []
+            ArrayDecl: []
+              TypeDecl: e, []
+                IdentifierType: ['complex']
+              Constant: int, 2
+            Constant: int, 2
+  Typedef: wilson_vector, [], ['typedef']
+    TypeDecl: wilson_vector, []
+      Struct: None
+        Decl: d, [], [], []
+          ArrayDecl: []
+            TypeDecl: d, []
+              IdentifierType: ['su3_vector']
+            Constant: int, 4
+  Typedef: half_wilson_vector, [], ['typedef']
+    TypeDecl: half_wilson_vector, []
+      Struct: None
+        Decl: h, [], [], []
+          ArrayDecl: []
+            TypeDecl: h, []
+              IdentifierType: ['su3_vector']
+            Constant: int, 2
+  Typedef: color_wilson_vector, [], ['typedef']
+    TypeDecl: color_wilson_vector, []
+      Struct: None
+        Decl: c, [], [], []
+          ArrayDecl: []
+            TypeDecl: c, []
+              IdentifierType: ['wilson_vector']
+            Constant: int, 3
+  Typedef: spin_wilson_vector, [], ['typedef']
+    TypeDecl: spin_wilson_vector, []
+      Struct: None
+        Decl: d, [], [], []
+          ArrayDecl: []
+            TypeDecl: d, []
+              IdentifierType: ['wilson_vector']
+            Constant: int, 4
+  Typedef: wilson_matrix, [], ['typedef']
+    TypeDecl: wilson_matrix, []
+      Struct: None
+        Decl: d, [], [], []
+          ArrayDecl: []
+            TypeDecl: d, []
+              IdentifierType: ['color_wilson_vector']
+            Constant: int, 4
+  Typedef: wilson_propagator, [], ['typedef']
+    TypeDecl: wilson_propagator, []
+      Struct: None
+        Decl: c, [], [], []
+          ArrayDecl: []
+            TypeDecl: c, []
+              IdentifierType: ['spin_wilson_vector']
+            Constant: int, 3
+  Decl: mult_su3_nn, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: a, [], [], []
+          PtrDecl: []
+            TypeDecl: a, []
+              IdentifierType: ['su3_matrix']
+        Decl: b, [], [], []
+          PtrDecl: []
+            TypeDecl: b, []
+              IdentifierType: ['su3_matrix']
+        Decl: c, [], [], []
+          PtrDecl: []
+            TypeDecl: c, []
+              IdentifierType: ['su3_matrix']
+      TypeDecl: mult_su3_nn, []
+        IdentifierType: ['void']
+  Decl: mult_su3_na, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: a, [], [], []
+          PtrDecl: []
+            TypeDecl: a, []
+              IdentifierType: ['su3_matrix']
+        Decl: b, [], [], []
+          PtrDecl: []
+            TypeDecl: b, []
+              IdentifierType: ['su3_matrix']
+        Decl: c, [], [], []
+          PtrDecl: []
+            TypeDecl: c, []
+              IdentifierType: ['su3_matrix']
+      TypeDecl: mult_su3_na, []
+        IdentifierType: ['void']
+  Decl: mult_su3_an, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: a, [], [], []
+          PtrDecl: []
+            TypeDecl: a, []
+              IdentifierType: ['su3_matrix']
+        Decl: b, [], [], []
+          PtrDecl: []
+            TypeDecl: b, []
+              IdentifierType: ['su3_matrix']
+        Decl: c, [], [], []
+          PtrDecl: []
+            TypeDecl: c, []
+              IdentifierType: ['su3_matrix']
+      TypeDecl: mult_su3_an, []
+        IdentifierType: ['void']
+  Decl: realtrace_su3, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: a, [], [], []
+          PtrDecl: []
+            TypeDecl: a, []
+              IdentifierType: ['su3_matrix']
+        Decl: b, [], [], []
+          PtrDecl: []
+            TypeDecl: b, []
+              IdentifierType: ['su3_matrix']
+      TypeDecl: realtrace_su3, []
+        IdentifierType: ['double']
+  Decl: trace_su3, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: a, [], [], []
+          PtrDecl: []
+            TypeDecl: a, []
+              IdentifierType: ['su3_matrix']
+      TypeDecl: trace_su3, []
+        IdentifierType: ['complex']
+  Decl: complextrace_su3, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: a, [], [], []
+          PtrDecl: []
+            TypeDecl: a, []
+              IdentifierType: ['su3_matrix']
+        Decl: b, [], [], []
+          PtrDecl: []
+            TypeDecl: b, []
+              IdentifierType: ['su3_matrix']
+      TypeDecl: complextrace_su3, []
+        IdentifierType: ['complex']
+  Decl: det_su3, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: a, [], [], []
+          PtrDecl: []
+            TypeDecl: a, []
+              IdentifierType: ['su3_matrix']
+      TypeDecl: det_su3, []
+        IdentifierType: ['complex']
+  Decl: add_su3_matrix, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: a, [], [], []
+          PtrDecl: []
+            TypeDecl: a, []
+              IdentifierType: ['su3_matrix']
+        Decl: b, [], [], []
+          PtrDecl: []
+            TypeDecl: b, []
+              IdentifierType: ['su3_matrix']
+        Decl: c, [], [], []
+          PtrDecl: []
+            TypeDecl: c, []
+              IdentifierType: ['su3_matrix']
+      TypeDecl: add_su3_matrix, []
+        IdentifierType: ['void']
+  Decl: sub_su3_matrix, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: a, [], [], []
+          PtrDecl: []
+            TypeDecl: a, []
+              IdentifierType: ['su3_matrix']
+        Decl: b, [], [], []
+          PtrDecl: []
+            TypeDecl: b, []
+              IdentifierType: ['su3_matrix']
+        Decl: c, [], [], []
+          PtrDecl: []
+            TypeDecl: c, []
+              IdentifierType: ['su3_matrix']
+      TypeDecl: sub_su3_matrix, []
+        IdentifierType: ['void']
+  Decl: scalar_mult_su3_matrix, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: src, [], [], []
+          PtrDecl: []
+            TypeDecl: src, []
+              IdentifierType: ['su3_matrix']
+        Decl: scalar, [], [], []
+          TypeDecl: scalar, []
+            IdentifierType: ['double']
+        Decl: dest, [], [], []
+          PtrDecl: []
+            TypeDecl: dest, []
+              IdentifierType: ['su3_matrix']
+      TypeDecl: scalar_mult_su3_matrix, []
+        IdentifierType: ['void']
+  Decl: scalar_mult_add_su3_matrix, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: src1, [], [], []
+          PtrDecl: []
+            TypeDecl: src1, []
+              IdentifierType: ['su3_matrix']
+        Decl: src2, [], [], []
+          PtrDecl: []
+            TypeDecl: src2, []
+              IdentifierType: ['su3_matrix']
+        Decl: scalar, [], [], []
+          TypeDecl: scalar, []
+            IdentifierType: ['double']
+        Decl: dest, [], [], []
+          PtrDecl: []
+            TypeDecl: dest, []
+              IdentifierType: ['su3_matrix']
+      TypeDecl: scalar_mult_add_su3_matrix, []
+        IdentifierType: ['void']
+  Decl: scalar_mult_sub_su3_matrix, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: src1, [], [], []
+          PtrDecl: []
+            TypeDecl: src1, []
+              IdentifierType: ['su3_matrix']
+        Decl: src2, [], [], []
+          PtrDecl: []
+            TypeDecl: src2, []
+              IdentifierType: ['su3_matrix']
+        Decl: scalar, [], [], []
+          TypeDecl: scalar, []
+            IdentifierType: ['double']
+        Decl: dest, [], [], []
+          PtrDecl: []
+            TypeDecl: dest, []
+              IdentifierType: ['su3_matrix']
+      TypeDecl: scalar_mult_sub_su3_matrix, []
+        IdentifierType: ['void']
+  Decl: c_scalar_mult_su3mat, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: src, [], [], []
+          PtrDecl: []
+            TypeDecl: src, []
+              IdentifierType: ['su3_matrix']
+        Decl: scalar, [], [], []
+          PtrDecl: []
+            TypeDecl: scalar, []
+              IdentifierType: ['complex']
+        Decl: dest, [], [], []
+          PtrDecl: []
+            TypeDecl: dest, []
+              IdentifierType: ['su3_matrix']
+      TypeDecl: c_scalar_mult_su3mat, []
+        IdentifierType: ['void']
+  Decl: c_scalar_mult_add_su3mat, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: src1, [], [], []
+          PtrDecl: []
+            TypeDecl: src1, []
+              IdentifierType: ['su3_matrix']
+        Decl: src2, [], [], []
+          PtrDecl: []
+            TypeDecl: src2, []
+              IdentifierType: ['su3_matrix']
+        Decl: scalar, [], [], []
+          PtrDecl: []
+            TypeDecl: scalar, []
+              IdentifierType: ['complex']
+        Decl: dest, [], [], []
+          PtrDecl: []
+            TypeDecl: dest, []
+              IdentifierType: ['su3_matrix']
+      TypeDecl: c_scalar_mult_add_su3mat, []
+        IdentifierType: ['void']
+  Decl: c_scalar_mult_sub_su3mat, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: src1, [], [], []
+          PtrDecl: []
+            TypeDecl: src1, []
+              IdentifierType: ['su3_matrix']
+        Decl: src2, [], [], []
+          PtrDecl: []
+            TypeDecl: src2, []
+              IdentifierType: ['su3_matrix']
+        Decl: scalar, [], [], []
+          PtrDecl: []
+            TypeDecl: scalar, []
+              IdentifierType: ['complex']
+        Decl: dest, [], [], []
+          PtrDecl: []
+            TypeDecl: dest, []
+              IdentifierType: ['su3_matrix']
+      TypeDecl: c_scalar_mult_sub_su3mat, []
+        IdentifierType: ['void']
+  Decl: su3_adjoint, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: a, [], [], []
+          PtrDecl: []
+            TypeDecl: a, []
+              IdentifierType: ['su3_matrix']
+        Decl: b, [], [], []
+          PtrDecl: []
+            TypeDecl: b, []
+              IdentifierType: ['su3_matrix']
+      TypeDecl: su3_adjoint, []
+        IdentifierType: ['void']
+  Decl: make_anti_hermitian, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: m3, [], [], []
+          PtrDecl: []
+            TypeDecl: m3, []
+              IdentifierType: ['su3_matrix']
+        Decl: ah3, [], [], []
+          PtrDecl: []
+            TypeDecl: ah3, []
+              IdentifierType: ['anti_hermitmat']
+      TypeDecl: make_anti_hermitian, []
+        IdentifierType: ['void']
+  Decl: random_anti_hermitian, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: mat_antihermit, [], [], []
+          PtrDecl: []
+            TypeDecl: mat_antihermit, []
+              IdentifierType: ['anti_hermitmat']
+        Decl: prn_pt, [], [], []
+          PtrDecl: []
+            TypeDecl: prn_pt, []
+              IdentifierType: ['double_prn']
+      TypeDecl: random_anti_hermitian, []
+        IdentifierType: ['void']
+  Decl: uncompress_anti_hermitian, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: mat_anti, [], [], []
+          PtrDecl: []
+            TypeDecl: mat_anti, []
+              IdentifierType: ['anti_hermitmat']
+        Decl: mat, [], [], []
+          PtrDecl: []
+            TypeDecl: mat, []
+              IdentifierType: ['su3_matrix']
+      TypeDecl: uncompress_anti_hermitian, []
+        IdentifierType: ['void']
+  Decl: compress_anti_hermitian, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: mat, [], [], []
+          PtrDecl: []
+            TypeDecl: mat, []
+              IdentifierType: ['su3_matrix']
+        Decl: mat_anti, [], [], []
+          PtrDecl: []
+            TypeDecl: mat_anti, []
+              IdentifierType: ['anti_hermitmat']
+      TypeDecl: compress_anti_hermitian, []
+        IdentifierType: ['void']
+  Decl: clear_su3mat, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: dest, [], [], []
+          PtrDecl: []
+            TypeDecl: dest, []
+              IdentifierType: ['su3_matrix']
+      TypeDecl: clear_su3mat, []
+        IdentifierType: ['void']
+  Decl: su3mat_copy, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: a, [], [], []
+          PtrDecl: []
+            TypeDecl: a, []
+              IdentifierType: ['su3_matrix']
+        Decl: b, [], [], []
+          PtrDecl: []
+            TypeDecl: b, []
+              IdentifierType: ['su3_matrix']
+      TypeDecl: su3mat_copy, []
+        IdentifierType: ['void']
+  Decl: dumpmat, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: m, [], [], []
+          PtrDecl: []
+            TypeDecl: m, []
+              IdentifierType: ['su3_matrix']
+      TypeDecl: dumpmat, []
+        IdentifierType: ['void']
+  Decl: su3_projector, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: a, [], [], []
+          PtrDecl: []
+            TypeDecl: a, []
+              IdentifierType: ['su3_vector']
+        Decl: b, [], [], []
+          PtrDecl: []
+            TypeDecl: b, []
+              IdentifierType: ['su3_vector']
+        Decl: c, [], [], []
+          PtrDecl: []
+            TypeDecl: c, []
+              IdentifierType: ['su3_matrix']
+      TypeDecl: su3_projector, []
+        IdentifierType: ['void']
+  Decl: su3_dot, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: a, [], [], []
+          PtrDecl: []
+            TypeDecl: a, []
+              IdentifierType: ['su3_vector']
+        Decl: b, [], [], []
+          PtrDecl: []
+            TypeDecl: b, []
+              IdentifierType: ['su3_vector']
+      TypeDecl: su3_dot, []
+        IdentifierType: ['complex']
+  Decl: su3_rdot, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: a, [], [], []
+          PtrDecl: []
+            TypeDecl: a, []
+              IdentifierType: ['su3_vector']
+        Decl: b, [], [], []
+          PtrDecl: []
+            TypeDecl: b, []
+              IdentifierType: ['su3_vector']
+      TypeDecl: su3_rdot, []
+        IdentifierType: ['double']
+  Decl: magsq_su3vec, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: a, [], [], []
+          PtrDecl: []
+            TypeDecl: a, []
+              IdentifierType: ['su3_vector']
+      TypeDecl: magsq_su3vec, []
+        IdentifierType: ['double']
+  Decl: su3vec_copy, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: a, [], [], []
+          PtrDecl: []
+            TypeDecl: a, []
+              IdentifierType: ['su3_vector']
+        Decl: b, [], [], []
+          PtrDecl: []
+            TypeDecl: b, []
+              IdentifierType: ['su3_vector']
+      TypeDecl: su3vec_copy, []
+        IdentifierType: ['void']
+  Decl: dumpvec, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: v, [], [], []
+          PtrDecl: []
+            TypeDecl: v, []
+              IdentifierType: ['su3_vector']
+      TypeDecl: dumpvec, []
+        IdentifierType: ['void']
+  Decl: clearvec, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: v, [], [], []
+          PtrDecl: []
+            TypeDecl: v, []
+              IdentifierType: ['su3_vector']
+      TypeDecl: clearvec, []
+        IdentifierType: ['void']
+  Decl: mult_su3_mat_vec, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: a, [], [], []
+          PtrDecl: []
+            TypeDecl: a, []
+              IdentifierType: ['su3_matrix']
+        Decl: b, [], [], []
+          PtrDecl: []
+            TypeDecl: b, []
+              IdentifierType: ['su3_vector']
+        Decl: c, [], [], []
+          PtrDecl: []
+            TypeDecl: c, []
+              IdentifierType: ['su3_vector']
+      TypeDecl: mult_su3_mat_vec, []
+        IdentifierType: ['void']
+  Decl: mult_su3_mat_vec_sum, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: a, [], [], []
+          PtrDecl: []
+            TypeDecl: a, []
+              IdentifierType: ['su3_matrix']
+        Decl: b, [], [], []
+          PtrDecl: []
+            TypeDecl: b, []
+              IdentifierType: ['su3_vector']
+        Decl: c, [], [], []
+          PtrDecl: []
+            TypeDecl: c, []
+              IdentifierType: ['su3_vector']
+      TypeDecl: mult_su3_mat_vec_sum, []
+        IdentifierType: ['void']
+  Decl: mult_su3_mat_vec_sum_4dir, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: a, [], [], []
+          PtrDecl: []
+            TypeDecl: a, []
+              IdentifierType: ['su3_matrix']
+        Decl: b0, [], [], []
+          PtrDecl: []
+            TypeDecl: b0, []
+              IdentifierType: ['su3_vector']
+        Decl: b1, [], [], []
+          PtrDecl: []
+            TypeDecl: b1, []
+              IdentifierType: ['su3_vector']
+        Decl: b2, [], [], []
+          PtrDecl: []
+            TypeDecl: b2, []
+              IdentifierType: ['su3_vector']
+        Decl: b3, [], [], []
+          PtrDecl: []
+            TypeDecl: b3, []
+              IdentifierType: ['su3_vector']
+        Decl: c, [], [], []
+          PtrDecl: []
+            TypeDecl: c, []
+              IdentifierType: ['su3_vector']
+      TypeDecl: mult_su3_mat_vec_sum_4dir, []
+        IdentifierType: ['void']
+  Decl: mult_su3_mat_vec_nsum, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: a, [], [], []
+          PtrDecl: []
+            TypeDecl: a, []
+              IdentifierType: ['su3_matrix']
+        Decl: b, [], [], []
+          PtrDecl: []
+            TypeDecl: b, []
+              IdentifierType: ['su3_vector']
+        Decl: c, [], [], []
+          PtrDecl: []
+            TypeDecl: c, []
+              IdentifierType: ['su3_vector']
+      TypeDecl: mult_su3_mat_vec_nsum, []
+        IdentifierType: ['void']
+  Decl: mult_adj_su3_mat_vec, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: a, [], [], []
+          PtrDecl: []
+            TypeDecl: a, []
+              IdentifierType: ['su3_matrix']
+        Decl: b, [], [], []
+          PtrDecl: []
+            TypeDecl: b, []
+              IdentifierType: ['su3_vector']
+        Decl: c, [], [], []
+          PtrDecl: []
+            TypeDecl: c, []
+              IdentifierType: ['su3_vector']
+      TypeDecl: mult_adj_su3_mat_vec, []
+        IdentifierType: ['void']
+  Decl: mult_adj_su3_mat_vec_4dir, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: a, [], [], []
+          PtrDecl: []
+            TypeDecl: a, []
+              IdentifierType: ['su3_matrix']
+        Decl: b, [], [], []
+          PtrDecl: []
+            TypeDecl: b, []
+              IdentifierType: ['su3_vector']
+        Decl: c, [], [], []
+          PtrDecl: []
+            TypeDecl: c, []
+              IdentifierType: ['su3_vector']
+      TypeDecl: mult_adj_su3_mat_vec_4dir, []
+        IdentifierType: ['void']
+  Decl: mult_adj_su3_mat_4vec, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: mat, [], [], []
+          PtrDecl: []
+            TypeDecl: mat, []
+              IdentifierType: ['su3_matrix']
+        Decl: src, [], [], []
+          PtrDecl: []
+            TypeDecl: src, []
+              IdentifierType: ['su3_vector']
+        Decl: dest0, [], [], []
+          PtrDecl: []
+            TypeDecl: dest0, []
+              IdentifierType: ['su3_vector']
+        Decl: dest1, [], [], []
+          PtrDecl: []
+            TypeDecl: dest1, []
+              IdentifierType: ['su3_vector']
+        Decl: dest2, [], [], []
+          PtrDecl: []
+            TypeDecl: dest2, []
+              IdentifierType: ['su3_vector']
+        Decl: dest3, [], [], []
+          PtrDecl: []
+            TypeDecl: dest3, []
+              IdentifierType: ['su3_vector']
+      TypeDecl: mult_adj_su3_mat_4vec, []
+        IdentifierType: ['void']
+  Decl: mult_adj_su3_mat_vec_sum, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: a, [], [], []
+          PtrDecl: []
+            TypeDecl: a, []
+              IdentifierType: ['su3_matrix']
+        Decl: b, [], [], []
+          PtrDecl: []
+            TypeDecl: b, []
+              IdentifierType: ['su3_vector']
+        Decl: c, [], [], []
+          PtrDecl: []
+            TypeDecl: c, []
+              IdentifierType: ['su3_vector']
+      TypeDecl: mult_adj_su3_mat_vec_sum, []
+        IdentifierType: ['void']
+  Decl: mult_adj_su3_mat_vec_nsum, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: a, [], [], []
+          PtrDecl: []
+            TypeDecl: a, []
+              IdentifierType: ['su3_matrix']
+        Decl: b, [], [], []
+          PtrDecl: []
+            TypeDecl: b, []
+              IdentifierType: ['su3_vector']
+        Decl: c, [], [], []
+          PtrDecl: []
+            TypeDecl: c, []
+              IdentifierType: ['su3_vector']
+      TypeDecl: mult_adj_su3_mat_vec_nsum, []
+        IdentifierType: ['void']
+  Decl: add_su3_vector, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: a, [], [], []
+          PtrDecl: []
+            TypeDecl: a, []
+              IdentifierType: ['su3_vector']
+        Decl: b, [], [], []
+          PtrDecl: []
+            TypeDecl: b, []
+              IdentifierType: ['su3_vector']
+        Decl: c, [], [], []
+          PtrDecl: []
+            TypeDecl: c, []
+              IdentifierType: ['su3_vector']
+      TypeDecl: add_su3_vector, []
+        IdentifierType: ['void']
+  Decl: sub_su3_vector, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: a, [], [], []
+          PtrDecl: []
+            TypeDecl: a, []
+              IdentifierType: ['su3_vector']
+        Decl: b, [], [], []
+          PtrDecl: []
+            TypeDecl: b, []
+              IdentifierType: ['su3_vector']
+        Decl: c, [], [], []
+          PtrDecl: []
+            TypeDecl: c, []
+              IdentifierType: ['su3_vector']
+      TypeDecl: sub_su3_vector, []
+        IdentifierType: ['void']
+  Decl: sub_four_su3_vecs, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: a, [], [], []
+          PtrDecl: []
+            TypeDecl: a, []
+              IdentifierType: ['su3_vector']
+        Decl: b1, [], [], []
+          PtrDecl: []
+            TypeDecl: b1, []
+              IdentifierType: ['su3_vector']
+        Decl: b2, [], [], []
+          PtrDecl: []
+            TypeDecl: b2, []
+              IdentifierType: ['su3_vector']
+        Decl: b3, [], [], []
+          PtrDecl: []
+            TypeDecl: b3, []
+              IdentifierType: ['su3_vector']
+        Decl: b4, [], [], []
+          PtrDecl: []
+            TypeDecl: b4, []
+              IdentifierType: ['su3_vector']
+      TypeDecl: sub_four_su3_vecs, []
+        IdentifierType: ['void']
+  Decl: scalar_mult_su3_vector, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: src, [], [], []
+          PtrDecl: []
+            TypeDecl: src, []
+              IdentifierType: ['su3_vector']
+        Decl: scalar, [], [], []
+          TypeDecl: scalar, []
+            IdentifierType: ['double']
+        Decl: dest, [], [], []
+          PtrDecl: []
+            TypeDecl: dest, []
+              IdentifierType: ['su3_vector']
+      TypeDecl: scalar_mult_su3_vector, []
+        IdentifierType: ['void']
+  Decl: scalar_mult_add_su3_vector, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: src1, [], [], []
+          PtrDecl: []
+            TypeDecl: src1, []
+              IdentifierType: ['su3_vector']
+        Decl: src2, [], [], []
+          PtrDecl: []
+            TypeDecl: src2, []
+              IdentifierType: ['su3_vector']
+        Decl: scalar, [], [], []
+          TypeDecl: scalar, []
+            IdentifierType: ['double']
+        Decl: dest, [], [], []
+          PtrDecl: []
+            TypeDecl: dest, []
+              IdentifierType: ['su3_vector']
+      TypeDecl: scalar_mult_add_su3_vector, []
+        IdentifierType: ['void']
+  Decl: scalar_mult_sum_su3_vector, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: src1, [], [], []
+          PtrDecl: []
+            TypeDecl: src1, []
+              IdentifierType: ['su3_vector']
+        Decl: src2, [], [], []
+          PtrDecl: []
+            TypeDecl: src2, []
+              IdentifierType: ['su3_vector']
+        Decl: scalar, [], [], []
+          TypeDecl: scalar, []
+            IdentifierType: ['double']
+      TypeDecl: scalar_mult_sum_su3_vector, []
+        IdentifierType: ['void']
+  Decl: scalar_mult_sub_su3_vector, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: src1, [], [], []
+          PtrDecl: []
+            TypeDecl: src1, []
+              IdentifierType: ['su3_vector']
+        Decl: src2, [], [], []
+          PtrDecl: []
+            TypeDecl: src2, []
+              IdentifierType: ['su3_vector']
+        Decl: scalar, [], [], []
+          TypeDecl: scalar, []
+            IdentifierType: ['double']
+        Decl: dest, [], [], []
+          PtrDecl: []
+            TypeDecl: dest, []
+              IdentifierType: ['su3_vector']
+      TypeDecl: scalar_mult_sub_su3_vector, []
+        IdentifierType: ['void']
+  Decl: scalar_mult_wvec, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: src, [], [], []
+          PtrDecl: []
+            TypeDecl: src, []
+              IdentifierType: ['wilson_vector']
+        Decl: s, [], [], []
+          TypeDecl: s, []
+            IdentifierType: ['double']
+        Decl: dest, [], [], []
+          PtrDecl: []
+            TypeDecl: dest, []
+              IdentifierType: ['wilson_vector']
+      TypeDecl: scalar_mult_wvec, []
+        IdentifierType: ['void']
+  Decl: scalar_mult_hwvec, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: src, [], [], []
+          PtrDecl: []
+            TypeDecl: src, []
+              IdentifierType: ['half_wilson_vector']
+        Decl: s, [], [], []
+          TypeDecl: s, []
+            IdentifierType: ['double']
+        Decl: dest, [], [], []
+          PtrDecl: []
+            TypeDecl: dest, []
+              IdentifierType: ['half_wilson_vector']
+      TypeDecl: scalar_mult_hwvec, []
+        IdentifierType: ['void']
+  Decl: scalar_mult_add_wvec, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: src1, [], [], []
+          PtrDecl: []
+            TypeDecl: src1, []
+              IdentifierType: ['wilson_vector']
+        Decl: src2, [], [], []
+          PtrDecl: []
+            TypeDecl: src2, []
+              IdentifierType: ['wilson_vector']
+        Decl: scalar, [], [], []
+          TypeDecl: scalar, []
+            IdentifierType: ['double']
+        Decl: dest, [], [], []
+          PtrDecl: []
+            TypeDecl: dest, []
+              IdentifierType: ['wilson_vector']
+      TypeDecl: scalar_mult_add_wvec, []
+        IdentifierType: ['void']
+  Decl: scalar_mult_addtm_wvec, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: src1, [], [], []
+          PtrDecl: []
+            TypeDecl: src1, []
+              IdentifierType: ['wilson_vector']
+        Decl: src2, [], [], []
+          PtrDecl: []
+            TypeDecl: src2, []
+              IdentifierType: ['wilson_vector']
+        Decl: scalar, [], [], []
+          TypeDecl: scalar, []
+            IdentifierType: ['double']
+        Decl: dest, [], [], []
+          PtrDecl: []
+            TypeDecl: dest, []
+              IdentifierType: ['wilson_vector']
+      TypeDecl: scalar_mult_addtm_wvec, []
+        IdentifierType: ['void']
+  Decl: c_scalar_mult_wvec, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: src1, [], [], []
+          PtrDecl: []
+            TypeDecl: src1, []
+              IdentifierType: ['wilson_vector']
+        Decl: phase, [], [], []
+          PtrDecl: []
+            TypeDecl: phase, []
+              IdentifierType: ['complex']
+        Decl: dest, [], [], []
+          PtrDecl: []
+            TypeDecl: dest, []
+              IdentifierType: ['wilson_vector']
+      TypeDecl: c_scalar_mult_wvec, []
+        IdentifierType: ['void']
+  Decl: c_scalar_mult_add_wvec, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: src1, [], [], []
+          PtrDecl: []
+            TypeDecl: src1, []
+              IdentifierType: ['wilson_vector']
+        Decl: src2, [], [], []
+          PtrDecl: []
+            TypeDecl: src2, []
+              IdentifierType: ['wilson_vector']
+        Decl: phase, [], [], []
+          PtrDecl: []
+            TypeDecl: phase, []
+              IdentifierType: ['complex']
+        Decl: dest, [], [], []
+          PtrDecl: []
+            TypeDecl: dest, []
+              IdentifierType: ['wilson_vector']
+      TypeDecl: c_scalar_mult_add_wvec, []
+        IdentifierType: ['void']
+  Decl: c_scalar_mult_add_wvec2, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: src1, [], [], []
+          PtrDecl: []
+            TypeDecl: src1, []
+              IdentifierType: ['wilson_vector']
+        Decl: src2, [], [], []
+          PtrDecl: []
+            TypeDecl: src2, []
+              IdentifierType: ['wilson_vector']
+        Decl: s, [], [], []
+          TypeDecl: s, []
+            IdentifierType: ['complex']
+        Decl: dest, [], [], []
+          PtrDecl: []
+            TypeDecl: dest, []
+              IdentifierType: ['wilson_vector']
+      TypeDecl: c_scalar_mult_add_wvec2, []
+        IdentifierType: ['void']
+  Decl: c_scalar_mult_su3vec, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: src, [], [], []
+          PtrDecl: []
+            TypeDecl: src, []
+              IdentifierType: ['su3_vector']
+        Decl: phase, [], [], []
+          PtrDecl: []
+            TypeDecl: phase, []
+              IdentifierType: ['complex']
+        Decl: dest, [], [], []
+          PtrDecl: []
+            TypeDecl: dest, []
+              IdentifierType: ['su3_vector']
+      TypeDecl: c_scalar_mult_su3vec, []
+        IdentifierType: ['void']
+  Decl: c_scalar_mult_add_su3vec, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: v1, [], [], []
+          PtrDecl: []
+            TypeDecl: v1, []
+              IdentifierType: ['su3_vector']
+        Decl: phase, [], [], []
+          PtrDecl: []
+            TypeDecl: phase, []
+              IdentifierType: ['complex']
+        Decl: v2, [], [], []
+          PtrDecl: []
+            TypeDecl: v2, []
+              IdentifierType: ['su3_vector']
+      TypeDecl: c_scalar_mult_add_su3vec, []
+        IdentifierType: ['void']
+  Decl: c_scalar_mult_sub_su3vec, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: v1, [], [], []
+          PtrDecl: []
+            TypeDecl: v1, []
+              IdentifierType: ['su3_vector']
+        Decl: phase, [], [], []
+          PtrDecl: []
+            TypeDecl: phase, []
+              IdentifierType: ['complex']
+        Decl: v2, [], [], []
+          PtrDecl: []
+            TypeDecl: v2, []
+              IdentifierType: ['su3_vector']
+      TypeDecl: c_scalar_mult_sub_su3vec, []
+        IdentifierType: ['void']
+  Decl: left_su2_hit_n, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: u, [], [], []
+          PtrDecl: []
+            TypeDecl: u, []
+              IdentifierType: ['su2_matrix']
+        Decl: p, [], [], []
+          TypeDecl: p, []
+            IdentifierType: ['int']
+        Decl: q, [], [], []
+          TypeDecl: q, []
+            IdentifierType: ['int']
+        Decl: link, [], [], []
+          PtrDecl: []
+            TypeDecl: link, []
+              IdentifierType: ['su3_matrix']
+      TypeDecl: left_su2_hit_n, []
+        IdentifierType: ['void']
+  Decl: right_su2_hit_a, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: u, [], [], []
+          PtrDecl: []
+            TypeDecl: u, []
+              IdentifierType: ['su2_matrix']
+        Decl: p, [], [], []
+          TypeDecl: p, []
+            IdentifierType: ['int']
+        Decl: q, [], [], []
+          TypeDecl: q, []
+            IdentifierType: ['int']
+        Decl: link, [], [], []
+          PtrDecl: []
+            TypeDecl: link, []
+              IdentifierType: ['su3_matrix']
+      TypeDecl: right_su2_hit_a, []
+        IdentifierType: ['void']
+  Decl: dumpsu2, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: u, [], [], []
+          PtrDecl: []
+            TypeDecl: u, []
+              IdentifierType: ['su2_matrix']
+      TypeDecl: dumpsu2, []
+        IdentifierType: ['void']
+  Decl: mult_su2_mat_vec_elem_n, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: u, [], [], []
+          PtrDecl: []
+            TypeDecl: u, []
+              IdentifierType: ['su2_matrix']
+        Decl: x0, [], [], []
+          PtrDecl: []
+            TypeDecl: x0, []
+              IdentifierType: ['complex']
+        Decl: x1, [], [], []
+          PtrDecl: []
+            TypeDecl: x1, []
+              IdentifierType: ['complex']
+      TypeDecl: mult_su2_mat_vec_elem_n, []
+        IdentifierType: ['void']
+  Decl: mult_su2_mat_vec_elem_a, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: u, [], [], []
+          PtrDecl: []
+            TypeDecl: u, []
+              IdentifierType: ['su2_matrix']
+        Decl: x0, [], [], []
+          PtrDecl: []
+            TypeDecl: x0, []
+              IdentifierType: ['complex']
+        Decl: x1, [], [], []
+          PtrDecl: []
+            TypeDecl: x1, []
+              IdentifierType: ['complex']
+      TypeDecl: mult_su2_mat_vec_elem_a, []
+        IdentifierType: ['void']
+  Decl: mult_mat_wilson_vec, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: mat, [], [], []
+          PtrDecl: []
+            TypeDecl: mat, []
+              IdentifierType: ['su3_matrix']
+        Decl: src, [], [], []
+          PtrDecl: []
+            TypeDecl: src, []
+              IdentifierType: ['wilson_vector']
+        Decl: dest, [], [], []
+          PtrDecl: []
+            TypeDecl: dest, []
+              IdentifierType: ['wilson_vector']
+      TypeDecl: mult_mat_wilson_vec, []
+        IdentifierType: ['void']
+  Decl: mult_su3_mat_hwvec, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: mat, [], [], []
+          PtrDecl: []
+            TypeDecl: mat, []
+              IdentifierType: ['su3_matrix']
+        Decl: src, [], [], []
+          PtrDecl: []
+            TypeDecl: src, []
+              IdentifierType: ['half_wilson_vector']
+        Decl: dest, [], [], []
+          PtrDecl: []
+            TypeDecl: dest, []
+              IdentifierType: ['half_wilson_vector']
+      TypeDecl: mult_su3_mat_hwvec, []
+        IdentifierType: ['void']
+  Decl: mult_adj_mat_wilson_vec, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: mat, [], [], []
+          PtrDecl: []
+            TypeDecl: mat, []
+              IdentifierType: ['su3_matrix']
+        Decl: src, [], [], []
+          PtrDecl: []
+            TypeDecl: src, []
+              IdentifierType: ['wilson_vector']
+        Decl: dest, [], [], []
+          PtrDecl: []
+            TypeDecl: dest, []
+              IdentifierType: ['wilson_vector']
+      TypeDecl: mult_adj_mat_wilson_vec, []
+        IdentifierType: ['void']
+  Decl: mult_adj_su3_mat_hwvec, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: mat, [], [], []
+          PtrDecl: []
+            TypeDecl: mat, []
+              IdentifierType: ['su3_matrix']
+        Decl: src, [], [], []
+          PtrDecl: []
+            TypeDecl: src, []
+              IdentifierType: ['half_wilson_vector']
+        Decl: dest, [], [], []
+          PtrDecl: []
+            TypeDecl: dest, []
+              IdentifierType: ['half_wilson_vector']
+      TypeDecl: mult_adj_su3_mat_hwvec, []
+        IdentifierType: ['void']
+  Decl: add_wilson_vector, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: src1, [], [], []
+          PtrDecl: []
+            TypeDecl: src1, []
+              IdentifierType: ['wilson_vector']
+        Decl: src2, [], [], []
+          PtrDecl: []
+            TypeDecl: src2, []
+              IdentifierType: ['wilson_vector']
+        Decl: dest, [], [], []
+          PtrDecl: []
+            TypeDecl: dest, []
+              IdentifierType: ['wilson_vector']
+      TypeDecl: add_wilson_vector, []
+        IdentifierType: ['void']
+  Decl: sub_wilson_vector, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: src1, [], [], []
+          PtrDecl: []
+            TypeDecl: src1, []
+              IdentifierType: ['wilson_vector']
+        Decl: src2, [], [], []
+          PtrDecl: []
+            TypeDecl: src2, []
+              IdentifierType: ['wilson_vector']
+        Decl: dest, [], [], []
+          PtrDecl: []
+            TypeDecl: dest, []
+              IdentifierType: ['wilson_vector']
+      TypeDecl: sub_wilson_vector, []
+        IdentifierType: ['void']
+  Decl: magsq_wvec, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: src, [], [], []
+          PtrDecl: []
+            TypeDecl: src, []
+              IdentifierType: ['wilson_vector']
+      TypeDecl: magsq_wvec, []
+        IdentifierType: ['double']
+  Decl: wvec_dot, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: src1, [], [], []
+          PtrDecl: []
+            TypeDecl: src1, []
+              IdentifierType: ['wilson_vector']
+        Decl: src2, [], [], []
+          PtrDecl: []
+            TypeDecl: src2, []
+              IdentifierType: ['wilson_vector']
+      TypeDecl: wvec_dot, []
+        IdentifierType: ['complex']
+  Decl: wvec2_dot, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: src1, [], [], []
+          PtrDecl: []
+            TypeDecl: src1, []
+              IdentifierType: ['wilson_vector']
+        Decl: src2, [], [], []
+          PtrDecl: []
+            TypeDecl: src2, []
+              IdentifierType: ['wilson_vector']
+      TypeDecl: wvec2_dot, []
+        IdentifierType: ['complex']
+  Decl: wvec_rdot, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: a, [], [], []
+          PtrDecl: []
+            TypeDecl: a, []
+              IdentifierType: ['wilson_vector']
+        Decl: b, [], [], []
+          PtrDecl: []
+            TypeDecl: b, []
+              IdentifierType: ['wilson_vector']
+      TypeDecl: wvec_rdot, []
+        IdentifierType: ['double']
+  Decl: wp_shrink, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: src, [], [], []
+          PtrDecl: []
+            TypeDecl: src, []
+              IdentifierType: ['wilson_vector']
+        Decl: dest, [], [], []
+          PtrDecl: []
+            TypeDecl: dest, []
+              IdentifierType: ['half_wilson_vector']
+        Decl: dir, [], [], []
+          TypeDecl: dir, []
+            IdentifierType: ['int']
+        Decl: sign, [], [], []
+          TypeDecl: sign, []
+            IdentifierType: ['int']
+      TypeDecl: wp_shrink, []
+        IdentifierType: ['void']
+  Decl: wp_shrink_4dir, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: a, [], [], []
+          PtrDecl: []
+            TypeDecl: a, []
+              IdentifierType: ['wilson_vector']
+        Decl: b1, [], [], []
+          PtrDecl: []
+            TypeDecl: b1, []
+              IdentifierType: ['half_wilson_vector']
+        Decl: b2, [], [], []
+          PtrDecl: []
+            TypeDecl: b2, []
+              IdentifierType: ['half_wilson_vector']
+        Decl: b3, [], [], []
+          PtrDecl: []
+            TypeDecl: b3, []
+              IdentifierType: ['half_wilson_vector']
+        Decl: b4, [], [], []
+          PtrDecl: []
+            TypeDecl: b4, []
+              IdentifierType: ['half_wilson_vector']
+        Decl: sign, [], [], []
+          TypeDecl: sign, []
+            IdentifierType: ['int']
+      TypeDecl: wp_shrink_4dir, []
+        IdentifierType: ['void']
+  Decl: wp_grow, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: src, [], [], []
+          PtrDecl: []
+            TypeDecl: src, []
+              IdentifierType: ['half_wilson_vector']
+        Decl: dest, [], [], []
+          PtrDecl: []
+            TypeDecl: dest, []
+              IdentifierType: ['wilson_vector']
+        Decl: dir, [], [], []
+          TypeDecl: dir, []
+            IdentifierType: ['int']
+        Decl: sign, [], [], []
+          TypeDecl: sign, []
+            IdentifierType: ['int']
+      TypeDecl: wp_grow, []
+        IdentifierType: ['void']
+  Decl: wp_grow_add, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: src, [], [], []
+          PtrDecl: []
+            TypeDecl: src, []
+              IdentifierType: ['half_wilson_vector']
+        Decl: dest, [], [], []
+          PtrDecl: []
+            TypeDecl: dest, []
+              IdentifierType: ['wilson_vector']
+        Decl: dir, [], [], []
+          TypeDecl: dir, []
+            IdentifierType: ['int']
+        Decl: sign, [], [], []
+          TypeDecl: sign, []
+            IdentifierType: ['int']
+      TypeDecl: wp_grow_add, []
+        IdentifierType: ['void']
+  Decl: grow_add_four_wvecs, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: a, [], [], []
+          PtrDecl: []
+            TypeDecl: a, []
+              IdentifierType: ['wilson_vector']
+        Decl: b1, [], [], []
+          PtrDecl: []
+            TypeDecl: b1, []
+              IdentifierType: ['half_wilson_vector']
+        Decl: b2, [], [], []
+          PtrDecl: []
+            TypeDecl: b2, []
+              IdentifierType: ['half_wilson_vector']
+        Decl: b3, [], [], []
+          PtrDecl: []
+            TypeDecl: b3, []
+              IdentifierType: ['half_wilson_vector']
+        Decl: b4, [], [], []
+          PtrDecl: []
+            TypeDecl: b4, []
+              IdentifierType: ['half_wilson_vector']
+        Decl: sign, [], [], []
+          TypeDecl: sign, []
+            IdentifierType: ['int']
+        Decl: sum, [], [], []
+          TypeDecl: sum, []
+            IdentifierType: ['int']
+      TypeDecl: grow_add_four_wvecs, []
+        IdentifierType: ['void']
+  Decl: mult_by_gamma, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: src, [], [], []
+          PtrDecl: []
+            TypeDecl: src, []
+              IdentifierType: ['wilson_vector']
+        Decl: dest, [], [], []
+          PtrDecl: []
+            TypeDecl: dest, []
+              IdentifierType: ['wilson_vector']
+        Decl: dir, [], [], []
+          TypeDecl: dir, []
+            IdentifierType: ['int']
+      TypeDecl: mult_by_gamma, []
+        IdentifierType: ['void']
+  Decl: mult_by_gamma_left, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: src, [], [], []
+          PtrDecl: []
+            TypeDecl: src, []
+              IdentifierType: ['wilson_matrix']
+        Decl: dest, [], [], []
+          PtrDecl: []
+            TypeDecl: dest, []
+              IdentifierType: ['wilson_matrix']
+        Decl: dir, [], [], []
+          TypeDecl: dir, []
+            IdentifierType: ['int']
+      TypeDecl: mult_by_gamma_left, []
+        IdentifierType: ['void']
+  Decl: mult_by_gamma_right, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: src, [], [], []
+          PtrDecl: []
+            TypeDecl: src, []
+              IdentifierType: ['wilson_matrix']
+        Decl: dest, [], [], []
+          PtrDecl: []
+            TypeDecl: dest, []
+              IdentifierType: ['wilson_matrix']
+        Decl: dir, [], [], []
+          TypeDecl: dir, []
+            IdentifierType: ['int']
+      TypeDecl: mult_by_gamma_right, []
+        IdentifierType: ['void']
+  Decl: mult_swv_by_gamma_l, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: src, [], [], []
+          PtrDecl: []
+            TypeDecl: src, []
+              IdentifierType: ['spin_wilson_vector']
+        Decl: dest, [], [], []
+          PtrDecl: []
+            TypeDecl: dest, []
+              IdentifierType: ['spin_wilson_vector']
+        Decl: dir, [], [], []
+          TypeDecl: dir, []
+            IdentifierType: ['int']
+      TypeDecl: mult_swv_by_gamma_l, []
+        IdentifierType: ['void']
+  Decl: mult_swv_by_gamma_r, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: src, [], [], []
+          PtrDecl: []
+            TypeDecl: src, []
+              IdentifierType: ['spin_wilson_vector']
+        Decl: dest, [], [], []
+          PtrDecl: []
+            TypeDecl: dest, []
+              IdentifierType: ['spin_wilson_vector']
+        Decl: dir, [], [], []
+          TypeDecl: dir, []
+            IdentifierType: ['int']
+      TypeDecl: mult_swv_by_gamma_r, []
+        IdentifierType: ['void']
+  Decl: su3_projector_w, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: a, [], [], []
+          PtrDecl: []
+            TypeDecl: a, []
+              IdentifierType: ['wilson_vector']
+        Decl: b, [], [], []
+          PtrDecl: []
+            TypeDecl: b, []
+              IdentifierType: ['wilson_vector']
+        Decl: c, [], [], []
+          PtrDecl: []
+            TypeDecl: c, []
+              IdentifierType: ['su3_matrix']
+      TypeDecl: su3_projector_w, []
+        IdentifierType: ['void']
+  Decl: clear_wvec, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: dest, [], [], []
+          PtrDecl: []
+            TypeDecl: dest, []
+              IdentifierType: ['wilson_vector']
+      TypeDecl: clear_wvec, []
+        IdentifierType: ['void']
+  Decl: copy_wvec, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: src, [], [], []
+          PtrDecl: []
+            TypeDecl: src, []
+              IdentifierType: ['wilson_vector']
+        Decl: dest, [], [], []
+          PtrDecl: []
+            TypeDecl: dest, []
+              IdentifierType: ['wilson_vector']
+      TypeDecl: copy_wvec, []
+        IdentifierType: ['void']
+  Decl: dump_wilson_vec, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: src, [], [], []
+          PtrDecl: []
+            TypeDecl: src, []
+              IdentifierType: ['wilson_vector']
+      TypeDecl: dump_wilson_vec, []
+        IdentifierType: ['void']
+  Decl: gaussian_rand_no, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: prn_pt, [], [], []
+          PtrDecl: []
+            TypeDecl: prn_pt, []
+              IdentifierType: ['double_prn']
+      TypeDecl: gaussian_rand_no, []
+        IdentifierType: ['double']
+  Typedef: int32type, [], ['typedef']
+    TypeDecl: int32type, []
+      IdentifierType: ['int']
+  Typedef: u_int32type, [], ['typedef']
+    TypeDecl: u_int32type, []
+      IdentifierType: ['unsigned', 'int']
+  Decl: byterevn, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: w, [], [], []
+          ArrayDecl: []
+            TypeDecl: w, []
+              IdentifierType: ['int32type']
+        Decl: n, [], [], []
+          TypeDecl: n, []
+            IdentifierType: ['int']
+      TypeDecl: byterevn, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: mult_adj_su3_mat_vec, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            PtrDecl: []
+              TypeDecl: a, []
+                IdentifierType: ['su3_matrix']
+          Decl: b, [], [], []
+            PtrDecl: []
+              TypeDecl: b, []
+                IdentifierType: ['su3_vector']
+          Decl: c, [], [], []
+            PtrDecl: []
+              TypeDecl: c, []
+                IdentifierType: ['su3_vector']
+        TypeDecl: mult_adj_su3_mat_vec, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: t, [], ['register'], []
+        TypeDecl: t, []
+          IdentifierType: ['double']
+      Decl: ar, [], ['register'], []
+        TypeDecl: ar, []
+          IdentifierType: ['double']
+      Decl: ai, [], ['register'], []
+        TypeDecl: ai, []
+          IdentifierType: ['double']
+      Decl: br, [], ['register'], []
+        TypeDecl: br, []
+          IdentifierType: ['double']
+      Decl: bi, [], ['register'], []
+        TypeDecl: bi, []
+          IdentifierType: ['double']
+      Decl: cr, [], ['register'], []
+        TypeDecl: cr, []
+          IdentifierType: ['double']
+      Decl: ci, [], ['register'], []
+        TypeDecl: ci, []
+          IdentifierType: ['double']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 3
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          Assignment: =
+            ID: ar
+            StructRef: .
+              ArrayRef: 
+                ArrayRef: 
+                  StructRef: ->
+                    ID: a
+                    ID: e
+                  Constant: int, 0
+                ID: i
+              ID: real
+          Assignment: =
+            ID: ai
+            StructRef: .
+              ArrayRef: 
+                ArrayRef: 
+                  StructRef: ->
+                    ID: a
+                    ID: e
+                  Constant: int, 0
+                ID: i
+              ID: imag
+          Assignment: =
+            ID: br
+            StructRef: .
+              ArrayRef: 
+                StructRef: ->
+                  ID: b
+                  ID: c
+                Constant: int, 0
+              ID: real
+          Assignment: =
+            ID: bi
+            StructRef: .
+              ArrayRef: 
+                StructRef: ->
+                  ID: b
+                  ID: c
+                Constant: int, 0
+              ID: imag
+          Assignment: =
+            ID: cr
+            BinaryOp: *
+              ID: ar
+              ID: br
+          Assignment: =
+            ID: t
+            BinaryOp: *
+              ID: ai
+              ID: bi
+          Assignment: +=
+            ID: cr
+            ID: t
+          Assignment: =
+            ID: ci
+            BinaryOp: *
+              ID: ar
+              ID: bi
+          Assignment: =
+            ID: t
+            BinaryOp: *
+              ID: ai
+              ID: br
+          Assignment: -=
+            ID: ci
+            ID: t
+          Assignment: =
+            ID: ar
+            StructRef: .
+              ArrayRef: 
+                ArrayRef: 
+                  StructRef: ->
+                    ID: a
+                    ID: e
+                  Constant: int, 1
+                ID: i
+              ID: real
+          Assignment: =
+            ID: ai
+            StructRef: .
+              ArrayRef: 
+                ArrayRef: 
+                  StructRef: ->
+                    ID: a
+                    ID: e
+                  Constant: int, 1
+                ID: i
+              ID: imag
+          Assignment: =
+            ID: br
+            StructRef: .
+              ArrayRef: 
+                StructRef: ->
+                  ID: b
+                  ID: c
+                Constant: int, 1
+              ID: real
+          Assignment: =
+            ID: bi
+            StructRef: .
+              ArrayRef: 
+                StructRef: ->
+                  ID: b
+                  ID: c
+                Constant: int, 1
+              ID: imag
+          Assignment: =
+            ID: t
+            BinaryOp: *
+              ID: ar
+              ID: br
+          Assignment: +=
+            ID: cr
+            ID: t
+          Assignment: =
+            ID: t
+            BinaryOp: *
+              ID: ai
+              ID: bi
+          Assignment: +=
+            ID: cr
+            ID: t
+          Assignment: =
+            ID: t
+            BinaryOp: *
+              ID: ar
+              ID: bi
+          Assignment: +=
+            ID: ci
+            ID: t
+          Assignment: =
+            ID: t
+            BinaryOp: *
+              ID: ai
+              ID: br
+          Assignment: -=
+            ID: ci
+            ID: t
+          Assignment: =
+            ID: ar
+            StructRef: .
+              ArrayRef: 
+                ArrayRef: 
+                  StructRef: ->
+                    ID: a
+                    ID: e
+                  Constant: int, 2
+                ID: i
+              ID: real
+          Assignment: =
+            ID: ai
+            StructRef: .
+              ArrayRef: 
+                ArrayRef: 
+                  StructRef: ->
+                    ID: a
+                    ID: e
+                  Constant: int, 2
+                ID: i
+              ID: imag
+          Assignment: =
+            ID: br
+            StructRef: .
+              ArrayRef: 
+                StructRef: ->
+                  ID: b
+                  ID: c
+                Constant: int, 2
+              ID: real
+          Assignment: =
+            ID: bi
+            StructRef: .
+              ArrayRef: 
+                StructRef: ->
+                  ID: b
+                  ID: c
+                Constant: int, 2
+              ID: imag
+          Assignment: =
+            ID: t
+            BinaryOp: *
+              ID: ar
+              ID: br
+          Assignment: +=
+            ID: cr
+            ID: t
+          Assignment: =
+            ID: t
+            BinaryOp: *
+              ID: ai
+              ID: bi
+          Assignment: +=
+            ID: cr
+            ID: t
+          Assignment: =
+            ID: t
+            BinaryOp: *
+              ID: ar
+              ID: bi
+          Assignment: +=
+            ID: ci
+            ID: t
+          Assignment: =
+            ID: t
+            BinaryOp: *
+              ID: ai
+              ID: br
+          Assignment: -=
+            ID: ci
+            ID: t
+          Assignment: =
+            StructRef: .
+              ArrayRef: 
+                StructRef: ->
+                  ID: c
+                  ID: c
+                ID: i
+              ID: real
+            ID: cr
+          Assignment: =
+            StructRef: .
+              ArrayRef: 
+                StructRef: ->
+                  ID: c
+                  ID: c
+                ID: i
+              ID: imag
+            ID: ci

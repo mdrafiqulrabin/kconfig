@@ -1,0 +1,26 @@
+FileAST: 
+  FuncDef: 
+    Decl: n7, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: po, [], [], []
+            TypeDecl: po, []
+              IdentifierType: ['int']
+          Decl: r4, [], [], []
+            TypeDecl: r4, []
+              IdentifierType: ['long', 'long', 'int']
+        TypeDecl: n7, []
+          IdentifierType: ['long', 'long', 'int']
+    Compound: 
+      While: 
+        BinaryOp: <
+          ID: po
+          Constant: int, 1
+        Compound: 
+          Assignment: |=
+            ID: r4
+            Constant: int, 1
+          UnaryOp: ++
+            ID: po
+      Return: 
+        ID: r4

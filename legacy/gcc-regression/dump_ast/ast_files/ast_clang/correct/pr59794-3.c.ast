@@ -1,0 +1,28 @@
+TranslationUnitDecl 0x7f90170264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9017026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9017026740 '__int128'
+|-TypedefDecl 0x7f9017026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9017026760 'unsigned __int128'
+|-TypedefDecl 0x7f9017026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9017026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9017026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9017026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9017026dc0 'char *'
+|   `-BuiltinType 0x7f9017026560 'char'
+|-TypedefDecl 0x7f90170270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9017027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9017026ee0 'struct __va_list_tag'
+|     `-Record 0x7f9017026e58 '__va_list_tag'
+|-TypedefDecl 0x7f9017027178 <c_files/pr59794-3.c:7:1, col:13> col:13 referenced __v8si '__attribute__((__vector_size__(8 * sizeof(int)))) int'
+| `-VectorType 0x7f9017027140 '__attribute__((__vector_size__(8 * sizeof(int)))) int' 8
+|   `-BuiltinType 0x7f90170265c0 'int'
+|-VarDecl 0x7f9018026a00 <line:9:1, col:15> col:15 used x '__v8si':'__attribute__((__vector_size__(8 * sizeof(int)))) int' extern
+|-FunctionDecl 0x7f9018026bb0 <line:11:1, col:24> col:13 used bar 'void (__v8si)' extern
+| `-ParmVarDecl 0x7f9018026ab0 <col:18> col:24 '__v8si':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+`-FunctionDecl 0x7f9018026d10 <line:12:1, line:16:1> line:13:1 foo 'void (void)'
+  `-CompoundStmt 0x7f9018026eb8 <line:14:1, line:16:1>
+    `-CallExpr 0x7f9018026e70 <line:15:3, col:9> 'void'
+      |-ImplicitCastExpr 0x7f9018026e58 <col:3> 'void (*)(__v8si)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7f9018026da8 <col:3> 'void (__v8si)' Function 0x7f9018026bb0 'bar' 'void (__v8si)'
+      `-ImplicitCastExpr 0x7f9018026ea0 <col:8> '__v8si':'__attribute__((__vector_size__(8 * sizeof(int)))) int' <LValueToRValue>
+        `-DeclRefExpr 0x7f9018026dd0 <col:8> '__v8si':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue Var 0x7f9018026a00 'x' '__v8si':'__attribute__((__vector_size__(8 * sizeof(int)))) int'

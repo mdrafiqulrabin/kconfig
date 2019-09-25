@@ -1,0 +1,157 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: fb_cmap
+      Decl: start, [], [], []
+        TypeDecl: start, []
+          IdentifierType: ['unsigned', 'int']
+      Decl: len, [], [], []
+        TypeDecl: len, []
+          IdentifierType: ['unsigned', 'int']
+      Decl: red, [], [], []
+        PtrDecl: []
+          TypeDecl: red, []
+            IdentifierType: ['unsigned', 'short']
+      Decl: green, [], [], []
+        PtrDecl: []
+          TypeDecl: green, []
+            IdentifierType: ['unsigned', 'short']
+      Decl: blue, [], [], []
+        PtrDecl: []
+          TypeDecl: blue, []
+            IdentifierType: ['unsigned', 'short']
+      Decl: transp, [], [], []
+        PtrDecl: []
+          TypeDecl: transp, []
+            IdentifierType: ['unsigned', 'short']
+  Typedef: rgba_t, [], ['typedef']
+    TypeDecl: rgba_t, []
+      Struct: None
+        Decl: r, [], [], []
+          TypeDecl: r, []
+            IdentifierType: ['int']
+        Decl: g, [], [], []
+          TypeDecl: g, []
+            IdentifierType: ['int']
+        Decl: b, [], [], []
+          TypeDecl: b, []
+            IdentifierType: ['int']
+        Decl: a, [], [], []
+          TypeDecl: a, []
+            IdentifierType: ['int']
+  Decl: cmap_len, [], ['static'], []
+    TypeDecl: cmap_len, []
+      IdentifierType: ['unsigned', 'int']
+  Decl: red_len, [], ['extern'], []
+    TypeDecl: red_len, []
+      IdentifierType: ['unsigned', 'int']
+  Decl: green_len, [], ['extern'], []
+    TypeDecl: green_len, []
+      IdentifierType: ['unsigned', 'int']
+  Decl: blue_len, [], ['extern'], []
+    TypeDecl: blue_len, []
+      IdentifierType: ['unsigned', 'int']
+  Decl: alpha_len, [], ['extern'], []
+    TypeDecl: alpha_len, []
+      IdentifierType: ['unsigned', 'int']
+  Decl: fb_cmap, [], ['extern'], []
+    TypeDecl: fb_cmap, []
+      Struct: fb_cmap
+  Decl: clut, [], ['extern'], []
+    PtrDecl: []
+      TypeDecl: clut, []
+        IdentifierType: ['rgba_t']
+  Decl: fb_set_cmap, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: fb_set_cmap, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: directcolor_update_cmap, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: directcolor_update_cmap, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['unsigned', 'int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          ID: cmap_len
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          If: 
+            BinaryOp: <
+              ID: i
+              ID: red_len
+            Assignment: =
+              ArrayRef: 
+                StructRef: .
+                  ID: fb_cmap
+                  ID: red
+                ID: i
+              StructRef: .
+                ArrayRef: 
+                  ID: clut
+                  ID: i
+                ID: r
+          If: 
+            BinaryOp: <
+              ID: i
+              ID: green_len
+            Assignment: =
+              ArrayRef: 
+                StructRef: .
+                  ID: fb_cmap
+                  ID: green
+                ID: i
+              StructRef: .
+                ArrayRef: 
+                  ID: clut
+                  ID: i
+                ID: g
+          If: 
+            BinaryOp: <
+              ID: i
+              ID: blue_len
+            Assignment: =
+              ArrayRef: 
+                StructRef: .
+                  ID: fb_cmap
+                  ID: blue
+                ID: i
+              StructRef: .
+                ArrayRef: 
+                  ID: clut
+                  ID: i
+                ID: b
+          If: 
+            BinaryOp: &&
+              StructRef: .
+                ID: fb_cmap
+                ID: transp
+              BinaryOp: <
+                ID: i
+                ID: alpha_len
+            Assignment: =
+              ArrayRef: 
+                StructRef: .
+                  ID: fb_cmap
+                  ID: transp
+                ID: i
+              StructRef: .
+                ArrayRef: 
+                  ID: clut
+                  ID: i
+                ID: a

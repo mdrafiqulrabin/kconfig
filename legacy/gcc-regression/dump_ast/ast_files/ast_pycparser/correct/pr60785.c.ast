@@ -1,0 +1,81 @@
+FileAST: 
+  FuncDef: 
+    Decl: aqc, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: aqc, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        Constant: int, 1
+  FuncDef: 
+    Decl: gkd, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: gkd, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: wu0, [], [], []
+        TypeDecl: wu0, []
+          IdentifierType: ['int']
+      Decl: b1y, [], ['static'], []
+        TypeDecl: b1y, []
+          IdentifierType: ['int']
+      Decl: gw2, [], ['static'], []
+        TypeDecl: gw2, []
+          IdentifierType: ['int']
+      Decl: ydw, [], ['static'], []
+        PtrDecl: []
+          TypeDecl: ydw, []
+            IdentifierType: ['int']
+        UnaryOp: &
+          ID: gw2
+      Decl: m3l, [], ['static'], []
+        PtrDecl: []
+          PtrDecl: []
+            TypeDecl: m3l, []
+              IdentifierType: ['int']
+        UnaryOp: &
+          ID: ydw
+      Assignment: =
+        UnaryOp: *
+          UnaryOp: *
+            ID: m3l
+        Constant: int, 0
+      For: 
+        Assignment: =
+          ID: b1y
+          Constant: int, 0
+        BinaryOp: <
+          ID: b1y
+          Constant: int, 1
+        UnaryOp: ++
+          ID: b1y
+        Compound: 
+          Decl: cpj, [], [], []
+            PtrDecl: []
+              TypeDecl: cpj, []
+                IdentifierType: ['int']
+            UnaryOp: &
+              ID: gw2
+          If: 
+            Assignment: |=
+              UnaryOp: *
+                ID: ydw
+              FuncCall: 
+                ID: aqc
+            Compound: 
+              Assignment: =
+                UnaryOp: *
+                  ID: cpj
+                Constant: int, 0
+              Assignment: =
+                UnaryOp: *
+                  ID: ydw
+                ID: wu0

@@ -1,0 +1,915 @@
+TranslationUnitDecl 0x7fd69f8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd69f826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd69f826740 '__int128'
+|-TypedefDecl 0x7fd69f826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd69f826760 'unsigned __int128'
+|-TypedefDecl 0x7fd69f826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd69f826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd69f826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd69f826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd69f826dc0 'char *'
+|   `-BuiltinType 0x7fd69f826560 'char'
+|-TypedefDecl 0x7fd69f8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd69f827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd69f826ee0 'struct __va_list_tag'
+|     `-Record 0x7fd69f826e58 '__va_list_tag'
+|-FunctionDecl 0x7fd69f878030 <c_files/pr39501.c:3:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fd69f8780c8 prev 0x7fd69f878030 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fd69f878278 <line:4:13> col:13 implicit used exit 'void (int) __attribute__((noreturn))' extern
+| `-ParmVarDecl 0x7fd69f878310 <<invalid sloc>> <invalid sloc> 'int'
+|-FunctionDecl 0x7fd69f878378 prev 0x7fd69f878278 <col:1, col:22> col:13 used exit 'void (int) __attribute__((noreturn))' extern
+| `-ParmVarDecl 0x7fd69f878178 <col:19> col:22 'int'
+|-FunctionDecl 0x7fd69f878588 <line:18:3, line:16:3> <scratch space>:3:1 used float_min1 'float (float, float)'
+| |-ParmVarDecl 0x7fd69f878430 <c_files/pr39501.c:18:3, line:13:50> col:50 used a 'float'
+| |-ParmVarDecl 0x7fd69f8784a8 <line:18:3, line:13:58> col:58 used b 'float'
+| |-CompoundStmt 0x7fd69f8788c8 <line:14:3, line:16:3>
+| | `-ReturnStmt 0x7fd69f8788b0 <line:15:5, line:6:41>
+| |   `-ParenExpr 0x7fd69f878890 <col:19, col:41> 'float'
+| |     `-ConditionalOperator 0x7fd69f878860 <col:20, col:40> 'float'
+| |       |-BinaryOperator 0x7fd69f878778 <col:20, col:28> 'int' '<'
+| |       | |-ImplicitCastExpr 0x7fd69f878748 <col:20, col:22> 'float' <LValueToRValue>
+| |       | | `-ParenExpr 0x7fd69f8786e0 <col:20, col:22> 'float' lvalue
+| |       | |   `-DeclRefExpr 0x7fd69f8786b8 <line:15:14> 'float' lvalue ParmVar 0x7fd69f878430 'a' 'float'
+| |       | `-ImplicitCastExpr 0x7fd69f878760 <line:6:26, col:28> 'float' <LValueToRValue>
+| |       |   `-ParenExpr 0x7fd69f878728 <col:26, col:28> 'float' lvalue
+| |       |     `-DeclRefExpr 0x7fd69f878700 <line:15:17> 'float' lvalue ParmVar 0x7fd69f8784a8 'b' 'float'
+| |       |-ImplicitCastExpr 0x7fd69f878830 <line:6:32, col:34> 'float' <LValueToRValue>
+| |       | `-ParenExpr 0x7fd69f8787c8 <col:32, col:34> 'float' lvalue
+| |       |   `-DeclRefExpr 0x7fd69f8787a0 <line:15:14> 'float' lvalue ParmVar 0x7fd69f878430 'a' 'float'
+| |       `-ImplicitCastExpr 0x7fd69f878848 <line:6:38, col:40> 'float' <LValueToRValue>
+| |         `-ParenExpr 0x7fd69f878810 <col:38, col:40> 'float' lvalue
+| |           `-DeclRefExpr 0x7fd69f8787e8 <line:15:17> 'float' lvalue ParmVar 0x7fd69f8784a8 'b' 'float'
+| `-NoInlineAttr 0x7fd69f878630 <line:13:23>
+|-FunctionDecl 0x7fd69f878a10 <line:19:3, line:16:3> <scratch space>:5:1 used float_min2 'float (float, float)'
+| |-ParmVarDecl 0x7fd69f878900 <c_files/pr39501.c:19:3, line:13:50> col:50 used a 'float'
+| |-ParmVarDecl 0x7fd69f878978 <line:19:3, line:13:58> col:58 used b 'float'
+| |-CompoundStmt 0x7fd69f878d10 <line:14:3, line:16:3>
+| | `-ReturnStmt 0x7fd69f878cf8 <line:15:5, line:9:42>
+| |   `-ParenExpr 0x7fd69f878cd8 <col:19, col:42> 'float'
+| |     `-ConditionalOperator 0x7fd69f878ca8 <col:20, col:41> 'float'
+| |       |-BinaryOperator 0x7fd69f878bc0 <col:20, col:29> 'int' '<='
+| |       | |-ImplicitCastExpr 0x7fd69f878b90 <col:20, col:22> 'float' <LValueToRValue>
+| |       | | `-ParenExpr 0x7fd69f878b28 <col:20, col:22> 'float' lvalue
+| |       | |   `-DeclRefExpr 0x7fd69f878b00 <line:15:14> 'float' lvalue ParmVar 0x7fd69f878900 'a' 'float'
+| |       | `-ImplicitCastExpr 0x7fd69f878ba8 <line:9:27, col:29> 'float' <LValueToRValue>
+| |       |   `-ParenExpr 0x7fd69f878b70 <col:27, col:29> 'float' lvalue
+| |       |     `-DeclRefExpr 0x7fd69f878b48 <line:15:17> 'float' lvalue ParmVar 0x7fd69f878978 'b' 'float'
+| |       |-ImplicitCastExpr 0x7fd69f878c78 <line:9:33, col:35> 'float' <LValueToRValue>
+| |       | `-ParenExpr 0x7fd69f878c10 <col:33, col:35> 'float' lvalue
+| |       |   `-DeclRefExpr 0x7fd69f878be8 <line:15:14> 'float' lvalue ParmVar 0x7fd69f878900 'a' 'float'
+| |       `-ImplicitCastExpr 0x7fd69f878c90 <line:9:39, col:41> 'float' <LValueToRValue>
+| |         `-ParenExpr 0x7fd69f878c58 <col:39, col:41> 'float' lvalue
+| |           `-DeclRefExpr 0x7fd69f878c30 <line:15:17> 'float' lvalue ParmVar 0x7fd69f878978 'b' 'float'
+| `-NoInlineAttr 0x7fd69f878ab8 <line:13:23>
+|-FunctionDecl 0x7fd69f878e58 <line:20:3, line:16:3> <scratch space>:7:1 used float_max1 'float (float, float)'
+| |-ParmVarDecl 0x7fd69f878d48 <c_files/pr39501.c:20:3, line:13:50> col:50 used a 'float'
+| |-ParmVarDecl 0x7fd69f878dc0 <line:20:3, line:13:58> col:58 used b 'float'
+| |-CompoundStmt 0x7fd69f87c368 <line:14:3, line:16:3>
+| | `-ReturnStmt 0x7fd69f87c350 <line:15:5, line:7:41>
+| |   `-ParenExpr 0x7fd69f87c330 <col:19, col:41> 'float'
+| |     `-ConditionalOperator 0x7fd69f87c300 <col:20, col:40> 'float'
+| |       |-BinaryOperator 0x7fd69f87c218 <col:20, col:28> 'int' '>'
+| |       | |-ImplicitCastExpr 0x7fd69f878fd8 <col:20, col:22> 'float' <LValueToRValue>
+| |       | | `-ParenExpr 0x7fd69f878f70 <col:20, col:22> 'float' lvalue
+| |       | |   `-DeclRefExpr 0x7fd69f878f48 <line:15:14> 'float' lvalue ParmVar 0x7fd69f878d48 'a' 'float'
+| |       | `-ImplicitCastExpr 0x7fd69f87c200 <line:7:26, col:28> 'float' <LValueToRValue>
+| |       |   `-ParenExpr 0x7fd69f878fb8 <col:26, col:28> 'float' lvalue
+| |       |     `-DeclRefExpr 0x7fd69f878f90 <line:15:17> 'float' lvalue ParmVar 0x7fd69f878dc0 'b' 'float'
+| |       |-ImplicitCastExpr 0x7fd69f87c2d0 <line:7:32, col:34> 'float' <LValueToRValue>
+| |       | `-ParenExpr 0x7fd69f87c268 <col:32, col:34> 'float' lvalue
+| |       |   `-DeclRefExpr 0x7fd69f87c240 <line:15:14> 'float' lvalue ParmVar 0x7fd69f878d48 'a' 'float'
+| |       `-ImplicitCastExpr 0x7fd69f87c2e8 <line:7:38, col:40> 'float' <LValueToRValue>
+| |         `-ParenExpr 0x7fd69f87c2b0 <col:38, col:40> 'float' lvalue
+| |           `-DeclRefExpr 0x7fd69f87c288 <line:15:17> 'float' lvalue ParmVar 0x7fd69f878dc0 'b' 'float'
+| `-NoInlineAttr 0x7fd69f878f00 <line:13:23>
+|-FunctionDecl 0x7fd69f87c4b0 <line:21:3, line:16:3> <scratch space>:9:1 used float_max2 'float (float, float)'
+| |-ParmVarDecl 0x7fd69f87c3a0 <c_files/pr39501.c:21:3, line:13:50> col:50 used a 'float'
+| |-ParmVarDecl 0x7fd69f87c418 <line:21:3, line:13:58> col:58 used b 'float'
+| |-CompoundStmt 0x7fd69f87c7b0 <line:14:3, line:16:3>
+| | `-ReturnStmt 0x7fd69f87c798 <line:15:5, line:10:42>
+| |   `-ParenExpr 0x7fd69f87c778 <col:19, col:42> 'float'
+| |     `-ConditionalOperator 0x7fd69f87c748 <col:20, col:41> 'float'
+| |       |-BinaryOperator 0x7fd69f87c660 <col:20, col:29> 'int' '>='
+| |       | |-ImplicitCastExpr 0x7fd69f87c630 <col:20, col:22> 'float' <LValueToRValue>
+| |       | | `-ParenExpr 0x7fd69f87c5c8 <col:20, col:22> 'float' lvalue
+| |       | |   `-DeclRefExpr 0x7fd69f87c5a0 <line:15:14> 'float' lvalue ParmVar 0x7fd69f87c3a0 'a' 'float'
+| |       | `-ImplicitCastExpr 0x7fd69f87c648 <line:10:27, col:29> 'float' <LValueToRValue>
+| |       |   `-ParenExpr 0x7fd69f87c610 <col:27, col:29> 'float' lvalue
+| |       |     `-DeclRefExpr 0x7fd69f87c5e8 <line:15:17> 'float' lvalue ParmVar 0x7fd69f87c418 'b' 'float'
+| |       |-ImplicitCastExpr 0x7fd69f87c718 <line:10:33, col:35> 'float' <LValueToRValue>
+| |       | `-ParenExpr 0x7fd69f87c6b0 <col:33, col:35> 'float' lvalue
+| |       |   `-DeclRefExpr 0x7fd69f87c688 <line:15:14> 'float' lvalue ParmVar 0x7fd69f87c3a0 'a' 'float'
+| |       `-ImplicitCastExpr 0x7fd69f87c730 <line:10:39, col:41> 'float' <LValueToRValue>
+| |         `-ParenExpr 0x7fd69f87c6f8 <col:39, col:41> 'float' lvalue
+| |           `-DeclRefExpr 0x7fd69f87c6d0 <line:15:17> 'float' lvalue ParmVar 0x7fd69f87c418 'b' 'float'
+| `-NoInlineAttr 0x7fd69f87c558 <line:13:23>
+|-FunctionDecl 0x7fd69f87c938 <line:23:3, line:16:3> <scratch space>:11:1 used double_min1 'double (double, double)'
+| |-ParmVarDecl 0x7fd69f87c7e8 <c_files/pr39501.c:23:3, line:13:50> col:50 used a 'double'
+| |-ParmVarDecl 0x7fd69f87c860 <line:23:3, line:13:58> col:58 used b 'double'
+| |-CompoundStmt 0x7fd69f87cc38 <line:14:3, line:16:3>
+| | `-ReturnStmt 0x7fd69f87cc20 <line:15:5, line:6:41>
+| |   `-ParenExpr 0x7fd69f87cc00 <col:19, col:41> 'double'
+| |     `-ConditionalOperator 0x7fd69f87cbd0 <col:20, col:40> 'double'
+| |       |-BinaryOperator 0x7fd69f87cae8 <col:20, col:28> 'int' '<'
+| |       | |-ImplicitCastExpr 0x7fd69f87cab8 <col:20, col:22> 'double' <LValueToRValue>
+| |       | | `-ParenExpr 0x7fd69f87ca50 <col:20, col:22> 'double' lvalue
+| |       | |   `-DeclRefExpr 0x7fd69f87ca28 <line:15:14> 'double' lvalue ParmVar 0x7fd69f87c7e8 'a' 'double'
+| |       | `-ImplicitCastExpr 0x7fd69f87cad0 <line:6:26, col:28> 'double' <LValueToRValue>
+| |       |   `-ParenExpr 0x7fd69f87ca98 <col:26, col:28> 'double' lvalue
+| |       |     `-DeclRefExpr 0x7fd69f87ca70 <line:15:17> 'double' lvalue ParmVar 0x7fd69f87c860 'b' 'double'
+| |       |-ImplicitCastExpr 0x7fd69f87cba0 <line:6:32, col:34> 'double' <LValueToRValue>
+| |       | `-ParenExpr 0x7fd69f87cb38 <col:32, col:34> 'double' lvalue
+| |       |   `-DeclRefExpr 0x7fd69f87cb10 <line:15:14> 'double' lvalue ParmVar 0x7fd69f87c7e8 'a' 'double'
+| |       `-ImplicitCastExpr 0x7fd69f87cbb8 <line:6:38, col:40> 'double' <LValueToRValue>
+| |         `-ParenExpr 0x7fd69f87cb80 <col:38, col:40> 'double' lvalue
+| |           `-DeclRefExpr 0x7fd69f87cb58 <line:15:17> 'double' lvalue ParmVar 0x7fd69f87c860 'b' 'double'
+| `-NoInlineAttr 0x7fd69f87c9e0 <line:13:23>
+|-FunctionDecl 0x7fd69f87cd80 <line:24:3, line:16:3> <scratch space>:13:1 used double_min2 'double (double, double)'
+| |-ParmVarDecl 0x7fd69f87cc70 <c_files/pr39501.c:24:3, line:13:50> col:50 used a 'double'
+| |-ParmVarDecl 0x7fd69f87cce8 <line:24:3, line:13:58> col:58 used b 'double'
+| |-CompoundStmt 0x7fd69f87d080 <line:14:3, line:16:3>
+| | `-ReturnStmt 0x7fd69f87d068 <line:15:5, line:9:42>
+| |   `-ParenExpr 0x7fd69f87d048 <col:19, col:42> 'double'
+| |     `-ConditionalOperator 0x7fd69f87d018 <col:20, col:41> 'double'
+| |       |-BinaryOperator 0x7fd69f87cf30 <col:20, col:29> 'int' '<='
+| |       | |-ImplicitCastExpr 0x7fd69f87cf00 <col:20, col:22> 'double' <LValueToRValue>
+| |       | | `-ParenExpr 0x7fd69f87ce98 <col:20, col:22> 'double' lvalue
+| |       | |   `-DeclRefExpr 0x7fd69f87ce70 <line:15:14> 'double' lvalue ParmVar 0x7fd69f87cc70 'a' 'double'
+| |       | `-ImplicitCastExpr 0x7fd69f87cf18 <line:9:27, col:29> 'double' <LValueToRValue>
+| |       |   `-ParenExpr 0x7fd69f87cee0 <col:27, col:29> 'double' lvalue
+| |       |     `-DeclRefExpr 0x7fd69f87ceb8 <line:15:17> 'double' lvalue ParmVar 0x7fd69f87cce8 'b' 'double'
+| |       |-ImplicitCastExpr 0x7fd69f87cfe8 <line:9:33, col:35> 'double' <LValueToRValue>
+| |       | `-ParenExpr 0x7fd69f87cf80 <col:33, col:35> 'double' lvalue
+| |       |   `-DeclRefExpr 0x7fd69f87cf58 <line:15:14> 'double' lvalue ParmVar 0x7fd69f87cc70 'a' 'double'
+| |       `-ImplicitCastExpr 0x7fd69f87d000 <line:9:39, col:41> 'double' <LValueToRValue>
+| |         `-ParenExpr 0x7fd69f87cfc8 <col:39, col:41> 'double' lvalue
+| |           `-DeclRefExpr 0x7fd69f87cfa0 <line:15:17> 'double' lvalue ParmVar 0x7fd69f87cce8 'b' 'double'
+| `-NoInlineAttr 0x7fd69f87ce28 <line:13:23>
+|-FunctionDecl 0x7fd69f87d200 <line:25:3, line:16:3> <scratch space>:15:1 used double_max1 'double (double, double)'
+| |-ParmVarDecl 0x7fd69f87d0b8 <c_files/pr39501.c:25:3, line:13:50> col:50 used a 'double'
+| |-ParmVarDecl 0x7fd69f87d130 <line:25:3, line:13:58> col:58 used b 'double'
+| |-CompoundStmt 0x7fd69f87d500 <line:14:3, line:16:3>
+| | `-ReturnStmt 0x7fd69f87d4e8 <line:15:5, line:7:41>
+| |   `-ParenExpr 0x7fd69f87d4c8 <col:19, col:41> 'double'
+| |     `-ConditionalOperator 0x7fd69f87d498 <col:20, col:40> 'double'
+| |       |-BinaryOperator 0x7fd69f87d3b0 <col:20, col:28> 'int' '>'
+| |       | |-ImplicitCastExpr 0x7fd69f87d380 <col:20, col:22> 'double' <LValueToRValue>
+| |       | | `-ParenExpr 0x7fd69f87d318 <col:20, col:22> 'double' lvalue
+| |       | |   `-DeclRefExpr 0x7fd69f87d2f0 <line:15:14> 'double' lvalue ParmVar 0x7fd69f87d0b8 'a' 'double'
+| |       | `-ImplicitCastExpr 0x7fd69f87d398 <line:7:26, col:28> 'double' <LValueToRValue>
+| |       |   `-ParenExpr 0x7fd69f87d360 <col:26, col:28> 'double' lvalue
+| |       |     `-DeclRefExpr 0x7fd69f87d338 <line:15:17> 'double' lvalue ParmVar 0x7fd69f87d130 'b' 'double'
+| |       |-ImplicitCastExpr 0x7fd69f87d468 <line:7:32, col:34> 'double' <LValueToRValue>
+| |       | `-ParenExpr 0x7fd69f87d400 <col:32, col:34> 'double' lvalue
+| |       |   `-DeclRefExpr 0x7fd69f87d3d8 <line:15:14> 'double' lvalue ParmVar 0x7fd69f87d0b8 'a' 'double'
+| |       `-ImplicitCastExpr 0x7fd69f87d480 <line:7:38, col:40> 'double' <LValueToRValue>
+| |         `-ParenExpr 0x7fd69f87d448 <col:38, col:40> 'double' lvalue
+| |           `-DeclRefExpr 0x7fd69f87d420 <line:15:17> 'double' lvalue ParmVar 0x7fd69f87d130 'b' 'double'
+| `-NoInlineAttr 0x7fd69f87d2a8 <line:13:23>
+|-FunctionDecl 0x7fd69f87d648 <line:26:3, line:16:3> <scratch space>:17:1 used double_max2 'double (double, double)'
+| |-ParmVarDecl 0x7fd69f87d538 <c_files/pr39501.c:26:3, line:13:50> col:50 used a 'double'
+| |-ParmVarDecl 0x7fd69f87d5b0 <line:26:3, line:13:58> col:58 used b 'double'
+| |-CompoundStmt 0x7fd69f87d948 <line:14:3, line:16:3>
+| | `-ReturnStmt 0x7fd69f87d930 <line:15:5, line:10:42>
+| |   `-ParenExpr 0x7fd69f87d910 <col:19, col:42> 'double'
+| |     `-ConditionalOperator 0x7fd69f87d8e0 <col:20, col:41> 'double'
+| |       |-BinaryOperator 0x7fd69f87d7f8 <col:20, col:29> 'int' '>='
+| |       | |-ImplicitCastExpr 0x7fd69f87d7c8 <col:20, col:22> 'double' <LValueToRValue>
+| |       | | `-ParenExpr 0x7fd69f87d760 <col:20, col:22> 'double' lvalue
+| |       | |   `-DeclRefExpr 0x7fd69f87d738 <line:15:14> 'double' lvalue ParmVar 0x7fd69f87d538 'a' 'double'
+| |       | `-ImplicitCastExpr 0x7fd69f87d7e0 <line:10:27, col:29> 'double' <LValueToRValue>
+| |       |   `-ParenExpr 0x7fd69f87d7a8 <col:27, col:29> 'double' lvalue
+| |       |     `-DeclRefExpr 0x7fd69f87d780 <line:15:17> 'double' lvalue ParmVar 0x7fd69f87d5b0 'b' 'double'
+| |       |-ImplicitCastExpr 0x7fd69f87d8b0 <line:10:33, col:35> 'double' <LValueToRValue>
+| |       | `-ParenExpr 0x7fd69f87d848 <col:33, col:35> 'double' lvalue
+| |       |   `-DeclRefExpr 0x7fd69f87d820 <line:15:14> 'double' lvalue ParmVar 0x7fd69f87d538 'a' 'double'
+| |       `-ImplicitCastExpr 0x7fd69f87d8c8 <line:10:39, col:41> 'double' <LValueToRValue>
+| |         `-ParenExpr 0x7fd69f87d890 <col:39, col:41> 'double' lvalue
+| |           `-DeclRefExpr 0x7fd69f87d868 <line:15:17> 'double' lvalue ParmVar 0x7fd69f87d5b0 'b' 'double'
+| `-NoInlineAttr 0x7fd69f87d6f0 <line:13:23>
+`-FunctionDecl 0x7fd69f87d9c0 <line:28:1, line:87:1> line:28:5 main 'int ()'
+  `-CompoundStmt 0x7fd69f883bc0 <line:29:1, line:87:1>
+    |-IfStmt 0x7fd69f87dc58 <line:30:3, col:44>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fd69f87db98 <col:7, col:33> 'int' '!='
+    | | |-CallExpr 0x7fd69f87db20 <col:7, col:27> 'float'
+    | | | |-ImplicitCastExpr 0x7fd69f87db08 <col:7> 'float (*)(float, float)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7fd69f87da58 <col:7> 'float (float, float)' Function 0x7fd69f878588 'float_min1' 'float (float, float)'
+    | | | |-FloatingLiteral 0x7fd69f87da80 <col:18> 'float' 0.000000e+00
+    | | | `-UnaryOperator 0x7fd69f87dac0 <col:23, col:24> 'float' prefix '-'
+    | | |   `-FloatingLiteral 0x7fd69f87daa0 <col:24> 'float' 1.000000e+00
+    | | `-UnaryOperator 0x7fd69f87db78 <col:32, col:33> 'float' prefix '-'
+    | |   `-FloatingLiteral 0x7fd69f87db58 <col:33> 'float' 1.000000e+00
+    | |-CallExpr 0x7fd69f87dc30 <col:38, col:44> 'void'
+    | | `-ImplicitCastExpr 0x7fd69f87dc18 <col:38> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fd69f87dbc0 <col:38> 'void (void) __attribute__((noreturn))' Function 0x7fd69f8780c8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fd69f87de38 <line:31:3, col:44>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fd69f87dda8 <col:7, col:33> 'int' '!='
+    | | |-CallExpr 0x7fd69f87dd30 <col:7, col:27> 'float'
+    | | | |-ImplicitCastExpr 0x7fd69f87dd18 <col:7> 'float (*)(float, float)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7fd69f87dc90 <col:7> 'float (float, float)' Function 0x7fd69f878588 'float_min1' 'float (float, float)'
+    | | | |-UnaryOperator 0x7fd69f87dcd8 <col:18, col:19> 'float' prefix '-'
+    | | | | `-FloatingLiteral 0x7fd69f87dcb8 <col:19> 'float' 1.000000e+00
+    | | | `-FloatingLiteral 0x7fd69f87dcf8 <col:24> 'float' 0.000000e+00
+    | | `-UnaryOperator 0x7fd69f87dd88 <col:32, col:33> 'float' prefix '-'
+    | |   `-FloatingLiteral 0x7fd69f87dd68 <col:33> 'float' 1.000000e+00
+    | |-CallExpr 0x7fd69f87de10 <col:38, col:44> 'void'
+    | | `-ImplicitCastExpr 0x7fd69f87ddf8 <col:38> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fd69f87ddd0 <col:38> 'void (void) __attribute__((noreturn))' Function 0x7fd69f8780c8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fd69f87dfd8 <line:32:3, col:44>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fd69f87df48 <col:7, col:32> 'int' '!='
+    | | |-CallExpr 0x7fd69f87def0 <col:7, col:26> 'float'
+    | | | |-ImplicitCastExpr 0x7fd69f87ded8 <col:7> 'float (*)(float, float)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7fd69f87de70 <col:7> 'float (float, float)' Function 0x7fd69f878588 'float_min1' 'float (float, float)'
+    | | | |-FloatingLiteral 0x7fd69f87de98 <col:18> 'float' 0.000000e+00
+    | | | `-FloatingLiteral 0x7fd69f87deb8 <col:23> 'float' 1.000000e+00
+    | | `-FloatingLiteral 0x7fd69f87df28 <col:32> 'float' 0.000000e+00
+    | |-CallExpr 0x7fd69f87dfb0 <col:38, col:44> 'void'
+    | | `-ImplicitCastExpr 0x7fd69f87df98 <col:38> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fd69f87df70 <col:38> 'void (void) __attribute__((noreturn))' Function 0x7fd69f8780c8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fd69f87e178 <line:33:3, col:44>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fd69f87e0e8 <col:7, col:32> 'int' '!='
+    | | |-CallExpr 0x7fd69f87e090 <col:7, col:26> 'float'
+    | | | |-ImplicitCastExpr 0x7fd69f87e078 <col:7> 'float (*)(float, float)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7fd69f87e010 <col:7> 'float (float, float)' Function 0x7fd69f878588 'float_min1' 'float (float, float)'
+    | | | |-FloatingLiteral 0x7fd69f87e038 <col:18> 'float' 1.000000e+00
+    | | | `-FloatingLiteral 0x7fd69f87e058 <col:23> 'float' 0.000000e+00
+    | | `-FloatingLiteral 0x7fd69f87e0c8 <col:32> 'float' 0.000000e+00
+    | |-CallExpr 0x7fd69f87e150 <col:38, col:44> 'void'
+    | | `-ImplicitCastExpr 0x7fd69f87e138 <col:38> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fd69f87e110 <col:38> 'void (void) __attribute__((noreturn))' Function 0x7fd69f8780c8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fd69f87ef60 <line:34:3, col:44>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fd69f87eed0 <col:7, col:33> 'int' '!='
+    | | |-CallExpr 0x7fd69f87ee58 <col:7, col:27> 'float'
+    | | | |-ImplicitCastExpr 0x7fd69f87ee40 <col:7> 'float (*)(float, float)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7fd69f87e1b0 <col:7> 'float (float, float)' Function 0x7fd69f878588 'float_min1' 'float (float, float)'
+    | | | |-UnaryOperator 0x7fd69f87ee00 <col:18, col:19> 'float' prefix '-'
+    | | | | `-FloatingLiteral 0x7fd69f87e1d8 <col:19> 'float' 1.000000e+00
+    | | | `-FloatingLiteral 0x7fd69f87ee20 <col:24> 'float' 1.000000e+00
+    | | `-UnaryOperator 0x7fd69f87eeb0 <col:32, col:33> 'float' prefix '-'
+    | |   `-FloatingLiteral 0x7fd69f87ee90 <col:33> 'float' 1.000000e+00
+    | |-CallExpr 0x7fd69f87ef38 <col:38, col:44> 'void'
+    | | `-ImplicitCastExpr 0x7fd69f87ef20 <col:38> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fd69f87eef8 <col:38> 'void (void) __attribute__((noreturn))' Function 0x7fd69f8780c8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fd69f87f140 <line:35:3, col:44>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fd69f87f0b0 <col:7, col:33> 'int' '!='
+    | | |-CallExpr 0x7fd69f87f038 <col:7, col:27> 'float'
+    | | | |-ImplicitCastExpr 0x7fd69f87f020 <col:7> 'float (*)(float, float)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7fd69f87ef98 <col:7> 'float (float, float)' Function 0x7fd69f878588 'float_min1' 'float (float, float)'
+    | | | |-FloatingLiteral 0x7fd69f87efc0 <col:18> 'float' 1.000000e+00
+    | | | `-UnaryOperator 0x7fd69f87f000 <col:23, col:24> 'float' prefix '-'
+    | | |   `-FloatingLiteral 0x7fd69f87efe0 <col:24> 'float' 1.000000e+00
+    | | `-UnaryOperator 0x7fd69f87f090 <col:32, col:33> 'float' prefix '-'
+    | |   `-FloatingLiteral 0x7fd69f87f070 <col:33> 'float' 1.000000e+00
+    | |-CallExpr 0x7fd69f87f118 <col:38, col:44> 'void'
+    | | `-ImplicitCastExpr 0x7fd69f87f100 <col:38> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fd69f87f0d8 <col:38> 'void (void) __attribute__((noreturn))' Function 0x7fd69f8780c8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fd69f87f300 <line:37:3, col:44>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fd69f87f270 <col:7, col:32> 'int' '!='
+    | | |-CallExpr 0x7fd69f87f218 <col:7, col:27> 'float'
+    | | | |-ImplicitCastExpr 0x7fd69f87f200 <col:7> 'float (*)(float, float)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7fd69f87f178 <col:7> 'float (float, float)' Function 0x7fd69f878e58 'float_max1' 'float (float, float)'
+    | | | |-FloatingLiteral 0x7fd69f87f1a0 <col:18> 'float' 0.000000e+00
+    | | | `-UnaryOperator 0x7fd69f87f1e0 <col:23, col:24> 'float' prefix '-'
+    | | |   `-FloatingLiteral 0x7fd69f87f1c0 <col:24> 'float' 1.000000e+00
+    | | `-FloatingLiteral 0x7fd69f87f250 <col:32> 'float' 0.000000e+00
+    | |-CallExpr 0x7fd69f87f2d8 <col:38, col:44> 'void'
+    | | `-ImplicitCastExpr 0x7fd69f87f2c0 <col:38> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fd69f87f298 <col:38> 'void (void) __attribute__((noreturn))' Function 0x7fd69f8780c8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fd69f87f4c0 <line:38:3, col:44>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fd69f87f430 <col:7, col:32> 'int' '!='
+    | | |-CallExpr 0x7fd69f87f3d8 <col:7, col:27> 'float'
+    | | | |-ImplicitCastExpr 0x7fd69f87f3c0 <col:7> 'float (*)(float, float)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7fd69f87f338 <col:7> 'float (float, float)' Function 0x7fd69f878e58 'float_max1' 'float (float, float)'
+    | | | |-UnaryOperator 0x7fd69f87f380 <col:18, col:19> 'float' prefix '-'
+    | | | | `-FloatingLiteral 0x7fd69f87f360 <col:19> 'float' 1.000000e+00
+    | | | `-FloatingLiteral 0x7fd69f87f3a0 <col:24> 'float' 0.000000e+00
+    | | `-FloatingLiteral 0x7fd69f87f410 <col:32> 'float' 0.000000e+00
+    | |-CallExpr 0x7fd69f87f498 <col:38, col:44> 'void'
+    | | `-ImplicitCastExpr 0x7fd69f87f480 <col:38> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fd69f87f458 <col:38> 'void (void) __attribute__((noreturn))' Function 0x7fd69f8780c8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fd69f87f660 <line:39:3, col:44>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fd69f87f5d0 <col:7, col:32> 'int' '!='
+    | | |-CallExpr 0x7fd69f87f578 <col:7, col:26> 'float'
+    | | | |-ImplicitCastExpr 0x7fd69f87f560 <col:7> 'float (*)(float, float)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7fd69f87f4f8 <col:7> 'float (float, float)' Function 0x7fd69f878e58 'float_max1' 'float (float, float)'
+    | | | |-FloatingLiteral 0x7fd69f87f520 <col:18> 'float' 0.000000e+00
+    | | | `-FloatingLiteral 0x7fd69f87f540 <col:23> 'float' 1.000000e+00
+    | | `-FloatingLiteral 0x7fd69f87f5b0 <col:32> 'float' 1.000000e+00
+    | |-CallExpr 0x7fd69f87f638 <col:38, col:44> 'void'
+    | | `-ImplicitCastExpr 0x7fd69f87f620 <col:38> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fd69f87f5f8 <col:38> 'void (void) __attribute__((noreturn))' Function 0x7fd69f8780c8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fd69f87f800 <line:40:3, col:44>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fd69f87f770 <col:7, col:32> 'int' '!='
+    | | |-CallExpr 0x7fd69f87f718 <col:7, col:26> 'float'
+    | | | |-ImplicitCastExpr 0x7fd69f87f700 <col:7> 'float (*)(float, float)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7fd69f87f698 <col:7> 'float (float, float)' Function 0x7fd69f878e58 'float_max1' 'float (float, float)'
+    | | | |-FloatingLiteral 0x7fd69f87f6c0 <col:18> 'float' 1.000000e+00
+    | | | `-FloatingLiteral 0x7fd69f87f6e0 <col:23> 'float' 0.000000e+00
+    | | `-FloatingLiteral 0x7fd69f87f750 <col:32> 'float' 1.000000e+00
+    | |-CallExpr 0x7fd69f87f7d8 <col:38, col:44> 'void'
+    | | `-ImplicitCastExpr 0x7fd69f87f7c0 <col:38> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fd69f87f798 <col:38> 'void (void) __attribute__((noreturn))' Function 0x7fd69f8780c8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fd69f87f9c0 <line:41:3, col:44>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fd69f87f930 <col:7, col:32> 'int' '!='
+    | | |-CallExpr 0x7fd69f87f8d8 <col:7, col:27> 'float'
+    | | | |-ImplicitCastExpr 0x7fd69f87f8c0 <col:7> 'float (*)(float, float)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7fd69f87f838 <col:7> 'float (float, float)' Function 0x7fd69f878e58 'float_max1' 'float (float, float)'
+    | | | |-UnaryOperator 0x7fd69f87f880 <col:18, col:19> 'float' prefix '-'
+    | | | | `-FloatingLiteral 0x7fd69f87f860 <col:19> 'float' 1.000000e+00
+    | | | `-FloatingLiteral 0x7fd69f87f8a0 <col:24> 'float' 1.000000e+00
+    | | `-FloatingLiteral 0x7fd69f87f910 <col:32> 'float' 1.000000e+00
+    | |-CallExpr 0x7fd69f87f998 <col:38, col:44> 'void'
+    | | `-ImplicitCastExpr 0x7fd69f87f980 <col:38> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fd69f87f958 <col:38> 'void (void) __attribute__((noreturn))' Function 0x7fd69f8780c8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fd69f87fb80 <line:42:3, col:44>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fd69f87faf0 <col:7, col:32> 'int' '!='
+    | | |-CallExpr 0x7fd69f87fa98 <col:7, col:27> 'float'
+    | | | |-ImplicitCastExpr 0x7fd69f87fa80 <col:7> 'float (*)(float, float)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7fd69f87f9f8 <col:7> 'float (float, float)' Function 0x7fd69f878e58 'float_max1' 'float (float, float)'
+    | | | |-FloatingLiteral 0x7fd69f87fa20 <col:18> 'float' 1.000000e+00
+    | | | `-UnaryOperator 0x7fd69f87fa60 <col:23, col:24> 'float' prefix '-'
+    | | |   `-FloatingLiteral 0x7fd69f87fa40 <col:24> 'float' 1.000000e+00
+    | | `-FloatingLiteral 0x7fd69f87fad0 <col:32> 'float' 1.000000e+00
+    | |-CallExpr 0x7fd69f87fb58 <col:38, col:44> 'void'
+    | | `-ImplicitCastExpr 0x7fd69f87fb40 <col:38> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fd69f87fb18 <col:38> 'void (void) __attribute__((noreturn))' Function 0x7fd69f8780c8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fd69f87fd60 <line:44:3, col:44>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fd69f87fcd0 <col:7, col:33> 'int' '!='
+    | | |-CallExpr 0x7fd69f87fc58 <col:7, col:27> 'float'
+    | | | |-ImplicitCastExpr 0x7fd69f87fc40 <col:7> 'float (*)(float, float)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7fd69f87fbb8 <col:7> 'float (float, float)' Function 0x7fd69f878a10 'float_min2' 'float (float, float)'
+    | | | |-FloatingLiteral 0x7fd69f87fbe0 <col:18> 'float' 0.000000e+00
+    | | | `-UnaryOperator 0x7fd69f87fc20 <col:23, col:24> 'float' prefix '-'
+    | | |   `-FloatingLiteral 0x7fd69f87fc00 <col:24> 'float' 1.000000e+00
+    | | `-UnaryOperator 0x7fd69f87fcb0 <col:32, col:33> 'float' prefix '-'
+    | |   `-FloatingLiteral 0x7fd69f87fc90 <col:33> 'float' 1.000000e+00
+    | |-CallExpr 0x7fd69f87fd38 <col:38, col:44> 'void'
+    | | `-ImplicitCastExpr 0x7fd69f87fd20 <col:38> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fd69f87fcf8 <col:38> 'void (void) __attribute__((noreturn))' Function 0x7fd69f8780c8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fd69f87ff40 <line:45:3, col:44>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fd69f87feb0 <col:7, col:33> 'int' '!='
+    | | |-CallExpr 0x7fd69f87fe38 <col:7, col:27> 'float'
+    | | | |-ImplicitCastExpr 0x7fd69f87fe20 <col:7> 'float (*)(float, float)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7fd69f87fd98 <col:7> 'float (float, float)' Function 0x7fd69f878a10 'float_min2' 'float (float, float)'
+    | | | |-UnaryOperator 0x7fd69f87fde0 <col:18, col:19> 'float' prefix '-'
+    | | | | `-FloatingLiteral 0x7fd69f87fdc0 <col:19> 'float' 1.000000e+00
+    | | | `-FloatingLiteral 0x7fd69f87fe00 <col:24> 'float' 0.000000e+00
+    | | `-UnaryOperator 0x7fd69f87fe90 <col:32, col:33> 'float' prefix '-'
+    | |   `-FloatingLiteral 0x7fd69f87fe70 <col:33> 'float' 1.000000e+00
+    | |-CallExpr 0x7fd69f87ff18 <col:38, col:44> 'void'
+    | | `-ImplicitCastExpr 0x7fd69f87ff00 <col:38> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fd69f87fed8 <col:38> 'void (void) __attribute__((noreturn))' Function 0x7fd69f8780c8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fd69f8800e0 <line:46:3, col:44>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fd69f880050 <col:7, col:32> 'int' '!='
+    | | |-CallExpr 0x7fd69f87fff8 <col:7, col:26> 'float'
+    | | | |-ImplicitCastExpr 0x7fd69f87ffe0 <col:7> 'float (*)(float, float)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7fd69f87ff78 <col:7> 'float (float, float)' Function 0x7fd69f878a10 'float_min2' 'float (float, float)'
+    | | | |-FloatingLiteral 0x7fd69f87ffa0 <col:18> 'float' 0.000000e+00
+    | | | `-FloatingLiteral 0x7fd69f87ffc0 <col:23> 'float' 1.000000e+00
+    | | `-FloatingLiteral 0x7fd69f880030 <col:32> 'float' 0.000000e+00
+    | |-CallExpr 0x7fd69f8800b8 <col:38, col:44> 'void'
+    | | `-ImplicitCastExpr 0x7fd69f8800a0 <col:38> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fd69f880078 <col:38> 'void (void) __attribute__((noreturn))' Function 0x7fd69f8780c8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fd69f880280 <line:47:3, col:44>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fd69f8801f0 <col:7, col:32> 'int' '!='
+    | | |-CallExpr 0x7fd69f880198 <col:7, col:26> 'float'
+    | | | |-ImplicitCastExpr 0x7fd69f880180 <col:7> 'float (*)(float, float)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7fd69f880118 <col:7> 'float (float, float)' Function 0x7fd69f878a10 'float_min2' 'float (float, float)'
+    | | | |-FloatingLiteral 0x7fd69f880140 <col:18> 'float' 1.000000e+00
+    | | | `-FloatingLiteral 0x7fd69f880160 <col:23> 'float' 0.000000e+00
+    | | `-FloatingLiteral 0x7fd69f8801d0 <col:32> 'float' 0.000000e+00
+    | |-CallExpr 0x7fd69f880258 <col:38, col:44> 'void'
+    | | `-ImplicitCastExpr 0x7fd69f880240 <col:38> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fd69f880218 <col:38> 'void (void) __attribute__((noreturn))' Function 0x7fd69f8780c8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fd69f880460 <line:48:3, col:44>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fd69f8803d0 <col:7, col:33> 'int' '!='
+    | | |-CallExpr 0x7fd69f880358 <col:7, col:27> 'float'
+    | | | |-ImplicitCastExpr 0x7fd69f880340 <col:7> 'float (*)(float, float)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7fd69f8802b8 <col:7> 'float (float, float)' Function 0x7fd69f878a10 'float_min2' 'float (float, float)'
+    | | | |-UnaryOperator 0x7fd69f880300 <col:18, col:19> 'float' prefix '-'
+    | | | | `-FloatingLiteral 0x7fd69f8802e0 <col:19> 'float' 1.000000e+00
+    | | | `-FloatingLiteral 0x7fd69f880320 <col:24> 'float' 1.000000e+00
+    | | `-UnaryOperator 0x7fd69f8803b0 <col:32, col:33> 'float' prefix '-'
+    | |   `-FloatingLiteral 0x7fd69f880390 <col:33> 'float' 1.000000e+00
+    | |-CallExpr 0x7fd69f880438 <col:38, col:44> 'void'
+    | | `-ImplicitCastExpr 0x7fd69f880420 <col:38> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fd69f8803f8 <col:38> 'void (void) __attribute__((noreturn))' Function 0x7fd69f8780c8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fd69f880640 <line:49:3, col:44>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fd69f8805b0 <col:7, col:33> 'int' '!='
+    | | |-CallExpr 0x7fd69f880538 <col:7, col:27> 'float'
+    | | | |-ImplicitCastExpr 0x7fd69f880520 <col:7> 'float (*)(float, float)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7fd69f880498 <col:7> 'float (float, float)' Function 0x7fd69f878a10 'float_min2' 'float (float, float)'
+    | | | |-FloatingLiteral 0x7fd69f8804c0 <col:18> 'float' 1.000000e+00
+    | | | `-UnaryOperator 0x7fd69f880500 <col:23, col:24> 'float' prefix '-'
+    | | |   `-FloatingLiteral 0x7fd69f8804e0 <col:24> 'float' 1.000000e+00
+    | | `-UnaryOperator 0x7fd69f880590 <col:32, col:33> 'float' prefix '-'
+    | |   `-FloatingLiteral 0x7fd69f880570 <col:33> 'float' 1.000000e+00
+    | |-CallExpr 0x7fd69f880618 <col:38, col:44> 'void'
+    | | `-ImplicitCastExpr 0x7fd69f880600 <col:38> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fd69f8805d8 <col:38> 'void (void) __attribute__((noreturn))' Function 0x7fd69f8780c8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fd69f880800 <line:51:3, col:44>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fd69f880770 <col:7, col:32> 'int' '!='
+    | | |-CallExpr 0x7fd69f880718 <col:7, col:27> 'float'
+    | | | |-ImplicitCastExpr 0x7fd69f880700 <col:7> 'float (*)(float, float)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7fd69f880678 <col:7> 'float (float, float)' Function 0x7fd69f87c4b0 'float_max2' 'float (float, float)'
+    | | | |-FloatingLiteral 0x7fd69f8806a0 <col:18> 'float' 0.000000e+00
+    | | | `-UnaryOperator 0x7fd69f8806e0 <col:23, col:24> 'float' prefix '-'
+    | | |   `-FloatingLiteral 0x7fd69f8806c0 <col:24> 'float' 1.000000e+00
+    | | `-FloatingLiteral 0x7fd69f880750 <col:32> 'float' 0.000000e+00
+    | |-CallExpr 0x7fd69f8807d8 <col:38, col:44> 'void'
+    | | `-ImplicitCastExpr 0x7fd69f8807c0 <col:38> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fd69f880798 <col:38> 'void (void) __attribute__((noreturn))' Function 0x7fd69f8780c8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fd69f8809c0 <line:52:3, col:44>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fd69f880930 <col:7, col:32> 'int' '!='
+    | | |-CallExpr 0x7fd69f8808d8 <col:7, col:27> 'float'
+    | | | |-ImplicitCastExpr 0x7fd69f8808c0 <col:7> 'float (*)(float, float)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7fd69f880838 <col:7> 'float (float, float)' Function 0x7fd69f87c4b0 'float_max2' 'float (float, float)'
+    | | | |-UnaryOperator 0x7fd69f880880 <col:18, col:19> 'float' prefix '-'
+    | | | | `-FloatingLiteral 0x7fd69f880860 <col:19> 'float' 1.000000e+00
+    | | | `-FloatingLiteral 0x7fd69f8808a0 <col:24> 'float' 0.000000e+00
+    | | `-FloatingLiteral 0x7fd69f880910 <col:32> 'float' 0.000000e+00
+    | |-CallExpr 0x7fd69f880998 <col:38, col:44> 'void'
+    | | `-ImplicitCastExpr 0x7fd69f880980 <col:38> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fd69f880958 <col:38> 'void (void) __attribute__((noreturn))' Function 0x7fd69f8780c8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fd69f880b60 <line:53:3, col:44>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fd69f880ad0 <col:7, col:32> 'int' '!='
+    | | |-CallExpr 0x7fd69f880a78 <col:7, col:26> 'float'
+    | | | |-ImplicitCastExpr 0x7fd69f880a60 <col:7> 'float (*)(float, float)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7fd69f8809f8 <col:7> 'float (float, float)' Function 0x7fd69f87c4b0 'float_max2' 'float (float, float)'
+    | | | |-FloatingLiteral 0x7fd69f880a20 <col:18> 'float' 0.000000e+00
+    | | | `-FloatingLiteral 0x7fd69f880a40 <col:23> 'float' 1.000000e+00
+    | | `-FloatingLiteral 0x7fd69f880ab0 <col:32> 'float' 1.000000e+00
+    | |-CallExpr 0x7fd69f880b38 <col:38, col:44> 'void'
+    | | `-ImplicitCastExpr 0x7fd69f880b20 <col:38> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fd69f880af8 <col:38> 'void (void) __attribute__((noreturn))' Function 0x7fd69f8780c8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fd69f880d00 <line:54:3, col:44>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fd69f880c70 <col:7, col:32> 'int' '!='
+    | | |-CallExpr 0x7fd69f880c18 <col:7, col:26> 'float'
+    | | | |-ImplicitCastExpr 0x7fd69f880c00 <col:7> 'float (*)(float, float)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7fd69f880b98 <col:7> 'float (float, float)' Function 0x7fd69f87c4b0 'float_max2' 'float (float, float)'
+    | | | |-FloatingLiteral 0x7fd69f880bc0 <col:18> 'float' 1.000000e+00
+    | | | `-FloatingLiteral 0x7fd69f880be0 <col:23> 'float' 0.000000e+00
+    | | `-FloatingLiteral 0x7fd69f880c50 <col:32> 'float' 1.000000e+00
+    | |-CallExpr 0x7fd69f880cd8 <col:38, col:44> 'void'
+    | | `-ImplicitCastExpr 0x7fd69f880cc0 <col:38> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fd69f880c98 <col:38> 'void (void) __attribute__((noreturn))' Function 0x7fd69f8780c8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fd69f880ec8 <line:55:3, col:44>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fd69f880e38 <col:7, col:32> 'int' '!='
+    | | |-CallExpr 0x7fd69f880dd8 <col:7, col:27> 'float'
+    | | | |-ImplicitCastExpr 0x7fd69f880dc0 <col:7> 'float (*)(float, float)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7fd69f880d38 <col:7> 'float (float, float)' Function 0x7fd69f87c4b0 'float_max2' 'float (float, float)'
+    | | | |-UnaryOperator 0x7fd69f880d80 <col:18, col:19> 'float' prefix '-'
+    | | | | `-FloatingLiteral 0x7fd69f880d60 <col:19> 'float' 1.000000e+00
+    | | | `-FloatingLiteral 0x7fd69f880da0 <col:24> 'float' 1.000000e+00
+    | | `-FloatingLiteral 0x7fd69f880e18 <col:32> 'float' 1.000000e+00
+    | |-CallExpr 0x7fd69f880ea0 <col:38, col:44> 'void'
+    | | `-ImplicitCastExpr 0x7fd69f880e88 <col:38> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fd69f880e60 <col:38> 'void (void) __attribute__((noreturn))' Function 0x7fd69f8780c8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fd69f881088 <line:56:3, col:44>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fd69f880ff8 <col:7, col:32> 'int' '!='
+    | | |-CallExpr 0x7fd69f880fa0 <col:7, col:27> 'float'
+    | | | |-ImplicitCastExpr 0x7fd69f880f88 <col:7> 'float (*)(float, float)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7fd69f880f00 <col:7> 'float (float, float)' Function 0x7fd69f87c4b0 'float_max2' 'float (float, float)'
+    | | | |-FloatingLiteral 0x7fd69f880f28 <col:18> 'float' 1.000000e+00
+    | | | `-UnaryOperator 0x7fd69f880f68 <col:23, col:24> 'float' prefix '-'
+    | | |   `-FloatingLiteral 0x7fd69f880f48 <col:24> 'float' 1.000000e+00
+    | | `-FloatingLiteral 0x7fd69f880fd8 <col:32> 'float' 1.000000e+00
+    | |-CallExpr 0x7fd69f881060 <col:38, col:44> 'void'
+    | | `-ImplicitCastExpr 0x7fd69f881048 <col:38> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fd69f881020 <col:38> 'void (void) __attribute__((noreturn))' Function 0x7fd69f8780c8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fd69f881298 <line:58:3, col:42>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fd69f881208 <col:7, col:32> 'int' '!='
+    | | |-CallExpr 0x7fd69f881190 <col:7, col:26> 'double'
+    | | | |-ImplicitCastExpr 0x7fd69f881178 <col:7> 'double (*)(double, double)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7fd69f8810c0 <col:7> 'double (double, double)' Function 0x7fd69f87c938 'double_min1' 'double (double, double)'
+    | | | |-FloatingLiteral 0x7fd69f8810e8 <col:19> 'double' 0.000000e+00
+    | | | `-UnaryOperator 0x7fd69f881128 <col:23, col:24> 'double' prefix '-'
+    | | |   `-FloatingLiteral 0x7fd69f881108 <col:24> 'double' 1.000000e+00
+    | | `-UnaryOperator 0x7fd69f8811e8 <col:31, col:32> 'double' prefix '-'
+    | |   `-FloatingLiteral 0x7fd69f8811c8 <col:32> 'double' 1.000000e+00
+    | |-CallExpr 0x7fd69f881270 <col:36, col:42> 'void'
+    | | `-ImplicitCastExpr 0x7fd69f881258 <col:36> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fd69f881230 <col:36> 'void (void) __attribute__((noreturn))' Function 0x7fd69f8780c8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fd69f881478 <line:59:3, col:42>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fd69f8813e8 <col:7, col:32> 'int' '!='
+    | | |-CallExpr 0x7fd69f881370 <col:7, col:26> 'double'
+    | | | |-ImplicitCastExpr 0x7fd69f881358 <col:7> 'double (*)(double, double)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7fd69f8812d0 <col:7> 'double (double, double)' Function 0x7fd69f87c938 'double_min1' 'double (double, double)'
+    | | | |-UnaryOperator 0x7fd69f881318 <col:19, col:20> 'double' prefix '-'
+    | | | | `-FloatingLiteral 0x7fd69f8812f8 <col:20> 'double' 1.000000e+00
+    | | | `-FloatingLiteral 0x7fd69f881338 <col:24> 'double' 0.000000e+00
+    | | `-UnaryOperator 0x7fd69f8813c8 <col:31, col:32> 'double' prefix '-'
+    | |   `-FloatingLiteral 0x7fd69f8813a8 <col:32> 'double' 1.000000e+00
+    | |-CallExpr 0x7fd69f881450 <col:36, col:42> 'void'
+    | | `-ImplicitCastExpr 0x7fd69f881438 <col:36> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fd69f881410 <col:36> 'void (void) __attribute__((noreturn))' Function 0x7fd69f8780c8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fd69f881618 <line:60:3, col:42>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fd69f881588 <col:7, col:31> 'int' '!='
+    | | |-CallExpr 0x7fd69f881530 <col:7, col:25> 'double'
+    | | | |-ImplicitCastExpr 0x7fd69f881518 <col:7> 'double (*)(double, double)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7fd69f8814b0 <col:7> 'double (double, double)' Function 0x7fd69f87c938 'double_min1' 'double (double, double)'
+    | | | |-FloatingLiteral 0x7fd69f8814d8 <col:19> 'double' 0.000000e+00
+    | | | `-FloatingLiteral 0x7fd69f8814f8 <col:23> 'double' 1.000000e+00
+    | | `-FloatingLiteral 0x7fd69f881568 <col:31> 'double' 0.000000e+00
+    | |-CallExpr 0x7fd69f8815f0 <col:36, col:42> 'void'
+    | | `-ImplicitCastExpr 0x7fd69f8815d8 <col:36> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fd69f8815b0 <col:36> 'void (void) __attribute__((noreturn))' Function 0x7fd69f8780c8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fd69f8817b8 <line:61:3, col:42>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fd69f881728 <col:7, col:31> 'int' '!='
+    | | |-CallExpr 0x7fd69f8816d0 <col:7, col:25> 'double'
+    | | | |-ImplicitCastExpr 0x7fd69f8816b8 <col:7> 'double (*)(double, double)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7fd69f881650 <col:7> 'double (double, double)' Function 0x7fd69f87c938 'double_min1' 'double (double, double)'
+    | | | |-FloatingLiteral 0x7fd69f881678 <col:19> 'double' 1.000000e+00
+    | | | `-FloatingLiteral 0x7fd69f881698 <col:23> 'double' 0.000000e+00
+    | | `-FloatingLiteral 0x7fd69f881708 <col:31> 'double' 0.000000e+00
+    | |-CallExpr 0x7fd69f881790 <col:36, col:42> 'void'
+    | | `-ImplicitCastExpr 0x7fd69f881778 <col:36> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fd69f881750 <col:36> 'void (void) __attribute__((noreturn))' Function 0x7fd69f8780c8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fd69f881998 <line:62:3, col:42>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fd69f881908 <col:7, col:32> 'int' '!='
+    | | |-CallExpr 0x7fd69f881890 <col:7, col:26> 'double'
+    | | | |-ImplicitCastExpr 0x7fd69f881878 <col:7> 'double (*)(double, double)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7fd69f8817f0 <col:7> 'double (double, double)' Function 0x7fd69f87c938 'double_min1' 'double (double, double)'
+    | | | |-UnaryOperator 0x7fd69f881838 <col:19, col:20> 'double' prefix '-'
+    | | | | `-FloatingLiteral 0x7fd69f881818 <col:20> 'double' 1.000000e+00
+    | | | `-FloatingLiteral 0x7fd69f881858 <col:24> 'double' 1.000000e+00
+    | | `-UnaryOperator 0x7fd69f8818e8 <col:31, col:32> 'double' prefix '-'
+    | |   `-FloatingLiteral 0x7fd69f8818c8 <col:32> 'double' 1.000000e+00
+    | |-CallExpr 0x7fd69f881970 <col:36, col:42> 'void'
+    | | `-ImplicitCastExpr 0x7fd69f881958 <col:36> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fd69f881930 <col:36> 'void (void) __attribute__((noreturn))' Function 0x7fd69f8780c8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fd69f881b78 <line:63:3, col:42>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fd69f881ae8 <col:7, col:32> 'int' '!='
+    | | |-CallExpr 0x7fd69f881a70 <col:7, col:26> 'double'
+    | | | |-ImplicitCastExpr 0x7fd69f881a58 <col:7> 'double (*)(double, double)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7fd69f8819d0 <col:7> 'double (double, double)' Function 0x7fd69f87c938 'double_min1' 'double (double, double)'
+    | | | |-FloatingLiteral 0x7fd69f8819f8 <col:19> 'double' 1.000000e+00
+    | | | `-UnaryOperator 0x7fd69f881a38 <col:23, col:24> 'double' prefix '-'
+    | | |   `-FloatingLiteral 0x7fd69f881a18 <col:24> 'double' 1.000000e+00
+    | | `-UnaryOperator 0x7fd69f881ac8 <col:31, col:32> 'double' prefix '-'
+    | |   `-FloatingLiteral 0x7fd69f881aa8 <col:32> 'double' 1.000000e+00
+    | |-CallExpr 0x7fd69f881b50 <col:36, col:42> 'void'
+    | | `-ImplicitCastExpr 0x7fd69f881b38 <col:36> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fd69f881b10 <col:36> 'void (void) __attribute__((noreturn))' Function 0x7fd69f8780c8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fd69f881d38 <line:65:3, col:42>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fd69f881ca8 <col:7, col:31> 'int' '!='
+    | | |-CallExpr 0x7fd69f881c50 <col:7, col:26> 'double'
+    | | | |-ImplicitCastExpr 0x7fd69f881c38 <col:7> 'double (*)(double, double)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7fd69f881bb0 <col:7> 'double (double, double)' Function 0x7fd69f87d200 'double_max1' 'double (double, double)'
+    | | | |-FloatingLiteral 0x7fd69f881bd8 <col:19> 'double' 0.000000e+00
+    | | | `-UnaryOperator 0x7fd69f881c18 <col:23, col:24> 'double' prefix '-'
+    | | |   `-FloatingLiteral 0x7fd69f881bf8 <col:24> 'double' 1.000000e+00
+    | | `-FloatingLiteral 0x7fd69f881c88 <col:31> 'double' 0.000000e+00
+    | |-CallExpr 0x7fd69f881d10 <col:36, col:42> 'void'
+    | | `-ImplicitCastExpr 0x7fd69f881cf8 <col:36> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fd69f881cd0 <col:36> 'void (void) __attribute__((noreturn))' Function 0x7fd69f8780c8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fd69f881f00 <line:66:3, col:42>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fd69f881e70 <col:7, col:31> 'int' '!='
+    | | |-CallExpr 0x7fd69f881e18 <col:7, col:26> 'double'
+    | | | |-ImplicitCastExpr 0x7fd69f881e00 <col:7> 'double (*)(double, double)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7fd69f881d70 <col:7> 'double (double, double)' Function 0x7fd69f87d200 'double_max1' 'double (double, double)'
+    | | | |-UnaryOperator 0x7fd69f881db8 <col:19, col:20> 'double' prefix '-'
+    | | | | `-FloatingLiteral 0x7fd69f881d98 <col:20> 'double' 1.000000e+00
+    | | | `-FloatingLiteral 0x7fd69f881dd8 <col:24> 'double' 0.000000e+00
+    | | `-FloatingLiteral 0x7fd69f881e50 <col:31> 'double' 0.000000e+00
+    | |-CallExpr 0x7fd69f881ed8 <col:36, col:42> 'void'
+    | | `-ImplicitCastExpr 0x7fd69f881ec0 <col:36> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fd69f881e98 <col:36> 'void (void) __attribute__((noreturn))' Function 0x7fd69f8780c8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fd69f8820a0 <line:67:3, col:42>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fd69f882010 <col:7, col:31> 'int' '!='
+    | | |-CallExpr 0x7fd69f881fb8 <col:7, col:25> 'double'
+    | | | |-ImplicitCastExpr 0x7fd69f881fa0 <col:7> 'double (*)(double, double)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7fd69f881f38 <col:7> 'double (double, double)' Function 0x7fd69f87d200 'double_max1' 'double (double, double)'
+    | | | |-FloatingLiteral 0x7fd69f881f60 <col:19> 'double' 0.000000e+00
+    | | | `-FloatingLiteral 0x7fd69f881f80 <col:23> 'double' 1.000000e+00
+    | | `-FloatingLiteral 0x7fd69f881ff0 <col:31> 'double' 1.000000e+00
+    | |-CallExpr 0x7fd69f882078 <col:36, col:42> 'void'
+    | | `-ImplicitCastExpr 0x7fd69f882060 <col:36> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fd69f882038 <col:36> 'void (void) __attribute__((noreturn))' Function 0x7fd69f8780c8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fd69f882240 <line:68:3, col:42>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fd69f8821b0 <col:7, col:31> 'int' '!='
+    | | |-CallExpr 0x7fd69f882158 <col:7, col:25> 'double'
+    | | | |-ImplicitCastExpr 0x7fd69f882140 <col:7> 'double (*)(double, double)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7fd69f8820d8 <col:7> 'double (double, double)' Function 0x7fd69f87d200 'double_max1' 'double (double, double)'
+    | | | |-FloatingLiteral 0x7fd69f882100 <col:19> 'double' 1.000000e+00
+    | | | `-FloatingLiteral 0x7fd69f882120 <col:23> 'double' 0.000000e+00
+    | | `-FloatingLiteral 0x7fd69f882190 <col:31> 'double' 1.000000e+00
+    | |-CallExpr 0x7fd69f882218 <col:36, col:42> 'void'
+    | | `-ImplicitCastExpr 0x7fd69f882200 <col:36> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fd69f8821d8 <col:36> 'void (void) __attribute__((noreturn))' Function 0x7fd69f8780c8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fd69f882400 <line:69:3, col:42>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fd69f882370 <col:7, col:31> 'int' '!='
+    | | |-CallExpr 0x7fd69f882318 <col:7, col:26> 'double'
+    | | | |-ImplicitCastExpr 0x7fd69f882300 <col:7> 'double (*)(double, double)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7fd69f882278 <col:7> 'double (double, double)' Function 0x7fd69f87d200 'double_max1' 'double (double, double)'
+    | | | |-UnaryOperator 0x7fd69f8822c0 <col:19, col:20> 'double' prefix '-'
+    | | | | `-FloatingLiteral 0x7fd69f8822a0 <col:20> 'double' 1.000000e+00
+    | | | `-FloatingLiteral 0x7fd69f8822e0 <col:24> 'double' 1.000000e+00
+    | | `-FloatingLiteral 0x7fd69f882350 <col:31> 'double' 1.000000e+00
+    | |-CallExpr 0x7fd69f8823d8 <col:36, col:42> 'void'
+    | | `-ImplicitCastExpr 0x7fd69f8823c0 <col:36> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fd69f882398 <col:36> 'void (void) __attribute__((noreturn))' Function 0x7fd69f8780c8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fd69f8825c0 <line:70:3, col:42>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fd69f882530 <col:7, col:31> 'int' '!='
+    | | |-CallExpr 0x7fd69f8824d8 <col:7, col:26> 'double'
+    | | | |-ImplicitCastExpr 0x7fd69f8824c0 <col:7> 'double (*)(double, double)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7fd69f882438 <col:7> 'double (double, double)' Function 0x7fd69f87d200 'double_max1' 'double (double, double)'
+    | | | |-FloatingLiteral 0x7fd69f882460 <col:19> 'double' 1.000000e+00
+    | | | `-UnaryOperator 0x7fd69f8824a0 <col:23, col:24> 'double' prefix '-'
+    | | |   `-FloatingLiteral 0x7fd69f882480 <col:24> 'double' 1.000000e+00
+    | | `-FloatingLiteral 0x7fd69f882510 <col:31> 'double' 1.000000e+00
+    | |-CallExpr 0x7fd69f882598 <col:36, col:42> 'void'
+    | | `-ImplicitCastExpr 0x7fd69f882580 <col:36> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fd69f882558 <col:36> 'void (void) __attribute__((noreturn))' Function 0x7fd69f8780c8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fd69f8827a0 <line:72:3, col:42>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fd69f882710 <col:7, col:32> 'int' '!='
+    | | |-CallExpr 0x7fd69f882698 <col:7, col:26> 'double'
+    | | | |-ImplicitCastExpr 0x7fd69f882680 <col:7> 'double (*)(double, double)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7fd69f8825f8 <col:7> 'double (double, double)' Function 0x7fd69f87cd80 'double_min2' 'double (double, double)'
+    | | | |-FloatingLiteral 0x7fd69f882620 <col:19> 'double' 0.000000e+00
+    | | | `-UnaryOperator 0x7fd69f882660 <col:23, col:24> 'double' prefix '-'
+    | | |   `-FloatingLiteral 0x7fd69f882640 <col:24> 'double' 1.000000e+00
+    | | `-UnaryOperator 0x7fd69f8826f0 <col:31, col:32> 'double' prefix '-'
+    | |   `-FloatingLiteral 0x7fd69f8826d0 <col:32> 'double' 1.000000e+00
+    | |-CallExpr 0x7fd69f882778 <col:36, col:42> 'void'
+    | | `-ImplicitCastExpr 0x7fd69f882760 <col:36> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fd69f882738 <col:36> 'void (void) __attribute__((noreturn))' Function 0x7fd69f8780c8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fd69f882980 <line:73:3, col:42>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fd69f8828f0 <col:7, col:32> 'int' '!='
+    | | |-CallExpr 0x7fd69f882878 <col:7, col:26> 'double'
+    | | | |-ImplicitCastExpr 0x7fd69f882860 <col:7> 'double (*)(double, double)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7fd69f8827d8 <col:7> 'double (double, double)' Function 0x7fd69f87cd80 'double_min2' 'double (double, double)'
+    | | | |-UnaryOperator 0x7fd69f882820 <col:19, col:20> 'double' prefix '-'
+    | | | | `-FloatingLiteral 0x7fd69f882800 <col:20> 'double' 1.000000e+00
+    | | | `-FloatingLiteral 0x7fd69f882840 <col:24> 'double' 0.000000e+00
+    | | `-UnaryOperator 0x7fd69f8828d0 <col:31, col:32> 'double' prefix '-'
+    | |   `-FloatingLiteral 0x7fd69f8828b0 <col:32> 'double' 1.000000e+00
+    | |-CallExpr 0x7fd69f882958 <col:36, col:42> 'void'
+    | | `-ImplicitCastExpr 0x7fd69f882940 <col:36> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fd69f882918 <col:36> 'void (void) __attribute__((noreturn))' Function 0x7fd69f8780c8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fd69f882b20 <line:74:3, col:42>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fd69f882a90 <col:7, col:31> 'int' '!='
+    | | |-CallExpr 0x7fd69f882a38 <col:7, col:25> 'double'
+    | | | |-ImplicitCastExpr 0x7fd69f882a20 <col:7> 'double (*)(double, double)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7fd69f8829b8 <col:7> 'double (double, double)' Function 0x7fd69f87cd80 'double_min2' 'double (double, double)'
+    | | | |-FloatingLiteral 0x7fd69f8829e0 <col:19> 'double' 0.000000e+00
+    | | | `-FloatingLiteral 0x7fd69f882a00 <col:23> 'double' 1.000000e+00
+    | | `-FloatingLiteral 0x7fd69f882a70 <col:31> 'double' 0.000000e+00
+    | |-CallExpr 0x7fd69f882af8 <col:36, col:42> 'void'
+    | | `-ImplicitCastExpr 0x7fd69f882ae0 <col:36> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fd69f882ab8 <col:36> 'void (void) __attribute__((noreturn))' Function 0x7fd69f8780c8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fd69f882cc0 <line:75:3, col:42>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fd69f882c30 <col:7, col:31> 'int' '!='
+    | | |-CallExpr 0x7fd69f882bd8 <col:7, col:25> 'double'
+    | | | |-ImplicitCastExpr 0x7fd69f882bc0 <col:7> 'double (*)(double, double)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7fd69f882b58 <col:7> 'double (double, double)' Function 0x7fd69f87cd80 'double_min2' 'double (double, double)'
+    | | | |-FloatingLiteral 0x7fd69f882b80 <col:19> 'double' 1.000000e+00
+    | | | `-FloatingLiteral 0x7fd69f882ba0 <col:23> 'double' 0.000000e+00
+    | | `-FloatingLiteral 0x7fd69f882c10 <col:31> 'double' 0.000000e+00
+    | |-CallExpr 0x7fd69f882c98 <col:36, col:42> 'void'
+    | | `-ImplicitCastExpr 0x7fd69f882c80 <col:36> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fd69f882c58 <col:36> 'void (void) __attribute__((noreturn))' Function 0x7fd69f8780c8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fd69f882eb0 <line:76:3, col:42>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fd69f882e20 <col:7, col:32> 'int' '!='
+    | | |-CallExpr 0x7fd69f882d98 <col:7, col:26> 'double'
+    | | | |-ImplicitCastExpr 0x7fd69f882d80 <col:7> 'double (*)(double, double)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7fd69f882cf8 <col:7> 'double (double, double)' Function 0x7fd69f87cd80 'double_min2' 'double (double, double)'
+    | | | |-UnaryOperator 0x7fd69f882d40 <col:19, col:20> 'double' prefix '-'
+    | | | | `-FloatingLiteral 0x7fd69f882d20 <col:20> 'double' 1.000000e+00
+    | | | `-FloatingLiteral 0x7fd69f882d60 <col:24> 'double' 1.000000e+00
+    | | `-UnaryOperator 0x7fd69f882e00 <col:31, col:32> 'double' prefix '-'
+    | |   `-FloatingLiteral 0x7fd69f882dd0 <col:32> 'double' 1.000000e+00
+    | |-CallExpr 0x7fd69f882e88 <col:36, col:42> 'void'
+    | | `-ImplicitCastExpr 0x7fd69f882e70 <col:36> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fd69f882e48 <col:36> 'void (void) __attribute__((noreturn))' Function 0x7fd69f8780c8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fd69f883090 <line:77:3, col:42>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fd69f883000 <col:7, col:32> 'int' '!='
+    | | |-CallExpr 0x7fd69f882f88 <col:7, col:26> 'double'
+    | | | |-ImplicitCastExpr 0x7fd69f882f70 <col:7> 'double (*)(double, double)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7fd69f882ee8 <col:7> 'double (double, double)' Function 0x7fd69f87cd80 'double_min2' 'double (double, double)'
+    | | | |-FloatingLiteral 0x7fd69f882f10 <col:19> 'double' 1.000000e+00
+    | | | `-UnaryOperator 0x7fd69f882f50 <col:23, col:24> 'double' prefix '-'
+    | | |   `-FloatingLiteral 0x7fd69f882f30 <col:24> 'double' 1.000000e+00
+    | | `-UnaryOperator 0x7fd69f882fe0 <col:31, col:32> 'double' prefix '-'
+    | |   `-FloatingLiteral 0x7fd69f882fc0 <col:32> 'double' 1.000000e+00
+    | |-CallExpr 0x7fd69f883068 <col:36, col:42> 'void'
+    | | `-ImplicitCastExpr 0x7fd69f883050 <col:36> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fd69f883028 <col:36> 'void (void) __attribute__((noreturn))' Function 0x7fd69f8780c8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fd69f883250 <line:79:3, col:42>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fd69f8831c0 <col:7, col:31> 'int' '!='
+    | | |-CallExpr 0x7fd69f883168 <col:7, col:26> 'double'
+    | | | |-ImplicitCastExpr 0x7fd69f883150 <col:7> 'double (*)(double, double)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7fd69f8830c8 <col:7> 'double (double, double)' Function 0x7fd69f87d648 'double_max2' 'double (double, double)'
+    | | | |-FloatingLiteral 0x7fd69f8830f0 <col:19> 'double' 0.000000e+00
+    | | | `-UnaryOperator 0x7fd69f883130 <col:23, col:24> 'double' prefix '-'
+    | | |   `-FloatingLiteral 0x7fd69f883110 <col:24> 'double' 1.000000e+00
+    | | `-FloatingLiteral 0x7fd69f8831a0 <col:31> 'double' 0.000000e+00
+    | |-CallExpr 0x7fd69f883228 <col:36, col:42> 'void'
+    | | `-ImplicitCastExpr 0x7fd69f883210 <col:36> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fd69f8831e8 <col:36> 'void (void) __attribute__((noreturn))' Function 0x7fd69f8780c8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fd69f883410 <line:80:3, col:42>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fd69f883380 <col:7, col:31> 'int' '!='
+    | | |-CallExpr 0x7fd69f883328 <col:7, col:26> 'double'
+    | | | |-ImplicitCastExpr 0x7fd69f883310 <col:7> 'double (*)(double, double)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7fd69f883288 <col:7> 'double (double, double)' Function 0x7fd69f87d648 'double_max2' 'double (double, double)'
+    | | | |-UnaryOperator 0x7fd69f8832d0 <col:19, col:20> 'double' prefix '-'
+    | | | | `-FloatingLiteral 0x7fd69f8832b0 <col:20> 'double' 1.000000e+00
+    | | | `-FloatingLiteral 0x7fd69f8832f0 <col:24> 'double' 0.000000e+00
+    | | `-FloatingLiteral 0x7fd69f883360 <col:31> 'double' 0.000000e+00
+    | |-CallExpr 0x7fd69f8833e8 <col:36, col:42> 'void'
+    | | `-ImplicitCastExpr 0x7fd69f8833d0 <col:36> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fd69f8833a8 <col:36> 'void (void) __attribute__((noreturn))' Function 0x7fd69f8780c8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fd69f8835b0 <line:81:3, col:42>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fd69f883520 <col:7, col:31> 'int' '!='
+    | | |-CallExpr 0x7fd69f8834c8 <col:7, col:25> 'double'
+    | | | |-ImplicitCastExpr 0x7fd69f8834b0 <col:7> 'double (*)(double, double)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7fd69f883448 <col:7> 'double (double, double)' Function 0x7fd69f87d648 'double_max2' 'double (double, double)'
+    | | | |-FloatingLiteral 0x7fd69f883470 <col:19> 'double' 0.000000e+00
+    | | | `-FloatingLiteral 0x7fd69f883490 <col:23> 'double' 1.000000e+00
+    | | `-FloatingLiteral 0x7fd69f883500 <col:31> 'double' 1.000000e+00
+    | |-CallExpr 0x7fd69f883588 <col:36, col:42> 'void'
+    | | `-ImplicitCastExpr 0x7fd69f883570 <col:36> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fd69f883548 <col:36> 'void (void) __attribute__((noreturn))' Function 0x7fd69f8780c8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fd69f883750 <line:82:3, col:42>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fd69f8836c0 <col:7, col:31> 'int' '!='
+    | | |-CallExpr 0x7fd69f883668 <col:7, col:25> 'double'
+    | | | |-ImplicitCastExpr 0x7fd69f883650 <col:7> 'double (*)(double, double)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7fd69f8835e8 <col:7> 'double (double, double)' Function 0x7fd69f87d648 'double_max2' 'double (double, double)'
+    | | | |-FloatingLiteral 0x7fd69f883610 <col:19> 'double' 1.000000e+00
+    | | | `-FloatingLiteral 0x7fd69f883630 <col:23> 'double' 0.000000e+00
+    | | `-FloatingLiteral 0x7fd69f8836a0 <col:31> 'double' 1.000000e+00
+    | |-CallExpr 0x7fd69f883728 <col:36, col:42> 'void'
+    | | `-ImplicitCastExpr 0x7fd69f883710 <col:36> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fd69f8836e8 <col:36> 'void (void) __attribute__((noreturn))' Function 0x7fd69f8780c8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fd69f883910 <line:83:3, col:42>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fd69f883880 <col:7, col:31> 'int' '!='
+    | | |-CallExpr 0x7fd69f883828 <col:7, col:26> 'double'
+    | | | |-ImplicitCastExpr 0x7fd69f883810 <col:7> 'double (*)(double, double)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7fd69f883788 <col:7> 'double (double, double)' Function 0x7fd69f87d648 'double_max2' 'double (double, double)'
+    | | | |-UnaryOperator 0x7fd69f8837d0 <col:19, col:20> 'double' prefix '-'
+    | | | | `-FloatingLiteral 0x7fd69f8837b0 <col:20> 'double' 1.000000e+00
+    | | | `-FloatingLiteral 0x7fd69f8837f0 <col:24> 'double' 1.000000e+00
+    | | `-FloatingLiteral 0x7fd69f883860 <col:31> 'double' 1.000000e+00
+    | |-CallExpr 0x7fd69f8838e8 <col:36, col:42> 'void'
+    | | `-ImplicitCastExpr 0x7fd69f8838d0 <col:36> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fd69f8838a8 <col:36> 'void (void) __attribute__((noreturn))' Function 0x7fd69f8780c8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fd69f883ad0 <line:84:3, col:42>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fd69f883a40 <col:7, col:31> 'int' '!='
+    | | |-CallExpr 0x7fd69f8839e8 <col:7, col:26> 'double'
+    | | | |-ImplicitCastExpr 0x7fd69f8839d0 <col:7> 'double (*)(double, double)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7fd69f883948 <col:7> 'double (double, double)' Function 0x7fd69f87d648 'double_max2' 'double (double, double)'
+    | | | |-FloatingLiteral 0x7fd69f883970 <col:19> 'double' 1.000000e+00
+    | | | `-UnaryOperator 0x7fd69f8839b0 <col:23, col:24> 'double' prefix '-'
+    | | |   `-FloatingLiteral 0x7fd69f883990 <col:24> 'double' 1.000000e+00
+    | | `-FloatingLiteral 0x7fd69f883a20 <col:31> 'double' 1.000000e+00
+    | |-CallExpr 0x7fd69f883aa8 <col:36, col:42> 'void'
+    | | `-ImplicitCastExpr 0x7fd69f883a90 <col:36> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fd69f883a68 <col:36> 'void (void) __attribute__((noreturn))' Function 0x7fd69f8780c8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-CallExpr 0x7fd69f883b90 <line:86:3, col:9> 'void'
+      |-ImplicitCastExpr 0x7fd69f883b78 <col:3> 'void (*)(int) __attribute__((noreturn))' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fd69f883b08 <col:3> 'void (int) __attribute__((noreturn))' Function 0x7fd69f878378 'exit' 'void (int) __attribute__((noreturn))'
+      `-IntegerLiteral 0x7fd69f883b30 <col:8> 'int' 0

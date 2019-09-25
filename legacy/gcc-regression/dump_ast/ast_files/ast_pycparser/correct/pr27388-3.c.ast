@@ -1,0 +1,57 @@
+FileAST: 
+  Decl: bar, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: bar, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      Pragma: omp parallel firstprivate (i) private (j)
+      Compound: 
+        Pragma: omp for
+        For: 
+          Assignment: =
+            ID: i
+            Constant: int, 0
+          BinaryOp: <
+            ID: i
+            Constant: int, 2
+          UnaryOp: p++
+            ID: i
+          FuncCall: 
+            ID: bar
+            ExprList: 
+              ID: i
+        Pragma: omp for
+        For: 
+          Assignment: =
+            ID: j
+            Constant: int, 0
+          BinaryOp: <
+            ID: j
+            Constant: int, 2
+          UnaryOp: p++
+            ID: j
+          FuncCall: 
+            ID: bar
+            ExprList: 
+              ID: j

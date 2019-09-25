@@ -1,0 +1,106 @@
+FileAST: 
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: aaa, [], [], []
+            TypeDecl: aaa, []
+              IdentifierType: ['double']
+          Decl: bbb, [], [], []
+            TypeDecl: bbb, []
+              IdentifierType: ['double']
+        TypeDecl: f, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: xa, [], [], []
+        TypeDecl: xa, []
+          IdentifierType: ['int']
+        UnaryOp: !
+          FuncCall: 
+            ID: __builtin_isunordered
+            ExprList: 
+              ID: aaa
+              ID: aaa
+      Decl: xb, [], [], []
+        TypeDecl: xb, []
+          IdentifierType: ['int']
+        UnaryOp: !
+          FuncCall: 
+            ID: __builtin_isunordered
+            ExprList: 
+              ID: bbb
+              ID: bbb
+      Return: 
+        BinaryOp: &
+          ID: xa
+          ID: xb
+  FuncDef: 
+    Decl: g, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: aaa, [], [], []
+            TypeDecl: aaa, []
+              IdentifierType: ['double']
+          Decl: bbb, [], [], []
+            TypeDecl: bbb, []
+              IdentifierType: ['double']
+        TypeDecl: g, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: xa, [], [], []
+        TypeDecl: xa, []
+          IdentifierType: ['int']
+        UnaryOp: !
+          FuncCall: 
+            ID: __builtin_isunordered
+            ExprList: 
+              ID: aaa
+              ID: bbb
+      Decl: xb, [], [], []
+        TypeDecl: xb, []
+          IdentifierType: ['int']
+        UnaryOp: !
+          FuncCall: 
+            ID: __builtin_isunordered
+            ExprList: 
+              ID: bbb
+              ID: bbb
+      Return: 
+        BinaryOp: &
+          ID: xa
+          ID: xb
+  FuncDef: 
+    Decl: h, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: ccc, [], [], []
+            TypeDecl: ccc, []
+              IdentifierType: ['double']
+          Decl: ddd, [], [], []
+            TypeDecl: ddd, []
+              IdentifierType: ['float']
+        TypeDecl: h, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: xc, [], [], []
+        TypeDecl: xc, []
+          IdentifierType: ['int']
+        UnaryOp: !
+          FuncCall: 
+            ID: __builtin_isunordered
+            ExprList: 
+              ID: ccc
+              ID: ccc
+      Decl: xd, [], [], []
+        TypeDecl: xd, []
+          IdentifierType: ['int']
+        UnaryOp: !
+          FuncCall: 
+            ID: __builtin_isunordered
+            ExprList: 
+              ID: ddd
+              ID: ddd
+      Return: 
+        BinaryOp: &
+          ID: xc
+          ID: xd

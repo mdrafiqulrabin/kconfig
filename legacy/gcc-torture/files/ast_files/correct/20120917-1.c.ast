@@ -1,0 +1,55 @@
+FileAST: 
+  Typedef: curl_off_t, [], ['typedef']
+    TypeDecl: curl_off_t, []
+      IdentifierType: ['long', 'long']
+  FuncDef: 
+    Decl: tool_seek_cb, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: userdata, [], [], []
+            PtrDecl: []
+              TypeDecl: userdata, []
+                IdentifierType: ['void']
+          Decl: offset, [], [], []
+            TypeDecl: offset, []
+              IdentifierType: ['curl_off_t']
+          Decl: whence, [], [], []
+            TypeDecl: whence, []
+              IdentifierType: ['int']
+        TypeDecl: tool_seek_cb, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: >
+          ID: offset
+          BinaryOp: -
+            Constant: int, 0x7FFFFFFFLL
+            Constant: int, 0x1LL
+        Compound: 
+          Decl: left, [], [], []
+            TypeDecl: left, []
+              IdentifierType: ['curl_off_t']
+            ID: offset
+          While: 
+            ID: left
+            Compound: 
+              Decl: step, [], [], []
+                TypeDecl: step, []
+                  IdentifierType: ['long']
+                TernaryOp: 
+                  BinaryOp: >
+                    ID: left
+                    BinaryOp: -
+                      Constant: int, 0x7FFFFFFFLL
+                      Constant: int, 0x1LL
+                  BinaryOp: -
+                    Constant: int, 2147483647L
+                    Constant: int, 1L
+                  Cast: 
+                    Typename: None, []
+                      TypeDecl: None, []
+                        IdentifierType: ['long']
+                    ID: left
+              Assignment: -=
+                ID: left
+                ID: step

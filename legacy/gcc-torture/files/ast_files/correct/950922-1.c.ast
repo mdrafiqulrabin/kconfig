@@ -1,0 +1,740 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: sw
+      Decl: x, ['const'], [], []
+        PtrDecl: []
+          TypeDecl: x, ['const']
+            IdentifierType: ['void']
+      Decl: r, [], [], []
+        TypeDecl: r, []
+          IdentifierType: ['int']
+  Decl: None, [], [], []
+    Struct: sq
+      Decl: q_w, [], [], []
+        PtrDecl: []
+          TypeDecl: q_w, []
+            Struct: sw
+      Decl: t, [], [], []
+        TypeDecl: t, []
+          IdentifierType: ['int']
+      Decl: z, [], [], []
+        TypeDecl: z, []
+          IdentifierType: ['int']
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: ch, [], [], []
+            TypeDecl: ch, []
+              IdentifierType: ['int']
+          Decl: fp, [], [], []
+            PtrDecl: []
+              TypeDecl: fp, []
+                IdentifierType: ['char']
+          Decl: ap, [], [], []
+            PtrDecl: []
+              TypeDecl: ap, []
+                IdentifierType: ['char']
+        TypeDecl: f, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: n, [], ['register'], []
+        TypeDecl: n, []
+          IdentifierType: ['int']
+      Decl: cp, [], ['register'], []
+        PtrDecl: []
+          TypeDecl: cp, []
+            IdentifierType: ['char']
+      Decl: p, [], ['register'], []
+        PtrDecl: []
+          TypeDecl: p, []
+            Struct: sw
+      Decl: f, [], ['register'], []
+        TypeDecl: f, []
+          IdentifierType: ['int']
+      Decl: prec, [], [], []
+        TypeDecl: prec, []
+          IdentifierType: ['int']
+      Decl: _double, [], [], []
+        TypeDecl: _double, []
+          IdentifierType: ['double']
+      Decl: expt, [], [], []
+        TypeDecl: expt, []
+          IdentifierType: ['int']
+      Decl: ndig, [], [], []
+        TypeDecl: ndig, []
+          IdentifierType: ['int']
+      Decl: expstr, [], [], []
+        ArrayDecl: []
+          TypeDecl: expstr, []
+            IdentifierType: ['char']
+          Constant: int, 7
+      Decl: _uquad, [], [], []
+        TypeDecl: _uquad, []
+          IdentifierType: ['unsigned', 'long', 'long']
+      Decl: q, [], [], []
+        TypeDecl: q, []
+          Struct: sq
+      Decl: w, [], [], []
+        ArrayDecl: []
+          TypeDecl: w, []
+            Struct: sw
+          Constant: int, 8
+      Decl: zeroes, [], ['static'], []
+        ArrayDecl: []
+          TypeDecl: zeroes, []
+            IdentifierType: ['char']
+          Constant: int, 16
+      For: 
+        Compound: 
+          Switch: 
+            ID: ch
+            Compound: 
+              Case: 
+                Constant: char, 'd'
+                Assignment: =
+                  ID: _double
+                  Cast: 
+                    Typename: None, []
+                      TypeDecl: None, []
+                        IdentifierType: ['double']
+                    ExprList: 
+                      Assignment: +=
+                        ID: ap
+                        Constant: int, 8
+                      UnaryOp: *
+                        Cast: 
+                          Typename: None, []
+                            PtrDecl: []
+                              TypeDecl: None, []
+                                IdentifierType: ['double']
+                          BinaryOp: -
+                            ID: ap
+                            Constant: int, 8
+                Break: 
+              Case: 
+                Constant: char, 'o'
+                Goto: nosign
+              Case: 
+                Constant: char, 'u'
+                Assignment: =
+                  ID: _uquad
+                  TernaryOp: 
+                    BinaryOp: &
+                      ID: f
+                      Constant: int, 0x020
+                    ExprList: 
+                      Assignment: +=
+                        ID: ap
+                        Constant: int, 8
+                      UnaryOp: *
+                        Cast: 
+                          Typename: None, []
+                            PtrDecl: []
+                              TypeDecl: None, []
+                                IdentifierType: ['long', 'long']
+                          BinaryOp: -
+                            ID: ap
+                            Constant: int, 8
+                    TernaryOp: 
+                      BinaryOp: &
+                        ID: f
+                        Constant: int, 0x010
+                      ExprList: 
+                        Assignment: +=
+                          ID: ap
+                          Constant: int, 4
+                        UnaryOp: *
+                          Cast: 
+                            Typename: None, []
+                              PtrDecl: []
+                                TypeDecl: None, []
+                                  IdentifierType: ['long']
+                            BinaryOp: -
+                              ID: ap
+                              Constant: int, 4
+                      TernaryOp: 
+                        BinaryOp: &
+                          ID: f
+                          Constant: int, 0x040
+                        Cast: 
+                          Typename: None, []
+                            TypeDecl: None, []
+                              IdentifierType: ['long']
+                          Cast: 
+                            Typename: None, []
+                              TypeDecl: None, []
+                                IdentifierType: ['short']
+                            ExprList: 
+                              Assignment: +=
+                                ID: ap
+                                Constant: int, 4
+                              UnaryOp: *
+                                Cast: 
+                                  Typename: None, []
+                                    PtrDecl: []
+                                      TypeDecl: None, []
+                                        IdentifierType: ['int']
+                                  BinaryOp: -
+                                    ID: ap
+                                    Constant: int, 4
+                        Cast: 
+                          Typename: None, []
+                            TypeDecl: None, []
+                              IdentifierType: ['long']
+                          ExprList: 
+                            Assignment: +=
+                              ID: ap
+                              Constant: int, 4
+                            UnaryOp: *
+                              Cast: 
+                                Typename: None, []
+                                  PtrDecl: []
+                                    TypeDecl: None, []
+                                      IdentifierType: ['int']
+                                BinaryOp: -
+                                  ID: ap
+                                  Constant: int, 4
+                Goto: nosign
+              Case: 
+                Constant: char, 'x'
+                Assignment: =
+                  ID: _uquad
+                  TernaryOp: 
+                    BinaryOp: &
+                      ID: f
+                      Constant: int, 0x020
+                    ExprList: 
+                      Assignment: +=
+                        ID: ap
+                        Constant: int, 8
+                      UnaryOp: *
+                        Cast: 
+                          Typename: None, []
+                            PtrDecl: []
+                              TypeDecl: None, []
+                                IdentifierType: ['long', 'long']
+                          BinaryOp: -
+                            ID: ap
+                            Constant: int, 8
+                    TernaryOp: 
+                      BinaryOp: &
+                        ID: f
+                        Constant: int, 0x010
+                      ExprList: 
+                        Assignment: +=
+                          ID: ap
+                          Constant: int, 4
+                        UnaryOp: *
+                          Cast: 
+                            Typename: None, []
+                              PtrDecl: []
+                                TypeDecl: None, []
+                                  IdentifierType: ['long']
+                            BinaryOp: -
+                              ID: ap
+                              Constant: int, 4
+                      TernaryOp: 
+                        BinaryOp: &
+                          ID: f
+                          Constant: int, 0x040
+                        Cast: 
+                          Typename: None, []
+                            TypeDecl: None, []
+                              IdentifierType: ['long']
+                          Cast: 
+                            Typename: None, []
+                              TypeDecl: None, []
+                                IdentifierType: ['unsigned', 'short']
+                            ExprList: 
+                              Assignment: +=
+                                ID: ap
+                                Constant: int, 4
+                              UnaryOp: *
+                                Cast: 
+                                  Typename: None, []
+                                    PtrDecl: []
+                                      TypeDecl: None, []
+                                        IdentifierType: ['int']
+                                  BinaryOp: -
+                                    ID: ap
+                                    Constant: int, 4
+                        Cast: 
+                          Typename: None, []
+                            TypeDecl: None, []
+                              IdentifierType: ['long']
+                          ExprList: 
+                            Assignment: +=
+                              ID: ap
+                              Constant: int, 4
+                            UnaryOp: *
+                              Cast: 
+                                Typename: None, []
+                                  PtrDecl: []
+                                    TypeDecl: None, []
+                                      IdentifierType: ['int']
+                                BinaryOp: -
+                                  ID: ap
+                                  Constant: int, 4
+                Label: nosign
+                  If: 
+                    BinaryOp: ||
+                      BinaryOp: !=
+                        ID: _uquad
+                        Constant: int, 0
+                      BinaryOp: !=
+                        ID: prec
+                        Constant: int, 0
+                    EmptyStatement: 
+                Break: 
+              Default: 
+                EmptyStatement: 
+          If: 
+            BinaryOp: ==
+              BinaryOp: &
+                ID: f
+                Constant: int, 0x100
+              Constant: int, 0
+            Compound: 
+            Compound: 
+              If: 
+                BinaryOp: >=
+                  ID: ch
+                  Constant: char, 'f'
+                Compound: 
+                  If: 
+                    BinaryOp: ==
+                      ID: _double
+                      Constant: int, 0
+                    Compound: 
+                      If: 
+                        BinaryOp: ||
+                          BinaryOp: <
+                            ID: expt
+                            ID: ndig
+                          BinaryOp: !=
+                            BinaryOp: &
+                              ID: f
+                              Constant: int, 0x001
+                            Constant: int, 0
+                        Compound: 
+                          Compound: 
+                            If: 
+                              BinaryOp: >
+                                Assignment: =
+                                  ID: n
+                                  BinaryOp: -
+                                    ID: ndig
+                                    Constant: int, 1
+                                Constant: int, 0
+                              Compound: 
+                                While: 
+                                  BinaryOp: >
+                                    ID: n
+                                    Constant: int, 16
+                                  Compound: 
+                                    Compound: 
+                                      Assignment: =
+                                        StructRef: ->
+                                          ID: p
+                                          ID: x
+                                        ID: zeroes
+                                      Assignment: =
+                                        StructRef: ->
+                                          ID: p
+                                          ID: r
+                                        Constant: int, 16
+                                      Assignment: +=
+                                        StructRef: .
+                                          ID: q
+                                          ID: z
+                                        Constant: int, 16
+                                      UnaryOp: p++
+                                        ID: p
+                                      If: 
+                                        BinaryOp: >=
+                                          UnaryOp: ++
+                                            StructRef: .
+                                              ID: q
+                                              ID: t
+                                          Constant: int, 8
+                                        Compound: 
+                                          If: 
+                                            FuncCall: 
+                                              ID: g
+                                              ExprList: 
+                                                ID: fp
+                                                UnaryOp: &
+                                                  ID: q
+                                            Goto: error
+                                          Assignment: =
+                                            ID: p
+                                            ID: w
+                                    Assignment: -=
+                                      ID: n
+                                      Constant: int, 16
+                                Compound: 
+                                  Assignment: =
+                                    StructRef: ->
+                                      ID: p
+                                      ID: x
+                                    ID: zeroes
+                                  Assignment: =
+                                    StructRef: ->
+                                      ID: p
+                                      ID: r
+                                    ID: n
+                                  Assignment: +=
+                                    StructRef: .
+                                      ID: q
+                                      ID: z
+                                    ID: n
+                                  UnaryOp: p++
+                                    ID: p
+                                  If: 
+                                    BinaryOp: >=
+                                      UnaryOp: ++
+                                        StructRef: .
+                                          ID: q
+                                          ID: t
+                                      Constant: int, 8
+                                    Compound: 
+                                      If: 
+                                        FuncCall: 
+                                          ID: g
+                                          ExprList: 
+                                            ID: fp
+                                            UnaryOp: &
+                                              ID: q
+                                        Goto: error
+                                      Assignment: =
+                                        ID: p
+                                        ID: w
+                    If: 
+                      BinaryOp: <=
+                        ID: expt
+                        Constant: int, 0
+                      Compound: 
+                        Compound: 
+                          Assignment: =
+                            StructRef: ->
+                              ID: p
+                              ID: x
+                            Constant: string, "0"
+                          Assignment: =
+                            StructRef: ->
+                              ID: p
+                              ID: r
+                            Constant: int, 1
+                          Assignment: +=
+                            StructRef: .
+                              ID: q
+                              ID: z
+                            Constant: int, 1
+                          UnaryOp: p++
+                            ID: p
+                          If: 
+                            BinaryOp: >=
+                              UnaryOp: ++
+                                StructRef: .
+                                  ID: q
+                                  ID: t
+                              Constant: int, 8
+                            Compound: 
+                              If: 
+                                FuncCall: 
+                                  ID: g
+                                  ExprList: 
+                                    ID: fp
+                                    UnaryOp: &
+                                      ID: q
+                                Goto: error
+                              Assignment: =
+                                ID: p
+                                ID: w
+                        Compound: 
+                          Assignment: =
+                            StructRef: ->
+                              ID: p
+                              ID: x
+                            Constant: int, 0
+                          Assignment: =
+                            StructRef: ->
+                              ID: p
+                              ID: r
+                            Constant: int, 1
+                          Assignment: +=
+                            StructRef: .
+                              ID: q
+                              ID: z
+                            Constant: int, 1
+                          UnaryOp: p++
+                            ID: p
+                          If: 
+                            BinaryOp: >=
+                              UnaryOp: ++
+                                StructRef: .
+                                  ID: q
+                                  ID: t
+                              Constant: int, 8
+                            Compound: 
+                              If: 
+                                FuncCall: 
+                                  ID: g
+                                  ExprList: 
+                                    ID: fp
+                                    UnaryOp: &
+                                      ID: q
+                                Goto: error
+                              Assignment: =
+                                ID: p
+                                ID: w
+                        Compound: 
+                          If: 
+                            BinaryOp: >
+                              Assignment: =
+                                ID: n
+                                UnaryOp: -
+                                  ID: expt
+                              Constant: int, 0
+                            Compound: 
+                              While: 
+                                BinaryOp: >
+                                  ID: n
+                                  Constant: int, 16
+                                Compound: 
+                                  Compound: 
+                                    Assignment: =
+                                      StructRef: ->
+                                        ID: p
+                                        ID: x
+                                      ID: zeroes
+                                    Assignment: =
+                                      StructRef: ->
+                                        ID: p
+                                        ID: r
+                                      Constant: int, 16
+                                    Assignment: +=
+                                      StructRef: .
+                                        ID: q
+                                        ID: z
+                                      Constant: int, 16
+                                    UnaryOp: p++
+                                      ID: p
+                                    If: 
+                                      BinaryOp: >=
+                                        UnaryOp: ++
+                                          StructRef: .
+                                            ID: q
+                                            ID: t
+                                        Constant: int, 8
+                                      Compound: 
+                                        If: 
+                                          FuncCall: 
+                                            ID: g
+                                            ExprList: 
+                                              ID: fp
+                                              UnaryOp: &
+                                                ID: q
+                                          Goto: error
+                                        Assignment: =
+                                          ID: p
+                                          ID: w
+                                  Assignment: -=
+                                    ID: n
+                                    Constant: int, 16
+                              Compound: 
+                                Assignment: =
+                                  StructRef: ->
+                                    ID: p
+                                    ID: x
+                                  ID: zeroes
+                                Assignment: =
+                                  StructRef: ->
+                                    ID: p
+                                    ID: r
+                                  ID: n
+                                Assignment: +=
+                                  StructRef: .
+                                    ID: q
+                                    ID: z
+                                  ID: n
+                                UnaryOp: p++
+                                  ID: p
+                                If: 
+                                  BinaryOp: >=
+                                    UnaryOp: ++
+                                      StructRef: .
+                                        ID: q
+                                        ID: t
+                                    Constant: int, 8
+                                  Compound: 
+                                    If: 
+                                      FuncCall: 
+                                        ID: g
+                                        ExprList: 
+                                          ID: fp
+                                          UnaryOp: &
+                                            ID: q
+                                      Goto: error
+                                    Assignment: =
+                                      ID: p
+                                      ID: w
+                        Compound: 
+                          Assignment: =
+                            StructRef: ->
+                              ID: p
+                              ID: x
+                            ID: cp
+                          Assignment: =
+                            StructRef: ->
+                              ID: p
+                              ID: r
+                            ID: ndig
+                          Assignment: +=
+                            StructRef: .
+                              ID: q
+                              ID: z
+                            ID: ndig
+                          UnaryOp: p++
+                            ID: p
+                          If: 
+                            BinaryOp: >=
+                              UnaryOp: ++
+                                StructRef: .
+                                  ID: q
+                                  ID: t
+                              Constant: int, 8
+                            Compound: 
+                              If: 
+                                FuncCall: 
+                                  ID: g
+                                  ExprList: 
+                                    ID: fp
+                                    UnaryOp: &
+                                      ID: q
+                                Goto: error
+                              Assignment: =
+                                ID: p
+                                ID: w
+                      Compound: 
+                        Compound: 
+                          Assignment: =
+                            StructRef: ->
+                              ID: p
+                              ID: x
+                            ID: cp
+                          Assignment: =
+                            StructRef: ->
+                              ID: p
+                              ID: r
+                            ID: expt
+                          Assignment: +=
+                            StructRef: .
+                              ID: q
+                              ID: z
+                            ID: expt
+                          UnaryOp: p++
+                            ID: p
+                          If: 
+                            BinaryOp: >=
+                              UnaryOp: ++
+                                StructRef: .
+                                  ID: q
+                                  ID: t
+                              Constant: int, 8
+                            Compound: 
+                              If: 
+                                FuncCall: 
+                                  ID: g
+                                  ExprList: 
+                                    ID: fp
+                                    UnaryOp: &
+                                      ID: q
+                                Goto: error
+                              Assignment: =
+                                ID: p
+                                ID: w
+                        Assignment: +=
+                          ID: cp
+                          ID: expt
+                        Compound: 
+                          Assignment: =
+                            StructRef: ->
+                              ID: p
+                              ID: x
+                            Constant: string, "."
+                          Assignment: =
+                            StructRef: ->
+                              ID: p
+                              ID: r
+                            Constant: int, 1
+                          Assignment: +=
+                            StructRef: .
+                              ID: q
+                              ID: z
+                            Constant: int, 1
+                          UnaryOp: p++
+                            ID: p
+                          If: 
+                            BinaryOp: >=
+                              UnaryOp: ++
+                                StructRef: .
+                                  ID: q
+                                  ID: t
+                              Constant: int, 8
+                            Compound: 
+                              If: 
+                                FuncCall: 
+                                  ID: g
+                                  ExprList: 
+                                    ID: fp
+                                    UnaryOp: &
+                                      ID: q
+                                Goto: error
+                              Assignment: =
+                                ID: p
+                                ID: w
+                        Compound: 
+                          Assignment: =
+                            StructRef: ->
+                              ID: p
+                              ID: x
+                            ID: cp
+                          Assignment: =
+                            StructRef: ->
+                              ID: p
+                              ID: r
+                            BinaryOp: -
+                              ID: ndig
+                              ID: expt
+                          Assignment: +=
+                            StructRef: .
+                              ID: q
+                              ID: z
+                            BinaryOp: -
+                              ID: ndig
+                              ID: expt
+                          UnaryOp: p++
+                            ID: p
+                          If: 
+                            BinaryOp: >=
+                              UnaryOp: ++
+                                StructRef: .
+                                  ID: q
+                                  ID: t
+                              Constant: int, 8
+                            Compound: 
+                              If: 
+                                FuncCall: 
+                                  ID: g
+                                  ExprList: 
+                                    ID: fp
+                                    UnaryOp: &
+                                      ID: q
+                                Goto: error
+                              Assignment: =
+                                ID: p
+                                ID: w
+      Label: error
+        EmptyStatement: 

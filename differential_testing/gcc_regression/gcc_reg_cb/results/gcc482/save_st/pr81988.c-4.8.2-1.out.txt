@@ -1,5 +1,0 @@
-pr81988.c: In function ‘foo’:
-pr81988.c:18:5: error: ‘for’ loop initial declarations are only allowed in C99 mode
-     for (int i = 0; i < 4; i++)
-     ^
-pr81988.c:18:5: note: use option -std=c99 or -std=gnu99 to compile your code

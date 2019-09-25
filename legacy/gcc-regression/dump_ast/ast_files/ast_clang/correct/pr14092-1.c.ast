@@ -1,0 +1,43 @@
+TranslationUnitDecl 0x7f958a0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f958a026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f958a026740 '__int128'
+|-TypedefDecl 0x7f958a026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f958a026760 'unsigned __int128'
+|-TypedefDecl 0x7f958a026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f958a026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f958a026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f958a026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f958a026dc0 'char *'
+|   `-BuiltinType 0x7f958a026560 'char'
+|-TypedefDecl 0x7f958a0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f958a027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f958a026ee0 'struct __va_list_tag'
+|     `-Record 0x7f958a026e58 '__va_list_tag'
+|-TypedefDecl 0x7f958a027138 <c_files/pr14092-1.c:9:15, col:39> col:39 referenced intptr_t 'long'
+| `-BuiltinType 0x7f958a0265e0 'long'
+|-RecordDecl 0x7f958a825a00 <line:11:9, line:14:1> line:11:16 struct _PLCI definition
+| |-FieldDecl 0x7f958a825ac8 <line:12:3, col:17> col:17 referenced x 'unsigned char'
+| `-FieldDecl 0x7f958a825b90 <line:13:3, col:22> col:17 referenced buf 'unsigned char [1]'
+|-TypedefDecl 0x7f958a825c30 <line:11:1, line:14:3> col:3 referenced PLCI 'struct _PLCI':'struct _PLCI'
+| `-ElaboratedType 0x7f958a825be0 'struct _PLCI' sugar
+|   `-RecordType 0x7f958a825a90 'struct _PLCI'
+|     `-Record 0x7f958a825a00 '_PLCI'
+`-FunctionDecl 0x7f958a825e30 <line:16:1, line:19:1> line:16:6 nl_ind 'void (PLCI *)'
+  |-ParmVarDecl 0x7f958a825d28 <col:13, col:20> col:20 used plci 'PLCI *'
+  `-CompoundStmt 0x7f958a8261d8 <line:17:1, line:19:1>
+    `-BinaryOperator 0x7f958a8261b0 <line:18:3, col:40> 'unsigned char' '='
+      |-MemberExpr 0x7f958a825f50 <col:3, col:9> 'unsigned char' lvalue ->x 0x7f958a825ac8
+      | `-ImplicitCastExpr 0x7f958a825f38 <col:3> 'PLCI *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7f958a825f10 <col:3> 'PLCI *' lvalue ParmVar 0x7f958a825d28 'plci' 'PLCI *'
+      `-ImplicitCastExpr 0x7f958a826198 <col:13, col:40> 'unsigned char' <IntegralCast>
+        `-BinaryOperator 0x7f958a826170 <col:13, col:40> 'long' '&'
+          |-UnaryOperator 0x7f958a826118 <col:13, col:36> 'intptr_t':'long' prefix '-'
+          | `-ParenExpr 0x7f958a8260f8 <col:14, col:36> 'intptr_t':'long'
+          |   `-CStyleCastExpr 0x7f958a8260d0 <col:15, col:35> 'intptr_t':'long' <PointerToIntegral>
+          |     `-ImplicitCastExpr 0x7f958a8260b8 <col:25, col:35> 'unsigned char *' <ArrayToPointerDecay>
+          |       `-ParenExpr 0x7f958a826068 <col:25, col:35> 'unsigned char [1]' lvalue
+          |         `-MemberExpr 0x7f958a825ff0 <col:26, col:32> 'unsigned char [1]' lvalue ->buf 0x7f958a825b90
+          |           `-ImplicitCastExpr 0x7f958a825fd8 <col:26> 'PLCI *' <LValueToRValue>
+          |             `-DeclRefExpr 0x7f958a825fb0 <col:26> 'PLCI *' lvalue ParmVar 0x7f958a825d28 'plci' 'PLCI *'
+          `-ImplicitCastExpr 0x7f958a826158 <col:40> 'long' <IntegralCast>
+            `-IntegerLiteral 0x7f958a826138 <col:40> 'int' 3

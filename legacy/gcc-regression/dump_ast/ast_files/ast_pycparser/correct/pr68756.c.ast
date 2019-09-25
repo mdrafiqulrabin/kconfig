@@ -1,0 +1,83 @@
+FileAST: 
+  Decl: z4, [], [], []
+    TypeDecl: z4, []
+      IdentifierType: ['unsigned', 'int']
+  Decl: pz, [], [], []
+    TypeDecl: pz, []
+      IdentifierType: ['unsigned', 'int']
+  Decl: nn, [], [], []
+    ArrayDecl: []
+      TypeDecl: nn, []
+        IdentifierType: ['int']
+      Constant: int, 2
+  FuncDef: 
+    Decl: xq, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: dj, [], [], []
+            TypeDecl: dj, []
+              IdentifierType: ['unsigned', 'int']
+        TypeDecl: xq, []
+          IdentifierType: ['unsigned', 'int']
+    Compound: 
+      Return: 
+        TernaryOp: 
+          BinaryOp: >
+            ID: dj
+            Constant: int, 1
+          ID: z4
+          BinaryOp: +
+            ID: z4
+            ID: dj
+  FuncDef: 
+    Decl: la, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: la, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: hd, [], [], []
+        TypeDecl: hd, []
+          IdentifierType: ['int']
+      Decl: dl, [], [], []
+        TypeDecl: dl, []
+          IdentifierType: ['int']
+      Decl: hn, [], [], []
+        TypeDecl: hn, []
+          IdentifierType: ['unsigned', 'int']
+        Constant: int, 0
+      For: 
+        Assignment: =
+          ID: hd
+          Constant: int, 0
+        BinaryOp: <
+          ID: hd
+          Constant: int, 2
+        UnaryOp: ++
+          ID: hd
+        Compound: 
+          For: 
+            Assignment: =
+              ID: dl
+              Constant: int, 0
+            BinaryOp: <
+              ID: dl
+              Constant: int, 2
+            UnaryOp: ++
+              ID: dl
+            Assignment: =
+              ArrayRef: 
+                ID: nn
+                ID: dl
+              Constant: int, 0
+          UnaryOp: --
+            ID: hn
+          Assignment: =
+            ID: pz
+            FuncCall: 
+              ID: xq
+              ExprList: 
+                ID: hn

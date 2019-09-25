@@ -1,0 +1,61 @@
+FileAST: 
+  Decl: foo, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: foo, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: i1, [], [], []
+            TypeDecl: i1, []
+              IdentifierType: ['int']
+          Decl: i2, [], [], []
+            TypeDecl: i2, []
+              IdentifierType: ['int']
+          Decl: i3, [], [], []
+            TypeDecl: i3, []
+              IdentifierType: ['int']
+          Decl: i4, [], [], []
+            TypeDecl: i4, []
+              IdentifierType: ['int']
+          Decl: i5, [], [], []
+            TypeDecl: i5, []
+              IdentifierType: ['int']
+          Decl: i6, [], [], []
+            TypeDecl: i6, []
+              IdentifierType: ['int']
+          Decl: i7, [], [], []
+            TypeDecl: i7, []
+              IdentifierType: ['int']
+        TypeDecl: bar, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          ID: i1
+          ID: i2
+          ID: i3
+          ID: i4
+          ID: i5
+          ID: i6

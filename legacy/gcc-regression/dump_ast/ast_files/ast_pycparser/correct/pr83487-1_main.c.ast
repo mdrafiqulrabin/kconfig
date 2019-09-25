@@ -1,0 +1,19 @@
+FileAST: 
+  Decl: do_test, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: do_test, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: do_test
+      Return: 
+        Constant: int, 0

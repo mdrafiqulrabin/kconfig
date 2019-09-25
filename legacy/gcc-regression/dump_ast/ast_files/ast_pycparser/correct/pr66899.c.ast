@@ -1,0 +1,88 @@
+FileAST: 
+  Decl: a, [], [], []
+    PtrDecl: []
+      TypeDecl: a, []
+        Struct: None
+          Decl: authority, [], [], []
+            TypeDecl: authority, []
+              IdentifierType: ['int']
+  Decl: b, [], [], []
+    PtrDecl: []
+      TypeDecl: b, []
+        Struct: None
+          Decl: authority, [], [], []
+            TypeDecl: authority, []
+              IdentifierType: ['int']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      Struct: None
+        Decl: authority, [], [], []
+          TypeDecl: authority, []
+            IdentifierType: ['int']
+  Decl: d, [], [], []
+    TypeDecl: d, []
+      Struct: None
+        Decl: authority, [], [], []
+          TypeDecl: authority, []
+            IdentifierType: ['int']
+  Decl: e, [], [], []
+    TypeDecl: e, []
+      IdentifierType: ['int']
+  Decl: f, [], [], []
+    TypeDecl: f, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: fn1, [], ['static'], []
+      FuncDecl: 
+        TypeDecl: fn1, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        ID: a
+        Goto: verified
+      If: 
+        ID: b
+        Goto: matched
+      Return: 
+        UnaryOp: -
+          Constant: int, 126
+      Label: matched
+        Assignment: =
+          ID: e
+          Constant: int, 0
+      Label: verified
+        If: 
+          ID: b
+          For: 
+            BinaryOp: !=
+              UnaryOp: &
+                ID: c
+              ID: b
+            Assignment: =
+              ID: c
+              ID: d
+            EmptyStatement: 
+      Return: 
+        Constant: int, 0
+  FuncDef: 
+    Decl: fn2, [], [], []
+      FuncDecl: 
+        TypeDecl: fn2, []
+          IdentifierType: ['int']
+    Compound: 
+      For: 
+        Compound: 
+          Assignment: =
+            ID: f
+            FuncCall: 
+              ID: fn1
+          Switch: 
+            ID: f
+            Compound: 
+              Case: 
+                UnaryOp: -
+                  Constant: int, 126
+                Continue: 
+              Default: 
+                Return: 
+                  Constant: int, 0

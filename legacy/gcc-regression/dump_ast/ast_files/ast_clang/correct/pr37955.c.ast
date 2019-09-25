@@ -1,0 +1,60 @@
+TranslationUnitDecl 0x7f99060264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9906026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9906026740 '__int128'
+|-TypedefDecl 0x7f9906026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9906026760 'unsigned __int128'
+|-TypedefDecl 0x7f9906026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9906026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9906026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9906026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9906026dc0 'char *'
+|   `-BuiltinType 0x7f9906026560 'char'
+|-TypedefDecl 0x7f99060270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9906027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9906026ee0 'struct __va_list_tag'
+|     `-Record 0x7f9906026e58 '__va_list_tag'
+|-RecordDecl 0x7f9906027120 <c_files/pr37955.c:1:9, line:5:1> line:1:9 struct definition
+| |-EnumDecl 0x7f9906825a00 <line:3:3, col:27> col:3
+| | `-EnumConstantDecl 0x7f9906825ae0 <col:10, col:25> col:10 referenced NotConnected 'int'
+| |   `-IntegerLiteral 0x7f9906825ac0 <col:25> 'int' 0
+| |-FieldDecl 0x7f9906825b80 <col:3, col:29> col:29 referenced conn_state 'enum (anonymous enum at c_files/pr37955.c:3:3)':'enum AEP_CONNECTION_ENTRY::(anonymous at c_files/pr37955.c:3:3)'
+| `-FieldDecl 0x7f9906825be0 <line:4:3, col:16> col:16 referenced conn_hndl 'unsigned int'
+|-TypedefDecl 0x7f9906825c80 <line:1:1, line:5:3> col:3 referenced AEP_CONNECTION_ENTRY 'struct AEP_CONNECTION_ENTRY':'AEP_CONNECTION_ENTRY'
+| `-ElaboratedType 0x7f9906825c30 'struct AEP_CONNECTION_ENTRY' sugar
+|   `-RecordType 0x7f99060271b0 'AEP_CONNECTION_ENTRY'
+|     `-Record 0x7f9906027120 ''
+|-VarDecl 0x7f9906825e18 <line:7:1, col:51> col:29 used aep_app_conn_table 'AEP_CONNECTION_ENTRY [256]' static
+`-FunctionDecl 0x7f9906825f80 <line:9:1, line:18:1> line:9:6 aep_mod_exp 'void (void)'
+  `-CompoundStmt 0x7f9906826530 <line:10:1, line:18:1>
+    |-DeclStmt 0x7f9906826090 <line:11:3, col:12>
+    | `-VarDecl 0x7f9906826030 <col:3, col:7> col:7 used count 'int'
+    `-ForStmt 0x7f99068264f8 <line:13:3, line:17:5>
+      |-BinaryOperator 0x7f99068260f0 <line:13:8, col:16> 'int' '='
+      | |-DeclRefExpr 0x7f99068260a8 <col:8> 'int' lvalue Var 0x7f9906826030 'count' 'int'
+      | `-IntegerLiteral 0x7f99068260d0 <col:16> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7f9906826178 <col:19, col:27> 'int' '<'
+      | |-ImplicitCastExpr 0x7f9906826160 <col:19> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7f9906826118 <col:19> 'int' lvalue Var 0x7f9906826030 'count' 'int'
+      | `-IntegerLiteral 0x7f9906826140 <col:27> 'int' 256
+      |-UnaryOperator 0x7f99068261c8 <col:32, col:37> 'int' postfix '++'
+      | `-DeclRefExpr 0x7f99068261a0 <col:32> 'int' lvalue Var 0x7f9906826030 'count' 'int'
+      `-CompoundStmt 0x7f99068264d0 <line:14:5, line:17:5>
+        |-BinaryOperator 0x7f9906826368 <line:15:7, col:46> 'enum (anonymous enum at c_files/pr37955.c:3:3)':'enum AEP_CONNECTION_ENTRY::(anonymous at c_files/pr37955.c:3:3)' '='
+        | |-MemberExpr 0x7f99068262f0 <col:7, col:33> 'enum (anonymous enum at c_files/pr37955.c:3:3)':'enum AEP_CONNECTION_ENTRY::(anonymous at c_files/pr37955.c:3:3)' lvalue .conn_state 0x7f9906825b80
+        | | `-ArraySubscriptExpr 0x7f99068262c8 <col:7, col:31> 'AEP_CONNECTION_ENTRY':'AEP_CONNECTION_ENTRY' lvalue
+        | |   |-ImplicitCastExpr 0x7f9906826298 <col:7> 'AEP_CONNECTION_ENTRY *' <ArrayToPointerDecay>
+        | |   | `-DeclRefExpr 0x7f99068261e8 <col:7> 'AEP_CONNECTION_ENTRY [256]' lvalue Var 0x7f9906825e18 'aep_app_conn_table' 'AEP_CONNECTION_ENTRY [256]'
+        | |   `-ImplicitCastExpr 0x7f99068262b0 <col:26> 'int' <LValueToRValue>
+        | |     `-DeclRefExpr 0x7f9906826210 <col:26> 'int' lvalue Var 0x7f9906826030 'count' 'int'
+        | `-ImplicitCastExpr 0x7f9906826350 <col:46> 'enum (anonymous enum at c_files/pr37955.c:3:3)':'enum AEP_CONNECTION_ENTRY::(anonymous at c_files/pr37955.c:3:3)' <IntegralCast>
+        |   `-DeclRefExpr 0x7f9906826328 <col:46> 'int' EnumConstant 0x7f9906825ae0 'NotConnected' 'int'
+        `-BinaryOperator 0x7f99068264a8 <line:16:7, col:45> 'unsigned int' '='
+          |-MemberExpr 0x7f9906826438 <col:7, col:33> 'unsigned int' lvalue .conn_hndl 0x7f9906825be0
+          | `-ArraySubscriptExpr 0x7f9906826410 <col:7, col:31> 'AEP_CONNECTION_ENTRY':'AEP_CONNECTION_ENTRY' lvalue
+          |   |-ImplicitCastExpr 0x7f99068263e0 <col:7> 'AEP_CONNECTION_ENTRY *' <ArrayToPointerDecay>
+          |   | `-DeclRefExpr 0x7f9906826390 <col:7> 'AEP_CONNECTION_ENTRY [256]' lvalue Var 0x7f9906825e18 'aep_app_conn_table' 'AEP_CONNECTION_ENTRY [256]'
+          |   `-ImplicitCastExpr 0x7f99068263f8 <col:26> 'int' <LValueToRValue>
+          |     `-DeclRefExpr 0x7f99068263b8 <col:26> 'int' lvalue Var 0x7f9906826030 'count' 'int'
+          `-ImplicitCastExpr 0x7f9906826490 <col:45> 'unsigned int' <IntegralCast>
+            `-IntegerLiteral 0x7f9906826470 <col:45> 'int' 0

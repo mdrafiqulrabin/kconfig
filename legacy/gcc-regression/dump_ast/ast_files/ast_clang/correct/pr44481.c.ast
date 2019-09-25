@@ -1,0 +1,50 @@
+TranslationUnitDecl 0x7fd0150058d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd015005e20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd015005b40 '__int128'
+|-TypedefDecl 0x7fd015005e90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd015005b60 'unsigned __int128'
+|-TypedefDecl 0x7fd015006168 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd015005f70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd015005ee8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd015006200 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd0150061c0 'char *'
+|   `-BuiltinType 0x7fd015005960 'char'
+|-TypedefDecl 0x7fd0150064c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd015006470 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd0150062e0 'struct __va_list_tag'
+|     `-Record 0x7fd015006258 '__va_list_tag'
+|-FunctionDecl 0x7fd015825a30 <c_files/pr44481.c:4:1, line:8:1> line:5:1 used parity 'unsigned int (unsigned int)' static inline
+| |-ParmVarDecl 0x7fd015006538 <col:9, col:18> col:18 used x 'unsigned int'
+| `-CompoundStmt 0x7fd015825dd0 <line:6:1, line:8:1>
+|   `-ReturnStmt 0x7fd015825db8 <line:7:3, col:40>
+|     `-CStyleCastExpr 0x7fd015825d90 <col:10, col:40> 'unsigned int' <IntegralCast>
+|       `-CallExpr 0x7fd015825d30 <col:21, col:40> 'int'
+|         |-ImplicitCastExpr 0x7fd015825d18 <col:21> 'int (*)(unsigned int)' <BuiltinFnToFnPtr>
+|         | `-DeclRefExpr 0x7fd015825ca0 <col:21> '<builtin fn type>' Function 0x7fd015825b48 '__builtin_parity' 'int (unsigned int)'
+|         `-ImplicitCastExpr 0x7fd015825d60 <col:39> 'unsigned int' <LValueToRValue>
+|           `-DeclRefExpr 0x7fd015825cc8 <col:39> 'unsigned int' lvalue ParmVar 0x7fd015006538 'x' 'unsigned int'
+|-FunctionDecl 0x7fd015825b48 <col:21> col:21 implicit used __builtin_parity 'int (unsigned int)' extern
+| |-ParmVarDecl 0x7fd015825be0 <<invalid sloc>> <invalid sloc> 'unsigned int'
+| |-NoThrowAttr 0x7fd015825c48 <col:21> Implicit
+| `-ConstAttr 0x7fd015825c90 <col:21> Implicit
+`-FunctionDecl 0x7fd015825e98 <line:10:1, line:14:1> line:11:1 f 'unsigned int (unsigned int)'
+  |-ParmVarDecl 0x7fd015825e08 <col:4, col:13> col:13 used rpoly 'unsigned int'
+  `-CompoundStmt 0x7fd0158261c0 <line:12:1, line:14:1>
+    `-ReturnStmt 0x7fd0158261a8 <line:13:3, col:48>
+      `-BinaryOperator 0x7fd015826180 <col:10, col:48> 'unsigned int' '^'
+        |-CallExpr 0x7fd015826040 <col:10, col:27> 'unsigned int'
+        | |-ImplicitCastExpr 0x7fd015826028 <col:10> 'unsigned int (*)(unsigned int)' <FunctionToPointerDecay>
+        | | `-DeclRefExpr 0x7fd015825f38 <col:10> 'unsigned int (unsigned int)' Function 0x7fd015825a30 'parity' 'unsigned int (unsigned int)'
+        | `-BinaryOperator 0x7fd015825fd8 <col:18, col:26> 'unsigned int' '&'
+        |   |-ImplicitCastExpr 0x7fd015825fa8 <col:18> 'unsigned int' <LValueToRValue>
+        |   | `-DeclRefExpr 0x7fd015825f60 <col:18> 'unsigned int' lvalue ParmVar 0x7fd015825e08 'rpoly' 'unsigned int'
+        |   `-ImplicitCastExpr 0x7fd015825fc0 <col:26> 'unsigned int' <IntegralCast>
+        |     `-IntegerLiteral 0x7fd015825f88 <col:26> 'int' 1
+        `-CallExpr 0x7fd015826150 <col:31, col:48> 'unsigned int'
+          |-ImplicitCastExpr 0x7fd015826138 <col:31> 'unsigned int (*)(unsigned int)' <FunctionToPointerDecay>
+          | `-DeclRefExpr 0x7fd015826070 <col:31> 'unsigned int (unsigned int)' Function 0x7fd015825a30 'parity' 'unsigned int (unsigned int)'
+          `-BinaryOperator 0x7fd015826110 <col:39, col:47> 'unsigned int' '&'
+            |-ImplicitCastExpr 0x7fd0158260e0 <col:39> 'unsigned int' <LValueToRValue>
+            | `-DeclRefExpr 0x7fd015826098 <col:39> 'unsigned int' lvalue ParmVar 0x7fd015825e08 'rpoly' 'unsigned int'
+            `-ImplicitCastExpr 0x7fd0158260f8 <col:47> 'unsigned int' <IntegralCast>
+              `-IntegerLiteral 0x7fd0158260c0 <col:47> 'int' 6

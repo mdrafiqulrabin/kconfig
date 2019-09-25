@@ -1,0 +1,61 @@
+FileAST: 
+  FuncDef: 
+    Decl: func_18, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: t, [], [], []
+            TypeDecl: t, []
+              IdentifierType: ['int']
+        TypeDecl: func_18, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: l_889, [], [], []
+        TypeDecl: l_889, []
+          IdentifierType: ['unsigned']
+      Decl: l_895, [], [], []
+        TypeDecl: l_895, []
+          IdentifierType: ['int']
+        Constant: int, 1
+      For: 
+        Constant: int, 0
+        Constant: int, 1
+        UnaryOp: ++
+          ID: l_889
+        Compound: 
+          Decl: t1, [], [], []
+            TypeDecl: t1, []
+              IdentifierType: ['int']
+            Constant: int, 0
+          If: 
+            FuncCall: 
+              ID: func_81
+              ExprList: 
+                Constant: int, 1
+            Compound: 
+              Decl: rhs, [], [], []
+                TypeDecl: rhs, []
+                  IdentifierType: ['int']
+                ID: l_895
+              If: 
+                BinaryOp: ==
+                  ID: rhs
+                  Constant: int, 0
+                Assignment: =
+                  ID: rhs
+                  Constant: int, 1
+              If: 
+                BinaryOp: &
+                  Constant: int, 1
+                  BinaryOp: %
+                    ID: t
+                    ID: rhs
+                Assignment: =
+                  ID: t1
+                  Constant: int, 1
+          FuncCall: 
+            ID: func_98
+            ExprList: 
+              ID: t1
+          Assignment: =
+            ID: l_895
+            Constant: int, 0

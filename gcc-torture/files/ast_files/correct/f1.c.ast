@@ -1,9 +1,0 @@
-FileAST: 
-  FuncDef: 
-    Decl: foo, [], [], []
-      FuncDecl: 
-        TypeDecl: foo, []
-          IdentifierType: ['double']
-    Compound: 
-      Return: 
-        Constant: float, 1.2587624368724

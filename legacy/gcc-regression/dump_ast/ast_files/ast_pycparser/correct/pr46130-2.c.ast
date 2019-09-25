@@ -1,0 +1,116 @@
+FileAST: 
+  Decl: bar, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: bar, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: z, [], [], []
+        TypeDecl: z, []
+          IdentifierType: ['int']
+      Decl: w, [], [], []
+        TypeDecl: w, []
+          IdentifierType: ['int']
+      If: 
+        BinaryOp: <=
+          ID: x
+          Constant: int, 1024
+        Compound: 
+          Assignment: =
+            ID: z
+            Constant: int, 16
+          Assignment: =
+            ID: w
+            Constant: int, 17
+        Compound: 
+          FuncCall: 
+            ID: bar
+            ExprList: 
+              FuncCall: 
+                ID: bar
+                ExprList: 
+                  FuncCall: 
+                    ID: bar
+                    ExprList: 
+                      FuncCall: 
+                        ID: bar
+                        ExprList: 
+                          FuncCall: 
+                            ID: bar
+                            ExprList: 
+                              FuncCall: 
+                                ID: bar
+                                ExprList: 
+                                  FuncCall: 
+                                    ID: bar
+                                    ExprList: 
+                                      FuncCall: 
+                                        ID: bar
+                                        ExprList: 
+                                          FuncCall: 
+                                            ID: bar
+                                            ExprList: 
+                                              Constant: int, 16
+          If: 
+            BinaryOp: >
+              ID: x
+              Constant: int, 131072
+            Assignment: =
+              ID: w
+              Constant: int, 19
+            Assignment: =
+              ID: w
+              Constant: int, 21
+          Assignment: =
+            ID: z
+            Constant: int, 32
+      Assignment: =
+        ID: w
+        BinaryOp: +
+          ID: w
+          Constant: int, 121
+      Return: 
+        ID: z
+  FuncDef: 
+    Decl: baz, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+        TypeDecl: baz, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        BinaryOp: +
+          BinaryOp: +
+            FuncCall: 
+              ID: foo
+              ExprList: 
+                BinaryOp: +
+                  ID: x
+                  Constant: int, 6
+            FuncCall: 
+              ID: foo
+              ExprList: 
+                BinaryOp: +
+                  ID: x
+                  Constant: int, 15
+          FuncCall: 
+            ID: foo
+            ExprList: 
+              BinaryOp: +
+                ID: x
+                Constant: int, 24

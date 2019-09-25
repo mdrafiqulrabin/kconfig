@@ -1,0 +1,95 @@
+FileAST: 
+  Decl: printf, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, ['const']
+          PtrDecl: []
+            TypeDecl: None, ['const']
+              IdentifierType: ['char']
+        EllipsisParam: 
+      TypeDecl: printf, []
+        IdentifierType: ['int']
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: f, [], [], []
+    TypeDecl: f, []
+      IdentifierType: ['int']
+  Decl: g, [], [], []
+    TypeDecl: g, []
+      IdentifierType: ['int']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['char']
+  Decl: d, [], [], []
+    TypeDecl: d, []
+      IdentifierType: ['char']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['short']
+  Decl: e, [], ['static'], []
+    TypeDecl: e, []
+      IdentifierType: ['short']
+  FuncDef: 
+    Decl: fn1, [], [], []
+      FuncDecl: 
+        TypeDecl: fn1, []
+          IdentifierType: ['char']
+    Compound: 
+      For: 
+        ID: b
+        UnaryOp: p++
+          ID: b
+        Compound: 
+          Decl: h, [], [], []
+            TypeDecl: h, []
+              IdentifierType: ['int']
+            Constant: int, 5
+          For: 
+            Assignment: =
+              ID: a
+              Constant: int, 0
+            BinaryOp: <
+              ID: a
+              Constant: int, 1
+            UnaryOp: p++
+              ID: a
+            Compound: 
+              For: 
+                Assignment: =
+                  ID: d
+                  Constant: int, 0
+                BinaryOp: <
+                  ID: d
+                  Constant: int, 1
+                UnaryOp: p++
+                  ID: d
+                For: 
+                  Assignment: =
+                    ID: c
+                    Constant: int, 0
+                  BinaryOp: <
+                    ID: c
+                    Constant: int, 1
+                  UnaryOp: p++
+                    ID: c
+                  For: 
+                    BinaryOp: >=
+                      ID: e
+                      Constant: int, 0
+                    Return: 
+                      Constant: int, 5
+              If: 
+                ID: f
+                Assignment: =
+                  ID: h
+                  Constant: int, 0
+          If: 
+            ID: h
+            FuncCall: 
+              ID: printf
+              ExprList: 
+                Constant: string, "%d"
+                Constant: int, 0
+      Return: 
+        ID: g

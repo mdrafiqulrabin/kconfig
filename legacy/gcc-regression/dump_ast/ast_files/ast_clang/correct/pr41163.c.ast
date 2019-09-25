@@ -1,0 +1,33 @@
+TranslationUnitDecl 0x7fe9d18264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe9d1826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe9d1826740 '__int128'
+|-TypedefDecl 0x7fe9d1826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe9d1826760 'unsigned __int128'
+|-TypedefDecl 0x7fe9d1826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe9d1826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe9d1826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe9d1826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe9d1826dc0 'char *'
+|   `-BuiltinType 0x7fe9d1826560 'char'
+|-TypedefDecl 0x7fe9d18270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe9d1827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe9d1826ee0 'struct __va_list_tag'
+|     `-Record 0x7fe9d1826e58 '__va_list_tag'
+|-RecordDecl 0x7fe9d1827120 <c_files/pr41163.c:1:1, line:3:1> line:1:8 struct option definition
+| `-FieldDecl 0x7fe9d186d800 <line:2:5, col:11> col:11 value 'void *'
+|-FunctionDecl 0x7fe9d186da00 <line:4:1, col:36> col:6 used parse_options 'void (struct option *)'
+| `-ParmVarDecl 0x7fe9d186d900 <col:21, col:35> col:36 'struct option *'
+`-FunctionDecl 0x7fe9d186dba0 <line:5:1, line:9:1> line:5:6 cmd_grep 'void (void)'
+  `-CompoundStmt 0x7fe9d186e098 <line:6:1, line:9:1>
+    |-DeclStmt 0x7fe9d186df78 <line:7:3, col:45>
+    | `-VarDecl 0x7fe9d186dcc8 <col:3, col:44> col:17 used options 'struct option [1]' cinit
+    |   `-InitListExpr 0x7fe9d186de58 <col:29, col:44> 'struct option [1]'
+    |     `-InitListExpr 0x7fe9d186de98 <col:31, col:42> 'struct option':'struct option'
+    |       `-ImplicitCastExpr 0x7fe9d186dee8 <col:33, col:34> 'void *' <BitCast>
+    |         `-UnaryOperator 0x7fe9d186dda8 <col:33, col:34> 'struct option (*)[]' prefix '&'
+    |           `-DeclRefExpr 0x7fe9d186dd28 <col:34> 'struct option []' lvalue Var 0x7fe9d186dcc8 'options' 'struct option [1]'
+    `-CallExpr 0x7fe9d186e050 <line:8:3, col:24> 'void'
+      |-ImplicitCastExpr 0x7fe9d186e038 <col:3> 'void (*)(struct option *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fe9d186df90 <col:3> 'void (struct option *)' Function 0x7fe9d186da00 'parse_options' 'void (struct option *)'
+      `-ImplicitCastExpr 0x7fe9d186e080 <col:17> 'struct option *' <ArrayToPointerDecay>
+        `-DeclRefExpr 0x7fe9d186dfb8 <col:17> 'struct option [1]' lvalue Var 0x7fe9d186dcc8 'options' 'struct option [1]'

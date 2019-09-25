@@ -1,0 +1,66 @@
+TranslationUnitDecl 0x7f8b240264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8b24026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8b24026740 '__int128'
+|-TypedefDecl 0x7f8b24026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8b24026760 'unsigned __int128'
+|-TypedefDecl 0x7f8b24026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8b24026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8b24026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8b24026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8b24026dc0 'char *'
+|   `-BuiltinType 0x7f8b24026560 'char'
+|-TypedefDecl 0x7f8b240270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8b24027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8b24026ee0 'struct __va_list_tag'
+|     `-Record 0x7f8b24026e58 '__va_list_tag'
+|-RecordDecl 0x7f8b24027120 <c_files/pr81744.c:4:9, line:6:1> line:4:9 struct definition
+| |-FieldDecl 0x7f8b24825a00 <line:5:3, col:7> col:7 referenced a 'int'
+| `-FieldDecl 0x7f8b24825a60 <col:3, col:10> col:10 referenced b 'int'
+|-TypedefDecl 0x7f8b24825b00 <line:4:1, line:6:3> col:3 referenced CompandSegment 'struct CompandSegment':'CompandSegment'
+| `-ElaboratedType 0x7f8b24825ab0 'struct CompandSegment' sugar
+|   `-RecordType 0x7f8b240271b0 'CompandSegment'
+|     `-Record 0x7f8b24027120 ''
+|-VarDecl 0x7f8b24825b88 <line:7:1, col:5> col:5 used a 'int'
+|-VarDecl 0x7f8b24825cb8 <line:8:1, col:17> col:17 used b 'CompandSegment *'
+`-FunctionDecl 0x7f8b24825d68 <line:9:1, line:12:1> line:9:6 fn1 'void ()'
+  `-CompoundStmt 0x7f8b24826390 <col:12, line:12:1>
+    `-ForStmt 0x7f8b24826358 <line:10:3, line:11:49>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7f8b24825e28 <line:10:10> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7f8b24825e00 <col:10> 'int' lvalue Var 0x7f8b24825b88 'a' 'int'
+      |-UnaryOperator 0x7f8b24825e68 <col:13, col:14> 'int' postfix '++'
+      | `-DeclRefExpr 0x7f8b24825e40 <col:13> 'int' lvalue Var 0x7f8b24825b88 'a' 'int'
+      `-BinaryOperator 0x7f8b24826330 <line:11:5, col:49> 'int' '='
+        |-MemberExpr 0x7f8b24825f30 <col:5, col:10> 'int' lvalue .a 0x7f8b24825a00
+        | `-ArraySubscriptExpr 0x7f8b24825f08 <col:5, col:8> 'CompandSegment':'CompandSegment' lvalue
+        |   |-ImplicitCastExpr 0x7f8b24825ed8 <col:5> 'CompandSegment *' <LValueToRValue>
+        |   | `-DeclRefExpr 0x7f8b24825e88 <col:5> 'CompandSegment *' lvalue Var 0x7f8b24825cb8 'b' 'CompandSegment *'
+        |   `-ImplicitCastExpr 0x7f8b24825ef0 <col:7> 'int' <LValueToRValue>
+        |     `-DeclRefExpr 0x7f8b24825eb0 <col:7> 'int' lvalue Var 0x7f8b24825b88 'a' 'int'
+        `-BinaryOperator 0x7f8b24826308 <col:14, col:49> 'int' '='
+          |-MemberExpr 0x7f8b24826010 <col:14, col:19> 'int' lvalue .b 0x7f8b24825a60
+          | `-ArraySubscriptExpr 0x7f8b24825fe8 <col:14, col:17> 'CompandSegment':'CompandSegment' lvalue
+          |   |-ImplicitCastExpr 0x7f8b24825fb8 <col:14> 'CompandSegment *' <LValueToRValue>
+          |   | `-DeclRefExpr 0x7f8b24825f68 <col:14> 'CompandSegment *' lvalue Var 0x7f8b24825cb8 'b' 'CompandSegment *'
+          |   `-ImplicitCastExpr 0x7f8b24825fd0 <col:16> 'int' <LValueToRValue>
+          |     `-DeclRefExpr 0x7f8b24825f90 <col:16> 'int' lvalue Var 0x7f8b24825b88 'a' 'int'
+          `-BinaryOperator 0x7f8b248262e0 <col:23, col:49> 'int' '='
+            |-MemberExpr 0x7f8b24826138 <col:23, col:32> 'int' lvalue .a 0x7f8b24825a00
+            | `-ArraySubscriptExpr 0x7f8b24826110 <col:23, col:30> 'CompandSegment':'CompandSegment' lvalue
+            |   |-ImplicitCastExpr 0x7f8b248260f8 <col:23> 'CompandSegment *' <LValueToRValue>
+            |   | `-DeclRefExpr 0x7f8b24826048 <col:23> 'CompandSegment *' lvalue Var 0x7f8b24825cb8 'b' 'CompandSegment *'
+            |   `-BinaryOperator 0x7f8b248260d0 <col:25, col:29> 'int' '-'
+            |     |-ImplicitCastExpr 0x7f8b248260b8 <col:25> 'int' <LValueToRValue>
+            |     | `-DeclRefExpr 0x7f8b24826070 <col:25> 'int' lvalue Var 0x7f8b24825b88 'a' 'int'
+            |     `-IntegerLiteral 0x7f8b24826098 <col:29> 'int' 1
+            `-BinaryOperator 0x7f8b248262b8 <col:36, col:49> 'int' '='
+              |-MemberExpr 0x7f8b24826260 <col:36, col:45> 'int' lvalue .b 0x7f8b24825a60
+              | `-ArraySubscriptExpr 0x7f8b24826238 <col:36, col:43> 'CompandSegment':'CompandSegment' lvalue
+              |   |-ImplicitCastExpr 0x7f8b24826220 <col:36> 'CompandSegment *' <LValueToRValue>
+              |   | `-DeclRefExpr 0x7f8b24826170 <col:36> 'CompandSegment *' lvalue Var 0x7f8b24825cb8 'b' 'CompandSegment *'
+              |   `-BinaryOperator 0x7f8b248261f8 <col:38, col:42> 'int' '-'
+              |     |-ImplicitCastExpr 0x7f8b248261e0 <col:38> 'int' <LValueToRValue>
+              |     | `-DeclRefExpr 0x7f8b24826198 <col:38> 'int' lvalue Var 0x7f8b24825b88 'a' 'int'
+              |     `-IntegerLiteral 0x7f8b248261c0 <col:42> 'int' 1
+              `-IntegerLiteral 0x7f8b24826298 <col:49> 'int' 0

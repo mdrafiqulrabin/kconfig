@@ -1,0 +1,159 @@
+TranslationUnitDecl 0x7fcce60264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fcce6026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fcce6026740 '__int128'
+|-TypedefDecl 0x7fcce6026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fcce6026760 'unsigned __int128'
+|-TypedefDecl 0x7fcce6026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fcce6026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fcce6026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fcce6026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fcce6026dc0 'char *'
+|   `-BuiltinType 0x7fcce6026560 'char'
+|-TypedefDecl 0x7fcce60270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fcce6027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fcce6026ee0 'struct __va_list_tag'
+|     `-Record 0x7fcce6026e58 '__va_list_tag'
+|-TypedefDecl 0x7fcce6027138 <c_files/pr65494.c:4:1, col:23> col:23 referenced uchar 'unsigned char'
+| `-BuiltinType 0x7fcce6026620 'unsigned char'
+|-RecordDecl 0x7fcce6825a00 <line:5:9, col:48> col:16 struct rgb_ definition
+| |-FieldDecl 0x7fcce6825ae0 <col:22, col:28> col:28 referenced r 'uchar':'unsigned char'
+| |-FieldDecl 0x7fcce6825b38 <col:31, col:37> col:37 referenced g 'uchar':'unsigned char'
+| `-FieldDecl 0x7fcce6825b90 <col:40, col:46> col:46 referenced b 'uchar':'unsigned char'
+|-TypedefDecl 0x7fcce6825c30 <col:1, col:50> col:50 referenced rgb 'struct rgb_':'struct rgb_'
+| `-ElaboratedType 0x7fcce6825be0 'struct rgb_' sugar
+|   `-RecordType 0x7fcce6825a90 'struct rgb_'
+|     `-Record 0x7fcce6825a00 'rgb_'
+|-VarDecl 0x7fcce6825dd8 <line:7:1, col:9> col:5 used in 'rgb [512]'
+|-VarDecl 0x7fcce6825eb8 <col:1, col:17> col:12 used out 'rgb [512]'
+|-VarDecl 0x7fcce6825fb0 <line:8:1, col:10> col:7 used c 'float [512]'
+`-FunctionDecl 0x7fcce68260f0 <line:9:1, line:25:1> line:9:6 foo 'void (int)'
+  |-ParmVarDecl 0x7fcce6826028 <col:10, col:14> col:14 used n 'int'
+  `-CompoundStmt 0x7fcce6828658 <line:10:1, line:25:1>
+    |-DeclStmt 0x7fcce6826298 <line:11:3, col:11>
+    | |-VarDecl 0x7fcce68261a8 <col:3, col:7> col:7 used i 'int'
+    | `-VarDecl 0x7fcce6826220 <col:3, col:10> col:10 used j 'int'
+    `-ForStmt 0x7fcce6828620 <line:12:3, line:24:5>
+      |-BinaryOperator 0x7fcce68262f8 <line:12:8, col:12> 'int' '='
+      | |-DeclRefExpr 0x7fcce68262b0 <col:8> 'int' lvalue Var 0x7fcce68261a8 'i' 'int'
+      | `-IntegerLiteral 0x7fcce68262d8 <col:12> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fcce68263a0 <col:15, col:19> 'int' '<'
+      | |-ImplicitCastExpr 0x7fcce6826370 <col:15> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fcce6826320 <col:15> 'int' lvalue Var 0x7fcce68261a8 'i' 'int'
+      | `-ImplicitCastExpr 0x7fcce6826388 <col:19> 'int' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fcce6826348 <col:19> 'int' lvalue ParmVar 0x7fcce6826028 'n' 'int'
+      |-UnaryOperator 0x7fcce68263f0 <col:22, col:23> 'int' postfix '++'
+      | `-DeclRefExpr 0x7fcce68263c8 <col:22> 'int' lvalue Var 0x7fcce68261a8 'i' 'int'
+      `-CompoundStmt 0x7fcce68285e0 <line:13:5, line:24:5>
+        |-DeclStmt 0x7fcce6826640 <line:14:7, col:32>
+        | |-VarDecl 0x7fcce6826428 <col:7, col:17> col:13 used r 'float' cinit
+        | | `-ImplicitCastExpr 0x7fcce68264a8 <col:17> 'float' <IntegralToFloating>
+        | |   `-IntegerLiteral 0x7fcce6826488 <col:17> 'int' 0
+        | |-VarDecl 0x7fcce68264d8 <col:7, col:24> col:20 used g 'float' cinit
+        | | `-ImplicitCastExpr 0x7fcce6826558 <col:24> 'float' <IntegralToFloating>
+        | |   `-IntegerLiteral 0x7fcce6826538 <col:24> 'int' 0
+        | `-VarDecl 0x7fcce6826588 <col:7, col:31> col:27 used b 'float' cinit
+        |   `-ImplicitCastExpr 0x7fcce6826608 <col:31> 'float' <IntegralToFloating>
+        |     `-IntegerLiteral 0x7fcce68265e8 <col:31> 'int' 0
+        |-ForStmt 0x7fcce6828128 <line:15:7, line:20:2>
+        | |-BinaryOperator 0x7fcce68266a0 <line:15:12, col:16> 'int' '='
+        | | |-DeclRefExpr 0x7fcce6826658 <col:12> 'int' lvalue Var 0x7fcce6826220 'j' 'int'
+        | | `-IntegerLiteral 0x7fcce6826680 <col:16> 'int' 0
+        | |-<<<NULL>>>
+        | |-BinaryOperator 0x7fcce6826728 <col:19, col:23> 'int' '<'
+        | | |-ImplicitCastExpr 0x7fcce6826710 <col:19> 'int' <LValueToRValue>
+        | | | `-DeclRefExpr 0x7fcce68266c8 <col:19> 'int' lvalue Var 0x7fcce6826220 'j' 'int'
+        | | `-IntegerLiteral 0x7fcce68266f0 <col:23> 'int' 5
+        | |-UnaryOperator 0x7fcce6826778 <col:26, col:27> 'int' postfix '++'
+        | | `-DeclRefExpr 0x7fcce6826750 <col:26> 'int' lvalue Var 0x7fcce6826220 'j' 'int'
+        | `-CompoundStmt 0x7fcce68280f8 <line:16:2, line:20:2>
+        |   |-CompoundAssignOperator 0x7fcce6827af0 <line:17:4, col:33> 'float' '+=' ComputeLHSTy='float' ComputeResultTy='float'
+        |   | |-DeclRefExpr 0x7fcce6826798 <col:4> 'float' lvalue Var 0x7fcce6826428 'r' 'float'
+        |   | `-BinaryOperator 0x7fcce6827ac8 <col:9, col:33> 'float' '*'
+        |   |   |-CStyleCastExpr 0x7fcce6826990 <col:9, col:26> 'float' <IntegralToFloating>
+        |   |   | `-ImplicitCastExpr 0x7fcce6826978 <col:16, col:26> 'uchar':'unsigned char' <LValueToRValue>
+        |   |   |   `-MemberExpr 0x7fcce6826928 <col:16, col:26> 'uchar':'unsigned char' lvalue .r 0x7fcce6825ae0
+        |   |   |     `-ArraySubscriptExpr 0x7fcce6826900 <col:16, col:24> 'rgb':'struct rgb_' lvalue
+        |   |   |       |-ImplicitCastExpr 0x7fcce68268e8 <col:16> 'rgb *' <ArrayToPointerDecay>
+        |   |   |       | `-DeclRefExpr 0x7fcce68267c0 <col:16> 'rgb [512]' lvalue Var 0x7fcce6825dd8 'in' 'rgb [512]'
+        |   |   |       `-BinaryOperator 0x7fcce6826868 <col:19, col:23> 'int' '+'
+        |   |   |         |-ImplicitCastExpr 0x7fcce6826838 <col:19> 'int' <LValueToRValue>
+        |   |   |         | `-DeclRefExpr 0x7fcce68267e8 <col:19> 'int' lvalue Var 0x7fcce68261a8 'i' 'int'
+        |   |   |         `-ImplicitCastExpr 0x7fcce6826850 <col:23> 'int' <LValueToRValue>
+        |   |   |           `-DeclRefExpr 0x7fcce6826810 <col:23> 'int' lvalue Var 0x7fcce6826220 'j' 'int'
+        |   |   `-ImplicitCastExpr 0x7fcce6827ab0 <col:30, col:33> 'float' <LValueToRValue>
+        |   |     `-ArraySubscriptExpr 0x7fcce6827a88 <col:30, col:33> 'float' lvalue
+        |   |       |-ImplicitCastExpr 0x7fcce6827a58 <col:30> 'float *' <ArrayToPointerDecay>
+        |   |       | `-DeclRefExpr 0x7fcce68269b8 <col:30> 'float [512]' lvalue Var 0x7fcce6825fb0 'c' 'float [512]'
+        |   |       `-ImplicitCastExpr 0x7fcce6827a70 <col:32> 'int' <LValueToRValue>
+        |   |         `-DeclRefExpr 0x7fcce6827a00 <col:32> 'int' lvalue Var 0x7fcce6826220 'j' 'int'
+        |   |-CompoundAssignOperator 0x7fcce6827dd8 <line:18:4, col:33> 'float' '+=' ComputeLHSTy='float' ComputeResultTy='float'
+        |   | |-DeclRefExpr 0x7fcce6827b28 <col:4> 'float' lvalue Var 0x7fcce68264d8 'g' 'float'
+        |   | `-BinaryOperator 0x7fcce6827db0 <col:9, col:33> 'float' '*'
+        |   |   |-CStyleCastExpr 0x7fcce6827cc8 <col:9, col:26> 'float' <IntegralToFloating>
+        |   |   | `-ImplicitCastExpr 0x7fcce6827cb0 <col:16, col:26> 'uchar':'unsigned char' <LValueToRValue>
+        |   |   |   `-MemberExpr 0x7fcce6827c60 <col:16, col:26> 'uchar':'unsigned char' lvalue .g 0x7fcce6825b38
+        |   |   |     `-ArraySubscriptExpr 0x7fcce6827c38 <col:16, col:24> 'rgb':'struct rgb_' lvalue
+        |   |   |       |-ImplicitCastExpr 0x7fcce6827c20 <col:16> 'rgb *' <ArrayToPointerDecay>
+        |   |   |       | `-DeclRefExpr 0x7fcce6827b50 <col:16> 'rgb [512]' lvalue Var 0x7fcce6825dd8 'in' 'rgb [512]'
+        |   |   |       `-BinaryOperator 0x7fcce6827bf8 <col:19, col:23> 'int' '+'
+        |   |   |         |-ImplicitCastExpr 0x7fcce6827bc8 <col:19> 'int' <LValueToRValue>
+        |   |   |         | `-DeclRefExpr 0x7fcce6827b78 <col:19> 'int' lvalue Var 0x7fcce68261a8 'i' 'int'
+        |   |   |         `-ImplicitCastExpr 0x7fcce6827be0 <col:23> 'int' <LValueToRValue>
+        |   |   |           `-DeclRefExpr 0x7fcce6827ba0 <col:23> 'int' lvalue Var 0x7fcce6826220 'j' 'int'
+        |   |   `-ImplicitCastExpr 0x7fcce6827d98 <col:30, col:33> 'float' <LValueToRValue>
+        |   |     `-ArraySubscriptExpr 0x7fcce6827d70 <col:30, col:33> 'float' lvalue
+        |   |       |-ImplicitCastExpr 0x7fcce6827d40 <col:30> 'float *' <ArrayToPointerDecay>
+        |   |       | `-DeclRefExpr 0x7fcce6827cf0 <col:30> 'float [512]' lvalue Var 0x7fcce6825fb0 'c' 'float [512]'
+        |   |       `-ImplicitCastExpr 0x7fcce6827d58 <col:32> 'int' <LValueToRValue>
+        |   |         `-DeclRefExpr 0x7fcce6827d18 <col:32> 'int' lvalue Var 0x7fcce6826220 'j' 'int'
+        |   `-CompoundAssignOperator 0x7fcce68280c0 <line:19:4, col:33> 'float' '+=' ComputeLHSTy='float' ComputeResultTy='float'
+        |     |-DeclRefExpr 0x7fcce6827e10 <col:4> 'float' lvalue Var 0x7fcce6826588 'b' 'float'
+        |     `-BinaryOperator 0x7fcce6828098 <col:9, col:33> 'float' '*'
+        |       |-CStyleCastExpr 0x7fcce6827fb0 <col:9, col:26> 'float' <IntegralToFloating>
+        |       | `-ImplicitCastExpr 0x7fcce6827f98 <col:16, col:26> 'uchar':'unsigned char' <LValueToRValue>
+        |       |   `-MemberExpr 0x7fcce6827f48 <col:16, col:26> 'uchar':'unsigned char' lvalue .b 0x7fcce6825b90
+        |       |     `-ArraySubscriptExpr 0x7fcce6827f20 <col:16, col:24> 'rgb':'struct rgb_' lvalue
+        |       |       |-ImplicitCastExpr 0x7fcce6827f08 <col:16> 'rgb *' <ArrayToPointerDecay>
+        |       |       | `-DeclRefExpr 0x7fcce6827e38 <col:16> 'rgb [512]' lvalue Var 0x7fcce6825dd8 'in' 'rgb [512]'
+        |       |       `-BinaryOperator 0x7fcce6827ee0 <col:19, col:23> 'int' '+'
+        |       |         |-ImplicitCastExpr 0x7fcce6827eb0 <col:19> 'int' <LValueToRValue>
+        |       |         | `-DeclRefExpr 0x7fcce6827e60 <col:19> 'int' lvalue Var 0x7fcce68261a8 'i' 'int'
+        |       |         `-ImplicitCastExpr 0x7fcce6827ec8 <col:23> 'int' <LValueToRValue>
+        |       |           `-DeclRefExpr 0x7fcce6827e88 <col:23> 'int' lvalue Var 0x7fcce6826220 'j' 'int'
+        |       `-ImplicitCastExpr 0x7fcce6828080 <col:30, col:33> 'float' <LValueToRValue>
+        |         `-ArraySubscriptExpr 0x7fcce6828058 <col:30, col:33> 'float' lvalue
+        |           |-ImplicitCastExpr 0x7fcce6828028 <col:30> 'float *' <ArrayToPointerDecay>
+        |           | `-DeclRefExpr 0x7fcce6827fd8 <col:30> 'float [512]' lvalue Var 0x7fcce6825fb0 'c' 'float [512]'
+        |           `-ImplicitCastExpr 0x7fcce6828040 <col:32> 'int' <LValueToRValue>
+        |             `-DeclRefExpr 0x7fcce6828000 <col:32> 'int' lvalue Var 0x7fcce6826220 'j' 'int'
+        |-BinaryOperator 0x7fcce68282b8 <line:21:7, col:25> 'uchar':'unsigned char' '='
+        | |-MemberExpr 0x7fcce6828208 <col:7, col:14> 'uchar':'unsigned char' lvalue .r 0x7fcce6825ae0
+        | | `-ArraySubscriptExpr 0x7fcce68281e0 <col:7, col:12> 'rgb':'struct rgb_' lvalue
+        | |   |-ImplicitCastExpr 0x7fcce68281b0 <col:7> 'rgb *' <ArrayToPointerDecay>
+        | |   | `-DeclRefExpr 0x7fcce6828160 <col:7> 'rgb [512]' lvalue Var 0x7fcce6825eb8 'out' 'rgb [512]'
+        | |   `-ImplicitCastExpr 0x7fcce68281c8 <col:11> 'int' <LValueToRValue>
+        | |     `-DeclRefExpr 0x7fcce6828188 <col:11> 'int' lvalue Var 0x7fcce68261a8 'i' 'int'
+        | `-CStyleCastExpr 0x7fcce6828290 <col:18, col:25> 'uchar':'unsigned char' <FloatingToIntegral>
+        |   `-ImplicitCastExpr 0x7fcce6828278 <col:25> 'float' <LValueToRValue>
+        |     `-DeclRefExpr 0x7fcce6828240 <col:25> 'float' lvalue Var 0x7fcce6826428 'r' 'float'
+        |-BinaryOperator 0x7fcce6828438 <line:22:7, col:25> 'uchar':'unsigned char' '='
+        | |-MemberExpr 0x7fcce6828388 <col:7, col:14> 'uchar':'unsigned char' lvalue .g 0x7fcce6825b38
+        | | `-ArraySubscriptExpr 0x7fcce6828360 <col:7, col:12> 'rgb':'struct rgb_' lvalue
+        | |   |-ImplicitCastExpr 0x7fcce6828330 <col:7> 'rgb *' <ArrayToPointerDecay>
+        | |   | `-DeclRefExpr 0x7fcce68282e0 <col:7> 'rgb [512]' lvalue Var 0x7fcce6825eb8 'out' 'rgb [512]'
+        | |   `-ImplicitCastExpr 0x7fcce6828348 <col:11> 'int' <LValueToRValue>
+        | |     `-DeclRefExpr 0x7fcce6828308 <col:11> 'int' lvalue Var 0x7fcce68261a8 'i' 'int'
+        | `-CStyleCastExpr 0x7fcce6828410 <col:18, col:25> 'uchar':'unsigned char' <FloatingToIntegral>
+        |   `-ImplicitCastExpr 0x7fcce68283f8 <col:25> 'float' <LValueToRValue>
+        |     `-DeclRefExpr 0x7fcce68283c0 <col:25> 'float' lvalue Var 0x7fcce68264d8 'g' 'float'
+        `-BinaryOperator 0x7fcce68285b8 <line:23:7, col:25> 'uchar':'unsigned char' '='
+          |-MemberExpr 0x7fcce6828508 <col:7, col:14> 'uchar':'unsigned char' lvalue .b 0x7fcce6825b90
+          | `-ArraySubscriptExpr 0x7fcce68284e0 <col:7, col:12> 'rgb':'struct rgb_' lvalue
+          |   |-ImplicitCastExpr 0x7fcce68284b0 <col:7> 'rgb *' <ArrayToPointerDecay>
+          |   | `-DeclRefExpr 0x7fcce6828460 <col:7> 'rgb [512]' lvalue Var 0x7fcce6825eb8 'out' 'rgb [512]'
+          |   `-ImplicitCastExpr 0x7fcce68284c8 <col:11> 'int' <LValueToRValue>
+          |     `-DeclRefExpr 0x7fcce6828488 <col:11> 'int' lvalue Var 0x7fcce68261a8 'i' 'int'
+          `-CStyleCastExpr 0x7fcce6828590 <col:18, col:25> 'uchar':'unsigned char' <FloatingToIntegral>
+            `-ImplicitCastExpr 0x7fcce6828578 <col:25> 'float' <LValueToRValue>
+              `-DeclRefExpr 0x7fcce6828540 <col:25> 'float' lvalue Var 0x7fcce6826588 'b' 'float'

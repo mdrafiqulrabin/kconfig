@@ -1,0 +1,5 @@
+pragma-1.c: In function ‘main’:
+pragma-1.c:8:5: error: ‘error’ undeclared (first use in this function)
+     error;
+     ^
+pragma-1.c:8:5: note: each undeclared identifier is reported only once for each function it appears in

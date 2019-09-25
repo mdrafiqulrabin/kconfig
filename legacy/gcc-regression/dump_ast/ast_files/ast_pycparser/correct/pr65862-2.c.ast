@@ -1,0 +1,236 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['int']
+  Decl: d, [], [], []
+    TypeDecl: d, []
+      IdentifierType: ['int']
+  Decl: e, [], [], []
+    TypeDecl: e, []
+      IdentifierType: ['int']
+  Decl: j, [], [], []
+    TypeDecl: j, []
+      IdentifierType: ['int']
+  Decl: k, [], [], []
+    TypeDecl: k, []
+      IdentifierType: ['int']
+  Decl: n, [], [], []
+    TypeDecl: n, []
+      IdentifierType: ['int']
+  Decl: o, [], [], []
+    TypeDecl: o, []
+      IdentifierType: ['int']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['unsigned']
+  Decl: h, [], [], []
+    TypeDecl: h, []
+      IdentifierType: ['unsigned']
+  Decl: i, [], [], []
+    TypeDecl: i, []
+      IdentifierType: ['unsigned']
+  Decl: l, [], [], []
+    TypeDecl: l, []
+      IdentifierType: ['unsigned']
+  Decl: m, [], [], []
+    TypeDecl: m, []
+      IdentifierType: ['unsigned']
+  Decl: p, [], [], []
+    TypeDecl: p, []
+      IdentifierType: ['unsigned']
+  Decl: f, [], [], []
+    PtrDecl: []
+      TypeDecl: f, []
+        IdentifierType: ['int']
+  Decl: g, [], [], []
+    PtrDecl: []
+      TypeDecl: g, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: fn1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p1, [], [], []
+            TypeDecl: p1, []
+              IdentifierType: ['int']
+        TypeDecl: fn1, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        BinaryOp: -
+          ID: p1
+          ID: a
+  FuncDef: 
+    Decl: fn2, [], [], []
+      FuncDecl: 
+        TypeDecl: fn2, []
+          IdentifierType: ['int']
+    Compound: 
+      Assignment: =
+        ID: b
+        BinaryOp: -
+          BinaryOp: +
+            ID: b
+            Constant: int, 1
+          ID: a
+      Assignment: =
+        ID: e
+        BinaryOp: +
+          BinaryOp: +
+            Constant: int, 1
+            ID: o
+          Constant: int, 1518500249
+      Assignment: =
+        ID: d
+        BinaryOp: +
+          ID: d
+          ID: n
+      Assignment: =
+        ID: c
+        BinaryOp: +
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['int']
+            ID: c
+          ArrayRef: 
+            ID: g
+            Constant: int, 0
+      Assignment: =
+        ID: b
+        BinaryOp: +
+          BinaryOp: +
+            ID: b
+            ID: m
+          Constant: int, 1
+      Assignment: =
+        ID: d
+        BinaryOp: +
+          BinaryOp: +
+            ID: d
+            ID: p
+          Constant: int, 1518500249
+      Assignment: =
+        ID: d
+        BinaryOp: -
+          BinaryOp: +
+            ID: d
+            ID: k
+          Constant: int, 1
+      Assignment: =
+        ID: c
+        FuncCall: 
+          ID: fn1
+          ExprList: 
+            BinaryOp: +
+              BinaryOp: +
+                ID: c
+                ID: j
+              Constant: int, 1518500249
+      Assignment: =
+        ID: e
+        FuncCall: 
+          ID: fn1
+          ExprList: 
+            BinaryOp: +
+              BinaryOp: +
+                ID: e
+                ID: i
+              Constant: int, 1
+      Assignment: =
+        ID: d
+        BinaryOp: -
+          BinaryOp: +
+            BinaryOp: +
+              ID: d
+              ID: h
+            Constant: int, 1859775393
+          ID: a
+      Assignment: =
+        ID: c
+        FuncCall: 
+          ID: fn1
+          ExprList: 
+            BinaryOp: +
+              BinaryOp: +
+                BinaryOp: +
+                  ID: c
+                  BinaryOp: ^
+                    BinaryOp: ^
+                      ID: d
+                      Constant: int, 1
+                    ID: b
+                ArrayRef: 
+                  ID: g
+                  Constant: int, 1
+              Constant: int, 1
+      Assignment: =
+        ID: b
+        FuncCall: 
+          ID: fn1
+          ExprList: 
+            BinaryOp: +
+              BinaryOp: +
+                ID: b
+                ID: m
+              Constant: int, 3
+      Assignment: =
+        ID: d
+        FuncCall: 
+          ID: fn1
+          ExprList: 
+            BinaryOp: +
+              BinaryOp: +
+                ID: d
+                ID: l
+              Constant: int, 1
+      Assignment: =
+        ID: b
+        BinaryOp: +
+          BinaryOp: +
+            BinaryOp: +
+              ID: b
+              BinaryOp: ^
+                ID: c
+                Constant: int, 1
+            ID: p
+          Constant: int, 1
+      Assignment: =
+        ID: e
+        FuncCall: 
+          ID: fn1
+          ExprList: 
+            BinaryOp: +
+              BinaryOp: +
+                BinaryOp: +
+                  ID: e
+                  BinaryOp: ^
+                    BinaryOp: ^
+                      ID: b
+                      ID: c
+                    ID: d
+                ID: n
+              Constant: int, 1
+      Assignment: =
+        ID: d
+        ID: o
+      Assignment: =
+        ID: b
+        Constant: int, 0
+      Assignment: =
+        ID: e
+        BinaryOp: +
+          BinaryOp: +
+            ID: e
+            ID: k
+          Constant: int, 1859775393
+      Assignment: =
+        ArrayRef: 
+          ID: f
+          Constant: int, 0
+        ID: e
+      Return: 
+        ID: a

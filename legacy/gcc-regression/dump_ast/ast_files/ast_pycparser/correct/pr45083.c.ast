@@ -1,0 +1,83 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: S
+      Decl: a, [], [], []
+        PtrDecl: []
+          TypeDecl: a, []
+            IdentifierType: ['char']
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['unsigned']
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          IdentifierType: ['unsigned']
+  Decl: foo, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, ['const']
+          PtrDecl: []
+            TypeDecl: None, ['const']
+              IdentifierType: ['char']
+      TypeDecl: foo, []
+        IdentifierType: ['int']
+  Decl: bar, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: bar, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: baz, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: baz, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: cs, [], [], []
+        ArrayDecl: []
+          TypeDecl: cs, []
+            Struct: S
+          Constant: int, 1
+      Switch: 
+        StructRef: ->
+          ID: cs
+          ID: b
+        Compound: 
+          Case: 
+            Constant: int, 101
+            If: 
+              FuncCall: 
+                ID: foo
+                ExprList: 
+                  StructRef: ->
+                    ID: cs
+                    ID: a
+              FuncCall: 
+                ID: bar
+                ExprList: 
+                  StructRef: ->
+                    ID: cs
+                    ID: c
+                  StructRef: ->
+                    ID: cs
+                    ID: b
+  FuncDef: 
+    Decl: test, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: test, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: baz

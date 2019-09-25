@@ -1,0 +1,39 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: blah
+      Decl: b_data, [], [], []
+        PtrDecl: []
+          TypeDecl: b_data, []
+            IdentifierType: ['char']
+  FuncDef: 
+    Decl: set_bh_page, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: bh, [], [], []
+            PtrDecl: []
+              TypeDecl: bh, []
+                Struct: blah
+          Decl: offset, [], [], []
+            TypeDecl: offset, []
+              IdentifierType: ['unsigned', 'long']
+        TypeDecl: set_bh_page, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: <=
+          BinaryOp: <<
+            Constant: int, 1UL
+            Constant: int, 12
+          ID: offset
+        FuncCall: 
+          ID: __builtin_trap
+      Assignment: =
+        StructRef: ->
+          ID: bh
+          ID: b_data
+        Cast: 
+          Typename: None, []
+            PtrDecl: []
+              TypeDecl: None, []
+                IdentifierType: ['char']
+          ID: offset

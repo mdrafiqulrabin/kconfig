@@ -1,0 +1,30 @@
+FileAST: 
+  FuncDef: 
+    Decl: decCompareOp, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: result, [], [], []
+            TypeDecl: result, []
+              IdentifierType: ['int']
+        TypeDecl: decCompareOp, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: !=
+          ID: result
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['int']
+            Constant: int, 0x80000000
+        Compound: 
+          Assignment: =
+            ID: result
+            UnaryOp: -
+              ID: result
+          Return: 
+            BinaryOp: >
+              ID: result
+              Constant: int, 0
+      Return: 
+        Constant: int, 0

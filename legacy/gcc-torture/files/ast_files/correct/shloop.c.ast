@@ -1,0 +1,27 @@
+FileAST: 
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: p, ['volatile'], [], []
+        TypeDecl: p, ['volatile']
+          IdentifierType: ['int']
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 10000000
+        BinaryOp: >
+          ID: i
+          Constant: int, 0
+        UnaryOp: p--
+          ID: i
+        Assignment: =
+          ID: p
+          BinaryOp: >>
+            ID: i
+            Constant: int, 10

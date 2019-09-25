@@ -1,0 +1,34 @@
+FileAST: 
+  Typedef: cd, ['const'], ['typedef']
+    TypeDecl: cd, ['const']
+      IdentifierType: ['double']
+  Decl: f, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, ['const']
+          PtrDecl: []
+            ArrayDecl: []
+              TypeDecl: None, ['const']
+                IdentifierType: ['double']
+      TypeDecl: f, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: g, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: g, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: f
+        ExprList: 
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                ArrayDecl: []
+                  TypeDecl: None, []
+                    IdentifierType: ['cd']
+            Constant: int, 0

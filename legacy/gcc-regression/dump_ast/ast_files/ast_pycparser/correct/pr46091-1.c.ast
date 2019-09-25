@@ -1,0 +1,37 @@
+FileAST: 
+  FuncDef: 
+    Decl: test, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['unsigned', 'long', 'long']
+        TypeDecl: test, []
+          IdentifierType: ['unsigned', 'long', 'long']
+    Compound: 
+      Return: 
+        BinaryOp: &
+          ID: a
+          UnaryOp: ~
+            BinaryOp: <<
+              Constant: int, 1ull
+              Constant: int, 55
+  Decl: m, [], ['extern'], []
+    TypeDecl: m, []
+      IdentifierType: ['unsigned', 'long', 'long']
+  FuncDef: 
+    Decl: testm, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: testm, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: &=
+        ID: m
+        UnaryOp: ~
+          BinaryOp: <<
+            Constant: int, 1ull
+            Constant: int, 45

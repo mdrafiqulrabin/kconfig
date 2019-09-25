@@ -1,0 +1,129 @@
+c_files/pr49474.c:6:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+update_arglist_pass (gfc_actual_arglist* lst, int po, unsigned argpos,
+^
+c_files/pr49474.c:13:38: warning: incompatible integer to pointer conversion passing 'int' to parameter of type 'gfc_actual_arglist *' (aka 'struct gfc_formal_arglist *') [-Wint-conversion]
+    lst->next = update_arglist_pass (lst->next, po, argpos - 1, name);
+                                     ^~~~~~~~~
+c_files/pr49474.c:6:42: note: passing argument to parameter 'lst' here
+update_arglist_pass (gfc_actual_arglist* lst, int po, unsigned argpos,
+                                         ^
+c_files/pr49474.c:15:9: warning: incompatible integer to pointer conversion assigning to 'gfc_actual_arglist *' (aka 'struct gfc_formal_arglist *') from 'int' [-Wint-conversion]
+    lst = update_arglist_pass (((void *)0), po, argpos - 1, name);
+        ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+c_files/pr49474.c:16:1: warning: control may reach end of non-void function [-Wreturn-type]
+}
+^
+4 warnings generated.
+TranslationUnitDecl 0x7ff2618264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff261826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff261826740 '__int128'
+|-TypedefDecl 0x7ff261826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff261826760 'unsigned __int128'
+|-TypedefDecl 0x7ff261826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff261826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff261826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff261826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff261826dc0 'char *'
+|   `-BuiltinType 0x7ff261826560 'char'
+|-TypedefDecl 0x7ff2618270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff261827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff261826ee0 'struct __va_list_tag'
+|     `-Record 0x7ff261826e58 '__va_list_tag'
+|-RecordDecl 0x7ff261827120 <c_files/pr49474.c:1:9, line:4:1> line:1:16 struct gfc_formal_arglist definition
+| `-FieldDecl 0x7ff262025a00 <line:3:3, col:7> col:7 referenced next 'int'
+|-TypedefDecl 0x7ff262025aa0 <line:1:1, line:5:1> col:1 referenced gfc_actual_arglist 'struct gfc_formal_arglist':'struct gfc_formal_arglist'
+| `-ElaboratedType 0x7ff262025a50 'struct gfc_formal_arglist' sugar
+|   `-RecordType 0x7ff2618271b0 'struct gfc_formal_arglist'
+|     `-Record 0x7ff261827120 'gfc_formal_arglist'
+|-FunctionDecl 0x7ff262025e48 <line:6:1, line:16:1> line:6:1 referenced update_arglist_pass 'int (gfc_actual_arglist *, int, unsigned int, const char *)'
+| |-ParmVarDecl 0x7ff262025b98 <col:22, col:42> col:42 used lst 'gfc_actual_arglist *'
+| |-ParmVarDecl 0x7ff262025c10 <col:47, col:51> col:51 used po 'int'
+| |-ParmVarDecl 0x7ff262025c88 <col:55, col:64> col:64 used argpos 'unsigned int'
+| |-ParmVarDecl 0x7ff262025d00 <line:7:8, col:20> col:20 used name 'const char *'
+| `-CompoundStmt 0x7ff262028178 <line:8:1, line:16:1>
+|   |-ParenExpr 0x7ff2620265e8 <line:9:3, col:79> 'void'
+|   | `-CStyleCastExpr 0x7ff2620265c0 <col:4, col:78> 'void' <ToVoid>
+|   |   `-ParenExpr 0x7ff2620265a0 <col:10, col:78> 'int'
+|   |     `-ConditionalOperator 0x7ff262026530 <col:11, col:77> 'int'
+|   |       |-CallExpr 0x7ff2620262b0 <col:11, col:44> 'long'
+|   |       | |-ImplicitCastExpr 0x7ff262026298 <col:11> 'long (*)(long, long)' <BuiltinFnToFnPtr>
+|   |       | | `-DeclRefExpr 0x7ff262026140 <col:11> '<builtin fn type>' Function 0x7ff262025f80 '__builtin_expect' 'long (long, long)'
+|   |       | |-ImplicitCastExpr 0x7ff2620262e8 <col:28, col:40> 'long' <IntegralCast>
+|   |       | | `-UnaryOperator 0x7ff262026228 <col:28, col:40> 'int' prefix '!'
+|   |       | |   `-ParenExpr 0x7ff262026208 <col:29, col:40> 'int'
+|   |       | |     `-BinaryOperator 0x7ff2620261e0 <col:30, col:39> 'int' '>'
+|   |       | |       |-ImplicitCastExpr 0x7ff2620261b0 <col:30> 'unsigned int' <LValueToRValue>
+|   |       | |       | `-DeclRefExpr 0x7ff262026168 <col:30> 'unsigned int' lvalue ParmVar 0x7ff262025c88 'argpos' 'unsigned int'
+|   |       | |       `-ImplicitCastExpr 0x7ff2620261c8 <col:39> 'unsigned int' <IntegralCast>
+|   |       | |         `-IntegerLiteral 0x7ff262026190 <col:39> 'int' 0
+|   |       | `-ImplicitCastExpr 0x7ff262026300 <col:43> 'long' <IntegralCast>
+|   |       |   `-IntegerLiteral 0x7ff262026248 <col:43> 'int' 0
+|   |       |-BinaryOperator 0x7ff2620264e8 <col:48, col:73> 'int' ','
+|   |       | |-CallExpr 0x7ff2620264a0 <col:48, col:70> 'void'
+|   |       | | `-ImplicitCastExpr 0x7ff262026488 <col:48> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   |       | |   `-DeclRefExpr 0x7ff262026430 <col:48> '<builtin fn type>' Function 0x7ff262026350 '__builtin_unreachable' 'void (void) __attribute__((noreturn))'
+|   |       | `-IntegerLiteral 0x7ff2620264c8 <col:73> 'int' 0
+|   |       `-IntegerLiteral 0x7ff262026510 <col:77> 'int' 0
+|   |-IfStmt 0x7ff2620266e0 <line:10:3, line:11:14>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7ff262026680 <line:10:7, col:17> 'int' '=='
+|   | | |-ImplicitCastExpr 0x7ff262026650 <col:7> 'unsigned int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7ff262026608 <col:7> 'unsigned int' lvalue ParmVar 0x7ff262025c88 'argpos' 'unsigned int'
+|   | | `-ImplicitCastExpr 0x7ff262026668 <col:17> 'unsigned int' <IntegralCast>
+|   | |   `-IntegerLiteral 0x7ff262026630 <col:17> 'int' 1
+|   | |-ReturnStmt 0x7ff2620266c8 <line:11:7, col:14>
+|   | | `-IntegerLiteral 0x7ff2620266a8 <col:14> 'int' 0
+|   | `-<<<NULL>>>
+|   `-IfStmt 0x7ff262028140 <line:12:3, line:15:65>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-ImplicitCastExpr 0x7ff262026740 <line:12:7> 'gfc_actual_arglist *' <LValueToRValue>
+|     | `-DeclRefExpr 0x7ff262026718 <col:7> 'gfc_actual_arglist *' lvalue ParmVar 0x7ff262025b98 'lst' 'gfc_actual_arglist *'
+|     |-BinaryOperator 0x7ff262027e70 <line:13:5, col:69> 'int' '='
+|     | |-MemberExpr 0x7ff262026798 <col:5, col:10> 'int' lvalue ->next 0x7ff262025a00
+|     | | `-ImplicitCastExpr 0x7ff262026780 <col:5> 'gfc_actual_arglist *' <LValueToRValue>
+|     | |   `-DeclRefExpr 0x7ff262026758 <col:5> 'gfc_actual_arglist *' lvalue ParmVar 0x7ff262025b98 'lst' 'gfc_actual_arglist *'
+|     | `-CallExpr 0x7ff2620269d0 <col:17, col:69> 'int'
+|     |   |-ImplicitCastExpr 0x7ff2620269b8 <col:17> 'int (*)(gfc_actual_arglist *, int, unsigned int, const char *)' <FunctionToPointerDecay>
+|     |   | `-DeclRefExpr 0x7ff2620267d0 <col:17> 'int (gfc_actual_arglist *, int, unsigned int, const char *)' Function 0x7ff262025e48 'update_arglist_pass' 'int (gfc_actual_arglist *, int, unsigned int, const char *)'
+|     |   |-ImplicitCastExpr 0x7ff262027a40 <col:38, col:43> 'gfc_actual_arglist *' <IntegralToPointer>
+|     |   | `-ImplicitCastExpr 0x7ff262027a28 <col:38, col:43> 'int' <LValueToRValue>
+|     |   |   `-MemberExpr 0x7ff262026838 <col:38, col:43> 'int' lvalue ->next 0x7ff262025a00
+|     |   |     `-ImplicitCastExpr 0x7ff262026820 <col:38> 'gfc_actual_arglist *' <LValueToRValue>
+|     |   |       `-DeclRefExpr 0x7ff2620267f8 <col:38> 'gfc_actual_arglist *' lvalue ParmVar 0x7ff262025b98 'lst' 'gfc_actual_arglist *'
+|     |   |-ImplicitCastExpr 0x7ff262027e40 <col:49> 'int' <LValueToRValue>
+|     |   | `-DeclRefExpr 0x7ff262026870 <col:49> 'int' lvalue ParmVar 0x7ff262025c10 'po' 'int'
+|     |   |-BinaryOperator 0x7ff262026910 <col:53, col:62> 'unsigned int' '-'
+|     |   | |-ImplicitCastExpr 0x7ff2620268e0 <col:53> 'unsigned int' <LValueToRValue>
+|     |   | | `-DeclRefExpr 0x7ff262026898 <col:53> 'unsigned int' lvalue ParmVar 0x7ff262025c88 'argpos' 'unsigned int'
+|     |   | `-ImplicitCastExpr 0x7ff2620268f8 <col:62> 'unsigned int' <IntegralCast>
+|     |   |   `-IntegerLiteral 0x7ff2620268c0 <col:62> 'int' 1
+|     |   `-ImplicitCastExpr 0x7ff262027e58 <col:65> 'const char *' <LValueToRValue>
+|     |     `-DeclRefExpr 0x7ff262026938 <col:65> 'const char *' lvalue ParmVar 0x7ff262025d00 'name' 'const char *'
+|     `-BinaryOperator 0x7ff262028118 <line:15:5, col:65> 'gfc_actual_arglist *' '='
+|       |-DeclRefExpr 0x7ff262027e98 <col:5> 'gfc_actual_arglist *' lvalue ParmVar 0x7ff262025b98 'lst' 'gfc_actual_arglist *'
+|       `-ImplicitCastExpr 0x7ff262028100 <col:11, col:65> 'gfc_actual_arglist *' <IntegralToPointer>
+|         `-CallExpr 0x7ff262028070 <col:11, col:65> 'int'
+|           |-ImplicitCastExpr 0x7ff262028058 <col:11> 'int (*)(gfc_actual_arglist *, int, unsigned int, const char *)' <FunctionToPointerDecay>
+|           | `-DeclRefExpr 0x7ff262027ec0 <col:11> 'int (gfc_actual_arglist *, int, unsigned int, const char *)' Function 0x7ff262025e48 'update_arglist_pass' 'int (gfc_actual_arglist *, int, unsigned int, const char *)'
+|           |-ImplicitCastExpr 0x7ff2620280b8 <col:32, col:42> 'gfc_actual_arglist *' <NullToPointer>
+|           | `-ParenExpr 0x7ff262027f48 <col:32, col:42> 'void *'
+|           |   `-CStyleCastExpr 0x7ff262027f20 <col:33, col:41> 'void *' <NullToPointer>
+|           |     `-IntegerLiteral 0x7ff262027ee8 <col:41> 'int' 0
+|           |-ImplicitCastExpr 0x7ff2620280d0 <col:45> 'int' <LValueToRValue>
+|           | `-DeclRefExpr 0x7ff262027f68 <col:45> 'int' lvalue ParmVar 0x7ff262025c10 'po' 'int'
+|           |-BinaryOperator 0x7ff262028008 <col:49, col:58> 'unsigned int' '-'
+|           | |-ImplicitCastExpr 0x7ff262027fd8 <col:49> 'unsigned int' <LValueToRValue>
+|           | | `-DeclRefExpr 0x7ff262027f90 <col:49> 'unsigned int' lvalue ParmVar 0x7ff262025c88 'argpos' 'unsigned int'
+|           | `-ImplicitCastExpr 0x7ff262027ff0 <col:58> 'unsigned int' <IntegralCast>
+|           |   `-IntegerLiteral 0x7ff262027fb8 <col:58> 'int' 1
+|           `-ImplicitCastExpr 0x7ff2620280e8 <col:61> 'const char *' <LValueToRValue>
+|             `-DeclRefExpr 0x7ff262028030 <col:61> 'const char *' lvalue ParmVar 0x7ff262025d00 'name' 'const char *'
+|-FunctionDecl 0x7ff262025f80 <line:9:11> col:11 implicit used __builtin_expect 'long (long, long)' extern
+| |-ParmVarDecl 0x7ff262026018 <<invalid sloc>> <invalid sloc> 'long'
+| |-ParmVarDecl 0x7ff262026078 <<invalid sloc>> <invalid sloc> 'long'
+| |-NoThrowAttr 0x7ff2620260e8 <col:11> Implicit
+| `-ConstAttr 0x7ff262026130 <col:11> Implicit
+`-FunctionDecl 0x7ff262026350 <col:48> col:48 implicit used __builtin_unreachable 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7ff2620263e8 <col:48> Implicit

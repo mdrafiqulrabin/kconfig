@@ -1,0 +1,43 @@
+c_files/pr66768.c:4:9: error: unknown type name '__seg_gs'
+typedef __seg_gs struct foo_s {
+        ^
+c_files/pr66768.c:4:18: error: expected identifier or '('
+typedef __seg_gs struct foo_s {
+                 ^
+c_files/pr66768.c:6:3: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+} foo_t;
+  ^
+c_files/pr66768.c:10:9: error: unknown type name 'foo_t'
+  const foo_t *p = (const foo_t *)0x1234;
+        ^
+c_files/pr66768.c:10:27: error: unknown type name 'foo_t'
+  const foo_t *p = (const foo_t *)0x1234;
+                          ^
+1 warning and 4 errors generated.
+TranslationUnitDecl 0x7ff3bc0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff3bc026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff3bc026740 '__int128'
+|-TypedefDecl 0x7ff3bc026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff3bc026760 'unsigned __int128'
+|-TypedefDecl 0x7ff3bc026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff3bc026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff3bc026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff3bc026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff3bc026dc0 'char *'
+|   `-BuiltinType 0x7ff3bc026560 'char'
+|-TypedefDecl 0x7ff3bc0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff3bc027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff3bc026ee0 'struct __va_list_tag'
+|     `-Record 0x7ff3bc026e58 '__va_list_tag'
+|-VarDecl 0x7ff3bc027150 <c_files/pr66768.c:6:3> col:3 foo_t 'int'
+`-FunctionDecl 0x7ff3bc826ab8 <line:8:1, line:15:1> line:8:5 sum 'int (void)'
+  `-CompoundStmt 0x7ff3bc826f08 <line:9:1, line:15:1>
+    |-DeclStmt 0x7ff3bc826bc8 <line:10:3, col:41>
+    | `-VarDecl 0x7ff3bc826b68 <col:3, col:16> col:16 invalid p 'const int *'
+    |-DeclStmt 0x7ff3bc826d08 <line:11:3, col:17>
+    | |-VarDecl 0x7ff3bc826bf8 <col:3, col:7> col:7 used i 'int'
+    | `-VarDecl 0x7ff3bc826c70 <col:3, col:16> col:10 used total 'int' cinit
+    |   `-IntegerLiteral 0x7ff3bc826cd0 <col:16> 'int' 0
+    `-ReturnStmt 0x7ff3bc826ef0 <line:14:3, col:10>
+      `-ImplicitCastExpr 0x7ff3bc826ed8 <col:10> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7ff3bc826eb0 <col:10> 'int' lvalue Var 0x7ff3bc826c70 'total' 'int'

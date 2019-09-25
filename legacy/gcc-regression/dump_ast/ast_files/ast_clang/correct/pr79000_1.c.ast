@@ -1,0 +1,28 @@
+TranslationUnitDecl 0x7f8ab5822ed0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8ab5823420 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8ab5823140 '__int128'
+|-TypedefDecl 0x7f8ab5823490 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8ab5823160 'unsigned __int128'
+|-TypedefDecl 0x7f8ab5823768 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8ab5823570 'struct __NSConstantString_tag'
+|   `-Record 0x7f8ab58234e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8ab5823800 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8ab58237c0 'char *'
+|   `-BuiltinType 0x7f8ab5822f60 'char'
+|-TypedefDecl 0x7f8ab5823ac8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8ab5823a70 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8ab58238e0 'struct __va_list_tag'
+|     `-Record 0x7f8ab5823858 '__va_list_tag'
+|-RecordDecl 0x7f8ab5823b20 <c_files/pr79000_1.c:1:9, col:16> col:16 struct a
+|-TypedefDecl 0x7f8ab5029420 <col:1, col:18> col:18 b 'struct a':'struct a'
+| `-ElaboratedType 0x7f8ab5823bd0 'struct a' sugar
+|   `-RecordType 0x7f8ab5823bb0 'struct a'
+|     `-Record 0x7f8ab5029490 'a'
+|-RecordDecl 0x7f8ab5029490 prev 0x7f8ab5823b20 <line:2:9, col:20> col:16 struct a definition
+|-TypedefDecl 0x7f8ab5029538 prev 0x7f8ab5029420 <col:1, col:22> col:22 referenced b 'struct a':'struct a'
+| `-ElaboratedType 0x7f8ab5823bd0 'struct a' sugar
+|   `-RecordType 0x7f8ab5823bb0 'struct a'
+|     `-Record 0x7f8ab5029490 'a'
+|-RecordDecl 0x7f8ab50295a8 <line:3:1, line:5:1> line:3:1 struct definition
+| `-FieldDecl 0x7f8ab5029680 <line:4:3, col:5> col:5 c 'b':'struct a'
+`-VarDecl 0x7f8ab5029760 <line:3:1, line:5:3> col:3 d 'struct (anonymous struct at c_files/pr79000_1.c:3:1)':'struct (anonymous at c_files/pr79000_1.c:3:1)'

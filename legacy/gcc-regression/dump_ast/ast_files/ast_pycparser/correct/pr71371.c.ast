@@ -1,0 +1,68 @@
+FileAST: 
+  Decl: baz, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['int']
+      TypeDecl: baz, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Pragma: omp taskloop
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 100
+        UnaryOp: p++
+          ID: i
+        FuncCall: 
+          ID: baz
+          ExprList: 
+            UnaryOp: &
+              ID: i
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: bar, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Pragma: omp parallel
+      Compound: 
+        Pragma: omp for
+        For: 
+          Assignment: =
+            ID: i
+            Constant: int, 0
+          BinaryOp: <
+            ID: i
+            Constant: int, 100
+          UnaryOp: p++
+            ID: i
+          FuncCall: 
+            ID: baz
+            ExprList: 
+              UnaryOp: &
+                ID: i

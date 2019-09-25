@@ -1,0 +1,28 @@
+FileAST: 
+  Decl: ip, [], [], []
+    ArrayDecl: []
+      TypeDecl: ip, []
+        IdentifierType: ['char']
+      Constant: int, 10
+  Decl: total, [], [], []
+    TypeDecl: total, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: t, [], [], []
+        TypeDecl: t, []
+          IdentifierType: ['int']
+      Assignment: =
+        ID: t
+        ArrayRef: 
+          ID: ip
+          Constant: int, 2
+      Assignment: =
+        ID: total
+        BinaryOp: &
+          ID: t
+          Constant: int, 0x3

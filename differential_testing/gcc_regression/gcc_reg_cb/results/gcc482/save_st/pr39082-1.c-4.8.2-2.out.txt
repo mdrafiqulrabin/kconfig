@@ -1,4 +1,0 @@
-pr39082-1.c: In function ‘foo1’:
-pr39082-1.c:16:1: note: the ABI of passing union with long double has changed in GCC 4.4
- foo1 (union un u)  
- ^

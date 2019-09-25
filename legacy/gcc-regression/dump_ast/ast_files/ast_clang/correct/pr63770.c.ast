@@ -1,0 +1,33 @@
+TranslationUnitDecl 0x7ff5720264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff572026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff572026740 '__int128'
+|-TypedefDecl 0x7ff572026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff572026760 'unsigned __int128'
+|-TypedefDecl 0x7ff572026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff572026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff572026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff572026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff572026dc0 'char *'
+|   `-BuiltinType 0x7ff572026560 'char'
+|-TypedefDecl 0x7ff5720270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff572027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff572026ee0 'struct __va_list_tag'
+|     `-Record 0x7ff572026e58 '__va_list_tag'
+|-VarDecl 0x7ff572027130 <c_files/pr63770.c:3:1, col:6> col:6 used a 'char'
+|-RecordDecl 0x7ff572825a00 <line:5:1, line:8:1> line:5:8 struct S definition
+| `-FieldDecl 0x7ff572825ae8 <line:7:3, col:10> col:7 referenced f0 'int'
+|   `-IntegerLiteral 0x7ff572825ab0 <col:10> 'int' 9
+|-VarDecl 0x7ff572825b80 <line:10:1, col:19> col:19 used b 'volatile struct S':'volatile struct S'
+`-FunctionDecl 0x7ff572825c30 <line:12:1, line:16:1> line:13:1 fn1 'int ()'
+  `-CompoundStmt 0x7ff572825e88 <line:14:1, line:16:1>
+    `-ReturnStmt 0x7ff572825e70 <line:15:3, col:23>
+      `-BinaryOperator 0x7ff572825e00 <col:10, col:23> 'int' '<'
+        |-ParenExpr 0x7ff572825d88 <col:10, col:19> 'int'
+        | `-BinaryOperator 0x7ff572825d60 <col:11, col:17> 'int' '&'
+        |   |-IntegerLiteral 0x7ff572825cc8 <col:11> 'int' 1
+        |   `-ImplicitCastExpr 0x7ff572825d48 <col:15, col:17> 'int' <LValueToRValue>
+        |     `-MemberExpr 0x7ff572825d10 <col:15, col:17> 'volatile int' lvalue bitfield .f0 0x7ff572825ae8
+        |       `-DeclRefExpr 0x7ff572825ce8 <col:15> 'volatile struct S':'volatile struct S' lvalue Var 0x7ff572825b80 'b' 'volatile struct S':'volatile struct S'
+        `-ImplicitCastExpr 0x7ff572825de8 <col:23> 'int' <IntegralCast>
+          `-ImplicitCastExpr 0x7ff572825dd0 <col:23> 'char' <LValueToRValue>
+            `-DeclRefExpr 0x7ff572825da8 <col:23> 'char' lvalue Var 0x7ff572027130 'a' 'char'

@@ -1,0 +1,143 @@
+FileAST: 
+  FuncDef: 
+    Decl: test_00, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            PtrDecl: []
+              TypeDecl: x, []
+                IdentifierType: ['int']
+        TypeDecl: test_00, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        ArrayRef: 
+          ID: x
+          Constant: int, 0
+  FuncDef: 
+    Decl: test_01, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            PtrDecl: []
+              TypeDecl: x, []
+                IdentifierType: ['int']
+        TypeDecl: test_01, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        ArrayRef: 
+          ID: x
+          Constant: int, 1
+  FuncDef: 
+    Decl: test_02, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            PtrDecl: []
+              TypeDecl: x, []
+                IdentifierType: ['int']
+        TypeDecl: test_02, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        ArrayRef: 
+          ID: x
+          Constant: int, 100
+  FuncDef: 
+    Decl: test_03, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            PtrDecl: []
+              TypeDecl: x, []
+                IdentifierType: ['int']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['unsigned', 'int']
+        TypeDecl: test_03, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        UnaryOp: *
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['int']
+            BinaryOp: +
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['unsigned', 'int']
+                ID: x
+              ID: y
+  FuncDef: 
+    Decl: test_04, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            PtrDecl: []
+              TypeDecl: x, []
+                IdentifierType: ['float']
+        TypeDecl: test_04, []
+          IdentifierType: ['float']
+    Compound: 
+      Return: 
+        ArrayRef: 
+          ID: x
+          Constant: int, 0
+  FuncDef: 
+    Decl: test_05, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            PtrDecl: []
+              TypeDecl: x, []
+                IdentifierType: ['float']
+        TypeDecl: test_05, []
+          IdentifierType: ['float']
+    Compound: 
+      Return: 
+        ArrayRef: 
+          ID: x
+          Constant: int, 5
+  FuncDef: 
+    Decl: test_06, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            PtrDecl: []
+              TypeDecl: x, []
+                IdentifierType: ['float']
+        TypeDecl: test_06, []
+          IdentifierType: ['float']
+    Compound: 
+      Return: 
+        ArrayRef: 
+          ID: x
+          Constant: int, 100
+  FuncDef: 
+    Decl: test_07, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: test_07, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        Constant: int, 1230
+  FuncDef: 
+    Decl: test_08, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: test_08, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        Constant: int, 0xFF0000

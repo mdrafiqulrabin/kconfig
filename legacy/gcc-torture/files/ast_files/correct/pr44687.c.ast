@@ -1,0 +1,127 @@
+FileAST: 
+  Typedef: int32_t, [], ['typedef']
+    TypeDecl: int32_t, []
+      IdentifierType: ['int']
+  Typedef: uint8_t, [], ['typedef']
+    TypeDecl: uint8_t, []
+      IdentifierType: ['unsigned', 'char']
+  Decl: None, [], [], []
+    Struct: S0
+      Decl: f0, [], [], []
+        TypeDecl: f0, []
+          IdentifierType: ['uint8_t']
+  Decl: g_18, [], [], []
+    ArrayDecl: []
+      ArrayDecl: []
+        ArrayDecl: []
+          ArrayDecl: []
+            PtrDecl: []
+              TypeDecl: g_18, []
+                Struct: S0
+            Constant: int, 1
+          Constant: int, 1
+        Constant: int, 5
+      Constant: int, 7
+    InitList: 
+  Decl: g_17, [], [], []
+    PtrDecl: []
+      PtrDecl: []
+        TypeDecl: g_17, []
+          Struct: S0
+    UnaryOp: &
+      ArrayRef: 
+        ArrayRef: 
+          ArrayRef: 
+            ArrayRef: 
+              ID: g_18
+              Constant: int, 0
+            Constant: int, 3
+          Constant: int, 0
+        Constant: int, 0
+  Decl: g_86, [], [], []
+    TypeDecl: g_86, []
+      IdentifierType: ['int32_t']
+  Decl: func_72, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: p_73, [], [], []
+          TypeDecl: p_73, []
+            IdentifierType: ['uint8_t']
+        Decl: p_74, [], [], []
+          TypeDecl: p_74, []
+            Struct: S0
+      TypeDecl: func_72, []
+        Struct: S0
+  FuncDef: 
+    Decl: int326, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p_67, [], [], []
+            PtrDecl: []
+              PtrDecl: []
+                TypeDecl: p_67, []
+                  Struct: S0
+          Decl: p_68, [], [], []
+            TypeDecl: p_68, []
+              IdentifierType: ['int32_t']
+          Decl: p_69, [], [], []
+            PtrDecl: ['const']
+              PtrDecl: []
+                TypeDecl: p_69, []
+                  IdentifierType: ['int32_t']
+          Decl: p_70, [], [], []
+            PtrDecl: []
+              TypeDecl: p_70, []
+                Struct: S0
+        TypeDecl: int326, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: l_95, [], [], []
+        TypeDecl: l_95, []
+          Struct: S0
+        InitList: 
+          UnaryOp: -
+            Constant: int, 1L
+      FuncCall: 
+        ID: func_72
+        ExprList: 
+          Constant: int, 1L
+          FuncCall: 
+            ID: func_72
+            ExprList: 
+              Constant: int, 0
+              ID: l_95
+  FuncDef: 
+    Decl: func_72, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p_73, [], [], []
+            TypeDecl: p_73, []
+              IdentifierType: ['uint8_t']
+          Decl: p_74, [], [], []
+            TypeDecl: p_74, []
+              Struct: S0
+        TypeDecl: func_72, []
+          Struct: S0
+    Compound: 
+      Decl: l_85, [], [], []
+        PtrDecl: []
+          TypeDecl: l_85, []
+            IdentifierType: ['int32_t']
+        UnaryOp: &
+          ID: g_86
+      If: 
+        UnaryOp: *
+          ID: l_85
+        Label: lbl_94
+          Assignment: ^=
+            UnaryOp: *
+              ID: l_85
+            Constant: int, 0
+      If: 
+        ID: g_86
+        Goto: lbl_94
+      Return: 
+        UnaryOp: *
+          UnaryOp: *
+            ID: g_17

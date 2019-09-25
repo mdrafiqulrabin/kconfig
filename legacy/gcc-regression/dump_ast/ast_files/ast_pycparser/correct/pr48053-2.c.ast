@@ -1,0 +1,85 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: timeval
+      Decl: tv_sec, [], [], []
+        TypeDecl: tv_sec, []
+          IdentifierType: ['long']
+      Decl: tv_usec, [], [], []
+        TypeDecl: tv_usec, []
+          IdentifierType: ['long']
+  Decl: bar, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              Struct: timeval
+      PtrDecl: []
+        TypeDecl: bar, []
+          IdentifierType: ['char']
+  Decl: error, [], [], []
+    PtrDecl: []
+      TypeDecl: error, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: ptr, [], [], []
+            PtrDecl: []
+              TypeDecl: ptr, []
+                IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: tm, [], [], []
+        TypeDecl: tm, []
+          Struct: timeval
+      Decl: n1, [], [], []
+        TypeDecl: n1, []
+          IdentifierType: ['long']
+      Decl: n2, [], [], []
+        TypeDecl: n2, []
+          IdentifierType: ['long']
+      If: 
+        UnaryOp: !
+          ID: ptr
+        Compound: 
+          Assignment: =
+            UnaryOp: *
+              ID: error
+            Constant: int, 1
+          Assignment: =
+            ID: n1
+            UnaryOp: -
+              Constant: int, 1
+          Assignment: =
+            ID: n2
+            UnaryOp: -
+              Constant: int, 1
+        Compound: 
+          Assignment: =
+            ID: n1
+            Constant: int, 0
+          Assignment: =
+            ID: n2
+            UnaryOp: *
+              ID: error
+      Assignment: =
+        StructRef: .
+          ID: tm
+          ID: tv_sec
+        ID: n1
+      Assignment: =
+        StructRef: .
+          ID: tm
+          ID: tv_usec
+        ID: n2
+      If: 
+        UnaryOp: *
+          ID: error
+        FuncCall: 
+          ID: bar
+          ExprList: 
+            UnaryOp: &
+              ID: tm

@@ -1,4 +1,0 @@
-pr39545-2.c: In function ‘foo’:
-pr39545-2.c:14:1: note: the ABI of passing struct with a flexible array member has changed in GCC 4.4
- {  
- ^

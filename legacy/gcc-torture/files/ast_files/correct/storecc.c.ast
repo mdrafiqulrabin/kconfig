@@ -1,0 +1,27 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            PtrDecl: []
+              TypeDecl: p, []
+                IdentifierType: ['char']
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Assignment: =
+        UnaryOp: *
+          ID: p
+        ID: a
+      If: 
+        Cast: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['char']
+          ID: a
+        Return: 
+          Constant: int, 1

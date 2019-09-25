@@ -1,4 +1,0 @@
-pr22308-1.c: In function ‘bar’:
-pr22308-1.c:12:5: error: assignment of read-only variable ‘t’
-   t = s;  
-     ^

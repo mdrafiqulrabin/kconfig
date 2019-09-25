@@ -1,0 +1,84 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: blah
+      Decl: a, [], [], []
+        ArrayDecl: []
+          TypeDecl: a, []
+            IdentifierType: ['char']
+          Constant: int, 4
+  Decl: None, [], [], []
+    Struct: str
+      Decl: b1, [], [], []
+        TypeDecl: b1, []
+          Struct: blah
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['char']
+  Decl: None, [], [], []
+    Struct: val
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['char']
+      Decl: b2, [], [], []
+        TypeDecl: b2, []
+          Struct: blah
+  Decl: None, [], [], []
+    Union: U
+      Decl: str, [], [], []
+        TypeDecl: str, []
+          Struct: str
+      Decl: val, [], [], []
+        TypeDecl: val, []
+          Struct: val
+  Decl: e_b1, [], ['extern'], []
+    TypeDecl: e_b1, []
+      Struct: blah
+  Decl: e_b2, [], ['extern'], []
+    TypeDecl: e_b2, []
+      Struct: blah
+  Decl: e_u, [], ['extern'], []
+    PtrDecl: []
+      TypeDecl: e_u, []
+        Union: U
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: u, [], [], []
+        TypeDecl: u, []
+          Union: U
+      Assignment: =
+        StructRef: .
+          StructRef: .
+            ID: u
+            ID: str
+          ID: b1
+        ID: e_b1
+      Assignment: =
+        StructRef: .
+          StructRef: .
+            ID: u
+            ID: val
+          ID: b2
+        ID: e_b2
+      Assignment: =
+        ArrayRef: 
+          StructRef: .
+            StructRef: .
+              StructRef: .
+                ID: u
+                ID: str
+              ID: b1
+            ID: a
+          Constant: int, 3
+        Constant: int, 0
+      Assignment: =
+        UnaryOp: *
+          ID: e_u
+        ID: u

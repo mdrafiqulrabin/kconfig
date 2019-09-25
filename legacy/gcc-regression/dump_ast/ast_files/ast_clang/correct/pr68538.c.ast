@@ -1,0 +1,194 @@
+TranslationUnitDecl 0x7fa3c50264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa3c5026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa3c5026740 '__int128'
+|-TypedefDecl 0x7fa3c5026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa3c5026760 'unsigned __int128'
+|-TypedefDecl 0x7fa3c5026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa3c5026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa3c5026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa3c5026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa3c5026dc0 'char *'
+|   `-BuiltinType 0x7fa3c5026560 'char'
+|-TypedefDecl 0x7fa3c50270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa3c5027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa3c5026ee0 'struct __va_list_tag'
+|     `-Record 0x7fa3c5026e58 '__va_list_tag'
+|-RecordDecl 0x7fa3c5027120 <c_files/pr68538.c:1:1, line:3:1> line:1:8 struct percpu_counter definition
+| `-FieldDecl 0x7fa3c5077a00 <line:2:2, col:19> col:19 referenced count 'long long'
+|-RecordDecl 0x7fa3c5077a48 <line:4:1, line:6:1> line:4:8 struct blkg_rwstat definition
+| `-FieldDecl 0x7fa3c5077c38 <line:5:2, col:33> col:24 referenced cpu_cnt 'struct percpu_counter [4]'
+|-RecordDecl 0x7fa3c5077c80 <line:7:1, line:9:1> line:7:8 struct cfq_group definition
+| `-FieldDecl 0x7fa3c5077d80 <line:8:2, col:21> col:21 referenced service_time 'struct blkg_rwstat':'struct blkg_rwstat'
+|-RecordDecl 0x7fa3c5077e10 <line:10:1, line:12:1> line:10:8 struct cfq_queue definition
+| `-FieldDecl 0x7fa3c5077f70 <line:11:2, col:20> col:20 referenced group 'struct cfq_group *'
+|-RecordDecl 0x7fa3c5077fb8 <line:13:1, line:17:1> line:13:8 struct request definition
+| |-FieldDecl 0x7fa3c5078110 <line:14:2, col:20> col:20 referenced active_queue 'struct cfq_queue *'
+| |-FieldDecl 0x7fa3c5078170 <line:15:2, col:21> col:21 referenced cmd_flags 'unsigned long long'
+| `-FieldDecl 0x7fa3c50781d0 <line:16:2, col:8> col:8 referenced priv 'void *'
+|-FunctionDecl 0x7fa3c50784c0 <line:18:1, line:31:1> line:18:13 used blkg_rwstat_add 'void (struct blkg_rwstat *, int, unsigned long long)' static
+| |-ParmVarDecl 0x7fa3c50782a0 <col:29, col:49> col:49 used rwstat 'struct blkg_rwstat *'
+| |-ParmVarDecl 0x7fa3c5078318 <col:57, col:61> col:61 used rw 'int'
+| |-ParmVarDecl 0x7fa3c5078390 <col:65, col:84> col:84 used val 'unsigned long long'
+| `-CompoundStmt 0x7fa3c5078f30 <line:19:1, line:31:1>
+|   |-DeclStmt 0x7fa3c5078690 <line:20:2, col:28>
+|   | `-VarDecl 0x7fa3c5078630 <col:2, col:25> col:25 used cnt 'struct percpu_counter *'
+|   |-IfStmt 0x7fa3c50789c0 <line:21:2, line:24:27>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fa3c5078708 <line:21:6, col:11> 'int' '&'
+|   | | |-ImplicitCastExpr 0x7fa3c50786f0 <col:6> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fa3c50786a8 <col:6> 'int' lvalue ParmVar 0x7fa3c5078318 'rw' 'int'
+|   | | `-IntegerLiteral 0x7fa3c50786d0 <col:11> 'int' 1
+|   | |-BinaryOperator 0x7fa3c5078850 <line:22:3, col:27> 'struct percpu_counter *' '='
+|   | | |-DeclRefExpr 0x7fa3c5078730 <col:3> 'struct percpu_counter *' lvalue Var 0x7fa3c5078630 'cnt' 'struct percpu_counter *'
+|   | | `-UnaryOperator 0x7fa3c5078830 <col:9, col:27> 'struct percpu_counter *' prefix '&'
+|   | |   `-ArraySubscriptExpr 0x7fa3c5078808 <col:10, col:27> 'struct percpu_counter':'struct percpu_counter' lvalue
+|   | |     |-ImplicitCastExpr 0x7fa3c50787f0 <col:10, col:18> 'struct percpu_counter *' <ArrayToPointerDecay>
+|   | |     | `-MemberExpr 0x7fa3c5078798 <col:10, col:18> 'struct percpu_counter [4]' lvalue ->cpu_cnt 0x7fa3c5077c38
+|   | |     |   `-ImplicitCastExpr 0x7fa3c5078780 <col:10> 'struct blkg_rwstat *' <LValueToRValue>
+|   | |     |     `-DeclRefExpr 0x7fa3c5078758 <col:10> 'struct blkg_rwstat *' lvalue ParmVar 0x7fa3c50782a0 'rwstat' 'struct blkg_rwstat *'
+|   | |     `-IntegerLiteral 0x7fa3c50787d0 <col:26> 'int' 1
+|   | `-BinaryOperator 0x7fa3c5078998 <line:24:3, col:27> 'struct percpu_counter *' '='
+|   |   |-DeclRefExpr 0x7fa3c5078878 <col:3> 'struct percpu_counter *' lvalue Var 0x7fa3c5078630 'cnt' 'struct percpu_counter *'
+|   |   `-UnaryOperator 0x7fa3c5078978 <col:9, col:27> 'struct percpu_counter *' prefix '&'
+|   |     `-ArraySubscriptExpr 0x7fa3c5078950 <col:10, col:27> 'struct percpu_counter':'struct percpu_counter' lvalue
+|   |       |-ImplicitCastExpr 0x7fa3c5078938 <col:10, col:18> 'struct percpu_counter *' <ArrayToPointerDecay>
+|   |       | `-MemberExpr 0x7fa3c50788e0 <col:10, col:18> 'struct percpu_counter [4]' lvalue ->cpu_cnt 0x7fa3c5077c38
+|   |       |   `-ImplicitCastExpr 0x7fa3c50788c8 <col:10> 'struct blkg_rwstat *' <LValueToRValue>
+|   |       |     `-DeclRefExpr 0x7fa3c50788a0 <col:10> 'struct blkg_rwstat *' lvalue ParmVar 0x7fa3c50782a0 'rwstat' 'struct blkg_rwstat *'
+|   |       `-IntegerLiteral 0x7fa3c5078918 <col:26> 'int' 0
+|   |-CompoundAssignOperator 0x7fa3c5078ab8 <line:25:2, col:16> 'long long' '+=' ComputeLHSTy='unsigned long long' ComputeResultTy='unsigned long long'
+|   | |-MemberExpr 0x7fa3c5078a40 <col:2, col:7> 'long long' lvalue ->count 0x7fa3c5077a00
+|   | | `-ImplicitCastExpr 0x7fa3c5078a28 <col:2> 'struct percpu_counter *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7fa3c5078a00 <col:2> 'struct percpu_counter *' lvalue Var 0x7fa3c5078630 'cnt' 'struct percpu_counter *'
+|   | `-ImplicitCastExpr 0x7fa3c5078aa0 <col:16> 'unsigned long long' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fa3c5078a78 <col:16> 'unsigned long long' lvalue ParmVar 0x7fa3c5078390 'val' 'unsigned long long'
+|   |-IfStmt 0x7fa3c5078e08 <line:26:2, line:29:27>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fa3c5078b50 <line:26:6, col:11> 'int' '&'
+|   | | |-ImplicitCastExpr 0x7fa3c5078b38 <col:6> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fa3c5078af0 <col:6> 'int' lvalue ParmVar 0x7fa3c5078318 'rw' 'int'
+|   | | `-IntegerLiteral 0x7fa3c5078b18 <col:11> 'int' 2
+|   | |-BinaryOperator 0x7fa3c5078c98 <line:27:3, col:27> 'struct percpu_counter *' '='
+|   | | |-DeclRefExpr 0x7fa3c5078b78 <col:3> 'struct percpu_counter *' lvalue Var 0x7fa3c5078630 'cnt' 'struct percpu_counter *'
+|   | | `-UnaryOperator 0x7fa3c5078c78 <col:9, col:27> 'struct percpu_counter *' prefix '&'
+|   | |   `-ArraySubscriptExpr 0x7fa3c5078c50 <col:10, col:27> 'struct percpu_counter':'struct percpu_counter' lvalue
+|   | |     |-ImplicitCastExpr 0x7fa3c5078c38 <col:10, col:18> 'struct percpu_counter *' <ArrayToPointerDecay>
+|   | |     | `-MemberExpr 0x7fa3c5078be0 <col:10, col:18> 'struct percpu_counter [4]' lvalue ->cpu_cnt 0x7fa3c5077c38
+|   | |     |   `-ImplicitCastExpr 0x7fa3c5078bc8 <col:10> 'struct blkg_rwstat *' <LValueToRValue>
+|   | |     |     `-DeclRefExpr 0x7fa3c5078ba0 <col:10> 'struct blkg_rwstat *' lvalue ParmVar 0x7fa3c50782a0 'rwstat' 'struct blkg_rwstat *'
+|   | |     `-IntegerLiteral 0x7fa3c5078c18 <col:26> 'int' 2
+|   | `-BinaryOperator 0x7fa3c5078de0 <line:29:3, col:27> 'struct percpu_counter *' '='
+|   |   |-DeclRefExpr 0x7fa3c5078cc0 <col:3> 'struct percpu_counter *' lvalue Var 0x7fa3c5078630 'cnt' 'struct percpu_counter *'
+|   |   `-UnaryOperator 0x7fa3c5078dc0 <col:9, col:27> 'struct percpu_counter *' prefix '&'
+|   |     `-ArraySubscriptExpr 0x7fa3c5078d98 <col:10, col:27> 'struct percpu_counter':'struct percpu_counter' lvalue
+|   |       |-ImplicitCastExpr 0x7fa3c5078d80 <col:10, col:18> 'struct percpu_counter *' <ArrayToPointerDecay>
+|   |       | `-MemberExpr 0x7fa3c5078d28 <col:10, col:18> 'struct percpu_counter [4]' lvalue ->cpu_cnt 0x7fa3c5077c38
+|   |       |   `-ImplicitCastExpr 0x7fa3c5078d10 <col:10> 'struct blkg_rwstat *' <LValueToRValue>
+|   |       |     `-DeclRefExpr 0x7fa3c5078ce8 <col:10> 'struct blkg_rwstat *' lvalue ParmVar 0x7fa3c50782a0 'rwstat' 'struct blkg_rwstat *'
+|   |       `-IntegerLiteral 0x7fa3c5078d60 <col:26> 'int' 3
+|   `-CompoundAssignOperator 0x7fa3c5078ef8 <line:30:2, col:16> 'long long' '+=' ComputeLHSTy='unsigned long long' ComputeResultTy='unsigned long long'
+|     |-MemberExpr 0x7fa3c5078e80 <col:2, col:7> 'long long' lvalue ->count 0x7fa3c5077a00
+|     | `-ImplicitCastExpr 0x7fa3c5078e68 <col:2> 'struct percpu_counter *' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7fa3c5078e40 <col:2> 'struct percpu_counter *' lvalue Var 0x7fa3c5078630 'cnt' 'struct percpu_counter *'
+|     `-ImplicitCastExpr 0x7fa3c5078ee0 <col:16> 'unsigned long long' <LValueToRValue>
+|       `-DeclRefExpr 0x7fa3c5078eb8 <col:16> 'unsigned long long' lvalue ParmVar 0x7fa3c5078390 'val' 'unsigned long long'
+|-FunctionDecl 0x7fa3c5079038 <line:32:1, col:48> col:27 used rq_start_time_ns 'unsigned long long (void)' extern
+|-FunctionDecl 0x7fa3c5079168 <line:33:1, col:51> col:27 used rq_io_start_time_ns 'unsigned long long (void)' extern
+|-FunctionDecl 0x7fa3c50792c8 <line:34:1, col:27> col:12 used rq_is_sync 'int (void)' extern
+|-FunctionDecl 0x7fa3c5079420 <line:35:1, col:37> col:13 used cfq_arm_slice_timer 'void (void)' extern
+`-FunctionDecl 0x7fa3c5079670 <line:36:1, line:51:1> line:36:6 cfq_completed_request 'void (struct request *)'
+  |-ParmVarDecl 0x7fa3c5079570 <col:28, col:44> col:44 used rq 'struct request *'
+  `-CompoundStmt 0x7fa3c507a5c0 <line:37:1, line:51:1>
+    |-DeclStmt 0x7fa3c5079840 <line:38:2, col:36>
+    | `-VarDecl 0x7fa3c5079738 <col:2, col:32> col:20 used queue 'struct cfq_queue *' cinit
+    |   `-ImplicitCastExpr 0x7fa3c5079828 <col:28, col:32> 'struct cfq_queue *' <BitCast>
+    |     `-ImplicitCastExpr 0x7fa3c5079810 <col:28, col:32> 'void *' <LValueToRValue>
+    |       `-MemberExpr 0x7fa3c50797d8 <col:28, col:32> 'void *' lvalue ->priv 0x7fa3c50781d0
+    |         `-ImplicitCastExpr 0x7fa3c50797c0 <col:28> 'struct request *' <LValueToRValue>
+    |           `-DeclRefExpr 0x7fa3c5079798 <col:28> 'struct request *' lvalue ParmVar 0x7fa3c5079570 'rq' 'struct request *'
+    |-DeclStmt 0x7fa3c5079968 <line:39:2, col:25>
+    | `-VarDecl 0x7fa3c5079870 <col:2, col:24> col:6 used sync 'int' cinit
+    |   `-CallExpr 0x7fa3c5079940 <col:13, col:24> 'int'
+    |     `-ImplicitCastExpr 0x7fa3c5079928 <col:13> 'int (*)(void)' <FunctionToPointerDecay>
+    |       `-DeclRefExpr 0x7fa3c50798d0 <col:13> 'int (void)' Function 0x7fa3c50792c8 'rq_is_sync' 'int (void)'
+    |-DeclStmt 0x7fa3c5079af0 <line:40:2, col:40>
+    | `-VarDecl 0x7fa3c5079a00 <col:2, col:35> col:20 used group 'struct cfq_group *' cinit
+    |   `-ImplicitCastExpr 0x7fa3c5079ad8 <col:28, col:35> 'struct cfq_group *' <LValueToRValue>
+    |     `-MemberExpr 0x7fa3c5079aa0 <col:28, col:35> 'struct cfq_group *' lvalue ->group 0x7fa3c5077f70
+    |       `-ImplicitCastExpr 0x7fa3c5079a88 <col:28> 'struct cfq_queue *' <LValueToRValue>
+    |         `-DeclRefExpr 0x7fa3c5079a60 <col:28> 'struct cfq_queue *' lvalue Var 0x7fa3c5079738 'queue' 'struct cfq_queue *'
+    |-DeclStmt 0x7fa3c5079c30 <line:41:2, col:43>
+    | `-VarDecl 0x7fa3c5079b20 <col:2, col:42> col:12 used start_time 'long long' cinit
+    |   `-ImplicitCastExpr 0x7fa3c5079c18 <col:25, col:42> 'long long' <IntegralCast>
+    |     `-CallExpr 0x7fa3c5079bf0 <col:25, col:42> 'unsigned long long'
+    |       `-ImplicitCastExpr 0x7fa3c5079bd8 <col:25> 'unsigned long long (*)(void)' <FunctionToPointerDecay>
+    |         `-DeclRefExpr 0x7fa3c5079b80 <col:25> 'unsigned long long (void)' Function 0x7fa3c5079038 'rq_start_time_ns' 'unsigned long long (void)'
+    |-DeclStmt 0x7fa3c5079d40 <line:42:2, col:49>
+    | `-VarDecl 0x7fa3c5079c60 <col:2, col:48> col:12 used io_start_time 'long long' cinit
+    |   `-ImplicitCastExpr 0x7fa3c5079d28 <col:28, col:48> 'long long' <IntegralCast>
+    |     `-CallExpr 0x7fa3c5079d00 <col:28, col:48> 'unsigned long long'
+    |       `-ImplicitCastExpr 0x7fa3c5079ce8 <col:28> 'unsigned long long (*)(void)' <FunctionToPointerDecay>
+    |         `-DeclRefExpr 0x7fa3c5079cc0 <col:28> 'unsigned long long (void)' Function 0x7fa3c5079168 'rq_io_start_time_ns' 'unsigned long long (void)'
+    |-DeclStmt 0x7fa3c5079e78 <line:43:2, col:24>
+    | `-VarDecl 0x7fa3c5079d70 <col:2, col:15> col:6 used rw 'int' cinit
+    |   `-ImplicitCastExpr 0x7fa3c5079e60 <col:11, col:15> 'int' <IntegralCast>
+    |     `-ImplicitCastExpr 0x7fa3c5079e48 <col:11, col:15> 'unsigned long long' <LValueToRValue>
+    |       `-MemberExpr 0x7fa3c5079e10 <col:11, col:15> 'unsigned long long' lvalue ->cmd_flags 0x7fa3c5078170
+    |         `-ImplicitCastExpr 0x7fa3c5079df8 <col:11> 'struct request *' <LValueToRValue>
+    |           `-DeclRefExpr 0x7fa3c5079dd0 <col:11> 'struct request *' lvalue ParmVar 0x7fa3c5079570 'rq' 'struct request *'
+    |-IfStmt 0x7fa3c507a1a0 <line:45:2, line:46:62>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fa3c5079f08 <line:45:6, col:22> 'int' '<'
+    | | |-ImplicitCastExpr 0x7fa3c5079ed8 <col:6> 'long long' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fa3c5079e90 <col:6> 'long long' lvalue Var 0x7fa3c5079c60 'io_start_time' 'long long'
+    | | `-ImplicitCastExpr 0x7fa3c5079ef0 <col:22> 'long long' <IntegralCast>
+    | |   `-IntegerLiteral 0x7fa3c5079eb8 <col:22> 'int' 1
+    | |-CallExpr 0x7fa3c507a130 <line:46:3, col:62> 'void'
+    | | |-ImplicitCastExpr 0x7fa3c507a118 <col:3> 'void (*)(struct blkg_rwstat *, int, unsigned long long)' <FunctionToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa3c5079f30 <col:3> 'void (struct blkg_rwstat *, int, unsigned long long)' Function 0x7fa3c50784c0 'blkg_rwstat_add' 'void (struct blkg_rwstat *, int, unsigned long long)'
+    | | |-UnaryOperator 0x7fa3c5079fd0 <col:19, col:27> 'struct blkg_rwstat *' prefix '&'
+    | | | `-MemberExpr 0x7fa3c5079f98 <col:20, col:27> 'struct blkg_rwstat':'struct blkg_rwstat' lvalue ->service_time 0x7fa3c5077d80
+    | | |   `-ImplicitCastExpr 0x7fa3c5079f80 <col:20> 'struct cfq_group *' <LValueToRValue>
+    | | |     `-DeclRefExpr 0x7fa3c5079f58 <col:20> 'struct cfq_group *' lvalue Var 0x7fa3c5079a00 'group' 'struct cfq_group *'
+    | | |-ImplicitCastExpr 0x7fa3c507a170 <col:41> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fa3c5079ff0 <col:41> 'int' lvalue Var 0x7fa3c5079d70 'rw' 'int'
+    | | `-ImplicitCastExpr 0x7fa3c507a188 <col:45, col:49> 'unsigned long long' <IntegralCast>
+    | |   `-BinaryOperator 0x7fa3c507a090 <col:45, col:49> 'long long' '-'
+    | |     |-ImplicitCastExpr 0x7fa3c507a078 <col:45> 'long long' <IntegralCast>
+    | |     | `-IntegerLiteral 0x7fa3c507a018 <col:45> 'int' 1
+    | |     `-ImplicitCastExpr 0x7fa3c507a060 <col:49> 'long long' <LValueToRValue>
+    | |       `-DeclRefExpr 0x7fa3c507a038 <col:49> 'long long' lvalue Var 0x7fa3c5079c60 'io_start_time' 'long long'
+    | `-<<<NULL>>>
+    |-CallExpr 0x7fa3c507a308 <line:47:2, col:51> 'void'
+    | |-ImplicitCastExpr 0x7fa3c507a2f0 <col:2> 'void (*)(struct blkg_rwstat *, int, unsigned long long)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fa3c507a1d8 <col:2> 'void (struct blkg_rwstat *, int, unsigned long long)' Function 0x7fa3c50784c0 'blkg_rwstat_add' 'void (struct blkg_rwstat *, int, unsigned long long)'
+    | |-ImplicitCastExpr 0x7fa3c507a348 <col:18> 'struct blkg_rwstat *' <NullToPointer>
+    | | `-IntegerLiteral 0x7fa3c507a200 <col:18> 'int' 0
+    | |-ImplicitCastExpr 0x7fa3c507a360 <col:21> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fa3c507a220 <col:21> 'int' lvalue Var 0x7fa3c5079d70 'rw' 'int'
+    | `-ImplicitCastExpr 0x7fa3c507a378 <col:25, col:41> 'unsigned long long' <IntegralCast>
+    |   `-BinaryOperator 0x7fa3c507a2c8 <col:25, col:41> 'long long' '-'
+    |     |-ImplicitCastExpr 0x7fa3c507a298 <col:25> 'long long' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7fa3c507a248 <col:25> 'long long' lvalue Var 0x7fa3c5079c60 'io_start_time' 'long long'
+    |     `-ImplicitCastExpr 0x7fa3c507a2b0 <col:41> 'long long' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fa3c507a270 <col:41> 'long long' lvalue Var 0x7fa3c5079b20 'start_time' 'long long'
+    `-IfStmt 0x7fa3c507a588 <line:49:2, line:50:23>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fa3c507a4c8 <line:49:6, col:35> 'int' '&&'
+      | |-BinaryOperator 0x7fa3c507a460 <col:6, col:26> 'int' '=='
+      | | |-ImplicitCastExpr 0x7fa3c507a430 <col:6, col:10> 'struct cfq_queue *' <LValueToRValue>
+      | | | `-MemberExpr 0x7fa3c507a3d0 <col:6, col:10> 'struct cfq_queue *' lvalue ->active_queue 0x7fa3c5078110
+      | | |   `-ImplicitCastExpr 0x7fa3c507a3b8 <col:6> 'struct request *' <LValueToRValue>
+      | | |     `-DeclRefExpr 0x7fa3c507a390 <col:6> 'struct request *' lvalue ParmVar 0x7fa3c5079570 'rq' 'struct request *'
+      | | `-ImplicitCastExpr 0x7fa3c507a448 <col:26> 'struct cfq_queue *' <LValueToRValue>
+      | |   `-DeclRefExpr 0x7fa3c507a408 <col:26> 'struct cfq_queue *' lvalue Var 0x7fa3c5079738 'queue' 'struct cfq_queue *'
+      | `-ImplicitCastExpr 0x7fa3c507a4b0 <col:35> 'int' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fa3c507a488 <col:35> 'int' lvalue Var 0x7fa3c5079870 'sync' 'int'
+      |-CallExpr 0x7fa3c507a560 <line:50:3, col:23> 'void'
+      | `-ImplicitCastExpr 0x7fa3c507a548 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+      |   `-DeclRefExpr 0x7fa3c507a4f0 <col:3> 'void (void)' Function 0x7fa3c5079420 'cfq_arm_slice_timer' 'void (void)'
+      `-<<<NULL>>>

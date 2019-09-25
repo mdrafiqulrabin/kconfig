@@ -1,0 +1,42 @@
+TranslationUnitDecl 0x7faa390264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7faa39026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7faa39026740 '__int128'
+|-TypedefDecl 0x7faa39026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7faa39026760 'unsigned __int128'
+|-TypedefDecl 0x7faa39026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7faa39026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7faa39026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7faa39026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7faa39026dc0 'char *'
+|   `-BuiltinType 0x7faa39026560 'char'
+|-TypedefDecl 0x7faa390270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7faa39027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7faa39026ee0 'struct __va_list_tag'
+|     `-Record 0x7faa39026e58 '__va_list_tag'
+`-FunctionDecl 0x7faa39825ad8 <c_files/pr68835-1.c:5:1, line:12:1> line:6:1 foo 'unsigned __int128 (unsigned long, unsigned long)'
+  |-ParmVarDecl 0x7faa39027138 <col:6, col:20> col:20 used a 'unsigned long'
+  |-ParmVarDecl 0x7faa39825a00 <col:23, col:37> col:37 used b 'unsigned long'
+  `-CompoundStmt 0x7faa39826100 <line:7:1, line:12:1>
+    |-DeclStmt 0x7faa39825d38 <line:8:3, col:50>
+    | `-VarDecl 0x7faa39825bd8 <col:3, col:49> col:21 used x 'unsigned __int128' cinit
+    |   `-BinaryOperator 0x7faa39825d10 <col:25, col:49> 'unsigned __int128' '*'
+    |     |-CStyleCastExpr 0x7faa39825c90 <col:25, col:45> 'unsigned __int128' <IntegralCast>
+    |     | `-ImplicitCastExpr 0x7faa39825c78 <col:45> 'unsigned long' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x7faa39825c38 <col:45> 'unsigned long' lvalue ParmVar 0x7faa39027138 'a' 'unsigned long'
+    |     `-ImplicitCastExpr 0x7faa39825cf8 <col:49> 'unsigned __int128' <IntegralCast>
+    |       `-ImplicitCastExpr 0x7faa39825ce0 <col:49> 'unsigned long' <LValueToRValue>
+    |         `-DeclRefExpr 0x7faa39825cb8 <col:49> 'unsigned long' lvalue ParmVar 0x7faa39825a00 'b' 'unsigned long'
+    |-DeclStmt 0x7faa39825f48 <line:9:3, col:41>
+    | |-RecordDecl 0x7faa39825d50 <col:3, col:38> col:3 struct definition
+    | | `-FieldDecl 0x7faa39825e38 <col:12, col:34> col:30 referenced a 'unsigned __int128'
+    | |   `-IntegerLiteral 0x7faa39825e00 <col:34> 'int' 96
+    | `-VarDecl 0x7faa39825ed0 <col:3, col:40> col:40 used w 'struct (anonymous struct at c_files/pr68835-1.c:9:3)':'struct (anonymous at c_files/pr68835-1.c:9:3)'
+    |-BinaryOperator 0x7faa39826000 <line:10:3, col:9> 'unsigned __int128' '='
+    | |-MemberExpr 0x7faa39825f88 <col:3, col:5> 'unsigned __int128' lvalue bitfield .a 0x7faa39825e38
+    | | `-DeclRefExpr 0x7faa39825f60 <col:3> 'struct (anonymous struct at c_files/pr68835-1.c:9:3)':'struct (anonymous at c_files/pr68835-1.c:9:3)' lvalue Var 0x7faa39825ed0 'w' 'struct (anonymous struct at c_files/pr68835-1.c:9:3)':'struct (anonymous at c_files/pr68835-1.c:9:3)'
+    | `-ImplicitCastExpr 0x7faa39825fe8 <col:9> 'unsigned __int128' <LValueToRValue>
+    |   `-DeclRefExpr 0x7faa39825fc0 <col:9> 'unsigned __int128' lvalue Var 0x7faa39825bd8 'x' 'unsigned __int128'
+    `-ReturnStmt 0x7faa398260e8 <line:11:3, col:12>
+      `-ImplicitCastExpr 0x7faa398260d0 <col:10, col:12> 'unsigned __int128' <LValueToRValue>
+        `-MemberExpr 0x7faa39826098 <col:10, col:12> 'unsigned __int128' lvalue bitfield .a 0x7faa39825e38
+          `-DeclRefExpr 0x7faa39826070 <col:10> 'struct (anonymous struct at c_files/pr68835-1.c:9:3)':'struct (anonymous at c_files/pr68835-1.c:9:3)' lvalue Var 0x7faa39825ed0 'w' 'struct (anonymous struct at c_files/pr68835-1.c:9:3)':'struct (anonymous at c_files/pr68835-1.c:9:3)'

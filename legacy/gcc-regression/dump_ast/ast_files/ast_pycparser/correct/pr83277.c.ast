@@ -1,0 +1,137 @@
+FileAST: 
+  Decl: rk, [], [], []
+    TypeDecl: rk, []
+      IdentifierType: ['int']
+  Decl: si, [], [], []
+    TypeDecl: si, []
+      IdentifierType: ['int']
+    Constant: int, 0
+  Decl: jr, [], [], []
+    ArrayDecl: []
+      TypeDecl: jr, []
+        IdentifierType: ['int']
+      Constant: int, 2
+  FuncDef: 
+    Decl: wv, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: n8, [], [], []
+            TypeDecl: n8, []
+              IdentifierType: ['signed', 'char']
+        TypeDecl: wv, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: tw, ['const'], [], []
+        TypeDecl: tw, ['const']
+          IdentifierType: ['int']
+        Constant: int, 8
+      Decl: xq, [], [], []
+        ArrayDecl: []
+          TypeDecl: xq, []
+            IdentifierType: ['int']
+          ID: tw
+      Decl: bj, [], [], []
+        TypeDecl: bj, []
+          IdentifierType: ['int']
+      Decl: pu, [], [], []
+        TypeDecl: pu, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      For: 
+        Assignment: =
+          ID: bj
+          Constant: int, 0
+        BinaryOp: <
+          ID: bj
+          ID: tw
+        UnaryOp: ++
+          ID: bj
+        Assignment: =
+          ArrayRef: 
+            ID: xq
+            ID: bj
+          Constant: int, 0
+      Assignment: =
+        ID: bj
+        Constant: int, 0
+      While: 
+        BinaryOp: <
+          ID: bj
+          Constant: int, 1
+        Compound: 
+          Decl: gs, [], [], []
+            TypeDecl: gs, []
+              IdentifierType: ['int']
+            BinaryOp: ^
+              ID: n8
+              Constant: int, 128
+          If: 
+            BinaryOp: !=
+              ID: gs
+              Constant: int, 0
+            Compound: 
+              Decl: u7, [], [], []
+                ArrayDecl: []
+                  TypeDecl: u7, []
+                    IdentifierType: ['int']
+                  Constant: int, 3
+              While: 
+                BinaryOp: <
+                  ID: bj
+                  Constant: int, 2
+                Compound: 
+                  Assignment: =
+                    ArrayRef: 
+                      ID: u7
+                      ID: bj
+                    Constant: int, 0
+                  UnaryOp: ++
+                    ID: bj
+              Assignment: =
+                ArrayRef: 
+                  ID: jr
+                  Constant: int, 0
+                ArrayRef: 
+                  ID: u7
+                  Constant: int, 0
+              Assignment: =
+                ID: rk
+                ArrayRef: 
+                  ID: xq
+                  Constant: int, 0
+              Assignment: =
+                ID: pu
+                ID: n8
+              If: 
+                BinaryOp: !=
+                  ID: si
+                  Constant: int, 0
+                Return: 
+                  ID: si
+      Return: 
+        ID: pu
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: ax, [], [], []
+        TypeDecl: ax, []
+          IdentifierType: ['signed', 'char']
+        Constant: int, 1
+      If: 
+        BinaryOp: !=
+          FuncCall: 
+            ID: wv
+            ExprList: 
+              ID: ax
+          ID: ax
+        FuncCall: 
+          ID: __builtin_abort
+      Return: 
+        Constant: int, 0

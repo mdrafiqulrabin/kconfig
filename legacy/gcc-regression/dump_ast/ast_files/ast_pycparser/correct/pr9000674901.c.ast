@@ -1,0 +1,146 @@
+FileAST: 
+  Typedef: uint32_t, [], ['typedef']
+    TypeDecl: uint32_t, []
+      IdentifierType: ['unsigned', 'int']
+  Typedef: uint8_t, [], ['typedef']
+    TypeDecl: uint8_t, []
+      IdentifierType: ['unsigned', 'char']
+  Typedef: uint16_t, [], ['typedef']
+    TypeDecl: uint16_t, []
+      IdentifierType: ['unsigned', 'short', 'int']
+  Typedef: uint64_t, [], ['typedef']
+    TypeDecl: uint64_t, []
+      IdentifierType: ['unsigned', 'long', 'long', 'int']
+  Decl: None, [], [], []
+    Enum: type
+      EnumeratorList: 
+        Enumerator: t_undef
+          Constant: int, 0x01
+        Enumerator: t_group
+          Constant: int, 0x02
+        Enumerator: t_partition
+          Constant: int, 0x04
+        Enumerator: t_spare
+          Constant: int, 0x08
+        Enumerator: t_linear
+          Constant: int, 0x10
+        Enumerator: t_raid0
+          Constant: int, 0x20
+        Enumerator: t_raid1
+          Constant: int, 0x40
+        Enumerator: t_raid4
+          Constant: int, 0x80
+        Enumerator: t_raid5_ls
+          Constant: int, 0x100
+        Enumerator: t_raid5_rs
+          Constant: int, 0x200
+        Enumerator: t_raid5_la
+          Constant: int, 0x400
+        Enumerator: t_raid5_ra
+          Constant: int, 0x800
+        Enumerator: t_raid6
+          Constant: int, 0x1000
+  Decl: None, [], [], []
+    Struct: raid_set
+      Decl: type, [], [], []
+        TypeDecl: type, []
+          Enum: type
+  FuncDef: 
+    Decl: _find_factors, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: rs, [], [], []
+            PtrDecl: []
+              TypeDecl: rs, []
+                Struct: raid_set
+          Decl: div, [], [], []
+            PtrDecl: []
+              TypeDecl: div, []
+                IdentifierType: ['uint8_t']
+          Decl: sub, [], [], []
+            PtrDecl: []
+              TypeDecl: sub, []
+                IdentifierType: ['uint8_t']
+        TypeDecl: _find_factors, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: None, [], [], []
+        Struct: factors
+          Decl: level, ['const'], [], []
+            TypeDecl: level, ['const']
+              IdentifierType: ['uint8_t']
+          Decl: div, ['const'], [], []
+            TypeDecl: div, ['const']
+              IdentifierType: ['uint8_t']
+          Decl: sub, ['const'], [], []
+            TypeDecl: sub, ['const']
+              IdentifierType: ['uint8_t']
+      Decl: factors, [], ['static'], []
+        ArrayDecl: []
+          TypeDecl: factors, []
+            Struct: factors
+        InitList: 
+          InitList: 
+            Constant: int, 0
+            Constant: int, 1
+            Constant: int, 0
+          InitList: 
+            Constant: int, 1
+            Constant: int, 2
+            Constant: int, 0
+          InitList: 
+            Constant: int, 2
+            Constant: int, 2
+            Constant: int, 0
+          InitList: 
+            Constant: int, 5
+            Constant: int, 1
+            Constant: int, 1
+      Decl: f, [], [], []
+        PtrDecl: []
+          TypeDecl: f, []
+            Struct: factors
+        BinaryOp: +
+          ID: factors
+          BinaryOp: /
+            UnaryOp: sizeof
+              ID: factors
+            UnaryOp: sizeof
+              UnaryOp: *
+                ID: factors
+      While: 
+        BinaryOp: >
+          UnaryOp: p--
+            ID: f
+          ID: factors
+        Compound: 
+          If: 
+            BinaryOp: ==
+              StructRef: ->
+                ID: rs
+                ID: type
+              StructRef: ->
+                ID: f
+                ID: level
+            Compound: 
+              Assignment: =
+                UnaryOp: *
+                  ID: div
+                StructRef: ->
+                  ID: f
+                  ID: div
+              Assignment: =
+                UnaryOp: *
+                  ID: sub
+                StructRef: ->
+                  ID: f
+                  ID: sub
+              Return: 
+      Assignment: =
+        UnaryOp: *
+          ID: div
+        Constant: int, 1
+      Assignment: =
+        UnaryOp: *
+          ID: sub
+        Constant: int, 0

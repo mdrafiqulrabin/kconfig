@@ -1,0 +1,57 @@
+TranslationUnitDecl 0x7fd2428264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd242826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd242826740 '__int128'
+|-TypedefDecl 0x7fd242826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd242826760 'unsigned __int128'
+|-TypedefDecl 0x7fd242826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd242826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd242826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd242826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd242826dc0 'char *'
+|   `-BuiltinType 0x7fd242826560 'char'
+|-TypedefDecl 0x7fd2428270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd242827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd242826ee0 'struct __va_list_tag'
+|     `-Record 0x7fd242826e58 '__va_list_tag'
+|-TypedefDecl 0x7fd243026a90 <c_files/pr43845.c:1:1, col:61> col:39 referenced x264_pixel_cmp_t 'int (*)(void)'
+| |-PointerType 0x7fd243026a30 'int (*)(void)'
+| | `-ParenType 0x7fd2428271c0 'int (void)' sugar
+| |   `-FunctionProtoType 0x7fd242827190 'int (void)' cdecl
+| |     `-BuiltinType 0x7fd2428265c0 'int'
+| `-ConstAttr 0x7fd243026ae8 <col:29>
+|-RecordDecl 0x7fd243026b30 <line:3:9, line:5:1> line:3:9 struct definition
+| `-FieldDecl 0x7fd243026c10 <line:4:5, col:22> col:22 referenced ssd 'x264_pixel_cmp_t':'int (*)(void)'
+|-TypedefDecl 0x7fd243026cb0 <line:3:1, line:5:3> col:3 referenced x264_pixel_function_t 'struct x264_pixel_function_t':'x264_pixel_function_t'
+| `-ElaboratedType 0x7fd243026c60 'struct x264_pixel_function_t' sugar
+|   `-RecordType 0x7fd243026bc0 'x264_pixel_function_t'
+|     `-Record 0x7fd243026b30 ''
+`-FunctionDecl 0x7fd243026f38 <line:7:1, line:12:1> line:7:5 x264_pixel_ssd_wxh 'int (x264_pixel_function_t *, int)'
+  |-ParmVarDecl 0x7fd243026da8 <col:25, col:48> col:48 used pf 'x264_pixel_function_t *'
+  |-ParmVarDecl 0x7fd243026e20 <col:52, col:56> col:56 used i_width 'int'
+  `-CompoundStmt 0x7fd243027468 <col:65, line:12:1>
+    |-DeclStmt 0x7fd243027148 <line:8:5, col:21>
+    | |-VarDecl 0x7fd243027038 <col:5, col:17> col:9 used i_ssd 'int' cinit
+    | | `-IntegerLiteral 0x7fd243027098 <col:17> 'int' 0
+    | `-VarDecl 0x7fd2430270d0 <col:5, col:20> col:20 used x 'int'
+    |-ForStmt 0x7fd2430273d8 <line:9:5, line:10:24>
+    | |-BinaryOperator 0x7fd2430271a8 <line:9:10, col:14> 'int' '='
+    | | |-DeclRefExpr 0x7fd243027160 <col:10> 'int' lvalue Var 0x7fd2430270d0 'x' 'int'
+    | | `-IntegerLiteral 0x7fd243027188 <col:14> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fd243027250 <col:17, col:21> 'int' '<'
+    | | |-ImplicitCastExpr 0x7fd243027220 <col:17> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fd2430271d0 <col:17> 'int' lvalue Var 0x7fd2430270d0 'x' 'int'
+    | | `-ImplicitCastExpr 0x7fd243027238 <col:21> 'int' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fd2430271f8 <col:21> 'int' lvalue ParmVar 0x7fd243026e20 'i_width' 'int'
+    | |-UnaryOperator 0x7fd2430272a0 <col:30, col:31> 'int' postfix '++'
+    | | `-DeclRefExpr 0x7fd243027278 <col:30> 'int' lvalue Var 0x7fd2430270d0 'x' 'int'
+    | `-CompoundAssignOperator 0x7fd2430273a0 <line:10:7, col:24> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+    |   |-DeclRefExpr 0x7fd2430272c0 <col:7> 'int' lvalue Var 0x7fd243027038 'i_ssd' 'int'
+    |   `-CallExpr 0x7fd243027378 <col:16, col:24> 'int'
+    |     `-ImplicitCastExpr 0x7fd243027360 <col:16, col:20> 'x264_pixel_cmp_t':'int (*)(void)' <LValueToRValue>
+    |       `-MemberExpr 0x7fd243027328 <col:16, col:20> 'x264_pixel_cmp_t':'int (*)(void)' lvalue ->ssd 0x7fd243026c10
+    |         `-ImplicitCastExpr 0x7fd243027310 <col:16> 'x264_pixel_function_t *' <LValueToRValue>
+    |           `-DeclRefExpr 0x7fd2430272e8 <col:16> 'x264_pixel_function_t *' lvalue ParmVar 0x7fd243026da8 'pf' 'x264_pixel_function_t *'
+    `-ReturnStmt 0x7fd243027450 <line:11:5, col:12>
+      `-ImplicitCastExpr 0x7fd243027438 <col:12> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7fd243027410 <col:12> 'int' lvalue Var 0x7fd243027038 'i_ssd' 'int'

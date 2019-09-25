@@ -1,0 +1,40 @@
+FileAST: 
+  FuncDef: 
+    Decl: bug, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: cond, [], [], []
+            TypeDecl: cond, []
+              IdentifierType: ['long']
+          Decl: v0, [], [], []
+            TypeDecl: v0, []
+              IdentifierType: ['long']
+          Decl: v1, [], [], []
+            TypeDecl: v1, []
+              IdentifierType: ['long']
+          Decl: v2, [], [], []
+            TypeDecl: v2, []
+              IdentifierType: ['long']
+        TypeDecl: bug, []
+          IdentifierType: ['long']
+    Compound: 
+      Switch: 
+        ID: cond
+        Compound: 
+          Case: 
+            Constant: int, 0
+            Return: 
+              ID: v0
+          Case: 
+            Constant: int, 1
+            Return: 
+              ID: v1
+          Case: 
+            Constant: int, 2
+            Return: 
+              ID: v2
+          Default: 
+            FuncCall: 
+              ID: __builtin_unreachable
+      FuncCall: 
+        ID: __builtin_abort

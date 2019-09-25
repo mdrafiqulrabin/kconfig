@@ -1,0 +1,76 @@
+FileAST: 
+  Decl: abort, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['int']
+  Decl: d, [], [], []
+    TypeDecl: d, []
+      IdentifierType: ['int']
+  Decl: b, ['volatile'], [], []
+    TypeDecl: b, ['volatile']
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p1, [], [], []
+            TypeDecl: p1, []
+              IdentifierType: ['int']
+          Decl: p2, [], [], []
+            TypeDecl: p2, []
+              IdentifierType: ['short']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        BinaryOp: /
+          ID: p1
+          ID: p2
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: e, [], [], []
+        TypeDecl: e, []
+          IdentifierType: ['char']
+      Assignment: =
+        ID: d
+        FuncCall: 
+          ID: foo
+          ExprList: 
+            BinaryOp: ==
+              ID: a
+              Constant: int, 0
+            ExprList: 
+              Constant: int, 0
+              Constant: int, 35536
+      Assignment: =
+        ID: e
+        BinaryOp: %
+          ID: d
+          Constant: int, 14
+      Assignment: =
+        ID: b
+        BinaryOp: &&
+          ID: e
+          ID: c
+      If: 
+        BinaryOp: !=
+          ID: b
+          Constant: int, 0
+        FuncCall: 
+          ID: abort
+      Return: 
+        Constant: int, 0

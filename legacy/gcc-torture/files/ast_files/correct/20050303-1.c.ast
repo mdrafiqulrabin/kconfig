@@ -1,0 +1,41 @@
+FileAST: 
+  FuncDef: 
+    Decl: crc, [], [], []
+      FuncDecl: 
+        TypeDecl: crc, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: toread, [], [], []
+        TypeDecl: toread, []
+          IdentifierType: ['int']
+      Decl: nleft, [], [], []
+        TypeDecl: nleft, []
+          IdentifierType: ['long', 'long']
+      Decl: buf, [], [], []
+        ArrayDecl: []
+          TypeDecl: buf, []
+            IdentifierType: ['unsigned', 'char']
+          BinaryOp: *
+            Constant: int, 128
+            Constant: int, 1024
+      Assignment: =
+        ID: nleft
+        Constant: int, 0
+      While: 
+        Assignment: =
+          ID: toread
+          TernaryOp: 
+            BinaryOp: <
+              ID: nleft
+              BinaryOp: +
+                BinaryOp: *
+                  Constant: int, 2147483647
+                  Constant: int, 2U
+                Constant: int, 1U
+            ID: nleft
+            BinaryOp: +
+              BinaryOp: *
+                Constant: int, 2147483647
+                Constant: int, 2U
+              Constant: int, 1U
+        EmptyStatement: 

@@ -1,0 +1,88 @@
+FileAST: 
+  FuncDef: 
+    Decl: f1, [], ['static'], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: si1, [], [], []
+            TypeDecl: si1, []
+              IdentifierType: ['int']
+          Decl: si2, [], [], []
+            TypeDecl: si2, []
+              IdentifierType: ['int']
+        TypeDecl: f1, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        TernaryOp: 
+          BinaryOp: ==
+            ID: si2
+            Constant: int, 0
+          ID: si1
+          BinaryOp: /
+            ID: si1
+            ID: si2
+  FuncDef: 
+    Decl: f2, [], ['static'], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: ui1, [], [], []
+            TypeDecl: ui1, []
+              IdentifierType: ['unsigned', 'long', 'long']
+          Decl: ui2, [], [], []
+            TypeDecl: ui2, []
+              IdentifierType: ['unsigned', 'long', 'long']
+        TypeDecl: f2, []
+          IdentifierType: ['unsigned', 'long', 'long']
+    Compound: 
+      Return: 
+        BinaryOp: %
+          ID: ui1
+          ID: ui2
+  Decl: g, [], [], []
+    TypeDecl: g, []
+      IdentifierType: ['unsigned', 'char']
+  Decl: h, ['volatile'], [], []
+    TypeDecl: h, ['volatile']
+      IdentifierType: ['unsigned', 'int']
+  FuncDef: 
+    Decl: f3, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: f3, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        UnaryOp: !
+          BinaryOp: -
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['signed', 'char']
+              FuncCall: 
+                ID: f1
+                ExprList: 
+                  Constant: int, 0
+                  FuncCall: 
+                    ID: f2
+                    ExprList: 
+                      ID: g
+                      Constant: int, 2123
+            Constant: int, 1
+        ID: h
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: f3
+      Return: 
+        Constant: int, 0

@@ -1,0 +1,41 @@
+TranslationUnitDecl 0x7fa01c8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa01c826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa01c826740 '__int128'
+|-TypedefDecl 0x7fa01c826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa01c826760 'unsigned __int128'
+|-TypedefDecl 0x7fa01c826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa01c826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa01c826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa01c826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa01c826dc0 'char *'
+|   `-BuiltinType 0x7fa01c826560 'char'
+|-TypedefDecl 0x7fa01c8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa01c827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa01c826ee0 'struct __va_list_tag'
+|     `-Record 0x7fa01c826e58 '__va_list_tag'
+|-EnumDecl 0x7fa01c827120 <c_files/pr50459.c:6:1, col:23> col:1
+| |-EnumConstantDecl 0x7fa01c877400 <col:8, col:12> col:8 referenced A 'int'
+| | `-IntegerLiteral 0x7fa01c8271e0 <col:12> 'int' 128
+| `-EnumConstantDecl 0x7fa01c877468 <col:17, col:21> col:17 referenced B 'int'
+|   `-IntegerLiteral 0x7fa01c877448 <col:21> 'int' 1
+|-FunctionDecl 0x7fa01c8775a8 <line:7:1, col:52> col:7 fn1 'void *(void)'
+| `-AssumeAlignedAttr 0x7fa01c877640 <col:33, col:50>
+|   |-DeclRefExpr 0x7fa01c877520 <col:49> 'int' EnumConstant 0x7fa01c877400 'A' 'int'
+|   `-<<<NULL>>>
+|-FunctionDecl 0x7fa01c8777b8 <line:8:1, col:55> col:7 fn2 'void *(void)'
+| `-AssumeAlignedAttr 0x7fa01c877850 <col:33, col:53>
+|   |-DeclRefExpr 0x7fa01c877748 <col:49> 'int' EnumConstant 0x7fa01c877400 'A' 'int'
+|   `-IntegerLiteral 0x7fa01c877770 <col:52> 'int' 4
+|-FunctionDecl 0x7fa01c8779b8 <line:9:1, col:47> col:7 fn5 'void *(int)'
+| |-ParmVarDecl 0x7fa01c8778c0 <col:12> col:15 'int'
+| `-AllocSizeAttr 0x7fa01c877a58 <col:32, col:45> 1 0
+|-FunctionDecl 0x7fa01c877b78 <line:10:1, col:48> col:7 fn6 'void *(int)'
+| |-ParmVarDecl 0x7fa01c877ac0 <col:12> col:15 'int'
+| `-AllocAlignAttr 0x7fa01c877c18 <col:32, col:46> 1
+|-FunctionDecl 0x7fa01c877d60 <line:11:1, col:59> col:6 fn7 'void (const char *, ...)'
+| |-ParmVarDecl 0x7fa01c877c78 <col:11, col:22> col:23 'const char *'
+| `-SentinelAttr 0x7fa01c877e00 <col:46, col:57> 1 0
+|-VarDecl 0x7fa01c877eb8 <line:12:1, col:38> col:38 a '__attribute__((__vector_size__(32 * sizeof(int)))) int'
+`-VarDecl 0x7fa01c877f58 <line:13:1, col:34> col:34 foo 'int'
+  `-AlignedAttr 0x7fa01c877fb8 <col:20, col:30> aligned
+    `-DeclRefExpr 0x7fa01c877f18 <col:29> 'int' EnumConstant 0x7fa01c877400 'A' 'int'

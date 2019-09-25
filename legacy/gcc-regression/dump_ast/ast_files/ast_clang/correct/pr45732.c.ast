@@ -1,0 +1,37 @@
+TranslationUnitDecl 0x7fba6f0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fba6f026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fba6f026740 '__int128'
+|-TypedefDecl 0x7fba6f026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fba6f026760 'unsigned __int128'
+|-TypedefDecl 0x7fba6f026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fba6f026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fba6f026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fba6f026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fba6f026dc0 'char *'
+|   `-BuiltinType 0x7fba6f026560 'char'
+|-TypedefDecl 0x7fba6f0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fba6f027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fba6f026ee0 'struct __va_list_tag'
+|     `-Record 0x7fba6f026e58 '__va_list_tag'
+|-TypedefDecl 0x7fba6f027198 <c_files/pr45732.c:3:1, col:21> col:14 referenced chars 'char [5]'
+| `-ConstantArrayType 0x7fba6f027140 'char [5]' 5 
+|   `-BuiltinType 0x7fba6f026560 'char'
+|-VarDecl 0x7fba6f825a98 <line:4:1, col:32> col:13 used bad_chars 'const chars [1]' cinit
+| `-InitListExpr 0x7fba6f825c28 <col:27, col:32> 'const chars [1]'
+|   `-StringLiteral 0x7fba6f825b78 <col:29> 'const chars':'char const[5]' lvalue ""
+`-FunctionDecl 0x7fba6f825d40 <line:6:1, line:10:1> line:6:5 foo 'int ()'
+  `-CompoundStmt 0x7fba6f826030 <line:7:1, line:10:1>
+    |-DeclStmt 0x7fba6f825ee8 <line:8:3, col:29>
+    | `-VarDecl 0x7fba6f825e48 <col:3, col:20> col:16 used c 'const chars *' cinit
+    |   `-ImplicitCastExpr 0x7fba6f825ed0 <col:20> 'const chars *' <ArrayToPointerDecay>
+    |     `-DeclRefExpr 0x7fba6f825ea8 <col:20> 'const chars [1]' lvalue Var 0x7fba6f825a98 'bad_chars' 'const chars [1]'
+    `-ReturnStmt 0x7fba6f826018 <line:9:3, col:16>
+      `-ImplicitCastExpr 0x7fba6f826000 <col:10, col:16> 'int' <IntegralCast>
+        `-ImplicitCastExpr 0x7fba6f825fe8 <col:10, col:16> 'char' <LValueToRValue>
+          `-ArraySubscriptExpr 0x7fba6f825fc0 <col:10, col:16> 'const char' lvalue
+            |-ImplicitCastExpr 0x7fba6f825fa8 <col:10, col:13> 'const char *' <ArrayToPointerDecay>
+            | `-ArraySubscriptExpr 0x7fba6f825f60 <col:10, col:13> 'const chars':'char const[5]' lvalue
+            |   |-ImplicitCastExpr 0x7fba6f825f48 <col:10> 'const chars *' <LValueToRValue>
+            |   | `-DeclRefExpr 0x7fba6f825f00 <col:10> 'const chars *' lvalue Var 0x7fba6f825e48 'c' 'const chars *'
+            |   `-IntegerLiteral 0x7fba6f825f28 <col:12> 'int' 0
+            `-IntegerLiteral 0x7fba6f825f88 <col:15> 'int' 0

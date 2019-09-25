@@ -1,0 +1,56 @@
+FileAST: 
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['int']
+  Decl: p, [], [], []
+    PtrDecl: []
+      TypeDecl: p, []
+        IdentifierType: ['char']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: a, [], [], []
+        ArrayDecl: []
+          TypeDecl: a, []
+            IdentifierType: ['char']
+          Constant: int, 2
+      Decl: b, [], [], []
+        ArrayDecl: []
+          TypeDecl: b, []
+            IdentifierType: ['char']
+          Constant: int, 20
+      Assignment: =
+        ID: p
+        FuncCall: 
+          ID: __builtin___stpcpy_chk
+          ExprList: 
+            ID: a
+            Constant: string, ""
+            Constant: int, 2
+      Assignment: =
+        ID: p
+        FuncCall: 
+          ID: __builtin___stpcpy_chk
+          ExprList: 
+            UnaryOp: &
+              ArrayRef: 
+                ID: b
+                Constant: int, 16
+            TernaryOp: 
+              ID: i
+              Constant: string, "e"
+              Constant: string, "jkl"
+            Constant: int, 4
+      If: 
+        ID: c
+        FuncCall: 
+          ID: foo
+          ExprList: 
+            ID: i

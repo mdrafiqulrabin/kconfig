@@ -1,0 +1,44 @@
+FileAST: 
+  FuncDef: 
+    Decl: matmul_i4, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: bbase_yn, [], [], []
+            TypeDecl: bbase_yn, []
+              IdentifierType: ['int']
+          Decl: xcount, [], [], []
+            TypeDecl: xcount, []
+              IdentifierType: ['int']
+        TypeDecl: matmul_i4, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['int']
+      Decl: dest_y, [], [], []
+        PtrDecl: ['restrict']
+          TypeDecl: dest_y, []
+            IdentifierType: ['int']
+      Decl: abase_n, ['const'], [], []
+        PtrDecl: []
+          TypeDecl: abase_n, ['const']
+            IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: x
+          Constant: int, 0
+        BinaryOp: <
+          ID: x
+          ID: xcount
+        UnaryOp: p++
+          ID: x
+        Compound: 
+          Assignment: +=
+            ArrayRef: 
+              ID: dest_y
+              ID: x
+            BinaryOp: *
+              ArrayRef: 
+                ID: abase_n
+                ID: x
+              ID: bbase_yn

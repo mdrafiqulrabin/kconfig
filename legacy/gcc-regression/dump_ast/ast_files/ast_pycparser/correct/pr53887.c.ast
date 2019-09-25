@@ -1,0 +1,42 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      Enum: None
+        EnumeratorList: 
+          Enumerator: Failed
+          Enumerator: NoError
+          Enumerator: NoDiskette
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['int']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: fn1, [], [], []
+      FuncDecl: 
+        TypeDecl: fn1, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        ID: c
+        BinaryOp: <<
+          ID: a
+          Constant: int, 1
+      Switch: 
+        ID: b
+        Compound: 
+          Default: 
+            BinaryOp: <<
+              ID: a
+              Constant: int, 1
+          Case: 
+            Constant: int, 0
+            Assignment: =
+              ID: b
+              Constant: int, 0
+          Case: 
+            Constant: int, 1
+          Case: 
+            ID: NoDiskette
+            EmptyStatement: 

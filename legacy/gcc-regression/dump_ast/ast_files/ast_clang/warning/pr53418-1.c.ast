@@ -1,0 +1,33 @@
+c_files/pr53418-1.c:4:23: warning: division by zero is undefined [-Wdivision-by-zero]
+  int i = (0 ? 1 : 0U / 0);
+                      ^ ~
+1 warning generated.
+TranslationUnitDecl 0x7ffc600264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffc60026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ffc60026740 '__int128'
+|-TypedefDecl 0x7ffc60026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ffc60026760 'unsigned __int128'
+|-TypedefDecl 0x7ffc60026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ffc60026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ffc60026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ffc60026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ffc60026dc0 'char *'
+|   `-BuiltinType 0x7ffc60026560 'char'
+|-TypedefDecl 0x7ffc600270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ffc60027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ffc60026ee0 'struct __va_list_tag'
+|     `-Record 0x7ffc60026e58 '__va_list_tag'
+`-FunctionDecl 0x7ffc60825a00 <c_files/pr53418-1.c:1:1, line:5:1> line:2:1 f 'void (void)'
+  `-CompoundStmt 0x7ffc60825ca8 <line:3:1, line:5:1>
+    `-DeclStmt 0x7ffc60825c90 <line:4:3, col:27>
+      `-VarDecl 0x7ffc60825af0 <col:3, col:26> col:7 i 'int' cinit
+        `-ImplicitCastExpr 0x7ffc60825c78 <col:11, col:26> 'int' <IntegralCast>
+          `-ParenExpr 0x7ffc60825c58 <col:11, col:26> 'unsigned int'
+            `-ConditionalOperator 0x7ffc60825c28 <col:12, col:25> 'unsigned int'
+              |-IntegerLiteral 0x7ffc60825b50 <col:12> 'int' 0
+              |-ImplicitCastExpr 0x7ffc60825c10 <col:16> 'unsigned int' <IntegralCast>
+              | `-IntegerLiteral 0x7ffc60825b70 <col:16> 'int' 1
+              `-BinaryOperator 0x7ffc60825be8 <col:20, col:25> 'unsigned int' '/'
+                |-IntegerLiteral 0x7ffc60825b90 <col:20> 'unsigned int' 0
+                `-ImplicitCastExpr 0x7ffc60825bd0 <col:25> 'unsigned int' <IntegralCast>
+                  `-IntegerLiteral 0x7ffc60825bb0 <col:25> 'int' 0

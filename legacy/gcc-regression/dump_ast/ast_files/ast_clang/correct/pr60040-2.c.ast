@@ -1,0 +1,285 @@
+TranslationUnitDecl 0x7f94990264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9499026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9499026740 '__int128'
+|-TypedefDecl 0x7f9499026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9499026760 'unsigned __int128'
+|-TypedefDecl 0x7f9499026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9499026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9499026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9499026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9499026dc0 'char *'
+|   `-BuiltinType 0x7f9499026560 'char'
+|-TypedefDecl 0x7f94990270c8 <<invalid sloc>> <invalid sloc> implicit referenced __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9499027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9499026ee0 'struct __va_list_tag'
+|     `-Record 0x7f9499026e58 '__va_list_tag'
+|-TypedefDecl 0x7f9499027138 <c_files/pr60040-2.c:4:1, col:23> col:23 referenced __uint8_t 'unsigned char'
+| `-BuiltinType 0x7f9499026620 'unsigned char'
+|-TypedefDecl 0x7f94990271a8 <line:5:1, col:28> col:28 referenced __uint16_t 'unsigned short'
+| `-BuiltinType 0x7f9499026640 'unsigned short'
+|-TypedefDecl 0x7f9499078218 <line:6:1, col:27> col:27 referenced __uint32_t 'unsigned long'
+| `-BuiltinType 0x7f9499026680 'unsigned long'
+|-TypedefDecl 0x7f94990782a0 <line:7:1, col:19> col:19 referenced uint8_t '__uint8_t':'unsigned char'
+| `-TypedefType 0x7f9499078270 '__uint8_t' sugar
+|   |-Typedef 0x7f9499027138 '__uint8_t'
+|   `-BuiltinType 0x7f9499026620 'unsigned char'
+|-TypedefDecl 0x7f9499078330 <line:8:1, col:20> col:20 referenced uint16_t '__uint16_t':'unsigned short'
+| `-TypedefType 0x7f9499078300 '__uint16_t' sugar
+|   |-Typedef 0x7f94990271a8 '__uint16_t'
+|   `-BuiltinType 0x7f9499026640 'unsigned short'
+|-TypedefDecl 0x7f94990783c0 <line:9:1, col:20> col:20 referenced uint32_t '__uint32_t':'unsigned long'
+| `-TypedefType 0x7f9499078390 '__uint32_t' sugar
+|   |-Typedef 0x7f9499078218 '__uint32_t'
+|   `-BuiltinType 0x7f9499026680 'unsigned long'
+|-TypedefDecl 0x7f9499078450 <line:10:1, col:27> col:27 referenced __gnuc_va_list '__builtin_va_list':'struct __va_list_tag [1]'
+| `-TypedefType 0x7f9499078420 '__builtin_va_list' sugar
+|   |-Typedef 0x7f94990270c8 '__builtin_va_list'
+|   `-ConstantArrayType 0x7f9499027070 'struct __va_list_tag [1]' 1 
+|     `-RecordType 0x7f9499026ee0 'struct __va_list_tag'
+|       `-Record 0x7f9499026e58 '__va_list_tag'
+|-TypedefDecl 0x7f94990784e0 <line:11:1, col:24> col:24 referenced va_list '__gnuc_va_list':'struct __va_list_tag [1]'
+| `-TypedefType 0x7f94990784b0 '__gnuc_va_list' sugar
+|   |-Typedef 0x7f9499078450 '__gnuc_va_list'
+|   `-TypedefType 0x7f9499078420 '__builtin_va_list' sugar
+|     |-Typedef 0x7f94990270c8 '__builtin_va_list'
+|     `-ConstantArrayType 0x7f9499027070 'struct __va_list_tag [1]' 1 
+|       `-RecordType 0x7f9499026ee0 'struct __va_list_tag'
+|         `-Record 0x7f9499026e58 '__va_list_tag'
+|-EnumDecl 0x7f9499078538 <line:12:9, line:14:1> line:12:14 rtems_blkdev_request_op
+| `-EnumConstantDecl 0x7f94990785f0 <line:13:3> col:3 RTEMS_BLKDEV_REQ_READ 'int'
+|-TypedefDecl 0x7f9499078690 <line:12:1, line:14:3> col:3 referenced rtems_fdisk_segment_desc 'enum rtems_blkdev_request_op':'enum rtems_blkdev_request_op'
+| `-ElaboratedType 0x7f9499078640 'enum rtems_blkdev_request_op' sugar
+|   `-EnumType 0x7f94990785d0 'enum rtems_blkdev_request_op'
+|     `-Enum 0x7f9499078538 'rtems_blkdev_request_op'
+|-RecordDecl 0x7f9499078700 <line:15:9, line:22:1> line:15:16 struct rtems_fdisk_driver_handlers definition
+| `-FieldDecl 0x7f9499078c28 <line:17:3, line:21:30> line:17:9 referenced blank 'int (*)(const rtems_fdisk_segment_desc *, uint32_t, uint32_t, uint32_t, uint32_t)'
+|-TypedefDecl 0x7f9499078cc0 <line:15:1, line:22:3> col:3 referenced rtems_fdisk_driver_handlers 'struct rtems_fdisk_driver_handlers':'struct rtems_fdisk_driver_handlers'
+| `-ElaboratedType 0x7f9499078c70 'struct rtems_fdisk_driver_handlers' sugar
+|   `-RecordType 0x7f9499078790 'struct rtems_fdisk_driver_handlers'
+|     `-Record 0x7f9499078700 'rtems_fdisk_driver_handlers'
+|-RecordDecl 0x7f9499078d30 <line:23:9, line:27:1> line:23:16 struct rtems_fdisk_page_desc definition
+| |-FieldDecl 0x7f9499078e10 <line:25:3, col:12> col:12 flags 'uint16_t':'unsigned short'
+| `-FieldDecl 0x7f9499078e68 <line:26:3, col:12> col:12 block 'uint32_t':'unsigned long'
+|-TypedefDecl 0x7f9499078f00 <line:23:1, line:27:3> col:3 referenced rtems_fdisk_page_desc 'struct rtems_fdisk_page_desc':'struct rtems_fdisk_page_desc'
+| `-ElaboratedType 0x7f9499078eb0 'struct rtems_fdisk_page_desc' sugar
+|   `-RecordType 0x7f9499078dc0 'struct rtems_fdisk_page_desc'
+|     `-Record 0x7f9499078d30 'rtems_fdisk_page_desc'
+|-RecordDecl 0x7f9499078f70 <line:28:9, line:32:1> line:28:16 struct rtems_fdisk_segment_ctl definition
+| |-FieldDecl 0x7f94990790a8 <line:30:3, col:26> col:26 referenced page_descriptors 'rtems_fdisk_page_desc *'
+| `-FieldDecl 0x7f9499079100 <line:31:3, col:12> col:12 referenced pages_active 'uint32_t':'unsigned long'
+|-TypedefDecl 0x7f94990791a0 <line:28:1, line:32:3> col:3 referenced rtems_fdisk_segment_ctl 'struct rtems_fdisk_segment_ctl':'struct rtems_fdisk_segment_ctl'
+| `-ElaboratedType 0x7f9499079150 'struct rtems_fdisk_segment_ctl' sugar
+|   `-RecordType 0x7f9499079000 'struct rtems_fdisk_segment_ctl'
+|     `-Record 0x7f9499078f70 'rtems_fdisk_segment_ctl'
+|-RecordDecl 0x7f949907e418 <line:33:9, line:35:1> line:33:16 struct rtems_fdisk_segment_ctl_queue definition
+|-TypedefDecl 0x7f949907e510 <col:1, line:35:3> col:3 rtems_fdisk_segment_ctl_queue 'struct rtems_fdisk_segment_ctl_queue':'struct rtems_fdisk_segment_ctl_queue'
+| `-ElaboratedType 0x7f949907e4c0 'struct rtems_fdisk_segment_ctl_queue' sugar
+|   `-RecordType 0x7f949907e4a0 'struct rtems_fdisk_segment_ctl_queue'
+|     `-Record 0x7f949907e418 'rtems_fdisk_segment_ctl_queue'
+|-RecordDecl 0x7f949907e580 <line:36:9, line:40:1> line:36:16 struct rtems_fdisk_device_ctl definition
+| |-FieldDecl 0x7f949907e640 <line:38:3, col:12> col:12 referenced flags 'uint32_t':'unsigned long'
+| `-FieldDecl 0x7f949907e718 <line:39:3, col:12> col:12 copy_buffer 'uint8_t *'
+|-TypedefDecl 0x7f949907e7b0 <line:36:1, line:40:3> col:3 referenced rtems_flashdisk 'struct rtems_fdisk_device_ctl':'struct rtems_fdisk_device_ctl'
+| `-ElaboratedType 0x7f949907e760 'struct rtems_fdisk_device_ctl' sugar
+|   `-RecordType 0x7f949907e610 'struct rtems_fdisk_device_ctl'
+|     `-Record 0x7f949907e580 'rtems_fdisk_device_ctl'
+|-FunctionDecl 0x7f949907e900 <line:42:1, col:49> col:13 used rtems_fdisk_error 'void (const char *, ...)' extern
+| `-ParmVarDecl 0x7f949907e838 <col:32, col:43> col:44 'const char *'
+|-FunctionDecl 0x7f949907ee78 <line:43:1, line:47:14> line:43:12 used rtems_fdisk_seg_write 'int (const rtems_flashdisk *, rtems_fdisk_segment_ctl *, uint32_t, const rtems_fdisk_page_desc *, uint32_t)' extern
+| |-ParmVarDecl 0x7f949907ea68 <col:34, col:55> col:56 'const rtems_flashdisk *'
+| |-ParmVarDecl 0x7f949907eb58 <line:44:34, col:57> col:58 'rtems_fdisk_segment_ctl *'
+| |-ParmVarDecl 0x7f949907ebc8 <line:45:34> col:42 'uint32_t':'unsigned long'
+| |-ParmVarDecl 0x7f949907ec98 <line:46:34, col:63> col:63 page_desc 'const rtems_fdisk_page_desc *'
+| `-ParmVarDecl 0x7f949907ed08 <line:47:6> col:14 'uint32_t':'unsigned long'
+|-FunctionDecl 0x7f949907f0d0 <line:49:1, line:55:1> line:49:6 used rtems_fdisk_printf 'void (const rtems_flashdisk *, const char *, ...)'
+| |-ParmVarDecl 0x7f949907ef48 <col:26, col:49> col:49 fd 'const rtems_flashdisk *'
+| |-ParmVarDecl 0x7f949907efc0 <col:53, col:65> col:65 used format 'const char *'
+| `-CompoundStmt 0x7f949907f538 <line:50:1, line:55:1>
+|   `-CompoundStmt 0x7f949907f510 <line:51:3, line:54:3>
+|     |-DeclStmt 0x7f949907f210 <line:52:5, col:17>
+|     | `-VarDecl 0x7f949907f1b0 <col:5, col:13> col:13 used args 'va_list':'struct __va_list_tag [1]'
+|     `-CallExpr 0x7f949907f4c0 <line:53:5, col:35> 'void'
+|       |-ImplicitCastExpr 0x7f949907f4a8 <col:5> 'void (*)(struct __va_list_tag *, ...)' <BuiltinFnToFnPtr>
+|       | `-DeclRefExpr 0x7f949907f400 <col:5> '<builtin fn type>' Function 0x7f949907f298 '__builtin_va_start' 'void (struct __va_list_tag *, ...)'
+|       |-ImplicitCastExpr 0x7f949907f4f8 <col:24> 'struct __va_list_tag *' <ArrayToPointerDecay>
+|       | `-DeclRefExpr 0x7f949907f428 <col:24> 'va_list':'struct __va_list_tag [1]' lvalue Var 0x7f949907f1b0 'args' 'va_list':'struct __va_list_tag [1]'
+|       `-DeclRefExpr 0x7f949907f450 <col:29> 'const char *' lvalue ParmVar 0x7f949907efc0 'format' 'const char *'
+|-FunctionDecl 0x7f949907f298 <col:5> col:5 implicit used __builtin_va_start 'void (struct __va_list_tag *, ...)' extern
+| |-ParmVarDecl 0x7f949907f330 <<invalid sloc>> <invalid sloc> 'struct __va_list_tag *'
+| `-NoThrowAttr 0x7f949907f398 <col:5> Implicit
+|-FunctionDecl 0x7f949907f808 <line:56:1, line:67:1> line:57:1 used rtems_fdisk_seg_blank_check 'int (const rtems_flashdisk *, rtems_fdisk_segment_ctl *, uint32_t, uint32_t)' static
+| |-ParmVarDecl 0x7f949907f568 <col:30, col:53> col:53 fd 'const rtems_flashdisk *'
+| |-ParmVarDecl 0x7f949907f5d8 <line:58:30, col:55> col:55 sc 'rtems_fdisk_segment_ctl *'
+| |-ParmVarDecl 0x7f949907f648 <line:59:30, col:39> col:39 used offset 'uint32_t':'unsigned long'
+| |-ParmVarDecl 0x7f949907f6b8 <line:60:30, col:39> col:39 used size 'uint32_t':'unsigned long'
+| `-CompoundStmt 0x7f949907fd98 <line:61:1, line:67:1>
+|   |-DeclStmt 0x7f949907f930 <line:62:3, col:18>
+|   | `-VarDecl 0x7f949907f8d0 <col:3, col:12> col:12 used device 'uint32_t':'unsigned long'
+|   |-DeclStmt 0x7f949907f9b8 <line:63:3, col:19>
+|   | `-VarDecl 0x7f949907f958 <col:3, col:12> col:12 used segment 'uint32_t':'unsigned long'
+|   |-DeclStmt 0x7f949907fa40 <line:64:3, col:37>
+|   | `-VarDecl 0x7f949907f9e0 <col:3, col:35> col:35 used sd 'const rtems_fdisk_segment_desc *'
+|   |-DeclStmt 0x7f949907fb48 <line:65:3, col:41>
+|   | `-VarDecl 0x7f949907fae8 <col:3, col:38> col:38 used ops 'const rtems_fdisk_driver_handlers *'
+|   `-ReturnStmt 0x7f949907fd80 <line:66:3, col:55>
+|     `-CallExpr 0x7f949907fcb8 <col:10, col:55> 'int'
+|       |-ImplicitCastExpr 0x7f949907fca0 <col:10, col:15> 'int (*)(const rtems_fdisk_segment_desc *, uint32_t, uint32_t, uint32_t, uint32_t)' <LValueToRValue>
+|       | `-MemberExpr 0x7f949907fba0 <col:10, col:15> 'int (*const)(const rtems_fdisk_segment_desc *, uint32_t, uint32_t, uint32_t, uint32_t)' lvalue ->blank 0x7f9499078c28
+|       |   `-ImplicitCastExpr 0x7f949907fb88 <col:10> 'const rtems_fdisk_driver_handlers *' <LValueToRValue>
+|       |     `-DeclRefExpr 0x7f949907fb60 <col:10> 'const rtems_fdisk_driver_handlers *' lvalue Var 0x7f949907fae8 'ops' 'const rtems_fdisk_driver_handlers *'
+|       |-ImplicitCastExpr 0x7f949907fd08 <col:22> 'const rtems_fdisk_segment_desc *' <LValueToRValue>
+|       | `-DeclRefExpr 0x7f949907fbd8 <col:22> 'const rtems_fdisk_segment_desc *' lvalue Var 0x7f949907f9e0 'sd' 'const rtems_fdisk_segment_desc *'
+|       |-ImplicitCastExpr 0x7f949907fd20 <col:26> 'uint32_t':'unsigned long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7f949907fc00 <col:26> 'uint32_t':'unsigned long' lvalue Var 0x7f949907f8d0 'device' 'uint32_t':'unsigned long'
+|       |-ImplicitCastExpr 0x7f949907fd38 <col:34> 'uint32_t':'unsigned long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7f949907fc28 <col:34> 'uint32_t':'unsigned long' lvalue Var 0x7f949907f958 'segment' 'uint32_t':'unsigned long'
+|       |-ImplicitCastExpr 0x7f949907fd50 <col:43> 'uint32_t':'unsigned long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7f949907fc50 <col:43> 'uint32_t':'unsigned long' lvalue ParmVar 0x7f949907f648 'offset' 'uint32_t':'unsigned long'
+|       `-ImplicitCastExpr 0x7f949907fd68 <col:51> 'uint32_t':'unsigned long' <LValueToRValue>
+|         `-DeclRefExpr 0x7f949907fc78 <col:51> 'uint32_t':'unsigned long' lvalue ParmVar 0x7f949907f6b8 'size' 'uint32_t':'unsigned long'
+|-FunctionDecl 0x7f9499080088 <line:68:1, line:83:1> line:69:1 used rtems_fdisk_seg_write_page_desc 'int (const rtems_flashdisk *, rtems_fdisk_segment_ctl *, uint32_t, const rtems_fdisk_page_desc *)' static
+| |-ParmVarDecl 0x7f949907fde8 <col:34, col:57> col:57 used fd 'const rtems_flashdisk *'
+| |-ParmVarDecl 0x7f949907fe58 <line:70:34, col:59> col:59 used sc 'rtems_fdisk_segment_ctl *'
+| |-ParmVarDecl 0x7f949907fec8 <line:71:34, col:43> col:43 used page 'uint32_t':'unsigned long'
+| |-ParmVarDecl 0x7f949907ff38 <line:72:34, col:63> col:63 used page_desc 'const rtems_fdisk_page_desc *'
+| `-CompoundStmt 0x7f9499081938 <line:73:1, line:83:1>
+|   |-DeclStmt 0x7f9499080298 <line:74:3, col:58>
+|   | `-VarDecl 0x7f9499080150 <col:3, col:57> col:12 used offset 'uint32_t':'unsigned long' cinit
+|   |   `-BinaryOperator 0x7f9499080220 <col:21, col:57> 'unsigned long' '*'
+|   |     |-ImplicitCastExpr 0x7f9499080208 <col:21> 'uint32_t':'unsigned long' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7f94990801b0 <col:21> 'uint32_t':'unsigned long' lvalue ParmVar 0x7f949907fec8 'page' 'uint32_t':'unsigned long'
+|   |     `-UnaryExprOrTypeTraitExpr 0x7f94990801e8 <col:28, col:57> 'unsigned long' sizeof 'rtems_fdisk_page_desc':'struct rtems_fdisk_page_desc'
+|   |-IfStmt 0x7f94990816c8 <line:75:3, line:80:3>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ParenExpr 0x7f9499081428 <line:75:7, col:28> 'unsigned long'
+|   | | `-BinaryOperator 0x7f9499081400 <col:8, col:27> 'unsigned long' '&'
+|   | |   |-ImplicitCastExpr 0x7f94990803b0 <col:8, col:12> 'uint32_t':'unsigned long' <LValueToRValue>
+|   | |   | `-MemberExpr 0x7f94990802f0 <col:8, col:12> 'const uint32_t':'const unsigned long' lvalue ->flags 0x7f949907e640
+|   | |   |   `-ImplicitCastExpr 0x7f94990802d8 <col:8> 'const rtems_flashdisk *' <LValueToRValue>
+|   | |   |     `-DeclRefExpr 0x7f94990802b0 <col:8> 'const rtems_flashdisk *' lvalue ParmVar 0x7f949907fde8 'fd' 'const rtems_flashdisk *'
+|   | |   `-ImplicitCastExpr 0x7f94990803c8 <col:20, col:27> 'unsigned long' <IntegralCast>
+|   | |     `-ParenExpr 0x7f9499080390 <col:20, col:27> 'int'
+|   | |       `-BinaryOperator 0x7f9499080368 <col:21, col:26> 'int' '<<'
+|   | |         |-IntegerLiteral 0x7f9499080328 <col:21> 'int' 1
+|   | |         `-IntegerLiteral 0x7f9499080348 <col:26> 'int' 3
+|   | |-CompoundStmt 0x7f94990816a8 <line:76:3, line:80:3>
+|   | | `-DeclStmt 0x7f9499081690 <line:77:5, line:79:75>
+|   | |   `-VarDecl 0x7f9499081460 <line:77:5, line:79:74> line:77:9 ret 'int' cinit
+|   | |     `-CallExpr 0x7f9499081600 <col:15, line:79:74> 'int'
+|   | |       |-ImplicitCastExpr 0x7f94990815e8 <line:77:15> 'int (*)(const rtems_flashdisk *, rtems_fdisk_segment_ctl *, uint32_t, uint32_t)' <FunctionToPointerDecay>
+|   | |       | `-DeclRefExpr 0x7f94990814c0 <col:15> 'int (const rtems_flashdisk *, rtems_fdisk_segment_ctl *, uint32_t, uint32_t)' Function 0x7f949907f808 'rtems_fdisk_seg_blank_check' 'int (const rtems_flashdisk *, rtems_fdisk_segment_ctl *, uint32_t, uint32_t)'
+|   | |       |-ImplicitCastExpr 0x7f9499081648 <col:44> 'const rtems_flashdisk *' <LValueToRValue>
+|   | |       | `-DeclRefExpr 0x7f94990814e8 <col:44> 'const rtems_flashdisk *' lvalue ParmVar 0x7f949907fde8 'fd' 'const rtems_flashdisk *'
+|   | |       |-ImplicitCastExpr 0x7f9499081660 <col:48> 'rtems_fdisk_segment_ctl *' <LValueToRValue>
+|   | |       | `-DeclRefExpr 0x7f9499081510 <col:48> 'rtems_fdisk_segment_ctl *' lvalue ParmVar 0x7f949907fe58 'sc' 'rtems_fdisk_segment_ctl *'
+|   | |       |-ImplicitCastExpr 0x7f9499081678 <line:78:44> 'uint32_t':'unsigned long' <LValueToRValue>
+|   | |       | `-DeclRefExpr 0x7f9499081538 <col:44> 'uint32_t':'unsigned long' lvalue Var 0x7f9499080150 'offset' 'uint32_t':'unsigned long'
+|   | |       `-UnaryExprOrTypeTraitExpr 0x7f9499081570 <line:79:44, col:73> 'unsigned long' sizeof 'rtems_fdisk_page_desc':'struct rtems_fdisk_page_desc'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f9499081920 <line:81:3, line:82:74>
+|     `-CallExpr 0x7f9499081870 <line:81:10, line:82:74> 'int'
+|       |-ImplicitCastExpr 0x7f9499081858 <line:81:10> 'int (*)(const rtems_flashdisk *, rtems_fdisk_segment_ctl *, uint32_t, const rtems_fdisk_page_desc *, uint32_t)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7f9499081700 <col:10> 'int (const rtems_flashdisk *, rtems_fdisk_segment_ctl *, uint32_t, const rtems_fdisk_page_desc *, uint32_t)' Function 0x7f949907ee78 'rtems_fdisk_seg_write' 'int (const rtems_flashdisk *, rtems_fdisk_segment_ctl *, uint32_t, const rtems_fdisk_page_desc *, uint32_t)'
+|       |-ImplicitCastExpr 0x7f94990818c0 <col:33> 'const rtems_flashdisk *' <LValueToRValue>
+|       | `-DeclRefExpr 0x7f9499081728 <col:33> 'const rtems_flashdisk *' lvalue ParmVar 0x7f949907fde8 'fd' 'const rtems_flashdisk *'
+|       |-ImplicitCastExpr 0x7f94990818d8 <col:37> 'rtems_fdisk_segment_ctl *' <LValueToRValue>
+|       | `-DeclRefExpr 0x7f9499081750 <col:37> 'rtems_fdisk_segment_ctl *' lvalue ParmVar 0x7f949907fe58 'sc' 'rtems_fdisk_segment_ctl *'
+|       |-ImplicitCastExpr 0x7f94990818f0 <col:41> 'uint32_t':'unsigned long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7f9499081778 <col:41> 'uint32_t':'unsigned long' lvalue Var 0x7f9499080150 'offset' 'uint32_t':'unsigned long'
+|       |-ImplicitCastExpr 0x7f9499081908 <line:82:33> 'const rtems_fdisk_page_desc *' <LValueToRValue>
+|       | `-DeclRefExpr 0x7f94990817a0 <col:33> 'const rtems_fdisk_page_desc *' lvalue ParmVar 0x7f949907ff38 'page_desc' 'const rtems_fdisk_page_desc *'
+|       `-UnaryExprOrTypeTraitExpr 0x7f94990817d8 <col:44, col:73> 'unsigned long' sizeof 'rtems_fdisk_page_desc':'struct rtems_fdisk_page_desc'
+`-FunctionDecl 0x7f9499081cd0 <line:84:1, line:112:1> line:85:1 rtems_fdisk_recycle_segment 'void (rtems_flashdisk *, rtems_fdisk_segment_ctl *, rtems_fdisk_segment_ctl *, uint32_t *)'
+  |-ParmVarDecl 0x7f94990819d8 <col:30, col:47> col:47 used fd 'rtems_flashdisk *'
+  |-ParmVarDecl 0x7f9499081a48 <line:86:37, col:62> col:62 used ssc 'rtems_fdisk_segment_ctl *'
+  |-ParmVarDecl 0x7f9499081ab8 <line:87:37, col:62> col:62 used dsc 'rtems_fdisk_segment_ctl *'
+  |-ParmVarDecl 0x7f9499081b88 <line:88:37, col:47> col:47 used pages 'uint32_t *'
+  `-CompoundStmt 0x7f9499082ce0 <line:89:1, line:112:1>
+    |-DeclStmt 0x7f9499081e00 <line:90:3, col:10>
+    | `-VarDecl 0x7f9499081da0 <col:3, col:7> col:7 used ret 'int'
+    |-DeclStmt 0x7f9499081e88 <line:91:3, col:17>
+    | `-VarDecl 0x7f9499081e28 <col:3, col:12> col:12 used spage 'uint32_t':'unsigned long'
+    |-DeclStmt 0x7f9499081f48 <line:92:3, col:20>
+    | `-VarDecl 0x7f9499081eb0 <col:3, col:19> col:12 used used 'uint32_t':'unsigned long' cinit
+    |   `-ImplicitCastExpr 0x7f9499081f30 <col:19> 'uint32_t':'unsigned long' <IntegralCast>
+    |     `-IntegerLiteral 0x7f9499081f10 <col:19> 'int' 0
+    |-DeclStmt 0x7f9499082008 <line:93:3, col:22>
+    | `-VarDecl 0x7f9499081f70 <col:3, col:21> col:12 used active 'uint32_t':'unsigned long' cinit
+    |   `-ImplicitCastExpr 0x7f9499081ff0 <col:21> 'uint32_t':'unsigned long' <IntegralCast>
+    |     `-IntegerLiteral 0x7f9499081fd0 <col:21> 'int' 0
+    |-CompoundStmt 0x7f94990827f0 <line:94:3, line:105:3>
+    | |-DeclStmt 0x7f94990821a8 <line:95:5, col:63>
+    | | `-VarDecl 0x7f9499082030 <col:5, col:62> col:28 used spd 'rtems_fdisk_page_desc *' cinit
+    | |   `-UnaryOperator 0x7f9499082188 <col:34, col:62> 'rtems_fdisk_page_desc *' prefix '&'
+    | |     `-ArraySubscriptExpr 0x7f9499082160 <col:35, col:62> 'rtems_fdisk_page_desc':'struct rtems_fdisk_page_desc' lvalue
+    | |       |-ImplicitCastExpr 0x7f9499082130 <col:35, col:40> 'rtems_fdisk_page_desc *' <LValueToRValue>
+    | |       | `-MemberExpr 0x7f94990820d0 <col:35, col:40> 'rtems_fdisk_page_desc *' lvalue ->page_descriptors 0x7f94990790a8
+    | |       |   `-ImplicitCastExpr 0x7f94990820b8 <col:35> 'rtems_fdisk_segment_ctl *' <LValueToRValue>
+    | |       |     `-DeclRefExpr 0x7f9499082090 <col:35> 'rtems_fdisk_segment_ctl *' lvalue ParmVar 0x7f9499081a48 'ssc' 'rtems_fdisk_segment_ctl *'
+    | |       `-ImplicitCastExpr 0x7f9499082148 <col:57> 'uint32_t':'unsigned long' <LValueToRValue>
+    | |         `-DeclRefExpr 0x7f9499082108 <col:57> 'uint32_t':'unsigned long' lvalue Var 0x7f9499081e28 'spage' 'uint32_t':'unsigned long'
+    | `-CompoundStmt 0x7f94990827b0 <line:96:5, line:104:5>
+    |   |-DeclStmt 0x7f9499082230 <line:97:7, col:33>
+    |   | `-VarDecl 0x7f94990821d0 <col:7, col:30> col:30 used dpd 'rtems_fdisk_page_desc *'
+    |   |-DeclStmt 0x7f94990822b8 <line:98:7, col:21>
+    |   | `-VarDecl 0x7f9499082258 <col:7, col:16> col:16 used dpage 'uint32_t':'unsigned long'
+    |   |-BinaryOperator 0x7f9499082420 <line:99:7, col:41> 'rtems_fdisk_page_desc *' '='
+    |   | |-DeclRefExpr 0x7f94990822d0 <col:7> 'rtems_fdisk_page_desc *' lvalue Var 0x7f94990821d0 'dpd' 'rtems_fdisk_page_desc *'
+    |   | `-UnaryOperator 0x7f9499082400 <col:13, col:41> 'rtems_fdisk_page_desc *' prefix '&'
+    |   |   `-ArraySubscriptExpr 0x7f94990823c8 <col:14, col:41> 'rtems_fdisk_page_desc':'struct rtems_fdisk_page_desc' lvalue
+    |   |     |-ImplicitCastExpr 0x7f9499082398 <col:14, col:19> 'rtems_fdisk_page_desc *' <LValueToRValue>
+    |   |     | `-MemberExpr 0x7f9499082338 <col:14, col:19> 'rtems_fdisk_page_desc *' lvalue ->page_descriptors 0x7f94990790a8
+    |   |     |   `-ImplicitCastExpr 0x7f9499082320 <col:14> 'rtems_fdisk_segment_ctl *' <LValueToRValue>
+    |   |     |     `-DeclRefExpr 0x7f94990822f8 <col:14> 'rtems_fdisk_segment_ctl *' lvalue ParmVar 0x7f9499081ab8 'dsc' 'rtems_fdisk_segment_ctl *'
+    |   |     `-ImplicitCastExpr 0x7f94990823b0 <col:36> 'uint32_t':'unsigned long' <LValueToRValue>
+    |   |       `-DeclRefExpr 0x7f9499082370 <col:36> 'uint32_t':'unsigned long' lvalue Var 0x7f9499082258 'dpage' 'uint32_t':'unsigned long'
+    |   |-BinaryOperator 0x7f9499082520 <line:100:7, col:15> 'rtems_fdisk_page_desc':'struct rtems_fdisk_page_desc' '='
+    |   | |-UnaryOperator 0x7f9499082488 <col:7, col:8> 'rtems_fdisk_page_desc':'struct rtems_fdisk_page_desc' lvalue prefix '*'
+    |   | | `-ImplicitCastExpr 0x7f9499082470 <col:8> 'rtems_fdisk_page_desc *' <LValueToRValue>
+    |   | |   `-DeclRefExpr 0x7f9499082448 <col:8> 'rtems_fdisk_page_desc *' lvalue Var 0x7f94990821d0 'dpd' 'rtems_fdisk_page_desc *'
+    |   | `-ImplicitCastExpr 0x7f9499082508 <col:14, col:15> 'rtems_fdisk_page_desc':'struct rtems_fdisk_page_desc' <LValueToRValue>
+    |   |   `-UnaryOperator 0x7f94990824e8 <col:14, col:15> 'rtems_fdisk_page_desc':'struct rtems_fdisk_page_desc' lvalue prefix '*'
+    |   |     `-ImplicitCastExpr 0x7f94990824d0 <col:15> 'rtems_fdisk_page_desc *' <LValueToRValue>
+    |   |       `-DeclRefExpr 0x7f94990824a8 <col:15> 'rtems_fdisk_page_desc *' lvalue Var 0x7f9499082030 'spd' 'rtems_fdisk_page_desc *'
+    |   `-BinaryOperator 0x7f9499082788 <line:101:7, line:103:56> 'int' '='
+    |     |-DeclRefExpr 0x7f9499082548 <line:101:7> 'int' lvalue Var 0x7f9499081da0 'ret' 'int'
+    |     `-CallExpr 0x7f94990826b0 <col:13, line:103:56> 'int'
+    |       |-ImplicitCastExpr 0x7f9499082698 <line:101:13> 'int (*)(const rtems_flashdisk *, rtems_fdisk_segment_ctl *, uint32_t, const rtems_fdisk_page_desc *)' <FunctionToPointerDecay>
+    |       | `-DeclRefExpr 0x7f9499082570 <col:13> 'int (const rtems_flashdisk *, rtems_fdisk_segment_ctl *, uint32_t, const rtems_fdisk_page_desc *)' Function 0x7f9499080088 'rtems_fdisk_seg_write_page_desc' 'int (const rtems_flashdisk *, rtems_fdisk_segment_ctl *, uint32_t, const rtems_fdisk_page_desc *)'
+    |       |-ImplicitCastExpr 0x7f9499082710 <col:46> 'const rtems_flashdisk *' <BitCast>
+    |       | `-ImplicitCastExpr 0x7f94990826f8 <col:46> 'rtems_flashdisk *' <LValueToRValue>
+    |       |   `-DeclRefExpr 0x7f9499082598 <col:46> 'rtems_flashdisk *' lvalue ParmVar 0x7f94990819d8 'fd' 'rtems_flashdisk *'
+    |       |-ImplicitCastExpr 0x7f9499082728 <line:102:46> 'rtems_fdisk_segment_ctl *' <LValueToRValue>
+    |       | `-DeclRefExpr 0x7f94990825c0 <col:46> 'rtems_fdisk_segment_ctl *' lvalue ParmVar 0x7f9499081ab8 'dsc' 'rtems_fdisk_segment_ctl *'
+    |       |-ImplicitCastExpr 0x7f9499082740 <line:103:46> 'uint32_t':'unsigned long' <LValueToRValue>
+    |       | `-DeclRefExpr 0x7f94990825e8 <col:46> 'uint32_t':'unsigned long' lvalue Var 0x7f9499082258 'dpage' 'uint32_t':'unsigned long'
+    |       `-ImplicitCastExpr 0x7f9499082770 <col:53> 'const rtems_fdisk_page_desc *' <BitCast>
+    |         `-ImplicitCastExpr 0x7f9499082758 <col:53> 'rtems_fdisk_page_desc *' <LValueToRValue>
+    |           `-DeclRefExpr 0x7f9499082610 <col:53> 'rtems_fdisk_page_desc *' lvalue Var 0x7f94990821d0 'dpd' 'rtems_fdisk_page_desc *'
+    |-CallExpr 0x7f94990829e0 <line:106:3, line:107:42> 'void'
+    | |-ImplicitCastExpr 0x7f94990829c8 <line:106:3> 'void (*)(const rtems_flashdisk *, const char *, ...)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7f9499082818 <col:3> 'void (const rtems_flashdisk *, const char *, ...)' Function 0x7f949907f0d0 'rtems_fdisk_printf' 'void (const rtems_flashdisk *, const char *, ...)'
+    | |-ImplicitCastExpr 0x7f9499082a48 <col:23> 'const rtems_flashdisk *' <BitCast>
+    | | `-ImplicitCastExpr 0x7f9499082a30 <col:23> 'rtems_flashdisk *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7f9499082840 <col:23> 'rtems_flashdisk *' lvalue ParmVar 0x7f94990819d8 'fd' 'rtems_flashdisk *'
+    | |-ImplicitCastExpr 0x7f9499082a78 <col:27> 'const char *' <BitCast>
+    | | `-ImplicitCastExpr 0x7f9499082a60 <col:27> 'char *' <ArrayToPointerDecay>
+    | |   `-StringLiteral 0x7f94990828a8 <col:27> 'char [36]' lvalue "ssc end: %d-%d: p=%ld, a=%ld, u=%ld"
+    | |-ImplicitCastExpr 0x7f9499082a90 <line:107:23> 'uint32_t *' <LValueToRValue>
+    | | `-DeclRefExpr 0x7f94990828f8 <col:23> 'uint32_t *' lvalue ParmVar 0x7f9499081b88 'pages' 'uint32_t *'
+    | |-ImplicitCastExpr 0x7f9499082aa8 <col:30> 'uint32_t':'unsigned long' <LValueToRValue>
+    | | `-DeclRefExpr 0x7f9499082920 <col:30> 'uint32_t':'unsigned long' lvalue Var 0x7f9499081f70 'active' 'uint32_t':'unsigned long'
+    | `-ImplicitCastExpr 0x7f9499082ac0 <col:38> 'uint32_t':'unsigned long' <LValueToRValue>
+    |   `-DeclRefExpr 0x7f9499082948 <col:38> 'uint32_t':'unsigned long' lvalue Var 0x7f9499081eb0 'used' 'uint32_t':'unsigned long'
+    `-CompoundStmt 0x7f9499082cc0 <line:108:3, line:111:3>
+      `-CallExpr 0x7f9499082c40 <line:109:5, line:110:41> 'void'
+        |-ImplicitCastExpr 0x7f9499082c28 <line:109:5> 'void (*)(const char *, ...)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7f9499082ad8 <col:5> 'void (const char *, ...)' Function 0x7f949907e900 'rtems_fdisk_error' 'void (const char *, ...)'
+        |-ImplicitCastExpr 0x7f9499082c90 <col:24> 'const char *' <BitCast>
+        | `-ImplicitCastExpr 0x7f9499082c78 <col:24> 'char *' <ArrayToPointerDecay>
+        |   `-StringLiteral 0x7f9499082b38 <col:24> 'char [32]' lvalue "compacting: ssc pages not 0: %d"
+        `-ImplicitCastExpr 0x7f9499082ca8 <line:110:24, col:29> 'uint32_t':'unsigned long' <LValueToRValue>
+          `-MemberExpr 0x7f9499082bc0 <col:24, col:29> 'uint32_t':'unsigned long' lvalue ->pages_active 0x7f9499079100
+            `-ImplicitCastExpr 0x7f9499082ba8 <col:24> 'rtems_fdisk_segment_ctl *' <LValueToRValue>
+              `-DeclRefExpr 0x7f9499082b80 <col:24> 'rtems_fdisk_segment_ctl *' lvalue ParmVar 0x7f9499081a48 'ssc' 'rtems_fdisk_segment_ctl *'

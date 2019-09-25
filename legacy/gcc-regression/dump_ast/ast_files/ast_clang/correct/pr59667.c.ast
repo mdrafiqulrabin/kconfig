@@ -1,0 +1,40 @@
+TranslationUnitDecl 0x7f92870264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9287026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9287026740 '__int128'
+|-TypedefDecl 0x7f9287026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9287026760 'unsigned __int128'
+|-TypedefDecl 0x7f9287026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9287026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9287026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9287026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9287026dc0 'char *'
+|   `-BuiltinType 0x7f9287026560 'char'
+|-TypedefDecl 0x7f92870270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9287027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9287026ee0 'struct __va_list_tag'
+|     `-Record 0x7f9287026e58 '__va_list_tag'
+`-FunctionDecl 0x7f9287077400 <c_files/pr59667.c:5:1, line:12:1> line:6:1 main 'int (void)'
+  `-CompoundStmt 0x7f9287077a80 <line:7:1, line:12:1>
+    |-DeclStmt 0x7f92870775b8 <line:8:3, col:23>
+    | `-VarDecl 0x7f9287077520 <col:3, col:22> col:16 used len 'unsigned int' cinit
+    |   `-ImplicitCastExpr 0x7f92870775a0 <col:22> 'unsigned int' <IntegralCast>
+    |     `-IntegerLiteral 0x7f9287077580 <col:22> 'int' 1
+    |-DeclStmt 0x7f9287077838 <line:9:3, col:27>
+    | `-VarDecl 0x7f92870777a0 <col:3, col:26> col:11 used P 'float (*)[len][len]' cinit
+    |   `-ImplicitCastExpr 0x7f9287077820 <col:26> 'float (*)[len][len]' <NullToPointer>
+    |     `-IntegerLiteral 0x7f9287077800 <col:26> 'int' 0
+    |-BinaryOperator 0x7f9287077a20 <line:10:3, col:16> 'float' '='
+    | |-ArraySubscriptExpr 0x7f92870779c0 <col:3, col:12> 'float' lvalue
+    | | |-ImplicitCastExpr 0x7f92870779a8 <col:3, col:9> 'float *' <ArrayToPointerDecay>
+    | | | `-ArraySubscriptExpr 0x7f9287077930 <col:3, col:9> 'float [len]' lvalue
+    | | |   |-ImplicitCastExpr 0x7f9287077918 <col:3, col:6> 'float (*)[len]' <ArrayToPointerDecay>
+    | | |   | `-ParenExpr 0x7f92870778b0 <col:3, col:6> 'float [len][len]':'float [len][len]' lvalue
+    | | |   |   `-UnaryOperator 0x7f9287077890 <col:4, col:5> 'float [len][len]':'float [len][len]' lvalue prefix '*'
+    | | |   |     `-ImplicitCastExpr 0x7f9287077878 <col:5> 'float (*)[len][len]' <LValueToRValue>
+    | | |   |       `-DeclRefExpr 0x7f9287077850 <col:5> 'float (*)[len][len]' lvalue Var 0x7f92870777a0 'P' 'float (*)[len][len]'
+    | | |   `-IntegerLiteral 0x7f92870778d0 <col:8> 'int' 0
+    | | `-IntegerLiteral 0x7f9287077958 <col:11> 'int' 0
+    | `-ImplicitCastExpr 0x7f9287077a08 <col:16> 'float' <IntegralToFloating>
+    |   `-IntegerLiteral 0x7f92870779e8 <col:16> 'int' 1
+    `-ReturnStmt 0x7f9287077a68 <line:11:3, col:10>
+      `-IntegerLiteral 0x7f9287077a48 <col:10> 'int' 0

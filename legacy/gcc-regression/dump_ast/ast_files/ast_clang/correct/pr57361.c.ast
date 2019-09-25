@@ -1,0 +1,29 @@
+TranslationUnitDecl 0x7fc3968264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc396826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc396826740 '__int128'
+|-TypedefDecl 0x7fc396826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc396826760 'unsigned __int128'
+|-TypedefDecl 0x7fc396826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc396826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc396826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc396826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc396826dc0 'char *'
+|   `-BuiltinType 0x7fc396826560 'char'
+|-TypedefDecl 0x7fc3968270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc396827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc396826ee0 'struct __va_list_tag'
+|     `-Record 0x7fc396826e58 '__va_list_tag'
+|-RecordDecl 0x7fc396827120 <c_files/pr57361.c:4:1, col:29> col:8 struct A definition
+| |-FieldDecl 0x7fc397025a00 <col:12, col:16> col:16 x 'int'
+| `-FieldDecl 0x7fc397025a60 <col:19, col:26> col:26 y 'double'
+`-FunctionDecl 0x7fc397025c60 <line:5:1, line:7:1> line:5:6 f 'void (struct A *)'
+  |-ParmVarDecl 0x7fc397025b60 <col:9, col:19> col:19 used a 'struct A *'
+  `-CompoundStmt 0x7fc397025e40 <col:22, line:7:1>
+    `-BinaryOperator 0x7fc397025e18 <line:6:3, col:9> 'struct A':'struct A' '='
+      |-UnaryOperator 0x7fc397025d80 <col:3, col:4> 'struct A':'struct A' lvalue prefix '*'
+      | `-ImplicitCastExpr 0x7fc397025d68 <col:4> 'struct A *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fc397025d40 <col:4> 'struct A *' lvalue ParmVar 0x7fc397025b60 'a' 'struct A *'
+      `-ImplicitCastExpr 0x7fc397025e00 <col:8, col:9> 'struct A':'struct A' <LValueToRValue>
+        `-UnaryOperator 0x7fc397025de0 <col:8, col:9> 'struct A':'struct A' lvalue prefix '*'
+          `-ImplicitCastExpr 0x7fc397025dc8 <col:9> 'struct A *' <LValueToRValue>
+            `-DeclRefExpr 0x7fc397025da0 <col:9> 'struct A *' lvalue ParmVar 0x7fc397025b60 'a' 'struct A *'

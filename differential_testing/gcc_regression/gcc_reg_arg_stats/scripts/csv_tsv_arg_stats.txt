@@ -1,6 +1,0 @@
-
-TSV to CSV:
-$ cat gcc_reg_arg_stats_YX.tsv | tr "\\t" "," > gcc_reg_arg_stats_YX.csv
-
-CSV to TSV:
-$ cat gcc_reg_arg_stats_XY.csv | tr "," "\\t" > gcc_reg_arg_stats_XY.tsv

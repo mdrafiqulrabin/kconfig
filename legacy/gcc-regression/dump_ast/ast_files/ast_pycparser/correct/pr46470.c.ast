@@ -1,0 +1,15 @@
+FileAST: 
+  Decl: f, [], [], []
+    FuncDecl: 
+      TypeDecl: f, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: g, [], [], []
+      FuncDecl: 
+        TypeDecl: g, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: f
+      FuncCall: 
+        ID: f

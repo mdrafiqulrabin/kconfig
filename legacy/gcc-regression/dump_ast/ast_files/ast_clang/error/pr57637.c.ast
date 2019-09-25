@@ -1,0 +1,567 @@
+c_files/pr57637.c:52:34: error: use of unknown builtin '__builtin_malloc' [-Wimplicit-function-declaration]
+  return (GtkCssStyleProperty *) __builtin_malloc (sizeof (GtkCssStyleProperty));
+                                 ^
+c_files/pr57637.c:52:34: note: did you mean '__builtin_abort'?
+c_files/pr57637.c:34:3: note: '__builtin_abort' declared here
+  __builtin_abort ();
+  ^
+c_files/pr57637.c:52:10: warning: cast to 'GtkCssStyleProperty *' (aka 'struct _GtkCssStyleProperty *') from smaller integer type 'int' [-Wint-to-pointer-cast]
+  return (GtkCssStyleProperty *) __builtin_malloc (sizeof (GtkCssStyleProperty));
+         ^
+1 warning and 1 error generated.
+TranslationUnitDecl 0x7fb1c50058d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb1c5005e20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb1c5005b40 '__int128'
+|-TypedefDecl 0x7fb1c5005e90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb1c5005b60 'unsigned __int128'
+|-TypedefDecl 0x7fb1c5006168 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb1c5005f70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb1c5005ee8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb1c5006200 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb1c50061c0 'char *'
+|   `-BuiltinType 0x7fb1c5005960 'char'
+|-TypedefDecl 0x7fb1c50064c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb1c5006470 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb1c50062e0 'struct __va_list_tag'
+|     `-Record 0x7fb1c5006258 '__va_list_tag'
+|-RecordDecl 0x7fb1c5006520 <c_files/pr57637.c:4:9, col:16> col:16 struct _GtkCssStyleProperty
+|-TypedefDecl 0x7fb1c5825a20 <col:1, col:37> col:37 referenced GtkCssStyleProperty 'struct _GtkCssStyleProperty':'struct _GtkCssStyleProperty'
+| `-ElaboratedType 0x7fb1c50065d0 'struct _GtkCssStyleProperty' sugar
+|   `-RecordType 0x7fb1c50065b0 'struct _GtkCssStyleProperty'
+|     `-Record 0x7fb1c5825a90 '_GtkCssStyleProperty'
+|-RecordDecl 0x7fb1c5825a90 prev 0x7fb1c5006520 <line:6:1, line:18:1> line:6:8 struct _GtkCssStyleProperty definition
+| |-FieldDecl 0x7fb1c5825b60 <line:8:3, col:8> col:8 initial_value 'int *'
+| |-FieldDecl 0x7fb1c5825bc0 <line:9:3, col:16> col:16 id 'unsigned int'
+| |-FieldDecl 0x7fb1c5825c40 <line:10:3, col:25> col:16 inherit 'unsigned int'
+| | `-IntegerLiteral 0x7fb1c5825c08 <col:25> 'int' 1
+| |-FieldDecl 0x7fb1c5825cc0 <line:11:3, col:26> col:16 animated 'unsigned int'
+| | `-IntegerLiteral 0x7fb1c5825c88 <col:26> 'int' 1
+| |-FieldDecl 0x7fb1c5825d40 <line:12:3, col:30> col:16 affects_size 'unsigned int'
+| | `-IntegerLiteral 0x7fb1c5825d08 <col:30> 'int' 1
+| |-FieldDecl 0x7fb1c5825dc0 <line:13:3, col:30> col:16 affects_font 'unsigned int'
+| | `-IntegerLiteral 0x7fb1c5825d88 <col:30> 'int' 1
+| |-FieldDecl 0x7fb1c5825e20 <line:15:3, col:9> col:9 referenced parse_value 'int *'
+| |-FieldDecl 0x7fb1c5825e80 <line:16:3, col:9> col:9 referenced query_value 'int *'
+| `-FieldDecl 0x7fb1c5825ee0 <line:17:3, col:9> col:9 referenced assign_value 'int *'
+|-FunctionDecl 0x7fb1c5826280 <line:20:1, line:25:52> line:21:1 used g_assertion_message_expr 'void (const char *, const char *, int, const char *, const char *) __attribute__((noreturn))'
+| |-ParmVarDecl 0x7fb1c5825f40 <col:27, col:39> col:39 domain 'const char *'
+| |-ParmVarDecl 0x7fb1c5825fb8 <line:22:6, col:18> col:18 file 'const char *'
+| |-ParmVarDecl 0x7fb1c5826030 <line:23:6, col:10> col:10 line 'int'
+| |-ParmVarDecl 0x7fb1c58260a8 <line:24:6, col:18> col:18 func 'const char *'
+| `-ParmVarDecl 0x7fb1c5826120 <line:25:6, col:18> col:18 expr 'const char *'
+|-FunctionDecl 0x7fb1c5826620 prev 0x7fb1c5826280 <line:27:1, line:35:1> line:28:1 used g_assertion_message_expr 'void (const char *, const char *, int, const char *, const char *) __attribute__((noreturn))'
+| |-ParmVarDecl 0x7fb1c5826398 <col:27, col:39> col:39 domain 'const char *'
+| |-ParmVarDecl 0x7fb1c5826410 <line:29:6, col:18> col:18 file 'const char *'
+| |-ParmVarDecl 0x7fb1c5826488 <line:30:6, col:10> col:10 line 'int'
+| |-ParmVarDecl 0x7fb1c5826500 <line:31:6, col:18> col:18 func 'const char *'
+| |-ParmVarDecl 0x7fb1c5826578 <line:32:6, col:18> col:18 expr 'const char *'
+| `-CompoundStmt 0x7fb1c5826888 <line:33:1, line:35:1>
+|   `-CallExpr 0x7fb1c5826860 <line:34:3, col:20> 'void'
+|     `-ImplicitCastExpr 0x7fb1c5826848 <col:3> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|       `-DeclRefExpr 0x7fb1c58267f0 <col:3> '<builtin fn type>' Function 0x7fb1c5826710 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|-FunctionDecl 0x7fb1c5826710 <col:3> col:3 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+| `-NoThrowAttr 0x7fb1c58267a8 <col:3> Implicit
+|-FunctionDecl 0x7fb1c5827a68 <line:36:1, line:40:1> line:37:1 used get_id 'int (GtkCssStyleProperty *)'
+| |-ParmVarDecl 0x7fb1c5826938 <col:9, col:30> col:30 property 'GtkCssStyleProperty *'
+| `-CompoundStmt 0x7fb1c5827b40 <line:38:1, line:40:1>
+|   `-ReturnStmt 0x7fb1c5827b28 <line:39:3, col:10>
+|     `-IntegerLiteral 0x7fb1c5827b08 <col:10> 'int' 1
+|-FunctionDecl 0x7fb1c5827bb0 <line:41:1, line:45:1> line:42:1 used _gtk_css_style_property_get_type 'int ()'
+| `-CompoundStmt 0x7fb1c5827c80 <line:43:1, line:45:1>
+|   `-ReturnStmt 0x7fb1c5827c68 <line:44:3, col:10>
+|     `-IntegerLiteral 0x7fb1c5827c48 <col:10> 'int' 1
+|-FunctionDecl 0x7fb1c5827e40 <line:47:1, line:53:1> line:48:1 used g_object_new 'GtkCssStyleProperty *(int, const char *, ...)'
+| |-ParmVarDecl 0x7fb1c5827cb8 <col:15, col:19> col:19 object_type 'int'
+| |-ParmVarDecl 0x7fb1c5827d30 <line:49:13, col:25> col:25 first_property_name 'const char *'
+| `-CompoundStmt 0x7fb1c5828490 <line:51:1, line:53:1>
+|   `-ReturnStmt 0x7fb1c5828478 <line:52:3, col:80>
+|     `-CStyleCastExpr 0x7fb1c5828450 <col:10, col:80> 'GtkCssStyleProperty *' <IntegralToPointer>
+|       `-CallExpr 0x7fb1c5828060 <col:34, col:80> 'int'
+|         |-ImplicitCastExpr 0x7fb1c5828048 <col:34> 'int (*)()' <FunctionToPointerDecay>
+|         | `-DeclRefExpr 0x7fb1c5827fc0 <col:34> 'int ()' Function 0x7fb1c5827f28 '__builtin_malloc' 'int ()'
+|         `-UnaryExprOrTypeTraitExpr 0x7fb1c5827ff8 <col:52, col:79> 'unsigned long' sizeof 'GtkCssStyleProperty':'struct _GtkCssStyleProperty'
+|-FunctionDecl 0x7fb1c5827f28 <<invalid sloc>> col:34 implicit used __builtin_malloc 'int ()'
+|-EnumDecl 0x7fb1c58284b0 <line:55:9, line:60:1> line:55:9
+| |-EnumConstantDecl 0x7fb1c58285f8 <line:56:3, col:20> col:3 referenced INHERIT 'int'
+| | `-ParenExpr 0x7fb1c58285d8 <col:13, col:20> 'int'
+| |   `-BinaryOperator 0x7fb1c58285b0 <col:14, col:19> 'int' '<<'
+| |     |-IntegerLiteral 0x7fb1c5828570 <col:14> 'int' 1
+| |     `-IntegerLiteral 0x7fb1c5828590 <col:19> 'int' 0
+| |-EnumConstantDecl 0x7fb1c58286c8 <line:57:3, col:21> col:3 referenced ANIMATED 'int'
+| | `-ParenExpr 0x7fb1c58286a8 <col:14, col:21> 'int'
+| |   `-BinaryOperator 0x7fb1c5828680 <col:15, col:20> 'int' '<<'
+| |     |-IntegerLiteral 0x7fb1c5828640 <col:15> 'int' 1
+| |     `-IntegerLiteral 0x7fb1c5828660 <col:20> 'int' 1
+| |-EnumConstantDecl 0x7fb1c5828798 <line:58:3, col:19> col:3 referenced RESIZE 'int'
+| | `-ParenExpr 0x7fb1c5828778 <col:12, col:19> 'int'
+| |   `-BinaryOperator 0x7fb1c5828750 <col:13, col:18> 'int' '<<'
+| |     |-IntegerLiteral 0x7fb1c5828710 <col:13> 'int' 1
+| |     `-IntegerLiteral 0x7fb1c5828730 <col:18> 'int' 2
+| `-EnumConstantDecl 0x7fb1c5828868 <line:59:3, col:17> col:3 referenced FONT 'int'
+|   `-ParenExpr 0x7fb1c5828848 <col:10, col:17> 'int'
+|     `-BinaryOperator 0x7fb1c5828820 <col:11, col:16> 'int' '<<'
+|       |-IntegerLiteral 0x7fb1c58287e0 <col:11> 'int' 1
+|       `-IntegerLiteral 0x7fb1c5828800 <col:16> 'int' 3
+|-TypedefDecl 0x7fb1c5828900 <line:55:1, line:60:3> col:3 GtkStylePropertyFlags 'enum GtkStylePropertyFlags':'GtkStylePropertyFlags'
+| `-ElaboratedType 0x7fb1c58288b0 'enum GtkStylePropertyFlags' sugar
+|   `-EnumType 0x7fb1c5828550 'GtkStylePropertyFlags'
+|     `-Enum 0x7fb1c58284b0 ''
+|-VarDecl 0x7fb1c5828988 <line:62:1, col:9> col:5 used t 'int' cinit
+| `-IntegerLiteral 0x7fb1c5829a00 <col:9> 'int' 0
+|-FunctionDecl 0x7fb1c5829eb0 <line:63:1, line:197:1> line:64:1 used gtk_css_style_property_register 'void (const char *, int, int, int, int *, int *, int *, int *)'
+| |-ParmVarDecl 0x7fb1c5829a38 <col:34, col:47> col:47 used name 'const char *'
+| |-ParmVarDecl 0x7fb1c5829ab0 <line:65:6, col:10> col:10 used expected_id 'int'
+| |-ParmVarDecl 0x7fb1c5829b28 <line:66:6, col:10> col:10 used value_type 'int'
+| |-ParmVarDecl 0x7fb1c5829ba0 <line:67:6, col:10> col:10 used flags 'int'
+| |-ParmVarDecl 0x7fb1c5829c18 <line:68:6, col:11> col:11 used parse_value 'int *'
+| |-ParmVarDecl 0x7fb1c5829c90 <line:69:6, col:11> col:11 used query_value 'int *'
+| |-ParmVarDecl 0x7fb1c5829d08 <line:70:6, col:11> col:11 used assign_value 'int *'
+| |-ParmVarDecl 0x7fb1c5829d80 <line:71:6, col:11> col:11 used initial_value 'int *'
+| `-CompoundStmt 0x7fb1c582e910 <line:72:1, line:197:1>
+|   |-DeclStmt 0x7fb1c5829ff8 <line:73:3, col:28>
+|   | `-VarDecl 0x7fb1c5829f98 <col:3, col:24> col:24 used node 'GtkCssStyleProperty *'
+|   |-DoStmt 0x7fb1c582abd8 <line:75:3, line:94:15>
+|   | |-CompoundStmt 0x7fb1c582ab98 <line:76:5, line:94:5>
+|   | | `-IfStmt 0x7fb1c582ab60 <line:77:7, line:93:30>
+|   | |   |-<<<NULL>>>
+|   | |   |-<<<NULL>>>
+|   | |   |-CallExpr 0x7fb1c582a5f0 <line:77:11, line:86:9> 'long'
+|   | |   | |-ImplicitCastExpr 0x7fb1c582a5d8 <line:77:11> 'long (*)(long, long)' <BuiltinFnToFnPtr>
+|   | |   | | `-DeclRefExpr 0x7fb1c582a210 <col:11> '<builtin fn type>' Function 0x7fb1c582a050 '__builtin_expect' 'long (long, long)'
+|   | |   | |-ImplicitCastExpr 0x7fb1c582a628 <col:29, line:85:10> 'long' <IntegralCast>
+|   | |   | | `-UnaryOperator 0x7fb1c582a570 <line:77:29, line:85:10> 'int' prefix '__extension__'
+|   | |   | |   `-StmtExpr 0x7fb1c582a550 <line:77:43, line:85:10> 'int'
+|   | |   | |     `-CompoundStmt 0x7fb1c582a520 <line:78:9, line:85:9>
+|   | |   | |       |-DeclStmt 0x7fb1c582a2b0 <line:79:11, col:30>
+|   | |   | |       | `-VarDecl 0x7fb1c582a250 <col:11, col:15> col:15 used _g_boolean_var_ 'int'
+|   | |   | |       |-IfStmt 0x7fb1c582a4a8 <line:80:11, line:83:31>
+|   | |   | |       | |-<<<NULL>>>
+|   | |   | |       | |-<<<NULL>>>
+|   | |   | |       | |-BinaryOperator 0x7fb1c582a3a0 <line:80:15, col:42> 'int' '!='
+|   | |   | |       | | |-ImplicitCastExpr 0x7fb1c582a370 <col:15> 'int *' <LValueToRValue>
+|   | |   | |       | | | `-DeclRefExpr 0x7fb1c582a2c8 <col:15> 'int *' lvalue ParmVar 0x7fb1c5829d80 'initial_value' 'int *'
+|   | |   | |       | | `-ImplicitCastExpr 0x7fb1c582a388 <col:32, col:42> 'int *' <BitCast>
+|   | |   | |       | |   `-ParenExpr 0x7fb1c582a350 <col:32, col:42> 'void *'
+|   | |   | |       | |     `-CStyleCastExpr 0x7fb1c582a328 <col:33, col:41> 'void *' <NullToPointer>
+|   | |   | |       | |       `-IntegerLiteral 0x7fb1c582a2f0 <col:41> 'int' 0
+|   | |   | |       | |-BinaryOperator 0x7fb1c582a410 <line:81:13, col:31> 'int' '='
+|   | |   | |       | | |-DeclRefExpr 0x7fb1c582a3c8 <col:13> 'int' lvalue Var 0x7fb1c582a250 '_g_boolean_var_' 'int'
+|   | |   | |       | | `-IntegerLiteral 0x7fb1c582a3f0 <col:31> 'int' 1
+|   | |   | |       | `-BinaryOperator 0x7fb1c582a480 <line:83:13, col:31> 'int' '='
+|   | |   | |       |   |-DeclRefExpr 0x7fb1c582a438 <col:13> 'int' lvalue Var 0x7fb1c582a250 '_g_boolean_var_' 'int'
+|   | |   | |       |   `-IntegerLiteral 0x7fb1c582a460 <col:31> 'int' 0
+|   | |   | |       `-ImplicitCastExpr 0x7fb1c582a508 <line:84:11> 'int' <LValueToRValue>
+|   | |   | |         `-DeclRefExpr 0x7fb1c582a4e0 <col:11> 'int' lvalue Var 0x7fb1c582a250 '_g_boolean_var_' 'int'
+|   | |   | `-ImplicitCastExpr 0x7fb1c582a640 <line:86:8> 'long' <IntegralCast>
+|   | |   |   `-IntegerLiteral 0x7fb1c582a590 <col:8> 'int' 1
+|   | |   |-NullStmt 0x7fb1c582a658 <line:87:2>
+|   | |   `-CallExpr 0x7fb1c582aa80 <line:89:9, line:93:30> 'void'
+|   | |     |-ImplicitCastExpr 0x7fb1c582aa68 <line:89:9> 'void (*)(const char *, const char *, int, const char *, const char *) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |     | `-DeclRefExpr 0x7fb1c582a668 <col:9> 'void (const char *, const char *, int, const char *, const char *) __attribute__((noreturn))' Function 0x7fb1c5826620 'g_assertion_message_expr' 'void (const char *, const char *, int, const char *, const char *) __attribute__((noreturn))'
+|   | |     |-ImplicitCastExpr 0x7fb1c582aae8 <col:35> 'const char *' <BitCast>
+|   | |     | `-ImplicitCastExpr 0x7fb1c582aad0 <col:35> 'char *' <ArrayToPointerDecay>
+|   | |     |   `-StringLiteral 0x7fb1c582a6c8 <col:35> 'char [4]' lvalue "Gtk"
+|   | |     |-ImplicitCastExpr 0x7fb1c582ab18 <line:90:7> 'const char *' <BitCast>
+|   | |     | `-ImplicitCastExpr 0x7fb1c582ab00 <col:7> 'char *' <ArrayToPointerDecay>
+|   | |     |   `-StringLiteral 0x7fb1c582a738 <col:7> 'char [26]' lvalue "gtkcssstylepropertyimpl.c"
+|   | |     |-IntegerLiteral 0x7fb1c582a780 <line:91:7> 'int' 85
+|   | |     |-ParenExpr 0x7fb1c582a990 <line:92:7, col:43> 'const char *'
+|   | |     | `-CStyleCastExpr 0x7fb1c582a968 <col:8, col:42> 'const char *' <NoOp>
+|   | |     |   `-ImplicitCastExpr 0x7fb1c582a928 <col:22, col:42> 'const char *' <ArrayToPointerDecay>
+|   | |     |     `-ParenExpr 0x7fb1c582a908 <col:22, col:42> 'const char [94]' lvalue
+|   | |     |       `-PredefinedExpr 0x7fb1c582a8a0 <col:23> 'const char [94]' lvalue __PRETTY_FUNCTION__
+|   | |     |         `-StringLiteral 0x7fb1c582a818 <col:23> 'const char [94]' lvalue "void gtk_css_style_property_register(const char *, int, int, int, int *, int *, int *, int *)"
+|   | |     `-ImplicitCastExpr 0x7fb1c582ab48 <line:93:7> 'const char *' <BitCast>
+|   | |       `-ImplicitCastExpr 0x7fb1c582ab30 <col:7> 'char *' <ArrayToPointerDecay>
+|   | |         `-StringLiteral 0x7fb1c582aa00 <col:7> 'char [22]' lvalue "initial_value != NULL"
+|   | `-IntegerLiteral 0x7fb1c582abb8 <line:94:14> 'int' 0
+|   |-DoStmt 0x7fb1c582b448 <line:96:3, line:115:15>
+|   | |-CompoundStmt 0x7fb1c582b408 <line:97:5, line:115:5>
+|   | | `-IfStmt 0x7fb1c582b3d0 <line:98:7, line:114:28>
+|   | |   |-<<<NULL>>>
+|   | |   |-<<<NULL>>>
+|   | |   |-CallExpr 0x7fb1c582afb0 <line:98:11, line:107:9> 'long'
+|   | |   | |-ImplicitCastExpr 0x7fb1c582af98 <line:98:11> 'long (*)(long, long)' <BuiltinFnToFnPtr>
+|   | |   | | `-DeclRefExpr 0x7fb1c582abf8 <col:11> '<builtin fn type>' Function 0x7fb1c582a050 '__builtin_expect' 'long (long, long)'
+|   | |   | |-ImplicitCastExpr 0x7fb1c582afe8 <col:29, line:106:10> 'long' <IntegralCast>
+|   | |   | | `-UnaryOperator 0x7fb1c582af58 <line:98:29, line:106:10> 'int' prefix '__extension__'
+|   | |   | |   `-StmtExpr 0x7fb1c582af38 <line:98:43, line:106:10> 'int'
+|   | |   | |     `-CompoundStmt 0x7fb1c582af08 <line:99:9, line:106:9>
+|   | |   | |       |-DeclStmt 0x7fb1c582ac98 <line:100:11, col:30>
+|   | |   | |       | `-VarDecl 0x7fb1c582ac38 <col:11, col:15> col:15 used _g_boolean_var_ 'int'
+|   | |   | |       |-IfStmt 0x7fb1c582ae90 <line:101:11, line:104:31>
+|   | |   | |       | |-<<<NULL>>>
+|   | |   | |       | |-<<<NULL>>>
+|   | |   | |       | |-BinaryOperator 0x7fb1c582ad88 <line:101:15, col:40> 'int' '!='
+|   | |   | |       | | |-ImplicitCastExpr 0x7fb1c582ad58 <col:15> 'int *' <LValueToRValue>
+|   | |   | |       | | | `-DeclRefExpr 0x7fb1c582acb0 <col:15> 'int *' lvalue ParmVar 0x7fb1c5829c18 'parse_value' 'int *'
+|   | |   | |       | | `-ImplicitCastExpr 0x7fb1c582ad70 <col:30, col:40> 'int *' <BitCast>
+|   | |   | |       | |   `-ParenExpr 0x7fb1c582ad38 <col:30, col:40> 'void *'
+|   | |   | |       | |     `-CStyleCastExpr 0x7fb1c582ad10 <col:31, col:39> 'void *' <NullToPointer>
+|   | |   | |       | |       `-IntegerLiteral 0x7fb1c582acd8 <col:39> 'int' 0
+|   | |   | |       | |-BinaryOperator 0x7fb1c582adf8 <line:102:13, col:31> 'int' '='
+|   | |   | |       | | |-DeclRefExpr 0x7fb1c582adb0 <col:13> 'int' lvalue Var 0x7fb1c582ac38 '_g_boolean_var_' 'int'
+|   | |   | |       | | `-IntegerLiteral 0x7fb1c582add8 <col:31> 'int' 1
+|   | |   | |       | `-BinaryOperator 0x7fb1c582ae68 <line:104:13, col:31> 'int' '='
+|   | |   | |       |   |-DeclRefExpr 0x7fb1c582ae20 <col:13> 'int' lvalue Var 0x7fb1c582ac38 '_g_boolean_var_' 'int'
+|   | |   | |       |   `-IntegerLiteral 0x7fb1c582ae48 <col:31> 'int' 0
+|   | |   | |       `-ImplicitCastExpr 0x7fb1c582aef0 <line:105:11> 'int' <LValueToRValue>
+|   | |   | |         `-DeclRefExpr 0x7fb1c582aec8 <col:11> 'int' lvalue Var 0x7fb1c582ac38 '_g_boolean_var_' 'int'
+|   | |   | `-ImplicitCastExpr 0x7fb1c582b000 <line:107:8> 'long' <IntegralCast>
+|   | |   |   `-IntegerLiteral 0x7fb1c582af78 <col:8> 'int' 1
+|   | |   |-NullStmt 0x7fb1c582b018 <line:108:2>
+|   | |   `-CallExpr 0x7fb1c582b2f0 <line:110:2, line:114:28> 'void'
+|   | |     |-ImplicitCastExpr 0x7fb1c582b2d8 <line:110:2> 'void (*)(const char *, const char *, int, const char *, const char *) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |     | `-DeclRefExpr 0x7fb1c582b028 <col:2> 'void (const char *, const char *, int, const char *, const char *) __attribute__((noreturn))' Function 0x7fb1c5826620 'g_assertion_message_expr' 'void (const char *, const char *, int, const char *, const char *) __attribute__((noreturn))'
+|   | |     |-ImplicitCastExpr 0x7fb1c582b358 <col:28> 'const char *' <BitCast>
+|   | |     | `-ImplicitCastExpr 0x7fb1c582b340 <col:28> 'char *' <ArrayToPointerDecay>
+|   | |     |   `-StringLiteral 0x7fb1c582b050 <col:28> 'char [4]' lvalue "Gtk"
+|   | |     |-ImplicitCastExpr 0x7fb1c582b388 <line:111:7> 'const char *' <BitCast>
+|   | |     | `-ImplicitCastExpr 0x7fb1c582b370 <col:7> 'char *' <ArrayToPointerDecay>
+|   | |     |   `-StringLiteral 0x7fb1c582b080 <col:7> 'char [26]' lvalue "gtkcssstylepropertyimpl.c"
+|   | |     |-IntegerLiteral 0x7fb1c582b0c8 <line:112:7> 'int' 86
+|   | |     |-ParenExpr 0x7fb1c582b238 <line:113:7, col:43> 'const char *'
+|   | |     | `-CStyleCastExpr 0x7fb1c582b210 <col:8, col:42> 'const char *' <NoOp>
+|   | |     |   `-ImplicitCastExpr 0x7fb1c582b1f8 <col:22, col:42> 'const char *' <ArrayToPointerDecay>
+|   | |     |     `-ParenExpr 0x7fb1c582b1d8 <col:22, col:42> 'const char [94]' lvalue
+|   | |     |       `-PredefinedExpr 0x7fb1c582b170 <col:23> 'const char [94]' lvalue __PRETTY_FUNCTION__
+|   | |     |         `-StringLiteral 0x7fb1c582b0e8 <col:23> 'const char [94]' lvalue "void gtk_css_style_property_register(const char *, int, int, int, int *, int *, int *, int *)"
+|   | |     `-ImplicitCastExpr 0x7fb1c582b3b8 <line:114:7> 'const char *' <BitCast>
+|   | |       `-ImplicitCastExpr 0x7fb1c582b3a0 <col:7> 'char *' <ArrayToPointerDecay>
+|   | |         `-StringLiteral 0x7fb1c582b298 <col:7> 'char [20]' lvalue "parse_value != NULL"
+|   | `-IntegerLiteral 0x7fb1c582b428 <line:115:14> 'int' 0
+|   |-DoStmt 0x7fb1c582bec0 <line:117:3, line:136:15>
+|   | |-CompoundStmt 0x7fb1c582be80 <line:118:5, line:136:5>
+|   | | `-IfStmt 0x7fb1c582be48 <line:119:7, line:135:50>
+|   | |   |-<<<NULL>>>
+|   | |   |-<<<NULL>>>
+|   | |   |-CallExpr 0x7fb1c582ba18 <line:119:11, line:129:9> 'long'
+|   | |   | |-ImplicitCastExpr 0x7fb1c582ba00 <line:119:11> 'long (*)(long, long)' <BuiltinFnToFnPtr>
+|   | |   | | `-DeclRefExpr 0x7fb1c582b468 <col:11> '<builtin fn type>' Function 0x7fb1c582a050 '__builtin_expect' 'long (long, long)'
+|   | |   | |-ImplicitCastExpr 0x7fb1c582ba50 <col:29, line:128:10> 'long' <IntegralCast>
+|   | |   | | `-UnaryOperator 0x7fb1c582b9b0 <line:119:29, line:128:10> 'int' prefix '__extension__'
+|   | |   | |   `-StmtExpr 0x7fb1c582b990 <line:119:43, line:128:10> 'int'
+|   | |   | |     `-CompoundStmt 0x7fb1c582b960 <line:120:9, line:128:9>
+|   | |   | |       |-DeclStmt 0x7fb1c582b508 <line:121:11, col:30>
+|   | |   | |       | `-VarDecl 0x7fb1c582b4a8 <col:11, col:15> col:15 used _g_boolean_var_ 'int'
+|   | |   | |       |-IfStmt 0x7fb1c582b8e8 <line:122:11, line:126:31>
+|   | |   | |       | |-<<<NULL>>>
+|   | |   | |       | |-<<<NULL>>>
+|   | |   | |       | |-BinaryOperator 0x7fb1c582b7e0 <line:122:15, line:123:36> 'int' '||'
+|   | |   | |       | | |-BinaryOperator 0x7fb1c582b6b8 <line:122:15, col:48> 'int' '=='
+|   | |   | |       | | | |-ImplicitCastExpr 0x7fb1c582b6a0 <col:15> 'int' <LValueToRValue>
+|   | |   | |       | | | | `-DeclRefExpr 0x7fb1c582b520 <col:15> 'int' lvalue ParmVar 0x7fb1c5829b28 'value_type' 'int'
+|   | |   | |       | | | `-ParenExpr 0x7fb1c582b680 <col:29, col:48> 'int'
+|   | |   | |       | | |   `-CStyleCastExpr 0x7fb1c582b658 <col:30, col:47> 'int' <NoOp>
+|   | |   | |       | | |     `-ParenExpr 0x7fb1c582b638 <col:36, col:47> 'int'
+|   | |   | |       | | |       `-BinaryOperator 0x7fb1c582b5c8 <col:37, col:46> 'int' '<<'
+|   | |   | |       | | |         |-ParenExpr 0x7fb1c582b568 <col:37, col:39> 'int'
+|   | |   | |       | | |         | `-IntegerLiteral 0x7fb1c582b548 <col:38> 'int' 1
+|   | |   | |       | | |         `-ParenExpr 0x7fb1c582b5a8 <col:44, col:46> 'int'
+|   | |   | |       | | |           `-IntegerLiteral 0x7fb1c582b588 <col:45> 'int' 2
+|   | |   | |       | | `-BinaryOperator 0x7fb1c582b7b8 <line:123:11, col:36> 'int' '!='
+|   | |   | |       | |   |-ImplicitCastExpr 0x7fb1c582b788 <col:11> 'int *' <LValueToRValue>
+|   | |   | |       | |   | `-DeclRefExpr 0x7fb1c582b6e0 <col:11> 'int *' lvalue ParmVar 0x7fb1c5829c90 'query_value' 'int *'
+|   | |   | |       | |   `-ImplicitCastExpr 0x7fb1c582b7a0 <col:26, col:36> 'int *' <BitCast>
+|   | |   | |       | |     `-ParenExpr 0x7fb1c582b768 <col:26, col:36> 'void *'
+|   | |   | |       | |       `-CStyleCastExpr 0x7fb1c582b740 <col:27, col:35> 'void *' <NullToPointer>
+|   | |   | |       | |         `-IntegerLiteral 0x7fb1c582b708 <col:35> 'int' 0
+|   | |   | |       | |-BinaryOperator 0x7fb1c582b850 <line:124:13, col:31> 'int' '='
+|   | |   | |       | | |-DeclRefExpr 0x7fb1c582b808 <col:13> 'int' lvalue Var 0x7fb1c582b4a8 '_g_boolean_var_' 'int'
+|   | |   | |       | | `-IntegerLiteral 0x7fb1c582b830 <col:31> 'int' 1
+|   | |   | |       | `-BinaryOperator 0x7fb1c582b8c0 <line:126:13, col:31> 'int' '='
+|   | |   | |       |   |-DeclRefExpr 0x7fb1c582b878 <col:13> 'int' lvalue Var 0x7fb1c582b4a8 '_g_boolean_var_' 'int'
+|   | |   | |       |   `-IntegerLiteral 0x7fb1c582b8a0 <col:31> 'int' 0
+|   | |   | |       `-ImplicitCastExpr 0x7fb1c582b948 <line:127:11> 'int' <LValueToRValue>
+|   | |   | |         `-DeclRefExpr 0x7fb1c582b920 <col:11> 'int' lvalue Var 0x7fb1c582b4a8 '_g_boolean_var_' 'int'
+|   | |   | `-ImplicitCastExpr 0x7fb1c582ba68 <line:129:8> 'long' <IntegralCast>
+|   | |   |   `-IntegerLiteral 0x7fb1c582b9d0 <col:8> 'int' 1
+|   | |   |-NullStmt 0x7fb1c582ba80 <line:130:2>
+|   | |   `-CallExpr 0x7fb1c582bd68 <line:132:2, line:135:50> 'void'
+|   | |     |-ImplicitCastExpr 0x7fb1c582bd50 <line:132:2> 'void (*)(const char *, const char *, int, const char *, const char *) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |     | `-DeclRefExpr 0x7fb1c582ba90 <col:2> 'void (const char *, const char *, int, const char *, const char *) __attribute__((noreturn))' Function 0x7fb1c5826620 'g_assertion_message_expr' 'void (const char *, const char *, int, const char *, const char *) __attribute__((noreturn))'
+|   | |     |-ImplicitCastExpr 0x7fb1c582bdd0 <col:28> 'const char *' <BitCast>
+|   | |     | `-ImplicitCastExpr 0x7fb1c582bdb8 <col:28> 'char *' <ArrayToPointerDecay>
+|   | |     |   `-StringLiteral 0x7fb1c582bab8 <col:28> 'char [4]' lvalue "Gtk"
+|   | |     |-ImplicitCastExpr 0x7fb1c582be00 <line:133:7> 'const char *' <BitCast>
+|   | |     | `-ImplicitCastExpr 0x7fb1c582bde8 <col:7> 'char *' <ArrayToPointerDecay>
+|   | |     |   `-StringLiteral 0x7fb1c582bae8 <col:7> 'char [26]' lvalue "gtkcssstylepropertyimpl.c"
+|   | |     |-IntegerLiteral 0x7fb1c582bb30 <line:134:7> 'int' 87
+|   | |     |-ParenExpr 0x7fb1c582bca0 <col:11, col:47> 'const char *'
+|   | |     | `-CStyleCastExpr 0x7fb1c582bc78 <col:12, col:46> 'const char *' <NoOp>
+|   | |     |   `-ImplicitCastExpr 0x7fb1c582bc60 <col:26, col:46> 'const char *' <ArrayToPointerDecay>
+|   | |     |     `-ParenExpr 0x7fb1c582bc40 <col:26, col:46> 'const char [94]' lvalue
+|   | |     |       `-PredefinedExpr 0x7fb1c582bbd8 <col:27> 'const char [94]' lvalue __PRETTY_FUNCTION__
+|   | |     |         `-StringLiteral 0x7fb1c582bb50 <col:27> 'const char [94]' lvalue "void gtk_css_style_property_register(const char *, int, int, int, int *, int *, int *, int *)"
+|   | |     `-ImplicitCastExpr 0x7fb1c582be30 <line:135:7> 'const char *' <BitCast>
+|   | |       `-ImplicitCastExpr 0x7fb1c582be18 <col:7> 'char *' <ArrayToPointerDecay>
+|   | |         `-StringLiteral 0x7fb1c582bcf8 <col:7> 'char [42]' lvalue "value_type == NONE || query_value != NULL"
+|   | `-IntegerLiteral 0x7fb1c582bea0 <line:136:14> 'int' 0
+|   |-IfStmt 0x7fb1c582bfd8 <line:139:3, line:140:9>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fb1c582bf40 <line:139:7, col:17> 'int' '=='
+|   | | |-ImplicitCastExpr 0x7fb1c582bf28 <col:7> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fb1c582bee0 <col:7> 'int' lvalue ParmVar 0x7fb1c5829ba0 'flags' 'int'
+|   | | `-IntegerLiteral 0x7fb1c582bf08 <col:17> 'int' 15
+|   | |-BinaryOperator 0x7fb1c582bfb0 <line:140:5, col:9> 'int' '='
+|   | | |-DeclRefExpr 0x7fb1c582bf68 <col:5> 'int' lvalue Var 0x7fb1c5828988 't' 'int'
+|   | | `-IntegerLiteral 0x7fb1c582bf90 <col:9> 'int' 15
+|   | `-<<<NULL>>>
+|   |-DoStmt 0x7fb1c582c9d0 <line:142:3, line:161:15>
+|   | |-CompoundStmt 0x7fb1c582c990 <line:143:5, line:161:5>
+|   | | `-IfStmt 0x7fb1c582c958 <line:144:7, line:160:51>
+|   | |   |-<<<NULL>>>
+|   | |   |-<<<NULL>>>
+|   | |   |-CallExpr 0x7fb1c582c520 <line:144:11, line:154:9> 'long'
+|   | |   | |-ImplicitCastExpr 0x7fb1c582c508 <line:144:11> 'long (*)(long, long)' <BuiltinFnToFnPtr>
+|   | |   | | `-DeclRefExpr 0x7fb1c582c010 <col:11> '<builtin fn type>' Function 0x7fb1c582a050 '__builtin_expect' 'long (long, long)'
+|   | |   | |-ImplicitCastExpr 0x7fb1c582c558 <col:29, line:153:10> 'long' <IntegralCast>
+|   | |   | | `-UnaryOperator 0x7fb1c582c4c8 <line:144:29, line:153:10> 'int' prefix '__extension__'
+|   | |   | |   `-StmtExpr 0x7fb1c582c4a8 <line:144:43, line:153:10> 'int'
+|   | |   | |     `-CompoundStmt 0x7fb1c582c478 <line:145:9, line:153:9>
+|   | |   | |       |-DeclStmt 0x7fb1c582c0b0 <line:146:11, col:30>
+|   | |   | |       | `-VarDecl 0x7fb1c582c050 <col:11, col:15> col:15 used _g_boolean_var_ 'int'
+|   | |   | |       |-IfStmt 0x7fb1c582c400 <line:147:11, line:151:31>
+|   | |   | |       | |-<<<NULL>>>
+|   | |   | |       | |-<<<NULL>>>
+|   | |   | |       | |-BinaryOperator 0x7fb1c582c2f8 <line:147:15, line:148:37> 'int' '||'
+|   | |   | |       | | |-BinaryOperator 0x7fb1c582c1d0 <line:147:15, col:40> 'int' '=='
+|   | |   | |       | | | |-ImplicitCastExpr 0x7fb1c582c1b8 <col:15> 'int' <LValueToRValue>
+|   | |   | |       | | | | `-DeclRefExpr 0x7fb1c582c0c8 <col:15> 'int' lvalue ParmVar 0x7fb1c5829b28 'value_type' 'int'
+|   | |   | |       | | | `-ParenExpr 0x7fb1c582c198 <col:29, col:40> 'int'
+|   | |   | |       | | |   `-BinaryOperator 0x7fb1c582c170 <col:30, col:39> 'int' '<<'
+|   | |   | |       | | |     |-ParenExpr 0x7fb1c582c110 <col:30, col:32> 'int'
+|   | |   | |       | | |     | `-IntegerLiteral 0x7fb1c582c0f0 <col:31> 'int' 1
+|   | |   | |       | | |     `-ParenExpr 0x7fb1c582c150 <col:37, col:39> 'int'
+|   | |   | |       | | |       `-IntegerLiteral 0x7fb1c582c130 <col:38> 'int' 2
+|   | |   | |       | | `-BinaryOperator 0x7fb1c582c2d0 <line:148:11, col:37> 'int' '!='
+|   | |   | |       | |   |-ImplicitCastExpr 0x7fb1c582c2a0 <col:11> 'int *' <LValueToRValue>
+|   | |   | |       | |   | `-DeclRefExpr 0x7fb1c582c1f8 <col:11> 'int *' lvalue ParmVar 0x7fb1c5829d08 'assign_value' 'int *'
+|   | |   | |       | |   `-ImplicitCastExpr 0x7fb1c582c2b8 <col:27, col:37> 'int *' <BitCast>
+|   | |   | |       | |     `-ParenExpr 0x7fb1c582c280 <col:27, col:37> 'void *'
+|   | |   | |       | |       `-CStyleCastExpr 0x7fb1c582c258 <col:28, col:36> 'void *' <NullToPointer>
+|   | |   | |       | |         `-IntegerLiteral 0x7fb1c582c220 <col:36> 'int' 0
+|   | |   | |       | |-BinaryOperator 0x7fb1c582c368 <line:149:13, col:31> 'int' '='
+|   | |   | |       | | |-DeclRefExpr 0x7fb1c582c320 <col:13> 'int' lvalue Var 0x7fb1c582c050 '_g_boolean_var_' 'int'
+|   | |   | |       | | `-IntegerLiteral 0x7fb1c582c348 <col:31> 'int' 1
+|   | |   | |       | `-BinaryOperator 0x7fb1c582c3d8 <line:151:13, col:31> 'int' '='
+|   | |   | |       |   |-DeclRefExpr 0x7fb1c582c390 <col:13> 'int' lvalue Var 0x7fb1c582c050 '_g_boolean_var_' 'int'
+|   | |   | |       |   `-IntegerLiteral 0x7fb1c582c3b8 <col:31> 'int' 0
+|   | |   | |       `-ImplicitCastExpr 0x7fb1c582c460 <line:152:11> 'int' <LValueToRValue>
+|   | |   | |         `-DeclRefExpr 0x7fb1c582c438 <col:11> 'int' lvalue Var 0x7fb1c582c050 '_g_boolean_var_' 'int'
+|   | |   | `-ImplicitCastExpr 0x7fb1c582c570 <line:154:8> 'long' <IntegralCast>
+|   | |   |   `-IntegerLiteral 0x7fb1c582c4e8 <col:8> 'int' 1
+|   | |   |-NullStmt 0x7fb1c582c588 <line:155:2>
+|   | |   `-CallExpr 0x7fb1c582c878 <line:157:2, line:160:51> 'void'
+|   | |     |-ImplicitCastExpr 0x7fb1c582c860 <line:157:2> 'void (*)(const char *, const char *, int, const char *, const char *) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |     | `-DeclRefExpr 0x7fb1c582c598 <col:2> 'void (const char *, const char *, int, const char *, const char *) __attribute__((noreturn))' Function 0x7fb1c5826620 'g_assertion_message_expr' 'void (const char *, const char *, int, const char *, const char *) __attribute__((noreturn))'
+|   | |     |-ImplicitCastExpr 0x7fb1c582c8e0 <col:28> 'const char *' <BitCast>
+|   | |     | `-ImplicitCastExpr 0x7fb1c582c8c8 <col:28> 'char *' <ArrayToPointerDecay>
+|   | |     |   `-StringLiteral 0x7fb1c582c5c0 <col:28> 'char [4]' lvalue "Gtk"
+|   | |     |-ImplicitCastExpr 0x7fb1c582c910 <line:158:7> 'const char *' <BitCast>
+|   | |     | `-ImplicitCastExpr 0x7fb1c582c8f8 <col:7> 'char *' <ArrayToPointerDecay>
+|   | |     |   `-StringLiteral 0x7fb1c582c5f0 <col:7> 'char [26]' lvalue "gtkcssstylepropertyimpl.c"
+|   | |     |-IntegerLiteral 0x7fb1c582c638 <line:159:7> 'int' 88
+|   | |     |-ParenExpr 0x7fb1c582c7a8 <col:11, col:47> 'const char *'
+|   | |     | `-CStyleCastExpr 0x7fb1c582c780 <col:12, col:46> 'const char *' <NoOp>
+|   | |     |   `-ImplicitCastExpr 0x7fb1c582c768 <col:26, col:46> 'const char *' <ArrayToPointerDecay>
+|   | |     |     `-ParenExpr 0x7fb1c582c748 <col:26, col:46> 'const char [94]' lvalue
+|   | |     |       `-PredefinedExpr 0x7fb1c582c6e0 <col:27> 'const char [94]' lvalue __PRETTY_FUNCTION__
+|   | |     |         `-StringLiteral 0x7fb1c582c658 <col:27> 'const char [94]' lvalue "void gtk_css_style_property_register(const char *, int, int, int, int *, int *, int *, int *)"
+|   | |     `-ImplicitCastExpr 0x7fb1c582c940 <line:160:7> 'const char *' <BitCast>
+|   | |       `-ImplicitCastExpr 0x7fb1c582c928 <col:7> 'char *' <ArrayToPointerDecay>
+|   | |         `-StringLiteral 0x7fb1c582c808 <col:7> 'char [43]' lvalue "value_type == NONE || assign_value != NULL"
+|   | `-IntegerLiteral 0x7fb1c582c9b0 <line:161:14> 'int' 0
+|   |-BinaryOperator 0x7fb1c582dd60 <line:163:3, line:171:15> 'GtkCssStyleProperty *' '='
+|   | |-DeclRefExpr 0x7fb1c582d000 <line:163:3> 'GtkCssStyleProperty *' lvalue Var 0x7fb1c5829f98 'node' 'GtkCssStyleProperty *'
+|   | `-CallExpr 0x7fb1c582dbb0 <col:10, line:171:15> 'GtkCssStyleProperty *'
+|   |   |-ImplicitCastExpr 0x7fb1c582db98 <line:163:10> 'GtkCssStyleProperty *(*)(int, const char *, ...)' <FunctionToPointerDecay>
+|   |   | `-DeclRefExpr 0x7fb1c582d028 <col:10> 'GtkCssStyleProperty *(int, const char *, ...)' Function 0x7fb1c5827e40 'g_object_new' 'GtkCssStyleProperty *(int, const char *, ...)'
+|   |   |-ParenExpr 0x7fb1c582d0b8 <col:24, col:60> 'int'
+|   |   | `-CallExpr 0x7fb1c582d090 <col:25, col:59> 'int'
+|   |   |   `-ImplicitCastExpr 0x7fb1c582d078 <col:25> 'int (*)()' <FunctionToPointerDecay>
+|   |   |     `-DeclRefExpr 0x7fb1c582d050 <col:25> 'int ()' Function 0x7fb1c5827bb0 '_gtk_css_style_property_get_type' 'int ()'
+|   |   |-ImplicitCastExpr 0x7fb1c582dc70 <line:164:4> 'const char *' <BitCast>
+|   |   | `-ImplicitCastExpr 0x7fb1c582dc58 <col:4> 'char *' <ArrayToPointerDecay>
+|   |   |   `-StringLiteral 0x7fb1c582d118 <col:4> 'char [11]' lvalue "value-type"
+|   |   |-ImplicitCastExpr 0x7fb1c582dc88 <col:18> 'int' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7fb1c582d150 <col:18> 'int' lvalue ParmVar 0x7fb1c5829b28 'value_type' 'int'
+|   |   |-ImplicitCastExpr 0x7fb1c582dca0 <line:165:4> 'char *' <ArrayToPointerDecay>
+|   |   | `-StringLiteral 0x7fb1c582d1b8 <col:4> 'char [13]' lvalue "affects-size"
+|   |   |-ConditionalOperator 0x7fb1c582d360 <col:20, col:50> 'int'
+|   |   | |-ParenExpr 0x7fb1c582d280 <col:20, col:35> 'int'
+|   |   | | `-BinaryOperator 0x7fb1c582d258 <col:21, col:29> 'int' '&'
+|   |   | |   |-ImplicitCastExpr 0x7fb1c582d240 <col:21> 'int' <LValueToRValue>
+|   |   | |   | `-DeclRefExpr 0x7fb1c582d1f0 <col:21> 'int' lvalue ParmVar 0x7fb1c5829ba0 'flags' 'int'
+|   |   | |   `-DeclRefExpr 0x7fb1c582d218 <col:29> 'int' EnumConstant 0x7fb1c5828798 'RESIZE' 'int'
+|   |   | |-ParenExpr 0x7fb1c582d2c0 <col:39, col:41> 'int'
+|   |   | | `-IntegerLiteral 0x7fb1c582d2a0 <col:40> 'int' 0
+|   |   | `-ParenExpr 0x7fb1c582d340 <col:45, col:50> 'int'
+|   |   |   `-UnaryOperator 0x7fb1c582d320 <col:46, col:49> 'int' prefix '!'
+|   |   |     `-ParenExpr 0x7fb1c582d300 <col:47, col:49> 'int'
+|   |   |       `-IntegerLiteral 0x7fb1c582d2e0 <col:48> 'int' 0
+|   |   |-ImplicitCastExpr 0x7fb1c582dcb8 <line:166:4> 'char *' <ArrayToPointerDecay>
+|   |   | `-StringLiteral 0x7fb1c582d390 <col:4> 'char [13]' lvalue "affects-font"
+|   |   |-ConditionalOperator 0x7fb1c582d538 <col:20, col:48> 'int'
+|   |   | |-ParenExpr 0x7fb1c582d458 <col:20, col:33> 'int'
+|   |   | | `-BinaryOperator 0x7fb1c582d430 <col:21, col:29> 'int' '&'
+|   |   | |   |-ImplicitCastExpr 0x7fb1c582d418 <col:21> 'int' <LValueToRValue>
+|   |   | |   | `-DeclRefExpr 0x7fb1c582d3c8 <col:21> 'int' lvalue ParmVar 0x7fb1c5829ba0 'flags' 'int'
+|   |   | |   `-DeclRefExpr 0x7fb1c582d3f0 <col:29> 'int' EnumConstant 0x7fb1c5828868 'FONT' 'int'
+|   |   | |-ParenExpr 0x7fb1c582d4d8 <col:37, col:42> 'int'
+|   |   | | `-UnaryOperator 0x7fb1c582d4b8 <col:38, col:41> 'int' prefix '!'
+|   |   | |   `-ParenExpr 0x7fb1c582d498 <col:39, col:41> 'int'
+|   |   | |     `-IntegerLiteral 0x7fb1c582d478 <col:40> 'int' 0
+|   |   | `-ParenExpr 0x7fb1c582d518 <col:46, col:48> 'int'
+|   |   |   `-IntegerLiteral 0x7fb1c582d4f8 <col:47> 'int' 0
+|   |   |-ImplicitCastExpr 0x7fb1c582dcd0 <line:167:4> 'char *' <ArrayToPointerDecay>
+|   |   | `-StringLiteral 0x7fb1c582d5a8 <col:4> 'char [9]' lvalue "animated"
+|   |   |-ConditionalOperator 0x7fb1c582d748 <col:16, col:48> 'int'
+|   |   | |-ParenExpr 0x7fb1c582d668 <col:16, col:33> 'int'
+|   |   | | `-BinaryOperator 0x7fb1c582d640 <col:17, col:25> 'int' '&'
+|   |   | |   |-ImplicitCastExpr 0x7fb1c582d628 <col:17> 'int' <LValueToRValue>
+|   |   | |   | `-DeclRefExpr 0x7fb1c582d5d8 <col:17> 'int' lvalue ParmVar 0x7fb1c5829ba0 'flags' 'int'
+|   |   | |   `-DeclRefExpr 0x7fb1c582d600 <col:25> 'int' EnumConstant 0x7fb1c58286c8 'ANIMATED' 'int'
+|   |   | |-ParenExpr 0x7fb1c582d6e8 <col:37, col:42> 'int'
+|   |   | | `-UnaryOperator 0x7fb1c582d6c8 <col:38, col:41> 'int' prefix '!'
+|   |   | |   `-ParenExpr 0x7fb1c582d6a8 <col:39, col:41> 'int'
+|   |   | |     `-IntegerLiteral 0x7fb1c582d688 <col:40> 'int' 0
+|   |   | `-ParenExpr 0x7fb1c582d728 <col:46, col:48> 'int'
+|   |   |   `-IntegerLiteral 0x7fb1c582d708 <col:47> 'int' 0
+|   |   |-ImplicitCastExpr 0x7fb1c582dce8 <line:168:4> 'char *' <ArrayToPointerDecay>
+|   |   | `-StringLiteral 0x7fb1c582d7b8 <col:4> 'char [8]' lvalue "inherit"
+|   |   |-ConditionalOperator 0x7fb1c582d958 <col:15, col:46> 'int'
+|   |   | |-ParenExpr 0x7fb1c582d878 <col:15, col:31> 'int'
+|   |   | | `-BinaryOperator 0x7fb1c582d850 <col:16, col:24> 'int' '&'
+|   |   | |   |-ImplicitCastExpr 0x7fb1c582d838 <col:16> 'int' <LValueToRValue>
+|   |   | |   | `-DeclRefExpr 0x7fb1c582d7e8 <col:16> 'int' lvalue ParmVar 0x7fb1c5829ba0 'flags' 'int'
+|   |   | |   `-DeclRefExpr 0x7fb1c582d810 <col:24> 'int' EnumConstant 0x7fb1c58285f8 'INHERIT' 'int'
+|   |   | |-ParenExpr 0x7fb1c582d8f8 <col:35, col:40> 'int'
+|   |   | | `-UnaryOperator 0x7fb1c582d8d8 <col:36, col:39> 'int' prefix '!'
+|   |   | |   `-ParenExpr 0x7fb1c582d8b8 <col:37, col:39> 'int'
+|   |   | |     `-IntegerLiteral 0x7fb1c582d898 <col:38> 'int' 0
+|   |   | `-ParenExpr 0x7fb1c582d938 <col:44, col:46> 'int'
+|   |   |   `-IntegerLiteral 0x7fb1c582d918 <col:45> 'int' 0
+|   |   |-ImplicitCastExpr 0x7fb1c582dd00 <line:169:4> 'char *' <ArrayToPointerDecay>
+|   |   | `-StringLiteral 0x7fb1c582d9c8 <col:4> 'char [14]' lvalue "initial-value"
+|   |   |-ImplicitCastExpr 0x7fb1c582dd18 <col:21> 'int *' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7fb1c582da00 <col:21> 'int *' lvalue ParmVar 0x7fb1c5829d80 'initial_value' 'int *'
+|   |   |-ImplicitCastExpr 0x7fb1c582dd30 <line:170:4> 'char *' <ArrayToPointerDecay>
+|   |   | `-StringLiteral 0x7fb1c582da68 <col:4> 'char [5]' lvalue "name"
+|   |   |-ImplicitCastExpr 0x7fb1c582dd48 <col:12> 'const char *' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7fb1c582da98 <col:12> 'const char *' lvalue ParmVar 0x7fb1c5829a38 'name' 'const char *'
+|   |   `-ParenExpr 0x7fb1c582db20 <line:171:4, col:14> 'void *'
+|   |     `-CStyleCastExpr 0x7fb1c582daf8 <col:5, col:13> 'void *' <NullToPointer>
+|   |       `-IntegerLiteral 0x7fb1c582dac0 <col:13> 'int' 0
+|   |-BinaryOperator 0x7fb1c582de40 <line:173:3, col:23> 'int *' '='
+|   | |-MemberExpr 0x7fb1c582ddc8 <col:3, col:9> 'int *' lvalue ->parse_value 0x7fb1c5825e20
+|   | | `-ImplicitCastExpr 0x7fb1c582ddb0 <col:3> 'GtkCssStyleProperty *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7fb1c582dd88 <col:3> 'GtkCssStyleProperty *' lvalue Var 0x7fb1c5829f98 'node' 'GtkCssStyleProperty *'
+|   | `-ImplicitCastExpr 0x7fb1c582de28 <col:23> 'int *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fb1c582de00 <col:23> 'int *' lvalue ParmVar 0x7fb1c5829c18 'parse_value' 'int *'
+|   |-BinaryOperator 0x7fb1c582df20 <line:174:3, col:23> 'int *' '='
+|   | |-MemberExpr 0x7fb1c582dea8 <col:3, col:9> 'int *' lvalue ->query_value 0x7fb1c5825e80
+|   | | `-ImplicitCastExpr 0x7fb1c582de90 <col:3> 'GtkCssStyleProperty *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7fb1c582de68 <col:3> 'GtkCssStyleProperty *' lvalue Var 0x7fb1c5829f98 'node' 'GtkCssStyleProperty *'
+|   | `-ImplicitCastExpr 0x7fb1c582df08 <col:23> 'int *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fb1c582dee0 <col:23> 'int *' lvalue ParmVar 0x7fb1c5829c90 'query_value' 'int *'
+|   |-BinaryOperator 0x7fb1c582e000 <line:175:3, col:24> 'int *' '='
+|   | |-MemberExpr 0x7fb1c582df88 <col:3, col:9> 'int *' lvalue ->assign_value 0x7fb1c5825ee0
+|   | | `-ImplicitCastExpr 0x7fb1c582df70 <col:3> 'GtkCssStyleProperty *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7fb1c582df48 <col:3> 'GtkCssStyleProperty *' lvalue Var 0x7fb1c5829f98 'node' 'GtkCssStyleProperty *'
+|   | `-ImplicitCastExpr 0x7fb1c582dfe8 <col:24> 'int *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fb1c582dfc0 <col:24> 'int *' lvalue ParmVar 0x7fb1c5829d08 'assign_value' 'int *'
+|   `-DoStmt 0x7fb1c582e8f0 <line:177:3, line:196:15>
+|     |-CompoundStmt 0x7fb1c582e8b0 <line:178:5, line:196:5>
+|     | `-IfStmt 0x7fb1c582e878 <line:179:7, line:195:37>
+|     |   |-<<<NULL>>>
+|     |   |-<<<NULL>>>
+|     |   |-CallExpr 0x7fb1c582e450 <line:179:11, line:188:9> 'long'
+|     |   | |-ImplicitCastExpr 0x7fb1c582e438 <line:179:11> 'long (*)(long, long)' <BuiltinFnToFnPtr>
+|     |   | | `-DeclRefExpr 0x7fb1c582e028 <col:11> '<builtin fn type>' Function 0x7fb1c582a050 '__builtin_expect' 'long (long, long)'
+|     |   | |-ImplicitCastExpr 0x7fb1c582e488 <col:29, line:187:10> 'long' <IntegralCast>
+|     |   | | `-UnaryOperator 0x7fb1c582e3f8 <line:179:29, line:187:10> 'int' prefix '__extension__'
+|     |   | |   `-StmtExpr 0x7fb1c582e3d8 <line:179:43, line:187:10> 'int'
+|     |   | |     `-CompoundStmt 0x7fb1c582e3a8 <line:180:9, line:187:9>
+|     |   | |       |-DeclStmt 0x7fb1c582e0c8 <line:181:11, col:30>
+|     |   | |       | `-VarDecl 0x7fb1c582e068 <col:11, col:15> col:15 used _g_boolean_var_ 'int'
+|     |   | |       |-IfStmt 0x7fb1c582e330 <line:182:11, line:185:31>
+|     |   | |       | |-<<<NULL>>>
+|     |   | |       | |-<<<NULL>>>
+|     |   | |       | |-BinaryOperator 0x7fb1c582e228 <line:182:15, col:32> 'int' '=='
+|     |   | |       | | |-CallExpr 0x7fb1c582e1a0 <col:15, col:27> 'int'
+|     |   | |       | | | |-ImplicitCastExpr 0x7fb1c582e188 <col:15> 'int (*)(GtkCssStyleProperty *)' <FunctionToPointerDecay>
+|     |   | |       | | | | `-DeclRefExpr 0x7fb1c582e0e0 <col:15> 'int (GtkCssStyleProperty *)' Function 0x7fb1c5827a68 'get_id' 'int (GtkCssStyleProperty *)'
+|     |   | |       | | | `-ImplicitCastExpr 0x7fb1c582e1d0 <col:23> 'GtkCssStyleProperty *' <LValueToRValue>
+|     |   | |       | | |   `-DeclRefExpr 0x7fb1c582e108 <col:23> 'GtkCssStyleProperty *' lvalue Var 0x7fb1c5829f98 'node' 'GtkCssStyleProperty *'
+|     |   | |       | | `-ImplicitCastExpr 0x7fb1c582e210 <col:32> 'int' <LValueToRValue>
+|     |   | |       | |   `-DeclRefExpr 0x7fb1c582e1e8 <col:32> 'int' lvalue ParmVar 0x7fb1c5829ab0 'expected_id' 'int'
+|     |   | |       | |-BinaryOperator 0x7fb1c582e298 <line:183:13, col:31> 'int' '='
+|     |   | |       | | |-DeclRefExpr 0x7fb1c582e250 <col:13> 'int' lvalue Var 0x7fb1c582e068 '_g_boolean_var_' 'int'
+|     |   | |       | | `-IntegerLiteral 0x7fb1c582e278 <col:31> 'int' 1
+|     |   | |       | `-BinaryOperator 0x7fb1c582e308 <line:185:13, col:31> 'int' '='
+|     |   | |       |   |-DeclRefExpr 0x7fb1c582e2c0 <col:13> 'int' lvalue Var 0x7fb1c582e068 '_g_boolean_var_' 'int'
+|     |   | |       |   `-IntegerLiteral 0x7fb1c582e2e8 <col:31> 'int' 0
+|     |   | |       `-ImplicitCastExpr 0x7fb1c582e390 <line:186:11> 'int' <LValueToRValue>
+|     |   | |         `-DeclRefExpr 0x7fb1c582e368 <col:11> 'int' lvalue Var 0x7fb1c582e068 '_g_boolean_var_' 'int'
+|     |   | `-ImplicitCastExpr 0x7fb1c582e4a0 <line:188:8> 'long' <IntegralCast>
+|     |   |   `-IntegerLiteral 0x7fb1c582e418 <col:8> 'int' 1
+|     |   |-NullStmt 0x7fb1c582e4b8 <line:189:2>
+|     |   `-CallExpr 0x7fb1c582e798 <line:191:2, line:195:37> 'void'
+|     |     |-ImplicitCastExpr 0x7fb1c582e780 <line:191:2> 'void (*)(const char *, const char *, int, const char *, const char *) __attribute__((noreturn))' <FunctionToPointerDecay>
+|     |     | `-DeclRefExpr 0x7fb1c582e4c8 <col:2> 'void (const char *, const char *, int, const char *, const char *) __attribute__((noreturn))' Function 0x7fb1c5826620 'g_assertion_message_expr' 'void (const char *, const char *, int, const char *, const char *) __attribute__((noreturn))'
+|     |     |-ImplicitCastExpr 0x7fb1c582e800 <col:28> 'const char *' <BitCast>
+|     |     | `-ImplicitCastExpr 0x7fb1c582e7e8 <col:28> 'char *' <ArrayToPointerDecay>
+|     |     |   `-StringLiteral 0x7fb1c582e4f0 <col:28> 'char [4]' lvalue "Gtk"
+|     |     |-ImplicitCastExpr 0x7fb1c582e830 <line:192:7> 'const char *' <BitCast>
+|     |     | `-ImplicitCastExpr 0x7fb1c582e818 <col:7> 'char *' <ArrayToPointerDecay>
+|     |     |   `-StringLiteral 0x7fb1c582e520 <col:7> 'char [26]' lvalue "gtkcssstylepropertyimpl.c"
+|     |     |-IntegerLiteral 0x7fb1c582e568 <line:193:7> 'int' 106
+|     |     |-ParenExpr 0x7fb1c582e6d8 <line:194:7, col:43> 'const char *'
+|     |     | `-CStyleCastExpr 0x7fb1c582e6b0 <col:8, col:42> 'const char *' <NoOp>
+|     |     |   `-ImplicitCastExpr 0x7fb1c582e698 <col:22, col:42> 'const char *' <ArrayToPointerDecay>
+|     |     |     `-ParenExpr 0x7fb1c582e678 <col:22, col:42> 'const char [94]' lvalue
+|     |     |       `-PredefinedExpr 0x7fb1c582e610 <col:23> 'const char [94]' lvalue __PRETTY_FUNCTION__
+|     |     |         `-StringLiteral 0x7fb1c582e588 <col:23> 'const char [94]' lvalue "void gtk_css_style_property_register(const char *, int, int, int, int *, int *, int *, int *)"
+|     |     `-ImplicitCastExpr 0x7fb1c582e860 <line:195:7> 'const char *' <BitCast>
+|     |       `-ImplicitCastExpr 0x7fb1c582e848 <col:7> 'char *' <ArrayToPointerDecay>
+|     |         `-StringLiteral 0x7fb1c582e738 <col:7> 'char [29]' lvalue "get_id (node) == expected_id"
+|     `-IntegerLiteral 0x7fb1c582e8d0 <line:196:14> 'int' 0
+|-FunctionDecl 0x7fb1c582a050 <line:77:11> col:11 implicit used __builtin_expect 'long (long, long)' extern
+| |-ParmVarDecl 0x7fb1c582a0e8 <<invalid sloc>> <invalid sloc> 'long'
+| |-ParmVarDecl 0x7fb1c582a148 <<invalid sloc>> <invalid sloc> 'long'
+| |-NoThrowAttr 0x7fb1c582a1b8 <col:11> Implicit
+| `-ConstAttr 0x7fb1c582a200 <col:11> Implicit
+`-FunctionDecl 0x7fb1c582e9a8 <line:199:1, line:206:1> line:199:5 main 'int ()'
+  `-CompoundStmt 0x7fb1c582ee58 <line:200:1, line:206:1>
+    |-CallExpr 0x7fb1c582ec60 <line:201:3, col:68> 'void'
+    | |-ImplicitCastExpr 0x7fb1c582ec48 <col:3> 'void (*)(const char *, int, int, int, int *, int *, int *, int *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fb1c582ea40 <col:3> 'void (const char *, int, int, int, int *, int *, int *, int *)' Function 0x7fb1c5829eb0 'gtk_css_style_property_register' 'void (const char *, int, int, int, int *, int *, int *, int *)'
+    | |-ImplicitCastExpr 0x7fb1c582ece0 <col:36> 'const char *' <BitCast>
+    | | `-ImplicitCastExpr 0x7fb1c582ecc8 <col:36> 'char *' <ArrayToPointerDecay>
+    | |   `-StringLiteral 0x7fb1c582ea68 <col:36> 'char [5]' lvalue "test"
+    | |-IntegerLiteral 0x7fb1c582ea98 <col:44> 'int' 1
+    | |-IntegerLiteral 0x7fb1c582eab8 <col:47> 'int' 4
+    | |-IntegerLiteral 0x7fb1c582ead8 <col:50> 'int' 15
+    | |-UnaryOperator 0x7fb1c582eb20 <col:54, col:55> 'int *' prefix '&'
+    | | `-DeclRefExpr 0x7fb1c582eaf8 <col:55> 'int' lvalue Var 0x7fb1c5828988 't' 'int'
+    | |-UnaryOperator 0x7fb1c582eb68 <col:58, col:59> 'int *' prefix '&'
+    | | `-DeclRefExpr 0x7fb1c582eb40 <col:59> 'int' lvalue Var 0x7fb1c5828988 't' 'int'
+    | |-UnaryOperator 0x7fb1c582ebb0 <col:62, col:63> 'int *' prefix '&'
+    | | `-DeclRefExpr 0x7fb1c582eb88 <col:63> 'int' lvalue Var 0x7fb1c5828988 't' 'int'
+    | `-UnaryOperator 0x7fb1c582ebf8 <col:66, col:67> 'int *' prefix '&'
+    |   `-DeclRefExpr 0x7fb1c582ebd0 <col:67> 'int' lvalue Var 0x7fb1c5828988 't' 'int'
+    |-IfStmt 0x7fb1c582ede8 <line:203:3, line:204:22>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fb1c582ed58 <line:203:7, col:12> 'int' '!='
+    | | |-ImplicitCastExpr 0x7fb1c582ed40 <col:7> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fb1c582ecf8 <col:7> 'int' lvalue Var 0x7fb1c5828988 't' 'int'
+    | | `-IntegerLiteral 0x7fb1c582ed20 <col:12> 'int' 15
+    | |-CallExpr 0x7fb1c582edc0 <line:204:5, col:22> 'void'
+    | | `-ImplicitCastExpr 0x7fb1c582eda8 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+    | |   `-DeclRefExpr 0x7fb1c582ed80 <col:5> '<builtin fn type>' Function 0x7fb1c5826710 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fb1c582ee40 <line:205:3, col:10>
+      `-IntegerLiteral 0x7fb1c582ee20 <col:10> 'int' 0

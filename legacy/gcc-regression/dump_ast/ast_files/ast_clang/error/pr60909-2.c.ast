@@ -1,0 +1,37 @@
+c_files/pr60909-2.c:9:11: error: use of unknown builtin '__builtin_ia32_rdseed_si_step' [-Wimplicit-function-declaration]
+  int i = __builtin_ia32_rdseed_si_step (u);
+          ^
+1 error generated.
+TranslationUnitDecl 0x7fd5b18264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd5b1826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd5b1826740 '__int128'
+|-TypedefDecl 0x7fd5b1826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd5b1826760 'unsigned __int128'
+|-TypedefDecl 0x7fd5b1826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd5b1826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd5b1826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd5b1826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd5b1826dc0 'char *'
+|   `-BuiltinType 0x7fd5b1826560 'char'
+|-TypedefDecl 0x7fd5b18270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd5b1827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd5b1826ee0 'struct __va_list_tag'
+|     `-Record 0x7fd5b1826e58 '__va_list_tag'
+|-FunctionDecl 0x7fd5b1877400 <c_files/pr60909-2.c:4:1, col:21> col:13 used bar 'void (int)' extern
+| `-ParmVarDecl 0x7fd5b1827138 <col:18> col:21 'int'
+|-FunctionDecl 0x7fd5b18775e0 <line:6:1, line:11:1> line:7:1 foo 'void (unsigned int *)'
+| |-ParmVarDecl 0x7fd5b1877520 <col:6, col:16> col:16 used u 'unsigned int *'
+| `-CompoundStmt 0x7fd5b18779c8 <line:8:1, line:11:1>
+|   |-DeclStmt 0x7fd5b18778d8 <line:9:3, col:44>
+|   | `-VarDecl 0x7fd5b1877698 <col:3, col:43> col:7 used i 'int' cinit
+|   |   `-CallExpr 0x7fd5b1877890 <col:11, col:43> 'int'
+|   |     |-ImplicitCastExpr 0x7fd5b1877878 <col:11> 'int (*)()' <FunctionToPointerDecay>
+|   |     | `-DeclRefExpr 0x7fd5b18777f8 <col:11> 'int ()' Function 0x7fd5b1877760 '__builtin_ia32_rdseed_si_step' 'int ()'
+|   |     `-ImplicitCastExpr 0x7fd5b18778c0 <col:42> 'unsigned int *' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7fd5b1877820 <col:42> 'unsigned int *' lvalue ParmVar 0x7fd5b1877520 'u' 'unsigned int *'
+|   `-CallExpr 0x7fd5b1877980 <line:10:3, col:9> 'void'
+|     |-ImplicitCastExpr 0x7fd5b1877968 <col:3> 'void (*)(int)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fd5b18778f0 <col:3> 'void (int)' Function 0x7fd5b1877400 'bar' 'void (int)'
+|     `-ImplicitCastExpr 0x7fd5b18779b0 <col:8> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd5b1877918 <col:8> 'int' lvalue Var 0x7fd5b1877698 'i' 'int'
+`-FunctionDecl 0x7fd5b1877760 <<invalid sloc>> line:9:11 implicit used __builtin_ia32_rdseed_si_step 'int ()'

@@ -1,0 +1,27 @@
+FileAST: 
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: &&
+          UnaryOp: !
+            FuncCall: 
+              ID: __builtin_cpu_supports
+              ExprList: 
+                Constant: string, "avx512f"
+          BinaryOp: ||
+            FuncCall: 
+              ID: __builtin_cpu_supports
+              ExprList: 
+                Constant: string, "avx512vnni"
+            FuncCall: 
+              ID: __builtin_cpu_supports
+              ExprList: 
+                Constant: string, "avx512bitalg"
+        FuncCall: 
+          ID: __builtin_abort
+      Return: 
+        Constant: int, 0

@@ -1,0 +1,31 @@
+FileAST: 
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['unsigned', 'long']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            PtrDecl: []
+              TypeDecl: a, []
+                IdentifierType: ['float']
+          Decl: x, [], [], []
+            PtrDecl: []
+              TypeDecl: x, []
+                IdentifierType: ['float']
+        TypeDecl: foo, []
+          IdentifierType: ['unsigned', 'long']
+    Compound: 
+      FuncCall: 
+        ID: __builtin_memcpy
+        ExprList: 
+          ID: a
+          ID: x
+          UnaryOp: sizeof
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['float']
+      Return: 
+        UnaryOp: *
+          ID: a

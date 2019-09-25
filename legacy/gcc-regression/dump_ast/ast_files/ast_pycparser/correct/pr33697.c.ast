@@ -1,0 +1,45 @@
+FileAST: 
+  Typedef: gint16, [], ['typedef']
+    TypeDecl: gint16, []
+      IdentifierType: ['signed', 'short']
+  Typedef: guint16, [], ['typedef']
+    TypeDecl: guint16, []
+      IdentifierType: ['unsigned', 'short']
+  FuncDef: 
+    Decl: dissect_old_pflog, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: rnr, [], [], []
+            TypeDecl: rnr, []
+              IdentifierType: ['gint16']
+        TypeDecl: dissect_old_pflog, []
+          IdentifierType: ['gint16']
+    Compound: 
+      Return: 
+        Cast: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['guint16']
+          BinaryOp: |
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['guint16']
+              BinaryOp: >>
+                Cast: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['guint16']
+                  ID: rnr
+                Constant: int, 8
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['guint16']
+              BinaryOp: <<
+                Cast: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['guint16']
+                  ID: rnr
+                Constant: int, 8

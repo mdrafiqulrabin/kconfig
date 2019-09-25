@@ -1,0 +1,70 @@
+FileAST: 
+  Typedef: jpc_enc_pass_t, [], ['typedef']
+    TypeDecl: jpc_enc_pass_t, []
+      Struct: None
+        Decl: end, [], [], []
+          TypeDecl: end, []
+            IdentifierType: ['int']
+        Decl: term, [], [], []
+          TypeDecl: term, []
+            IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: numpasses, [], [], []
+            TypeDecl: numpasses, []
+              IdentifierType: ['int']
+          Decl: p, [], [], []
+            PtrDecl: []
+              TypeDecl: p, []
+                IdentifierType: ['jpc_enc_pass_t']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: pass, [], [], []
+        PtrDecl: []
+          TypeDecl: pass, []
+            IdentifierType: ['jpc_enc_pass_t']
+      Decl: termpass, [], [], []
+        PtrDecl: []
+          TypeDecl: termpass, []
+            IdentifierType: ['jpc_enc_pass_t']
+      For: 
+        Assignment: =
+          ID: pass
+          ID: p
+        BinaryOp: !=
+          ID: pass
+          ID: termpass
+        UnaryOp: ++
+          ID: pass
+        If: 
+          UnaryOp: !
+            StructRef: ->
+              ID: pass
+              ID: term
+          Compound: 
+            Assignment: =
+              ID: termpass
+              ID: pass
+            While: 
+              BinaryOp: &&
+                BinaryOp: <
+                  BinaryOp: -
+                    ID: termpass
+                    ID: pass
+                  ID: numpasses
+                UnaryOp: !
+                  StructRef: ->
+                    ID: termpass
+                    ID: term
+              UnaryOp: ++
+                ID: termpass
+            Assignment: =
+              StructRef: ->
+                ID: pass
+                ID: end
+              StructRef: ->
+                ID: termpass
+                ID: end

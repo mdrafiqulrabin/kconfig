@@ -1,0 +1,90 @@
+TranslationUnitDecl 0x7fa0598264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa059826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa059826740 '__int128'
+|-TypedefDecl 0x7fa059826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa059826760 'unsigned __int128'
+|-TypedefDecl 0x7fa059826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa059826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa059826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa059826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa059826dc0 'char *'
+|   `-BuiltinType 0x7fa059826560 'char'
+|-TypedefDecl 0x7fa0598270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa059827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa059826ee0 'struct __va_list_tag'
+|     `-Record 0x7fa059826e58 '__va_list_tag'
+|-FunctionDecl 0x7fa059877430 <c_files/pr39132.c:4:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fa0598774c8 prev 0x7fa059877430 <col:1, col:23> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-RecordDecl 0x7fa059877560 <line:6:1, line:10:1> line:6:8 struct epic_private definition
+| |-FieldDecl 0x7fa059877650 <line:8:3, col:17> col:17 referenced rx_ring 'unsigned int *'
+| `-FieldDecl 0x7fa059877720 <line:9:3, col:27> col:16 referenced rx_skbuff 'unsigned int [5]'
+`-FunctionDecl 0x7fa059877838 <line:12:1, line:33:1> line:13:1 main 'int (void)'
+  `-CompoundStmt 0x7fa059878418 <line:14:1, line:33:1>
+    |-DeclStmt 0x7fa0598779f0 <line:15:3, col:25>
+    | `-VarDecl 0x7fa059877990 <col:3, col:23> col:23 used ep 'struct epic_private':'struct epic_private'
+    |-DeclStmt 0x7fa059877ab0 <line:16:3, col:26>
+    | `-VarDecl 0x7fa059877a50 <col:3, col:25> col:16 used rx_ring 'unsigned int [5]'
+    |-DeclStmt 0x7fa059877b40 <line:17:3, col:8>
+    | `-VarDecl 0x7fa059877ae0 <col:3, col:7> col:7 used i 'int'
+    |-BinaryOperator 0x7fa059877c50 <line:19:3, col:21> 'unsigned int' '='
+    | |-ArraySubscriptExpr 0x7fa059877bf0 <col:3, col:17> 'unsigned int' lvalue
+    | | |-ImplicitCastExpr 0x7fa059877bd8 <col:3, col:6> 'unsigned int *' <ArrayToPointerDecay>
+    | | | `-MemberExpr 0x7fa059877b80 <col:3, col:6> 'unsigned int [5]' lvalue .rx_skbuff 0x7fa059877720
+    | | |   `-DeclRefExpr 0x7fa059877b58 <col:3> 'struct epic_private':'struct epic_private' lvalue Var 0x7fa059877990 'ep' 'struct epic_private':'struct epic_private'
+    | | `-IntegerLiteral 0x7fa059877bb8 <col:16> 'int' 0
+    | `-ImplicitCastExpr 0x7fa059877c38 <col:21> 'unsigned int' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa059877c18 <col:21> 'int' 5
+    |-BinaryOperator 0x7fa059877d68 <line:21:3, col:16> 'unsigned int *' '='
+    | |-MemberExpr 0x7fa059877cf0 <col:3, col:6> 'unsigned int *' lvalue .rx_ring 0x7fa059877650
+    | | `-DeclRefExpr 0x7fa059877cc8 <col:3> 'struct epic_private':'struct epic_private' lvalue Var 0x7fa059877990 'ep' 'struct epic_private':'struct epic_private'
+    | `-ImplicitCastExpr 0x7fa059877d50 <col:16> 'unsigned int *' <ArrayToPointerDecay>
+    |   `-DeclRefExpr 0x7fa059877d28 <col:16> 'unsigned int [5]' lvalue Var 0x7fa059877a50 'rx_ring' 'unsigned int [5]'
+    |-ForStmt 0x7fa059878198 <line:23:3, line:27:5>
+    | |-BinaryOperator 0x7fa059877dd8 <line:23:8, col:12> 'int' '='
+    | | |-DeclRefExpr 0x7fa059877d90 <col:8> 'int' lvalue Var 0x7fa059877ae0 'i' 'int'
+    | | `-IntegerLiteral 0x7fa059877db8 <col:12> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fa059877e60 <col:15, col:19> 'int' '<'
+    | | |-ImplicitCastExpr 0x7fa059877e48 <col:15> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fa059877e00 <col:15> 'int' lvalue Var 0x7fa059877ae0 'i' 'int'
+    | | `-IntegerLiteral 0x7fa059877e28 <col:19> 'int' 5
+    | |-UnaryOperator 0x7fa059877eb0 <col:22, col:23> 'int' postfix '++'
+    | | `-DeclRefExpr 0x7fa059877e88 <col:22> 'int' lvalue Var 0x7fa059877ae0 'i' 'int'
+    | `-CompoundStmt 0x7fa059878170 <line:24:5, line:27:5>
+    |   |-BinaryOperator 0x7fa059878008 <line:25:7, col:23> 'unsigned int' '='
+    |   | |-ArraySubscriptExpr 0x7fa059877f88 <col:7, col:19> 'unsigned int' lvalue
+    |   | | |-ImplicitCastExpr 0x7fa059877f58 <col:7, col:10> 'unsigned int *' <LValueToRValue>
+    |   | | | `-MemberExpr 0x7fa059877ef8 <col:7, col:10> 'unsigned int *' lvalue .rx_ring 0x7fa059877650
+    |   | | |   `-DeclRefExpr 0x7fa059877ed0 <col:7> 'struct epic_private':'struct epic_private' lvalue Var 0x7fa059877990 'ep' 'struct epic_private':'struct epic_private'
+    |   | | `-ImplicitCastExpr 0x7fa059877f70 <col:18> 'int' <LValueToRValue>
+    |   | |   `-DeclRefExpr 0x7fa059877f30 <col:18> 'int' lvalue Var 0x7fa059877ae0 'i' 'int'
+    |   | `-ImplicitCastExpr 0x7fa059877ff0 <col:23> 'unsigned int' <IntegralCast>
+    |   |   `-ImplicitCastExpr 0x7fa059877fd8 <col:23> 'int' <LValueToRValue>
+    |   |     `-DeclRefExpr 0x7fa059877fb0 <col:23> 'int' lvalue Var 0x7fa059877ae0 'i' 'int'
+    |   `-BinaryOperator 0x7fa059878148 <line:26:7, col:25> 'unsigned int' '='
+    |     |-ArraySubscriptExpr 0x7fa0598780e8 <col:7, col:21> 'unsigned int' lvalue
+    |     | |-ImplicitCastExpr 0x7fa0598780b8 <col:7, col:10> 'unsigned int *' <ArrayToPointerDecay>
+    |     | | `-MemberExpr 0x7fa059878058 <col:7, col:10> 'unsigned int [5]' lvalue .rx_skbuff 0x7fa059877720
+    |     | |   `-DeclRefExpr 0x7fa059878030 <col:7> 'struct epic_private':'struct epic_private' lvalue Var 0x7fa059877990 'ep' 'struct epic_private':'struct epic_private'
+    |     | `-ImplicitCastExpr 0x7fa0598780d0 <col:20> 'int' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x7fa059878090 <col:20> 'int' lvalue Var 0x7fa059877ae0 'i' 'int'
+    |     `-ImplicitCastExpr 0x7fa059878130 <col:25> 'unsigned int' <IntegralCast>
+    |       `-IntegerLiteral 0x7fa059878110 <col:25> 'int' 0
+    |-IfStmt 0x7fa059878398 <line:29:3, line:30:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fa0598782e0 <line:29:7, col:26> 'int' '!='
+    | | |-ImplicitCastExpr 0x7fa0598782b0 <col:7, col:21> 'unsigned int' <LValueToRValue>
+    | | | `-ArraySubscriptExpr 0x7fa059878268 <col:7, col:21> 'unsigned int' lvalue
+    | | |   |-ImplicitCastExpr 0x7fa059878250 <col:7, col:10> 'unsigned int *' <ArrayToPointerDecay>
+    | | |   | `-MemberExpr 0x7fa0598781f8 <col:7, col:10> 'unsigned int [5]' lvalue .rx_skbuff 0x7fa059877720
+    | | |   |   `-DeclRefExpr 0x7fa0598781d0 <col:7> 'struct epic_private':'struct epic_private' lvalue Var 0x7fa059877990 'ep' 'struct epic_private':'struct epic_private'
+    | | |   `-IntegerLiteral 0x7fa059878230 <col:20> 'int' 0
+    | | `-ImplicitCastExpr 0x7fa0598782c8 <col:26> 'unsigned int' <IntegralCast>
+    | |   `-IntegerLiteral 0x7fa059878290 <col:26> 'int' 0
+    | |-CallExpr 0x7fa059878370 <line:30:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fa059878358 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fa059878308 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fa0598774c8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fa059878400 <line:32:3, col:10>
+      `-IntegerLiteral 0x7fa0598783d0 <col:10> 'int' 0

@@ -1,0 +1,38 @@
+TranslationUnitDecl 0x7ff1e40264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff1e4026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff1e4026740 '__int128'
+|-TypedefDecl 0x7ff1e4026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff1e4026760 'unsigned __int128'
+|-TypedefDecl 0x7ff1e4026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff1e4026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff1e4026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff1e4026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff1e4026dc0 'char *'
+|   `-BuiltinType 0x7ff1e4026560 'char'
+|-TypedefDecl 0x7ff1e40270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff1e4027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff1e4026ee0 'struct __va_list_tag'
+|     `-Record 0x7ff1e4026e58 '__va_list_tag'
+`-FunctionDecl 0x7ff1e40774d8 <c_files/pr51236.c:4:1, line:12:1> line:4:6 foo 'long (long *, int)'
+  |-ParmVarDecl 0x7ff1e4027160 <col:11, col:17> col:17 used p 'long *'
+  |-ParmVarDecl 0x7ff1e4077400 <col:20, col:24> col:24 used i 'int'
+  `-CompoundStmt 0x7ff1e4077868 <line:5:1, line:12:1>
+    |-DeclStmt 0x7ff1e4077670 <line:6:3, col:13>
+    | `-VarDecl 0x7ff1e40775d8 <col:3, col:12> col:8 used x 'long' cinit
+    |   `-ImplicitCastExpr 0x7ff1e4077658 <col:12> 'long' <IntegralCast>
+    |     `-IntegerLiteral 0x7ff1e4077638 <col:12> 'int' 0
+    |-WhileStmt 0x7ff1e40777f0 <line:8:3, line:9:13>
+    | |-<<<NULL>>>
+    | |-UnaryOperator 0x7ff1e40776b0 <line:8:10, col:12> 'int' prefix '--'
+    | | `-DeclRefExpr 0x7ff1e4077688 <col:12> 'int' lvalue ParmVar 0x7ff1e4077400 'i' 'int'
+    | `-CompoundAssignOperator 0x7ff1e40777b8 <line:9:5, col:13> 'long' '^=' ComputeLHSTy='long' ComputeResultTy='long'
+    |   |-DeclRefExpr 0x7ff1e40776d0 <col:5> 'long' lvalue Var 0x7ff1e40775d8 'x' 'long'
+    |   `-ImplicitCastExpr 0x7ff1e40777a0 <col:10, col:13> 'long' <LValueToRValue>
+    |     `-ArraySubscriptExpr 0x7ff1e4077778 <col:10, col:13> 'long' lvalue
+    |       |-ImplicitCastExpr 0x7ff1e4077748 <col:10> 'long *' <LValueToRValue>
+    |       | `-DeclRefExpr 0x7ff1e40776f8 <col:10> 'long *' lvalue ParmVar 0x7ff1e4027160 'p' 'long *'
+    |       `-ImplicitCastExpr 0x7ff1e4077760 <col:12> 'int' <LValueToRValue>
+    |         `-DeclRefExpr 0x7ff1e4077720 <col:12> 'int' lvalue ParmVar 0x7ff1e4077400 'i' 'int'
+    `-ReturnStmt 0x7ff1e4077850 <line:11:3, col:10>
+      `-ImplicitCastExpr 0x7ff1e4077838 <col:10> 'long' <LValueToRValue>
+        `-DeclRefExpr 0x7ff1e4077810 <col:10> 'long' lvalue Var 0x7ff1e40775d8 'x' 'long'

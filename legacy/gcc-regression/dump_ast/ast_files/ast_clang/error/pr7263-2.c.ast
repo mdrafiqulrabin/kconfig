@@ -1,0 +1,33 @@
+c_files/pr7263-2.c:4:10: fatal error: 'pr7263-2.h' file not found
+#include "pr7263-2.h"
+         ^~~~~~~~~~~~
+1 error generated.
+TranslationUnitDecl 0x7f8901018ed0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8901019420 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8901019140 '__int128'
+|-TypedefDecl 0x7f8901019490 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8901019160 'unsigned __int128'
+|-TypedefDecl 0x7f8901019768 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8901019570 'struct __NSConstantString_tag'
+|   `-Record 0x7f89010194e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8901019800 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f89010197c0 'char *'
+|   `-BuiltinType 0x7f8901018f60 'char'
+|-TypedefDecl 0x7f8901019ac8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8901019a70 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f89010198e0 'struct __va_list_tag'
+|     `-Record 0x7f8901019858 '__va_list_tag'
+|-FunctionDecl 0x7f8900829000 <c_files/pr7263-2.c:5:1, line:9:1> line:6:1 bar 'unsigned long long ()'
+| `-CompoundStmt 0x7f8900829100 <line:7:1, line:9:1>
+|-FunctionDecl 0x7f8900829140 <line:11:1, line:15:1> line:12:1 bar2 'unsigned long long ()'
+| `-CompoundStmt 0x7f8900829210 <line:13:1, line:15:1>
+|   `-ReturnStmt 0x7f89008291f8 <line:14:3, col:10>
+|     `-IntegerLiteral 0x7f89008291d8 <col:10> 'unsigned long long' 1956772631100509574
+|-FunctionDecl 0x7f8900829258 <line:18:1, line:22:1> line:19:1 bar3 'unsigned long long ()'
+| `-CompoundStmt 0x7f8900829368 <line:20:1, line:22:1>
+|   `-ReturnStmt 0x7f8900829350 <line:21:3, col:46>
+|     `-UnaryOperator 0x7f8900829330 <col:10, col:46> 'unsigned long long' prefix '__extension__'
+|       `-ParenExpr 0x7f8900829310 <col:24, col:46> 'unsigned long long'
+|         `-IntegerLiteral 0x7f89008292f0 <col:25> 'unsigned long long' 1956772631100509574
+`-FunctionDecl 0x7f89008293b0 <line:24:15, line:28:1> line:25:1 bar4 'unsigned long long ()'
+  `-CompoundStmt 0x7f8900829448 <line:26:1, line:28:1>

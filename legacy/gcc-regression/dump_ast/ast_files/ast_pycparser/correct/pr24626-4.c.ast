@@ -1,0 +1,58 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: vec1, [], [], []
+            PtrDecl: []
+              TypeDecl: vec1, []
+                IdentifierType: ['short']
+          Decl: vec2, [], [], []
+            PtrDecl: []
+              TypeDecl: vec2, []
+                IdentifierType: ['short']
+          Decl: vec3, [], [], []
+            PtrDecl: []
+              TypeDecl: vec3, []
+                IdentifierType: ['short']
+          Decl: len, [], [], []
+            TypeDecl: len, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: temp, [], [], []
+        TypeDecl: temp, []
+          IdentifierType: ['int']
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          ID: len
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          Assignment: =
+            ID: temp
+            BinaryOp: *
+              ArrayRef: 
+                ID: vec1
+                ID: i
+              Constant: int, 2
+          Assignment: +=
+            ID: temp
+            BinaryOp: *
+              ArrayRef: 
+                ID: vec2
+                ID: i
+              Constant: int, 3
+          Assignment: =
+            ArrayRef: 
+              ID: vec3
+              ID: i
+            ID: temp

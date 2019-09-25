@@ -1,0 +1,267 @@
+FileAST: 
+  Decl: sqrt, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['double']
+      TypeDecl: sqrt, []
+        IdentifierType: ['double']
+  Decl: fabs, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['double']
+      TypeDecl: fabs, []
+        IdentifierType: ['double']
+  Decl: sin, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['double']
+      TypeDecl: sin, []
+        IdentifierType: ['double']
+  Decl: sxs, [], [], []
+    TypeDecl: sxs, []
+      IdentifierType: ['int']
+  Decl: sys, [], [], []
+    TypeDecl: sys, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        TypeDecl: f, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: l, [], [], []
+        TypeDecl: l, []
+          IdentifierType: ['int']
+      Decl: sm, [], [], []
+        TypeDecl: sm, []
+          IdentifierType: ['int']
+        UnaryOp: -
+          Constant: int, 52
+      Decl: sx, [], [], []
+        TypeDecl: sx, []
+          IdentifierType: ['int']
+        Constant: int, 52
+      Decl: smap, [], [], []
+        PtrDecl: []
+          TypeDecl: smap, []
+            IdentifierType: ['char']
+      For: 
+        Assignment: =
+          ID: l
+          Constant: int, 0
+        BinaryOp: <
+          ID: l
+          Constant: int, 9
+        UnaryOp: p++
+          ID: l
+        Compound: 
+          Decl: g, [], [], []
+            TypeDecl: g, []
+              IdentifierType: ['double']
+          Decl: cx, [], [], []
+            TypeDecl: cx, []
+              IdentifierType: ['int']
+          Decl: cy, [], [], []
+            TypeDecl: cy, []
+              IdentifierType: ['int']
+          Decl: gx, [], [], []
+            TypeDecl: gx, []
+              IdentifierType: ['int']
+          Decl: gy, [], [], []
+            TypeDecl: gy, []
+              IdentifierType: ['int']
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['int']
+          Assignment: =
+            ID: gx
+            TernaryOp: 
+              BinaryOp: >
+                Constant: int, 2
+                BinaryOp: /
+                  ID: g
+                  Constant: int, 3
+              Constant: int, 2
+              BinaryOp: /
+                ID: g
+                Constant: int, 3
+          Assignment: =
+            ID: gy
+            TernaryOp: 
+              BinaryOp: >
+                Constant: int, 2
+                BinaryOp: /
+                  ID: g
+                  Constant: int, 3
+              Constant: int, 2
+              BinaryOp: /
+                ID: g
+                Constant: int, 3
+          For: 
+            Assignment: =
+              ID: y
+              TernaryOp: 
+                BinaryOp: >
+                  Constant: int, 0
+                  BinaryOp: -
+                    ID: cy
+                    ID: gy
+                Constant: int, 0
+                BinaryOp: -
+                  ID: cy
+                  ID: gy
+            BinaryOp: <=
+              ID: y
+              TernaryOp: 
+                BinaryOp: <
+                  BinaryOp: -
+                    ID: sys
+                    Constant: int, 1
+                  BinaryOp: +
+                    ID: cy
+                    ID: gy
+                ID: sys
+                BinaryOp: +
+                  ID: cy
+                  ID: gy
+            UnaryOp: p++
+              ID: y
+            Compound: 
+              Decl: sx, [], [], []
+                TypeDecl: sx, []
+                  IdentifierType: ['int']
+                TernaryOp: 
+                  BinaryOp: >
+                    Constant: int, 0
+                    BinaryOp: -
+                      ID: cx
+                      ID: gx
+                  Constant: int, 0
+                  BinaryOp: -
+                    ID: cx
+                    ID: gx
+              Decl: ax, [], [], []
+                PtrDecl: []
+                  TypeDecl: ax, []
+                    IdentifierType: ['short']
+                Cast: 
+                  Typename: None, []
+                    PtrDecl: []
+                      TypeDecl: None, []
+                        IdentifierType: ['short']
+                  BinaryOp: +
+                    BinaryOp: *
+                      ID: y
+                      ID: sxs
+                    ID: sx
+              For: 
+                Assignment: =
+                  ID: x
+                  ID: sx
+                BinaryOp: <=
+                  ID: x
+                  TernaryOp: 
+                    BinaryOp: <
+                      BinaryOp: -
+                        ID: sxs
+                        Constant: int, 1
+                      BinaryOp: +
+                        ID: cx
+                        ID: gx
+                    BinaryOp: -
+                      ID: sxs
+                      Constant: int, 1
+                    BinaryOp: +
+                      ID: cx
+                      ID: gx
+                UnaryOp: p++
+                  ID: x
+                Compound: 
+                  Decl: c, [], [], []
+                    TypeDecl: c, []
+                      IdentifierType: ['double']
+                    Constant: float, 2.25
+                  Decl: z, [], [], []
+                    TypeDecl: z, []
+                      IdentifierType: ['double']
+                    FuncCall: 
+                      ID: sqrt
+                      ExprList: 
+                        FuncCall: 
+                          ID: fabs
+                          ExprList: 
+                            BinaryOp: -
+                              Constant: int, 1
+                              ID: c
+                  Decl: cz, [], [], []
+                    TypeDecl: cz, []
+                      IdentifierType: ['double']
+                    TernaryOp: 
+                      BinaryOp: >
+                        TernaryOp: 
+                          BinaryOp: >
+                            ID: c
+                            Constant: int, 1
+                          Constant: float, 0.0
+                          UnaryOp: -
+                            Constant: int, 10
+                        ID: z
+                      TernaryOp: 
+                        BinaryOp: >
+                          ID: c
+                          Constant: int, 1
+                        Constant: int, 0
+                        Constant: int, 1
+                      ID: z
+      For: 
+        Assignment: =
+          ID: l
+          ID: sm
+        BinaryOp: <=
+          ID: l
+          ID: sx
+        UnaryOp: p++
+          ID: l
+        Assignment: =
+          ArrayRef: 
+            ID: smap
+            ID: l
+          TernaryOp: 
+            BinaryOp: >
+              ID: l
+              Constant: int, 0
+            BinaryOp: +
+              Constant: int, 1
+              FuncCall: 
+                ID: foo
+                ExprList: 
+                  FuncCall: 
+                    ID: sin
+                    ExprList: 
+                      BinaryOp: /
+                        BinaryOp: *
+                          Constant: float, .1
+                          ID: l
+                        ID: sx
+            BinaryOp: -
+              Constant: int, 1
+              FuncCall: 
+                ID: foo
+                ExprList: 
+                  FuncCall: 
+                    ID: sin
+                    ExprList: 
+                      BinaryOp: /
+                        BinaryOp: *
+                          Constant: float, .1
+                          ID: l
+                        ID: sm

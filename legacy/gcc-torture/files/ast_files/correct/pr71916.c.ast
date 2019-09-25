@@ -1,0 +1,117 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['int']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['int']
+  Decl: d, [], [], []
+    TypeDecl: d, []
+      IdentifierType: ['int']
+  Decl: f, [], [], []
+    TypeDecl: f, []
+      IdentifierType: ['int']
+  Decl: g, [], [], []
+    TypeDecl: g, []
+      IdentifierType: ['int']
+  Decl: h, [], [], []
+    TypeDecl: h, []
+      IdentifierType: ['short']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p1, [], [], []
+            TypeDecl: p1, []
+              IdentifierType: ['short']
+        TypeDecl: foo, []
+          IdentifierType: ['short']
+    Compound: 
+      Return: 
+        TernaryOp: 
+          BinaryOp: ||
+            BinaryOp: >=
+              ID: a
+              Constant: int, 2
+            BinaryOp: >
+              ID: p1
+              BinaryOp: >>
+                Constant: int, 7
+                ID: a
+          ID: p1
+          BinaryOp: <<
+            ID: p1
+            ID: a
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: bar, []
+          IdentifierType: ['void']
+    Compound: 
+      For: 
+        Compound: 
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+          Decl: j, [], [], []
+            ArrayDecl: []
+              TypeDecl: j, []
+                IdentifierType: ['int']
+              Constant: int, 3
+          Assignment: =
+            ID: h
+            TernaryOp: 
+              BinaryOp: >=
+                ID: b
+                Constant: int, 2
+              ID: d
+              BinaryOp: >>
+                ID: d
+                ID: b
+          If: 
+            FuncCall: 
+              ID: foo
+              ExprList: 
+                BinaryOp: ^
+                  BinaryOp: >
+                    ID: f
+                    ID: h
+                  ID: c
+            Compound: 
+              Assignment: =
+                ID: d
+                Constant: int, 0
+              While: 
+                BinaryOp: <=
+                  ID: f
+                  Constant: int, 2
+                Compound: 
+                  Decl: k, [], [], []
+                    ArrayDecl: []
+                      TypeDecl: k, []
+                        IdentifierType: ['char']
+                      Constant: int, 2
+                  For: 
+                    Assignment: =
+                      ArrayRef: 
+                        ID: k
+                        UnaryOp: p++
+                          ID: i
+                      Constant: int, 7
+            For: 
+              Assignment: =
+                ID: g
+                ArrayRef: 
+                  ID: j
+                  Constant: int, 2
+          If: 
+            ID: g
+            For: 
+              EmptyStatement: 

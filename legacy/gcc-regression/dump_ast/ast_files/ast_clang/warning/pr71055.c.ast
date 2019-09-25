@@ -1,0 +1,63 @@
+c_files/pr71055.c:5:30: warning: unknown attribute 'noclone' ignored [-Wunknown-attributes]
+void __attribute__((noinline,noclone))
+                             ^
+1 warning generated.
+TranslationUnitDecl 0x7ffae28166d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffae2816c20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ffae2816940 '__int128'
+|-TypedefDecl 0x7ffae2816c90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ffae2816960 'unsigned __int128'
+|-TypedefDecl 0x7ffae2816f68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ffae2816d70 'struct __NSConstantString_tag'
+|   `-Record 0x7ffae2816ce8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ffae2817000 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ffae2816fc0 'char *'
+|   `-BuiltinType 0x7ffae2816760 'char'
+|-TypedefDecl 0x7ffae28172c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ffae2817270 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ffae28170e0 'struct __va_list_tag'
+|     `-Record 0x7ffae2817058 '__va_list_tag'
+|-FunctionDecl 0x7ffae2036430 <c_files/pr71055.c:3:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7ffae20364c8 prev 0x7ffae2036430 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-RecordDecl 0x7ffae2036560 <line:4:1, col:35> col:7 union U definition
+| |-FieldDecl 0x7ffae2036628 <col:11, col:15> col:15 referenced i 'int'
+| |-FieldDecl 0x7ffae2036680 <col:18, col:24> col:24 referenced b '_Bool'
+| `-FieldDecl 0x7ffae20366d8 <col:27, col:32> col:32 referenced c 'char'
+|-FunctionDecl 0x7ffae20368d0 <line:5:1, line:10:1> line:6:1 used foo 'void (union U *)'
+| |-ParmVarDecl 0x7ffae20367d0 <col:6, col:15> col:15 used u 'union U *'
+| |-CompoundStmt 0x7ffae2036bb0 <line:7:1, line:10:1>
+| | `-IfStmt 0x7ffae2036b78 <line:8:3, line:9:12>
+| |   |-<<<NULL>>>
+| |   |-<<<NULL>>>
+| |   |-BinaryOperator 0x7ffae2036ac0 <line:8:7, col:15> 'int' '!='
+| |   | |-ImplicitCastExpr 0x7ffae2036aa8 <col:7, col:10> 'int' <IntegralCast>
+| |   | | `-ImplicitCastExpr 0x7ffae2036a90 <col:7, col:10> 'char' <LValueToRValue>
+| |   | |   `-MemberExpr 0x7ffae2036a38 <col:7, col:10> 'char' lvalue ->c 0x7ffae20366d8
+| |   | |     `-ImplicitCastExpr 0x7ffae2036a20 <col:7> 'union U *' <LValueToRValue>
+| |   | |       `-DeclRefExpr 0x7ffae20369f8 <col:7> 'union U *' lvalue ParmVar 0x7ffae20367d0 'u' 'union U *'
+| |   | `-IntegerLiteral 0x7ffae2036a70 <col:15> 'int' 0
+| |   |-CallExpr 0x7ffae2036b50 <line:9:5, col:12> 'void'
+| |   | `-ImplicitCastExpr 0x7ffae2036b38 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+| |   |   `-DeclRefExpr 0x7ffae2036ae8 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7ffae20364c8 'abort' 'void (void) __attribute__((noreturn))'
+| |   `-<<<NULL>>>
+| `-NoInlineAttr 0x7ffae2036970 <line:5:21>
+`-FunctionDecl 0x7ffae2036c20 <line:11:1, line:18:1> line:11:5 main 'int ()'
+  `-CompoundStmt 0x7ffae2037058 <line:12:1, line:18:1>
+    |-DeclStmt 0x7ffae2036d38 <line:13:3, col:12>
+    | `-VarDecl 0x7ffae2036cd8 <col:3, col:11> col:11 used u 'union U':'union U'
+    |-BinaryOperator 0x7ffae2036dd0 <line:14:3, col:9> 'int' '='
+    | |-MemberExpr 0x7ffae2036d78 <col:3, col:5> 'int' lvalue .i 0x7ffae2036628
+    | | `-DeclRefExpr 0x7ffae2036d50 <col:3> 'union U':'union U' lvalue Var 0x7ffae2036cd8 'u' 'union U':'union U'
+    | `-IntegerLiteral 0x7ffae2036db0 <col:9> 'int' 10
+    |-BinaryOperator 0x7ffae2036ee8 <line:15:3, col:9> '_Bool' '='
+    | |-MemberExpr 0x7ffae2036e78 <col:3, col:5> '_Bool' lvalue .b 0x7ffae2036680
+    | | `-DeclRefExpr 0x7ffae2036e50 <col:3> 'union U':'union U' lvalue Var 0x7ffae2036cd8 'u' 'union U':'union U'
+    | `-ImplicitCastExpr 0x7ffae2036ed0 <col:9> '_Bool' <IntegralToBoolean>
+    |   `-IntegerLiteral 0x7ffae2036eb0 <col:9> 'int' 0
+    |-CallExpr 0x7ffae2036ff0 <line:16:3, col:10> 'void'
+    | |-ImplicitCastExpr 0x7ffae2036fd8 <col:3> 'void (*)(union U *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ffae2036f10 <col:3> 'void (union U *)' Function 0x7ffae20368d0 'foo' 'void (union U *)'
+    | `-UnaryOperator 0x7ffae2036f60 <col:8, col:9> 'union U *' prefix '&'
+    |   `-DeclRefExpr 0x7ffae2036f38 <col:9> 'union U':'union U' lvalue Var 0x7ffae2036cd8 'u' 'union U':'union U'
+    `-ReturnStmt 0x7ffae2037040 <line:17:3, col:10>
+      `-IntegerLiteral 0x7ffae2037020 <col:10> 'int' 0

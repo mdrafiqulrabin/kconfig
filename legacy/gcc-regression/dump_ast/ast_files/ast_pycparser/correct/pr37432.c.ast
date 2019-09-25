@@ -1,0 +1,46 @@
+FileAST: 
+  FuncDef: 
+    Decl: print_wkb_byte, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: val, [], [], []
+            TypeDecl: val, []
+              IdentifierType: ['unsigned', 'char']
+        TypeDecl: print_wkb_byte, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: print_wkb_bytes
+        ExprList: 
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['unsigned', 'char']
+            UnaryOp: &
+              ID: val
+          Constant: int, 1
+          Constant: int, 1
+  FuncDef: 
+    Decl: InsertMultiPoint, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+        TypeDecl: InsertMultiPoint, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['char']
+        Constant: int, 1
+      If: 
+        ID: b
+        Assignment: =
+          ID: a
+          Constant: int, 0
+      FuncCall: 
+        ID: print_wkb_byte
+        ExprList: 
+          ID: a

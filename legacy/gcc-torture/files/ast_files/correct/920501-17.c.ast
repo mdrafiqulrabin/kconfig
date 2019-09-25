@@ -1,0 +1,24 @@
+FileAST: 
+  FuncDef: 
+    Decl: x, [], [], []
+      FuncDecl: 
+        TypeDecl: x, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: x, ['const'], ['static'], []
+        ArrayDecl: []
+          TypeDecl: x, ['const']
+            IdentifierType: ['char']
+        Constant: string, "x"
+      Decl: y, [], [], []
+        ArrayDecl: []
+          TypeDecl: y, []
+            IdentifierType: ['char']
+          Constant: int, 2
+      Assignment: =
+        ArrayRef: 
+          ID: y
+          Constant: int, 0
+        ArrayRef: 
+          ID: x
+          Constant: int, 1

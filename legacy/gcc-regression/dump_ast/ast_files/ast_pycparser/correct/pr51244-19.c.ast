@@ -1,0 +1,136 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: request
+      Decl: nr_sectors, [], [], []
+        TypeDecl: nr_sectors, []
+          IdentifierType: ['unsigned', 'long']
+  Decl: None, [], [], []
+    Struct: request_list
+      Decl: count, [], [], []
+        TypeDecl: count, []
+          IdentifierType: ['int']
+  Decl: None, [], [], []
+    Struct: request_queue
+      Decl: rq, [], [], []
+        TypeDecl: rq, []
+          Struct: request_list
+      Decl: nr_sectors, ['volatile'], [], []
+        TypeDecl: nr_sectors, ['volatile']
+          IdentifierType: ['int']
+      Decl: max_queue_sectors, [], [], []
+        TypeDecl: max_queue_sectors, []
+          IdentifierType: ['int']
+      Decl: can_throttle, [], [], []
+        TypeDecl: can_throttle, []
+          IdentifierType: ['int']
+      Decl: bounce_pfn, [], [], []
+        TypeDecl: bounce_pfn, []
+          IdentifierType: ['unsigned', 'long']
+  Typedef: request_queue_t, [], ['typedef']
+    TypeDecl: request_queue_t, []
+      Struct: request_queue
+  FuncDef: 
+    Decl: blk_oversized_queue, [], ['static'], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: q, [], [], []
+            PtrDecl: []
+              TypeDecl: q, []
+                IdentifierType: ['request_queue_t']
+        TypeDecl: blk_oversized_queue, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        StructRef: ->
+          ID: q
+          ID: can_throttle
+        Return: 
+          BinaryOp: >
+            StructRef: ->
+              ID: q
+              ID: nr_sectors
+            StructRef: ->
+              ID: q
+              ID: max_queue_sectors
+      Return: 
+        BinaryOp: ==
+          StructRef: .
+            StructRef: ->
+              ID: q
+              ID: rq
+            ID: count
+          Constant: int, 0
+  FuncDef: 
+    Decl: get_request, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: q, [], [], []
+            PtrDecl: []
+              TypeDecl: q, []
+                IdentifierType: ['request_queue_t']
+          Decl: rw, [], [], []
+            TypeDecl: rw, []
+              IdentifierType: ['int']
+        PtrDecl: []
+          TypeDecl: get_request, []
+            Struct: request
+    Compound: 
+      Decl: rq, [], [], []
+        PtrDecl: []
+          TypeDecl: rq, []
+            Struct: request
+        Cast: 
+          Typename: None, []
+            PtrDecl: []
+              TypeDecl: None, []
+                IdentifierType: ['void']
+          Constant: int, 0
+      Decl: rl, [], [], []
+        PtrDecl: []
+          TypeDecl: rl, []
+            Struct: request_list
+        UnaryOp: &
+          StructRef: ->
+            ID: q
+            ID: rq
+      If: 
+        FuncCall: 
+          ID: blk_oversized_queue
+          ExprList: 
+            ID: q
+        Compound: 
+          If: 
+            BinaryOp: ||
+              BinaryOp: ==
+                ID: rw
+                Constant: int, 1
+              BinaryOp: ==
+                ID: rw
+                Constant: int, 0
+            Return: 
+              Cast: 
+                Typename: None, []
+                  PtrDecl: []
+                    TypeDecl: None, []
+                      IdentifierType: ['void']
+                Constant: int, 0
+          If: 
+            FuncCall: 
+              ID: blk_oversized_queue
+              ExprList: 
+                ID: q
+            Return: 
+              Cast: 
+                Typename: None, []
+                  PtrDecl: []
+                    TypeDecl: None, []
+                      IdentifierType: ['void']
+                Constant: int, 0
+      Return: 
+        Cast: 
+          Typename: None, []
+            PtrDecl: []
+              TypeDecl: None, []
+                IdentifierType: ['void']
+          UnaryOp: -
+            Constant: int, 100

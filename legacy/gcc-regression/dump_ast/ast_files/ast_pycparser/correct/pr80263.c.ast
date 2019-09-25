@@ -1,0 +1,6 @@
+FileAST: 
+  Decl: array, [], [], []
+    ArrayDecl: []
+      TypeDecl: array, []
+        IdentifierType: ['char']
+      Constant: int, 1

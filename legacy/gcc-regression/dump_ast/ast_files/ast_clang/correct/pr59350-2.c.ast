@@ -1,0 +1,64 @@
+TranslationUnitDecl 0x7f921a8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f921a826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f921a826740 '__int128'
+|-TypedefDecl 0x7f921a826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f921a826760 'unsigned __int128'
+|-TypedefDecl 0x7f921a826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f921a826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f921a826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f921a826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f921a826dc0 'char *'
+|   `-BuiltinType 0x7f921a826560 'char'
+|-TypedefDecl 0x7f921a8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f921a827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f921a826ee0 'struct __va_list_tag'
+|     `-Record 0x7f921a826e58 '__va_list_tag'
+|-RecordDecl 0x7f921a827120 <c_files/pr59350-2.c:6:9, line:11:1> line:6:9 struct definition
+| |-FieldDecl 0x7f921b025a00 <line:8:3, col:9> col:9 v 'void *'
+| |-FieldDecl 0x7f921b025a60 <line:9:3, col:7> col:7 referenced len 'int'
+| `-FieldDecl 0x7f921b025ac0 <line:10:3, col:7> col:7 referenced sign 'int'
+|-TypedefDecl 0x7f921b025b60 <line:6:1, line:11:3> col:3 referenced ZVALUE 'struct ZVALUE':'ZVALUE'
+| `-ElaboratedType 0x7f921b025b10 'struct ZVALUE' sugar
+|   `-RecordType 0x7f921a8271b0 'ZVALUE'
+|     `-Record 0x7f921a827120 ''
+|-FunctionDecl 0x7f921b025d08 <line:13:1, col:24> col:12 used pred 'int (ZVALUE)' extern
+| `-ParmVarDecl 0x7f921b025c00 <col:18> col:24 'ZVALUE':'ZVALUE'
+|-FunctionDecl 0x7f921b025f08 <line:15:1, line:22:1> line:16:1 used small_factor 'unsigned long (ZVALUE)' static
+| |-ParmVarDecl 0x7f921b025df8 <col:15, col:22> col:22 used z 'ZVALUE':'ZVALUE'
+| `-CompoundStmt 0x7f921b026318 <line:17:1, line:22:1>
+|   |-IfStmt 0x7f921b026110 <line:18:3, line:19:12>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f921b026040 <line:18:7, col:15> 'int' '>'
+|   | | |-ImplicitCastExpr 0x7f921b026028 <col:7, col:9> 'int' <LValueToRValue>
+|   | | | `-MemberExpr 0x7f921b025fd0 <col:7, col:9> 'int' lvalue .len 0x7f921b025a60
+|   | | |   `-DeclRefExpr 0x7f921b025fa8 <col:7> 'ZVALUE':'ZVALUE' lvalue ParmVar 0x7f921b025df8 'z' 'ZVALUE':'ZVALUE'
+|   | | `-IntegerLiteral 0x7f921b026008 <col:15> 'int' 0
+|   | |-ReturnStmt 0x7f921b0260f8 <line:19:5, col:12>
+|   | | `-ImplicitCastExpr 0x7f921b0260e0 <col:12> 'unsigned long' <IntegralCast>
+|   | |   `-IntegerLiteral 0x7f921b0260c0 <col:12> 'int' 0
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f921b026300 <line:21:3, col:26>
+|     `-ImplicitCastExpr 0x7f921b0262e8 <col:10, col:26> 'unsigned long' <IntegralCast>
+|       `-ConditionalOperator 0x7f921b0262b8 <col:10, col:26> 'int'
+|         |-CallExpr 0x7f921b026210 <col:10, col:17> 'int'
+|         | |-ImplicitCastExpr 0x7f921b0261f8 <col:10> 'int (*)(ZVALUE)' <FunctionToPointerDecay>
+|         | | `-DeclRefExpr 0x7f921b026148 <col:10> 'int (ZVALUE)' Function 0x7f921b025d08 'pred' 'int (ZVALUE)'
+|         | `-ImplicitCastExpr 0x7f921b026240 <col:16> 'ZVALUE':'ZVALUE' <LValueToRValue>
+|         |   `-DeclRefExpr 0x7f921b026170 <col:16> 'ZVALUE':'ZVALUE' lvalue ParmVar 0x7f921b025df8 'z' 'ZVALUE':'ZVALUE'
+|         |-UnaryOperator 0x7f921b026278 <col:21, col:22> 'int' prefix '-'
+|         | `-IntegerLiteral 0x7f921b026258 <col:22> 'int' 1
+|         `-IntegerLiteral 0x7f921b026298 <col:26> 'int' 0
+`-FunctionDecl 0x7f921b0263e0 <line:24:1, line:29:1> line:25:1 zfactor 'unsigned long (ZVALUE)'
+  |-ParmVarDecl 0x7f921b026350 <col:10, col:17> col:17 used z 'ZVALUE':'ZVALUE'
+  `-CompoundStmt 0x7f921b026650 <line:26:1, line:29:1>
+    |-BinaryOperator 0x7f921b026500 <line:27:3, col:12> 'int' '='
+    | |-MemberExpr 0x7f921b0264a8 <col:3, col:5> 'int' lvalue .sign 0x7f921b025ac0
+    | | `-DeclRefExpr 0x7f921b026480 <col:3> 'ZVALUE':'ZVALUE' lvalue ParmVar 0x7f921b026350 'z' 'ZVALUE':'ZVALUE'
+    | `-IntegerLiteral 0x7f921b0264e0 <col:12> 'int' 0
+    `-ReturnStmt 0x7f921b026638 <line:28:3, col:25>
+      `-CallExpr 0x7f921b0265f0 <col:10, col:25> 'unsigned long'
+        |-ImplicitCastExpr 0x7f921b0265d8 <col:10> 'unsigned long (*)(ZVALUE)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7f921b026528 <col:10> 'unsigned long (ZVALUE)' Function 0x7f921b025f08 'small_factor' 'unsigned long (ZVALUE)'
+        `-ImplicitCastExpr 0x7f921b026620 <col:24> 'ZVALUE':'ZVALUE' <LValueToRValue>
+          `-DeclRefExpr 0x7f921b026550 <col:24> 'ZVALUE':'ZVALUE' lvalue ParmVar 0x7f921b026350 'z' 'ZVALUE':'ZVALUE'

@@ -1,0 +1,93 @@
+FileAST: 
+  Decl: peakbuf, [], [], []
+    TypeDecl: peakbuf, []
+      Struct: peakbufStruct
+        Decl: lnum, [], [], []
+          ArrayDecl: []
+            TypeDecl: lnum, []
+              IdentifierType: ['unsigned', 'int']
+            Constant: int, 5000
+        Decl: lscan, [], [], []
+          ArrayDecl: []
+            ArrayDecl: []
+              TypeDecl: lscan, []
+                IdentifierType: ['int']
+              Constant: int, 4000
+            Constant: int, 5000
+        Decl: lmz, [], [], []
+          ArrayDecl: []
+            ArrayDecl: []
+              TypeDecl: lmz, []
+                IdentifierType: ['double']
+              Constant: int, 4000
+            Constant: int, 5000
+        Decl: lint, [], [], []
+          ArrayDecl: []
+            ArrayDecl: []
+              TypeDecl: lint, []
+                IdentifierType: ['double']
+              Constant: int, 4000
+            Constant: int, 5000
+        Decl: PeaksInBuf, [], [], []
+          TypeDecl: PeaksInBuf, []
+            IdentifierType: ['int']
+        Decl: freelists, [], [], []
+          ArrayDecl: []
+            TypeDecl: freelists, []
+              IdentifierType: ['unsigned', 'char']
+            Constant: int, 350000
+        Decl: freelistl, [], [], []
+          ArrayDecl: []
+            TypeDecl: freelistl, []
+              IdentifierType: ['unsigned', 'char']
+            Constant: int, 5000
+        Decl: LastFreeL, [], [], []
+          TypeDecl: LastFreeL, []
+            IdentifierType: ['unsigned', 'int']
+  Decl: foo, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: foo, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: findmzROI, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+          Decl: p_scan, [], [], []
+            PtrDecl: []
+              TypeDecl: p_scan, []
+                IdentifierType: ['int']
+        TypeDecl: findmzROI, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          StructRef: .
+            ID: peakbuf
+            ID: PeaksInBuf
+      FuncCall: 
+        ID: __builtin_memmove
+        ExprList: 
+          ID: p_scan
+          ArrayRef: 
+            StructRef: .
+              ID: peakbuf
+              ID: lscan
+            ID: i
+          BinaryOp: *
+            ArrayRef: 
+              StructRef: .
+                ID: peakbuf
+                ID: lnum
+              ID: i
+            UnaryOp: sizeof
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['int']

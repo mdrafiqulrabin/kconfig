@@ -1,0 +1,25 @@
+c_files/pr70651.c:8:21: error: first argument to 'va_arg' is of type 'char **' and not 'va_list'
+  __builtin_va_arg (a, char **);
+                    ^
+1 error generated.
+TranslationUnitDecl 0x7f80628228d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8062822e20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8062822b40 '__int128'
+|-TypedefDecl 0x7f8062822e90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8062822b60 'unsigned __int128'
+|-TypedefDecl 0x7f8062823168 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8062822f70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8062822ee8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8062823200 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f80628231c0 'char *'
+|   `-BuiltinType 0x7f8062822960 'char'
+|-TypedefDecl 0x7f80628234c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8062823470 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f80628232e0 'struct __va_list_tag'
+|     `-Record 0x7f8062823258 '__va_list_tag'
+`-FunctionDecl 0x7f8062823568 <c_files/pr70651.c:5:1, line:9:1> line:5:6 fn1 'void ()'
+  `-CompoundStmt 0x7f8062873d60 <line:6:1, line:9:1>
+    `-DeclStmt 0x7f8062873918 <line:7:3, col:15>
+      `-VarDecl 0x7f8062873880 <col:3, col:14> col:10 used a 'char **' cinit
+        `-ImplicitCastExpr 0x7f8062873900 <col:14> 'char **' <NullToPointer>
+          `-IntegerLiteral 0x7f80628738e0 <col:14> 'int' 0

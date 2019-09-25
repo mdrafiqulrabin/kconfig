@@ -1,9 +1,0 @@
-pr67465.c: In function ‘fn1’:
-pr67465.c:11:5: error: ‘for’ loop initial declarations are only allowed in C99 mode
-     for (int i = 0; i < 1; i++)
-     ^
-pr67465.c:11:5: note: use option -std=c99 or -std=gnu99 to compile your code
-pr67465.c: In function ‘fn2’:
-pr67465.c:27:7: error: ‘for’ loop initial declarations are only allowed in C99 mode
-       for (int j = 0; j < 2; j++)
-       ^

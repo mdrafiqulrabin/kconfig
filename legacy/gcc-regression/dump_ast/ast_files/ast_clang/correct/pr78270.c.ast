@@ -1,0 +1,31 @@
+TranslationUnitDecl 0x7fcf9a8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fcf9a826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fcf9a826740 '__int128'
+|-TypedefDecl 0x7fcf9a826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fcf9a826760 'unsigned __int128'
+|-TypedefDecl 0x7fcf9a826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fcf9a826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fcf9a826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fcf9a826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fcf9a826dc0 'char *'
+|   `-BuiltinType 0x7fcf9a826560 'char'
+|-TypedefDecl 0x7fcf9a8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fcf9a827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fcf9a826ee0 'struct __va_list_tag'
+|     `-Record 0x7fcf9a826e58 '__va_list_tag'
+|-RecordDecl 0x7fcf9a827120 <c_files/pr78270.c:5:9, line:7:1> line:5:9 struct definition
+|-TypedefDecl 0x7fcf9a877420 <col:1, line:7:3> col:3 referenced bdaddr_t 'struct bdaddr_t':'bdaddr_t'
+| `-ElaboratedType 0x7fcf9a8271d0 'struct bdaddr_t' sugar
+|   `-RecordType 0x7fcf9a8271b0 'bdaddr_t'
+|     `-Record 0x7fcf9a827120 ''
+|-VarDecl 0x7fcf9a8774a8 <line:9:1, col:5> col:5 used a 'int'
+`-FunctionDecl 0x7fcf9a877598 <line:10:1, line:14:1> line:10:6 fn1 'void ()'
+  `-CompoundStmt 0x7fcf9a8777f8 <line:11:1, line:14:1>
+    `-SwitchStmt 0x7fcf9a877670 <line:12:3, line:13:17>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7fcf9a877658 <line:12:11> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7fcf9a877630 <col:11> 'int' lvalue Var 0x7fcf9a8774a8 'a' 'int'
+      `-UnaryOperator 0x7fcf9a8777d8 <line:13:5, col:17> 'bdaddr_t *' prefix '&'
+        `-CompoundLiteralExpr 0x7fcf9a877750 <col:6, col:17> 'bdaddr_t':'bdaddr_t' lvalue
+          `-InitListExpr 0x7fcf9a877710 <col:16, col:17> 'bdaddr_t':'bdaddr_t'

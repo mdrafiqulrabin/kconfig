@@ -1,0 +1,16 @@
+FileAST: 
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: b, [], [], []
+            PtrDecl: []
+              TypeDecl: b, []
+                IdentifierType: ['void']
+        TypeDecl: f, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: __builtin_update_setjmp_buf
+        ExprList: 
+          ID: b

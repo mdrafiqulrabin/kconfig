@@ -1,0 +1,50 @@
+FileAST: 
+  Decl: db, [], [], []
+    ArrayDecl: []
+      TypeDecl: db, []
+        IdentifierType: ['int']
+      Constant: int, 100
+  Decl: a_global_var, [], [], []
+    TypeDecl: a_global_var, []
+      IdentifierType: ['int']
+  Decl: fact, [], [], []
+    TypeDecl: fact, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      DoWhile: 
+        BinaryOp: <
+          UnaryOp: p++
+            ID: j
+          Constant: int, 100
+        Compound: 
+          For: 
+            Assignment: =
+              ID: i
+              Constant: int, 0
+            BinaryOp: <
+              ID: i
+              Constant: int, 100
+            UnaryOp: ++
+              ID: i
+            Assignment: =
+              ArrayRef: 
+                ID: db
+                ID: i
+              ID: i
+          Assignment: =
+            ID: fact
+            BinaryOp: *
+              ID: a_global_var
+              ID: i

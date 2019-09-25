@@ -1,0 +1,40 @@
+TranslationUnitDecl 0x7f8ae30264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8ae3026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8ae3026740 '__int128'
+|-TypedefDecl 0x7f8ae3026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8ae3026760 'unsigned __int128'
+|-TypedefDecl 0x7f8ae3026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8ae3026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8ae3026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8ae3026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8ae3026dc0 'char *'
+|   `-BuiltinType 0x7f8ae3026560 'char'
+|-TypedefDecl 0x7f8ae30270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8ae3027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8ae3026ee0 'struct __va_list_tag'
+|     `-Record 0x7f8ae3026e58 '__va_list_tag'
+|-RecordDecl 0x7f8ae3027120 <c_files/pr42891.c:4:1, col:27> col:7 union B definition
+| |-FieldDecl 0x7f8ae3077400 <col:11, col:15> col:15 referenced i 'int'
+| `-FieldDecl 0x7f8ae3077460 <col:18, col:24> col:24 referenced f 'float'
+|-FunctionDecl 0x7f8ae3077570 <line:6:1, col:22> col:13 used bar 'void (void)' extern
+`-FunctionDecl 0x7f8ae3077830 <line:8:1, line:13:1> line:9:1 foo 'void (union B, union B)'
+  |-ParmVarDecl 0x7f8ae30776a0 <col:6, col:14> col:14 used x 'union B':'union B'
+  |-ParmVarDecl 0x7f8ae3077720 <col:17, col:25> col:25 used y 'union B':'union B'
+  `-CompoundStmt 0x7f8ae3077b10 <line:10:1, line:13:1>
+    `-IfStmt 0x7f8ae3077ad8 <line:11:3, line:12:10>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-UnaryOperator 0x7f8ae3077a28 <line:11:7, col:18> 'int' prefix '!'
+      | `-ParenExpr 0x7f8ae3077a08 <col:8, col:18> 'int'
+      |   `-BinaryOperator 0x7f8ae30779e0 <col:9, col:17> 'int' '>'
+      |     |-ImplicitCastExpr 0x7f8ae3077998 <col:9, col:11> 'float' <LValueToRValue>
+      |     | `-MemberExpr 0x7f8ae3077900 <col:9, col:11> 'float' lvalue .f 0x7f8ae3077460
+      |     |   `-DeclRefExpr 0x7f8ae30778d8 <col:9> 'union B':'union B' lvalue ParmVar 0x7f8ae3077720 'y' 'union B':'union B'
+      |     `-ImplicitCastExpr 0x7f8ae30779c8 <col:15, col:17> 'float' <IntegralToFloating>
+      |       `-ImplicitCastExpr 0x7f8ae30779b0 <col:15, col:17> 'int' <LValueToRValue>
+      |         `-MemberExpr 0x7f8ae3077960 <col:15, col:17> 'int' lvalue .i 0x7f8ae3077400
+      |           `-DeclRefExpr 0x7f8ae3077938 <col:15> 'union B':'union B' lvalue ParmVar 0x7f8ae30776a0 'x' 'union B':'union B'
+      |-CallExpr 0x7f8ae3077ab0 <line:12:5, col:10> 'void'
+      | `-ImplicitCastExpr 0x7f8ae3077a98 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+      |   `-DeclRefExpr 0x7f8ae3077a48 <col:5> 'void (void)' Function 0x7f8ae3077570 'bar' 'void (void)'
+      `-<<<NULL>>>

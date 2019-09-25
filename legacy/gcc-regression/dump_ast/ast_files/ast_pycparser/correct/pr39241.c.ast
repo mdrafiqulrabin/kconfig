@@ -1,0 +1,73 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], ['static'], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: f, [], [], []
+            TypeDecl: f, []
+              IdentifierType: ['float']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        BinaryOp: -
+          UnaryOp: *
+            Cast: 
+              Typename: None, []
+                PtrDecl: []
+                  TypeDecl: None, []
+                    IdentifierType: ['int']
+              UnaryOp: &
+                ID: f
+          Constant: int, 1
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['float']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['float']
+          Decl: z, [], [], []
+            PtrDecl: []
+              TypeDecl: z, []
+                IdentifierType: ['float']
+        TypeDecl: bar, []
+          IdentifierType: ['float']
+    Compound: 
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          IdentifierType: ['float']
+        TernaryOp: 
+          BinaryOp: <
+            ID: y
+            Constant: float, 0.002f
+          Constant: float, 0.002f
+          ID: y
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          IdentifierType: ['float']
+        TernaryOp: 
+          BinaryOp: <
+            ID: x
+            ID: c
+          ID: c
+          ID: x
+      Return: 
+        BinaryOp: +
+          ArrayRef: 
+            ID: z
+            FuncCall: 
+              ID: foo
+              ExprList: 
+                ID: c
+          ArrayRef: 
+            ID: z
+            FuncCall: 
+              ID: foo
+              ExprList: 
+                BinaryOp: *
+                  ID: d
+                  Constant: float, 255.0f

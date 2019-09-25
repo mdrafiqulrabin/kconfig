@@ -1,0 +1,68 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            PtrDecl: []
+              TypeDecl: p, []
+                IdentifierType: ['short']
+          Decl: q, [], [], []
+            PtrDecl: []
+              TypeDecl: q, []
+                IdentifierType: ['short']
+          Decl: r, [], [], []
+            PtrDecl: []
+              TypeDecl: r, []
+                IdentifierType: ['short']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['short']
+        ArrayRef: 
+          ID: q
+          Constant: int, 0
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['short']
+        ArrayRef: 
+          ID: q
+          Constant: int, 1
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          IdentifierType: ['short']
+        UnaryOp: ~
+          ID: a
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          IdentifierType: ['short']
+        ArrayRef: 
+          ID: r
+          Constant: int, 0
+      Decl: e, [], [], []
+        TypeDecl: e, []
+          IdentifierType: ['short']
+        ArrayRef: 
+          ID: r
+          Constant: int, 1
+      Decl: f, [], [], []
+        TypeDecl: f, []
+          IdentifierType: ['short']
+        UnaryOp: ~
+          ID: b
+      Assignment: =
+        ArrayRef: 
+          ID: p
+          Constant: int, 0
+        BinaryOp: &
+          ID: c
+          ID: d
+      Assignment: =
+        ArrayRef: 
+          ID: p
+          Constant: int, 1
+        BinaryOp: &
+          ID: e
+          ID: f

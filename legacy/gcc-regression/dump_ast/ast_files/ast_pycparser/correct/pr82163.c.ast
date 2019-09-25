@@ -1,0 +1,76 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['int']
+  Decl: c, [], [], []
+    ArrayDecl: []
+      TypeDecl: c, []
+        IdentifierType: ['int']
+      Constant: int, 4
+  Decl: d, [], [], []
+    TypeDecl: d, []
+      IdentifierType: ['int']
+  Decl: e, [], [], []
+    TypeDecl: e, []
+      IdentifierType: ['int']
+  Decl: f, [], [], []
+    TypeDecl: f, []
+      IdentifierType: ['int']
+  Decl: g, [], [], []
+    TypeDecl: g, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: h, [], [], []
+      FuncDecl: 
+        TypeDecl: h, []
+          IdentifierType: ['void']
+    Compound: 
+      For: 
+        ID: a
+        UnaryOp: p++
+          ID: a
+        Compound: 
+          Assignment: =
+            ArrayRef: 
+              ID: c
+              BinaryOp: +
+                ID: a
+                Constant: int, 3
+            ID: g
+          If: 
+            ID: b
+            Assignment: =
+              ArrayRef: 
+                ID: c
+                ID: a
+              ID: f
+            Compound: 
+              For: 
+                ID: d
+                UnaryOp: p++
+                  ID: d
+                Assignment: =
+                  ArrayRef: 
+                    ID: c
+                    BinaryOp: +
+                      ID: d
+                      Constant: int, 3
+                  ArrayRef: 
+                    ID: c
+                    ID: d
+              For: 
+                Assignment: =
+                  ID: e
+                  Constant: int, 1
+                BinaryOp: ==
+                  ID: e
+                  Constant: int, 2
+                UnaryOp: p++
+                  ID: e
+                EmptyStatement: 
+              If: 
+                ID: e
+                Break: 

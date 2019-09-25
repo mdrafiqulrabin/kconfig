@@ -1,0 +1,40 @@
+c_files/pr79242.c:5:9: warning: plain '_Complex' requires a type specifier; assuming '_Complex double'
+typedef _Complex __int20 C;
+        ^
+                 double
+c_files/pr79242.c:5:25: error: expected ';' after top level declarator
+typedef _Complex __int20 C;
+                        ^
+                        ;
+c_files/pr79242.c:7:1: error: unknown type name 'C'
+C
+^
+c_files/pr79242.c:8:6: error: unknown type name 'C'
+foo (C x, C y)
+     ^
+c_files/pr79242.c:8:11: error: unknown type name 'C'
+foo (C x, C y)
+          ^
+1 warning and 4 errors generated.
+TranslationUnitDecl 0x7fe5680166d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe568016c20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe568016940 '__int128'
+|-TypedefDecl 0x7fe568016c90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe568016960 'unsigned __int128'
+|-TypedefDecl 0x7fe568016f68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe568016d70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe568016ce8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe568017000 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe568016fc0 'char *'
+|   `-BuiltinType 0x7fe568016760 'char'
+|-TypedefDecl 0x7fe5680172c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe568017270 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe5680170e0 'struct __va_list_tag'
+|     `-Record 0x7fe568017058 '__va_list_tag'
+|-TypedefDecl 0x7fe568017330 <c_files/pr79242.c:5:1, col:18> col:18 __int20 '_Complex double'
+| `-ComplexType 0x7fe568016ab0 '_Complex double'
+|   `-BuiltinType 0x7fe5680168e0 'double'
+`-FunctionDecl 0x7fe56880eb58 <line:7:1, line:11:1> line:8:1 invalid foo 'int (int, int)'
+  |-ParmVarDecl 0x7fe56880ea00 <col:6, col:8> col:8 invalid x 'int'
+  |-ParmVarDecl 0x7fe56880ea78 <col:11, col:13> col:13 invalid y 'int'
+  `-CompoundStmt 0x7fe56880ec00 <line:9:1, line:11:1>

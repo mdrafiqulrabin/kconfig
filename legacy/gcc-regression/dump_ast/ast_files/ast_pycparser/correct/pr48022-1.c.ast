@@ -1,0 +1,80 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: x, ['const']
+                IdentifierType: ['char']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: l, [], [], []
+        TypeDecl: l, []
+          IdentifierType: ['unsigned', 'long']
+        Constant: int, 1
+      Decl: s, ['const'], [], []
+        PtrDecl: []
+          TypeDecl: s, ['const']
+            IdentifierType: ['unsigned', 'char']
+        Cast: 
+          Typename: None, ['const']
+            PtrDecl: []
+              TypeDecl: None, ['const']
+                IdentifierType: ['unsigned', 'char']
+          Cast: 
+            Typename: None, ['const']
+              PtrDecl: []
+                TypeDecl: None, ['const']
+                  IdentifierType: ['char']
+            ID: x
+      Decl: r, [], [], []
+        TypeDecl: r, []
+          IdentifierType: ['int']
+        BinaryOp: -
+          ArrayRef: 
+            ID: s
+            Constant: int, 0
+          ArrayRef: 
+            Cast: 
+              Typename: None, ['const']
+                PtrDecl: []
+                  TypeDecl: None, ['const']
+                    IdentifierType: ['unsigned', 'char']
+              Cast: 
+                Typename: None, ['const']
+                  PtrDecl: []
+                    TypeDecl: None, ['const']
+                      IdentifierType: ['char']
+                Constant: string, "/"
+            Constant: int, 0
+      If: 
+        BinaryOp: &&
+          BinaryOp: >
+            ID: l
+            Constant: int, 0
+          BinaryOp: ==
+            ID: r
+            Constant: int, 0
+        Assignment: =
+          ID: r
+          BinaryOp: -
+            ArrayRef: 
+              ID: s
+              Constant: int, 1
+            ArrayRef: 
+              Cast: 
+                Typename: None, ['const']
+                  PtrDecl: []
+                    TypeDecl: None, ['const']
+                      IdentifierType: ['unsigned', 'char']
+                Cast: 
+                  Typename: None, ['const']
+                    PtrDecl: []
+                      TypeDecl: None, ['const']
+                        IdentifierType: ['char']
+                  Constant: string, "/"
+              Constant: int, 1
+      Return: 
+        ID: r

@@ -1,0 +1,22 @@
+c_files/pr48767.c:6:25: error: second argument to 'va_arg' is of incomplete type 'void'
+  __builtin_va_arg (ap, void); /* { dg-error "second argument to .va_arg. is of incomplete type .void." } */
+                        ^~~~
+1 error generated.
+TranslationUnitDecl 0x7fcd680264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fcd68026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fcd68026740 '__int128'
+|-TypedefDecl 0x7fcd68026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fcd68026760 'unsigned __int128'
+|-TypedefDecl 0x7fcd68026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fcd68026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fcd68026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fcd68026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fcd68026dc0 'char *'
+|   `-BuiltinType 0x7fcd68026560 'char'
+|-TypedefDecl 0x7fcd680270c8 <<invalid sloc>> <invalid sloc> implicit referenced __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fcd68027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fcd68026ee0 'struct __va_list_tag'
+|     `-Record 0x7fcd68026e58 '__va_list_tag'
+`-FunctionDecl 0x7fcd6883e900 <c_files/pr48767.c:3:1, line:7:1> line:4:1 foo 'void (struct __va_list_tag *)'
+  |-ParmVarDecl 0x7fcd6883e800 <col:6, col:24> col:24 used ap 'struct __va_list_tag *':'struct __va_list_tag *'
+  `-CompoundStmt 0x7fcd6883edd0 <line:5:1, line:7:1>

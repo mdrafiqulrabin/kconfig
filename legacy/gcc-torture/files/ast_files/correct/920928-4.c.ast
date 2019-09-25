@@ -1,0 +1,605 @@
+FileAST: 
+  Typedef: unsigned8, [], ['typedef']
+    TypeDecl: unsigned8, []
+      IdentifierType: ['unsigned', 'char']
+  Typedef: unsigned16, [], ['typedef']
+    TypeDecl: unsigned16, []
+      IdentifierType: ['unsigned', 'short', 'int']
+  Typedef: unsigned32, [], ['typedef']
+    TypeDecl: unsigned32, []
+      IdentifierType: ['unsigned', 'long', 'int']
+  Typedef: signed8, [], ['typedef']
+    TypeDecl: signed8, []
+      IdentifierType: ['char']
+  Typedef: signed16, [], ['typedef']
+    TypeDecl: signed16, []
+      IdentifierType: ['short', 'int']
+  Typedef: signed32, [], ['typedef']
+    TypeDecl: signed32, []
+      IdentifierType: ['long', 'int']
+  Typedef: boolean32, [], ['typedef']
+    TypeDecl: boolean32, []
+      IdentifierType: ['unsigned32']
+  Typedef: error_status_t, [], ['typedef']
+    TypeDecl: error_status_t, []
+      IdentifierType: ['unsigned', 'long', 'int']
+  Typedef: uuid_t, [], ['typedef']
+    TypeDecl: uuid_t, []
+      Struct: None
+        Decl: time_low, [], [], []
+          TypeDecl: time_low, []
+            IdentifierType: ['unsigned32']
+        Decl: time_mid, [], [], []
+          TypeDecl: time_mid, []
+            IdentifierType: ['unsigned16']
+        Decl: time_hi_and_version, [], [], []
+          TypeDecl: time_hi_and_version, []
+            IdentifierType: ['unsigned16']
+        Decl: clock_seq_hi_and_reserved, [], [], []
+          TypeDecl: clock_seq_hi_and_reserved, []
+            IdentifierType: ['unsigned8']
+        Decl: clock_seq_low, [], [], []
+          TypeDecl: clock_seq_low, []
+            IdentifierType: ['unsigned8']
+        Decl: node, [], [], []
+          ArrayDecl: []
+            TypeDecl: node, []
+              IdentifierType: ['unsigned', 'char']
+            Constant: int, 6
+  Typedef: bitset, [], ['typedef']
+    TypeDecl: bitset, []
+      IdentifierType: ['unsigned32']
+  Typedef: sec_timeval_sec_t, [], ['typedef']
+    TypeDecl: sec_timeval_sec_t, []
+      IdentifierType: ['signed32']
+  Typedef: sec_timeval_t, [], ['typedef']
+    TypeDecl: sec_timeval_t, []
+      Struct: None
+        Decl: sec, [], [], []
+          TypeDecl: sec, []
+            IdentifierType: ['signed32']
+        Decl: usec, [], [], []
+          TypeDecl: usec, []
+            IdentifierType: ['signed32']
+  Typedef: sec_timeval_period_t, [], ['typedef']
+    TypeDecl: sec_timeval_period_t, []
+      IdentifierType: ['signed32']
+  Typedef: sec_rgy_acct_key_t, [], ['typedef']
+    TypeDecl: sec_rgy_acct_key_t, []
+      IdentifierType: ['signed32']
+  Typedef: sec_rgy_cursor_t, [], ['typedef']
+    TypeDecl: sec_rgy_cursor_t, []
+      Struct: None
+        Decl: source, [], [], []
+          TypeDecl: source, []
+            IdentifierType: ['uuid_t']
+        Decl: handle, [], [], []
+          TypeDecl: handle, []
+            IdentifierType: ['signed32']
+        Decl: valid, [], [], []
+          TypeDecl: valid, []
+            IdentifierType: ['boolean32']
+  Typedef: sec_rgy_pname_t, [], ['typedef']
+    ArrayDecl: []
+      TypeDecl: sec_rgy_pname_t, []
+        IdentifierType: ['unsigned', 'char']
+      Constant: int, 257
+  Typedef: sec_rgy_name_t, [], ['typedef']
+    ArrayDecl: []
+      TypeDecl: sec_rgy_name_t, []
+        IdentifierType: ['unsigned', 'char']
+      Constant: int, 1025
+  Typedef: sec_rgy_override_t, [], ['typedef']
+    TypeDecl: sec_rgy_override_t, []
+      IdentifierType: ['signed32']
+  Typedef: sec_rgy_mode_resolve_t, [], ['typedef']
+    TypeDecl: sec_rgy_mode_resolve_t, []
+      IdentifierType: ['signed32']
+  Typedef: sec_rgy_unix_gecos_t, [], ['typedef']
+    ArrayDecl: []
+      TypeDecl: sec_rgy_unix_gecos_t, []
+        IdentifierType: ['unsigned', 'char']
+      Constant: int, 292
+  Typedef: sec_rgy_unix_login_name_t, [], ['typedef']
+    ArrayDecl: []
+      TypeDecl: sec_rgy_unix_login_name_t, []
+        IdentifierType: ['unsigned', 'char']
+      Constant: int, 1025
+  Typedef: sec_rgy_member_t, [], ['typedef']
+    ArrayDecl: []
+      TypeDecl: sec_rgy_member_t, []
+        IdentifierType: ['unsigned', 'char']
+      Constant: int, 1025
+  Typedef: sec_rgy_unix_passwd_buf_t, [], ['typedef']
+    ArrayDecl: []
+      TypeDecl: sec_rgy_unix_passwd_buf_t, []
+        IdentifierType: ['unsigned', 'char']
+      Constant: int, 16
+  Typedef: sec_rgy_sid_t, [], ['typedef']
+    TypeDecl: sec_rgy_sid_t, []
+      Struct: sec_rgy_sid_t
+        Decl: person, [], [], []
+          TypeDecl: person, []
+            IdentifierType: ['uuid_t']
+        Decl: group, [], [], []
+          TypeDecl: group, []
+            IdentifierType: ['uuid_t']
+        Decl: org, [], [], []
+          TypeDecl: org, []
+            IdentifierType: ['uuid_t']
+  Typedef: sec_rgy_unix_sid_t, [], ['typedef']
+    TypeDecl: sec_rgy_unix_sid_t, []
+      Struct: None
+        Decl: person, [], [], []
+          TypeDecl: person, []
+            IdentifierType: ['signed32']
+        Decl: group, [], [], []
+          TypeDecl: group, []
+            IdentifierType: ['signed32']
+        Decl: org, [], [], []
+          TypeDecl: org, []
+            IdentifierType: ['signed32']
+  Typedef: sec_rgy_unix_passwd_t, [], ['typedef']
+    TypeDecl: sec_rgy_unix_passwd_t, []
+      Struct: None
+        Decl: name, [], [], []
+          TypeDecl: name, []
+            IdentifierType: ['sec_rgy_unix_login_name_t']
+        Decl: passwd, [], [], []
+          TypeDecl: passwd, []
+            IdentifierType: ['sec_rgy_unix_passwd_buf_t']
+        Decl: uid, [], [], []
+          TypeDecl: uid, []
+            IdentifierType: ['signed32']
+        Decl: gid, [], [], []
+          TypeDecl: gid, []
+            IdentifierType: ['signed32']
+        Decl: oid, [], [], []
+          TypeDecl: oid, []
+            IdentifierType: ['signed32']
+        Decl: gecos, [], [], []
+          TypeDecl: gecos, []
+            IdentifierType: ['sec_rgy_unix_gecos_t']
+        Decl: homedir, [], [], []
+          TypeDecl: homedir, []
+            IdentifierType: ['sec_rgy_pname_t']
+        Decl: shell, [], [], []
+          TypeDecl: shell, []
+            IdentifierType: ['sec_rgy_pname_t']
+  Typedef: sec_rgy_member_buf_t, [], ['typedef']
+    ArrayDecl: []
+      TypeDecl: sec_rgy_member_buf_t, []
+        IdentifierType: ['unsigned', 'char']
+      Constant: int, 10250
+  Typedef: sec_rgy_unix_group_t, [], ['typedef']
+    TypeDecl: sec_rgy_unix_group_t, []
+      Struct: None
+        Decl: name, [], [], []
+          TypeDecl: name, []
+            IdentifierType: ['sec_rgy_name_t']
+        Decl: gid, [], [], []
+          TypeDecl: gid, []
+            IdentifierType: ['signed32']
+        Decl: members, [], [], []
+          TypeDecl: members, []
+            IdentifierType: ['sec_rgy_member_buf_t']
+  Typedef: rs_cache_data_t, [], ['typedef']
+    TypeDecl: rs_cache_data_t, []
+      Struct: None
+        Decl: site_id, [], [], []
+          TypeDecl: site_id, []
+            IdentifierType: ['uuid_t']
+        Decl: person_dtm, [], [], []
+          TypeDecl: person_dtm, []
+            IdentifierType: ['sec_timeval_sec_t']
+        Decl: group_dtm, [], [], []
+          TypeDecl: group_dtm, []
+            IdentifierType: ['sec_timeval_sec_t']
+        Decl: org_dtm, [], [], []
+          TypeDecl: org_dtm, []
+            IdentifierType: ['sec_timeval_sec_t']
+  Typedef: rs_unix_query_t, [], ['typedef']
+    TypeDecl: rs_unix_query_t, []
+      Enum: None
+        EnumeratorList: 
+          Enumerator: rs_unix_query_name
+          Enumerator: rs_unix_query_unix_num
+          Enumerator: rs_unix_query_none
+  Typedef: rs_unix_query_key_t, [], ['typedef']
+    TypeDecl: rs_unix_query_key_t, []
+      Struct: None
+        Decl: query, [], [], []
+          TypeDecl: query, []
+            IdentifierType: ['rs_unix_query_t']
+        Decl: tagged_union, [], [], []
+          TypeDecl: tagged_union, []
+            Union: None
+              Decl: name, [], [], []
+                TypeDecl: name, []
+                  Struct: None
+                    Decl: name_len, [], [], []
+                      TypeDecl: name_len, []
+                        IdentifierType: ['long', 'int']
+                    Decl: name, [], [], []
+                      TypeDecl: name, []
+                        IdentifierType: ['sec_rgy_name_t']
+              Decl: unix_num, [], [], []
+                TypeDecl: unix_num, []
+                  IdentifierType: ['long', 'int']
+  Decl: IDL_offset_vec, [], ['static'], []
+    ArrayDecl: []
+      TypeDecl: IDL_offset_vec, []
+        IdentifierType: ['unsigned', 'long', 'int']
+    InitList: 
+      Constant: int, 0
+      UnaryOp: sizeof
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['sec_rgy_unix_group_t']
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['unsigned', 'long', 'int']
+        BinaryOp: -
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['unsigned', 'char']
+            UnaryOp: &
+              StructRef: ->
+                Cast: 
+                  Typename: None, []
+                    PtrDecl: []
+                      TypeDecl: None, []
+                        IdentifierType: ['sec_rgy_unix_group_t']
+                  Constant: int, 0
+                ID: name
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['unsigned', 'char']
+            Constant: int, 0
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['unsigned', 'long', 'int']
+        BinaryOp: -
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['unsigned', 'char']
+            UnaryOp: &
+              StructRef: ->
+                Cast: 
+                  Typename: None, []
+                    PtrDecl: []
+                      TypeDecl: None, []
+                        IdentifierType: ['sec_rgy_unix_group_t']
+                  Constant: int, 0
+                ID: gid
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['unsigned', 'char']
+            Constant: int, 0
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['unsigned', 'long', 'int']
+        BinaryOp: -
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['unsigned', 'char']
+            UnaryOp: &
+              StructRef: ->
+                Cast: 
+                  Typename: None, []
+                    PtrDecl: []
+                      TypeDecl: None, []
+                        IdentifierType: ['sec_rgy_unix_group_t']
+                  Constant: int, 0
+                ID: members
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['unsigned', 'char']
+            Constant: int, 0
+      UnaryOp: sizeof
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['rs_cache_data_t']
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['unsigned', 'long', 'int']
+        BinaryOp: -
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['unsigned', 'char']
+            UnaryOp: &
+              StructRef: .
+                StructRef: ->
+                  Cast: 
+                    Typename: None, []
+                      PtrDecl: []
+                        TypeDecl: None, []
+                          IdentifierType: ['rs_cache_data_t']
+                    Constant: int, 0
+                  ID: site_id
+                ID: time_low
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['unsigned', 'char']
+            Constant: int, 0
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['unsigned', 'long', 'int']
+        BinaryOp: -
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['unsigned', 'char']
+            UnaryOp: &
+              StructRef: .
+                StructRef: ->
+                  Cast: 
+                    Typename: None, []
+                      PtrDecl: []
+                        TypeDecl: None, []
+                          IdentifierType: ['rs_cache_data_t']
+                    Constant: int, 0
+                  ID: site_id
+                ID: time_mid
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['unsigned', 'char']
+            Constant: int, 0
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['unsigned', 'long', 'int']
+        BinaryOp: -
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['unsigned', 'char']
+            UnaryOp: &
+              StructRef: .
+                StructRef: ->
+                  Cast: 
+                    Typename: None, []
+                      PtrDecl: []
+                        TypeDecl: None, []
+                          IdentifierType: ['rs_cache_data_t']
+                    Constant: int, 0
+                  ID: site_id
+                ID: time_hi_and_version
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['unsigned', 'char']
+            Constant: int, 0
+      UnaryOp: sizeof
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['sec_rgy_unix_passwd_t']
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['unsigned', 'long', 'int']
+        BinaryOp: -
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['unsigned', 'char']
+            UnaryOp: &
+              StructRef: .
+                StructRef: ->
+                  Cast: 
+                    Typename: None, []
+                      PtrDecl: []
+                        TypeDecl: None, []
+                          IdentifierType: ['sec_rgy_cursor_t']
+                    Constant: int, 0
+                  ID: source
+                ID: clock_seq_hi_and_reserved
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['unsigned', 'char']
+            Constant: int, 0
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['unsigned', 'long', 'int']
+        BinaryOp: -
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['unsigned', 'char']
+            UnaryOp: &
+              StructRef: .
+                StructRef: ->
+                  Cast: 
+                    Typename: None, []
+                      PtrDecl: []
+                        TypeDecl: None, []
+                          IdentifierType: ['sec_rgy_cursor_t']
+                    Constant: int, 0
+                  ID: source
+                ID: clock_seq_low
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['unsigned', 'char']
+            Constant: int, 0
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['unsigned', 'long', 'int']
+        BinaryOp: -
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['unsigned', 'char']
+            UnaryOp: &
+              StructRef: .
+                StructRef: ->
+                  Cast: 
+                    Typename: None, []
+                      PtrDecl: []
+                        TypeDecl: None, []
+                          IdentifierType: ['sec_rgy_cursor_t']
+                    Constant: int, 0
+                  ID: source
+                ID: node
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['unsigned', 'char']
+            Constant: int, 0
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['unsigned', 'long', 'int']
+        BinaryOp: -
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['unsigned', 'char']
+            UnaryOp: &
+              StructRef: ->
+                Cast: 
+                  Typename: None, []
+                    PtrDecl: []
+                      TypeDecl: None, []
+                        IdentifierType: ['sec_rgy_cursor_t']
+                  Constant: int, 0
+                ID: handle
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['unsigned', 'char']
+            Constant: int, 0
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['unsigned', 'long', 'int']
+        BinaryOp: -
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['unsigned', 'char']
+            UnaryOp: &
+              StructRef: ->
+                Cast: 
+                  Typename: None, []
+                    PtrDecl: []
+                      TypeDecl: None, []
+                        IdentifierType: ['sec_rgy_cursor_t']
+                  Constant: int, 0
+                ID: valid
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['unsigned', 'char']
+            Constant: int, 0
+      UnaryOp: sizeof
+        Typename: None, []
+          TypeDecl: None, []
+            Struct: None
+              Decl: name_len, [], [], []
+                TypeDecl: name_len, []
+                  IdentifierType: ['long', 'int']
+              Decl: name, [], [], []
+                TypeDecl: name, []
+                  IdentifierType: ['sec_rgy_name_t']
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['unsigned', 'long', 'int']
+        BinaryOp: -
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['unsigned', 'char']
+            UnaryOp: &
+              StructRef: ->
+                Cast: 
+                  Typename: None, []
+                    PtrDecl: []
+                      TypeDecl: None, []
+                        Struct: None
+                          Decl: name_len, [], [], []
+                            TypeDecl: name_len, []
+                              IdentifierType: ['long', 'int']
+                          Decl: name, [], [], []
+                            TypeDecl: name, []
+                              IdentifierType: ['sec_rgy_name_t']
+                  Constant: int, 0
+                ID: name_len
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['unsigned', 'char']
+            Constant: int, 0
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['unsigned', 'long', 'int']
+        BinaryOp: -
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['unsigned', 'char']
+            UnaryOp: &
+              StructRef: ->
+                Cast: 
+                  Typename: None, []
+                    PtrDecl: []
+                      TypeDecl: None, []
+                        Struct: None
+                          Decl: name_len, [], [], []
+                            TypeDecl: name_len, []
+                              IdentifierType: ['long', 'int']
+                          Decl: name, [], [], []
+                            TypeDecl: name, []
+                              IdentifierType: ['sec_rgy_name_t']
+                  Constant: int, 0
+                ID: name
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['unsigned', 'char']
+            Constant: int, 0

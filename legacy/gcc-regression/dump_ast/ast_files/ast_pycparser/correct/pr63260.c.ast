@@ -1,0 +1,57 @@
+FileAST: 
+  FuncDef: 
+    Decl: test_0, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['float']
+        TypeDecl: test_0, []
+          IdentifierType: ['float']
+    Compound: 
+      Return: 
+        UnaryOp: -
+          ID: x
+  FuncDef: 
+    Decl: test_1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['double']
+        TypeDecl: test_1, []
+          IdentifierType: ['double']
+    Compound: 
+      Return: 
+        UnaryOp: -
+          ID: x
+  FuncDef: 
+    Decl: test_2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['float']
+        TypeDecl: test_2, []
+          IdentifierType: ['float']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: __builtin_fabs
+          ExprList: 
+            ID: x
+  FuncDef: 
+    Decl: test_3, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['double']
+        TypeDecl: test_3, []
+          IdentifierType: ['double']
+    Compound: 
+      Return: 
+        FuncCall: 
+          ID: __builtin_fabs
+          ExprList: 
+            ID: x

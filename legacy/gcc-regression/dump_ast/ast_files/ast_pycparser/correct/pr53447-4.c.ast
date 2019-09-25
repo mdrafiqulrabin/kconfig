@@ -1,0 +1,16 @@
+FileAST: 
+  FuncDef: 
+    Decl: t0p, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            PtrDecl: []
+              TypeDecl: p, []
+                IdentifierType: ['long', 'long']
+        TypeDecl: t0p, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: -=
+        UnaryOp: *
+          ID: p
+        Constant: int, 0x1fffffff8

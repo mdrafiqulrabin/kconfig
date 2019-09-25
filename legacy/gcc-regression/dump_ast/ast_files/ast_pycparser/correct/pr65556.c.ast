@@ -1,0 +1,54 @@
+FileAST: 
+  Decl: s, [], [], []
+    TypeDecl: s, []
+      Struct: S
+        Decl: l, [], [], []
+          TypeDecl: l, []
+            IdentifierType: ['long']
+          Constant: int, 1
+        Decl: l2, [], [], []
+          TypeDecl: l2, []
+            IdentifierType: ['long']
+          Constant: int, 21
+        Decl: ul, [], [], []
+          TypeDecl: ul, []
+            IdentifierType: ['unsigned', 'long']
+          Constant: int, 1
+        Decl: ul2, [], [], []
+          TypeDecl: ul2, []
+            IdentifierType: ['unsigned', 'long']
+          Constant: int, 21
+  FuncDef: 
+    Decl: fn, [], [], []
+      FuncDecl: 
+        TypeDecl: fn, []
+          IdentifierType: ['void']
+    Compound: 
+      Switch: 
+        StructRef: .
+          ID: s
+          ID: l
+        Case: 
+          Constant: int, 0
+          EmptyStatement: 
+      Switch: 
+        StructRef: .
+          ID: s
+          ID: ul
+        Case: 
+          Constant: int, 0
+          EmptyStatement: 
+      Switch: 
+        StructRef: .
+          ID: s
+          ID: l2
+        Case: 
+          Constant: int, 0
+          EmptyStatement: 
+      Switch: 
+        StructRef: .
+          ID: s
+          ID: ul2
+        Case: 
+          Constant: int, 0
+          EmptyStatement: 

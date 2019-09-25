@@ -1,0 +1,15 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['long', 'int']
+        TypeDecl: foo, []
+          IdentifierType: ['long', 'int']
+    Compound: 
+      Return: 
+        BinaryOp: *
+          ID: x
+          ID: __LONG_MAX__

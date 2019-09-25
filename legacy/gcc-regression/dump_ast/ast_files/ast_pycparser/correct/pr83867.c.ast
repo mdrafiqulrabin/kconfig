@@ -1,0 +1,40 @@
+FileAST: 
+  FuncDef: 
+    Decl: k5, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: u5, [], [], []
+            TypeDecl: u5, []
+              IdentifierType: ['int']
+          Decl: aw, [], [], []
+            TypeDecl: aw, []
+              IdentifierType: ['int']
+        TypeDecl: k5, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: v6, [], [], []
+        TypeDecl: v6, []
+          IdentifierType: ['int']
+      While: 
+        BinaryOp: <
+          ID: u5
+          Constant: int, 1
+        Compound: 
+          While: 
+            BinaryOp: <
+              ID: v6
+              Constant: int, 4
+            UnaryOp: ++
+              ID: v6
+          Assignment: =
+            ID: v6
+            Constant: int, 0
+          Assignment: +=
+            ID: aw
+            BinaryOp: >
+              ID: u5
+              Constant: int, 0
+          UnaryOp: ++
+            ID: u5
+      Return: 
+        ID: aw

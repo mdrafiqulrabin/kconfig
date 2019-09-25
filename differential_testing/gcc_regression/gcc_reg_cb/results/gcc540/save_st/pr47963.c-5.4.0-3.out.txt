@@ -1,5 +1,0 @@
-pr47963.c: In function ‘foo’:
-pr47963.c:8:7: error: size of array ‘A’ has non-integer type
-   int A[n][n];  
-       ^
-pr47963.c:8:7: error: size of array ‘A’ has non-integer type

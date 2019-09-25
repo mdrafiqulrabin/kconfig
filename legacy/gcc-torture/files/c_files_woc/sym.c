@@ -1,0 +1,5 @@
+foo ()
+{
+  return (int) &foo;
+}
+

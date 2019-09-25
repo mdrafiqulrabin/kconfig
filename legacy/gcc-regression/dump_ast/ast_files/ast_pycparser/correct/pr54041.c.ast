@@ -1,0 +1,21 @@
+FileAST: 
+  Decl: r, [], ['extern'], []
+    ArrayDecl: []
+      TypeDecl: r, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: fn, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+        PtrDecl: []
+          TypeDecl: fn, []
+            IdentifierType: ['int']
+    Compound: 
+      Return: 
+        UnaryOp: &
+          ArrayRef: 
+            ID: r
+            ID: i

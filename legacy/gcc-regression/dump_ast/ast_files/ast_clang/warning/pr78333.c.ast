@@ -1,0 +1,40 @@
+c_files/pr78333.c:17:71: warning: control reaches end of non-void function [-Wreturn-type]
+extern inline __attribute__((gnu_inline, always_inline)) int foo () { }
+                                                                      ^
+1 warning generated.
+TranslationUnitDecl 0x7f80bf0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f80bf026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f80bf026740 '__int128'
+|-TypedefDecl 0x7f80bf026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f80bf026760 'unsigned __int128'
+|-TypedefDecl 0x7f80bf026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f80bf026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f80bf026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f80bf026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f80bf026dc0 'char *'
+|   `-BuiltinType 0x7f80bf026560 'char'
+|-TypedefDecl 0x7f80bf0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f80bf027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f80bf026ee0 'struct __va_list_tag'
+|     `-Record 0x7f80bf026e58 '__va_list_tag'
+|-FunctionDecl 0x7f80bf826ad0 <c_files/pr78333.c:7:1, line:10:1> line:8:1 __cyg_profile_func_enter 'void (void *, void *)'
+| |-ParmVarDecl 0x7f80bf027138 <col:26, col:32> col:32 this_fn 'void *'
+| |-ParmVarDecl 0x7f80bf826a00 <col:41, col:47> col:47 call_site 'void *'
+| |-CompoundStmt 0x7f80bf826c00 <line:9:1, line:10:1>
+| `-NoInstrumentFunctionAttr 0x7f80bf826b78 <line:7:21>
+|-FunctionDecl 0x7f80bf826d38 <line:12:1, line:15:1> line:13:1 __cyg_profile_func_exit 'void (void *, void *)'
+| |-ParmVarDecl 0x7f80bf826c30 <col:25, col:31> col:31 this_fn 'void *'
+| |-ParmVarDecl 0x7f80bf826ca8 <col:40, col:46> col:46 call_site 'void *'
+| |-CompoundStmt 0x7f80bf826e28 <line:14:1, line:15:1>
+| `-NoInstrumentFunctionAttr 0x7f80bf826de0 <line:12:21>
+|-FunctionDecl 0x7f80bf826e90 <line:17:1, col:71> col:62 used foo 'int ()' extern inline
+| |-CompoundStmt 0x7f80bf826f80 <col:69, col:71>
+| |-AlwaysInlineAttr 0x7f80bf826f28 <col:42> always_inline
+| `-GNUInlineAttr 0x7f80bf826f70 <col:30>
+`-FunctionDecl 0x7f80bf826fc0 <line:18:1, line:22:1> line:18:5 main 'int ()'
+  `-CompoundStmt 0x7f80bf827120 <line:19:1, line:22:1>
+    |-CallExpr 0x7f80bf8270c0 <line:20:3, col:8> 'int'
+    | `-ImplicitCastExpr 0x7f80bf8270a8 <col:3> 'int (*)()' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7f80bf827058 <col:3> 'int ()' Function 0x7f80bf826e90 'foo' 'int ()'
+    `-ReturnStmt 0x7f80bf827108 <line:21:3, col:10>
+      `-IntegerLiteral 0x7f80bf8270e8 <col:10> 'int' 0

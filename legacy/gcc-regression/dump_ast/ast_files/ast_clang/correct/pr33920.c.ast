@@ -1,0 +1,142 @@
+TranslationUnitDecl 0x7f81548264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8154826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8154826740 '__int128'
+|-TypedefDecl 0x7f8154826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8154826760 'unsigned __int128'
+|-TypedefDecl 0x7f8154826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8154826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8154826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8154826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8154826dc0 'char *'
+|   `-BuiltinType 0x7f8154826560 'char'
+|-TypedefDecl 0x7f81548270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8154827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8154826ee0 'struct __va_list_tag'
+|     `-Record 0x7f8154826e58 '__va_list_tag'
+|-TypedefDecl 0x7f8154827138 <c_files/pr33920.c:5:1, col:26> col:26 referenced intptr_t 'long'
+| `-BuiltinType 0x7f81548265e0 'long'
+|-RecordDecl 0x7f8155025a00 <line:6:9, col:15> col:15 union lispunion
+|-TypedefDecl 0x7f8155025b60 <col:1, col:26> col:26 referenced object 'union lispunion *'
+| `-PointerType 0x7f8155025b10 'union lispunion *'
+|   `-ElaboratedType 0x7f8155025ab0 'union lispunion' sugar
+|     `-RecordType 0x7f8155025a90 'union lispunion'
+|       `-Record 0x7f8155026090 'lispunion'
+|-RecordDecl 0x7f8155025bd0 <line:7:1, line:10:1> line:7:8 struct character definition
+| `-FieldDecl 0x7f8155025c98 <line:9:3, col:8> col:8 e 'long'
+|-RecordDecl 0x7f8155025ce0 <line:11:8, col:15> col:15 struct symbol
+|-VarDecl 0x7f8155025de0 <col:1, col:22> col:22 used Cnil_body 'struct symbol':'struct symbol' extern
+|-VarDecl 0x7f8155025eb8 <line:12:1, col:22> col:22 used Ct_body 'struct symbol':'struct symbol' extern
+|-RecordDecl 0x7f8155025f18 <line:13:1, line:16:1> line:13:8 struct vector definition
+| `-FieldDecl 0x7f8155026048 <line:15:3, col:11> col:11 referenced v_self 'object *'
+|-RecordDecl 0x7f8155026090 prev 0x7f8155025a00 <line:17:1, line:20:1> line:17:7 union lispunion definition
+| `-FieldDecl 0x7f8155026170 <line:19:3, col:17> col:17 referenced v 'struct vector':'struct vector'
+|-FunctionDecl 0x7f8155026390 <line:21:1, col:33> col:6 used number_plus 'void (object, object)'
+| |-ParmVarDecl 0x7f8155026210 <col:19> col:25 'object':'union lispunion *'
+| `-ParmVarDecl 0x7f8155026280 <col:27> col:33 'object':'union lispunion *'
+`-FunctionDecl 0x7f8155026488 <line:22:1, line:53:1> line:22:6 init_code 'void ()'
+  `-CompoundStmt 0x7f81550278d8 <line:23:1, line:53:1>
+    |-DeclStmt 0x7f8155026590 <line:24:3, col:14>
+    | `-VarDecl 0x7f8155026530 <col:3, col:10> col:10 used V659 'object':'union lispunion *'
+    |-DeclStmt 0x7f81550266a0 <line:25:3, col:16>
+    | |-VarDecl 0x7f81550265b8 <col:3, col:10> col:10 used _x 'object':'union lispunion *'
+    | `-VarDecl 0x7f8155026628 <col:3, col:14> col:14 used _y 'object':'union lispunion *'
+    |-DeclStmt 0x7f8155026728 <line:26:3, col:14>
+    | `-VarDecl 0x7f81550266c8 <col:3, col:10> col:10 used V643 'object':'union lispunion *'
+    |-DeclStmt 0x7f81550267d0 <line:27:3, col:16>
+    | `-VarDecl 0x7f8155026770 <col:3, col:12> col:12 used V648 'intptr_t':'long'
+    |-DeclStmt 0x7f8155026860 <line:28:3, col:21>
+    | `-VarDecl 0x7f8155026800 <col:3, col:17> col:17 used V653 'unsigned char'
+    |-DeclStmt 0x7f81550268e8 <line:29:3, col:14>
+    | `-VarDecl 0x7f8155026888 <col:3, col:10> col:10 used V651 'object':'union lispunion *'
+    |-DeclStmt 0x7f8155026970 <line:30:3, col:14>
+    | `-VarDecl 0x7f8155026910 <col:3, col:10> col:10 used V654 'object':'union lispunion *'
+    |-DeclStmt 0x7f8155026a00 <line:31:3, col:14>
+    | `-VarDecl 0x7f8155026998 <col:3, col:10> col:10 used V658 'object':'union lispunion *'
+    |-LabelStmt 0x7f8155026bd8 <line:33:1, line:35:10> 'T1240'
+    | `-IfStmt 0x7f8155026b58 <line:34:1, line:35:10>
+    |   |-<<<NULL>>>
+    |   |-<<<NULL>>>
+    |   |-BinaryOperator 0x7f8155026ad0 <line:34:5, col:23> 'int' '>='
+    |   | |-ImplicitCastExpr 0x7f8155026ab8 <col:5> 'intptr_t':'long' <LValueToRValue>
+    |   | | `-DeclRefExpr 0x7f8155026a18 <col:5> 'intptr_t':'long' lvalue Var 0x7f8155026770 'V648' 'intptr_t':'long'
+    |   | `-CStyleCastExpr 0x7f8155026a90 <col:13, col:23> 'intptr_t':'long' <PointerToIntegral>
+    |   |   `-ImplicitCastExpr 0x7f8155026a78 <col:23> 'object':'union lispunion *' <LValueToRValue>
+    |   |     `-DeclRefExpr 0x7f8155026a40 <col:23> 'object':'union lispunion *' lvalue Var 0x7f8155026888 'V651' 'object':'union lispunion *'
+    |   |-GotoStmt 0x7f8155026b40 <line:35:5, col:10> 'T1243' 0x7f8155026af8
+    |   `-<<<NULL>>>
+    |-BinaryOperator 0x7f8155026dd8 <line:36:3, col:40> 'unsigned char' '='
+    | |-DeclRefExpr 0x7f8155026bf0 <col:3> 'unsigned char' lvalue Var 0x7f8155026800 'V653' 'unsigned char'
+    | `-ImplicitCastExpr 0x7f8155026dc0 <col:10, col:40> 'unsigned char' <IntegralCast>
+    |   `-ImplicitCastExpr 0x7f8155026da8 <col:10, col:40> 'char' <LValueToRValue>
+    |     `-ArraySubscriptExpr 0x7f8155026d80 <col:10, col:40> 'char' lvalue
+    |       |-ParenExpr 0x7f8155026d20 <col:10, col:34> 'char *'
+    |       | `-CStyleCastExpr 0x7f8155026cf8 <col:11, col:28> 'char *' <BitCast>
+    |       |   `-ImplicitCastExpr 0x7f8155026ce0 <col:20, col:28> 'object *' <LValueToRValue>
+    |       |     `-MemberExpr 0x7f8155026c90 <col:20, col:28> 'object *' lvalue .v_self 0x7f8155026048
+    |       |       `-MemberExpr 0x7f8155026c58 <col:20, col:26> 'struct vector':'struct vector' lvalue ->v 0x7f8155026170
+    |       |         `-ImplicitCastExpr 0x7f8155026c40 <col:20> 'object':'union lispunion *' <LValueToRValue>
+    |       |           `-DeclRefExpr 0x7f8155026c18 <col:20> 'object':'union lispunion *' lvalue Var 0x7f8155026910 'V654' 'object':'union lispunion *'
+    |       `-ImplicitCastExpr 0x7f8155026d68 <col:36> 'intptr_t':'long' <LValueToRValue>
+    |         `-DeclRefExpr 0x7f8155026d40 <col:36> 'intptr_t':'long' lvalue Var 0x7f8155026770 'V648' 'intptr_t':'long'
+    |-BinaryOperator 0x7f8155026f20 <line:37:3, col:26> 'object':'union lispunion *' '='
+    | |-DeclRefExpr 0x7f8155026e00 <col:3> 'object':'union lispunion *' lvalue Var 0x7f8155026530 'V659' 'object':'union lispunion *'
+    | `-BinaryOperator 0x7f8155026ef8 <col:10, col:26> 'object':'union lispunion *' '+'
+    |   |-CStyleCastExpr 0x7f8155026e78 <col:10, col:19> 'object':'union lispunion *' <NoOp>
+    |   | `-ImplicitCastExpr 0x7f8155026e60 <col:19> 'object':'union lispunion *' <LValueToRValue>
+    |   |   `-DeclRefExpr 0x7f8155026e28 <col:19> 'object':'union lispunion *' lvalue Var 0x7f8155026910 'V654' 'object':'union lispunion *'
+    |   `-ImplicitCastExpr 0x7f8155026ee0 <col:26> 'int' <IntegralCast>
+    |     `-ImplicitCastExpr 0x7f8155026ec8 <col:26> 'unsigned char' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f8155026ea0 <col:26> 'unsigned char' lvalue Var 0x7f8155026800 'V653' 'unsigned char'
+    |-LabelStmt 0x7f81550272a0 <line:38:1, line:41:45> 'T1261'
+    | `-BinaryOperator 0x7f8155027230 <line:39:3, line:41:45> 'object':'union lispunion *' '='
+    |   |-DeclRefExpr 0x7f8155026f48 <line:39:3> 'object':'union lispunion *' lvalue Var 0x7f8155026998 'V658' 'object':'union lispunion *'
+    |   `-ConditionalOperator 0x7f8155027200 <line:40:5, line:41:45> 'object':'union lispunion *'
+    |     |-CStyleCastExpr 0x7f8155026fc0 <line:40:5, line:41:6> 'object':'union lispunion *' <NoOp>
+    |     | `-ImplicitCastExpr 0x7f8155026fa8 <col:6> 'object':'union lispunion *' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x7f8155026f70 <col:6> 'object':'union lispunion *' lvalue Var 0x7f8155026530 'V659' 'object':'union lispunion *'
+    |     |-CStyleCastExpr 0x7f8155027098 <col:13, col:24> 'object':'union lispunion *' <BitCast>
+    |     | `-UnaryOperator 0x7f8155027068 <col:22, col:24> 'struct symbol *' prefix '&'
+    |     |   `-DeclRefExpr 0x7f8155026fe8 <col:24> 'struct symbol':'struct symbol' lvalue Var 0x7f8155025eb8 'Ct_body' 'struct symbol':'struct symbol'
+    |     `-CStyleCastExpr 0x7f8155027118 <col:34, col:45> 'object':'union lispunion *' <BitCast>
+    |       `-UnaryOperator 0x7f81550270e8 <col:43, col:45> 'struct symbol *' prefix '&'
+    |         `-DeclRefExpr 0x7f81550270c0 <col:45> 'struct symbol':'struct symbol' lvalue Var 0x7f8155025de0 'Cnil_body' 'struct symbol':'struct symbol'
+    |-IfStmt 0x7f8155027400 <line:42:3, line:43:10>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f8155027378 <line:42:7, col:26> 'int' '=='
+    | | |-ImplicitCastExpr 0x7f8155027360 <col:7> 'object':'union lispunion *' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7f81550272b8 <col:7> 'object':'union lispunion *' lvalue Var 0x7f8155026998 'V658' 'object':'union lispunion *'
+    | | `-CStyleCastExpr 0x7f8155027338 <col:15, col:26> 'object':'union lispunion *' <BitCast>
+    | |   `-UnaryOperator 0x7f8155027308 <col:24, col:26> 'struct symbol *' prefix '&'
+    | |     `-DeclRefExpr 0x7f81550272e0 <col:26> 'struct symbol':'struct symbol' lvalue Var 0x7f8155025de0 'Cnil_body' 'struct symbol':'struct symbol'
+    | |-GotoStmt 0x7f81550273e8 <line:43:5, col:10> 'T1249' 0x7f81550273a0
+    | `-<<<NULL>>>
+    |-GotoStmt 0x7f8155027480 <line:44:3, col:8> 'T1224' 0x7f8155027438
+    |-LabelStmt 0x7f81550275c0 <line:45:1, line:46:28> 'T1249'
+    | `-BinaryOperator 0x7f8155027598 <col:3, col:28> 'intptr_t':'long' '='
+    |   |-DeclRefExpr 0x7f8155027498 <col:3> 'intptr_t':'long' lvalue Var 0x7f8155026770 'V648' 'intptr_t':'long'
+    |   `-BinaryOperator 0x7f8155027570 <col:10, col:28> 'long' '+'
+    |     |-CStyleCastExpr 0x7f8155027510 <col:10, col:21> 'intptr_t':'long' <NoOp>
+    |     | `-ImplicitCastExpr 0x7f81550274f8 <col:21> 'intptr_t':'long' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x7f81550274c0 <col:21> 'intptr_t':'long' lvalue Var 0x7f8155026770 'V648' 'intptr_t':'long'
+    |     `-ImplicitCastExpr 0x7f8155027558 <col:28> 'long' <IntegralCast>
+    |       `-IntegerLiteral 0x7f8155027538 <col:28> 'int' 1
+    |-GotoStmt 0x7f81550275d8 <line:47:3, col:8> 'T1240' 0x7f8155026b90
+    |-LabelStmt 0x7f81550276c0 <line:48:1, line:49:21> 'T1243'
+    | `-BinaryOperator 0x7f8155027698 <col:3, col:21> 'object':'union lispunion *' '='
+    |   |-DeclRefExpr 0x7f81550275f0 <col:3> 'object':'union lispunion *' lvalue Var 0x7f81550266c8 'V643' 'object':'union lispunion *'
+    |   `-CStyleCastExpr 0x7f8155027670 <col:10, col:21> 'object':'union lispunion *' <BitCast>
+    |     `-UnaryOperator 0x7f8155027640 <col:19, col:21> 'struct symbol *' prefix '&'
+    |       `-DeclRefExpr 0x7f8155027618 <col:21> 'struct symbol':'struct symbol' lvalue Var 0x7f8155025de0 'Cnil_body' 'struct symbol':'struct symbol'
+    |-LabelStmt 0x7f8155027768 <line:50:1, line:51:8> 'T1224'
+    | `-BinaryOperator 0x7f8155027740 <col:3, col:8> 'object':'union lispunion *' '='
+    |   |-DeclRefExpr 0x7f81550276d8 <col:3> 'object':'union lispunion *' lvalue Var 0x7f8155026628 '_y' 'object':'union lispunion *'
+    |   `-ImplicitCastExpr 0x7f8155027728 <col:8> 'object':'union lispunion *' <LValueToRValue>
+    |     `-DeclRefExpr 0x7f8155027700 <col:8> 'object':'union lispunion *' lvalue Var 0x7f81550266c8 'V643' 'object':'union lispunion *'
+    `-CallExpr 0x7f8155027870 <line:52:3, col:22> 'void'
+      |-ImplicitCastExpr 0x7f8155027858 <col:3> 'void (*)(object, object)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7f8155027780 <col:3> 'void (object, object)' Function 0x7f8155026390 'number_plus' 'void (object, object)'
+      |-ImplicitCastExpr 0x7f81550278a8 <col:16> 'object':'union lispunion *' <LValueToRValue>
+      | `-DeclRefExpr 0x7f81550277a8 <col:16> 'object':'union lispunion *' lvalue Var 0x7f81550265b8 '_x' 'object':'union lispunion *'
+      `-ImplicitCastExpr 0x7f81550278c0 <col:20> 'object':'union lispunion *' <LValueToRValue>
+        `-DeclRefExpr 0x7f81550277d0 <col:20> 'object':'union lispunion *' lvalue Var 0x7f8155026628 '_y' 'object':'union lispunion *'

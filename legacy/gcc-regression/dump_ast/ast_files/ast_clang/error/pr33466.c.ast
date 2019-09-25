@@ -1,0 +1,131 @@
+c_files/pr33466.c:8:21: error: invalid suffix 'rh' on floating constant
+long double rh = 0.5rh;         /* { dg-error "invalid suffix" } */
+                    ^
+c_files/pr33466.c:9:21: error: invalid suffix 'rl' on floating constant
+long double rl = 0.5rl;         /* { dg-error "invalid suffix" } */
+                    ^
+c_files/pr33466.c:10:22: error: invalid suffix 'rll' on floating constant
+long double rll = 0.5rll;       /* { dg-error "invalid suffix" } */
+                     ^
+c_files/pr33466.c:11:21: error: invalid suffix 'kh' on floating constant
+long double kh = 0.5kh;         /* { dg-error "invalid suffix" } */
+                    ^
+c_files/pr33466.c:12:21: error: invalid suffix 'kl' on floating constant
+long double kl = 0.5kl;         /* { dg-error "invalid suffix" } */
+                    ^
+c_files/pr33466.c:13:22: error: invalid suffix 'kll' on floating constant
+long double kll = 0.5kll;       /* { dg-error "invalid suffix" } */
+                     ^
+c_files/pr33466.c:14:21: error: invalid suffix 'ru' on floating constant
+long double ru = 0.5ru;         /* { dg-error "invalid suffix" } */
+                    ^
+c_files/pr33466.c:15:22: error: invalid suffix 'urh' on floating constant
+long double urh = 0.5urh;       /* { dg-error "invalid suffix" } */
+                     ^
+c_files/pr33466.c:16:22: error: invalid suffix 'hur' on floating constant
+long double hur = 0.5hur;       /* { dg-error "invalid suffix" } */
+                     ^
+c_files/pr33466.c:17:22: error: invalid suffix 'hru' on floating constant
+long double hru = 0.5hru;       /* { dg-error "invalid suffix" } */
+                     ^
+c_files/pr33466.c:18:22: error: invalid suffix 'ruh' on floating constant
+long double ruh = 0.5ruh;       /* { dg-error "invalid suffix" } */
+                     ^
+c_files/pr33466.c:19:22: error: invalid suffix 'rhu' on floating constant
+long double rhu = 0.5rhu;       /* { dg-error "invalid suffix" } */
+                     ^
+c_files/pr33466.c:20:22: error: invalid suffix 'url' on floating constant
+long double url = 0.5url;       /* { dg-error "invalid suffix" } */
+                     ^
+c_files/pr33466.c:21:22: error: invalid suffix 'lur' on floating constant
+long double lur = 0.5lur;       /* { dg-error "invalid suffix" } */
+                     ^
+c_files/pr33466.c:22:22: error: invalid suffix 'lru' on floating constant
+long double lru = 0.5lru;       /* { dg-error "invalid suffix" } */
+                     ^
+c_files/pr33466.c:23:22: error: invalid suffix 'rul' on floating constant
+long double rul = 0.5rul;       /* { dg-error "invalid suffix" } */
+                     ^
+c_files/pr33466.c:24:22: error: invalid suffix 'rlu' on floating constant
+long double rlu = 0.5rlu;       /* { dg-error "invalid suffix" } */
+                     ^
+c_files/pr33466.c:25:23: error: invalid suffix 'urll' on floating constant
+long double urll = 0.5urll;     /* { dg-error "invalid suffix" } */
+                      ^
+c_files/pr33466.c:26:23: error: invalid suffix 'llur' on floating constant
+long double llur = 0.5llur;     /* { dg-error "invalid suffix" } */
+                      ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
+TranslationUnitDecl 0x7f8fad8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8fad826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8fad826740 '__int128'
+|-TypedefDecl 0x7f8fad826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8fad826760 'unsigned __int128'
+|-TypedefDecl 0x7f8fad826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8fad826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f8fad826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8fad826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8fad826dc0 'char *'
+|   `-BuiltinType 0x7f8fad826560 'char'
+|-TypedefDecl 0x7f8fad8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8fad827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8fad826ee0 'struct __va_list_tag'
+|     `-Record 0x7f8fad826e58 '__va_list_tag'
+|-VarDecl 0x7f8fad827138 <c_files/pr33466.c:8:1, col:13> col:13 rh 'long double'
+|-VarDecl 0x7f8fae025a00 <line:9:1, col:13> col:13 rl 'long double'
+|-VarDecl 0x7f8fae025a78 <line:10:1, col:13> col:13 rll 'long double'
+|-VarDecl 0x7f8fae025af0 <line:11:1, col:13> col:13 kh 'long double'
+|-VarDecl 0x7f8fae025b68 <line:12:1, col:13> col:13 kl 'long double'
+|-VarDecl 0x7f8fae025be0 <line:13:1, col:13> col:13 kll 'long double'
+|-VarDecl 0x7f8fae025c58 <line:14:1, col:13> col:13 ru 'long double'
+|-VarDecl 0x7f8fae025cd0 <line:15:1, col:13> col:13 urh 'long double'
+|-VarDecl 0x7f8fae025d48 <line:16:1, col:13> col:13 hur 'long double'
+|-VarDecl 0x7f8fae025dc0 <line:17:1, col:13> col:13 hru 'long double'
+|-VarDecl 0x7f8fae025e38 <line:18:1, col:13> col:13 ruh 'long double'
+|-VarDecl 0x7f8fae025eb0 <line:19:1, col:13> col:13 rhu 'long double'
+|-VarDecl 0x7f8fae025f28 <line:20:1, col:13> col:13 url 'long double'
+|-VarDecl 0x7f8fae025fa0 <line:21:1, col:13> col:13 lur 'long double'
+|-VarDecl 0x7f8fae026018 <line:22:1, col:13> col:13 lru 'long double'
+|-VarDecl 0x7f8fae026090 <line:23:1, col:13> col:13 rul 'long double'
+|-VarDecl 0x7f8fae026108 <line:24:1, col:13> col:13 rlu 'long double'
+|-VarDecl 0x7f8fae026180 <line:25:1, col:13> col:13 urll 'long double'
+|-VarDecl 0x7f8fae0261f8 <line:26:1, col:13> col:13 llur 'long double'
+|-VarDecl 0x7f8fae026270 <line:27:1, col:13> col:13 llru 'long double'
+|-VarDecl 0x7f8fae0262e8 <line:28:1, col:13> col:13 rull 'long double'
+|-VarDecl 0x7f8fae026360 <line:29:1, col:13> col:13 rllu 'long double'
+|-VarDecl 0x7f8fae0263d8 <line:30:1, col:13> col:13 ku 'long double'
+|-VarDecl 0x7f8fae026450 <line:31:1, col:13> col:13 ukh 'long double'
+|-VarDecl 0x7f8fae0264c8 <line:32:1, col:13> col:13 huk 'long double'
+|-VarDecl 0x7f8fae026540 <line:33:1, col:13> col:13 hku 'long double'
+|-VarDecl 0x7f8fae0265b8 <line:34:1, col:13> col:13 kuh 'long double'
+|-VarDecl 0x7f8fae026630 <line:35:1, col:13> col:13 khu 'long double'
+|-VarDecl 0x7f8fae0266a8 <line:36:1, col:13> col:13 ukl 'long double'
+|-VarDecl 0x7f8fae026720 <line:37:1, col:13> col:13 luk 'long double'
+|-VarDecl 0x7f8fae026798 <line:38:1, col:13> col:13 lku 'long double'
+|-VarDecl 0x7f8fae026810 <line:39:1, col:13> col:13 kul 'long double'
+|-VarDecl 0x7f8fae026888 <line:40:1, col:13> col:13 klu 'long double'
+|-VarDecl 0x7f8fae026900 <line:41:1, col:13> col:13 ukll 'long double'
+|-VarDecl 0x7f8fae026978 <line:42:1, col:13> col:13 lluk 'long double'
+|-VarDecl 0x7f8fae026a00 <line:43:1, col:13> col:13 llku 'long double'
+|-VarDecl 0x7f8fae026a78 <line:44:1, col:13> col:13 kull 'long double'
+|-VarDecl 0x7f8fae026af0 <line:45:1, col:13> col:13 kllu 'long double'
+|-VarDecl 0x7f8fae026b68 <line:46:1, col:13> col:13 ld 'long double'
+|-VarDecl 0x7f8fae026be0 <line:47:1, col:13> col:13 fd 'long double'
+|-VarDecl 0x7f8fae026c58 <line:48:1, col:13> col:13 dk 'long double'
+|-VarDecl 0x7f8fae026cd0 <line:49:1, col:13> col:13 dr 'long double'
+|-VarDecl 0x7f8fae026d48 <line:50:1, col:13> col:13 ddw 'long double'
+|-VarDecl 0x7f8fae026dc0 <line:51:1, col:13> col:13 ddq 'long double'
+|-VarDecl 0x7f8fae026e38 <line:52:1, col:13> col:13 ddl 'long double'
+|-VarDecl 0x7f8fae026eb0 <line:53:1, col:13> col:13 ddf 'long double'
+|-VarDecl 0x7f8fae026f28 <line:54:1, col:13> col:13 ddd 'long double'
+|-VarDecl 0x7f8fae026fa0 <line:55:1, col:13> col:13 dw 'long double'
+|-VarDecl 0x7f8fae027018 <line:56:1, col:13> col:13 dq 'long double'
+|-VarDecl 0x7f8fae027090 <line:57:1, col:13> col:13 wd 'long double'
+|-VarDecl 0x7f8fae027108 <line:58:1, col:13> col:13 qd 'long double'
+|-VarDecl 0x7f8fae027180 <line:59:1, col:13> col:13 wdd 'long double'
+|-VarDecl 0x7f8fae0271f8 <line:60:1, col:13> col:13 qdd 'long double'
+|-VarDecl 0x7f8fae027270 <line:61:1, col:13> col:13 ldd 'long double'
+|-VarDecl 0x7f8fae0272e8 <line:62:1, col:13> col:13 fdd 'long double'
+|-VarDecl 0x7f8fae027360 <line:63:1, col:13> col:13 ddi 'long double'
+`-VarDecl 0x7f8fae0273d8 <line:64:1, col:13> col:13 idd 'long double'

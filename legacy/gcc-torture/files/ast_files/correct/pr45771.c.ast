@@ -1,0 +1,23 @@
+FileAST: 
+  Decl: data, ['const'], ['static'], []
+    ArrayDecl: []
+      TypeDecl: data, ['const']
+        IdentifierType: ['int']
+      Constant: int, 2048
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: ptr, [], [], []
+            PtrDecl: []
+              TypeDecl: ptr, []
+                IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: __builtin_memcmp
+        ExprList: 
+          ID: data
+          ID: ptr
+          Constant: int, 1

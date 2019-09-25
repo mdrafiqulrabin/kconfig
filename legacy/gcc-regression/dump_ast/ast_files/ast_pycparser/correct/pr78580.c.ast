@@ -1,0 +1,28 @@
+FileAST: 
+  Decl: a, ['const'], ['extern'], []
+    TypeDecl: a, ['const']
+      IdentifierType: ['signed', 'char']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['signed', 'char']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        ID: x
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          ID: a
+      Return: 
+        Constant: int, 0

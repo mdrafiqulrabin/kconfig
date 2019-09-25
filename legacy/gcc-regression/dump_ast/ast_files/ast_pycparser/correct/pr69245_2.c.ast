@@ -1,0 +1,24 @@
+FileAST: 
+  Pragma: GCC push_options
+  Pragma: GCC target "arch=armv8-a+nofp"
+  FuncDef: 
+    Decl: fn1, [], ['static'], []
+      FuncDecl: 
+        TypeDecl: fn1, []
+          IdentifierType: ['void']
+    Compound: 
+  Pragma: GCC pop_options
+  FuncDef: 
+    Decl: fn2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['float']
+        TypeDecl: fn2, []
+          IdentifierType: ['float']
+    Compound: 
+      Return: 
+        BinaryOp: +
+          ID: a
+          Constant: float, 2.0

@@ -1,0 +1,42 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: a
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        ID: a
+        Goto: a1
+      Goto: a2
+      Label: a1
+        Goto: a3
+      Label: a2
+        Goto: a4
+      Label: a3
+        Goto: a5
+      Label: a4
+        Goto: a6
+      Label: a5
+        Goto: a7
+      Label: a6
+        Goto: a8
+      Label: a7
+        Goto: a9
+      Label: a8
+        Goto: a10
+      Label: a9
+        Goto: a11
+      Label: a10
+        Goto: a12
+      Label: a11
+        Goto: a13
+      Label: a12
+        EmptyStatement: 
+      Label: a13
+        EmptyStatement: 
+      Return: 
+        UnaryOp: -
+          ID: a

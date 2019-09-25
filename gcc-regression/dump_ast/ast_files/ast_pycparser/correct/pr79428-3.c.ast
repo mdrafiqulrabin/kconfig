@@ -1,5 +1,0 @@
-FileAST: 
-  Decl: i, [], [], []
-    TypeDecl: i, []
-      IdentifierType: ['int']
-  Pragma: GCC pch_preprocess  

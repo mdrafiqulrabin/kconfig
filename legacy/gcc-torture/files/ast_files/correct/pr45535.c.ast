@@ -1,0 +1,179 @@
+FileAST: 
+  Typedef: pmd_t, [], ['typedef']
+    TypeDecl: pmd_t, []
+      Struct: None
+        Decl: pmd0, [], [], []
+          TypeDecl: pmd0, []
+            IdentifierType: ['unsigned', 'long']
+        Decl: pmd1, [], [], []
+          TypeDecl: pmd1, []
+            IdentifierType: ['unsigned', 'long']
+  Typedef: pgd_t, [], ['typedef']
+    TypeDecl: pgd_t, []
+      IdentifierType: ['unsigned', 'int']
+  Decl: None, [], [], []
+    Struct: mm_struct
+      Decl: pgd, [], [], []
+        PtrDecl: []
+          TypeDecl: pgd, []
+            IdentifierType: ['pgd_t']
+  FuncDef: 
+    Decl: pmd_bad, [], ['extern'], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: pmd, [], [], []
+            TypeDecl: pmd, []
+              IdentifierType: ['pmd_t']
+        TypeDecl: pmd_bad, []
+          IdentifierType: ['int']
+    Compound: 
+  FuncDef: 
+    Decl: pmd_clear, [], ['extern'], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: pmdp, [], [], []
+            PtrDecl: []
+              TypeDecl: pmdp, []
+                IdentifierType: ['pmd_t']
+        TypeDecl: pmd_clear, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        StructRef: .
+          UnaryOp: *
+            ID: pmdp
+          ID: pmd0
+        BinaryOp: |
+          Constant: int, 0x20
+          Constant: int, 0x00
+      Assignment: =
+        StructRef: .
+          UnaryOp: *
+            ID: pmdp
+          ID: pmd1
+        BinaryOp: |
+          Constant: int, 0x20
+          Constant: int, 0x00
+  FuncDef: 
+    Decl: free_one_pmd, [], ['static'], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: dir, [], [], []
+            PtrDecl: []
+              TypeDecl: dir, []
+                IdentifierType: ['pmd_t']
+        TypeDecl: free_one_pmd, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        FuncCall: 
+          ID: pmd_bad
+          ExprList: 
+            UnaryOp: *
+              ID: dir
+        Compound: 
+          FuncCall: 
+            ID: pmd_clear
+            ExprList: 
+              ID: dir
+  FuncDef: 
+    Decl: free_one_pgd, [], ['static'], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: dir, [], [], []
+            PtrDecl: []
+              TypeDecl: dir, []
+                IdentifierType: ['pgd_t']
+        TypeDecl: free_one_pgd, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['int']
+      Decl: pmd, [], [], []
+        PtrDecl: []
+          TypeDecl: pmd, []
+            IdentifierType: ['pmd_t']
+      Assignment: =
+        ID: pmd
+        BinaryOp: +
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['pmd_t']
+            Cast: 
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['unsigned', 'long']
+              Cast: 
+                Typename: None, []
+                  PtrDecl: []
+                    TypeDecl: None, []
+                      IdentifierType: ['void']
+                BinaryOp: &
+                  FuncCall: 
+                    ID: __pgd_val
+                    ExprList: 
+                      ID: dir
+                  UnaryOp: ~
+                    BinaryOp: -
+                      BinaryOp: <<
+                        Constant: int, 1UL
+                        Constant: int, 12
+                      Constant: int, 1
+          BinaryOp: &
+            BinaryOp: >>
+              Constant: int, 0
+              Constant: int, 21
+            BinaryOp: -
+              Constant: int, 512
+              Constant: int, 1
+      For: 
+        Assignment: =
+          ID: j
+          Constant: int, 0
+        BinaryOp: <
+          ID: j
+          Constant: int, 512
+        UnaryOp: p++
+          ID: j
+        Compound: 
+          FuncCall: 
+            ID: free_one_pmd
+            ExprList: 
+              BinaryOp: +
+                ID: pmd
+                ID: j
+  FuncDef: 
+    Decl: clear_page_tables, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: mm, [], [], []
+            PtrDecl: []
+              TypeDecl: mm, []
+                Struct: mm_struct
+          Decl: first, [], [], []
+            TypeDecl: first, []
+              IdentifierType: ['unsigned', 'long']
+          Decl: nr, [], [], []
+            TypeDecl: nr, []
+              IdentifierType: ['int']
+        TypeDecl: clear_page_tables, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: page_dir, [], [], []
+        PtrDecl: []
+          TypeDecl: page_dir, []
+            IdentifierType: ['pgd_t']
+        StructRef: ->
+          ID: mm
+          ID: pgd
+      DoWhile: 
+        UnaryOp: --
+          ID: nr
+        Compound: 
+          FuncCall: 
+            ID: free_one_pgd
+            ExprList: 
+              ID: page_dir

@@ -1,0 +1,96 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: A, [], [], []
+            PtrDecl: []
+              TypeDecl: A, []
+                IdentifierType: ['int']
+          Decl: B, [], [], []
+            PtrDecl: []
+              TypeDecl: B, []
+                IdentifierType: ['int']
+          Decl: start, [], [], []
+            TypeDecl: start, []
+              IdentifierType: ['unsigned']
+          Decl: BS, [], [], []
+            TypeDecl: BS, []
+              IdentifierType: ['unsigned']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: s, [], [], []
+        TypeDecl: s, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      For: 
+        DeclList: 
+          Decl: k, [], [], []
+            TypeDecl: k, []
+              IdentifierType: ['unsigned']
+            ID: start
+        BinaryOp: <
+          ID: k
+          BinaryOp: +
+            ID: start
+            ID: BS
+        UnaryOp: p++
+          ID: k
+        Compound: 
+          Assignment: +=
+            ID: s
+            BinaryOp: *
+              ArrayRef: 
+                ID: A
+                ID: k
+              ArrayRef: 
+                ID: B
+                ID: k
+      Return: 
+        ID: s
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: A, [], [], []
+            PtrDecl: []
+              TypeDecl: A, []
+                IdentifierType: ['int']
+          Decl: B, [], [], []
+            PtrDecl: []
+              TypeDecl: B, []
+                IdentifierType: ['int']
+          Decl: BS, [], [], []
+            TypeDecl: BS, []
+              IdentifierType: ['unsigned']
+        TypeDecl: bar, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: s, [], [], []
+        TypeDecl: s, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      For: 
+        DeclList: 
+          Decl: k, [], [], []
+            TypeDecl: k, []
+              IdentifierType: ['unsigned']
+            Constant: int, 0
+        BinaryOp: <
+          ID: k
+          ID: BS
+        UnaryOp: p++
+          ID: k
+        Compound: 
+          Assignment: +=
+            ID: s
+            BinaryOp: *
+              ArrayRef: 
+                ID: A
+                ID: k
+              ArrayRef: 
+                ID: B
+                ID: k
+      Return: 
+        ID: s

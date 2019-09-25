@@ -1,0 +1,44 @@
+TranslationUnitDecl 0x7fad770264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fad77026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fad77026740 '__int128'
+|-TypedefDecl 0x7fad77026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fad77026760 'unsigned __int128'
+|-TypedefDecl 0x7fad77026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fad77026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fad77026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fad77026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fad77026dc0 'char *'
+|   `-BuiltinType 0x7fad77026560 'char'
+|-TypedefDecl 0x7fad770270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fad77027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fad77026ee0 'struct __va_list_tag'
+|     `-Record 0x7fad77026e58 '__va_list_tag'
+|-VarDecl 0x7fad77027160 <c_files/pr53410-1.c:3:1, col:6> col:6 used a 'int *'
+|-VarDecl 0x7fad77077418 <col:1, col:9> col:9 used b 'int'
+|-VarDecl 0x7fad77077490 <col:1, col:12> col:12 used c 'int'
+|-VarDecl 0x7fad77077508 <col:1, col:15> col:15 used d 'int'
+`-FunctionDecl 0x7fad77077650 <line:5:1, line:10:1> line:6:1 foo 'void (void)'
+  `-CompoundStmt 0x7fad770779e8 <line:7:1, line:10:1>
+    `-ForStmt 0x7fad770779b0 <line:8:3, line:9:28>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fad77077748 <line:8:10, col:15> 'int' '<='
+      | |-ImplicitCastExpr 0x7fad77077730 <col:10> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fad770776e8 <col:10> 'int' lvalue Var 0x7fad77077508 'd' 'int'
+      | `-IntegerLiteral 0x7fad77077710 <col:15> 'int' 0
+      |-UnaryOperator 0x7fad77077798 <col:18, col:19> 'int' postfix '++'
+      | `-DeclRefExpr 0x7fad77077770 <col:18> 'int' lvalue Var 0x7fad77077508 'd' 'int'
+      `-CompoundAssignOperator 0x7fad77077978 <line:9:5, col:28> 'int' '&=' ComputeLHSTy='int' ComputeResultTy='int'
+        |-DeclRefExpr 0x7fad770777b8 <col:5> 'int' lvalue Var 0x7fad77077418 'b' 'int'
+        `-BinaryOperator 0x7fad77077950 <col:10, col:28> 'int' '=='
+          |-ParenExpr 0x7fad77077910 <col:10, col:23> 'int'
+          | `-BinaryOperator 0x7fad770778e8 <col:11, col:22> 'int' '^'
+          |   |-ParenExpr 0x7fad77077888 <col:11, col:18> 'int'
+          |   | `-BinaryOperator 0x7fad77077860 <col:12, col:17> 'int' '||'
+          |   |   |-ImplicitCastExpr 0x7fad77077830 <col:12> 'int *' <LValueToRValue>
+          |   |   | `-DeclRefExpr 0x7fad770777e0 <col:12> 'int *' lvalue Var 0x7fad77027160 'a' 'int *'
+          |   |   `-ImplicitCastExpr 0x7fad77077848 <col:17> 'int' <LValueToRValue>
+          |   |     `-DeclRefExpr 0x7fad77077808 <col:17> 'int' lvalue Var 0x7fad77077508 'd' 'int'
+          |   `-ImplicitCastExpr 0x7fad770778d0 <col:22> 'int' <LValueToRValue>
+          |     `-DeclRefExpr 0x7fad770778a8 <col:22> 'int' lvalue Var 0x7fad77077490 'c' 'int'
+          `-IntegerLiteral 0x7fad77077930 <col:28> 'int' 1

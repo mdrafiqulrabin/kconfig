@@ -1,0 +1,50 @@
+FileAST: 
+  FuncDef: 
+    Decl: test, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: code, [], [], []
+            TypeDecl: code, []
+              IdentifierType: ['int']
+          Decl: image, [], [], []
+            PtrDecl: []
+              TypeDecl: image, []
+                IdentifierType: ['unsigned', 'int']
+          Decl: colors, [], [], []
+            PtrDecl: []
+              TypeDecl: colors, []
+                IdentifierType: ['int']
+        TypeDecl: test, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          ID: code
+        UnaryOp: ++
+          ID: i
+        Assignment: =
+          ArrayRef: 
+            ID: image
+            ID: i
+          TernaryOp: 
+            BinaryOp: <
+              ArrayRef: 
+                ID: colors
+                ID: i
+              Constant: int, 0
+            UnaryOp: ~
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['unsigned', 'int']
+                Constant: int, 0
+            ArrayRef: 
+              ID: colors
+              ID: i

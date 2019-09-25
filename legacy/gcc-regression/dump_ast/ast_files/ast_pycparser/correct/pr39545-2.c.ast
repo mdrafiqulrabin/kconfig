@@ -1,0 +1,30 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: flex
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: flex, [], [], []
+        ArrayDecl: []
+          TypeDecl: flex, []
+            IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          Struct: flex
+    Compound: 
+      Decl: s, [], [], []
+        TypeDecl: s, []
+          Struct: flex
+      Assignment: =
+        StructRef: .
+          ID: s
+          ID: i
+        ID: x
+      Return: 
+        ID: s

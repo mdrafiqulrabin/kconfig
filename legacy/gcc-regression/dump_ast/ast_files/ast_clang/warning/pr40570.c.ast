@@ -1,0 +1,69 @@
+c_files/pr40570.c:5:33: warning: control reaches end of non-void function [-Wreturn-type]
+static int bar(int i) { foo(i); }
+                                ^
+1 warning generated.
+TranslationUnitDecl 0x7fdb720264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fdb72026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fdb72026740 '__int128'
+|-TypedefDecl 0x7fdb72026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fdb72026760 'unsigned __int128'
+|-TypedefDecl 0x7fdb72026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fdb72026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fdb72026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fdb72026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fdb72026dc0 'char *'
+|   `-BuiltinType 0x7fdb72026560 'char'
+|-TypedefDecl 0x7fdb720270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fdb72027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fdb72026ee0 'struct __va_list_tag'
+|     `-Record 0x7fdb72026e58 '__va_list_tag'
+|-FunctionDecl 0x7fdb72825a00 <c_files/pr40570.c:1:1, col:25> col:13 used anything 'void (int)' extern
+| `-ParmVarDecl 0x7fdb72027138 <col:22> col:25 'int'
+|-FunctionDecl 0x7fdb72825bc8 <line:3:1, col:21> col:12 used foo 'int (int)' static
+| `-ParmVarDecl 0x7fdb72825af8 <col:16, col:20> col:20 i 'int'
+|-FunctionDecl 0x7fdb72825d10 <line:5:1, col:33> col:12 used bar 'int (int)' static
+| |-ParmVarDecl 0x7fdb72825c80 <col:16, col:20> col:20 used i 'int'
+| `-CompoundStmt 0x7fdb72825e88 <col:23, col:33>
+|   `-CallExpr 0x7fdb72825e40 <col:25, col:30> 'int'
+|     |-ImplicitCastExpr 0x7fdb72825e28 <col:25> 'int (*)(int)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fdb72825db0 <col:25> 'int (int)' Function 0x7fdb72825bc8 'foo' 'int (int)'
+|     `-ImplicitCastExpr 0x7fdb72825e70 <col:29> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x7fdb72825dd8 <col:29> 'int' lvalue ParmVar 0x7fdb72825c80 'i' 'int'
+|-VarDecl 0x7fdb72825ec0 <line:7:1, col:12> col:12 used j 'int' extern
+|-FunctionDecl 0x7fdb72825fc8 prev 0x7fdb72825bc8 <line:9:1, line:14:1> line:9:12 used foo 'int (int)' static
+| |-ParmVarDecl 0x7fdb72825f38 <col:16, col:20> col:20 used i 'int'
+| `-CompoundStmt 0x7fdb72826288 <line:10:1, line:14:1>
+|   |-IfStmt 0x7fdb72826188 <line:11:3, line:12:15>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7fdb72826090 <line:11:7> 'int' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7fdb72826068 <col:7> 'int' lvalue Var 0x7fdb72825ec0 'j' 'int'
+|   | |-CallExpr 0x7fdb72826140 <line:12:5, col:15> 'void'
+|   | | |-ImplicitCastExpr 0x7fdb72826128 <col:5> 'void (*)(int)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7fdb728260a8 <col:5> 'void (int)' Function 0x7fdb72825a00 'anything' 'void (int)'
+|   | | `-ImplicitCastExpr 0x7fdb72826170 <col:14> 'int' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7fdb728260d0 <col:14> 'int' lvalue Var 0x7fdb72825ec0 'j' 'int'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fdb72826270 <line:13:3, col:15>
+|     `-CallExpr 0x7fdb72826228 <col:10, col:15> 'int'
+|       |-ImplicitCastExpr 0x7fdb72826210 <col:10> 'int (*)(int)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fdb728261c0 <col:10> 'int (int)' Function 0x7fdb72825d10 'bar' 'int (int)'
+|       `-ImplicitCastExpr 0x7fdb72826258 <col:14> 'int' <LValueToRValue>
+|         `-DeclRefExpr 0x7fdb728261e8 <col:14> 'int' lvalue ParmVar 0x7fdb72825f38 'i' 'int'
+`-FunctionDecl 0x7fdb72826300 <line:16:1, line:22:1> line:16:5 referenced baz 'int ()'
+  `-CompoundStmt 0x7fdb72826560 <line:17:1, line:22:1>
+    |-CallExpr 0x7fdb728263f8 <line:18:3, col:8> 'int'
+    | |-ImplicitCastExpr 0x7fdb728263e0 <col:3> 'int (*)(int)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fdb72826398 <col:3> 'int (int)' Function 0x7fdb72825fc8 'foo' 'int (int)'
+    | `-IntegerLiteral 0x7fdb728263c0 <col:7> 'int' 0
+    |-IfStmt 0x7fdb728264f0 <line:19:3, line:20:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-CallExpr 0x7fdb72826490 <line:19:7, col:11> 'int'
+    | | `-ImplicitCastExpr 0x7fdb72826478 <col:7> 'int (*)()' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fdb72826428 <col:7> 'int ()' Function 0x7fdb72826300 'baz' 'int ()'
+    | |-ReturnStmt 0x7fdb728264d8 <line:20:5, col:12>
+    | | `-IntegerLiteral 0x7fdb728264b8 <col:12> 'int' 1
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fdb72826548 <line:21:3, col:10>
+      `-IntegerLiteral 0x7fdb72826528 <col:10> 'int' 0

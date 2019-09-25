@@ -1,0 +1,29 @@
+ 
+ 
+ 
+
+static inline void bar (int) __attribute__ ((noreturn));
+void baz () __attribute__ ((noreturn));
+
+inline int
+foo (int i)
+{
+  return i;
+}
+
+int i = 23;
+static inline void
+bar (int j)
+{
+  if (j)
+    asm ("");
+}		 
+
+void
+baz ()
+{
+  int j;
+  bar (foo (j = i++));
+  asm ("");
+}
+

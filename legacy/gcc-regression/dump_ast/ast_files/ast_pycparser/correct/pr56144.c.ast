@@ -1,0 +1,130 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: None, [], [], []
+    Union: U0
+      Decl: f2, ['volatile'], [], []
+        TypeDecl: f2, ['volatile']
+          IdentifierType: ['unsigned']
+      Decl: f4, ['volatile'], [], []
+        TypeDecl: f4, ['volatile']
+          IdentifierType: ['unsigned']
+  Decl: b, ['volatile'], [], []
+    TypeDecl: b, ['volatile']
+      IdentifierType: ['int']
+  Decl: c, [], ['static'], []
+    TypeDecl: c, []
+      Union: U0
+  Decl: d, ['volatile'], [], []
+    TypeDecl: d, ['volatile']
+      IdentifierType: ['unsigned']
+  Decl: f, ['volatile'], [], []
+    TypeDecl: f, ['volatile']
+      IdentifierType: ['unsigned']
+  Decl: e, ['volatile'], [], []
+    TypeDecl: e, ['volatile']
+      IdentifierType: ['int']
+  Decl: g, ['volatile'], [], []
+    TypeDecl: g, ['volatile']
+      IdentifierType: ['int']
+  Decl: h, ['volatile'], [], []
+    TypeDecl: h, ['volatile']
+      IdentifierType: ['int']
+  Decl: i, ['volatile'], [], []
+    TypeDecl: i, ['volatile']
+      IdentifierType: ['int']
+  Decl: j, ['volatile'], [], []
+    TypeDecl: j, ['volatile']
+      IdentifierType: ['int']
+  Decl: k, ['volatile'], [], []
+    TypeDecl: k, ['volatile']
+      IdentifierType: ['int']
+  Decl: l, ['volatile'], [], []
+    TypeDecl: l, ['volatile']
+      IdentifierType: ['int']
+  Decl: m, ['volatile'], [], []
+    TypeDecl: m, ['volatile']
+      IdentifierType: ['int']
+  Decl: n, ['volatile'], [], []
+    TypeDecl: n, ['volatile']
+      IdentifierType: ['int']
+  Decl: o, ['volatile'], [], []
+    TypeDecl: o, ['volatile']
+      IdentifierType: ['int']
+  Decl: p, ['volatile'], [], []
+    TypeDecl: p, ['volatile']
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Assignment: =
+        ID: a
+        ID: b
+      Assignment: +=
+        ID: a
+        StructRef: .
+          ID: c
+          ID: f2
+      Assignment: +=
+        ID: a
+        StructRef: .
+          ID: c
+          ID: f4
+      Decl: q, [], [], []
+        TypeDecl: q, []
+          IdentifierType: ['unsigned']
+        ID: h
+      Assignment: +=
+        ID: a
+        ID: q
+      Assignment: =
+        ID: q
+        ID: g
+      Assignment: +=
+        ID: a
+        ID: q
+      Assignment: +=
+        ID: a
+        ID: f
+      Assignment: =
+        ID: q
+        ID: e
+      Assignment: +=
+        ID: a
+        ID: q
+      Assignment: +=
+        ID: a
+        ID: d
+      Assignment: +=
+        ID: a
+        Constant: int, 2L
+      Assignment: +=
+        ID: a
+        ID: j
+      Assignment: +=
+        ID: a
+        ID: i
+      Assignment: +=
+        ID: a
+        ID: k
+      Assignment: +=
+        ID: a
+        ID: p
+      Assignment: +=
+        ID: a
+        ID: o
+      Assignment: +=
+        ID: a
+        ID: n
+      Assignment: +=
+        ID: a
+        ID: m
+      Assignment: +=
+        ID: a
+        ID: l
+      Return: 
+        Constant: int, 0

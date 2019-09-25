@@ -1,0 +1,358 @@
+c_files/pr44043.c:18:1: warning: control reaches end of non-void function [-Wreturn-type]
+};
+^
+c_files/pr44043.c:28:13: warning: implicit declaration of function 'nf_hook_thresh' is invalid in C99 [-Wimplicit-function-declaration]
+  int ret = nf_hook_thresh(pf, hook, skb, in, out, okfn, thresh);
+            ^
+c_files/pr44043.c:74:5: warning: implicit declaration of function 'ip_local_error' is invalid in C99 [-Wimplicit-function-declaration]
+    ip_local_error(sk, 90, rt->rt_dst, inet->inet_dport, rt->u.dst.dev->mtu);
+    ^
+c_files/pr44043.c:78:5: warning: implicit declaration of function 'icmp_out_count' is invalid in C99 [-Wimplicit-function-declaration]
+    icmp_out_count(net, ((struct icmphdr *)skb_transport_header(skb))->type);
+    ^
+c_files/pr44043.c:83:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+c_files/pr44043.c:87:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+6 warnings generated.
+TranslationUnitDecl 0x7f99ae825ad0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f99ae826020 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f99ae825d40 '__int128'
+|-TypedefDecl 0x7f99ae826090 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f99ae825d60 'unsigned __int128'
+|-TypedefDecl 0x7f99ae826368 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f99ae826170 'struct __NSConstantString_tag'
+|   `-Record 0x7f99ae8260e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f99ae826400 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f99ae8263c0 'char *'
+|   `-BuiltinType 0x7f99ae825b60 'char'
+|-TypedefDecl 0x7f99ae8266c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f99ae826670 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f99ae8264e0 'struct __va_list_tag'
+|     `-Record 0x7f99ae826458 '__va_list_tag'
+|-TypedefDecl 0x7f99ae826738 <c_files/pr44043.c:1:1, col:23> col:23 referenced __u8 'unsigned char'
+| `-BuiltinType 0x7f99ae825c20 'unsigned char'
+|-TypedefDecl 0x7f99ae8267a8 <line:2:1, col:24> col:24 referenced __u16 'unsigned short'
+| `-BuiltinType 0x7f99ae825c40 'unsigned short'
+|-TypedefDecl 0x7f99ae026418 <line:3:1, col:22> col:22 referenced __u32 'unsigned int'
+| `-BuiltinType 0x7f99ae825c60 'unsigned int'
+|-TypedefDecl 0x7f99ae026488 <line:4:1, col:23> col:23 referenced __kernel_size_t 'unsigned long'
+| `-BuiltinType 0x7f99ae825c80 'unsigned long'
+|-TypedefDecl 0x7f99ae026510 <line:5:1, col:25> col:25 referenced size_t '__kernel_size_t':'unsigned long'
+| `-TypedefType 0x7f99ae0264e0 '__kernel_size_t' sugar
+|   |-Typedef 0x7f99ae026488 '__kernel_size_t'
+|   `-BuiltinType 0x7f99ae825c80 'unsigned long'
+|-TypedefDecl 0x7f99ae0265a0 <line:6:1, col:14> col:14 referenced uint8_t '__u8':'unsigned char'
+| `-TypedefType 0x7f99ae026570 '__u8' sugar
+|   |-Typedef 0x7f99ae826738 '__u8'
+|   `-BuiltinType 0x7f99ae825c20 'unsigned char'
+|-TypedefDecl 0x7f99ae026630 <line:7:1, col:15> col:15 referenced __be16 '__u16':'unsigned short'
+| `-TypedefType 0x7f99ae026600 '__u16' sugar
+|   |-Typedef 0x7f99ae8267a8 '__u16'
+|   `-BuiltinType 0x7f99ae825c40 'unsigned short'
+|-TypedefDecl 0x7f99ae0266c0 <line:8:1, col:15> col:15 referenced __be32 '__u32':'unsigned int'
+| `-TypedefType 0x7f99ae026690 '__u32' sugar
+|   |-Typedef 0x7f99ae026418 '__u32'
+|   `-BuiltinType 0x7f99ae825c60 'unsigned int'
+|-RecordDecl 0x7f99ae026718 <line:9:1, line:12:1> line:9:8 struct msghdr definition
+| |-RecordDecl 0x7f99ae0267c0 parent 0x7f99ae825ad0 <line:10:5, col:12> col:12 struct iovec
+| |-FieldDecl 0x7f99ae026930 <col:5, col:20> col:20 referenced msg_iov 'struct iovec *'
+| `-FieldDecl 0x7f99ae026990 <line:11:5, col:14> col:14 referenced msg_flags 'unsigned int'
+|-EnumDecl 0x7f99ae0269d8 <line:13:1, col:25> col:1
+| `-EnumConstantDecl 0x7f99ae026ab0 <col:8, col:23> col:8 referenced IPPROTO_ICMP 'int'
+|   `-IntegerLiteral 0x7f99ae026a90 <col:23> 'int' 1
+|-RecordDecl 0x7f99ae026af8 <line:14:1, col:18> col:8 struct sk_buff definition
+|-RecordDecl 0x7f99ae026ba0 <line:15:46, col:53> col:53 struct dst_entry
+|-FunctionDecl 0x7f99ae026ea8 <col:1, line:18:1> line:16:1 used skb_dst 'struct dst_entry *(const struct sk_buff *)' static inline
+| |-ParmVarDecl 0x7f99ae026d00 <col:9, col:31> col:31 skb 'const struct sk_buff *'
+| |-CompoundStmt 0x7f99ae026fd0 <line:17:1, line:18:1>
+| `-AlwaysInlineAttr 0x7f99ae026f48 <line:15:30> always_inline
+|-EmptyDecl 0x7f99ae026fe8 <line:18:2> col:2
+|-EnumDecl 0x7f99ae027008 <line:19:1, col:40> col:6 nf_inet_hooks
+| `-EnumConstantDecl 0x7f99ae0270c0 <col:22> col:22 referenced NF_INET_LOCAL_OUT 'int'
+|-RecordDecl 0x7f99ae027108 <line:20:1, line:22:1> line:20:8 struct net_device definition
+| `-FieldDecl 0x7f99ae0271c8 <line:21:5, col:14> col:14 referenced mtu 'unsigned int'
+|-FunctionDecl 0x7f99ae028978 <line:23:1, line:32:1> line:24:1 used NF_HOOK_THRESH 'int (uint8_t, unsigned int, struct sk_buff *, struct net_device *, struct net_device *, int (*)(struct sk_buff *), int)' static inline
+| |-ParmVarDecl 0x7f99ae027240 <col:16, col:24> col:24 used pf 'uint8_t':'unsigned char'
+| |-ParmVarDecl 0x7f99ae0272b8 <col:28, col:41> col:41 used hook 'unsigned int'
+| |-ParmVarDecl 0x7f99ae0273a0 <col:47, col:63> col:63 used skb 'struct sk_buff *'
+| |-ParmVarDecl 0x7f99ae0284b0 <line:25:9, col:28> col:28 used in 'struct net_device *'
+| |-ParmVarDecl 0x7f99ae028538 <col:32, col:51> col:51 used out 'struct net_device *'
+| |-ParmVarDecl 0x7f99ae028768 <line:26:9, col:37> col:15 used okfn 'int (*)(struct sk_buff *)'
+| |-ParmVarDecl 0x7f99ae0287e0 <col:40, col:44> col:44 used thresh 'int'
+| |-CompoundStmt 0x7f99ae0290d0 <line:27:1, line:32:1>
+| | |-DeclStmt 0x7f99ae028ea0 <line:28:3, col:65>
+| | | `-VarDecl 0x7f99ae028aa8 <col:3, col:64> col:7 used ret 'int' cinit
+| | |   `-CallExpr 0x7f99ae028d80 <col:13, col:64> 'int'
+| | |     |-ImplicitCastExpr 0x7f99ae028d68 <col:13> 'int (*)()' <FunctionToPointerDecay>
+| | |     | `-DeclRefExpr 0x7f99ae028bf8 <col:13> 'int ()' Function 0x7f99ae028b60 'nf_hook_thresh' 'int ()'
+| | |     |-ImplicitCastExpr 0x7f99ae028df8 <col:28> 'int' <IntegralCast>
+| | |     | `-ImplicitCastExpr 0x7f99ae028de0 <col:28> 'uint8_t':'unsigned char' <LValueToRValue>
+| | |     |   `-DeclRefExpr 0x7f99ae028c20 <col:28> 'uint8_t':'unsigned char' lvalue ParmVar 0x7f99ae027240 'pf' 'uint8_t':'unsigned char'
+| | |     |-ImplicitCastExpr 0x7f99ae028e10 <col:32> 'unsigned int' <LValueToRValue>
+| | |     | `-DeclRefExpr 0x7f99ae028c48 <col:32> 'unsigned int' lvalue ParmVar 0x7f99ae0272b8 'hook' 'unsigned int'
+| | |     |-ImplicitCastExpr 0x7f99ae028e28 <col:38> 'struct sk_buff *' <LValueToRValue>
+| | |     | `-DeclRefExpr 0x7f99ae028c70 <col:38> 'struct sk_buff *' lvalue ParmVar 0x7f99ae0273a0 'skb' 'struct sk_buff *'
+| | |     |-ImplicitCastExpr 0x7f99ae028e40 <col:43> 'struct net_device *' <LValueToRValue>
+| | |     | `-DeclRefExpr 0x7f99ae028c98 <col:43> 'struct net_device *' lvalue ParmVar 0x7f99ae0284b0 'in' 'struct net_device *'
+| | |     |-ImplicitCastExpr 0x7f99ae028e58 <col:47> 'struct net_device *' <LValueToRValue>
+| | |     | `-DeclRefExpr 0x7f99ae028cc0 <col:47> 'struct net_device *' lvalue ParmVar 0x7f99ae028538 'out' 'struct net_device *'
+| | |     |-ImplicitCastExpr 0x7f99ae028e70 <col:52> 'int (*)(struct sk_buff *)' <LValueToRValue>
+| | |     | `-DeclRefExpr 0x7f99ae028ce8 <col:52> 'int (*)(struct sk_buff *)' lvalue ParmVar 0x7f99ae028768 'okfn' 'int (*)(struct sk_buff *)'
+| | |     `-ImplicitCastExpr 0x7f99ae028e88 <col:58> 'int' <LValueToRValue>
+| | |       `-DeclRefExpr 0x7f99ae028d10 <col:58> 'int' lvalue ParmVar 0x7f99ae0287e0 'thresh' 'int'
+| | |-IfStmt 0x7f99ae029040 <line:29:3, line:30:19>
+| | | |-<<<NULL>>>
+| | | |-<<<NULL>>>
+| | | |-BinaryOperator 0x7f99ae028f18 <line:29:7, col:14> 'int' '=='
+| | | | |-ImplicitCastExpr 0x7f99ae028f00 <col:7> 'int' <LValueToRValue>
+| | | | | `-DeclRefExpr 0x7f99ae028eb8 <col:7> 'int' lvalue Var 0x7f99ae028aa8 'ret' 'int'
+| | | | `-IntegerLiteral 0x7f99ae028ee0 <col:14> 'int' 1
+| | | |-BinaryOperator 0x7f99ae029018 <line:30:5, col:19> 'int' '='
+| | | | |-DeclRefExpr 0x7f99ae028f40 <col:5> 'int' lvalue Var 0x7f99ae028aa8 'ret' 'int'
+| | | | `-CallExpr 0x7f99ae028fd0 <col:11, col:19> 'int'
+| | | |   |-ImplicitCastExpr 0x7f99ae028fb8 <col:11> 'int (*)(struct sk_buff *)' <LValueToRValue>
+| | | |   | `-DeclRefExpr 0x7f99ae028f68 <col:11> 'int (*)(struct sk_buff *)' lvalue ParmVar 0x7f99ae028768 'okfn' 'int (*)(struct sk_buff *)'
+| | | |   `-ImplicitCastExpr 0x7f99ae029000 <col:16> 'struct sk_buff *' <LValueToRValue>
+| | | |     `-DeclRefExpr 0x7f99ae028f90 <col:16> 'struct sk_buff *' lvalue ParmVar 0x7f99ae0273a0 'skb' 'struct sk_buff *'
+| | | `-<<<NULL>>>
+| | `-ReturnStmt 0x7f99ae0290b8 <line:31:3, col:10>
+| |   `-ImplicitCastExpr 0x7f99ae0290a0 <col:10> 'int' <LValueToRValue>
+| |     `-DeclRefExpr 0x7f99ae029078 <col:10> 'int' lvalue Var 0x7f99ae028aa8 'ret' 'int'
+| `-AlwaysInlineAttr 0x7f99ae028a48 <line:23:30> always_inline
+|-FunctionDecl 0x7f99ae028b60 <<invalid sloc>> line:28:13 implicit used nf_hook_thresh 'int ()'
+|-FunctionDecl 0x7f99ae029618 <line:33:1, line:39:1> line:34:1 used NF_HOOK 'int (uint8_t, unsigned int, struct sk_buff *, struct net_device *, struct net_device *, int (*)(struct sk_buff *))' static inline
+| |-ParmVarDecl 0x7f99ae029110 <col:9, col:17> col:17 used pf 'uint8_t':'unsigned char'
+| |-ParmVarDecl 0x7f99ae029188 <col:21, col:34> col:34 used hook 'unsigned int'
+| |-ParmVarDecl 0x7f99ae029210 <col:40, col:56> col:56 used skb 'struct sk_buff *'
+| |-ParmVarDecl 0x7f99ae029298 <line:35:2, col:21> col:21 used in 'struct net_device *'
+| |-ParmVarDecl 0x7f99ae029320 <col:25, col:44> col:44 used out 'struct net_device *'
+| |-ParmVarDecl 0x7f99ae0294a0 <line:36:2, col:30> col:8 used okfn 'int (*)(struct sk_buff *)'
+| |-CompoundStmt 0x7f99ae029b78 <line:37:1, line:39:1>
+| | `-ReturnStmt 0x7f99ae029b60 <line:38:3, col:77>
+| |   `-CallExpr 0x7f99ae029a70 <col:10, col:77> 'int'
+| |     |-ImplicitCastExpr 0x7f99ae029a58 <col:10> 'int (*)(uint8_t, unsigned int, struct sk_buff *, struct net_device *, struct net_device *, int (*)(struct sk_buff *), int)' <FunctionToPointerDecay>
+| |     | `-DeclRefExpr 0x7f99ae029728 <col:10> 'int (uint8_t, unsigned int, struct sk_buff *, struct net_device *, struct net_device *, int (*)(struct sk_buff *), int)' Function 0x7f99ae028978 'NF_HOOK_THRESH' 'int (uint8_t, unsigned int, struct sk_buff *, struct net_device *, struct net_device *, int (*)(struct sk_buff *), int)'
+| |     |-ImplicitCastExpr 0x7f99ae029ad0 <col:25> 'uint8_t':'unsigned char' <LValueToRValue>
+| |     | `-DeclRefExpr 0x7f99ae029750 <col:25> 'uint8_t':'unsigned char' lvalue ParmVar 0x7f99ae029110 'pf' 'uint8_t':'unsigned char'
+| |     |-ImplicitCastExpr 0x7f99ae029ae8 <col:29> 'unsigned int' <LValueToRValue>
+| |     | `-DeclRefExpr 0x7f99ae029778 <col:29> 'unsigned int' lvalue ParmVar 0x7f99ae029188 'hook' 'unsigned int'
+| |     |-ImplicitCastExpr 0x7f99ae029b00 <col:35> 'struct sk_buff *' <LValueToRValue>
+| |     | `-DeclRefExpr 0x7f99ae0297a0 <col:35> 'struct sk_buff *' lvalue ParmVar 0x7f99ae029210 'skb' 'struct sk_buff *'
+| |     |-ImplicitCastExpr 0x7f99ae029b18 <col:40> 'struct net_device *' <LValueToRValue>
+| |     | `-DeclRefExpr 0x7f99ae0297c8 <col:40> 'struct net_device *' lvalue ParmVar 0x7f99ae029298 'in' 'struct net_device *'
+| |     |-ImplicitCastExpr 0x7f99ae029b30 <col:44> 'struct net_device *' <LValueToRValue>
+| |     | `-DeclRefExpr 0x7f99ae0297f0 <col:44> 'struct net_device *' lvalue ParmVar 0x7f99ae029320 'out' 'struct net_device *'
+| |     |-ImplicitCastExpr 0x7f99ae029b48 <col:49> 'int (*)(struct sk_buff *)' <LValueToRValue>
+| |     | `-DeclRefExpr 0x7f99ae029818 <col:49> 'int (*)(struct sk_buff *)' lvalue ParmVar 0x7f99ae0294a0 'okfn' 'int (*)(struct sk_buff *)'
+| |     `-ParenExpr 0x7f99ae0299e0 <col:55, col:76> 'int'
+| |       `-BinaryOperator 0x7f99ae0299b8 <col:56, col:75> 'int' '-'
+| |         |-UnaryOperator 0x7f99ae029978 <col:56, col:71> 'int' prefix '-'
+| |         | `-ParenExpr 0x7f99ae029958 <col:57, col:71> 'int'
+| |         |   `-CStyleCastExpr 0x7f99ae029930 <col:58, col:70> 'int' <IntegralCast>
+| |         |     `-ParenExpr 0x7f99ae029910 <col:63, col:70> 'unsigned int'
+| |         |       `-BinaryOperator 0x7f99ae0298a0 <col:64, col:69> 'unsigned int' '>>'
+| |         |         |-UnaryOperator 0x7f99ae029860 <col:64, col:65> 'unsigned int' prefix '~'
+| |         |         | `-IntegerLiteral 0x7f99ae029840 <col:65> 'unsigned int' 0
+| |         |         `-IntegerLiteral 0x7f99ae029880 <col:69> 'int' 1
+| |         `-IntegerLiteral 0x7f99ae029998 <col:75> 'int' 1
+| `-AlwaysInlineAttr 0x7f99ae0296e0 <line:33:30> always_inline
+|-RecordDecl 0x7f99ae029b98 prev 0x7f99ae026ba0 <line:40:1, line:43:1> line:40:8 struct dst_entry definition
+| |-FieldDecl 0x7f99ae029c48 <line:41:5, col:24> col:24 referenced dev 'struct net_device *'
+| `-FieldDecl 0x7f99ae029d58 <line:42:5, col:34> col:11 referenced output 'int (*)(struct sk_buff *)'
+|-FunctionDecl 0x7f99ae029e58 <line:44:1, line:46:1> line:44:50 used dst_output 'int (struct sk_buff *)' static inline
+| |-ParmVarDecl 0x7f99ae029dc8 <col:61, col:77> col:77 used skb 'struct sk_buff *'
+| |-CompoundStmt 0x7f99ae02a138 <col:82, line:46:1>
+| | `-ReturnStmt 0x7f99ae02a120 <line:45:5, col:36>
+| |   `-CallExpr 0x7f99ae02a0d8 <col:12, col:36> 'int'
+| |     |-ImplicitCastExpr 0x7f99ae02a0c0 <col:12, col:26> 'int (*)(struct sk_buff *)' <LValueToRValue>
+| |     | `-MemberExpr 0x7f99ae02a060 <col:12, col:26> 'int (*)(struct sk_buff *)' lvalue ->output 0x7f99ae029d58
+| |     |   `-CallExpr 0x7f99ae02a000 <col:12, col:23> 'struct dst_entry *'
+| |     |     |-ImplicitCastExpr 0x7f99ae029fe8 <col:12> 'struct dst_entry *(*)(const struct sk_buff *)' <FunctionToPointerDecay>
+| |     |     | `-DeclRefExpr 0x7f99ae029f40 <col:12> 'struct dst_entry *(const struct sk_buff *)' Function 0x7f99ae026ea8 'skb_dst' 'struct dst_entry *(const struct sk_buff *)'
+| |     |     `-ImplicitCastExpr 0x7f99ae02a048 <col:20> 'const struct sk_buff *' <BitCast>
+| |     |       `-ImplicitCastExpr 0x7f99ae02a030 <col:20> 'struct sk_buff *' <LValueToRValue>
+| |     |         `-DeclRefExpr 0x7f99ae029f68 <col:20> 'struct sk_buff *' lvalue ParmVar 0x7f99ae029dc8 'skb' 'struct sk_buff *'
+| |     `-ImplicitCastExpr 0x7f99ae02a108 <col:33> 'struct sk_buff *' <LValueToRValue>
+| |       `-DeclRefExpr 0x7f99ae02a098 <col:33> 'struct sk_buff *' lvalue ParmVar 0x7f99ae029dc8 'skb' 'struct sk_buff *'
+| `-AlwaysInlineAttr 0x7f99ae029ef8 <line:44:30> always_inline
+|-EmptyDecl 0x7f99ae02a158 <line:46:2> col:2
+|-RecordDecl 0x7f99ae02a178 <line:47:1, line:49:1> line:47:8 struct iphdr definition
+| `-FieldDecl 0x7f99ae02a230 <line:48:5, col:10> col:10 referenced protocol '__u8':'unsigned char'
+|-RecordDecl 0x7f99ae02a278 <line:50:1, line:54:1> line:50:8 struct inet_sock definition
+| |-FieldDecl 0x7f99ae02a350 <line:51:5, col:12> col:12 referenced inet_dport '__be16':'unsigned short'
+| |-FieldDecl 0x7f99ae02b400 <line:52:5, col:19> col:10 recverr '__u8':'unsigned char'
+| | `-IntegerLiteral 0x7f99ae02a398 <col:19> 'int' 1
+| |-FieldDecl 0x7f99ae02b478 <col:5, col:35> col:26 hdrincl '__u8':'unsigned char'
+| | `-IntegerLiteral 0x7f99ae02b448 <col:35> 'int' 1
+| |-RecordDecl 0x7f99ae02b4c0 <line:53:5, col:14> col:5 struct definition
+| `-FieldDecl 0x7f99ae02b5c0 <col:5, col:16> col:16 cork 'struct (anonymous struct at c_files/pr44043.c:53:5)':'struct inet_sock::(anonymous at c_files/pr44043.c:53:5)'
+|-RecordDecl 0x7f99ae02b608 <line:55:1, line:57:1> line:55:8 struct icmphdr definition
+| `-FieldDecl 0x7f99ae02b6c0 <line:56:5, col:10> col:10 referenced type '__u8':'unsigned char'
+|-RecordDecl 0x7f99ae02b708 <line:58:1, line:61:1> line:58:8 struct rtable definition
+| |-RecordDecl 0x7f99ae02b7b0 <line:59:5, col:35> col:5 union definition
+| | `-FieldDecl 0x7f99ae02b880 <col:13, col:30> col:30 referenced dst 'struct dst_entry':'struct dst_entry'
+| |-FieldDecl 0x7f99ae02b970 <col:5, col:37> col:37 referenced u 'union (anonymous union at c_files/pr44043.c:59:5)':'union rtable::(anonymous at c_files/pr44043.c:59:5)'
+| `-FieldDecl 0x7f99ae02b9f0 <line:60:5, col:12> col:12 referenced rt_dst '__be32':'unsigned int'
+|-RecordDecl 0x7f99ae02ba80 <line:62:1, col:8> col:8 struct sock
+|-FunctionDecl 0x7f99ae02bd88 <line:63:1, col:41> col:19 used inet_sk 'struct inet_sock *(struct sock *)'
+| `-ParmVarDecl 0x7f99ae02bbe0 <col:28, col:40> col:41 'struct sock *'
+|-RecordDecl 0x7f99ae02be28 <line:64:1, col:8> col:8 struct net
+|-FunctionDecl 0x7f99ae02c0a8 <col:1, col:36> col:13 used sock_net 'struct net *(struct sock *)'
+| `-ParmVarDecl 0x7f99ae02bef8 <col:23, col:35> col:36 'struct sock *'
+|-FunctionDecl 0x7f99ae02c298 <line:65:1, col:45> col:7 used skb_transport_header 'void *(struct sk_buff *)'
+| `-ParmVarDecl 0x7f99ae02c188 <col:29, col:44> col:45 'struct sk_buff *'
+|-FunctionDecl 0x7f99ae02c788 <line:66:1, line:83:1> line:66:12 used raw_send_hdrinc 'int (struct sock *, void *, size_t, struct rtable *, unsigned int)' static
+| |-ParmVarDecl 0x7f99ae02c360 <col:28, col:41> col:41 used sk 'struct sock *'
+| |-ParmVarDecl 0x7f99ae02c400 <col:45, col:51> col:51 from 'void *'
+| |-ParmVarDecl 0x7f99ae02c490 <col:57, col:64> col:64 used length 'size_t':'unsigned long'
+| |-ParmVarDecl 0x7f99ae02c5a0 <line:67:7, col:22> col:22 used rt 'struct rtable *'
+| |-ParmVarDecl 0x7f99ae02c618 <col:29, col:42> col:42 used flags 'unsigned int'
+| `-CompoundStmt 0x7f99ae033028 <line:68:1, line:83:1>
+|   |-DeclStmt 0x7f99ae02c9d8 <line:69:3, col:39>
+|   | `-VarDecl 0x7f99ae02c870 <col:3, col:38> col:21 used inet 'struct inet_sock *' cinit
+|   |   `-CallExpr 0x7f99ae02c990 <col:28, col:38> 'struct inet_sock *'
+|   |     |-ImplicitCastExpr 0x7f99ae02c978 <col:28> 'struct inet_sock *(*)(struct sock *)' <FunctionToPointerDecay>
+|   |     | `-DeclRefExpr 0x7f99ae02c8d0 <col:28> 'struct inet_sock *(struct sock *)' Function 0x7f99ae02bd88 'inet_sk' 'struct inet_sock *(struct sock *)'
+|   |     `-ImplicitCastExpr 0x7f99ae02c9c0 <col:36> 'struct sock *' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7f99ae02c8f8 <col:36> 'struct sock *' lvalue ParmVar 0x7f99ae02c360 'sk' 'struct sock *'
+|   |-DeclStmt 0x7f99ae02cb88 <line:70:3, col:33>
+|   | `-VarDecl 0x7f99ae02ca18 <col:3, col:32> col:15 used net 'struct net *' cinit
+|   |   `-CallExpr 0x7f99ae02cb40 <col:21, col:32> 'struct net *'
+|   |     |-ImplicitCastExpr 0x7f99ae02cb28 <col:21> 'struct net *(*)(struct sock *)' <FunctionToPointerDecay>
+|   |     | `-DeclRefExpr 0x7f99ae02ca78 <col:21> 'struct net *(struct sock *)' Function 0x7f99ae02c0a8 'sock_net' 'struct net *(struct sock *)'
+|   |     `-ImplicitCastExpr 0x7f99ae02cb70 <col:30> 'struct sock *' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7f99ae02caa0 <col:30> 'struct sock *' lvalue ParmVar 0x7f99ae02c360 'sk' 'struct sock *'
+|   |-DeclStmt 0x7f99ae02ccb0 <line:71:3, col:20>
+|   | `-VarDecl 0x7f99ae02cc50 <col:3, col:17> col:17 used iph 'struct iphdr *'
+|   |-DeclStmt 0x7f99ae02cd50 <line:72:3, col:22>
+|   | `-VarDecl 0x7f99ae02ccf0 <col:3, col:19> col:19 used skb 'struct sk_buff *'
+|   |-IfStmt 0x7f99ae02d370 <line:73:3, line:74:76>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f99ae02cf10 <line:73:7, col:31> 'int' '>'
+|   | | |-ImplicitCastExpr 0x7f99ae02cec8 <col:7> 'size_t':'unsigned long' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7f99ae02cd68 <col:7> 'size_t':'unsigned long' lvalue ParmVar 0x7f99ae02c490 'length' 'size_t':'unsigned long'
+|   | | `-ImplicitCastExpr 0x7f99ae02cef8 <col:16, col:31> 'unsigned long' <IntegralCast>
+|   | |   `-ImplicitCastExpr 0x7f99ae02cee0 <col:16, col:31> 'unsigned int' <LValueToRValue>
+|   | |     `-MemberExpr 0x7f99ae02ce90 <col:16, col:31> 'unsigned int' lvalue ->mtu 0x7f99ae0271c8
+|   | |       `-ImplicitCastExpr 0x7f99ae02ce78 <col:16, col:26> 'struct net_device *' <LValueToRValue>
+|   | |         `-MemberExpr 0x7f99ae02ce40 <col:16, col:26> 'struct net_device *' lvalue .dev 0x7f99ae029c48
+|   | |           `-MemberExpr 0x7f99ae02ce08 <col:16, col:22> 'struct dst_entry':'struct dst_entry' lvalue .dst 0x7f99ae02b880
+|   | |             `-MemberExpr 0x7f99ae02cdd0 <col:16, col:20> 'union (anonymous union at c_files/pr44043.c:59:5)':'union rtable::(anonymous at c_files/pr44043.c:59:5)' lvalue ->u 0x7f99ae02b970
+|   | |               `-ImplicitCastExpr 0x7f99ae02cdb8 <col:16> 'struct rtable *' <LValueToRValue>
+|   | |                 `-DeclRefExpr 0x7f99ae02cd90 <col:16> 'struct rtable *' lvalue ParmVar 0x7f99ae02c5a0 'rt' 'struct rtable *'
+|   | |-CallExpr 0x7f99ae02d2a8 <line:74:5, col:76> 'int'
+|   | | |-ImplicitCastExpr 0x7f99ae02d290 <col:5> 'int (*)()' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f99ae02cff8 <col:5> 'int ()' Function 0x7f99ae02cf60 'ip_local_error' 'int ()'
+|   | | |-ImplicitCastExpr 0x7f99ae02d2f8 <col:20> 'struct sock *' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7f99ae02d020 <col:20> 'struct sock *' lvalue ParmVar 0x7f99ae02c360 'sk' 'struct sock *'
+|   | | |-IntegerLiteral 0x7f99ae02d048 <col:24> 'int' 90
+|   | | |-ImplicitCastExpr 0x7f99ae02d310 <col:28, col:32> '__be32':'unsigned int' <LValueToRValue>
+|   | | | `-MemberExpr 0x7f99ae02d0a8 <col:28, col:32> '__be32':'unsigned int' lvalue ->rt_dst 0x7f99ae02b9f0
+|   | | |   `-ImplicitCastExpr 0x7f99ae02d090 <col:28> 'struct rtable *' <LValueToRValue>
+|   | | |     `-DeclRefExpr 0x7f99ae02d068 <col:28> 'struct rtable *' lvalue ParmVar 0x7f99ae02c5a0 'rt' 'struct rtable *'
+|   | | |-ImplicitCastExpr 0x7f99ae02d340 <col:40, col:46> 'int' <IntegralCast>
+|   | | | `-ImplicitCastExpr 0x7f99ae02d328 <col:40, col:46> '__be16':'unsigned short' <LValueToRValue>
+|   | | |   `-MemberExpr 0x7f99ae02d120 <col:40, col:46> '__be16':'unsigned short' lvalue ->inet_dport 0x7f99ae02a350
+|   | | |     `-ImplicitCastExpr 0x7f99ae02d108 <col:40> 'struct inet_sock *' <LValueToRValue>
+|   | | |       `-DeclRefExpr 0x7f99ae02d0e0 <col:40> 'struct inet_sock *' lvalue Var 0x7f99ae02c870 'inet' 'struct inet_sock *'
+|   | | `-ImplicitCastExpr 0x7f99ae02d358 <col:58, col:73> 'unsigned int' <LValueToRValue>
+|   | |   `-MemberExpr 0x7f99ae02d258 <col:58, col:73> 'unsigned int' lvalue ->mtu 0x7f99ae0271c8
+|   | |     `-ImplicitCastExpr 0x7f99ae02d240 <col:58, col:68> 'struct net_device *' <LValueToRValue>
+|   | |       `-MemberExpr 0x7f99ae02d208 <col:58, col:68> 'struct net_device *' lvalue .dev 0x7f99ae029c48
+|   | |         `-MemberExpr 0x7f99ae02d1d0 <col:58, col:64> 'struct dst_entry':'struct dst_entry' lvalue .dst 0x7f99ae02b880
+|   | |           `-MemberExpr 0x7f99ae02d198 <col:58, col:62> 'union (anonymous union at c_files/pr44043.c:59:5)':'union rtable::(anonymous at c_files/pr44043.c:59:5)' lvalue ->u 0x7f99ae02b970
+|   | |             `-ImplicitCastExpr 0x7f99ae02d180 <col:58> 'struct rtable *' <LValueToRValue>
+|   | |               `-DeclRefExpr 0x7f99ae02d158 <col:58> 'struct rtable *' lvalue ParmVar 0x7f99ae02c5a0 'rt' 'struct rtable *'
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7f99ae0326b8 <line:75:3, line:76:10>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f99ae032630 <line:75:7, col:13> 'unsigned int' '&'
+|   | | |-ImplicitCastExpr 0x7f99ae032600 <col:7> 'unsigned int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7f99ae02d3a8 <col:7> 'unsigned int' lvalue ParmVar 0x7f99ae02c618 'flags' 'unsigned int'
+|   | | `-ImplicitCastExpr 0x7f99ae032618 <col:13> 'unsigned int' <IntegralCast>
+|   | |   `-IntegerLiteral 0x7f99ae02d3d0 <col:13> 'int' 16
+|   | |-GotoStmt 0x7f99ae0326a0 <line:76:5, col:10> 'out' 0x7f99ae032658
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7f99ae032bd8 <line:77:3, line:78:76>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f99ae0327c0 <line:77:7, col:24> 'int' '=='
+|   | | |-ImplicitCastExpr 0x7f99ae0327a8 <col:7, col:12> 'int' <IntegralCast>
+|   | | | `-ImplicitCastExpr 0x7f99ae032790 <col:7, col:12> '__u8':'unsigned char' <LValueToRValue>
+|   | | |   `-MemberExpr 0x7f99ae032730 <col:7, col:12> '__u8':'unsigned char' lvalue ->protocol 0x7f99ae02a230
+|   | | |     `-ImplicitCastExpr 0x7f99ae032718 <col:7> 'struct iphdr *' <LValueToRValue>
+|   | | |       `-DeclRefExpr 0x7f99ae0326f0 <col:7> 'struct iphdr *' lvalue Var 0x7f99ae02cc50 'iph' 'struct iphdr *'
+|   | | `-DeclRefExpr 0x7f99ae032768 <col:24> 'int' EnumConstant 0x7f99ae026ab0 'IPPROTO_ICMP' 'int'
+|   | |-CallExpr 0x7f99ae032b58 <line:78:5, col:76> 'int'
+|   | | |-ImplicitCastExpr 0x7f99ae032b40 <col:5> 'int (*)()' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f99ae0328a8 <col:5> 'int ()' Function 0x7f99ae032810 'icmp_out_count' 'int ()'
+|   | | |-ImplicitCastExpr 0x7f99ae032b90 <col:20> 'struct net *' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7f99ae0328d0 <col:20> 'struct net *' lvalue Var 0x7f99ae02ca18 'net' 'struct net *'
+|   | | `-ImplicitCastExpr 0x7f99ae032bc0 <col:25, col:72> 'int' <IntegralCast>
+|   | |   `-ImplicitCastExpr 0x7f99ae032ba8 <col:25, col:72> '__u8':'unsigned char' <LValueToRValue>
+|   | |     `-MemberExpr 0x7f99ae032b08 <col:25, col:72> '__u8':'unsigned char' lvalue ->type 0x7f99ae02b6c0
+|   | |       `-ParenExpr 0x7f99ae032ae8 <col:25, col:69> 'struct icmphdr *'
+|   | |         `-CStyleCastExpr 0x7f99ae032ac0 <col:26, col:68> 'struct icmphdr *' <BitCast>
+|   | |           `-CallExpr 0x7f99ae0329c0 <col:44, col:68> 'void *'
+|   | |             |-ImplicitCastExpr 0x7f99ae0329a8 <col:44> 'void *(*)(struct sk_buff *)' <FunctionToPointerDecay>
+|   | |             | `-DeclRefExpr 0x7f99ae0328f8 <col:44> 'void *(struct sk_buff *)' Function 0x7f99ae02c298 'skb_transport_header' 'void *(struct sk_buff *)'
+|   | |             `-ImplicitCastExpr 0x7f99ae0329f0 <col:65> 'struct sk_buff *' <LValueToRValue>
+|   | |               `-DeclRefExpr 0x7f99ae032920 <col:65> 'struct sk_buff *' lvalue Var 0x7f99ae02ccf0 'skb' 'struct sk_buff *'
+|   | `-<<<NULL>>>
+|   |-CallExpr 0x7f99ae032eb0 <line:79:3, line:80:14> 'int'
+|   | |-ImplicitCastExpr 0x7f99ae032e98 <line:79:3> 'int (*)(uint8_t, unsigned int, struct sk_buff *, struct net_device *, struct net_device *, int (*)(struct sk_buff *))' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99ae032c10 <col:3> 'int (uint8_t, unsigned int, struct sk_buff *, struct net_device *, struct net_device *, int (*)(struct sk_buff *))' Function 0x7f99ae029618 'NF_HOOK' 'int (uint8_t, unsigned int, struct sk_buff *, struct net_device *, struct net_device *, int (*)(struct sk_buff *))'
+|   | |-ImplicitCastExpr 0x7f99ae032f08 <col:11> 'uint8_t':'unsigned char' <IntegralCast>
+|   | | `-IntegerLiteral 0x7f99ae032c38 <col:11> 'int' 2
+|   | |-ImplicitCastExpr 0x7f99ae032f20 <col:14> 'unsigned int' <IntegralCast>
+|   | | `-DeclRefExpr 0x7f99ae032c58 <col:14> 'int' EnumConstant 0x7f99ae0270c0 'NF_INET_LOCAL_OUT' 'int'
+|   | |-ImplicitCastExpr 0x7f99ae032f38 <col:33> 'struct sk_buff *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f99ae032c80 <col:33> 'struct sk_buff *' lvalue Var 0x7f99ae02ccf0 'skb' 'struct sk_buff *'
+|   | |-ImplicitCastExpr 0x7f99ae032f50 <col:38, col:48> 'struct net_device *' <NullToPointer>
+|   | | `-ParenExpr 0x7f99ae032d08 <col:38, col:48> 'void *'
+|   | |   `-CStyleCastExpr 0x7f99ae032ce0 <col:39, col:47> 'void *' <NullToPointer>
+|   | |     `-IntegerLiteral 0x7f99ae032ca8 <col:47> 'int' 0
+|   | |-ImplicitCastExpr 0x7f99ae032f68 <col:51, col:61> 'struct net_device *' <LValueToRValue>
+|   | | `-MemberExpr 0x7f99ae032dd8 <col:51, col:61> 'struct net_device *' lvalue .dev 0x7f99ae029c48
+|   | |   `-MemberExpr 0x7f99ae032da0 <col:51, col:57> 'struct dst_entry':'struct dst_entry' lvalue .dst 0x7f99ae02b880
+|   | |     `-MemberExpr 0x7f99ae032d68 <col:51, col:55> 'union (anonymous union at c_files/pr44043.c:59:5)':'union rtable::(anonymous at c_files/pr44043.c:59:5)' lvalue ->u 0x7f99ae02b970
+|   | |       `-ImplicitCastExpr 0x7f99ae032d50 <col:51> 'struct rtable *' <LValueToRValue>
+|   | |         `-DeclRefExpr 0x7f99ae032d28 <col:51> 'struct rtable *' lvalue ParmVar 0x7f99ae02c5a0 'rt' 'struct rtable *'
+|   | `-ImplicitCastExpr 0x7f99ae032fa8 <line:80:4> 'int (*)(struct sk_buff *)' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7f99ae032e10 <col:4> 'int (struct sk_buff *)' Function 0x7f99ae029e58 'dst_output' 'int (struct sk_buff *)'
+|   `-LabelStmt 0x7f99ae033010 <line:81:1, line:82:12> 'out'
+|     `-WhileStmt 0x7f99ae032ff0 <col:3, col:12>
+|       |-<<<NULL>>>
+|       |-IntegerLiteral 0x7f99ae032fc0 <col:10> 'int' 0
+|       `-NullStmt 0x7f99ae032fe0 <col:12>
+|-FunctionDecl 0x7f99ae02cf60 <<invalid sloc>> line:74:5 implicit used ip_local_error 'int ()'
+|-FunctionDecl 0x7f99ae032810 <<invalid sloc>> line:78:5 implicit used icmp_out_count 'int ()'
+`-FunctionDecl 0x7f99ae033368 <line:84:1, line:87:1> line:84:5 raw_sendmsg 'int (struct sock *, struct msghdr *, size_t)'
+  |-ParmVarDecl 0x7f99ae0330b0 <col:17, col:30> col:30 used sk 'struct sock *'
+  |-ParmVarDecl 0x7f99ae0331c0 <col:34, col:49> col:49 used msg 'struct msghdr *'
+  |-ParmVarDecl 0x7f99ae033230 <col:54, col:61> col:61 used len 'size_t':'unsigned long'
+  `-CompoundStmt 0x7f99ae035750 <line:85:1, line:87:1>
+    `-CallExpr 0x7f99ae035670 <line:86:3, col:67> 'int'
+      |-ImplicitCastExpr 0x7f99ae035658 <col:3> 'int (*)(struct sock *, void *, size_t, struct rtable *, unsigned int)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7f99ae033418 <col:3> 'int (struct sock *, void *, size_t, struct rtable *, unsigned int)' Function 0x7f99ae02c788 'raw_send_hdrinc' 'int (struct sock *, void *, size_t, struct rtable *, unsigned int)'
+      |-ImplicitCastExpr 0x7f99ae0356c0 <col:19> 'struct sock *' <LValueToRValue>
+      | `-DeclRefExpr 0x7f99ae033440 <col:19> 'struct sock *' lvalue ParmVar 0x7f99ae0330b0 'sk' 'struct sock *'
+      |-ImplicitCastExpr 0x7f99ae0356f0 <col:23, col:28> 'void *' <BitCast>
+      | `-ImplicitCastExpr 0x7f99ae0356d8 <col:23, col:28> 'struct iovec *' <LValueToRValue>
+      |   `-MemberExpr 0x7f99ae0334a8 <col:23, col:28> 'struct iovec *' lvalue ->msg_iov 0x7f99ae026930
+      |     `-ImplicitCastExpr 0x7f99ae033490 <col:23> 'struct msghdr *' <LValueToRValue>
+      |       `-DeclRefExpr 0x7f99ae033468 <col:23> 'struct msghdr *' lvalue ParmVar 0x7f99ae0331c0 'msg' 'struct msghdr *'
+      |-ImplicitCastExpr 0x7f99ae035708 <col:37> 'size_t':'unsigned long' <LValueToRValue>
+      | `-DeclRefExpr 0x7f99ae0334e0 <col:37> 'size_t':'unsigned long' lvalue ParmVar 0x7f99ae033230 'len' 'size_t':'unsigned long'
+      |-ImplicitCastExpr 0x7f99ae035720 <col:42, col:50> 'struct rtable *' <NullToPointer>
+      | `-CStyleCastExpr 0x7f99ae033540 <col:42, col:50> 'void *' <NullToPointer>
+      |   `-IntegerLiteral 0x7f99ae033508 <col:50> 'int' 0
+      `-ImplicitCastExpr 0x7f99ae035738 <col:53, col:58> 'unsigned int' <LValueToRValue>
+        `-MemberExpr 0x7f99ae0335a8 <col:53, col:58> 'unsigned int' lvalue ->msg_flags 0x7f99ae026990
+          `-ImplicitCastExpr 0x7f99ae033590 <col:53> 'struct msghdr *' <LValueToRValue>
+            `-DeclRefExpr 0x7f99ae033568 <col:53> 'struct msghdr *' lvalue ParmVar 0x7f99ae0331c0 'msg' 'struct msghdr *'

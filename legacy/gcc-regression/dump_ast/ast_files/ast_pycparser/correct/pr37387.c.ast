@@ -1,0 +1,57 @@
+FileAST: 
+  Typedef: Int, [], ['typedef']
+    TypeDecl: Int, []
+      IdentifierType: ['long', 'int']
+  FuncDef: 
+    Decl: FuncMakeConsequencesPres, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: objDefs1, [], [], []
+            PtrDecl: []
+              TypeDecl: objDefs1, []
+                IdentifierType: ['long']
+        TypeDecl: FuncMakeConsequencesPres, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['long']
+        Cast: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['long']
+          ID: objDefs1
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          IdentifierType: ['int']
+        BinaryOp: &
+          ID: a
+          Constant: int, 0x01
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      If: 
+        UnaryOp: !
+          BinaryOp: &&
+            BinaryOp: <=
+              Constant: int, 13
+              TernaryOp: 
+                ID: c
+                Constant: int, 0
+                TernaryOp: 
+                  BinaryOp: &
+                    Cast: 
+                      Typename: None, []
+                        TypeDecl: None, []
+                          IdentifierType: ['int']
+                      ID: objDefs1
+                    Constant: int, 0x02
+                  Constant: int, 0
+                  UnaryOp: *
+                    ID: objDefs1
+            BinaryOp: <=
+              ID: b
+              Constant: int, 0
+        FuncCall: 
+          ID: ErrorQuit

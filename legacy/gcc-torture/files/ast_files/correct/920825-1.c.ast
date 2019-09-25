@@ -1,0 +1,24 @@
+FileAST: 
+  Pragma: pack(1)
+  Decl: x, [], [], []
+    TypeDecl: x, []
+      Struct: None
+        Decl: f1, [], [], []
+          TypeDecl: f1, []
+            IdentifierType: ['unsigned', 'short']
+          Constant: int, 5
+        Decl: f2, [], [], []
+          TypeDecl: f2, []
+            IdentifierType: ['unsigned', 'short']
+          Constant: int, 6
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        TypeDecl: f, []
+          IdentifierType: ['int']
+    Compound: 
+      Assignment: =
+        StructRef: .
+          ID: x
+          ID: f2
+        Constant: int, 1

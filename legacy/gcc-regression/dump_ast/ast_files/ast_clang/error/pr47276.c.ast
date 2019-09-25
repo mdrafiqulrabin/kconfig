@@ -1,0 +1,129 @@
+c_files/pr47276.c:26:157: error: aliases are not supported on darwin
+extern __typeof (__vsyslog_chk) __EI___vsyslog_chk __asm__("" ASMNAME ("__vsyslog_chk")); extern __typeof (__vsyslog_chk) __EI___vsyslog_chk __attribute__((alias ("" "__GI___vsyslog_chk")));
+                                                                                                                                                            ^
+c_files/pr47276.c:31:51: error: aliases are not supported on darwin
+extern __typeof (__syslog) syslog __attribute__ ((alias ("__syslog")));
+                                                  ^
+c_files/pr47276.c:32:122: error: aliases are not supported on darwin
+extern __typeof (syslog) __EI_syslog __asm__("" ASMNAME ("syslog")); extern __typeof (syslog) __EI_syslog __attribute__((alias ("" "__GI_syslog")));
+                                                                                                                         ^
+c_files/pr47276.c:33:53: error: aliases are not supported on darwin
+extern __typeof (__vsyslog) vsyslog __attribute__ ((alias ("__vsyslog")));
+                                                    ^
+c_files/pr47276.c:34:127: error: aliases are not supported on darwin
+extern __typeof (vsyslog) __EI_vsyslog __asm__("" ASMNAME ("vsyslog")); extern __typeof (vsyslog) __EI_vsyslog __attribute__((alias ("" "__GI_vsyslog")));
+                                                                                                                              ^
+c_files/pr47276.c:37:56: warning: attribute declaration must precede definition [-Wignored-attributes]
+extern __typeof (__vsyslog_chk) __vsyslog_chk __asm__ ("" ASMNAME ("__GI___vsyslog_chk")) __attribute__ ((visibility ("hidden")));
+                                                       ^
+c_files/pr47276.c:23:1: note: previous definition is here
+__vsyslog_chk(int pri, int flag, const char *fmt, int ap)
+^
+c_files/pr47276.c:37:107: warning: attribute declaration must precede definition [-Wignored-attributes]
+extern __typeof (__vsyslog_chk) __vsyslog_chk __asm__ ("" ASMNAME ("__GI___vsyslog_chk")) __attribute__ ((visibility ("hidden")));
+                                                                                                          ^
+c_files/pr47276.c:23:1: note: previous definition is here
+__vsyslog_chk(int pri, int flag, const char *fmt, int ap)
+^
+2 warnings and 5 errors generated.
+TranslationUnitDecl 0x7fe7a78264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe7a7826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe7a7826740 '__int128'
+|-TypedefDecl 0x7fe7a7826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe7a7826760 'unsigned __int128'
+|-TypedefDecl 0x7fe7a7826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe7a7826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe7a7826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe7a7826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe7a7826dc0 'char *'
+|   `-BuiltinType 0x7fe7a7826560 'char'
+|-TypedefDecl 0x7fe7a78270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe7a7827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe7a7826ee0 'struct __va_list_tag'
+|     `-Record 0x7fe7a7826e58 '__va_list_tag'
+|-FunctionDecl 0x7fe7a8026b20 <c_files/pr47276.c:10:1, line:11:52> line:10:13 syslog 'void (int, const char *, ...)' extern
+| |-ParmVarDecl 0x7fe7a7827138 <col:21, col:25> col:25 __pri 'int'
+| |-ParmVarDecl 0x7fe7a8026a00 <col:32, col:46> col:46 __fmt 'const char *'
+| `-FormatAttr 0x7fe7a8026bc8 <line:11:22, col:50> printf 2 3
+|-FunctionDecl 0x7fe7a8026ea0 <line:12:1, line:13:52> line:12:13 vsyslog 'void (int, const char *, int)' extern
+| |-ParmVarDecl 0x7fe7a8026c78 <col:22, col:26> col:26 __pri 'int'
+| |-ParmVarDecl 0x7fe7a8026cf0 <col:33, col:47> col:47 __fmt 'const char *'
+| |-ParmVarDecl 0x7fe7a8026d68 <col:54, col:58> col:58 __ap 'int'
+| `-FormatAttr 0x7fe7a8026f50 <line:13:22, col:50> printf 2 0
+|-FunctionDecl 0x7fe7a8027148 <line:14:1, line:17:1> line:15:1 referenced __vsyslog 'void (int, const char *, int)'
+| |-ParmVarDecl 0x7fe7a8026fc0 <col:11, col:15> col:15 pri 'int'
+| |-ParmVarDecl 0x7fe7a8027038 <col:20, col:32> col:32 fmt 'const char *'
+| |-ParmVarDecl 0x7fe7a80270b0 <col:37, col:41> col:41 ap 'int'
+| `-CompoundStmt 0x7fe7a80271f8 <line:16:1, line:17:1>
+|-FunctionDecl 0x7fe7a8027400 <line:18:1, line:21:1> line:19:1 __syslog_chk 'void (int, int, const char *, ...)'
+| |-ParmVarDecl 0x7fe7a8027228 <col:14, col:18> col:18 pri 'int'
+| |-ParmVarDecl 0x7fe7a80272a0 <col:23, col:27> col:27 flag 'int'
+| |-ParmVarDecl 0x7fe7a8027318 <col:33, col:45> col:45 fmt 'const char *'
+| `-CompoundStmt 0x7fe7a80274b0 <line:20:1, line:21:1>
+|-FunctionDecl 0x7fe7a8027740 <line:22:1, line:25:1> line:23:1 referenced __vsyslog_chk 'void (int, int, const char *, int)'
+| |-ParmVarDecl 0x7fe7a80274e0 <col:15, col:19> col:19 pri 'int'
+| |-ParmVarDecl 0x7fe7a8027558 <col:24, col:28> col:28 flag 'int'
+| |-ParmVarDecl 0x7fe7a80275d0 <col:34, col:46> col:46 fmt 'const char *'
+| |-ParmVarDecl 0x7fe7a8027648 <col:51, col:55> col:55 ap 'int'
+| `-CompoundStmt 0x7fe7a80277f8 <line:24:1, line:25:1>
+|-FunctionDecl 0x7fe7a8027918 <line:26:1, col:88> col:33 __EI___vsyslog_chk 'typeof (__vsyslog_chk)':'void (int, int, const char *, int)' extern
+| |-ParmVarDecl 0x7fe7a8029c50 <col:33> col:33 implicit 'int'
+| |-ParmVarDecl 0x7fe7a8029cc8 <col:33> col:33 implicit 'int'
+| |-ParmVarDecl 0x7fe7a8029d40 <col:33> col:33 implicit 'const char *'
+| |-ParmVarDecl 0x7fe7a8029db8 <col:33> col:33 implicit 'int'
+| `-AsmLabelAttr 0x7fe7a80279b0 <col:60> "___vsyslog_chk"
+|-FunctionDecl 0x7fe7a8029f38 prev 0x7fe7a8027918 <col:91, col:189> col:123 __EI___vsyslog_chk 'typeof (__vsyslog_chk)':'void (int, int, const char *, int)' extern
+| |-ParmVarDecl 0x7fe7a8029fe8 <col:123> col:123 implicit 'int'
+| |-ParmVarDecl 0x7fe7a802a060 <col:123> col:123 implicit 'int'
+| |-ParmVarDecl 0x7fe7a802a0d8 <col:123> col:123 implicit 'const char *'
+| |-ParmVarDecl 0x7fe7a802a150 <col:123> col:123 implicit 'int'
+| `-AsmLabelAttr 0x7fe7a802a208 <col:60> Inherited "___vsyslog_chk"
+|-FunctionDecl 0x7fe7a802a350 <line:27:1, line:30:1> line:28:1 referenced __syslog 'void (int, const char *, ...)'
+| |-ParmVarDecl 0x7fe7a802a248 <col:10, col:14> col:14 pri 'int'
+| |-ParmVarDecl 0x7fe7a802a2c0 <col:19, col:31> col:31 fmt 'const char *'
+| `-CompoundStmt 0x7fe7a802a3f8 <line:29:1, line:30:1>
+|-FunctionDecl 0x7fe7a802a508 prev 0x7fe7a8026b20 <line:31:1, col:70> col:28 referenced syslog 'void (int, const char *, ...)' extern
+| |-ParmVarDecl 0x7fe7a802a5b8 <col:28> col:28 implicit 'int'
+| |-ParmVarDecl 0x7fe7a802a630 <col:28> col:28 implicit 'const char *'
+| `-FormatAttr 0x7fe7a802a6d8 <line:11:22, col:50> Inherited printf 2 3
+|-FunctionDecl 0x7fe7a802a7e8 <line:32:1, col:67> col:26 __EI_syslog 'typeof (syslog)':'void (int, const char *, ...)' extern
+| |-ParmVarDecl 0x7fe7a802a8f0 <col:26> col:26 implicit 'int'
+| |-ParmVarDecl 0x7fe7a802a968 <col:26> col:26 implicit 'const char *'
+| `-AsmLabelAttr 0x7fe7a802a880 <col:46> "_syslog"
+|-FunctionDecl 0x7fe7a802aad8 prev 0x7fe7a802a7e8 <col:70, col:147> col:95 __EI_syslog 'typeof (syslog)':'void (int, const char *, ...)' extern
+| |-ParmVarDecl 0x7fe7a802ab88 <col:95> col:95 implicit 'int'
+| |-ParmVarDecl 0x7fe7a802ac00 <col:95> col:95 implicit 'const char *'
+| `-AsmLabelAttr 0x7fe7a802aca8 <col:46> Inherited "_syslog"
+|-FunctionDecl 0x7fe7a802adb8 prev 0x7fe7a8026ea0 <line:33:1, col:73> col:29 referenced vsyslog 'void (int, const char *, int)' extern
+| |-ParmVarDecl 0x7fe7a802ae68 <col:29> col:29 implicit 'int'
+| |-ParmVarDecl 0x7fe7a802aee0 <col:29> col:29 implicit 'const char *'
+| |-ParmVarDecl 0x7fe7a802af58 <col:29> col:29 implicit 'int'
+| `-FormatAttr 0x7fe7a802b008 <line:13:22, col:50> Inherited printf 2 0
+|-FunctionDecl 0x7fe7a802b0e8 <line:34:1, col:70> col:27 __EI_vsyslog 'typeof (vsyslog)':'void (int, const char *, int)' extern
+| |-ParmVarDecl 0x7fe7a802b1f0 <col:27> col:27 implicit 'int'
+| |-ParmVarDecl 0x7fe7a802b268 <col:27> col:27 implicit 'const char *'
+| |-ParmVarDecl 0x7fe7a802b2e0 <col:27> col:27 implicit 'int'
+| `-AsmLabelAttr 0x7fe7a802b180 <col:48> "_vsyslog"
+|-FunctionDecl 0x7fe7a802b458 prev 0x7fe7a802b0e8 <col:73, col:153> col:99 __EI_vsyslog 'typeof (vsyslog)':'void (int, const char *, int)' extern
+| |-ParmVarDecl 0x7fe7a802b508 <col:99> col:99 implicit 'int'
+| |-ParmVarDecl 0x7fe7a802b580 <col:99> col:99 implicit 'const char *'
+| |-ParmVarDecl 0x7fe7a802b5f8 <col:99> col:99 implicit 'int'
+| `-AsmLabelAttr 0x7fe7a802b6a8 <col:48> Inherited "_vsyslog"
+|-FunctionDecl 0x7fe7a802b7f8 prev 0x7fe7a802a508 <line:35:1, col:108> col:26 syslog 'void (int, const char *, ...)' extern
+| |-ParmVarDecl 0x7fe7a802b908 <col:26> col:26 implicit 'int'
+| |-ParmVarDecl 0x7fe7a802b980 <col:26> col:26 implicit 'const char *'
+| |-AsmLabelAttr 0x7fe7a802b890 <col:42> "___GI_syslog"
+| |-VisibilityAttr 0x7fe7a802b9f0 <col:86, col:106> Hidden
+| `-FormatAttr 0x7fe7a802ba00 <line:11:22, col:50> Inherited printf 2 3
+|-FunctionDecl 0x7fe7a802bb58 prev 0x7fe7a802adb8 <line:36:1, col:111> col:27 vsyslog 'void (int, const char *, int)' extern
+| |-ParmVarDecl 0x7fe7a802c078 <col:27> col:27 implicit 'int'
+| |-ParmVarDecl 0x7fe7a802c0f0 <col:27> col:27 implicit 'const char *'
+| |-ParmVarDecl 0x7fe7a802c168 <col:27> col:27 implicit 'int'
+| |-AsmLabelAttr 0x7fe7a802c000 <col:44> "___GI_vsyslog"
+| |-VisibilityAttr 0x7fe7a802c1e0 <col:89, col:109> Hidden
+| `-FormatAttr 0x7fe7a802c1f0 <line:13:22, col:50> Inherited printf 2 0
+`-FunctionDecl 0x7fe7a802c348 prev 0x7fe7a8027740 <line:37:1, col:129> col:33 __vsyslog_chk 'void (int, int, const char *, int)' extern
+  |-ParmVarDecl 0x7fe7a802c460 <col:33> col:33 implicit 'int'
+  |-ParmVarDecl 0x7fe7a802c4d8 <col:33> col:33 implicit 'int'
+  |-ParmVarDecl 0x7fe7a802c550 <col:33> col:33 implicit 'const char *'
+  `-ParmVarDecl 0x7fe7a802c5c8 <col:33> col:33 implicit 'int'

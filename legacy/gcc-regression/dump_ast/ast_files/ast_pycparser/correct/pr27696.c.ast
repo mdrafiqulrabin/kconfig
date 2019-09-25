@@ -1,0 +1,24 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: P, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: P, ['const']
+                IdentifierType: ['void']
+          Decl: E, [], [], []
+            TypeDecl: E, []
+              IdentifierType: ['unsigned', 'int']
+          Decl: H, [], [], []
+            TypeDecl: H, []
+              IdentifierType: ['unsigned', 'int']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: __builtin_ia32_monitor
+        ExprList: 
+          ID: P
+          ID: E
+          ID: H

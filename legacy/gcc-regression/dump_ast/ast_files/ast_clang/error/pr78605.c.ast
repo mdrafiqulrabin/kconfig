@@ -1,0 +1,53 @@
+c_files/pr78605.c:9:10: error: use of unknown builtin '__builtin_sprintf' [-Wimplicit-function-declaration]
+  return __builtin_sprintf (d, "%i %i", i, i);
+         ^
+1 error generated.
+TranslationUnitDecl 0x7f90e18264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f90e1826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f90e1826740 '__int128'
+|-TypedefDecl 0x7f90e1826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f90e1826760 'unsigned __int128'
+|-TypedefDecl 0x7f90e1826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f90e1826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f90e1826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f90e1826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f90e1826dc0 'char *'
+|   `-BuiltinType 0x7f90e1826560 'char'
+|-TypedefDecl 0x7f90e18270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f90e1827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f90e1826ee0 'struct __va_list_tag'
+|     `-Record 0x7f90e1826e58 '__va_list_tag'
+|-VarDecl 0x7f90e1827198 <c_files/pr78605.c:5:1, col:10> col:6 used d 'char [10]'
+|-FunctionDecl 0x7f90e186a528 <line:7:1, line:10:1> line:7:5 f 'int (int)'
+| |-ParmVarDecl 0x7f90e186a458 <col:8, col:12> col:12 used i 'int'
+| `-CompoundStmt 0x7f90e186a8e0 <line:8:1, line:10:1>
+|   `-ReturnStmt 0x7f90e186a8c8 <line:9:3, col:45>
+|     `-CallExpr 0x7f90e186a820 <col:10, col:45> 'int'
+|       |-ImplicitCastExpr 0x7f90e186a808 <col:10> 'int (*)()' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7f90e186a6c8 <col:10> 'int ()' Function 0x7f90e186a630 '__builtin_sprintf' 'int ()'
+|       |-ImplicitCastExpr 0x7f90e186a868 <col:29> 'char *' <ArrayToPointerDecay>
+|       | `-DeclRefExpr 0x7f90e186a6f0 <col:29> 'char [10]' lvalue Var 0x7f90e1827198 'd' 'char [10]'
+|       |-ImplicitCastExpr 0x7f90e186a880 <col:32> 'char *' <ArrayToPointerDecay>
+|       | `-StringLiteral 0x7f90e186a758 <col:32> 'char [6]' lvalue "%i %i"
+|       |-ImplicitCastExpr 0x7f90e186a898 <col:41> 'int' <LValueToRValue>
+|       | `-DeclRefExpr 0x7f90e186a788 <col:41> 'int' lvalue ParmVar 0x7f90e186a458 'i' 'int'
+|       `-ImplicitCastExpr 0x7f90e186a8b0 <col:44> 'int' <LValueToRValue>
+|         `-DeclRefExpr 0x7f90e186a7b0 <col:44> 'int' lvalue ParmVar 0x7f90e186a458 'i' 'int'
+|-FunctionDecl 0x7f90e186a630 <<invalid sloc>> col:10 implicit used __builtin_sprintf 'int ()'
+`-FunctionDecl 0x7f90e186a9e8 <line:12:1, line:15:1> line:12:5 g 'int (float)'
+  |-ParmVarDecl 0x7f90e186a918 <col:8, col:14> col:14 used f 'float'
+  `-CompoundStmt 0x7f90e186ac68 <line:13:1, line:15:1>
+    `-ReturnStmt 0x7f90e186ac50 <line:14:3, col:49>
+      `-CallExpr 0x7f90e186ab78 <col:10, col:49> 'int'
+        |-ImplicitCastExpr 0x7f90e186ab60 <col:10> 'int (*)()' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7f90e186aa88 <col:10> 'int ()' Function 0x7f90e186a630 '__builtin_sprintf' 'int ()'
+        |-ImplicitCastExpr 0x7f90e186abc0 <col:29> 'char *' <ArrayToPointerDecay>
+        | `-DeclRefExpr 0x7f90e186aab0 <col:29> 'char [10]' lvalue Var 0x7f90e1827198 'd' 'char [10]'
+        |-ImplicitCastExpr 0x7f90e186abd8 <col:32> 'char *' <ArrayToPointerDecay>
+        | `-StringLiteral 0x7f90e186aad8 <col:32> 'char [10]' lvalue "%.2f %.2f"
+        |-ImplicitCastExpr 0x7f90e186ac08 <col:45> 'double' <FloatingCast>
+        | `-ImplicitCastExpr 0x7f90e186abf0 <col:45> 'float' <LValueToRValue>
+        |   `-DeclRefExpr 0x7f90e186ab10 <col:45> 'float' lvalue ParmVar 0x7f90e186a918 'f' 'float'
+        `-ImplicitCastExpr 0x7f90e186ac38 <col:48> 'double' <FloatingCast>
+          `-ImplicitCastExpr 0x7f90e186ac20 <col:48> 'float' <LValueToRValue>
+            `-DeclRefExpr 0x7f90e186ab38 <col:48> 'float' lvalue ParmVar 0x7f90e186a918 'f' 'float'

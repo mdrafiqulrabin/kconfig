@@ -1,0 +1,81 @@
+FileAST: 
+  Decl: bar, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: file, [], [], []
+          TypeDecl: file, []
+            IdentifierType: ['int']
+      TypeDecl: bar, []
+        IdentifierType: ['void']
+  Decl: baz, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: baz, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: noret1, [], [], []
+      FuncDecl: 
+        TypeDecl: noret1, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: bar
+        ExprList: 
+          Constant: int, 0
+      FuncCall: 
+        ID: __builtin_exit
+        ExprList: 
+          Constant: int, 0
+  FuncDef: 
+    Decl: noret2, [], [], []
+      FuncDecl: 
+        TypeDecl: noret2, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: __builtin_exit
+        ExprList: 
+          Constant: int, 0
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+        TypeDecl: bar, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        FuncCall: 
+          ID: baz
+        FuncCall: 
+          ID: noret1
+          ExprList: 
+            ID: i
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        UnaryOp: ~
+          ID: i
+        FuncCall: 
+          ID: bar
+          ExprList: 
+            ID: i
+      TernaryOp: 
+        ID: i
+        FuncCall: 
+          ID: noret1
+        FuncCall: 
+          ID: noret2

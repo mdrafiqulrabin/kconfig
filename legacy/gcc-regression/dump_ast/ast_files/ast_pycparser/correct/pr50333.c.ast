@@ -1,0 +1,74 @@
+FileAST: 
+  FuncDef: 
+    Decl: unext, [], ['static'], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: _ui, [], [], []
+            PtrDecl: []
+              TypeDecl: _ui, []
+                IdentifierType: ['unsigned', 'int']
+          Decl: _len, [], [], []
+            TypeDecl: _len, []
+              IdentifierType: ['unsigned']
+          Decl: _ui0, [], [], []
+            TypeDecl: _ui0, []
+              IdentifierType: ['unsigned', 'int']
+        TypeDecl: unext, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['unsigned']
+        Constant: int, 1
+      While: 
+        BinaryOp: <
+          UnaryOp: ++
+            ID: j
+          ID: _len
+        EmptyStatement: 
+      Assignment: =
+        ArrayRef: 
+          ID: _ui
+          BinaryOp: -
+            ID: j
+            Constant: int, 1
+        ID: _ui0
+  FuncDef: 
+    Decl: ncwrs_urow, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: _n, [], [], []
+            TypeDecl: _n, []
+              IdentifierType: ['unsigned']
+          Decl: _k, [], [], []
+            TypeDecl: _k, []
+              IdentifierType: ['unsigned']
+          Decl: _u, [], [], []
+            PtrDecl: []
+              TypeDecl: _u, []
+                IdentifierType: ['unsigned', 'int']
+        TypeDecl: ncwrs_urow, []
+          IdentifierType: ['unsigned', 'int']
+    Compound: 
+      Decl: k, [], [], []
+        TypeDecl: k, []
+          IdentifierType: ['unsigned']
+      For: 
+        Assignment: =
+          ID: k
+          Constant: int, 2
+        BinaryOp: <
+          ID: k
+          ID: _n
+        UnaryOp: p++
+          ID: k
+        FuncCall: 
+          ID: unext
+          ExprList: 
+            BinaryOp: +
+              ID: _u
+              Constant: int, 1
+            BinaryOp: +
+              ID: _k
+              Constant: int, 1
+            Constant: int, 1

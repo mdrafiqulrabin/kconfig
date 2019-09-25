@@ -1,0 +1,7 @@
+pr71362.c:4:1: error: size of unnamed array is negative
+ extern void foo (int[-1]);  
+ ^
+pr71362.c: In function ‘bar’:
+pr71362.c:9:3: error: size of unnamed array is negative
+   123 + sizeof (int[-1]);  
+   ^

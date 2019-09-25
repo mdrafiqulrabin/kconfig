@@ -1,0 +1,7 @@
+FileAST: 
+  Decl: x, [], [], []
+    ArrayDecl: []
+      TypeDecl: x, []
+        IdentifierType: ['char']
+    Constant: int, 0
+  Pragma: omp threadprivate (x)

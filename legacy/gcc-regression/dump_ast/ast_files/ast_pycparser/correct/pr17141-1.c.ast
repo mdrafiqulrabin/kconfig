@@ -1,0 +1,41 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: A
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: locp, [], [], []
+            PtrDecl: []
+              TypeDecl: locp, []
+                Struct: A
+          Decl: str, [], [], []
+            TypeDecl: str, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: T355, [], [], []
+        TypeDecl: T355, []
+          IdentifierType: ['int']
+      Decl: T356, [], [], []
+        PtrDecl: []
+          TypeDecl: T356, []
+            IdentifierType: ['int']
+      Assignment: =
+        ID: T356
+        UnaryOp: &
+          StructRef: ->
+            ID: locp
+            ID: i
+      Assignment: =
+        UnaryOp: *
+          ID: T356
+        ID: str
+      Return: 
+        StructRef: ->
+          ID: locp
+          ID: i

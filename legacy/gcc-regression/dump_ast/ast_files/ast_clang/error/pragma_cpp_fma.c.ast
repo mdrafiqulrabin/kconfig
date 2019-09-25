@@ -1,0 +1,28 @@
+c_files/pragma_cpp_fma.c:14:2: error: "__ARM_FEATURE_FMA is not defined but should be"
+#error "__ARM_FEATURE_FMA is not defined but should be"
+ ^
+c_files/pragma_cpp_fma.c:18:2: error: "__ARM_FEATURE_CRYPTO is not defined but should be"
+#error "__ARM_FEATURE_CRYPTO is not defined but should be"
+ ^
+c_files/pragma_cpp_fma.c:22:2: error: "__ARM_NEON_FP"
+#error "__ARM_NEON_FP"
+ ^
+c_files/pragma_cpp_fma.c:26:2: error: "__ARM_FP"
+#error "__ARM_FP"
+ ^
+4 errors generated.
+TranslationUnitDecl 0x7f99b10264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f99b1026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f99b1026740 '__int128'
+|-TypedefDecl 0x7f99b1026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f99b1026760 'unsigned __int128'
+|-TypedefDecl 0x7f99b1026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f99b1026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f99b1026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f99b1026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f99b1026dc0 'char *'
+|   `-BuiltinType 0x7f99b1026560 'char'
+`-TypedefDecl 0x7f99b10270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+  `-ConstantArrayType 0x7f99b1027070 'struct __va_list_tag [1]' 1 
+    `-RecordType 0x7f99b1026ee0 'struct __va_list_tag'
+      `-Record 0x7f99b1026e58 '__va_list_tag'

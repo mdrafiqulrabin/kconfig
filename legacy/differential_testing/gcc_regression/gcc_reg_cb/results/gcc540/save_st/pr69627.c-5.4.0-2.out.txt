@@ -1,0 +1,8 @@
+pr69627.c: In function ‘foo’:
+pr69627.c:10:8: error: invalid operands to binary / (have ‘float’ and ‘const int *’)
+   t[1] / s;  
+        ^
+pr69627.c: In function ‘bar’:
+pr69627.c:19:8: error: invalid operands to binary / (have ‘float’ and ‘const int *’)
+   t[1] / s[0];  
+        ^

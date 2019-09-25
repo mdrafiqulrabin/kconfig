@@ -1,0 +1,12 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+  Decl: foo, [], [], []
+    FuncDecl: 
+      TypeDecl: foo, []
+        IdentifierType: ['void']
+    Constant: int, 0

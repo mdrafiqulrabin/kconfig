@@ -1,0 +1,44 @@
+TranslationUnitDecl 0x7ff6f301a0d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff6f301a620 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff6f301a340 '__int128'
+|-TypedefDecl 0x7ff6f301a690 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff6f301a360 'unsigned __int128'
+|-TypedefDecl 0x7ff6f301a968 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff6f301a770 'struct __NSConstantString_tag'
+|   `-Record 0x7ff6f301a6e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff6f301aa00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff6f301a9c0 'char *'
+|   `-BuiltinType 0x7ff6f301a160 'char'
+|-TypedefDecl 0x7ff6f301acc8 <<invalid sloc>> <invalid sloc> implicit referenced __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff6f301ac70 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff6f301aae0 'struct __va_list_tag'
+|     `-Record 0x7ff6f301aa58 '__va_list_tag'
+|-TypedefDecl 0x7ff6f301ad50 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include/stdarg.h:30:1, col:27> col:27 referenced va_list '__builtin_va_list':'struct __va_list_tag [1]'
+| `-TypedefType 0x7ff6f301ad20 '__builtin_va_list' sugar
+|   |-Typedef 0x7ff6f301acc8 '__builtin_va_list'
+|   `-ConstantArrayType 0x7ff6f301ac70 'struct __va_list_tag [1]' 1 
+|     `-RecordType 0x7ff6f301aae0 'struct __va_list_tag'
+|       `-Record 0x7ff6f301aa58 '__va_list_tag'
+|-TypedefDecl 0x7ff6f2834000 <line:48:1, col:27> col:27 __gnuc_va_list '__builtin_va_list':'struct __va_list_tag [1]'
+| `-TypedefType 0x7ff6f301ad20 '__builtin_va_list' sugar
+|   |-Typedef 0x7ff6f301acc8 '__builtin_va_list'
+|   `-ConstantArrayType 0x7ff6f301ac70 'struct __va_list_tag [1]' 1 
+|     `-RecordType 0x7ff6f301aae0 'struct __va_list_tag'
+|       `-Record 0x7ff6f301aa58 '__va_list_tag'
+|-RecordDecl 0x7ff6f2834058 <c_files/pr38123.c:5:1, col:29> col:8 struct S definition
+| |-FieldDecl 0x7ff6f2834118 <col:12, col:16> col:16 i 'int'
+| `-FieldDecl 0x7ff6f2834178 <col:19, col:26> col:26 d 'double'
+`-FunctionDecl 0x7ff6f2834420 <line:7:1, line:13:1> line:8:1 test 'struct S (char *, struct __va_list_tag *)'
+  |-ParmVarDecl 0x7ff6f28341d8 <col:7, col:13> col:13 x 'char *'
+  |-ParmVarDecl 0x7ff6f28342d0 <col:16, col:24> col:24 used ap 'struct __va_list_tag *':'struct __va_list_tag *'
+  `-CompoundStmt 0x7ff6f28346f0 <line:9:1, line:13:1>
+    |-DeclStmt 0x7ff6f2834588 <line:10:3, col:13>
+    | `-VarDecl 0x7ff6f2834528 <col:3, col:12> col:12 used s 'struct S':'struct S'
+    |-BinaryOperator 0x7ff6f2834670 <line:11:3, /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include/stdarg.h:35:54> 'struct S':'struct S' '='
+    | |-DeclRefExpr 0x7ff6f28345a0 <c_files/pr38123.c:11:3> 'struct S':'struct S' lvalue Var 0x7ff6f2834528 's' 'struct S':'struct S'
+    | `-VAArgExpr 0x7ff6f2834648 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include/stdarg.h:35:29, col:54> 'struct S':'struct S'
+    |   `-ImplicitCastExpr 0x7ff6f2834630 <c_files/pr38123.c:11:15> 'struct __va_list_tag *':'struct __va_list_tag *' <LValueToRValue>
+    |     `-DeclRefExpr 0x7ff6f28345c8 <col:15> 'struct __va_list_tag *':'struct __va_list_tag *' lvalue ParmVar 0x7ff6f28342d0 'ap' 'struct __va_list_tag *':'struct __va_list_tag *'
+    `-ReturnStmt 0x7ff6f28346d8 <line:12:3, col:10>
+      `-ImplicitCastExpr 0x7ff6f28346c0 <col:10> 'struct S':'struct S' <LValueToRValue>
+        `-DeclRefExpr 0x7ff6f2834698 <col:10> 'struct S':'struct S' lvalue Var 0x7ff6f2834528 's' 'struct S':'struct S'

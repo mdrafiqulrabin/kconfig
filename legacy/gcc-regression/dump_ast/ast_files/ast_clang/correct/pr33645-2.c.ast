@@ -1,0 +1,40 @@
+TranslationUnitDecl 0x7fbdf08264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbdf0826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fbdf0826740 '__int128'
+|-TypedefDecl 0x7fbdf0826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fbdf0826760 'unsigned __int128'
+|-TypedefDecl 0x7fbdf0826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fbdf0826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fbdf0826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fbdf0826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fbdf0826dc0 'char *'
+|   `-BuiltinType 0x7fbdf0826560 'char'
+|-TypedefDecl 0x7fbdf08270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fbdf0827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fbdf0826ee0 'struct __va_list_tag'
+|     `-Record 0x7fbdf0826e58 '__va_list_tag'
+|-FunctionDecl 0x7fbdf1026a30 <c_files/pr33645-2.c:5:1, line:9:1> line:6:1 used bar 'int (int *)'
+| |-ParmVarDecl 0x7fbdf0827160 <col:6, col:11> col:11 used x 'int *'
+| |-CompoundStmt 0x7fbdf1026bf0 <line:7:1, line:9:1>
+| | `-ReturnStmt 0x7fbdf1026bd8 <line:8:3, col:12>
+| |   `-ImplicitCastExpr 0x7fbdf1026bc0 <col:10, col:12> 'int' <LValueToRValue>
+| |     `-UnaryOperator 0x7fbdf1026ba0 <col:10, col:12> 'int' lvalue prefix '*'
+| |       `-UnaryOperator 0x7fbdf1026b80 <col:11, col:12> 'int *' postfix '++'
+| |         `-DeclRefExpr 0x7fbdf1026b58 <col:11> 'int *' lvalue ParmVar 0x7fbdf0827160 'x' 'int *'
+| `-NoInlineAttr 0x7fbdf1026ad0 <line:5:16>
+`-FunctionDecl 0x7fbdf1026c60 <line:11:1, line:18:1> line:12:1 main 'int ()'
+  `-CompoundStmt 0x7fbdf1026f98 <line:13:1, line:18:1>
+    |-DeclStmt 0x7fbdf1026d70 <line:14:3, col:20>
+    | `-VarDecl 0x7fbdf1026d10 <col:3, col:14> col:14 used var1_s 'int' static
+    |-DeclStmt 0x7fbdf1026e48 <line:15:3, col:31>
+    | `-VarDecl 0x7fbdf1026da0 <col:3, col:25> col:15 used var1_t 'int *' static cinit
+    |   `-UnaryOperator 0x7fbdf1026e28 <col:24, col:25> 'int *' prefix '&'
+    |     `-DeclRefExpr 0x7fbdf1026e00 <col:25> 'int' lvalue Var 0x7fbdf1026d10 'var1_s' 'int'
+    `-ReturnStmt 0x7fbdf1026f80 <line:17:3, col:26>
+      `-BinaryOperator 0x7fbdf1026f58 <col:10, col:26> 'int' '!='
+        |-CallExpr 0x7fbdf1026ef0 <col:10, col:21> 'int'
+        | |-ImplicitCastExpr 0x7fbdf1026ed8 <col:10> 'int (*)(int *)' <FunctionToPointerDecay>
+        | | `-DeclRefExpr 0x7fbdf1026e60 <col:10> 'int (int *)' Function 0x7fbdf1026a30 'bar' 'int (int *)'
+        | `-ImplicitCastExpr 0x7fbdf1026f20 <col:15> 'int *' <LValueToRValue>
+        |   `-DeclRefExpr 0x7fbdf1026e88 <col:15> 'int *' lvalue Var 0x7fbdf1026da0 'var1_t' 'int *'
+        `-IntegerLiteral 0x7fbdf1026f38 <col:26> 'int' 0

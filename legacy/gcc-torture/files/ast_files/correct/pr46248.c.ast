@@ -1,0 +1,171 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: S
+      Decl: s, [], [], []
+        TypeDecl: s, []
+          IdentifierType: ['int']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            PtrDecl: []
+              TypeDecl: x, []
+                IdentifierType: ['unsigned', 'char']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['int']
+          Decl: z, [], [], []
+            PtrDecl: []
+              TypeDecl: z, []
+                Struct: S
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: l1, ['const'], [], []
+        TypeDecl: l1, ['const']
+          IdentifierType: ['int']
+        ID: y
+      Decl: l2, ['const'], [], []
+        TypeDecl: l2, ['const']
+          IdentifierType: ['int']
+        BinaryOp: +
+          ID: y
+          ID: l1
+      Decl: l3, ['const'], [], []
+        TypeDecl: l3, ['const']
+          IdentifierType: ['int']
+        BinaryOp: +
+          ID: y
+          ID: l2
+      Decl: l4, ['const'], [], []
+        TypeDecl: l4, ['const']
+          IdentifierType: ['int']
+        BinaryOp: +
+          ID: y
+          ID: l3
+      Decl: l5, ['const'], [], []
+        TypeDecl: l5, ['const']
+          IdentifierType: ['int']
+        BinaryOp: +
+          ID: y
+          ID: l4
+      Decl: l6, ['const'], [], []
+        TypeDecl: l6, ['const']
+          IdentifierType: ['int']
+        BinaryOp: +
+          ID: y
+          ID: l5
+      Decl: l7, ['const'], [], []
+        TypeDecl: l7, ['const']
+          IdentifierType: ['int']
+        BinaryOp: +
+          ID: y
+          ID: l6
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 8
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['int']
+            BinaryOp: -
+              ArrayRef: 
+                ID: x
+                ID: l3
+              ArrayRef: 
+                ID: x
+                ID: l4
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+            BinaryOp: -
+              ArrayRef: 
+                ID: x
+                ID: l4
+              ArrayRef: 
+                ID: x
+                ID: l5
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['int']
+            BinaryOp: -
+              ArrayRef: 
+                ID: x
+                ID: l5
+              ArrayRef: 
+                ID: x
+                ID: l6
+          Decl: d, [], [], []
+            TypeDecl: d, []
+              IdentifierType: ['int']
+            BinaryOp: -
+              TernaryOp: 
+                BinaryOp: >=
+                  ID: b
+                  Constant: int, 0
+                ID: b
+                UnaryOp: -
+                  ID: b
+              BinaryOp: >>
+                BinaryOp: +
+                  TernaryOp: 
+                    BinaryOp: >=
+                      ID: a
+                      Constant: int, 0
+                    ID: a
+                    UnaryOp: -
+                      ID: a
+                  TernaryOp: 
+                    BinaryOp: >=
+                      ID: c
+                      Constant: int, 0
+                    ID: c
+                    UnaryOp: -
+                      ID: c
+                Constant: int, 1
+          If: 
+            BinaryOp: <
+              ID: d
+              BinaryOp: *
+                StructRef: ->
+                  ID: z
+                  ID: s
+                Constant: int, 2
+            Compound: 
+              Decl: v, [], [], []
+                TypeDecl: v, []
+                  IdentifierType: ['int']
+                BinaryOp: *
+                  ID: d
+                  TernaryOp: 
+                    BinaryOp: >
+                      UnaryOp: -
+                        ID: b
+                      Constant: int, 0
+                    Constant: int, 1
+                    UnaryOp: -
+                      Constant: int, 1
+              Assignment: +=
+                ArrayRef: 
+                  ID: x
+                  ID: l2
+                BinaryOp: >>
+                  ID: v
+                  Constant: int, 3
+              Assignment: -=
+                ArrayRef: 
+                  ID: x
+                  ID: l7
+                BinaryOp: >>
+                  ID: v
+                  Constant: int, 3

@@ -1,0 +1,75 @@
+FileAST: 
+  Typedef: tree, [], ['typedef']
+    PtrDecl: []
+      TypeDecl: tree, []
+        Struct: x
+          Decl: type, [], [], []
+            PtrDecl: []
+              TypeDecl: type, []
+                Struct: x
+          Decl: chain, [], [], []
+            PtrDecl: []
+              TypeDecl: chain, []
+                Struct: x
+          Decl: value, [], [], []
+            PtrDecl: []
+              TypeDecl: value, []
+                Struct: x
+  FuncDef: 
+    Decl: func, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: new
+          ID: old
+        TypeDecl: func, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: ||
+          BinaryOp: ==
+            StructRef: ->
+              ID: old
+              ID: type
+            Constant: int, 0
+          BinaryOp: ==
+            StructRef: ->
+              ID: new
+              ID: type
+            Constant: int, 0
+        Compound: 
+          Decl: t, [], ['register'], []
+            TypeDecl: t, []
+              IdentifierType: ['tree']
+            StructRef: ->
+              ID: old
+              ID: type
+          If: 
+            BinaryOp: ==
+              ID: t
+              Constant: int, 0
+            Assignment: =
+              ID: t
+              StructRef: ->
+                ID: new
+                ID: type
+          For: 
+            ID: t
+            Assignment: =
+              ID: t
+              StructRef: ->
+                ID: t
+                ID: chain
+            If: 
+              StructRef: ->
+                ID: t
+                ID: value
+              Return: 
+                Constant: int, 1
+      Return: 
+        Constant: int, 0
+    Decl: new, [], ['register'], []
+      TypeDecl: new, []
+        IdentifierType: ['tree']
+    Decl: old, [], ['register'], []
+      TypeDecl: old, []
+        IdentifierType: ['tree']

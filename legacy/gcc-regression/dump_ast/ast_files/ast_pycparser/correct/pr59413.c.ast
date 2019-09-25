@@ -1,0 +1,49 @@
+FileAST: 
+  Typedef: uint32_t, [], ['typedef']
+    TypeDecl: uint32_t, []
+      IdentifierType: ['unsigned', 'int']
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['uint32_t']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          IdentifierType: ['uint32_t']
+      For: 
+        Assignment: =
+          ID: a
+          Constant: int, 7
+        BinaryOp: <=
+          ID: a
+          Constant: int, 1
+        UnaryOp: p++
+          ID: a
+        Compound: 
+          Decl: d, [], [], []
+            TypeDecl: d, []
+              IdentifierType: ['char']
+            ID: a
+          Assignment: =
+            ID: c
+            ID: d
+          Assignment: =
+            ID: b
+            BinaryOp: ==
+              ID: a
+              ID: c
+      If: 
+        BinaryOp: !=
+          ID: a
+          Constant: int, 7
+        FuncCall: 
+          ID: __builtin_abort
+      Return: 
+        Constant: int, 0

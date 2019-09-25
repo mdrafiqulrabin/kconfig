@@ -1,0 +1,19 @@
+FileAST: 
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        TypeDecl: f, []
+          IdentifierType: ['int']
+    Compound: 
+      DoWhile: 
+        Constant: int, 0
+        Compound: 
+          If: 
+            Constant: int, 0
+            Compound: 
+              Label: L1
+                EmptyStatement: 
+            Goto: L2
+          Label: L2
+            EmptyStatement: 
+      Goto: L1

@@ -1,0 +1,34 @@
+TranslationUnitDecl 0x7ff4f50264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff4f5026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff4f5026740 '__int128'
+|-TypedefDecl 0x7ff4f5026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff4f5026760 'unsigned __int128'
+|-TypedefDecl 0x7ff4f5026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff4f5026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff4f5026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff4f5026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff4f5026dc0 'char *'
+|   `-BuiltinType 0x7ff4f5026560 'char'
+|-TypedefDecl 0x7ff4f50270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff4f5027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff4f5026ee0 'struct __va_list_tag'
+|     `-Record 0x7ff4f5026e58 '__va_list_tag'
+|-RecordDecl 0x7ff4f5027120 <c_files/pr56997-4.c:7:9, line:10:1> line:7:16 struct s definition
+| |-AlignedAttr 0x7ff4f5077528 <line:10:26, col:39> aligned
+| | `-IntegerLiteral 0x7ff4f5077508 <col:38> 'int' 4
+| |-PackedAttr 0x7ff4f5077578 <col:15>
+| |-FieldDecl 0x7ff4f5077460 <line:8:2, col:24> col:16 Prefix 'unsigned char [1]'
+| `-FieldDecl 0x7ff4f50774c0 <line:9:2, col:21> col:21 referenced Type 'volatile unsigned short'
+|-TypedefDecl 0x7ff4f50775e0 <line:7:1, line:10:43> col:43 referenced ss 'struct s':'struct s'
+| `-ElaboratedType 0x7ff4f5077590 'struct s' sugar
+|   `-RecordType 0x7ff4f50271b0 'struct s'
+|     `-Record 0x7ff4f5027120 's'
+|-VarDecl 0x7ff4f5077680 <line:12:1, col:20> col:20 used v 'volatile ss':'volatile struct s' extern
+`-FunctionDecl 0x7ff4f5077800 <line:14:1, line:18:1> line:15:1 foo 'void (unsigned short)'
+  |-ParmVarDecl 0x7ff4f5077738 <line:5:19, line:15:16> col:16 used u 'unsigned short'
+  `-CompoundStmt 0x7ff4f50779b8 <line:16:1, line:18:1>
+    `-BinaryOperator 0x7ff4f5077940 <line:17:3, col:12> 'unsigned short' '='
+      |-MemberExpr 0x7ff4f50778c8 <col:3, col:5> 'volatile unsigned short' lvalue .Type 0x7ff4f50774c0
+      | `-DeclRefExpr 0x7ff4f50778a0 <col:3> 'volatile ss':'volatile struct s' lvalue Var 0x7ff4f5077680 'v' 'volatile ss':'volatile struct s'
+      `-ImplicitCastExpr 0x7ff4f5077928 <col:12> 'unsigned short' <LValueToRValue>
+        `-DeclRefExpr 0x7ff4f5077900 <col:12> 'unsigned short' lvalue ParmVar 0x7ff4f5077738 'u' 'unsigned short'

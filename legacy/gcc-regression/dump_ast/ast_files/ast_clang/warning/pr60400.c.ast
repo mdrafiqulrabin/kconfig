@@ -1,0 +1,23 @@
+c_files/pr60400.c:5:1: warning: trigraph ignored [-Wtrigraphs]
+??=include "pr60400-1.h" /* { dg-warning "trigraph" } */
+^
+c_files/pr60400.c:5:1: error: expected identifier or '('
+c_files/pr60400.c:6:1: warning: trigraph ignored [-Wtrigraphs]
+??=include "pr60400-2.h" /* { dg-warning "trigraph" } */
+^
+2 warnings and 1 error generated.
+TranslationUnitDecl 0x7fb1380264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb138026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb138026740 '__int128'
+|-TypedefDecl 0x7fb138026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb138026760 'unsigned __int128'
+|-TypedefDecl 0x7fb138026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb138026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb138026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb138026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb138026dc0 'char *'
+|   `-BuiltinType 0x7fb138026560 'char'
+`-TypedefDecl 0x7fb1380270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+  `-ConstantArrayType 0x7fb138027070 'struct __va_list_tag [1]' 1 
+    `-RecordType 0x7fb138026ee0 'struct __va_list_tag'
+      `-Record 0x7fb138026e58 '__va_list_tag'

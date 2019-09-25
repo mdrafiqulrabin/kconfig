@@ -1,0 +1,61 @@
+FileAST: 
+  Decl: _setjmp, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+      TypeDecl: _setjmp, []
+        IdentifierType: ['int']
+  Decl: foo, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: foo, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: e, [], [], []
+            TypeDecl: e, []
+              IdentifierType: ['int']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['int']
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['char']
+          Decl: d, [], [], []
+            PtrDecl: []
+              TypeDecl: d, []
+                IdentifierType: ['void']
+        TypeDecl: bar, []
+          IdentifierType: ['void']
+    Compound: 
+      While: 
+        ID: b
+        Compound: 
+          If: 
+            FuncCall: 
+              ID: _setjmp
+              ExprList: 
+                ID: d
+            FuncCall: 
+              ID: foo
+              ExprList: 
+                ID: e
+          If: 
+            ID: c
+            Compound: 
+              UnaryOp: p--
+                ID: e
+              FuncCall: 
+                ID: foo
+                ExprList: 
+                  Constant: int, 0
+          UnaryOp: p++
+            ID: e

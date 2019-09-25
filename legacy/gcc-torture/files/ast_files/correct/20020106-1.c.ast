@@ -1,0 +1,15 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: Y, [], ['extern'], []
+        TypeDecl: Y, []
+          IdentifierType: ['long', 'long']
+      Return: 
+        BinaryOp: >
+          Constant: int, 0
+          UnaryOp: p++
+            ID: Y

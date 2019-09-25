@@ -1,0 +1,108 @@
+c_files/pr67784-4.c:10:11: warning: no case matching constant switch condition '4'
+  switch (sizeof (enum { T }))
+          ^~~~~~~~~~~~~~~~~~~
+c_files/pr67784-4.c:20:11: warning: no case matching constant switch condition '4'
+  switch (sizeof (enum { T }))
+          ^~~~~~~~~~~~~~~~~~~
+c_files/pr67784-4.c:29:11: warning: no case matching constant switch condition '4'
+  switch (sizeof (enum { T }))
+          ^~~~~~~~~~~~~~~~~~~
+c_files/pr67784-4.c:39:11: warning: no case matching constant switch condition '4'
+  switch (sizeof (enum { T }))
+          ^~~~~~~~~~~~~~~~~~~
+c_files/pr67784-4.c:49:11: warning: no case matching constant switch condition '4'
+  switch (sizeof (enum { T }))
+          ^~~~~~~~~~~~~~~~~~~
+5 warnings generated.
+TranslationUnitDecl 0x7fe2928264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe292826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe292826740 '__int128'
+|-TypedefDecl 0x7fe292826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe292826760 'unsigned __int128'
+|-TypedefDecl 0x7fe292826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe292826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe292826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe292826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe292826dc0 'char *'
+|   `-BuiltinType 0x7fe292826560 'char'
+|-TypedefDecl 0x7fe2928270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe292827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe292826ee0 'struct __va_list_tag'
+|     `-Record 0x7fe292826e58 '__va_list_tag'
+|-TypedefDecl 0x7fe292827138 <c_files/pr67784-4.c:5:1, col:13> col:13 referenced T 'int'
+| `-BuiltinType 0x7fe2928265c0 'int'
+|-FunctionDecl 0x7fe293025a50 <line:7:1, line:14:1> line:8:1 fn1 'void (void)'
+| `-CompoundStmt 0x7fe293025de8 <line:9:1, line:14:1>
+|   |-SwitchStmt 0x7fe293025ca0 <line:10:3, line:12:7>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryExprOrTypeTraitExpr 0x7fe293025c80 <line:10:11, col:29> 'unsigned long' sizeof 'enum (anonymous enum at c_files/pr67784-4.c:10:19)':'enum (anonymous at c_files/pr67784-4.c:10:19)'
+|   | `-IfStmt 0x7fe293025d00 <line:11:5, line:12:7>
+|   |   |-<<<NULL>>>
+|   |   |-<<<NULL>>>
+|   |   |-IntegerLiteral 0x7fe293025cd0 <line:11:9> 'int' 1
+|   |   |-NullStmt 0x7fe293025cf0 <line:12:7>
+|   |   `-<<<NULL>>>
+|   `-DeclStmt 0x7fe293025dd0 <line:13:3, col:6>
+|     `-VarDecl 0x7fe293025d70 <col:3, col:5> col:5 x 'T':'int'
+|-FunctionDecl 0x7fe293025ea0 <line:16:1, line:24:1> line:17:1 fn2 'void (void)'
+| `-CompoundStmt 0x7fe2930262b8 <line:18:1, line:24:1>
+|   |-DeclStmt 0x7fe293025fd0 <line:19:3, col:12>
+|   | `-VarDecl 0x7fe293025f50 <col:3, col:11> col:7 used i 'int' cinit
+|   |   `-IntegerLiteral 0x7fe293025fb0 <col:11> 'int' 0
+|   |-SwitchStmt 0x7fe293026160 <line:20:3, line:22:8>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryExprOrTypeTraitExpr 0x7fe293026140 <line:20:11, col:29> 'unsigned long' sizeof 'enum (anonymous enum at c_files/pr67784-4.c:20:19)':'enum (anonymous at c_files/pr67784-4.c:20:19)'
+|   | `-IfStmt 0x7fe2930261f8 <line:21:5, line:22:8>
+|   |   |-<<<NULL>>>
+|   |   |-<<<NULL>>>
+|   |   |-IntegerLiteral 0x7fe293026190 <line:21:9> 'int' 1
+|   |   |-UnaryOperator 0x7fe2930261d8 <line:22:7, col:8> 'int' postfix '++'
+|   |   | `-DeclRefExpr 0x7fe2930261b0 <col:7> 'int' lvalue Var 0x7fe293025f50 'i' 'int'
+|   |   `-<<<NULL>>>
+|   `-DeclStmt 0x7fe2930262a0 <line:23:3, col:6>
+|     `-VarDecl 0x7fe293026240 <col:3, col:5> col:5 x 'T':'int'
+|-FunctionDecl 0x7fe293026378 <line:26:1, line:34:1> line:27:1 fn3 'void (void)'
+| `-CompoundStmt 0x7fe2930266b8 <line:28:1, line:34:1>
+|   |-SwitchStmt 0x7fe293026590 <line:29:3, line:32:7>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryExprOrTypeTraitExpr 0x7fe293026570 <line:29:11, col:29> 'unsigned long' sizeof 'enum (anonymous enum at c_files/pr67784-4.c:29:19)':'enum (anonymous at c_files/pr67784-4.c:29:19)'
+|   | `-IfStmt 0x7fe2930265f8 <line:30:5, line:32:7>
+|   |   |-<<<NULL>>>
+|   |   |-<<<NULL>>>
+|   |   |-IntegerLiteral 0x7fe2930265c0 <line:30:9> 'int' 1
+|   |   |-CompoundStmt 0x7fe2930265e0 <line:31:7, line:32:7>
+|   |   `-<<<NULL>>>
+|   `-DeclStmt 0x7fe2930266a0 <line:33:3, col:6>
+|     `-VarDecl 0x7fe293026640 <col:3, col:5> col:5 x 'T':'int'
+|-FunctionDecl 0x7fe293026770 <line:36:1, line:44:1> line:37:1 fn4 'void (void)'
+| `-CompoundStmt 0x7fe29302cd20 <line:38:1, line:44:1>
+|   |-SwitchStmt 0x7fe293026980 <line:39:3, line:42:7>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryExprOrTypeTraitExpr 0x7fe293026960 <line:39:11, col:29> 'unsigned long' sizeof 'enum (anonymous enum at c_files/pr67784-4.c:39:19)':'enum (anonymous at c_files/pr67784-4.c:39:19)'
+|   | `-IfStmt 0x7fe29302cc60 <line:40:5, line:42:7>
+|   |   |-<<<NULL>>>
+|   |   |-<<<NULL>>>
+|   |   |-IntegerLiteral 0x7fe2930269b0 <line:40:9> 'int' 1
+|   |   |-LabelStmt 0x7fe29302cc48 <line:41:1, line:42:7> 'L'
+|   |   | `-NullStmt 0x7fe2930269d0 <col:7>
+|   |   `-<<<NULL>>>
+|   `-DeclStmt 0x7fe29302cd08 <line:43:3, col:6>
+|     `-VarDecl 0x7fe29302cca8 <col:3, col:5> col:5 x 'T':'int'
+`-FunctionDecl 0x7fe29302cdd8 <line:46:1, line:55:1> line:47:1 fn5 'void (void)'
+  `-CompoundStmt 0x7fe29302d120 <line:48:1, line:55:1>
+    |-SwitchStmt 0x7fe29302cff0 <line:49:3, line:53:7>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-UnaryExprOrTypeTraitExpr 0x7fe29302cfd0 <line:49:11, col:29> 'unsigned long' sizeof 'enum (anonymous enum at c_files/pr67784-4.c:49:19)':'enum (anonymous at c_files/pr67784-4.c:49:19)'
+    | `-IfStmt 0x7fe29302d060 <line:50:5, line:53:7>
+    |   |-<<<NULL>>>
+    |   |-<<<NULL>>>
+    |   |-IntegerLiteral 0x7fe29302d020 <line:50:9> 'int' 1
+    |   |-NullStmt 0x7fe29302d040 <line:51:7>
+    |   `-NullStmt 0x7fe29302d050 <line:53:7>
+    `-DeclStmt 0x7fe29302d108 <line:54:3, col:6>
+      `-VarDecl 0x7fe29302d0a8 <col:3, col:5> col:5 x 'T':'int'

@@ -1,0 +1,73 @@
+FileAST: 
+  Decl: mu, [], [], []
+    TypeDecl: mu, []
+      IdentifierType: ['unsigned', 'int']
+  Decl: pt, [], [], []
+    TypeDecl: pt, []
+      IdentifierType: ['int']
+  FuncDef: 
+    Decl: qf, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: qf, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: gy, [], [], []
+        TypeDecl: gy, []
+          IdentifierType: ['int']
+      Decl: vz, [], [], []
+        TypeDecl: vz, []
+          IdentifierType: ['long', 'int']
+      For: 
+        Compound: 
+          For: 
+            Assignment: =
+              ID: gy
+              Constant: int, 0
+            BinaryOp: <
+              ID: gy
+              Constant: int, 80
+            UnaryOp: ++
+              ID: gy
+            Compound: 
+              Assignment: =
+                ID: vz
+                ID: mu
+              UnaryOp: ++
+                ID: mu
+              Assignment: =
+                ID: pt
+                BinaryOp: &&
+                  BinaryOp: !=
+                    ID: vz
+                    Constant: int, 0
+                  BinaryOp: !=
+                    ID: pt
+                    Constant: int, 0
+          While: 
+            BinaryOp: <
+              ID: gy
+              Constant: int, 81
+            While: 
+              BinaryOp: <
+                ID: gy
+                Constant: int, 83
+              Compound: 
+                Assignment: =
+                  ID: vz
+                  TernaryOp: 
+                    BinaryOp: !=
+                      ID: vz
+                      Constant: int, 0
+                    Constant: int, 0
+                    ID: mu
+                UnaryOp: ++
+                  ID: gy
+          Assignment: =
+            ID: pt
+            ID: vz
+          UnaryOp: ++
+            ID: mu

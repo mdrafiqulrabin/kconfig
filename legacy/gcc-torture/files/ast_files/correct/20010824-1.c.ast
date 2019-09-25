@@ -1,0 +1,23 @@
+FileAST: 
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: n, [], [], []
+            TypeDecl: n, []
+              IdentifierType: ['int']
+        TypeDecl: f, []
+          IdentifierType: ['void']
+    Compound: 
+      Label: bugcauser
+        If: 
+          BinaryOp: !=
+            ID: n
+            Constant: int, 0
+          FuncCall: 
+            ID: f
+            ExprList: 
+              BinaryOp: -
+                ID: n
+                Constant: int, 1
+      Return: 

@@ -1,0 +1,86 @@
+FileAST: 
+  Typedef: ieee854_long_double_shape_type, [], ['typedef']
+    TypeDecl: ieee854_long_double_shape_type, []
+      Union: None
+        Decl: value, [], [], []
+          TypeDecl: value, []
+            IdentifierType: ['long', 'double']
+        Decl: parts32, [], [], []
+          TypeDecl: parts32, []
+            Struct: None
+              Decl: w0, [], [], []
+                TypeDecl: w0, []
+                  IdentifierType: ['unsigned', 'int']
+              Decl: w1, [], [], []
+                TypeDecl: w1, []
+                  IdentifierType: ['unsigned', 'int']
+              Decl: w2, [], [], []
+                TypeDecl: w2, []
+                  IdentifierType: ['unsigned', 'int']
+              Decl: w3, [], [], []
+                TypeDecl: w3, []
+                  IdentifierType: ['unsigned', 'int']
+  Decl: one, ['const'], ['static'], []
+    TypeDecl: one, ['const']
+      IdentifierType: ['long', 'double']
+    Constant: float, 1.0L
+  FuncDef: 
+    Decl: __ieee754_acosl, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['long', 'double']
+        TypeDecl: __ieee754_acosl, []
+          IdentifierType: ['long', 'double']
+    Compound: 
+      Decl: z, [], [], []
+        TypeDecl: z, []
+          IdentifierType: ['long', 'double']
+      Decl: w, [], [], []
+        TypeDecl: w, []
+          IdentifierType: ['long', 'double']
+      Decl: ix, [], [], []
+        TypeDecl: ix, []
+          IdentifierType: ['int']
+      Decl: u, [], [], []
+        TypeDecl: u, []
+          IdentifierType: ['ieee854_long_double_shape_type']
+      Assignment: =
+        ID: z
+        BinaryOp: *
+          BinaryOp: -
+            ID: one
+            StructRef: .
+              ID: u
+              ID: value
+          Constant: float, 0.5
+      Assignment: =
+        StructRef: .
+          StructRef: .
+            ID: u
+            ID: parts32
+          ID: w2
+        Constant: int, 0
+      Assignment: =
+        StructRef: .
+          StructRef: .
+            ID: u
+            ID: parts32
+          ID: w3
+        Constant: int, 0
+      Assignment: =
+        ID: w
+        BinaryOp: -
+          ID: z
+          BinaryOp: *
+            StructRef: .
+              ID: u
+              ID: value
+            StructRef: .
+              ID: u
+              ID: value
+      Return: 
+        BinaryOp: *
+          Constant: float, 2.0
+          ID: w

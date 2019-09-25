@@ -1,0 +1,36 @@
+FileAST: 
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: b, [], [], []
+        ArrayDecl: []
+          TypeDecl: b, []
+            IdentifierType: ['char']
+          Constant: int, 128
+      Decl: l, [], [], []
+        TypeDecl: l, []
+          IdentifierType: ['int']
+        FuncCall: 
+          ID: __builtin_sprintf
+          ExprList: 
+            ID: b
+            Constant: string, "%.2d"
+            UnaryOp: -
+              Constant: int, 1
+      FuncCall: 
+        ID: __builtin_printf
+        ExprList: 
+          Constant: string, "b: '%s', length: %d\n"
+          ID: b
+          ID: l
+      If: 
+        BinaryOp: !=
+          ID: l
+          Constant: int, 3
+        FuncCall: 
+          ID: __builtin_abort
+      Return: 
+        Constant: int, 0

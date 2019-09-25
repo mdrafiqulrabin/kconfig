@@ -1,0 +1,17 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: my_struct
+  Decl: s, [], ['extern'], []
+    TypeDecl: s, []
+      Struct: my_struct
+  Decl: None, [], [], []
+    Struct: my_struct
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['int']
+      Decl: b, [], [], []
+        TypeDecl: b, []
+          IdentifierType: ['int']
+  Decl: q, [], [], []
+    TypeDecl: q, []
+      Struct: my_struct

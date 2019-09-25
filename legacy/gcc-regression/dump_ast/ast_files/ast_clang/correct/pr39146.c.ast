@@ -1,0 +1,25 @@
+TranslationUnitDecl 0x7fb4c70264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb4c7026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb4c7026740 '__int128'
+|-TypedefDecl 0x7fb4c7026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb4c7026760 'unsigned __int128'
+|-TypedefDecl 0x7fb4c7026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb4c7026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb4c7026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb4c7026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb4c7026dc0 'char *'
+|   `-BuiltinType 0x7fb4c7026560 'char'
+|-TypedefDecl 0x7fb4c70270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb4c7027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb4c7026ee0 'struct __va_list_tag'
+|     `-Record 0x7fb4c7026e58 '__va_list_tag'
+|-TypedefDecl 0x7fb4c7027178 <c_files/pr39146.c:4:1, col:19> col:19 referenced __m256i '__attribute__((__vector_size__(4 * sizeof(long long)))) long long'
+| |-VectorType 0x7fb4c7027140 '__attribute__((__vector_size__(4 * sizeof(long long)))) long long' 4
+| | `-BuiltinType 0x7fb4c7026600 'long long'
+| `-MayAliasAttr 0x7fb4c70271d0 <col:65>
+`-FunctionDecl 0x7fb4c7826b70 <line:7:1, line:11:1> line:8:1 bar '__m256i (__m256i)'
+  |-ParmVarDecl 0x7fb4c7826a70 <col:6, col:14> col:14 used x '__m256i':'__attribute__((__vector_size__(4 * sizeof(long long)))) long long'
+  `-CompoundStmt 0x7fb4c7826ca8 <line:9:1, line:11:1>
+    `-ReturnStmt 0x7fb4c7826c90 <line:10:3, col:10>
+      `-ImplicitCastExpr 0x7fb4c7826c78 <col:10> '__m256i':'__attribute__((__vector_size__(4 * sizeof(long long)))) long long' <LValueToRValue>
+        `-DeclRefExpr 0x7fb4c7826c50 <col:10> '__m256i':'__attribute__((__vector_size__(4 * sizeof(long long)))) long long' lvalue ParmVar 0x7fb4c7826a70 'x' '__m256i':'__attribute__((__vector_size__(4 * sizeof(long long)))) long long'

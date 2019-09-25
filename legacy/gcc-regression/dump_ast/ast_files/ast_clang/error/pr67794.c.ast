@@ -1,0 +1,50 @@
+c_files/pr67794.c:7:39: error: invalid input constraint '' in asm
+  __asm__ volatile("" : "+&r"(dmin) : ""(best));
+                                      ^
+1 error generated.
+TranslationUnitDecl 0x7fc56f0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc56f026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc56f026740 '__int128'
+|-TypedefDecl 0x7fc56f026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc56f026760 'unsigned __int128'
+|-TypedefDecl 0x7fc56f026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc56f026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc56f026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc56f026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc56f026dc0 'char *'
+|   `-BuiltinType 0x7fc56f026560 'char'
+|-TypedefDecl 0x7fc56f0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc56f027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc56f026ee0 'struct __va_list_tag'
+|     `-Record 0x7fc56f026e58 '__va_list_tag'
+|-VarDecl 0x7fc56f027160 <c_files/pr67794.c:3:1, col:6> col:6 used b 'int *'
+|-FunctionDecl 0x7fc56f825b60 <line:4:1, line:8:1> line:4:13 used fn1 'void (int *, int *)' static
+| |-ParmVarDecl 0x7fc56f825a18 <col:17, col:22> col:22 used best 'int *'
+| |-ParmVarDecl 0x7fc56f825a90 <col:28, col:33> col:33 used dmin 'int *'
+| `-CompoundStmt 0x7fc56f825ee0 <col:39, line:8:1>
+|   |-DeclStmt 0x7fc56f825cf0 <line:5:3, col:12>
+|   | `-VarDecl 0x7fc56f825c90 <col:3, col:11> col:7 used a 'int [64]'
+|   `-BinaryOperator 0x7fc56f825d70 <line:6:3, col:10> 'int *' '='
+|     |-DeclRefExpr 0x7fc56f825d08 <col:3> 'int *' lvalue ParmVar 0x7fc56f825a90 'dmin' 'int *'
+|     `-ImplicitCastExpr 0x7fc56f825d58 <col:10> 'int *' <ArrayToPointerDecay>
+|       `-DeclRefExpr 0x7fc56f825d30 <col:10> 'int [64]' lvalue Var 0x7fc56f825c90 'a' 'int [64]'
+|-FunctionDecl 0x7fc56f825fe0 <line:10:1, col:82> col:51 used fn2 'void (int *)' static inline
+| |-ParmVarDecl 0x7fc56f825f20 <col:55, col:60> col:60 used best 'int *'
+| |-CompoundStmt 0x7fc56f8261e8 <col:66, col:82>
+| | `-CallExpr 0x7fc56f826180 <col:68, col:79> 'void'
+| |   |-ImplicitCastExpr 0x7fc56f826168 <col:68> 'void (*)(int *, int *)' <FunctionToPointerDecay>
+| |   | `-DeclRefExpr 0x7fc56f8260c8 <col:68> 'void (int *, int *)' Function 0x7fc56f825b60 'fn1' 'void (int *, int *)'
+| |   |-ImplicitCastExpr 0x7fc56f8261b8 <col:72> 'int *' <LValueToRValue>
+| |   | `-DeclRefExpr 0x7fc56f8260f0 <col:72> 'int *' lvalue ParmVar 0x7fc56f825f20 'best' 'int *'
+| |   `-ImplicitCastExpr 0x7fc56f8261d0 <col:78> 'int *' <LValueToRValue>
+| |     `-DeclRefExpr 0x7fc56f826118 <col:78> 'int *' lvalue Var 0x7fc56f027160 'b' 'int *'
+| `-AlwaysInlineAttr 0x7fc56f826080 <col:16> always_inline
+`-FunctionDecl 0x7fc56f8262d0 <line:12:1, line:15:1> line:12:6 fn3 'void (void)'
+  `-CompoundStmt 0x7fc56f826548 <col:16, line:15:1>
+    |-DeclStmt 0x7fc56f826450 <line:13:3, col:11>
+    | `-VarDecl 0x7fc56f8263f0 <col:3, col:10> col:7 used c 'int [1]'
+    `-CallExpr 0x7fc56f826500 <line:14:3, col:8> 'void'
+      |-ImplicitCastExpr 0x7fc56f8264e8 <col:3> 'void (*)(int *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fc56f826468 <col:3> 'void (int *)' Function 0x7fc56f825fe0 'fn2' 'void (int *)'
+      `-ImplicitCastExpr 0x7fc56f826530 <col:7> 'int *' <ArrayToPointerDecay>
+        `-DeclRefExpr 0x7fc56f826490 <col:7> 'int [1]' lvalue Var 0x7fc56f8263f0 'c' 'int [1]'

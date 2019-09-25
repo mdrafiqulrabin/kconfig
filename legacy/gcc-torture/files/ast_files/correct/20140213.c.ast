@@ -1,0 +1,100 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            PtrDecl: []
+              TypeDecl: x, []
+                IdentifierType: ['unsigned', 'char']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['unsigned', 'short']
+    Compound: 
+      Decl: r, [], [], []
+        TypeDecl: r, []
+          IdentifierType: ['unsigned', 'short']
+        Constant: int, 0
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          ID: y
+        UnaryOp: p++
+          ID: i
+        Assignment: +=
+          ID: r
+          ArrayRef: 
+            ID: x
+            ID: i
+      Return: 
+        ID: r
+  Decl: baz, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['unsigned', 'short']
+      TypeDecl: baz, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            PtrDecl: []
+              TypeDecl: x, []
+                IdentifierType: ['unsigned', 'char']
+          Decl: y, [], [], []
+            PtrDecl: []
+              TypeDecl: y, []
+                IdentifierType: ['unsigned', 'char']
+        TypeDecl: bar, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: key, [], [], []
+        TypeDecl: key, []
+          IdentifierType: ['unsigned', 'short']
+        FuncCall: 
+          ID: foo
+          ExprList: 
+            ID: x
+            Constant: int, 0x10000
+      FuncCall: 
+        ID: baz
+        ExprList: 
+          Constant: int, 0
+          Constant: int, 0
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 0x80000
+        UnaryOp: p++
+          ID: i
+        Assignment: =
+          ArrayRef: 
+            ID: y
+            ID: i
+          ArrayRef: 
+            ID: x
+            FuncCall: 
+              ID: baz
+              ExprList: 
+                ID: i
+                ID: key

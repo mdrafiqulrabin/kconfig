@@ -1,8 +1,0 @@
-pr79757-2.c: In function ‘fn1’:
-pr79757-2.c:10:3: error: parameter ‘z’ is initialized
-   unsigned long long z = x / y;  
-   ^
-pr79757-2.c: In function ‘fn2’:
-pr79757-2.c:16:3: error: parameter ‘z’ is initialized
-   unsigned long long z = x >> y;  
-   ^

@@ -1,0 +1,89 @@
+c_files/pr27799.c:16:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+c_files/pr27799.c:24:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+2 warnings generated.
+TranslationUnitDecl 0x7f98e98264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f98e9826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f98e9826740 '__int128'
+|-TypedefDecl 0x7f98e9826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f98e9826760 'unsigned __int128'
+|-TypedefDecl 0x7f98e9826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f98e9826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f98e9826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f98e9826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f98e9826dc0 'char *'
+|   `-BuiltinType 0x7f98e9826560 'char'
+|-TypedefDecl 0x7f98e98270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f98e9827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f98e9826ee0 'struct __va_list_tag'
+|     `-Record 0x7f98e9826e58 '__va_list_tag'
+|-RecordDecl 0x7f98e9827120 <c_files/pr27799.c:4:1, col:29> col:8 struct X definition
+| |-FieldDecl 0x7f98e9877400 <col:12, col:19> col:19 m 'double'
+| `-FieldDecl 0x7f98e9877460 <col:22, col:26> col:26 referenced x 'int'
+|-RecordDecl 0x7f98e98774a8 <line:5:1, col:28> col:8 struct Y definition
+| |-FieldDecl 0x7f98e9877568 <col:12, col:16> col:16 referenced y 'int'
+| `-FieldDecl 0x7f98e98775c8 <col:19, col:25> col:25 d 'short'
+|-RecordDecl 0x7f98e9877610 <line:6:1, col:37> col:8 struct YY definition
+| |-FieldDecl 0x7f98e98776d8 <col:13, col:17> col:17 referenced y 'int'
+| |-FieldDecl 0x7f98e9877738 <col:20, col:26> col:26 d 'short'
+| `-FieldDecl 0x7f98e9877790 <col:29, col:34> col:34 c 'char'
+|-FunctionDecl 0x7f98e98778a0 <line:8:1, col:29> col:13 used link_error 'void (void)' extern
+|-FunctionDecl 0x7f98e9877c58 <line:10:1, line:16:1> line:10:5 foo 'int (struct X *, struct Y *)'
+| |-ParmVarDecl 0x7f98e9877a30 <col:9, col:19> col:19 used x 'struct X *'
+| |-ParmVarDecl 0x7f98e9877b40 <col:23, col:33> col:33 used y 'struct Y *'
+| `-CompoundStmt 0x7f98e9878020 <line:11:1, line:16:1>
+|   |-BinaryOperator 0x7f98e9877d98 <line:12:3, col:11> 'int' '='
+|   | |-MemberExpr 0x7f98e9877d40 <col:3, col:6> 'int' lvalue ->x 0x7f98e9877460
+|   | | `-ImplicitCastExpr 0x7f98e9877d28 <col:3> 'struct X *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f98e9877d00 <col:3> 'struct X *' lvalue ParmVar 0x7f98e9877a30 'x' 'struct X *'
+|   | `-IntegerLiteral 0x7f98e9877d78 <col:11> 'int' 0
+|   |-BinaryOperator 0x7f98e9877e58 <line:13:3, col:11> 'int' '='
+|   | |-MemberExpr 0x7f98e9877e00 <col:3, col:6> 'int' lvalue ->y 0x7f98e9877568
+|   | | `-ImplicitCastExpr 0x7f98e9877de8 <col:3> 'struct Y *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f98e9877dc0 <col:3> 'struct Y *' lvalue ParmVar 0x7f98e9877b40 'y' 'struct Y *'
+|   | `-IntegerLiteral 0x7f98e9877e38 <col:11> 'int' 1
+|   `-IfStmt 0x7f98e9877fe8 <line:14:3, line:15:17>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7f98e9877f30 <line:14:7, col:15> 'int' '!='
+|     | |-ImplicitCastExpr 0x7f98e9877f18 <col:7, col:10> 'int' <LValueToRValue>
+|     | | `-MemberExpr 0x7f98e9877ec0 <col:7, col:10> 'int' lvalue ->x 0x7f98e9877460
+|     | |   `-ImplicitCastExpr 0x7f98e9877ea8 <col:7> 'struct X *' <LValueToRValue>
+|     | |     `-DeclRefExpr 0x7f98e9877e80 <col:7> 'struct X *' lvalue ParmVar 0x7f98e9877a30 'x' 'struct X *'
+|     | `-IntegerLiteral 0x7f98e9877ef8 <col:15> 'int' 0
+|     |-CallExpr 0x7f98e9877fc0 <line:15:5, col:17> 'void'
+|     | `-ImplicitCastExpr 0x7f98e9877fa8 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+|     |   `-DeclRefExpr 0x7f98e9877f58 <col:5> 'void (void)' Function 0x7f98e98778a0 'link_error' 'void (void)'
+|     `-<<<NULL>>>
+|-FunctionDecl 0x7f98e98782a8 <line:18:1, line:24:1> line:18:5 foo_no 'int (struct X *, struct YY *)'
+| |-ParmVarDecl 0x7f98e9878078 <col:12, col:22> col:22 used x 'struct X *'
+| |-ParmVarDecl 0x7f98e9878190 <col:26, col:37> col:37 used y 'struct YY *'
+| `-CompoundStmt 0x7f98e9878660 <line:19:1, line:24:1>
+|   |-BinaryOperator 0x7f98e9878400 <line:20:3, col:11> 'int' '='
+|   | |-MemberExpr 0x7f98e9878390 <col:3, col:6> 'int' lvalue ->x 0x7f98e9877460
+|   | | `-ImplicitCastExpr 0x7f98e9878378 <col:3> 'struct X *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f98e9878350 <col:3> 'struct X *' lvalue ParmVar 0x7f98e9878078 'x' 'struct X *'
+|   | `-IntegerLiteral 0x7f98e98783c8 <col:11> 'int' 0
+|   |-BinaryOperator 0x7f98e98784c0 <line:21:3, col:11> 'int' '='
+|   | |-MemberExpr 0x7f98e9878468 <col:3, col:6> 'int' lvalue ->y 0x7f98e98776d8
+|   | | `-ImplicitCastExpr 0x7f98e9878450 <col:3> 'struct YY *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f98e9878428 <col:3> 'struct YY *' lvalue ParmVar 0x7f98e9878190 'y' 'struct YY *'
+|   | `-IntegerLiteral 0x7f98e98784a0 <col:11> 'int' 1
+|   `-IfStmt 0x7f98e9878628 <line:22:3, line:23:17>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7f98e9878598 <line:22:7, col:15> 'int' '!='
+|     | |-ImplicitCastExpr 0x7f98e9878580 <col:7, col:10> 'int' <LValueToRValue>
+|     | | `-MemberExpr 0x7f98e9878528 <col:7, col:10> 'int' lvalue ->x 0x7f98e9877460
+|     | |   `-ImplicitCastExpr 0x7f98e9878510 <col:7> 'struct X *' <LValueToRValue>
+|     | |     `-DeclRefExpr 0x7f98e98784e8 <col:7> 'struct X *' lvalue ParmVar 0x7f98e9878078 'x' 'struct X *'
+|     | `-IntegerLiteral 0x7f98e9878560 <col:15> 'int' 0
+|     |-CallExpr 0x7f98e9878600 <line:23:5, col:17> 'void'
+|     | `-ImplicitCastExpr 0x7f98e98785e8 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+|     |   `-DeclRefExpr 0x7f98e98785c0 <col:5> 'void (void)' Function 0x7f98e98778a0 'link_error' 'void (void)'
+|     `-<<<NULL>>>
+`-FunctionDecl 0x7f98e98786e0 <line:26:1, col:13> col:5 main 'int ()'
+  `-CompoundStmt 0x7f98e9878778 <col:12, col:13>

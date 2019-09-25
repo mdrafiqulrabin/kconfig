@@ -1,0 +1,28 @@
+FileAST: 
+  Decl: a, ['volatile'], [], []
+    TypeDecl: a, ['volatile']
+      IdentifierType: ['long', 'long', 'int']
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: u, [], [], []
+        TypeDecl: u, []
+          IdentifierType: ['long', 'long', 'int']
+        BinaryOp: -
+          UnaryOp: -
+            ID: __LONG_LONG_MAX__
+          Constant: int, 1
+      Assignment: =
+        ID: a
+        TernaryOp: 
+          BinaryOp: >
+            ID: u
+            Constant: int, 0
+          ID: u
+          UnaryOp: -
+            ID: u
+      Return: 
+        Constant: int, 0

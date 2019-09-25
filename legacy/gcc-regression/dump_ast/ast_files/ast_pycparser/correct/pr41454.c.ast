@@ -1,0 +1,60 @@
+FileAST: 
+  Decl: abort, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: abort, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: BM_tab2, [], [], []
+        ArrayDecl: []
+          TypeDecl: BM_tab2, []
+            IdentifierType: ['int']
+          Constant: int, 0400
+      Decl: BM_tab, [], [], []
+        PtrDecl: []
+          TypeDecl: BM_tab, []
+            IdentifierType: ['int']
+        ID: BM_tab2
+      Decl: BM_tab_base, [], [], []
+        PtrDecl: []
+          TypeDecl: BM_tab_base, []
+            IdentifierType: ['int']
+      Assignment: =
+        ID: BM_tab_base
+        ID: BM_tab
+      Assignment: +=
+        ID: BM_tab
+        Constant: int, 0400
+      While: 
+        BinaryOp: !=
+          ID: BM_tab_base
+          ID: BM_tab
+        Compound: 
+          Assignment: =
+            UnaryOp: *
+              UnaryOp: --
+                ID: BM_tab
+            Constant: int, 6
+          Assignment: =
+            UnaryOp: *
+              UnaryOp: --
+                ID: BM_tab
+            Constant: int, 6
+      If: 
+        BinaryOp: !=
+          ArrayRef: 
+            ID: BM_tab2
+            Constant: int, 0
+          Constant: int, 6
+        FuncCall: 
+          ID: abort
+      Return: 
+        Constant: int, 0

@@ -1,0 +1,98 @@
+FileAST: 
+  Decl: fn, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: fn, []
+        IdentifierType: ['void']
+  Decl: fn2, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: fn2, []
+        IdentifierType: ['int']
+  Decl: baz, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: baz, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], ['static'], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            PtrDecl: []
+              TypeDecl: x, []
+                IdentifierType: ['void']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          ID: y
+        UnaryOp: p++
+          ID: i
+        FuncCall: 
+          ID: fn
+          ExprList: 
+            ID: x
+            FuncCall: 
+              ID: fn2
+            ID: i
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: u, [], [], []
+            TypeDecl: u, []
+              IdentifierType: ['int']
+          Decl: v, [], [], []
+            TypeDecl: v, []
+              IdentifierType: ['int']
+          Decl: w, [], [], []
+            TypeDecl: w, []
+              IdentifierType: ['int']
+          Decl: x, [], [], []
+            PtrDecl: []
+              TypeDecl: x, []
+                IdentifierType: ['void']
+        TypeDecl: bar, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: baz
+        ExprList: 
+          ID: u
+      FuncCall: 
+        ID: foo
+        ExprList: 
+          ID: x
+          ID: w
+      FuncCall: 
+        ID: baz
+        ExprList: 
+          ID: u

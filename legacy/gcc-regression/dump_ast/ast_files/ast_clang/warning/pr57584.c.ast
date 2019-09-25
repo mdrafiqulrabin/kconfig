@@ -1,0 +1,707 @@
+c_files/pr57584.c:36:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+c_files/pr57584.c:72:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+2 warnings generated.
+TranslationUnitDecl 0x7f9c4d8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9c4d826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9c4d826740 '__int128'
+|-TypedefDecl 0x7f9c4d826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9c4d826760 'unsigned __int128'
+|-TypedefDecl 0x7f9c4d826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9c4d826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9c4d826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9c4d826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9c4d826dc0 'char *'
+|   `-BuiltinType 0x7f9c4d826560 'char'
+|-TypedefDecl 0x7f9c4d8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9c4d827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9c4d826ee0 'struct __va_list_tag'
+|     `-Record 0x7f9c4d826e58 '__va_list_tag'
+|-TypedefDecl 0x7f9c4d827138 <c_files/pr57584.c:6:1, col:13> col:13 referenced int32_t 'int'
+| `-BuiltinType 0x7f9c4d8265c0 'int'
+|-TypedefDecl 0x7f9c4d8271a8 <line:7:1, col:23> col:23 referenced uint8_t 'unsigned char'
+| `-BuiltinType 0x7f9c4d826620 'unsigned char'
+|-TypedefDecl 0x7f9c4e025a18 <line:8:1, col:27> col:27 referenced uintptr_t 'unsigned long'
+| `-BuiltinType 0x7f9c4d826680 'unsigned long'
+|-TypedefDecl 0x7f9c4e025aa0 <line:9:1, col:17> col:17 referenced scm_t_uint8 'uint8_t':'unsigned char'
+| `-TypedefType 0x7f9c4e025a70 'uint8_t' sugar
+|   |-Typedef 0x7f9c4d8271a8 'uint8_t'
+|   `-BuiltinType 0x7f9c4d826620 'unsigned char'
+|-TypedefDecl 0x7f9c4e025b30 <line:10:1, col:17> col:17 referenced scm_t_int32 'int32_t':'int'
+| `-TypedefType 0x7f9c4e025b00 'int32_t' sugar
+|   |-Typedef 0x7f9c4d827138 'int32_t'
+|   `-BuiltinType 0x7f9c4d8265c0 'int'
+|-TypedefDecl 0x7f9c4e025bc0 <line:11:1, col:19> col:19 referenced scm_t_uintptr 'uintptr_t':'unsigned long'
+| `-TypedefType 0x7f9c4e025b90 'uintptr_t' sugar
+|   |-Typedef 0x7f9c4e025a18 'uintptr_t'
+|   `-BuiltinType 0x7f9c4d826680 'unsigned long'
+|-TypedefDecl 0x7f9c4e025c50 <line:12:1, col:23> col:23 referenced scm_t_bits 'scm_t_uintptr':'unsigned long'
+| `-TypedefType 0x7f9c4e025c20 'scm_t_uintptr' sugar
+|   |-Typedef 0x7f9c4e025bc0 'scm_t_uintptr'
+|   `-TypedefType 0x7f9c4e025b90 'uintptr_t' sugar
+|     |-Typedef 0x7f9c4e025a18 'uintptr_t'
+|     `-BuiltinType 0x7f9c4d826680 'unsigned long'
+|-RecordDecl 0x7f9c4e025ca8 <line:13:9, line:14:1> line:13:16 struct scm_unused_struct definition
+|-TypedefDecl 0x7f9c4e025e00 <col:1, line:14:4> col:4 referenced SCM 'struct scm_unused_struct *'
+| `-PointerType 0x7f9c4e025db0 'struct scm_unused_struct *'
+|   `-ElaboratedType 0x7f9c4e025d50 'struct scm_unused_struct' sugar
+|     `-RecordType 0x7f9c4e025d30 'struct scm_unused_struct'
+|       `-Record 0x7f9c4e025ca8 'scm_unused_struct'
+|-EnumDecl 0x7f9c4e025e70 <line:15:1, line:16:118> line:15:6 scm_tc8_tags
+| |-EnumConstantDecl 0x7f9c4e025f98 <line:16:5, col:24> col:5 referenced scm_tc8_flag 'int'
+| | `-BinaryOperator 0x7f9c4e025f70 <col:20, col:24> 'int' '+'
+| |   |-IntegerLiteral 0x7f9c4e025f30 <col:20> 'int' 4
+| |   `-IntegerLiteral 0x7f9c4e025f50 <col:24> 'int' 0
+| |-EnumConstantDecl 0x7f9c4e026048 <col:32, col:51> col:32 scm_tc8_char 'int'
+| | `-BinaryOperator 0x7f9c4e026020 <col:47, col:51> 'int' '+'
+| |   |-IntegerLiteral 0x7f9c4e025fe0 <col:47> 'int' 4
+| |   `-IntegerLiteral 0x7f9c4e026000 <col:51> 'int' 8
+| |-EnumConstantDecl 0x7f9c4e0260f8 <col:59, col:82> col:59 scm_tc8_unused_0 'int'
+| | `-BinaryOperator 0x7f9c4e0260d0 <col:78, col:82> 'int' '+'
+| |   |-IntegerLiteral 0x7f9c4e026090 <col:78> 'int' 4
+| |   `-IntegerLiteral 0x7f9c4e0260b0 <col:82> 'int' 16
+| `-EnumConstantDecl 0x7f9c4e0261a8 <col:90, col:113> col:90 scm_tc8_unused_1 'int'
+|   `-BinaryOperator 0x7f9c4e026180 <col:109, col:113> 'int' '+'
+|     |-IntegerLiteral 0x7f9c4e026140 <col:109> 'int' 4
+|     `-IntegerLiteral 0x7f9c4e026160 <col:113> 'int' 24
+|-RecordDecl 0x7f9c4e0261f0 <line:17:1, line:18:1> line:17:8 struct __jmp_buf_tag definition
+|-TypedefDecl 0x7f9c4e0263d8 <line:19:1, col:39> col:30 referenced jmp_buf 'struct __jmp_buf_tag [1]'
+| `-ConstantArrayType 0x7f9c4e026370 'struct __jmp_buf_tag [1]' 1 
+|   `-ElaboratedType 0x7f9c4e0262c0 'struct __jmp_buf_tag' sugar
+|     `-RecordType 0x7f9c4e026280 'struct __jmp_buf_tag'
+|       `-Record 0x7f9c4e0261f0 '__jmp_buf_tag'
+|-RecordDecl 0x7f9c4e026430 <line:20:9, line:21:1> line:20:16 struct scm_t_cell definition
+|-TypedefDecl 0x7f9c4e026530 <col:1, line:21:3> col:3 referenced scm_t_cell 'struct scm_t_cell':'struct scm_t_cell'
+| `-ElaboratedType 0x7f9c4e0264e0 'struct scm_t_cell' sugar
+|   `-RecordType 0x7f9c4e0264c0 'struct scm_t_cell'
+|     `-Record 0x7f9c4e026430 'scm_t_cell'
+|-RecordDecl 0x7f9c4e0265a0 <line:22:1, line:24:1> line:22:8 struct scm_prompt_registers definition
+| `-FieldDecl 0x7f9c4e026680 <line:23:5, col:13> col:13 referenced regs 'jmp_buf':'struct __jmp_buf_tag [1]'
+|-EnumDecl 0x7f9c4e0266c8 <line:25:1, line:26:199> line:25:1
+| |-EnumConstantDecl 0x7f9c4e026780 <line:26:5> col:5 SCM_VM_APPLY_HOOK 'int'
+| |-EnumConstantDecl 0x7f9c4e0267c8 <col:26> col:26 SCM_VM_PUSH_CONTINUATION_HOOK 'int'
+| |-EnumConstantDecl 0x7f9c4e026810 <col:59> col:59 SCM_VM_POP_CONTINUATION_HOOK 'int'
+| |-EnumConstantDecl 0x7f9c4e026858 <col:91> col:91 referenced SCM_VM_NEXT_HOOK 'int'
+| |-EnumConstantDecl 0x7f9c4e0268a0 <col:111> col:111 SCM_VM_ABORT_CONTINUATION_HOOK 'int'
+| |-EnumConstantDecl 0x7f9c4e0268e8 <col:145> col:145 SCM_VM_RESTORE_CONTINUATION_HOOK 'int'
+| `-EnumConstantDecl 0x7f9c4e026930 <col:181> col:181 SCM_VM_NUM_HOOKS 'int'
+|-TypedefDecl 0x7f9c4e02bf88 <line:27:1, col:74> col:15 referenced scm_t_vm_engine 'SCM (*)(SCM, SCM, SCM *, int)'
+| `-PointerType 0x7f9c4e02bf10 'SCM (*)(SCM, SCM, SCM *, int)'
+|   `-ParenType 0x7f9c4e02beb0 'SCM (SCM, SCM, SCM *, int)' sugar
+|     `-FunctionProtoType 0x7f9c4e02be60 'SCM (SCM, SCM, SCM *, int)' cdecl
+|       |-TypedefType 0x7f9c4e026980 'SCM' sugar
+|       | |-Typedef 0x7f9c4e025e00 'SCM'
+|       | `-PointerType 0x7f9c4e025db0 'struct scm_unused_struct *'
+|       |   `-ElaboratedType 0x7f9c4e025d50 'struct scm_unused_struct' sugar
+|       |     `-RecordType 0x7f9c4e025d30 'struct scm_unused_struct'
+|       |       `-Record 0x7f9c4e025ca8 'scm_unused_struct'
+|       |-TypedefType 0x7f9c4e026980 'SCM' sugar
+|       | |-Typedef 0x7f9c4e025e00 'SCM'
+|       | `-PointerType 0x7f9c4e025db0 'struct scm_unused_struct *'
+|       |   `-ElaboratedType 0x7f9c4e025d50 'struct scm_unused_struct' sugar
+|       |     `-RecordType 0x7f9c4e025d30 'struct scm_unused_struct'
+|       |       `-Record 0x7f9c4e025ca8 'scm_unused_struct'
+|       |-TypedefType 0x7f9c4e026980 'SCM' sugar
+|       | |-Typedef 0x7f9c4e025e00 'SCM'
+|       | `-PointerType 0x7f9c4e025db0 'struct scm_unused_struct *'
+|       |   `-ElaboratedType 0x7f9c4e025d50 'struct scm_unused_struct' sugar
+|       |     `-RecordType 0x7f9c4e025d30 'struct scm_unused_struct'
+|       |       `-Record 0x7f9c4e025ca8 'scm_unused_struct'
+|       |-PointerType 0x7f9c4e02bd00 'SCM *'
+|       | `-TypedefType 0x7f9c4e026980 'SCM' sugar
+|       |   |-Typedef 0x7f9c4e025e00 'SCM'
+|       |   `-PointerType 0x7f9c4e025db0 'struct scm_unused_struct *'
+|       |     `-ElaboratedType 0x7f9c4e025d50 'struct scm_unused_struct' sugar
+|       |       `-RecordType 0x7f9c4e025d30 'struct scm_unused_struct'
+|       |         `-Record 0x7f9c4e025ca8 'scm_unused_struct'
+|       `-BuiltinType 0x7f9c4d8265c0 'int'
+|-RecordDecl 0x7f9c4e02bfe0 <line:28:1, line:34:1> line:28:8 struct scm_vm definition
+| |-FieldDecl 0x7f9c4e02c118 <line:29:5, col:18> col:18 referenced ip 'scm_t_uint8 *'
+| |-FieldDecl 0x7f9c4e02c170 <line:30:5, col:10> col:10 referenced sp 'SCM *'
+| |-FieldDecl 0x7f9c4e02c1c8 <line:31:5, col:10> col:10 referenced fp 'SCM *'
+| |-FieldDecl 0x7f9c4e02c228 <line:32:5, col:9> col:9 referenced engine 'int'
+| `-FieldDecl 0x7f9c4e02c288 <line:33:5, col:9> col:9 referenced trace_level 'int'
+|-FunctionDecl 0x7f9c4e02c4d8 <line:35:1, line:36:1> line:35:12 used vm_regular_engine 'SCM (SCM, SCM, SCM *, int)' static
+| |-ParmVarDecl 0x7f9c4e02c2e0 <col:31, col:35> col:35 vm 'SCM':'struct scm_unused_struct *'
+| |-ParmVarDecl 0x7f9c4e02c350 <col:39, col:43> col:43 program 'SCM':'struct scm_unused_struct *'
+| |-ParmVarDecl 0x7f9c4e02c3c0 <col:52, col:57> col:57 argv 'SCM *'
+| |-ParmVarDecl 0x7f9c4e02c438 <col:63, col:67> col:67 nargs 'int'
+| `-CompoundStmt 0x7f9c4e02c5d0 <col:74, line:36:1>
+|-FunctionDecl 0x7f9c4e02c638 <line:37:1, col:24> col:6 used vm_dispatch_hook 'void ()'
+|-FunctionDecl 0x7f9c4e02c7f8 <line:38:5> col:5 implicit used _setjmp 'int (struct __jmp_buf_tag *)' extern
+| |-ParmVarDecl 0x7f9c4e02c890 <<invalid sloc>> <invalid sloc> 'struct __jmp_buf_tag *'
+| `-ReturnsTwiceAttr 0x7f9c4e02c8f8 <col:5> Implicit
+|-FunctionDecl 0x7f9c4e02c940 prev 0x7f9c4e02c7f8 <col:1, col:14> col:5 used _setjmp 'int (struct __jmp_buf_tag *)'
+| |-ParmVarDecl 0x7f9c4e02c9d8 <<invalid sloc>> <invalid sloc> implicit 'struct __jmp_buf_tag *'
+| `-ReturnsTwiceAttr 0x7f9c4e02ca78 <col:5> Inherited Implicit
+|-FunctionDecl 0x7f9c4e02d0a0 <line:39:1, line:72:1> line:39:12 used vm_debug_engine 'SCM (SCM, SCM, SCM *, int)' static
+| |-ParmVarDecl 0x7f9c4e02ca98 <col:29, col:33> col:33 used vm 'SCM':'struct scm_unused_struct *'
+| |-ParmVarDecl 0x7f9c4e02cb08 <col:37, col:41> col:41 program 'SCM':'struct scm_unused_struct *'
+| |-ParmVarDecl 0x7f9c4e02cb78 <col:50, col:55> col:55 argv 'SCM *'
+| |-ParmVarDecl 0x7f9c4e02d000 <col:61, col:65> col:65 nargs 'int'
+| `-CompoundStmt 0x7f9c4e0329e0 <col:72, line:72:1>
+|   |-DeclStmt 0x7f9c4e02d1c8 <line:40:5, col:30>
+|   | `-VarDecl 0x7f9c4e02d168 <col:5, col:27> col:27 used ip 'scm_t_uint8 *' register
+|   |-DeclStmt 0x7f9c4e02d250 <line:41:5, col:22>
+|   | `-VarDecl 0x7f9c4e02d1f0 <col:5, col:19> col:19 used sp 'SCM *' register
+|   |-DeclStmt 0x7f9c4e02d2d8 <line:42:5, col:22>
+|   | `-VarDecl 0x7f9c4e02d278 <col:5, col:19> col:19 used fp 'SCM *' register
+|   |-DeclStmt 0x7f9c4e02f238 <line:43:5, col:262>
+|   | `-VarDecl 0x7f9c4e02d3a0 <col:5, col:261> col:20 used vp 'struct scm_vm *' cinit
+|   |   `-ParenExpr 0x7f9c4e02f218 <col:25, col:261> 'struct scm_vm *'
+|   |     `-CStyleCastExpr 0x7f9c4e02f1f0 <col:26, col:260> 'struct scm_vm *' <IntegralToPointer>
+|   |       `-ParenExpr 0x7f9c4e02f1d0 <col:44, col:260> 'scm_t_bits':'unsigned long'
+|   |         `-ParenExpr 0x7f9c4e02f158 <col:45, col:259> 'scm_t_bits':'unsigned long'
+|   |           `-ParenExpr 0x7f9c4e02f138 <col:46, col:258> 'scm_t_bits':'unsigned long'
+|   |             `-CStyleCastExpr 0x7f9c4e02f110 <col:47, col:257> 'scm_t_bits':'unsigned long' <PointerToIntegral>
+|   |               `-ParenExpr 0x7f9c4e02f0f0 <col:60, col:257> 'SCM':'struct scm_unused_struct *'
+|   |                 `-ConditionalOperator 0x7f9c4e02f080 <col:61, col:256> 'SCM':'struct scm_unused_struct *'
+|   |                   |-IntegerLiteral 0x7f9c4e02d420 <col:61> 'int' 0
+|   |                   |-ParenExpr 0x7f9c4e02db50 <col:64, col:165> 'SCM':'struct scm_unused_struct *'
+|   |                   | `-BinaryOperator 0x7f9c4e02db28 <col:65, col:164> 'SCM':'struct scm_unused_struct *' '='
+|   |                   |   |-UnaryOperator 0x7f9c4e02d498 <col:65, col:72> 'SCM':'struct scm_unused_struct *' lvalue prefix '*'
+|   |                   |   | `-CStyleCastExpr 0x7f9c4e02d470 <col:66, col:72> 'SCM *' <NullToPointer>
+|   |                   |   |   `-IntegerLiteral 0x7f9c4e02d440 <col:72> 'int' 0
+|   |                   |   `-ImplicitCastExpr 0x7f9c4e02db10 <col:74, col:164> 'SCM':'struct scm_unused_struct *' <LValueToRValue>
+|   |                   |     `-ParenExpr 0x7f9c4e02daf0 <col:74, col:164> 'SCM':'struct scm_unused_struct *' lvalue
+|   |                   |       `-ParenExpr 0x7f9c4e02dad0 <col:75, col:163> 'SCM':'struct scm_unused_struct *' lvalue
+|   |                   |         `-ArraySubscriptExpr 0x7f9c4e02daa8 <col:76, col:162> 'SCM':'struct scm_unused_struct *' lvalue
+|   |                   |           |-ParenExpr 0x7f9c4e02da28 <col:76, col:154> 'SCM *'
+|   |                   |           | `-CStyleCastExpr 0x7f9c4e02da00 <col:77, col:153> 'SCM *' <BitCast>
+|   |                   |           |   `-ParenExpr 0x7f9c4e02d9e0 <col:84, col:153> 'scm_t_cell *'
+|   |                   |           |     `-CStyleCastExpr 0x7f9c4e02d978 <col:85, col:152> 'scm_t_cell *' <IntegralToPointer>
+|   |                   |           |       `-ParenExpr 0x7f9c4e02d958 <col:100, col:152> 'scm_t_bits':'unsigned long'
+|   |                   |           |         `-ParenExpr 0x7f9c4e02d898 <col:101, col:151> 'scm_t_bits':'unsigned long'
+|   |                   |           |           `-CStyleCastExpr 0x7f9c4e02d870 <col:102, col:150> 'scm_t_bits':'unsigned long' <PointerToIntegral>
+|   |                   |           |             `-ParenExpr 0x7f9c4e02d850 <col:115, col:150> 'SCM':'struct scm_unused_struct *'
+|   |                   |           |               `-ConditionalOperator 0x7f9c4e02d7e0 <col:116, col:149> 'SCM':'struct scm_unused_struct *'
+|   |                   |           |                 |-IntegerLiteral 0x7f9c4e02d4e0 <col:116> 'int' 0
+|   |                   |           |                 |-ParenExpr 0x7f9c4e02d660 <col:119, col:139> 'SCM':'struct scm_unused_struct *'
+|   |                   |           |                 | `-BinaryOperator 0x7f9c4e02d638 <col:120, col:138> 'SCM':'struct scm_unused_struct *' '='
+|   |                   |           |                 |   |-UnaryOperator 0x7f9c4e02d558 <col:120, col:127> 'SCM':'struct scm_unused_struct *' lvalue prefix '*'
+|   |                   |           |                 |   | `-CStyleCastExpr 0x7f9c4e02d530 <col:121, col:127> 'SCM *' <NullToPointer>
+|   |                   |           |                 |   |   `-IntegerLiteral 0x7f9c4e02d500 <col:127> 'int' 0
+|   |                   |           |                 |   `-ImplicitCastExpr 0x7f9c4e02d620 <col:129, col:138> 'SCM':'struct scm_unused_struct *' <LValueToRValue>
+|   |                   |           |                 |     `-ParenExpr 0x7f9c4e02d600 <col:129, col:138> 'SCM':'struct scm_unused_struct *' lvalue
+|   |                   |           |                 |       `-ParenExpr 0x7f9c4e02d5e0 <col:130, col:137> 'SCM':'struct scm_unused_struct *' lvalue
+|   |                   |           |                 |         `-ParenExpr 0x7f9c4e02d5c0 <col:131, col:136> 'SCM':'struct scm_unused_struct *' lvalue
+|   |                   |           |                 |           `-ParenExpr 0x7f9c4e02d5a0 <col:132, col:135> 'SCM':'struct scm_unused_struct *' lvalue
+|   |                   |           |                 |             `-DeclRefExpr 0x7f9c4e02d578 <col:133> 'SCM':'struct scm_unused_struct *' lvalue ParmVar 0x7f9c4e02ca98 'vm' 'SCM':'struct scm_unused_struct *'
+|   |                   |           |                 `-ImplicitCastExpr 0x7f9c4e02d708 <col:142, col:149> 'SCM':'struct scm_unused_struct *' <LValueToRValue>
+|   |                   |           |                   `-ParenExpr 0x7f9c4e02d6e8 <col:142, col:149> 'SCM':'struct scm_unused_struct *' lvalue
+|   |                   |           |                     `-ParenExpr 0x7f9c4e02d6c8 <col:143, col:148> 'SCM':'struct scm_unused_struct *' lvalue
+|   |                   |           |                       `-ParenExpr 0x7f9c4e02d6a8 <col:144, col:147> 'SCM':'struct scm_unused_struct *' lvalue
+|   |                   |           |                         `-DeclRefExpr 0x7f9c4e02d680 <col:145> 'SCM':'struct scm_unused_struct *' lvalue ParmVar 0x7f9c4e02ca98 'vm' 'SCM':'struct scm_unused_struct *'
+|   |                   |           `-ParenExpr 0x7f9c4e02da88 <col:157, col:161> 'int'
+|   |                   |             `-ParenExpr 0x7f9c4e02da68 <col:158, col:160> 'int'
+|   |                   |               `-IntegerLiteral 0x7f9c4e02da48 <col:159> 'int' 1
+|   |                   `-ImplicitCastExpr 0x7f9c4e02f068 <col:168, col:256> 'SCM':'struct scm_unused_struct *' <LValueToRValue>
+|   |                     `-ParenExpr 0x7f9c4e02f048 <col:168, col:256> 'SCM':'struct scm_unused_struct *' lvalue
+|   |                       `-ArraySubscriptExpr 0x7f9c4e02f020 <col:169, col:255> 'SCM':'struct scm_unused_struct *' lvalue
+|   |                         |-ParenExpr 0x7f9c4e02df98 <col:169, col:247> 'SCM *'
+|   |                         | `-CStyleCastExpr 0x7f9c4e02df70 <col:170, col:246> 'SCM *' <BitCast>
+|   |                         |   `-ParenExpr 0x7f9c4e02df50 <col:177, col:246> 'scm_t_cell *'
+|   |                         |     `-CStyleCastExpr 0x7f9c4e02dee8 <col:178, col:245> 'scm_t_cell *' <IntegralToPointer>
+|   |                         |       `-ParenExpr 0x7f9c4e02dec8 <col:193, col:245> 'scm_t_bits':'unsigned long'
+|   |                         |         `-ParenExpr 0x7f9c4e02de68 <col:194, col:244> 'scm_t_bits':'unsigned long'
+|   |                         |           `-CStyleCastExpr 0x7f9c4e02de40 <col:195, col:243> 'scm_t_bits':'unsigned long' <PointerToIntegral>
+|   |                         |             `-ParenExpr 0x7f9c4e02de20 <col:208, col:243> 'SCM':'struct scm_unused_struct *'
+|   |                         |               `-ConditionalOperator 0x7f9c4e02ddb0 <col:209, col:242> 'SCM':'struct scm_unused_struct *'
+|   |                         |                 |-IntegerLiteral 0x7f9c4e02db70 <col:209> 'int' 0
+|   |                         |                 |-ParenExpr 0x7f9c4e02dcf0 <col:212, col:232> 'SCM':'struct scm_unused_struct *'
+|   |                         |                 | `-BinaryOperator 0x7f9c4e02dcc8 <col:213, col:231> 'SCM':'struct scm_unused_struct *' '='
+|   |                         |                 |   |-UnaryOperator 0x7f9c4e02dbe8 <col:213, col:220> 'SCM':'struct scm_unused_struct *' lvalue prefix '*'
+|   |                         |                 |   | `-CStyleCastExpr 0x7f9c4e02dbc0 <col:214, col:220> 'SCM *' <NullToPointer>
+|   |                         |                 |   |   `-IntegerLiteral 0x7f9c4e02db90 <col:220> 'int' 0
+|   |                         |                 |   `-ImplicitCastExpr 0x7f9c4e02dcb0 <col:222, col:231> 'SCM':'struct scm_unused_struct *' <LValueToRValue>
+|   |                         |                 |     `-ParenExpr 0x7f9c4e02dc90 <col:222, col:231> 'SCM':'struct scm_unused_struct *' lvalue
+|   |                         |                 |       `-ParenExpr 0x7f9c4e02dc70 <col:223, col:230> 'SCM':'struct scm_unused_struct *' lvalue
+|   |                         |                 |         `-ParenExpr 0x7f9c4e02dc50 <col:224, col:229> 'SCM':'struct scm_unused_struct *' lvalue
+|   |                         |                 |           `-ParenExpr 0x7f9c4e02dc30 <col:225, col:228> 'SCM':'struct scm_unused_struct *' lvalue
+|   |                         |                 |             `-DeclRefExpr 0x7f9c4e02dc08 <col:226> 'SCM':'struct scm_unused_struct *' lvalue ParmVar 0x7f9c4e02ca98 'vm' 'SCM':'struct scm_unused_struct *'
+|   |                         |                 `-ImplicitCastExpr 0x7f9c4e02dd98 <col:235, col:242> 'SCM':'struct scm_unused_struct *' <LValueToRValue>
+|   |                         |                   `-ParenExpr 0x7f9c4e02dd78 <col:235, col:242> 'SCM':'struct scm_unused_struct *' lvalue
+|   |                         |                     `-ParenExpr 0x7f9c4e02dd58 <col:236, col:241> 'SCM':'struct scm_unused_struct *' lvalue
+|   |                         |                       `-ParenExpr 0x7f9c4e02dd38 <col:237, col:240> 'SCM':'struct scm_unused_struct *' lvalue
+|   |                         |                         `-DeclRefExpr 0x7f9c4e02dd10 <col:238> 'SCM':'struct scm_unused_struct *' lvalue ParmVar 0x7f9c4e02ca98 'vm' 'SCM':'struct scm_unused_struct *'
+|   |                         `-ParenExpr 0x7f9c4e02f000 <col:250, col:254> 'int'
+|   |                           `-ParenExpr 0x7f9c4e02dfd8 <col:251, col:253> 'int'
+|   |                             `-IntegerLiteral 0x7f9c4e02dfb8 <col:252> 'int' 1
+|   |-DeclStmt 0x7f9c4e02f3b8 <line:44:5, col:57>
+|   | `-VarDecl 0x7f9c4e02f2c0 <col:5, col:56> col:25 used jump_table_pointer 'const void **' static cinit
+|   |   `-ImplicitCastExpr 0x7f9c4e02f3a0 <col:46, col:56> 'const void **' <NullToPointer>
+|   |     `-ParenExpr 0x7f9c4e02f380 <col:46, col:56> 'void *'
+|   |       `-CStyleCastExpr 0x7f9c4e02f358 <col:47, col:55> 'void *' <NullToPointer>
+|   |         `-IntegerLiteral 0x7f9c4e02f320 <col:55> 'int' 0
+|   |-DeclStmt 0x7f9c4e02f448 <line:45:5, col:28>
+|   | `-VarDecl 0x7f9c4e02f3e8 <col:5, col:18> col:18 used jump_table 'const void **'
+|   |-IfStmt 0x7f9c4e02f928 <line:46:5, line:48:5>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-CallExpr 0x7f9c4e02f770 <line:46:9, col:51> 'long'
+|   | | |-ImplicitCastExpr 0x7f9c4e02f758 <col:9> 'long (*)(long, long)' <BuiltinFnToFnPtr>
+|   | | | `-DeclRefExpr 0x7f9c4e02f660 <col:9> '<builtin fn type>' Function 0x7f9c4e02f4a0 '__builtin_expect' 'long (long, long)'
+|   | | |-ImplicitCastExpr 0x7f9c4e02f7a8 <col:27, col:47> 'long' <IntegralCast>
+|   | | | `-ParenExpr 0x7f9c4e02f6e8 <col:27, col:47> 'int'
+|   | | |   `-UnaryOperator 0x7f9c4e02f6c8 <col:28, col:29> 'int' prefix '!'
+|   | | |     `-ImplicitCastExpr 0x7f9c4e02f6b0 <col:29> 'const void **' <LValueToRValue>
+|   | | |       `-DeclRefExpr 0x7f9c4e02f688 <col:29> 'const void **' lvalue Var 0x7f9c4e02f2c0 'jump_table_pointer' 'const void **'
+|   | | `-ImplicitCastExpr 0x7f9c4e02f7c0 <col:50> 'long' <IntegralCast>
+|   | |   `-IntegerLiteral 0x7f9c4e02f708 <col:50> 'int' 0
+|   | |-CompoundStmt 0x7f9c4e02f908 <col:58, line:48:5>
+|   | | `-BinaryOperator 0x7f9c4e02f8e0 <line:47:2, col:28> 'const void *' '='
+|   | |   |-ArraySubscriptExpr 0x7f9c4e02f838 <col:2, col:22> 'const void *' lvalue
+|   | |   | |-ImplicitCastExpr 0x7f9c4e02f820 <col:2> 'const void **' <LValueToRValue>
+|   | |   | | `-DeclRefExpr 0x7f9c4e02f7d8 <col:2> 'const void **' lvalue Var 0x7f9c4e02f2c0 'jump_table_pointer' 'const void **'
+|   | |   | `-IntegerLiteral 0x7f9c4e02f800 <col:21> 'int' 0
+|   | |   `-ImplicitCastExpr 0x7f9c4e02f8c8 <col:26, col:28> 'const void *' <BitCast>
+|   | |     `-AddrLabelExpr 0x7f9c4e02f8a8 <col:26, col:28> 'void *' l_nop 0x7f9c4e02f860
+|   | `-<<<NULL>>>
+|   |-LabelStmt 0x7f9c4e0307b0 <line:49:1, line:61:7> 'l_nop'
+|   | `-CompoundStmt 0x7f9c4e030760 <line:50:7, line:61:7>
+|   |   |-DeclStmt 0x7f9c4e02f9d0 <line:51:2, col:13>
+|   |   | `-VarDecl 0x7f9c4e02f970 <col:2, col:7> col:7 used old_sp 'SCM *'
+|   |   |-DeclStmt 0x7f9c4e02fa80 <line:52:2, col:15>
+|   |   | `-VarDecl 0x7f9c4e02fa20 <col:2, col:14> col:14 used n 'scm_t_int32':'int'
+|   |   |-BinaryOperator 0x7f9c4e02fb00 <line:53:2, col:11> 'SCM *' '='
+|   |   | |-DeclRefExpr 0x7f9c4e02fa98 <col:2> 'SCM *' lvalue Var 0x7f9c4e02f970 'old_sp' 'SCM *'
+|   |   | `-ImplicitCastExpr 0x7f9c4e02fae8 <col:11> 'SCM *' <LValueToRValue>
+|   |   |   `-DeclRefExpr 0x7f9c4e02fac0 <col:11> 'SCM *' lvalue Var 0x7f9c4e02d1f0 'sp' 'SCM *'
+|   |   |-BinaryOperator 0x7f9c4e02fc60 <line:54:2, col:18> 'SCM *' '='
+|   |   | |-DeclRefExpr 0x7f9c4e02fb28 <col:2> 'SCM *' lvalue Var 0x7f9c4e02d1f0 'sp' 'SCM *'
+|   |   | `-BinaryOperator 0x7f9c4e02fc38 <col:7, col:18> 'SCM *' '+'
+|   |   |   |-ParenExpr 0x7f9c4e02fbd8 <col:7, col:14> 'SCM *'
+|   |   |   | `-BinaryOperator 0x7f9c4e02fbb0 <col:8, col:13> 'SCM *' '-'
+|   |   |   |   |-ImplicitCastExpr 0x7f9c4e02fb98 <col:8> 'SCM *' <LValueToRValue>
+|   |   |   |   | `-DeclRefExpr 0x7f9c4e02fb50 <col:8> 'SCM *' lvalue Var 0x7f9c4e02d278 'fp' 'SCM *'
+|   |   |   |   `-IntegerLiteral 0x7f9c4e02fb78 <col:13> 'int' 1
+|   |   |   `-ImplicitCastExpr 0x7f9c4e02fc20 <col:18> 'scm_t_int32':'int' <LValueToRValue>
+|   |   |     `-DeclRefExpr 0x7f9c4e02fbf8 <col:18> 'scm_t_int32':'int' lvalue Var 0x7f9c4e02fa20 'n' 'scm_t_int32':'int'
+|   |   |-IfStmt 0x7f9c4e0300b0 <line:55:2, line:57:2>
+|   |   | |-<<<NULL>>>
+|   |   | |-<<<NULL>>>
+|   |   | |-BinaryOperator 0x7f9c4e02fd08 <line:55:6, col:15> 'int' '<'
+|   |   | | |-ImplicitCastExpr 0x7f9c4e02fcd8 <col:6> 'SCM *' <LValueToRValue>
+|   |   | | | `-DeclRefExpr 0x7f9c4e02fc88 <col:6> 'SCM *' lvalue Var 0x7f9c4e02f970 'old_sp' 'SCM *'
+|   |   | | `-ImplicitCastExpr 0x7f9c4e02fcf0 <col:15> 'SCM *' <LValueToRValue>
+|   |   | |   `-DeclRefExpr 0x7f9c4e02fcb0 <col:15> 'SCM *' lvalue Var 0x7f9c4e02d1f0 'sp' 'SCM *'
+|   |   | |-CompoundStmt 0x7f9c4e030090 <col:23, line:57:2>
+|   |   | | `-WhileStmt 0x7f9c4e030070 <line:56:6, col:86>
+|   |   | |   |-<<<NULL>>>
+|   |   | |   |-BinaryOperator 0x7f9c4e02fdb0 <col:13, col:22> 'int' '<'
+|   |   | |   | |-ImplicitCastExpr 0x7f9c4e02fd80 <col:13> 'SCM *' <LValueToRValue>
+|   |   | |   | | `-DeclRefExpr 0x7f9c4e02fd30 <col:13> 'SCM *' lvalue Var 0x7f9c4e02f970 'old_sp' 'SCM *'
+|   |   | |   | `-ImplicitCastExpr 0x7f9c4e02fd98 <col:22> 'SCM *' <LValueToRValue>
+|   |   | |   |   `-DeclRefExpr 0x7f9c4e02fd58 <col:22> 'SCM *' lvalue Var 0x7f9c4e02d1f0 'sp' 'SCM *'
+|   |   | |   `-BinaryOperator 0x7f9c4e030048 <col:34, col:86> 'SCM':'struct scm_unused_struct *' '='
+|   |   | |     |-UnaryOperator 0x7f9c4e02fe20 <col:34, col:37> 'SCM':'struct scm_unused_struct *' lvalue prefix '*'
+|   |   | |     | `-UnaryOperator 0x7f9c4e02fe00 <col:35, col:37> 'SCM *' prefix '++'
+|   |   | |     |   `-DeclRefExpr 0x7f9c4e02fdd8 <col:37> 'SCM *' lvalue Var 0x7f9c4e02f970 'old_sp' 'SCM *'
+|   |   | |     `-ParenExpr 0x7f9c4e030028 <col:46, col:86> 'SCM':'struct scm_unused_struct *'
+|   |   | |       `-CStyleCastExpr 0x7f9c4e030000 <col:47, col:85> 'SCM':'struct scm_unused_struct *' <IntegralToPointer>
+|   |   | |         `-ParenExpr 0x7f9c4e02ffd8 <col:53, col:85> 'int'
+|   |   | |           `-ParenExpr 0x7f9c4e02ff78 <col:54, col:84> 'int'
+|   |   | |             `-ParenExpr 0x7f9c4e02ff58 <col:55, col:83> 'int'
+|   |   | |               `-BinaryOperator 0x7f9c4e02ff30 <col:56, col:71> 'int' '+'
+|   |   | |                 |-ParenExpr 0x7f9c4e02fee8 <col:56, col:67> 'int'
+|   |   | |                 | `-BinaryOperator 0x7f9c4e02fec0 <col:57, col:66> 'int' '<<'
+|   |   | |                 |   |-ParenExpr 0x7f9c4e02fe80 <col:57, col:61> 'int'
+|   |   | |                 |   | `-ParenExpr 0x7f9c4e02fe60 <col:58, col:60> 'int'
+|   |   | |                 |   |   `-IntegerLiteral 0x7f9c4e02fe40 <col:59> 'int' 9
+|   |   | |                 |   `-IntegerLiteral 0x7f9c4e02fea0 <col:66> 'int' 8
+|   |   | |                 `-DeclRefExpr 0x7f9c4e02ff08 <col:71> 'int' EnumConstant 0x7f9c4e025f98 'scm_tc8_flag' 'int'
+|   |   | `-<<<NULL>>>
+|   |   |-CompoundStmt 0x7f9c4e030728 <line:58:4, line:60:4>
+|   |   | |-CompoundStmt 0x7f9c4e0306f8 <line:59:8, col:148>
+|   |   | | `-IfStmt 0x7f9c4e0306c0 <col:10, col:146>
+|   |   | |   |-<<<NULL>>>
+|   |   | |   |-<<<NULL>>>
+|   |   | |   |-CallExpr 0x7f9c4e030240 <col:14, col:56> 'long'
+|   |   | |   | |-ImplicitCastExpr 0x7f9c4e030228 <col:14> 'long (*)(long, long)' <BuiltinFnToFnPtr>
+|   |   | |   | | `-DeclRefExpr 0x7f9c4e0300e8 <col:14> '<builtin fn type>' Function 0x7f9c4e02f4a0 '__builtin_expect' 'long (long, long)'
+|   |   | |   | |-ImplicitCastExpr 0x7f9c4e030278 <col:32, col:52> 'long' <IntegralCast>
+|   |   | |   | | `-ParenExpr 0x7f9c4e0301e8 <col:32, col:52> 'int'
+|   |   | |   | |   `-BinaryOperator 0x7f9c4e0301c0 <col:33, col:51> 'int' '>'
+|   |   | |   | |     |-ImplicitCastExpr 0x7f9c4e0301a8 <col:33, col:37> 'int' <LValueToRValue>
+|   |   | |   | |     | `-MemberExpr 0x7f9c4e030150 <col:33, col:37> 'int' lvalue ->trace_level 0x7f9c4e02c288
+|   |   | |   | |     |   `-ImplicitCastExpr 0x7f9c4e030138 <col:33> 'struct scm_vm *' <LValueToRValue>
+|   |   | |   | |     |     `-DeclRefExpr 0x7f9c4e030110 <col:33> 'struct scm_vm *' lvalue Var 0x7f9c4e02d3a0 'vp' 'struct scm_vm *'
+|   |   | |   | |     `-IntegerLiteral 0x7f9c4e030188 <col:51> 'int' 0
+|   |   | |   | `-ImplicitCastExpr 0x7f9c4e030290 <col:55> 'long' <IntegralCast>
+|   |   | |   |   `-IntegerLiteral 0x7f9c4e030208 <col:55> 'int' 0
+|   |   | |   |-CompoundStmt 0x7f9c4e030690 <col:59, col:146>
+|   |   | |   | |-CompoundStmt 0x7f9c4e030548 <col:61, col:102>
+|   |   | |   | | |-BinaryOperator 0x7f9c4e030360 <col:63, col:72> 'scm_t_uint8 *' '='
+|   |   | |   | | | |-MemberExpr 0x7f9c4e0302e8 <col:63, col:67> 'scm_t_uint8 *' lvalue ->ip 0x7f9c4e02c118
+|   |   | |   | | | | `-ImplicitCastExpr 0x7f9c4e0302d0 <col:63> 'struct scm_vm *' <LValueToRValue>
+|   |   | |   | | | |   `-DeclRefExpr 0x7f9c4e0302a8 <col:63> 'struct scm_vm *' lvalue Var 0x7f9c4e02d3a0 'vp' 'struct scm_vm *'
+|   |   | |   | | | `-ImplicitCastExpr 0x7f9c4e030348 <col:72> 'scm_t_uint8 *' <LValueToRValue>
+|   |   | |   | | |   `-DeclRefExpr 0x7f9c4e030320 <col:72> 'scm_t_uint8 *' lvalue Var 0x7f9c4e02d168 'ip' 'scm_t_uint8 *'
+|   |   | |   | | |-BinaryOperator 0x7f9c4e030440 <col:76, col:85> 'SCM *' '='
+|   |   | |   | | | |-MemberExpr 0x7f9c4e0303c8 <col:76, col:80> 'SCM *' lvalue ->sp 0x7f9c4e02c170
+|   |   | |   | | | | `-ImplicitCastExpr 0x7f9c4e0303b0 <col:76> 'struct scm_vm *' <LValueToRValue>
+|   |   | |   | | | |   `-DeclRefExpr 0x7f9c4e030388 <col:76> 'struct scm_vm *' lvalue Var 0x7f9c4e02d3a0 'vp' 'struct scm_vm *'
+|   |   | |   | | | `-ImplicitCastExpr 0x7f9c4e030428 <col:85> 'SCM *' <LValueToRValue>
+|   |   | |   | | |   `-DeclRefExpr 0x7f9c4e030400 <col:85> 'SCM *' lvalue Var 0x7f9c4e02d1f0 'sp' 'SCM *'
+|   |   | |   | | `-BinaryOperator 0x7f9c4e030520 <col:89, col:98> 'SCM *' '='
+|   |   | |   | |   |-MemberExpr 0x7f9c4e0304a8 <col:89, col:93> 'SCM *' lvalue ->fp 0x7f9c4e02c1c8
+|   |   | |   | |   | `-ImplicitCastExpr 0x7f9c4e030490 <col:89> 'struct scm_vm *' <LValueToRValue>
+|   |   | |   | |   |   `-DeclRefExpr 0x7f9c4e030468 <col:89> 'struct scm_vm *' lvalue Var 0x7f9c4e02d3a0 'vp' 'struct scm_vm *'
+|   |   | |   | |   `-ImplicitCastExpr 0x7f9c4e030508 <col:98> 'SCM *' <LValueToRValue>
+|   |   | |   | |     `-DeclRefExpr 0x7f9c4e0304e0 <col:98> 'SCM *' lvalue Var 0x7f9c4e02d278 'fp' 'SCM *'
+|   |   | |   | |-NullStmt 0x7f9c4e030578 <col:103>
+|   |   | |   | `-CallExpr 0x7f9c4e030640 <col:105, col:143> 'void'
+|   |   | |   |   |-ImplicitCastExpr 0x7f9c4e030628 <col:105> 'void (*)()' <FunctionToPointerDecay>
+|   |   | |   |   | `-DeclRefExpr 0x7f9c4e030588 <col:105> 'void ()' Function 0x7f9c4e02c638 'vm_dispatch_hook' 'void ()'
+|   |   | |   |   |-ImplicitCastExpr 0x7f9c4e030678 <col:123> 'SCM':'struct scm_unused_struct *' <LValueToRValue>
+|   |   | |   |   | `-DeclRefExpr 0x7f9c4e0305b0 <col:123> 'SCM':'struct scm_unused_struct *' lvalue ParmVar 0x7f9c4e02ca98 'vm' 'SCM':'struct scm_unused_struct *'
+|   |   | |   |   `-DeclRefExpr 0x7f9c4e0305d8 <col:127> 'int' EnumConstant 0x7f9c4e026858 'SCM_VM_NEXT_HOOK' 'int'
+|   |   | |   `-<<<NULL>>>
+|   |   | `-NullStmt 0x7f9c4e030718 <col:149>
+|   |   `-NullStmt 0x7f9c4e030750 <line:60:5>
+|   `-CompoundStmt 0x7f9c4e0329a8 <line:62:7, line:71:7>
+|     |-DeclStmt 0x7f9c4e0308c0 <line:63:2, col:15>
+|     | |-VarDecl 0x7f9c4e0307d8 <col:2, col:6> col:6 k 'SCM':'struct scm_unused_struct *'
+|     | `-VarDecl 0x7f9c4e030848 <col:2, col:9> col:9 used prompt 'SCM':'struct scm_unused_struct *'
+|     |-IfStmt 0x7f9c4e032378 <line:64:2, line:67:2>
+|     | |-<<<NULL>>>
+|     | |-<<<NULL>>>
+|     | |-ParenExpr 0x7f9c4e031758 <line:64:6, col:288> 'int'
+|     | | `-CallExpr 0x7f9c4e031710 <col:7, col:287> 'int'
+|     | |   |-ImplicitCastExpr 0x7f9c4e0316f8 <col:7> 'int (*)(struct __jmp_buf_tag *)' <FunctionToPointerDecay>
+|     | |   | `-DeclRefExpr 0x7f9c4e0308d8 <col:7> 'int (struct __jmp_buf_tag *)' Function 0x7f9c4e02c940 '_setjmp' 'int (struct __jmp_buf_tag *)'
+|     | |   `-ImplicitCastExpr 0x7f9c4e031740 <col:16, col:283> 'struct __jmp_buf_tag *' <ArrayToPointerDecay>
+|     | |     `-MemberExpr 0x7f9c4e031668 <col:16, col:283> 'jmp_buf':'struct __jmp_buf_tag [1]' lvalue ->regs 0x7f9c4e026680
+|     | |       `-ParenExpr 0x7f9c4e031648 <col:16, col:280> 'struct scm_prompt_registers *'
+|     | |         `-CStyleCastExpr 0x7f9c4e031620 <col:17, col:279> 'struct scm_prompt_registers *' <IntegralToPointer>
+|     | |           `-ParenExpr 0x7f9c4e031600 <col:47, col:279> 'scm_t_bits':'unsigned long'
+|     | |             `-ParenExpr 0x7f9c4e031500 <col:48, col:278> 'scm_t_bits':'unsigned long'
+|     | |               `-ParenExpr 0x7f9c4e0314e0 <col:49, col:277> 'scm_t_bits':'unsigned long'
+|     | |                 `-CStyleCastExpr 0x7f9c4e0314b8 <col:50, col:276> 'scm_t_bits':'unsigned long' <PointerToIntegral>
+|     | |                   `-ParenExpr 0x7f9c4e031498 <col:63, col:276> 'SCM':'struct scm_unused_struct *'
+|     | |                     `-ConditionalOperator 0x7f9c4e031428 <col:64, col:275> 'SCM':'struct scm_unused_struct *'
+|     | |                       |-IntegerLiteral 0x7f9c4e030900 <col:64> 'int' 0
+|     | |                       |-ParenExpr 0x7f9c4e030ee8 <col:67, col:176> 'SCM':'struct scm_unused_struct *'
+|     | |                       | `-BinaryOperator 0x7f9c4e030ec0 <col:68, col:175> 'SCM':'struct scm_unused_struct *' '='
+|     | |                       |   |-UnaryOperator 0x7f9c4e030978 <col:68, col:75> 'SCM':'struct scm_unused_struct *' lvalue prefix '*'
+|     | |                       |   | `-CStyleCastExpr 0x7f9c4e030950 <col:69, col:75> 'SCM *' <NullToPointer>
+|     | |                       |   |   `-IntegerLiteral 0x7f9c4e030920 <col:75> 'int' 0
+|     | |                       |   `-ImplicitCastExpr 0x7f9c4e030ea8 <col:77, col:175> 'SCM':'struct scm_unused_struct *' <LValueToRValue>
+|     | |                       |     `-ParenExpr 0x7f9c4e030e88 <col:77, col:175> 'SCM':'struct scm_unused_struct *' lvalue
+|     | |                       |       `-ParenExpr 0x7f9c4e030e68 <col:78, col:174> 'SCM':'struct scm_unused_struct *' lvalue
+|     | |                       |         `-ArraySubscriptExpr 0x7f9c4e030e40 <col:79, col:173> 'SCM':'struct scm_unused_struct *' lvalue
+|     | |                       |           |-ParenExpr 0x7f9c4e030dc0 <col:79, col:165> 'SCM *'
+|     | |                       |           | `-CStyleCastExpr 0x7f9c4e030d98 <col:80, col:164> 'SCM *' <BitCast>
+|     | |                       |           |   `-ParenExpr 0x7f9c4e030d78 <col:87, col:164> 'scm_t_cell *'
+|     | |                       |           |     `-CStyleCastExpr 0x7f9c4e030d10 <col:88, col:163> 'scm_t_cell *' <IntegralToPointer>
+|     | |                       |           |       `-ParenExpr 0x7f9c4e030cf0 <col:103, col:163> 'scm_t_bits':'unsigned long'
+|     | |                       |           |         `-ParenExpr 0x7f9c4e030c90 <col:104, col:162> 'scm_t_bits':'unsigned long'
+|     | |                       |           |           `-CStyleCastExpr 0x7f9c4e030c68 <col:105, col:161> 'scm_t_bits':'unsigned long' <PointerToIntegral>
+|     | |                       |           |             `-ParenExpr 0x7f9c4e030c48 <col:118, col:161> 'SCM':'struct scm_unused_struct *'
+|     | |                       |           |               `-ConditionalOperator 0x7f9c4e030bd8 <col:119, col:160> 'SCM':'struct scm_unused_struct *'
+|     | |                       |           |                 |-IntegerLiteral 0x7f9c4e030998 <col:119> 'int' 0
+|     | |                       |           |                 |-ParenExpr 0x7f9c4e030b18 <col:122, col:146> 'SCM':'struct scm_unused_struct *'
+|     | |                       |           |                 | `-BinaryOperator 0x7f9c4e030af0 <col:123, col:145> 'SCM':'struct scm_unused_struct *' '='
+|     | |                       |           |                 |   |-UnaryOperator 0x7f9c4e030a10 <col:123, col:130> 'SCM':'struct scm_unused_struct *' lvalue prefix '*'
+|     | |                       |           |                 |   | `-CStyleCastExpr 0x7f9c4e0309e8 <col:124, col:130> 'SCM *' <NullToPointer>
+|     | |                       |           |                 |   |   `-IntegerLiteral 0x7f9c4e0309b8 <col:130> 'int' 0
+|     | |                       |           |                 |   `-ImplicitCastExpr 0x7f9c4e030ad8 <col:132, col:145> 'SCM':'struct scm_unused_struct *' <LValueToRValue>
+|     | |                       |           |                 |     `-ParenExpr 0x7f9c4e030ab8 <col:132, col:145> 'SCM':'struct scm_unused_struct *' lvalue
+|     | |                       |           |                 |       `-ParenExpr 0x7f9c4e030a98 <col:133, col:144> 'SCM':'struct scm_unused_struct *' lvalue
+|     | |                       |           |                 |         `-ParenExpr 0x7f9c4e030a78 <col:134, col:143> 'SCM':'struct scm_unused_struct *' lvalue
+|     | |                       |           |                 |           `-ParenExpr 0x7f9c4e030a58 <col:135, col:142> 'SCM':'struct scm_unused_struct *' lvalue
+|     | |                       |           |                 |             `-DeclRefExpr 0x7f9c4e030a30 <col:136> 'SCM':'struct scm_unused_struct *' lvalue Var 0x7f9c4e030848 'prompt' 'SCM':'struct scm_unused_struct *'
+|     | |                       |           |                 `-ImplicitCastExpr 0x7f9c4e030bc0 <col:149, col:160> 'SCM':'struct scm_unused_struct *' <LValueToRValue>
+|     | |                       |           |                   `-ParenExpr 0x7f9c4e030ba0 <col:149, col:160> 'SCM':'struct scm_unused_struct *' lvalue
+|     | |                       |           |                     `-ParenExpr 0x7f9c4e030b80 <col:150, col:159> 'SCM':'struct scm_unused_struct *' lvalue
+|     | |                       |           |                       `-ParenExpr 0x7f9c4e030b60 <col:151, col:158> 'SCM':'struct scm_unused_struct *' lvalue
+|     | |                       |           |                         `-DeclRefExpr 0x7f9c4e030b38 <col:152> 'SCM':'struct scm_unused_struct *' lvalue Var 0x7f9c4e030848 'prompt' 'SCM':'struct scm_unused_struct *'
+|     | |                       |           `-ParenExpr 0x7f9c4e030e20 <col:168, col:172> 'int'
+|     | |                       |             `-ParenExpr 0x7f9c4e030e00 <col:169, col:171> 'int'
+|     | |                       |               `-IntegerLiteral 0x7f9c4e030de0 <col:170> 'int' 2
+|     | |                       `-ImplicitCastExpr 0x7f9c4e031410 <col:179, col:275> 'SCM':'struct scm_unused_struct *' <LValueToRValue>
+|     | |                         `-ParenExpr 0x7f9c4e0313f0 <col:179, col:275> 'SCM':'struct scm_unused_struct *' lvalue
+|     | |                           `-ArraySubscriptExpr 0x7f9c4e0313c8 <col:180, col:274> 'SCM':'struct scm_unused_struct *' lvalue
+|     | |                             |-ParenExpr 0x7f9c4e031348 <col:180, col:266> 'SCM *'
+|     | |                             | `-CStyleCastExpr 0x7f9c4e031320 <col:181, col:265> 'SCM *' <BitCast>
+|     | |                             |   `-ParenExpr 0x7f9c4e031300 <col:188, col:265> 'scm_t_cell *'
+|     | |                             |     `-CStyleCastExpr 0x7f9c4e031298 <col:189, col:264> 'scm_t_cell *' <IntegralToPointer>
+|     | |                             |       `-ParenExpr 0x7f9c4e031278 <col:204, col:264> 'scm_t_bits':'unsigned long'
+|     | |                             |         `-ParenExpr 0x7f9c4e031218 <col:205, col:263> 'scm_t_bits':'unsigned long'
+|     | |                             |           `-CStyleCastExpr 0x7f9c4e0311f0 <col:206, col:262> 'scm_t_bits':'unsigned long' <PointerToIntegral>
+|     | |                             |             `-ParenExpr 0x7f9c4e0311d0 <col:219, col:262> 'SCM':'struct scm_unused_struct *'
+|     | |                             |               `-ConditionalOperator 0x7f9c4e031160 <col:220, col:261> 'SCM':'struct scm_unused_struct *'
+|     | |                             |                 |-IntegerLiteral 0x7f9c4e030f08 <col:220> 'int' 0
+|     | |                             |                 |-ParenExpr 0x7f9c4e0310a0 <col:223, col:247> 'SCM':'struct scm_unused_struct *'
+|     | |                             |                 | `-BinaryOperator 0x7f9c4e031078 <col:224, col:246> 'SCM':'struct scm_unused_struct *' '='
+|     | |                             |                 |   |-UnaryOperator 0x7f9c4e030f80 <col:224, col:231> 'SCM':'struct scm_unused_struct *' lvalue prefix '*'
+|     | |                             |                 |   | `-CStyleCastExpr 0x7f9c4e030f58 <col:225, col:231> 'SCM *' <NullToPointer>
+|     | |                             |                 |   |   `-IntegerLiteral 0x7f9c4e030f28 <col:231> 'int' 0
+|     | |                             |                 |   `-ImplicitCastExpr 0x7f9c4e031060 <col:233, col:246> 'SCM':'struct scm_unused_struct *' <LValueToRValue>
+|     | |                             |                 |     `-ParenExpr 0x7f9c4e031040 <col:233, col:246> 'SCM':'struct scm_unused_struct *' lvalue
+|     | |                             |                 |       `-ParenExpr 0x7f9c4e031020 <col:234, col:245> 'SCM':'struct scm_unused_struct *' lvalue
+|     | |                             |                 |         `-ParenExpr 0x7f9c4e031000 <col:235, col:244> 'SCM':'struct scm_unused_struct *' lvalue
+|     | |                             |                 |           `-ParenExpr 0x7f9c4e030fc8 <col:236, col:243> 'SCM':'struct scm_unused_struct *' lvalue
+|     | |                             |                 |             `-DeclRefExpr 0x7f9c4e030fa0 <col:237> 'SCM':'struct scm_unused_struct *' lvalue Var 0x7f9c4e030848 'prompt' 'SCM':'struct scm_unused_struct *'
+|     | |                             |                 `-ImplicitCastExpr 0x7f9c4e031148 <col:250, col:261> 'SCM':'struct scm_unused_struct *' <LValueToRValue>
+|     | |                             |                   `-ParenExpr 0x7f9c4e031128 <col:250, col:261> 'SCM':'struct scm_unused_struct *' lvalue
+|     | |                             |                     `-ParenExpr 0x7f9c4e031108 <col:251, col:260> 'SCM':'struct scm_unused_struct *' lvalue
+|     | |                             |                       `-ParenExpr 0x7f9c4e0310e8 <col:252, col:259> 'SCM':'struct scm_unused_struct *' lvalue
+|     | |                             |                         `-DeclRefExpr 0x7f9c4e0310c0 <col:253> 'SCM':'struct scm_unused_struct *' lvalue Var 0x7f9c4e030848 'prompt' 'SCM':'struct scm_unused_struct *'
+|     | |                             `-ParenExpr 0x7f9c4e0313a8 <col:269, col:273> 'int'
+|     | |                               `-ParenExpr 0x7f9c4e031388 <col:270, col:272> 'int'
+|     | |                                 `-IntegerLiteral 0x7f9c4e031368 <col:271> 'int' 2
+|     | |-CompoundStmt 0x7f9c4e032340 <col:295, line:67:2>
+|     | | |-CompoundStmt 0x7f9c4e031a18 <line:65:8, col:49>
+|     | | | |-BinaryOperator 0x7f9c4e031830 <col:10, col:19> 'scm_t_uint8 *' '='
+|     | | | | |-DeclRefExpr 0x7f9c4e031778 <col:10> 'scm_t_uint8 *' lvalue Var 0x7f9c4e02d168 'ip' 'scm_t_uint8 *'
+|     | | | | `-ImplicitCastExpr 0x7f9c4e031818 <col:15, col:19> 'scm_t_uint8 *' <LValueToRValue>
+|     | | | |   `-MemberExpr 0x7f9c4e0317e0 <col:15, col:19> 'scm_t_uint8 *' lvalue ->ip 0x7f9c4e02c118
+|     | | | |     `-ImplicitCastExpr 0x7f9c4e0317c8 <col:15> 'struct scm_vm *' <LValueToRValue>
+|     | | | |       `-DeclRefExpr 0x7f9c4e0317a0 <col:15> 'struct scm_vm *' lvalue Var 0x7f9c4e02d3a0 'vp' 'struct scm_vm *'
+|     | | | |-BinaryOperator 0x7f9c4e031910 <col:23, col:32> 'SCM *' '='
+|     | | | | |-DeclRefExpr 0x7f9c4e031858 <col:23> 'SCM *' lvalue Var 0x7f9c4e02d1f0 'sp' 'SCM *'
+|     | | | | `-ImplicitCastExpr 0x7f9c4e0318f8 <col:28, col:32> 'SCM *' <LValueToRValue>
+|     | | | |   `-MemberExpr 0x7f9c4e0318c0 <col:28, col:32> 'SCM *' lvalue ->sp 0x7f9c4e02c170
+|     | | | |     `-ImplicitCastExpr 0x7f9c4e0318a8 <col:28> 'struct scm_vm *' <LValueToRValue>
+|     | | | |       `-DeclRefExpr 0x7f9c4e031880 <col:28> 'struct scm_vm *' lvalue Var 0x7f9c4e02d3a0 'vp' 'struct scm_vm *'
+|     | | | `-BinaryOperator 0x7f9c4e0319f0 <col:36, col:45> 'SCM *' '='
+|     | | |   |-DeclRefExpr 0x7f9c4e031938 <col:36> 'SCM *' lvalue Var 0x7f9c4e02d278 'fp' 'SCM *'
+|     | | |   `-ImplicitCastExpr 0x7f9c4e0319d8 <col:41, col:45> 'SCM *' <LValueToRValue>
+|     | | |     `-MemberExpr 0x7f9c4e0319a0 <col:41, col:45> 'SCM *' lvalue ->fp 0x7f9c4e02c1c8
+|     | | |       `-ImplicitCastExpr 0x7f9c4e031988 <col:41> 'struct scm_vm *' <LValueToRValue>
+|     | | |         `-DeclRefExpr 0x7f9c4e031960 <col:41> 'struct scm_vm *' lvalue Var 0x7f9c4e02d3a0 'vp' 'struct scm_vm *'
+|     | | |-NullStmt 0x7f9c4e031a48 <col:50>
+|     | | |-CompoundStmt 0x7f9c4e0322f8 <line:66:8, col:195>
+|     | | | |-CompoundStmt 0x7f9c4e032050 <col:10, col:150>
+|     | | | | `-IfStmt 0x7f9c4e032018 <col:12, col:148>
+|     | | | |   |-<<<NULL>>>
+|     | | | |   |-<<<NULL>>>
+|     | | | |   |-CallExpr 0x7f9c4e031bb0 <col:16, col:58> 'long'
+|     | | | |   | |-ImplicitCastExpr 0x7f9c4e031b98 <col:16> 'long (*)(long, long)' <BuiltinFnToFnPtr>
+|     | | | |   | | `-DeclRefExpr 0x7f9c4e031a58 <col:16> '<builtin fn type>' Function 0x7f9c4e02f4a0 '__builtin_expect' 'long (long, long)'
+|     | | | |   | |-ImplicitCastExpr 0x7f9c4e031be8 <col:34, col:54> 'long' <IntegralCast>
+|     | | | |   | | `-ParenExpr 0x7f9c4e031b58 <col:34, col:54> 'int'
+|     | | | |   | |   `-BinaryOperator 0x7f9c4e031b30 <col:35, col:53> 'int' '>'
+|     | | | |   | |     |-ImplicitCastExpr 0x7f9c4e031b18 <col:35, col:39> 'int' <LValueToRValue>
+|     | | | |   | |     | `-MemberExpr 0x7f9c4e031ac0 <col:35, col:39> 'int' lvalue ->trace_level 0x7f9c4e02c288
+|     | | | |   | |     |   `-ImplicitCastExpr 0x7f9c4e031aa8 <col:35> 'struct scm_vm *' <LValueToRValue>
+|     | | | |   | |     |     `-DeclRefExpr 0x7f9c4e031a80 <col:35> 'struct scm_vm *' lvalue Var 0x7f9c4e02d3a0 'vp' 'struct scm_vm *'
+|     | | | |   | |     `-IntegerLiteral 0x7f9c4e031af8 <col:53> 'int' 0
+|     | | | |   | `-ImplicitCastExpr 0x7f9c4e031c00 <col:57> 'long' <IntegralCast>
+|     | | | |   |   `-IntegerLiteral 0x7f9c4e031b78 <col:57> 'int' 0
+|     | | | |   |-CompoundStmt 0x7f9c4e031fd8 <col:61, col:148>
+|     | | | |   | |-CompoundStmt 0x7f9c4e031eb8 <col:63, col:104>
+|     | | | |   | | |-BinaryOperator 0x7f9c4e031cd0 <col:65, col:74> 'scm_t_uint8 *' '='
+|     | | | |   | | | |-MemberExpr 0x7f9c4e031c58 <col:65, col:69> 'scm_t_uint8 *' lvalue ->ip 0x7f9c4e02c118
+|     | | | |   | | | | `-ImplicitCastExpr 0x7f9c4e031c40 <col:65> 'struct scm_vm *' <LValueToRValue>
+|     | | | |   | | | |   `-DeclRefExpr 0x7f9c4e031c18 <col:65> 'struct scm_vm *' lvalue Var 0x7f9c4e02d3a0 'vp' 'struct scm_vm *'
+|     | | | |   | | | `-ImplicitCastExpr 0x7f9c4e031cb8 <col:74> 'scm_t_uint8 *' <LValueToRValue>
+|     | | | |   | | |   `-DeclRefExpr 0x7f9c4e031c90 <col:74> 'scm_t_uint8 *' lvalue Var 0x7f9c4e02d168 'ip' 'scm_t_uint8 *'
+|     | | | |   | | |-BinaryOperator 0x7f9c4e031db0 <col:78, col:87> 'SCM *' '='
+|     | | | |   | | | |-MemberExpr 0x7f9c4e031d38 <col:78, col:82> 'SCM *' lvalue ->sp 0x7f9c4e02c170
+|     | | | |   | | | | `-ImplicitCastExpr 0x7f9c4e031d20 <col:78> 'struct scm_vm *' <LValueToRValue>
+|     | | | |   | | | |   `-DeclRefExpr 0x7f9c4e031cf8 <col:78> 'struct scm_vm *' lvalue Var 0x7f9c4e02d3a0 'vp' 'struct scm_vm *'
+|     | | | |   | | | `-ImplicitCastExpr 0x7f9c4e031d98 <col:87> 'SCM *' <LValueToRValue>
+|     | | | |   | | |   `-DeclRefExpr 0x7f9c4e031d70 <col:87> 'SCM *' lvalue Var 0x7f9c4e02d1f0 'sp' 'SCM *'
+|     | | | |   | | `-BinaryOperator 0x7f9c4e031e90 <col:91, col:100> 'SCM *' '='
+|     | | | |   | |   |-MemberExpr 0x7f9c4e031e18 <col:91, col:95> 'SCM *' lvalue ->fp 0x7f9c4e02c1c8
+|     | | | |   | |   | `-ImplicitCastExpr 0x7f9c4e031e00 <col:91> 'struct scm_vm *' <LValueToRValue>
+|     | | | |   | |   |   `-DeclRefExpr 0x7f9c4e031dd8 <col:91> 'struct scm_vm *' lvalue Var 0x7f9c4e02d3a0 'vp' 'struct scm_vm *'
+|     | | | |   | |   `-ImplicitCastExpr 0x7f9c4e031e78 <col:100> 'SCM *' <LValueToRValue>
+|     | | | |   | |     `-DeclRefExpr 0x7f9c4e031e50 <col:100> 'SCM *' lvalue Var 0x7f9c4e02d278 'fp' 'SCM *'
+|     | | | |   | |-NullStmt 0x7f9c4e031ee8 <col:105>
+|     | | | |   | `-CallExpr 0x7f9c4e031f88 <col:107, col:145> 'void'
+|     | | | |   |   |-ImplicitCastExpr 0x7f9c4e031f70 <col:107> 'void (*)()' <FunctionToPointerDecay>
+|     | | | |   |   | `-DeclRefExpr 0x7f9c4e031ef8 <col:107> 'void ()' Function 0x7f9c4e02c638 'vm_dispatch_hook' 'void ()'
+|     | | | |   |   |-ImplicitCastExpr 0x7f9c4e031fc0 <col:125> 'SCM':'struct scm_unused_struct *' <LValueToRValue>
+|     | | | |   |   | `-DeclRefExpr 0x7f9c4e031f20 <col:125> 'SCM':'struct scm_unused_struct *' lvalue ParmVar 0x7f9c4e02ca98 'vm' 'SCM':'struct scm_unused_struct *'
+|     | | | |   |   `-DeclRefExpr 0x7f9c4e031f48 <col:129> 'int' EnumConstant 0x7f9c4e026858 'SCM_VM_NEXT_HOOK' 'int'
+|     | | | |   `-<<<NULL>>>
+|     | | | |-NullStmt 0x7f9c4e032070 <col:151>
+|     | | | |-NullStmt 0x7f9c4e032080 <col:153>
+|     | | | `-IndirectGotoStmt 0x7f9c4e0322e0 <col:155, col:192>
+|     | | |   `-ImplicitCastExpr 0x7f9c4e0322c8 <col:161, col:192> 'const void *' <LValueToRValue>
+|     | | |     `-ArraySubscriptExpr 0x7f9c4e0322a0 <col:161, col:192> 'const void *' lvalue
+|     | | |       |-ImplicitCastExpr 0x7f9c4e032288 <col:161> 'const void **' <LValueToRValue>
+|     | | |       | `-DeclRefExpr 0x7f9c4e032090 <col:161> 'const void **' lvalue Var 0x7f9c4e02f3e8 'jump_table' 'const void **'
+|     | | |       `-BinaryOperator 0x7f9c4e032260 <col:172, col:191> 'int' '&'
+|     | | |         |-ImplicitCastExpr 0x7f9c4e032248 <col:172, col:178> 'int' <IntegralCast>
+|     | | |         | `-ImplicitCastExpr 0x7f9c4e032230 <col:172, col:178> 'scm_t_uint8':'unsigned char' <LValueToRValue>
+|     | | |         |   `-ParenExpr 0x7f9c4e032120 <col:172, col:178> 'scm_t_uint8':'unsigned char' lvalue
+|     | | |         |     `-UnaryOperator 0x7f9c4e032100 <col:173, col:176> 'scm_t_uint8':'unsigned char' lvalue prefix '*'
+|     | | |         |       `-UnaryOperator 0x7f9c4e0320e0 <col:174, col:176> 'scm_t_uint8 *' postfix '++'
+|     | | |         |         `-DeclRefExpr 0x7f9c4e0320b8 <col:174> 'scm_t_uint8 *' lvalue Var 0x7f9c4e02d168 'ip' 'scm_t_uint8 *'
+|     | | |         `-ParenExpr 0x7f9c4e032210 <col:182, col:191> 'int'
+|     | | |           `-BinaryOperator 0x7f9c4e0321e8 <col:183, col:190> 'int' '-'
+|     | | |             |-ParenExpr 0x7f9c4e0321a8 <col:183, col:188> 'int'
+|     | | |             | `-BinaryOperator 0x7f9c4e032180 <col:184, col:187> 'int' '<<'
+|     | | |             |   |-IntegerLiteral 0x7f9c4e032140 <col:184> 'int' 1
+|     | | |             |   `-IntegerLiteral 0x7f9c4e032160 <col:187> 'int' 8
+|     | | |             `-IntegerLiteral 0x7f9c4e0321c8 <col:190> 'int' 1
+|     | | `-NullStmt 0x7f9c4e032330 <col:196>
+|     | `-<<<NULL>>>
+|     |-IfStmt 0x7f9c4e032960 <line:69:2, col:138>
+|     | |-<<<NULL>>>
+|     | |-<<<NULL>>>
+|     | |-CallExpr 0x7f9c4e032508 <col:6, col:48> 'long'
+|     | | |-ImplicitCastExpr 0x7f9c4e0324f0 <col:6> 'long (*)(long, long)' <BuiltinFnToFnPtr>
+|     | | | `-DeclRefExpr 0x7f9c4e0323b0 <col:6> '<builtin fn type>' Function 0x7f9c4e02f4a0 '__builtin_expect' 'long (long, long)'
+|     | | |-ImplicitCastExpr 0x7f9c4e032540 <col:24, col:44> 'long' <IntegralCast>
+|     | | | `-ParenExpr 0x7f9c4e0324b0 <col:24, col:44> 'int'
+|     | | |   `-BinaryOperator 0x7f9c4e032488 <col:25, col:43> 'int' '>'
+|     | | |     |-ImplicitCastExpr 0x7f9c4e032470 <col:25, col:29> 'int' <LValueToRValue>
+|     | | |     | `-MemberExpr 0x7f9c4e032418 <col:25, col:29> 'int' lvalue ->trace_level 0x7f9c4e02c288
+|     | | |     |   `-ImplicitCastExpr 0x7f9c4e032400 <col:25> 'struct scm_vm *' <LValueToRValue>
+|     | | |     |     `-DeclRefExpr 0x7f9c4e0323d8 <col:25> 'struct scm_vm *' lvalue Var 0x7f9c4e02d3a0 'vp' 'struct scm_vm *'
+|     | | |     `-IntegerLiteral 0x7f9c4e032450 <col:43> 'int' 0
+|     | | `-ImplicitCastExpr 0x7f9c4e032558 <col:47> 'long' <IntegralCast>
+|     | |   `-IntegerLiteral 0x7f9c4e0324d0 <col:47> 'int' 0
+|     | |-CompoundStmt 0x7f9c4e032930 <col:51, col:138>
+|     | | |-CompoundStmt 0x7f9c4e032810 <col:53, col:94>
+|     | | | |-BinaryOperator 0x7f9c4e032628 <col:55, col:64> 'scm_t_uint8 *' '='
+|     | | | | |-MemberExpr 0x7f9c4e0325b0 <col:55, col:59> 'scm_t_uint8 *' lvalue ->ip 0x7f9c4e02c118
+|     | | | | | `-ImplicitCastExpr 0x7f9c4e032598 <col:55> 'struct scm_vm *' <LValueToRValue>
+|     | | | | |   `-DeclRefExpr 0x7f9c4e032570 <col:55> 'struct scm_vm *' lvalue Var 0x7f9c4e02d3a0 'vp' 'struct scm_vm *'
+|     | | | | `-ImplicitCastExpr 0x7f9c4e032610 <col:64> 'scm_t_uint8 *' <LValueToRValue>
+|     | | | |   `-DeclRefExpr 0x7f9c4e0325e8 <col:64> 'scm_t_uint8 *' lvalue Var 0x7f9c4e02d168 'ip' 'scm_t_uint8 *'
+|     | | | |-BinaryOperator 0x7f9c4e032708 <col:68, col:77> 'SCM *' '='
+|     | | | | |-MemberExpr 0x7f9c4e032690 <col:68, col:72> 'SCM *' lvalue ->sp 0x7f9c4e02c170
+|     | | | | | `-ImplicitCastExpr 0x7f9c4e032678 <col:68> 'struct scm_vm *' <LValueToRValue>
+|     | | | | |   `-DeclRefExpr 0x7f9c4e032650 <col:68> 'struct scm_vm *' lvalue Var 0x7f9c4e02d3a0 'vp' 'struct scm_vm *'
+|     | | | | `-ImplicitCastExpr 0x7f9c4e0326f0 <col:77> 'SCM *' <LValueToRValue>
+|     | | | |   `-DeclRefExpr 0x7f9c4e0326c8 <col:77> 'SCM *' lvalue Var 0x7f9c4e02d1f0 'sp' 'SCM *'
+|     | | | `-BinaryOperator 0x7f9c4e0327e8 <col:81, col:90> 'SCM *' '='
+|     | | |   |-MemberExpr 0x7f9c4e032770 <col:81, col:85> 'SCM *' lvalue ->fp 0x7f9c4e02c1c8
+|     | | |   | `-ImplicitCastExpr 0x7f9c4e032758 <col:81> 'struct scm_vm *' <LValueToRValue>
+|     | | |   |   `-DeclRefExpr 0x7f9c4e032730 <col:81> 'struct scm_vm *' lvalue Var 0x7f9c4e02d3a0 'vp' 'struct scm_vm *'
+|     | | |   `-ImplicitCastExpr 0x7f9c4e0327d0 <col:90> 'SCM *' <LValueToRValue>
+|     | | |     `-DeclRefExpr 0x7f9c4e0327a8 <col:90> 'SCM *' lvalue Var 0x7f9c4e02d278 'fp' 'SCM *'
+|     | | |-NullStmt 0x7f9c4e032840 <col:95>
+|     | | `-CallExpr 0x7f9c4e0328e0 <col:97, col:135> 'void'
+|     | |   |-ImplicitCastExpr 0x7f9c4e0328c8 <col:97> 'void (*)()' <FunctionToPointerDecay>
+|     | |   | `-DeclRefExpr 0x7f9c4e032850 <col:97> 'void ()' Function 0x7f9c4e02c638 'vm_dispatch_hook' 'void ()'
+|     | |   |-ImplicitCastExpr 0x7f9c4e032918 <col:115> 'SCM':'struct scm_unused_struct *' <LValueToRValue>
+|     | |   | `-DeclRefExpr 0x7f9c4e032878 <col:115> 'SCM':'struct scm_unused_struct *' lvalue ParmVar 0x7f9c4e02ca98 'vm' 'SCM':'struct scm_unused_struct *'
+|     | |   `-DeclRefExpr 0x7f9c4e0328a0 <col:119> 'int' EnumConstant 0x7f9c4e026858 'SCM_VM_NEXT_HOOK' 'int'
+|     | `-<<<NULL>>>
+|     `-NullStmt 0x7f9c4e032998 <col:140>
+|-FunctionDecl 0x7f9c4e02f4a0 <line:46:9> col:9 implicit used __builtin_expect 'long (long, long)' extern
+| |-ParmVarDecl 0x7f9c4e02f538 <<invalid sloc>> <invalid sloc> 'long'
+| |-ParmVarDecl 0x7f9c4e02f598 <<invalid sloc>> <invalid sloc> 'long'
+| |-NoThrowAttr 0x7f9c4e02f608 <col:9> Implicit
+| `-ConstAttr 0x7f9c4e02f650 <col:9> Implicit
+|-VarDecl 0x7f9c4e032ad8 <line:73:1, line:74:40> line:73:30 used vm_engines 'const scm_t_vm_engine [2]' static cinit
+| `-InitListExpr 0x7f9c4e032bd8 <col:47, line:74:40> 'const scm_t_vm_engine [2]'
+|   |-ImplicitCastExpr 0x7f9c4e032c48 <col:5> 'SCM (*)(SCM, SCM, SCM *, int)' <FunctionToPointerDecay>
+|   | `-DeclRefExpr 0x7f9c4e032b38 <col:5> 'SCM (SCM, SCM, SCM *, int)' Function 0x7f9c4e02c4d8 'vm_regular_engine' 'SCM (SCM, SCM, SCM *, int)'
+|   `-ImplicitCastExpr 0x7f9c4e032c68 <col:24> 'SCM (*)(SCM, SCM, SCM *, int)' <FunctionToPointerDecay>
+|     `-DeclRefExpr 0x7f9c4e032b60 <col:24> 'SCM (SCM, SCM, SCM *, int)' Function 0x7f9c4e02d0a0 'vm_debug_engine' 'SCM (SCM, SCM, SCM *, int)'
+`-FunctionDecl 0x7f9c4e032f10 <line:75:1, line:78:1> line:75:5 scm_c_vm_run 'SCM (SCM, SCM, SCM *, int)'
+  |-ParmVarDecl 0x7f9c4e032d18 <col:19, col:23> col:23 used vm 'SCM':'struct scm_unused_struct *'
+  |-ParmVarDecl 0x7f9c4e032d88 <col:27, col:31> col:31 used program 'SCM':'struct scm_unused_struct *'
+  |-ParmVarDecl 0x7f9c4e032df8 <col:40, col:45> col:45 used argv 'SCM *'
+  |-ParmVarDecl 0x7f9c4e032e70 <col:51, col:55> col:55 used nargs 'int'
+  `-CompoundStmt 0x7f9c4e034018 <col:62, line:78:1>
+    |-DeclStmt 0x7f9c4e033d28 <line:76:5, col:262>
+    | `-VarDecl 0x7f9c4e033000 <col:5, col:261> col:20 used vp 'struct scm_vm *' cinit
+    |   `-ParenExpr 0x7f9c4e033d08 <col:25, col:261> 'struct scm_vm *'
+    |     `-CStyleCastExpr 0x7f9c4e033ce0 <col:26, col:260> 'struct scm_vm *' <IntegralToPointer>
+    |       `-ParenExpr 0x7f9c4e033cc0 <col:44, col:260> 'scm_t_bits':'unsigned long'
+    |         `-ParenExpr 0x7f9c4e033c48 <col:45, col:259> 'scm_t_bits':'unsigned long'
+    |           `-ParenExpr 0x7f9c4e033c28 <col:46, col:258> 'scm_t_bits':'unsigned long'
+    |             `-CStyleCastExpr 0x7f9c4e033c00 <col:47, col:257> 'scm_t_bits':'unsigned long' <PointerToIntegral>
+    |               `-ParenExpr 0x7f9c4e033be0 <col:60, col:257> 'SCM':'struct scm_unused_struct *'
+    |                 `-ConditionalOperator 0x7f9c4e033b70 <col:61, col:256> 'SCM':'struct scm_unused_struct *'
+    |                   |-IntegerLiteral 0x7f9c4e033060 <col:61> 'int' 0
+    |                   |-ParenExpr 0x7f9c4e033648 <col:64, col:165> 'SCM':'struct scm_unused_struct *'
+    |                   | `-BinaryOperator 0x7f9c4e033620 <col:65, col:164> 'SCM':'struct scm_unused_struct *' '='
+    |                   |   |-UnaryOperator 0x7f9c4e0330d8 <col:65, col:72> 'SCM':'struct scm_unused_struct *' lvalue prefix '*'
+    |                   |   | `-CStyleCastExpr 0x7f9c4e0330b0 <col:66, col:72> 'SCM *' <NullToPointer>
+    |                   |   |   `-IntegerLiteral 0x7f9c4e033080 <col:72> 'int' 0
+    |                   |   `-ImplicitCastExpr 0x7f9c4e033608 <col:74, col:164> 'SCM':'struct scm_unused_struct *' <LValueToRValue>
+    |                   |     `-ParenExpr 0x7f9c4e0335e8 <col:74, col:164> 'SCM':'struct scm_unused_struct *' lvalue
+    |                   |       `-ParenExpr 0x7f9c4e0335c8 <col:75, col:163> 'SCM':'struct scm_unused_struct *' lvalue
+    |                   |         `-ArraySubscriptExpr 0x7f9c4e0335a0 <col:76, col:162> 'SCM':'struct scm_unused_struct *' lvalue
+    |                   |           |-ParenExpr 0x7f9c4e033520 <col:76, col:154> 'SCM *'
+    |                   |           | `-CStyleCastExpr 0x7f9c4e0334f8 <col:77, col:153> 'SCM *' <BitCast>
+    |                   |           |   `-ParenExpr 0x7f9c4e0334d8 <col:84, col:153> 'scm_t_cell *'
+    |                   |           |     `-CStyleCastExpr 0x7f9c4e033470 <col:85, col:152> 'scm_t_cell *' <IntegralToPointer>
+    |                   |           |       `-ParenExpr 0x7f9c4e033450 <col:100, col:152> 'scm_t_bits':'unsigned long'
+    |                   |           |         `-ParenExpr 0x7f9c4e0333f0 <col:101, col:151> 'scm_t_bits':'unsigned long'
+    |                   |           |           `-CStyleCastExpr 0x7f9c4e0333c8 <col:102, col:150> 'scm_t_bits':'unsigned long' <PointerToIntegral>
+    |                   |           |             `-ParenExpr 0x7f9c4e0333a8 <col:115, col:150> 'SCM':'struct scm_unused_struct *'
+    |                   |           |               `-ConditionalOperator 0x7f9c4e033338 <col:116, col:149> 'SCM':'struct scm_unused_struct *'
+    |                   |           |                 |-IntegerLiteral 0x7f9c4e0330f8 <col:116> 'int' 0
+    |                   |           |                 |-ParenExpr 0x7f9c4e033278 <col:119, col:139> 'SCM':'struct scm_unused_struct *'
+    |                   |           |                 | `-BinaryOperator 0x7f9c4e033250 <col:120, col:138> 'SCM':'struct scm_unused_struct *' '='
+    |                   |           |                 |   |-UnaryOperator 0x7f9c4e033170 <col:120, col:127> 'SCM':'struct scm_unused_struct *' lvalue prefix '*'
+    |                   |           |                 |   | `-CStyleCastExpr 0x7f9c4e033148 <col:121, col:127> 'SCM *' <NullToPointer>
+    |                   |           |                 |   |   `-IntegerLiteral 0x7f9c4e033118 <col:127> 'int' 0
+    |                   |           |                 |   `-ImplicitCastExpr 0x7f9c4e033238 <col:129, col:138> 'SCM':'struct scm_unused_struct *' <LValueToRValue>
+    |                   |           |                 |     `-ParenExpr 0x7f9c4e033218 <col:129, col:138> 'SCM':'struct scm_unused_struct *' lvalue
+    |                   |           |                 |       `-ParenExpr 0x7f9c4e0331f8 <col:130, col:137> 'SCM':'struct scm_unused_struct *' lvalue
+    |                   |           |                 |         `-ParenExpr 0x7f9c4e0331d8 <col:131, col:136> 'SCM':'struct scm_unused_struct *' lvalue
+    |                   |           |                 |           `-ParenExpr 0x7f9c4e0331b8 <col:132, col:135> 'SCM':'struct scm_unused_struct *' lvalue
+    |                   |           |                 |             `-DeclRefExpr 0x7f9c4e033190 <col:133> 'SCM':'struct scm_unused_struct *' lvalue ParmVar 0x7f9c4e032d18 'vm' 'SCM':'struct scm_unused_struct *'
+    |                   |           |                 `-ImplicitCastExpr 0x7f9c4e033320 <col:142, col:149> 'SCM':'struct scm_unused_struct *' <LValueToRValue>
+    |                   |           |                   `-ParenExpr 0x7f9c4e033300 <col:142, col:149> 'SCM':'struct scm_unused_struct *' lvalue
+    |                   |           |                     `-ParenExpr 0x7f9c4e0332e0 <col:143, col:148> 'SCM':'struct scm_unused_struct *' lvalue
+    |                   |           |                       `-ParenExpr 0x7f9c4e0332c0 <col:144, col:147> 'SCM':'struct scm_unused_struct *' lvalue
+    |                   |           |                         `-DeclRefExpr 0x7f9c4e033298 <col:145> 'SCM':'struct scm_unused_struct *' lvalue ParmVar 0x7f9c4e032d18 'vm' 'SCM':'struct scm_unused_struct *'
+    |                   |           `-ParenExpr 0x7f9c4e033580 <col:157, col:161> 'int'
+    |                   |             `-ParenExpr 0x7f9c4e033560 <col:158, col:160> 'int'
+    |                   |               `-IntegerLiteral 0x7f9c4e033540 <col:159> 'int' 1
+    |                   `-ImplicitCastExpr 0x7f9c4e033b58 <col:168, col:256> 'SCM':'struct scm_unused_struct *' <LValueToRValue>
+    |                     `-ParenExpr 0x7f9c4e033b38 <col:168, col:256> 'SCM':'struct scm_unused_struct *' lvalue
+    |                       `-ArraySubscriptExpr 0x7f9c4e033b10 <col:169, col:255> 'SCM':'struct scm_unused_struct *' lvalue
+    |                         |-ParenExpr 0x7f9c4e033a90 <col:169, col:247> 'SCM *'
+    |                         | `-CStyleCastExpr 0x7f9c4e033a68 <col:170, col:246> 'SCM *' <BitCast>
+    |                         |   `-ParenExpr 0x7f9c4e033a48 <col:177, col:246> 'scm_t_cell *'
+    |                         |     `-CStyleCastExpr 0x7f9c4e0339e0 <col:178, col:245> 'scm_t_cell *' <IntegralToPointer>
+    |                         |       `-ParenExpr 0x7f9c4e0339c0 <col:193, col:245> 'scm_t_bits':'unsigned long'
+    |                         |         `-ParenExpr 0x7f9c4e033960 <col:194, col:244> 'scm_t_bits':'unsigned long'
+    |                         |           `-CStyleCastExpr 0x7f9c4e033938 <col:195, col:243> 'scm_t_bits':'unsigned long' <PointerToIntegral>
+    |                         |             `-ParenExpr 0x7f9c4e033918 <col:208, col:243> 'SCM':'struct scm_unused_struct *'
+    |                         |               `-ConditionalOperator 0x7f9c4e0338a8 <col:209, col:242> 'SCM':'struct scm_unused_struct *'
+    |                         |                 |-IntegerLiteral 0x7f9c4e033668 <col:209> 'int' 0
+    |                         |                 |-ParenExpr 0x7f9c4e0337e8 <col:212, col:232> 'SCM':'struct scm_unused_struct *'
+    |                         |                 | `-BinaryOperator 0x7f9c4e0337c0 <col:213, col:231> 'SCM':'struct scm_unused_struct *' '='
+    |                         |                 |   |-UnaryOperator 0x7f9c4e0336e0 <col:213, col:220> 'SCM':'struct scm_unused_struct *' lvalue prefix '*'
+    |                         |                 |   | `-CStyleCastExpr 0x7f9c4e0336b8 <col:214, col:220> 'SCM *' <NullToPointer>
+    |                         |                 |   |   `-IntegerLiteral 0x7f9c4e033688 <col:220> 'int' 0
+    |                         |                 |   `-ImplicitCastExpr 0x7f9c4e0337a8 <col:222, col:231> 'SCM':'struct scm_unused_struct *' <LValueToRValue>
+    |                         |                 |     `-ParenExpr 0x7f9c4e033788 <col:222, col:231> 'SCM':'struct scm_unused_struct *' lvalue
+    |                         |                 |       `-ParenExpr 0x7f9c4e033768 <col:223, col:230> 'SCM':'struct scm_unused_struct *' lvalue
+    |                         |                 |         `-ParenExpr 0x7f9c4e033748 <col:224, col:229> 'SCM':'struct scm_unused_struct *' lvalue
+    |                         |                 |           `-ParenExpr 0x7f9c4e033728 <col:225, col:228> 'SCM':'struct scm_unused_struct *' lvalue
+    |                         |                 |             `-DeclRefExpr 0x7f9c4e033700 <col:226> 'SCM':'struct scm_unused_struct *' lvalue ParmVar 0x7f9c4e032d18 'vm' 'SCM':'struct scm_unused_struct *'
+    |                         |                 `-ImplicitCastExpr 0x7f9c4e033890 <col:235, col:242> 'SCM':'struct scm_unused_struct *' <LValueToRValue>
+    |                         |                   `-ParenExpr 0x7f9c4e033870 <col:235, col:242> 'SCM':'struct scm_unused_struct *' lvalue
+    |                         |                     `-ParenExpr 0x7f9c4e033850 <col:236, col:241> 'SCM':'struct scm_unused_struct *' lvalue
+    |                         |                       `-ParenExpr 0x7f9c4e033830 <col:237, col:240> 'SCM':'struct scm_unused_struct *' lvalue
+    |                         |                         `-DeclRefExpr 0x7f9c4e033808 <col:238> 'SCM':'struct scm_unused_struct *' lvalue ParmVar 0x7f9c4e032d18 'vm' 'SCM':'struct scm_unused_struct *'
+    |                         `-ParenExpr 0x7f9c4e033af0 <col:250, col:254> 'int'
+    |                           `-ParenExpr 0x7f9c4e033ad0 <col:251, col:253> 'int'
+    |                             `-IntegerLiteral 0x7f9c4e033ab0 <col:252> 'int' 1
+    `-ReturnStmt 0x7f9c4e034000 <line:77:5, col:59>
+      `-CallExpr 0x7f9c4e033f48 <col:12, col:59> 'SCM':'struct scm_unused_struct *'
+        |-ImplicitCastExpr 0x7f9c4e033f30 <col:12, col:33> 'scm_t_vm_engine':'SCM (*)(SCM, SCM, SCM *, int)' <LValueToRValue>
+        | `-ArraySubscriptExpr 0x7f9c4e033e68 <col:12, col:33> 'const scm_t_vm_engine':'SCM (*const)(SCM, SCM, SCM *, int)' lvalue
+        |   |-ImplicitCastExpr 0x7f9c4e033e38 <col:12> 'const scm_t_vm_engine *' <ArrayToPointerDecay>
+        |   | `-DeclRefExpr 0x7f9c4e033d40 <col:12> 'const scm_t_vm_engine [2]' lvalue Var 0x7f9c4e032ad8 'vm_engines' 'const scm_t_vm_engine [2]'
+        |   `-ImplicitCastExpr 0x7f9c4e033e50 <col:23, col:27> 'int' <LValueToRValue>
+        |     `-MemberExpr 0x7f9c4e033da8 <col:23, col:27> 'int' lvalue ->engine 0x7f9c4e02c228
+        |       `-ImplicitCastExpr 0x7f9c4e033d90 <col:23> 'struct scm_vm *' <LValueToRValue>
+        |         `-DeclRefExpr 0x7f9c4e033d68 <col:23> 'struct scm_vm *' lvalue Var 0x7f9c4e033000 'vp' 'struct scm_vm *'
+        |-ImplicitCastExpr 0x7f9c4e033f90 <col:35> 'SCM':'struct scm_unused_struct *' <LValueToRValue>
+        | `-DeclRefExpr 0x7f9c4e033e90 <col:35> 'SCM':'struct scm_unused_struct *' lvalue ParmVar 0x7f9c4e032d18 'vm' 'SCM':'struct scm_unused_struct *'
+        |-ImplicitCastExpr 0x7f9c4e033fa8 <col:39> 'SCM':'struct scm_unused_struct *' <LValueToRValue>
+        | `-DeclRefExpr 0x7f9c4e033eb8 <col:39> 'SCM':'struct scm_unused_struct *' lvalue ParmVar 0x7f9c4e032d88 'program' 'SCM':'struct scm_unused_struct *'
+        |-ImplicitCastExpr 0x7f9c4e033fc0 <col:48> 'SCM *' <LValueToRValue>
+        | `-DeclRefExpr 0x7f9c4e033ee0 <col:48> 'SCM *' lvalue ParmVar 0x7f9c4e032df8 'argv' 'SCM *'
+        `-ImplicitCastExpr 0x7f9c4e033fd8 <col:54> 'int' <LValueToRValue>
+          `-DeclRefExpr 0x7f9c4e033f08 <col:54> 'int' lvalue ParmVar 0x7f9c4e032e70 'nargs' 'int'

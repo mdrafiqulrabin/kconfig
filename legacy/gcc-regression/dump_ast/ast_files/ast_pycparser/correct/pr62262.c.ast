@@ -1,0 +1,71 @@
+FileAST: 
+  FuncDef: 
+    Decl: CLZ, [], ['static'], ['inline']
+      FuncDecl: 
+        ParamList: 
+          Decl: mask, [], [], []
+            TypeDecl: mask, []
+              IdentifierType: ['int']
+        TypeDecl: CLZ, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        TernaryOp: 
+          ID: mask
+          FuncCall: 
+            ID: __builtin_clz
+            ExprList: 
+              ID: mask
+          Constant: int, 32
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: value, [], [], []
+            TypeDecl: value, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: ==
+          ID: value
+          Constant: int, 0
+        Return: 
+          Constant: int, 0
+      Decl: bias, [], [], []
+        TypeDecl: bias, []
+          IdentifierType: ['int']
+        FuncCall: 
+          ID: CLZ
+          ExprList: 
+            ID: value
+      Assignment: >>=
+        ID: value
+        ID: bias
+      Decl: zeros, [], [], []
+        TypeDecl: zeros, []
+          IdentifierType: ['int']
+        FuncCall: 
+          ID: CLZ
+          ExprList: 
+            BinaryOp: <<
+              ID: value
+              Constant: int, 1
+      Assignment: <<=
+        ID: value
+        ID: zeros
+      Decl: packed, [], [], []
+        TypeDecl: packed, []
+          IdentifierType: ['int']
+        BinaryOp: >>
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['unsigned']
+            BinaryOp: <<
+              ID: value
+              Constant: int, 9
+          Constant: int, 9
+      Return: 
+        ID: packed

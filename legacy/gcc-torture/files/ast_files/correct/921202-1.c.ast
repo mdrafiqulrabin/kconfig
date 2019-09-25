@@ -1,0 +1,95 @@
+FileAST: 
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        TypeDecl: f, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: dx, [], [], []
+        ArrayDecl: []
+          TypeDecl: dx, []
+            IdentifierType: ['long']
+          Constant: int, 2055
+      Decl: dy, [], [], []
+        ArrayDecl: []
+          TypeDecl: dy, []
+            IdentifierType: ['long']
+          Constant: int, 2055
+      Decl: s1, [], [], []
+        ArrayDecl: []
+          TypeDecl: s1, []
+            IdentifierType: ['long']
+          Constant: int, 2055
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['int']
+      Decl: y, [], [], []
+        TypeDecl: y, []
+          IdentifierType: ['int']
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: s, [], [], []
+        TypeDecl: s, []
+          IdentifierType: ['long']
+      For: 
+        Compound: 
+          Assignment: =
+            ID: s
+            Constant: int, 2055
+          FuncCall: 
+            ID: g
+            ExprList: 
+              ID: s1
+              ID: s
+          For: 
+            Assignment: =
+              ID: i
+              Constant: int, 0
+            BinaryOp: <
+              ID: i
+              Constant: int, 1
+            UnaryOp: p++
+              ID: i
+            EmptyStatement: 
+          Assignment: =
+            ArrayRef: 
+              ID: dy
+              ID: s
+            Constant: int, 0x12345
+          For: 
+            Assignment: =
+              ID: i
+              Constant: int, 0
+            BinaryOp: <
+              ID: i
+              Constant: int, 1
+            UnaryOp: p++
+              ID: i
+            EmptyStatement: 
+          If: 
+            BinaryOp: ||
+              BinaryOp: ||
+                BinaryOp: !=
+                  ID: x
+                  ID: y
+                FuncCall: 
+                  ID: h
+                  ExprList: 
+                    ID: dx
+                    ID: dy
+                    ID: s
+              BinaryOp: !=
+                ArrayRef: 
+                  ID: dx
+                  ID: s
+                Constant: int, 0x12345
+            Compound: 
+              FuncCall: 
+                ID: j
+                ExprList: 
+                  ID: y
+              FuncCall: 
+                ID: k
+                ExprList: 
+                  ID: dy

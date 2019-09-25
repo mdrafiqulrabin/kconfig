@@ -1,0 +1,28 @@
+TranslationUnitDecl 0x7faab18264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7faab1826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7faab1826740 '__int128'
+|-TypedefDecl 0x7faab1826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7faab1826760 'unsigned __int128'
+|-TypedefDecl 0x7faab1826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7faab1826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7faab1826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7faab1826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7faab1826dc0 'char *'
+|   `-BuiltinType 0x7faab1826560 'char'
+|-TypedefDecl 0x7faab18270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7faab1827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7faab1826ee0 'struct __va_list_tag'
+|     `-Record 0x7faab1826e58 '__va_list_tag'
+|-FunctionDecl 0x7faab2025a00 <c_files/pr36282-4.c:5:1, col:15> col:6 bar 'void (void)'
+| `-WeakAttr 0x7faab2025ad8 <line:4:14> Implicit
+|-FunctionDecl 0x7faab2025d48 <line:7:1, col:63> col:14 referenced baz 'void *(void *, const void *, unsigned long)' extern
+| |-ParmVarDecl 0x7faab2025b38 <col:19, col:25> col:25 dest 'void *'
+| |-ParmVarDecl 0x7faab2025be0 <col:31, col:43> col:43 src 'const void *'
+| `-ParmVarDecl 0x7faab2025c58 <<built-in>:75:23, c_files/pr36282-4.c:7:62> col:62 n 'unsigned long'
+|-FunctionDecl 0x7faab2025ee8 prev 0x7faab2025d48 <line:8:1, col:40> col:23 baz 'void *(void *, const void *, unsigned long)' extern
+| |-ParmVarDecl 0x7faab2025ff0 <col:23> col:23 implicit 'void *'
+| |-ParmVarDecl 0x7faab2026068 <col:23> col:23 implicit 'const void *'
+| |-ParmVarDecl 0x7faab20260e0 <col:23> col:23 implicit 'unsigned long'
+| `-AsmLabelAttr 0x7faab2025f80 <col:33> "bazfn"
+`-FunctionDecl 0x7faab20261e8 <line:10:1, line:13:1> line:11:1 foo 'void (void)'
+  `-CompoundStmt 0x7faab2026280 <line:12:1, line:13:1>

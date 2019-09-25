@@ -1,0 +1,40 @@
+c_files/pr77933-1.c:4:27: warning: unknown attribute 'noclone' ignored [-Wunknown-attributes]
+__attribute__ ((noinline, noclone)) void
+                          ^
+c_files/pr77933-1.c:7:42: error: unknown register name 'lr' in asm
+  __asm__ volatile ("" : : : "r8", "r9", "lr");
+                                         ^
+c_files/pr77933-1.c:23:11: error: unknown register name 'r0' in asm
+                  : : : "r0", "r4", "r5", "r6", "r7", "r8", "r10");
+                        ^
+1 warning and 2 errors generated.
+TranslationUnitDecl 0x7fbe298264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbe29826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fbe29826740 '__int128'
+|-TypedefDecl 0x7fbe29826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fbe29826760 'unsigned __int128'
+|-TypedefDecl 0x7fbe29826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fbe29826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fbe29826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fbe29826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fbe29826dc0 'char *'
+|   `-BuiltinType 0x7fbe29826560 'char'
+|-TypedefDecl 0x7fbe298270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fbe29827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fbe29826ee0 'struct __va_list_tag'
+|     `-Record 0x7fbe29826e58 '__va_list_tag'
+|-FunctionDecl 0x7fbe29878400 <c_files/pr77933-1.c:4:1, line:8:1> line:5:1 used clobber_lr_and_highregs 'void (void)'
+| |-CompoundStmt 0x7fbe29878648 <line:6:1, line:8:1>
+| `-NoInlineAttr 0x7fbe29878498 <line:4:17>
+`-FunctionDecl 0x7fbe29878728 <line:10:1, line:46:1> line:11:1 main 'int (void)'
+  `-CompoundStmt 0x7fbe29878e20 <line:12:1, line:46:1>
+    |-DeclStmt 0x7fbe29878860 <line:13:3, col:10>
+    | `-VarDecl 0x7fbe29878800 <col:3, col:7> col:7 used ret 'int'
+    |-CallExpr 0x7fbe29878b70 <line:25:3, col:28> 'void'
+    | `-ImplicitCastExpr 0x7fbe29878b58 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7fbe29878b08 <col:3> 'void (void)' Function 0x7fbe29878400 'clobber_lr_and_highregs' 'void (void)'
+    |-GCCAsmStmt 0x7fbe29878d68 <line:27:3, line:44:21>
+    | `-DeclRefExpr 0x7fbe29878d40 <col:13> 'int' lvalue Var 0x7fbe29878800 'ret' 'int'
+    `-ReturnStmt 0x7fbe29878e08 <line:45:3, col:10>
+      `-ImplicitCastExpr 0x7fbe29878df0 <col:10> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7fbe29878dc8 <col:10> 'int' lvalue Var 0x7fbe29878800 'ret' 'int'

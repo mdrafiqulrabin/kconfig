@@ -1,0 +1,27 @@
+TranslationUnitDecl 0x7fb3d30178d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb3d3017e20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb3d3017b40 '__int128'
+|-TypedefDecl 0x7fb3d3017e90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb3d3017b60 'unsigned __int128'
+|-TypedefDecl 0x7fb3d3018168 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb3d3017f70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb3d3017ee8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb3d3018200 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb3d30181c0 'char *'
+|   `-BuiltinType 0x7fb3d3017960 'char'
+|-TypedefDecl 0x7fb3d30184c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb3d3018470 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb3d30182e0 'struct __va_list_tag'
+|     `-Record 0x7fb3d3018258 '__va_list_tag'
+|-VarDecl 0x7fb3d3018538 <c_files/pr70155-3.c:4:1, col:17> col:17 used a '__int128' extern
+|-RecordDecl 0x7fb3d3068800 <line:6:1, line:9:1> line:6:8 struct foo definition
+| |-PackedAttr 0x7fb3d3068910 <line:9:18>
+| `-FieldDecl 0x7fb3d30688c8 <line:8:3, col:12> col:12 referenced i '__int128'
+|-VarDecl 0x7fb3d30689b0 <line:11:1, col:19> col:19 used x 'struct foo':'struct foo' extern
+`-FunctionDecl 0x7fb3d3068ad0 <line:13:1, line:17:1> line:14:1 foo 'void (void)'
+  `-CompoundStmt 0x7fb3d3068c78 <line:15:1, line:17:1>
+    `-BinaryOperator 0x7fb3d3068c08 <line:16:3, col:9> '__int128' '='
+      |-DeclRefExpr 0x7fb3d3068b68 <col:3> '__int128' lvalue Var 0x7fb3d3018538 'a' '__int128'
+      `-ImplicitCastExpr 0x7fb3d3068bf0 <col:7, col:9> '__int128' <LValueToRValue>
+        `-MemberExpr 0x7fb3d3068bb8 <col:7, col:9> '__int128' lvalue .i 0x7fb3d30688c8
+          `-DeclRefExpr 0x7fb3d3068b90 <col:7> 'struct foo':'struct foo' lvalue Var 0x7fb3d30689b0 'x' 'struct foo':'struct foo'

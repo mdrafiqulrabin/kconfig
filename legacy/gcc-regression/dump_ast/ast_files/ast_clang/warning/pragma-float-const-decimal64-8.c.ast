@@ -1,0 +1,238 @@
+c_files/pragma-float-const-decimal64-8.c:11:14: warning: unknown pragma in STDC namespace [-Wunknown-pragmas]
+#pragma STDC FLOAT_CONST_DECIMAL64 OFF
+             ^
+c_files/pragma-float-const-decimal64-8.c:15:14: warning: unknown pragma in STDC namespace [-Wunknown-pragmas]
+#pragma STDC FLOAT_CONST_DECIMAL64 ON
+             ^
+c_files/pragma-float-const-decimal64-8.c:19:14: warning: unknown pragma in STDC namespace [-Wunknown-pragmas]
+#pragma STDC FLOAT_CONST_DECIMAL64 OFF
+             ^
+c_files/pragma-float-const-decimal64-8.c:22:14: warning: unknown pragma in STDC namespace [-Wunknown-pragmas]
+#pragma STDC FLOAT_CONST_DECIMAL64 ON   /* { dg-warning "invalid location" } */
+             ^
+c_files/pragma-float-const-decimal64-8.c:29:14: warning: unknown pragma in STDC namespace [-Wunknown-pragmas]
+#pragma STDC FLOAT_CONST_DECIMAL64 ON   /* { dg-warning "invalid location" } */
+             ^
+c_files/pragma-float-const-decimal64-8.c:36:14: warning: unknown pragma in STDC namespace [-Wunknown-pragmas]
+#pragma STDC FLOAT_CONST_DECIMAL64 ON   /* { dg-warning "invalid location" } */
+             ^
+c_files/pragma-float-const-decimal64-8.c:40:14: warning: unknown pragma in STDC namespace [-Wunknown-pragmas]
+#pragma STDC FLOAT_CONST_DECIMAL64 ON   /* { dg-error "#pragma" } */
+             ^
+c_files/pragma-float-const-decimal64-8.c:47:14: warning: unknown pragma in STDC namespace [-Wunknown-pragmas]
+#pragma STDC FLOAT_CONST_DECIMAL64 ON   /* { dg-error "#pragma" } */
+             ^
+c_files/pragma-float-const-decimal64-8.c:54:14: warning: unknown pragma in STDC namespace [-Wunknown-pragmas]
+#pragma STDC FLOAT_CONST_DECIMAL64 ON   /* { dg-error "#pragma" } */
+             ^
+c_files/pragma-float-const-decimal64-8.c:58:14: warning: unknown pragma in STDC namespace [-Wunknown-pragmas]
+#pragma STDC FLOAT_CONST_DECIMAL64 OFF  /* { dg-error "#pragma" } */
+             ^
+c_files/pragma-float-const-decimal64-8.c:64:14: warning: unknown pragma in STDC namespace [-Wunknown-pragmas]
+#pragma STDC FLOAT_CONST_DECIMAL64 ON
+             ^
+c_files/pragma-float-const-decimal64-8.c:72:14: warning: unknown pragma in STDC namespace [-Wunknown-pragmas]
+#pragma STDC FLOAT_CONST_DECIMAL64 ON   /* { dg-warning "invalid location" } */
+             ^
+c_files/pragma-float-const-decimal64-8.c:77:14: warning: unknown pragma in STDC namespace [-Wunknown-pragmas]
+#pragma STDC FLOAT_CONST_DECIMAL64 OFF
+             ^
+c_files/pragma-float-const-decimal64-8.c:83:14: warning: unknown pragma in STDC namespace [-Wunknown-pragmas]
+#pragma STDC FLOAT_CONST_DECIMAL64 ON   /* { dg-warning "invalid location" } */
+             ^
+c_files/pragma-float-const-decimal64-8.c:92:14: warning: unknown pragma in STDC namespace [-Wunknown-pragmas]
+#pragma STDC FLOAT_CONST_DECIMAL64 OFF  /* { dg-warning "invalid location" } */
+             ^
+c_files/pragma-float-const-decimal64-8.c:104:14: warning: unknown pragma in STDC namespace [-Wunknown-pragmas]
+#pragma STDC FLOAT_CONST_DECIMAL64 OFF  /* { dg-warning "invalid location" } */
+             ^
+c_files/pragma-float-const-decimal64-8.c:109:14: warning: unknown pragma in STDC namespace [-Wunknown-pragmas]
+#pragma STDC FLOAT_CONST_DECIMAL64 ON   /* { dg-error "#pragma" } */
+             ^
+c_files/pragma-float-const-decimal64-8.c:117:14: warning: unknown pragma in STDC namespace [-Wunknown-pragmas]
+#pragma STDC FLOAT_CONST_DECIMAL64 ON   /* { dg-error "#pragma" } */
+             ^
+c_files/pragma-float-const-decimal64-8.c:127:14: warning: unknown pragma in STDC namespace [-Wunknown-pragmas]
+#pragma STDC FLOAT_CONST_DECIMAL64 OFF
+             ^
+c_files/pragma-float-const-decimal64-8.c:129:14: warning: unknown pragma in STDC namespace [-Wunknown-pragmas]
+#pragma STDC FLOAT_CONST_DECIMAL64 ON   /* { dg-warning "invalid location" } */
+             ^
+c_files/pragma-float-const-decimal64-8.c:139:14: warning: unknown pragma in STDC namespace [-Wunknown-pragmas]
+#pragma STDC FLOAT_CONST_DECIMAL64 ON   /* { dg-warning "invalid location" } */
+             ^
+c_files/pragma-float-const-decimal64-8.c:149:3: error: function definition is not allowed here
+  {
+  ^
+c_files/pragma-float-const-decimal64-8.c:152:14: warning: unknown pragma in STDC namespace [-Wunknown-pragmas]
+#pragma STDC FLOAT_CONST_DECIMAL64 ON   /* { dg-warning "invalid location" } */
+             ^
+c_files/pragma-float-const-decimal64-8.c:164:14: warning: unknown pragma in STDC namespace [-Wunknown-pragmas]
+#pragma STDC FLOAT_CONST_DECIMAL64 ON   /* { dg-warning "invalid location" } */
+             ^
+c_files/pragma-float-const-decimal64-8.c:172:14: warning: unknown pragma in STDC namespace [-Wunknown-pragmas]
+#pragma STDC FLOAT_CONST_DECIMAL64 ON   /* { dg-warning "invalid location" } */
+             ^
+24 warnings and 1 error generated.
+TranslationUnitDecl 0x7fb68c805ed0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb68c806420 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb68c806140 '__int128'
+|-TypedefDecl 0x7fb68c806490 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb68c806160 'unsigned __int128'
+|-TypedefDecl 0x7fb68c806768 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb68c806570 'struct __NSConstantString_tag'
+|   `-Record 0x7fb68c8064e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb68c806800 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb68c8067c0 'char *'
+|   `-BuiltinType 0x7fb68c805f60 'char'
+|-TypedefDecl 0x7fb68c806ac8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb68c806a70 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb68c8068e0 'struct __va_list_tag'
+|     `-Record 0x7fb68c806858 '__va_list_tag'
+|-VarDecl 0x7fb68c806b38 <c_files/pragma-float-const-decimal64-8.c:17:1, col:8> col:8 used a 'double'
+|-RecordDecl 0x7fb68e016a00 <line:21:1, line:25:1> line:21:8 struct S1 definition
+| |-FieldDecl 0x7fb68e016ac8 <line:23:3, col:7> col:7 i 'int'
+| `-FieldDecl 0x7fb68e016b28 <line:24:3, col:7> col:7 j 'int'
+|-RecordDecl 0x7fb68e016b70 <line:27:1, line:31:1> line:27:8 struct S2 definition
+| |-FieldDecl 0x7fb68e016c38 <line:28:3, col:7> col:7 i 'int'
+| `-FieldDecl 0x7fb68e016c98 <line:30:3, col:7> col:7 j 'int'
+|-RecordDecl 0x7fb68e016ce0 <line:33:1, line:37:1> line:33:8 struct S3 definition
+| |-FieldDecl 0x7fb68e016da8 <line:34:3, col:7> col:7 i 'int'
+| `-FieldDecl 0x7fb68e016e08 <line:35:3, col:7> col:7 j 'int'
+|-EnumDecl 0x7fb68e016e50 <line:39:1, line:43:1> line:39:6 E1
+| |-EnumConstantDecl 0x7fb68e016f10 <line:41:3> col:3 one 'int'
+| `-EnumConstantDecl 0x7fb68e016f58 <line:42:3> col:3 two 'int'
+|-EnumDecl 0x7fb68e016fa0 <line:45:1, line:49:1> line:45:6 E2
+| |-EnumConstantDecl 0x7fb68e017060 <line:46:3> col:3 red 'int'
+| `-EnumConstantDecl 0x7fb68e0170a8 <line:48:3> col:3 blue 'int'
+|-EnumDecl 0x7fb68e0170f0 <line:51:1, line:55:1> line:51:6 E3
+| |-EnumConstantDecl 0x7fb68e0171b0 <line:52:3> col:3 cat 'int'
+| `-EnumConstantDecl 0x7fb68e0171f8 <line:53:3> col:3 dog 'int'
+|-VarDecl 0x7fb68e017258 <line:57:1, line:59:1> col:1 b 'double'
+|-FunctionDecl 0x7fb68e017388 <line:61:1, line:66:1> line:62:1 f1 'double (void)'
+| `-CompoundStmt 0x7fb68e017478 <line:63:1, line:66:1>
+|   `-ReturnStmt 0x7fb68e017460 <line:65:3, col:10>
+|     `-ImplicitCastExpr 0x7fb68e017448 <col:10> 'double' <LValueToRValue>
+|       `-DeclRefExpr 0x7fb68e017420 <col:10> 'double' lvalue Var 0x7fb68c806b38 'a' 'double'
+|-FunctionDecl 0x7fb68e017530 <line:68:1, line:75:1> line:69:1 f2 'double (void)'
+| `-CompoundStmt 0x7fb68e017788 <line:70:1, line:75:1>
+|   |-DeclStmt 0x7fb68e017640 <line:71:3, col:11>
+|   | `-VarDecl 0x7fb68e0175e0 <col:3, col:10> col:10 used b 'double'
+|   |-BinaryOperator 0x7fb68e0176a0 <line:73:3, col:7> 'double' '='
+|   | |-DeclRefExpr 0x7fb68e017658 <col:3> 'double' lvalue Var 0x7fb68e0175e0 'b' 'double'
+|   | `-FloatingLiteral 0x7fb68e017680 <col:7> 'double' 5.000000e-01
+|   `-ReturnStmt 0x7fb68e017770 <line:74:3, col:14>
+|     `-BinaryOperator 0x7fb68e017748 <col:10, col:14> 'double' '+'
+|       |-ImplicitCastExpr 0x7fb68e017718 <col:10> 'double' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fb68e0176c8 <col:10> 'double' lvalue Var 0x7fb68c806b38 'a' 'double'
+|       `-ImplicitCastExpr 0x7fb68e017730 <col:14> 'double' <LValueToRValue>
+|         `-DeclRefExpr 0x7fb68e0176f0 <col:14> 'double' lvalue Var 0x7fb68e0175e0 'b' 'double'
+|-FunctionDecl 0x7fb68e017850 <line:79:1, line:86:1> line:80:1 f3 'double (void)'
+| `-CompoundStmt 0x7fb68d80fa90 <line:81:1, line:86:1>
+|   |-DeclStmt 0x7fb68e017958 <line:82:3, col:21>
+|   | `-TypedefDecl 0x7fb68e017900 <col:3, col:18> col:18 referenced b32 'double'
+|   |   `-BuiltinType 0x7fb68c8060e0 'double'
+|   |-DeclStmt 0x7fb68d80fa20 <line:84:3, col:14>
+|   | `-VarDecl 0x7fb68e0179a0 <col:3, col:11> col:7 used b 'b32':'double' cinit
+|   |   `-FloatingLiteral 0x7fb68d80fa00 <col:11> 'double' 5.000000e-01
+|   `-ReturnStmt 0x7fb68d80fa78 <line:85:3, col:10>
+|     `-ImplicitCastExpr 0x7fb68d80fa60 <col:10> 'b32':'double' <LValueToRValue>
+|       `-DeclRefExpr 0x7fb68d80fa38 <col:10> 'b32':'double' lvalue Var 0x7fb68e0179a0 'b' 'b32':'double'
+|-FunctionDecl 0x7fb68d80fba8 <line:88:1, line:98:1> line:89:1 f4 'double (int)'
+| |-ParmVarDecl 0x7fb68d80fad8 <col:5, col:9> col:9 used i 'int'
+| `-CompoundStmt 0x7fb68d80fec8 <line:90:1, line:98:1>
+|   |-LabelStmt 0x7fb68d80fda8 <line:91:1, line:94:12> 'top'
+|   | `-IfStmt 0x7fb68d80fd28 <line:93:3, line:94:12>
+|   |   |-<<<NULL>>>
+|   |   |-<<<NULL>>>
+|   |   |-BinaryOperator 0x7fb68d80fca8 <line:93:7, col:12> 'int' '=='
+|   |   | |-ImplicitCastExpr 0x7fb68d80fc90 <col:7> 'int' <LValueToRValue>
+|   |   | | `-DeclRefExpr 0x7fb68d80fc48 <col:7> 'int' lvalue ParmVar 0x7fb68d80fad8 'i' 'int'
+|   |   | `-IntegerLiteral 0x7fb68d80fc70 <col:12> 'int' 0
+|   |   |-ReturnStmt 0x7fb68d80fd10 <line:94:5, col:12>
+|   |   | `-ImplicitCastExpr 0x7fb68d80fcf8 <col:12> 'double' <LValueToRValue>
+|   |   |   `-DeclRefExpr 0x7fb68d80fcd0 <col:12> 'double' lvalue Var 0x7fb68c806b38 'a' 'double'
+|   |   `-<<<NULL>>>
+|   |-CompoundAssignOperator 0x7fb68d80fe08 <line:95:3, col:8> 'double' '*=' ComputeLHSTy='double' ComputeResultTy='double'
+|   | |-DeclRefExpr 0x7fb68d80fdc0 <col:3> 'double' lvalue Var 0x7fb68c806b38 'a' 'double'
+|   | `-FloatingLiteral 0x7fb68d80fde8 <col:8> 'double' 2.000000e+00
+|   |-BinaryOperator 0x7fb68d80fe88 <line:96:3, col:7> 'int' '='
+|   | |-DeclRefExpr 0x7fb68d80fe40 <col:3> 'int' lvalue ParmVar 0x7fb68d80fad8 'i' 'int'
+|   | `-IntegerLiteral 0x7fb68d80fe68 <col:7> 'int' 0
+|   `-GotoStmt 0x7fb68d80feb0 <line:97:3, col:8> 'top' 0x7fb68d80fd60
+|-FunctionDecl 0x7fb68d80ffa8 <line:100:1, line:106:1> line:101:1 f5 'double (int)'
+| |-ParmVarDecl 0x7fb68d80ff18 <col:5, col:9> col:9 used i 'int'
+| `-CompoundStmt 0x7fb68d8101f8 <line:102:1, line:106:1>
+|   |-BinaryOperator 0x7fb68d810130 <line:103:3, col:11> 'double' '='
+|   | |-DeclRefExpr 0x7fb68d810048 <col:3> 'double' lvalue Var 0x7fb68c806b38 'a' 'double'
+|   | `-BinaryOperator 0x7fb68d810108 <col:7, col:11> 'double' '*'
+|   |   |-ImplicitCastExpr 0x7fb68d8100c0 <col:7> 'double' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7fb68d810070 <col:7> 'double' lvalue Var 0x7fb68c806b38 'a' 'double'
+|   |   `-ImplicitCastExpr 0x7fb68d8100f0 <col:11> 'double' <IntegralToFloating>
+|   |     `-ImplicitCastExpr 0x7fb68d8100d8 <col:11> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7fb68d810098 <col:11> 'int' lvalue ParmVar 0x7fb68d80ff18 'i' 'int'
+|   `-ReturnStmt 0x7fb68d8101e0 <line:105:3, col:14>
+|     `-BinaryOperator 0x7fb68d8101b8 <col:10, col:14> 'double' '*'
+|       |-ImplicitCastExpr 0x7fb68d8101a0 <col:10> 'double' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fb68d810158 <col:10> 'double' lvalue Var 0x7fb68c806b38 'a' 'double'
+|       `-FloatingLiteral 0x7fb68d810180 <col:14> 'double' 2.000000e+00
+|-FunctionDecl 0x7fb68d8102b8 <line:108:1, line:113:1> line:110:1 f6 'double (void)'
+| `-CompoundStmt 0x7fb68d8103a8 <line:111:1, line:113:1>
+|   `-ReturnStmt 0x7fb68d810390 <line:112:3, col:10>
+|     `-ImplicitCastExpr 0x7fb68d810378 <col:10> 'double' <LValueToRValue>
+|       `-DeclRefExpr 0x7fb68d810350 <col:10> 'double' lvalue Var 0x7fb68c806b38 'a' 'double'
+|-FunctionDecl 0x7fb68d810460 <line:115:1, line:121:1> line:116:1 f7 'double (void)'
+| `-CompoundStmt 0x7fb68d810550 <line:119:1, line:121:1>
+|   `-ReturnStmt 0x7fb68d810538 <line:120:3, col:10>
+|     `-ImplicitCastExpr 0x7fb68d810520 <col:10> 'double' <LValueToRValue>
+|       `-DeclRefExpr 0x7fb68d8104f8 <col:10> 'double' lvalue Var 0x7fb68c806b38 'a' 'double'
+|-FunctionDecl 0x7fb68d810608 <line:123:1, line:131:1> line:124:1 f8 'double (void)'
+| `-CompoundStmt 0x7fb68d810710 <line:125:1, line:131:1>
+|   |-CompoundStmt 0x7fb68d8106a0 <line:126:3, line:128:3>
+|   `-ReturnStmt 0x7fb68d8106f8 <line:130:3, col:10>
+|     `-ImplicitCastExpr 0x7fb68d8106e0 <col:10> 'double' <LValueToRValue>
+|       `-DeclRefExpr 0x7fb68d8106b8 <col:10> 'double' lvalue Var 0x7fb68c806b38 'a' 'double'
+|-FunctionDecl 0x7fb68d810810 <line:133:1, col:25> col:13 used foo9 'void (void *)' extern
+| `-ParmVarDecl 0x7fb68d810750 <col:19, col:24> col:25 'void *'
+|-FunctionDecl 0x7fb68d810948 <line:135:1, line:143:1> line:136:1 f9 'double (void)'
+| `-CompoundStmt 0x7fb68d019b90 <line:137:1, line:143:1>
+|   |-DeclStmt 0x7fb68d019a48 <line:138:3, col:17>
+|   | `-LabelDecl 0x7fb68d019a00 <col:3, col:13> col:13 used here
+|   |-CallExpr 0x7fb68d019af0 <line:140:3, col:15> 'void'
+|   | |-ImplicitCastExpr 0x7fb68d019ad8 <col:3> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fb68d019a60 <col:3> 'void (void *)' Function 0x7fb68d810810 'foo9' 'void (void *)'
+|   | `-AddrLabelExpr 0x7fb68d019a88 <col:9, col:11> 'void *' here 0x7fb68d019a00
+|   `-LabelStmt 0x7fb68d019b78 <line:141:1, line:142:10> 'here'
+|     `-ReturnStmt 0x7fb68d019b60 <col:3, col:10>
+|       `-ImplicitCastExpr 0x7fb68d019b48 <col:10> 'double' <LValueToRValue>
+|         `-DeclRefExpr 0x7fb68d019b20 <col:10> 'double' lvalue Var 0x7fb68c806b38 'a' 'double'
+|-FunctionDecl 0x7fb68d019c58 <line:145:1, line:154:1> line:146:1 f10 'double (void)'
+| `-CompoundStmt 0x7fb68d019db8 <line:147:1, line:154:1>
+|   `-ReturnStmt 0x7fb68d019da0 <line:153:3, col:10>
+|     `-ImplicitCastExpr 0x7fb68d019d88 <col:10> 'double' <LValueToRValue>
+|       `-DeclRefExpr 0x7fb68d019d60 <col:10> 'double' lvalue Var 0x7fb68c806b38 'a' 'double'
+|-FunctionDecl 0x7fb68d019e70 <line:156:1, line:166:1> line:157:1 f11 'double (void)'
+| `-CompoundStmt 0x7fb68d01a2b8 <line:158:1, line:166:1>
+|   |-DeclStmt 0x7fb68d01a248 <line:160:4, line:163:4>
+|   | `-RecordDecl 0x7fb68d019f08 <line:160:4, line:163:3> line:160:11 struct A definition
+|   |   |-RecordDecl 0x7fb68d019fb0 <line:161:5, col:22> col:5 struct definition
+|   |   | `-FieldDecl 0x7fb68d01a070 <col:14, col:19> col:19 a 'char'
+|   |   |-FieldDecl 0x7fb68d01a110 <col:5> col:5 implicit 'struct A::(anonymous at c_files/pragma-float-const-decimal64-8.c:161:5)'
+|   |   |-IndirectFieldDecl 0x7fb68d01a168 <col:19> col:19 implicit a 'char'
+|   |   | |-Field 0x7fb68d01a110 '' 'struct A::(anonymous at c_files/pragma-float-const-decimal64-8.c:161:5)'
+|   |   | `-Field 0x7fb68d01a070 'a' 'char'
+|   |   `-FieldDecl 0x7fb68d01a1b8 <line:162:5, col:10> col:10 b 'char'
+|   `-ReturnStmt 0x7fb68d01a2a0 <line:165:3, col:10>
+|     `-ImplicitCastExpr 0x7fb68d01a288 <col:10> 'double' <LValueToRValue>
+|       `-DeclRefExpr 0x7fb68d01a260 <col:10> 'double' lvalue Var 0x7fb68c806b38 'a' 'double'
+`-FunctionDecl 0x7fb68d01a378 <line:168:1, line:174:1> line:169:1 f12 'double (void)'
+  `-CompoundStmt 0x7fb68d01a538 <line:170:1, line:174:1>
+    |-UnaryOperator 0x7fb68d01a4c0 <line:171:3, col:30> 'double' prefix '__extension__'
+    | `-StmtExpr 0x7fb68d01a4a0 <col:17, col:30> 'double'
+    |   `-CompoundStmt 0x7fb68d01a480 <col:18, col:29>
+    |     `-BinaryOperator 0x7fb68d01a458 <col:20, col:24> 'double' '='
+    |       |-DeclRefExpr 0x7fb68d01a410 <col:20> 'double' lvalue Var 0x7fb68c806b38 'a' 'double'
+    |       `-FloatingLiteral 0x7fb68d01a438 <col:24> 'double' 5.000000e-01
+    `-ReturnStmt 0x7fb68d01a520 <line:173:3, col:10>
+      `-ImplicitCastExpr 0x7fb68d01a508 <col:10> 'double' <LValueToRValue>
+        `-DeclRefExpr 0x7fb68d01a4e0 <col:10> 'double' lvalue Var 0x7fb68c806b38 'a' 'double'

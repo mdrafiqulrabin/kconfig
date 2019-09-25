@@ -1,0 +1,38 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['long', 'long']
+          Decl: b, [], [], []
+            TypeDecl: b, []
+              IdentifierType: ['long', 'long']
+        TypeDecl: foo, []
+          IdentifierType: ['unsigned', 'int']
+    Compound: 
+      Decl: res, [], [], []
+        TypeDecl: res, []
+          IdentifierType: ['unsigned', 'int']
+      Assignment: &=
+        ID: a
+        UnaryOp: ~
+          Constant: int, 0U
+      Assignment: &=
+        ID: b
+        UnaryOp: ~
+          Constant: int, 0U
+      If: 
+        FuncCall: 
+          ID: __builtin_mul_overflow
+          ExprList: 
+            ID: a
+            ID: b
+            UnaryOp: &
+              ID: res
+        Assignment: =
+          ID: res
+          Constant: int, 0x123U
+      Return: 
+        ID: res

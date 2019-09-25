@@ -1,0 +1,50 @@
+TranslationUnitDecl 0x7fcc0d0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fcc0d026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fcc0d026740 '__int128'
+|-TypedefDecl 0x7fcc0d026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fcc0d026760 'unsigned __int128'
+|-TypedefDecl 0x7fcc0d026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fcc0d026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fcc0d026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fcc0d026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fcc0d026dc0 'char *'
+|   `-BuiltinType 0x7fcc0d026560 'char'
+|-TypedefDecl 0x7fcc0d0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fcc0d027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fcc0d026ee0 'struct __va_list_tag'
+|     `-Record 0x7fcc0d026e58 '__va_list_tag'
+|-TypedefDecl 0x7fcc0d027178 <c_files/pr59261.c:5:1, col:21> col:21 referenced V '__attribute__((__vector_size__(8 * sizeof(signed char)))) signed char'
+| `-VectorType 0x7fcc0d027140 '__attribute__((__vector_size__(8 * sizeof(signed char)))) signed char' 8
+|   `-BuiltinType 0x7fcc0d026580 'signed char'
+|-FunctionDecl 0x7fcc0d0785f0 <line:7:1, line:11:1> line:8:1 foo 'void (V *, V *)'
+| |-ParmVarDecl 0x7fcc0d078468 <col:6, col:9> col:9 used a 'V *'
+| |-ParmVarDecl 0x7fcc0d0784d8 <col:12, col:15> col:15 used b 'V *'
+| `-CompoundStmt 0x7fcc0d078850 <line:9:1, line:11:1>
+|   `-BinaryOperator 0x7fcc0d078828 <line:10:3, col:13> 'V':'__attribute__((__vector_size__(8 * sizeof(signed char)))) signed char' '='
+|     |-UnaryOperator 0x7fcc0d078718 <col:3, col:4> 'V':'__attribute__((__vector_size__(8 * sizeof(signed char)))) signed char' lvalue prefix '*'
+|     | `-ImplicitCastExpr 0x7fcc0d078700 <col:4> 'V *' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7fcc0d0786d8 <col:4> 'V *' lvalue ParmVar 0x7fcc0d078468 'a' 'V *'
+|     `-BinaryOperator 0x7fcc0d078800 <col:8, col:13> 'V':'__attribute__((__vector_size__(8 * sizeof(signed char)))) signed char' '*'
+|       |-ImplicitCastExpr 0x7fcc0d0787b8 <col:8, col:9> 'V':'__attribute__((__vector_size__(8 * sizeof(signed char)))) signed char' <LValueToRValue>
+|       | `-UnaryOperator 0x7fcc0d078778 <col:8, col:9> 'V':'__attribute__((__vector_size__(8 * sizeof(signed char)))) signed char' lvalue prefix '*'
+|       |   `-ImplicitCastExpr 0x7fcc0d078760 <col:9> 'V *' <LValueToRValue>
+|       |     `-DeclRefExpr 0x7fcc0d078738 <col:9> 'V *' lvalue ParmVar 0x7fcc0d0784d8 'b' 'V *'
+|       `-ImplicitCastExpr 0x7fcc0d0787e8 <col:13> 'V':'__attribute__((__vector_size__(8 * sizeof(signed char)))) signed char' <VectorSplat>
+|         `-ImplicitCastExpr 0x7fcc0d0787d0 <col:13> 'signed char' <IntegralCast>
+|           `-IntegerLiteral 0x7fcc0d078798 <col:13> 'int' 3
+`-FunctionDecl 0x7fcc0d078980 <line:13:1, line:17:1> line:14:1 bar 'void (V *, V *)'
+  |-ParmVarDecl 0x7fcc0d078880 <col:6, col:9> col:9 used a 'V *'
+  |-ParmVarDecl 0x7fcc0d0788f0 <col:12, col:15> col:15 used b 'V *'
+  `-CompoundStmt 0x7fcc0d078ba0 <line:15:1, line:17:1>
+    `-BinaryOperator 0x7fcc0d078b78 <line:16:3, col:13> 'V':'__attribute__((__vector_size__(8 * sizeof(signed char)))) signed char' '='
+      |-UnaryOperator 0x7fcc0d078a68 <col:3, col:4> 'V':'__attribute__((__vector_size__(8 * sizeof(signed char)))) signed char' lvalue prefix '*'
+      | `-ImplicitCastExpr 0x7fcc0d078a50 <col:4> 'V *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fcc0d078a28 <col:4> 'V *' lvalue ParmVar 0x7fcc0d078880 'a' 'V *'
+      `-BinaryOperator 0x7fcc0d078b50 <col:8, col:13> 'V':'__attribute__((__vector_size__(8 * sizeof(signed char)))) signed char' '*'
+        |-ImplicitCastExpr 0x7fcc0d078b08 <col:8, col:9> 'V':'__attribute__((__vector_size__(8 * sizeof(signed char)))) signed char' <LValueToRValue>
+        | `-UnaryOperator 0x7fcc0d078ac8 <col:8, col:9> 'V':'__attribute__((__vector_size__(8 * sizeof(signed char)))) signed char' lvalue prefix '*'
+        |   `-ImplicitCastExpr 0x7fcc0d078ab0 <col:9> 'V *' <LValueToRValue>
+        |     `-DeclRefExpr 0x7fcc0d078a88 <col:9> 'V *' lvalue ParmVar 0x7fcc0d0788f0 'b' 'V *'
+        `-ImplicitCastExpr 0x7fcc0d078b38 <col:13> 'V':'__attribute__((__vector_size__(8 * sizeof(signed char)))) signed char' <VectorSplat>
+          `-ImplicitCastExpr 0x7fcc0d078b20 <col:13> 'signed char' <IntegralCast>
+            `-IntegerLiteral 0x7fcc0d078ae8 <col:13> 'int' 4

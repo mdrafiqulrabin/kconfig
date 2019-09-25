@@ -1,0 +1,82 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: S
+      Decl: count, [], [], []
+        TypeDecl: count, []
+          IdentifierType: ['int']
+      Decl: addr, [], [], []
+        PtrDecl: []
+          TypeDecl: addr, []
+            IdentifierType: ['char']
+  Decl: func, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, ['const']
+          PtrDecl: []
+            TypeDecl: None, ['const']
+              IdentifierType: ['char']
+        Typename: None, ['const']
+          PtrDecl: []
+            TypeDecl: None, ['const']
+              IdentifierType: ['char']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+        Typename: None, ['const']
+          PtrDecl: []
+            TypeDecl: None, ['const']
+              IdentifierType: ['char']
+      TypeDecl: func, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: test, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            PtrDecl: []
+              TypeDecl: p, []
+                Struct: S
+        TypeDecl: test, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: off, [], [], []
+        TypeDecl: off, []
+          IdentifierType: ['int']
+        StructRef: ->
+          ID: p
+          ID: count
+      While: 
+        BinaryOp: >=
+          StructRef: ->
+            ID: p
+            ID: count
+          Constant: int, 0
+        Compound: 
+          Decl: s, ['const'], [], []
+            PtrDecl: []
+              TypeDecl: s, ['const']
+                IdentifierType: ['char']
+            Constant: string, "xyz"
+          If: 
+            UnaryOp: *
+              StructRef: ->
+                ID: p
+                ID: addr
+            Assignment: =
+              ID: s
+              Constant: string, "pqr"
+          FuncCall: 
+            ID: func
+            ExprList: 
+              Constant: string, "abcde"
+              BinaryOp: +
+                StructRef: ->
+                  ID: p
+                  ID: addr
+                ID: off
+              ID: off
+              ID: s
+          UnaryOp: p--
+            StructRef: ->
+              ID: p
+              ID: count

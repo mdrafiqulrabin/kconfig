@@ -1,0 +1,19 @@
+c_files/predefine_large.c:6:4: error: 
+  #error
+   ^
+1 error generated.
+TranslationUnitDecl 0x7fa4ef024ad0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa4ef025020 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa4ef024d40 '__int128'
+|-TypedefDecl 0x7fa4ef025090 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa4ef024d60 'unsigned __int128'
+|-TypedefDecl 0x7fa4ef025368 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa4ef025170 'struct __NSConstantString_tag'
+|   `-Record 0x7fa4ef0250e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa4ef025400 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa4ef0253c0 'char *'
+|   `-BuiltinType 0x7fa4ef024b60 'char'
+`-TypedefDecl 0x7fa4ef0256c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+  `-ConstantArrayType 0x7fa4ef025670 'struct __va_list_tag [1]' 1 
+    `-RecordType 0x7fa4ef0254e0 'struct __va_list_tag'
+      `-Record 0x7fa4ef025458 '__va_list_tag'

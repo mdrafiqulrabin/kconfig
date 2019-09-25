@@ -1,0 +1,25 @@
+TranslationUnitDecl 0x7fc5d90264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc5d9026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc5d9026740 '__int128'
+|-TypedefDecl 0x7fc5d9026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc5d9026760 'unsigned __int128'
+|-TypedefDecl 0x7fc5d9026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc5d9026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc5d9026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc5d9026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc5d9026dc0 'char *'
+|   `-BuiltinType 0x7fc5d9026560 'char'
+|-TypedefDecl 0x7fc5d90270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc5d9027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc5d9026ee0 'struct __va_list_tag'
+|     `-Record 0x7fc5d9026e58 '__va_list_tag'
+|-RecordDecl 0x7fc5d9027120 <c_files/pr38736_x.c:4:1, line:7:1> line:4:8 struct alignment_test_struct definition
+| `-FieldDecl 0x7fc5d9078458 <line:6:3, col:15> col:8 space 'char [4]'
+|   `-AlignedAttr 0x7fc5d90784a0 <col:32> aligned
+|     `-<<<NULL>>>
+|-FunctionDecl 0x7fc5d90785b8 <line:9:1, col:27> col:12 aligned_x 'int (void)' extern
+`-FunctionDecl 0x7fc5d9078728 prev 0x7fc5d90785b8 <line:11:1, line:15:1> line:12:1 aligned_x 'int (void)'
+  `-CompoundStmt 0x7fc5d90788a8 <line:13:1, line:15:1>
+    `-ReturnStmt 0x7fc5d9078890 <line:14:3, col:50>
+      `-ImplicitCastExpr 0x7fc5d9078830 <col:10, col:50> 'int' <IntegralCast>
+        `-UnaryExprOrTypeTraitExpr 0x7fc5d9078810 <col:10, col:50> 'unsigned long' alignof 'struct alignment_test_struct':'struct alignment_test_struct'

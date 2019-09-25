@@ -1,0 +1,53 @@
+c_files/pr35842.c:2:23: warning: unknown attribute 'dllimport' ignored [-Wunknown-attributes]
+extern __attribute__((dllimport)) const int SSL_ImplementedCiphers[];
+                      ^
+1 warning generated.
+TranslationUnitDecl 0x7fc4530264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc453026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc453026740 '__int128'
+|-TypedefDecl 0x7fc453026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc453026760 'unsigned __int128'
+|-TypedefDecl 0x7fc453026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc453026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc453026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc453026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc453026dc0 'char *'
+|   `-BuiltinType 0x7fc453026560 'char'
+|-TypedefDecl 0x7fc4530270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc453027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc453026ee0 'struct __va_list_tag'
+|     `-Record 0x7fc453026e58 '__va_list_tag'
+|-VarDecl 0x7fc4530271a0 <c_files/pr35842.c:2:1, col:68> col:45 used SSL_ImplementedCiphers 'const int []' extern
+|-FunctionDecl 0x7fc453826b20 <line:3:1, col:51> col:13 used SSL_GetCipherSuiteInfo 'void (int)' extern
+| `-ParmVarDecl 0x7fc453826a58 <col:36, col:40> col:40 cipherSuite 'int'
+`-FunctionDecl 0x7fc453826c60 <line:4:1, line:12:1> line:4:6 nsCipherInfo 'void (int)'
+  |-ParmVarDecl 0x7fc453826bd8 <col:19, col:23> col:23 used SSL_NumImplementedCiphers 'int'
+  `-CompoundStmt 0x7fc453827178 <line:5:1, line:12:1>
+    |-DeclStmt 0x7fc453826d78 <line:6:3, col:8>
+    | `-VarDecl 0x7fc453826d18 <col:3, col:7> col:7 used i 'int'
+    `-ForStmt 0x7fc453827140 <line:7:3, line:11:5>
+      |-BinaryOperator 0x7fc453826dd8 <line:7:8, col:12> 'int' '='
+      | |-DeclRefExpr 0x7fc453826d90 <col:8> 'int' lvalue Var 0x7fc453826d18 'i' 'int'
+      | `-IntegerLiteral 0x7fc453826db8 <col:12> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fc453826e80 <col:15, col:19> 'int' '<'
+      | |-ImplicitCastExpr 0x7fc453826e50 <col:15> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fc453826e00 <col:15> 'int' lvalue Var 0x7fc453826d18 'i' 'int'
+      | `-ImplicitCastExpr 0x7fc453826e68 <col:19> 'int' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fc453826e28 <col:19> 'int' lvalue ParmVar 0x7fc453826bd8 'SSL_NumImplementedCiphers' 'int'
+      |-UnaryOperator 0x7fc453826ed0 <col:46, col:48> 'int' prefix '++'
+      | `-DeclRefExpr 0x7fc453826ea8 <col:48> 'int' lvalue Var 0x7fc453826d18 'i' 'int'
+      `-CompoundStmt 0x7fc453827118 <line:8:5, line:11:5>
+        |-DeclStmt 0x7fc453827028 <line:9:7, col:49>
+        | `-VarDecl 0x7fc453826f08 <col:7, col:48> col:17 used i_id 'const int' cinit
+        |   `-ImplicitCastExpr 0x7fc453827010 <col:24, col:48> 'int' <LValueToRValue>
+        |     `-ArraySubscriptExpr 0x7fc453826fe8 <col:24, col:48> 'const int' lvalue
+        |       |-ImplicitCastExpr 0x7fc453826fb8 <col:24> 'const int *' <ArrayToPointerDecay>
+        |       | `-DeclRefExpr 0x7fc453826f68 <col:24> 'const int []' lvalue Var 0x7fc4530271a0 'SSL_ImplementedCiphers' 'const int []'
+        |       `-ImplicitCastExpr 0x7fc453826fd0 <col:47> 'int' <LValueToRValue>
+        |         `-DeclRefExpr 0x7fc453826f90 <col:47> 'int' lvalue Var 0x7fc453826d18 'i' 'int'
+        `-CallExpr 0x7fc4538270d0 <line:10:7, col:34> 'void'
+          |-ImplicitCastExpr 0x7fc4538270b8 <col:7> 'void (*)(int)' <FunctionToPointerDecay>
+          | `-DeclRefExpr 0x7fc453827040 <col:7> 'void (int)' Function 0x7fc453826b20 'SSL_GetCipherSuiteInfo' 'void (int)'
+          `-ImplicitCastExpr 0x7fc453827100 <col:30> 'int' <LValueToRValue>
+            `-DeclRefExpr 0x7fc453827068 <col:30> 'const int' lvalue Var 0x7fc453826f08 'i_id' 'const int'

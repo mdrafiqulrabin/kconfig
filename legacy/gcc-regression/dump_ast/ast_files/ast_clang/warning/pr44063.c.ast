@@ -1,0 +1,342 @@
+c_files/pr44063.c:19:23: warning: implicit declaration of function 'bswap_32' is invalid in C99 [-Wimplicit-function-declaration]
+            re_cache= bswap_32((((const union unaligned_32 *) (((const uint8_t *)(s)->buffer)+(re_index>>3)))->l)) << (re_index&0x07);
+                      ^
+c_files/pr44063.c:22:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+2 warnings generated.
+TranslationUnitDecl 0x7fed550264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fed55026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fed55026740 '__int128'
+|-TypedefDecl 0x7fed55026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fed55026760 'unsigned __int128'
+|-TypedefDecl 0x7fed55026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fed55026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fed55026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fed55026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fed55026dc0 'char *'
+|   `-BuiltinType 0x7fed55026560 'char'
+|-TypedefDecl 0x7fed550270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fed55027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fed55026ee0 'struct __va_list_tag'
+|     `-Record 0x7fed55026e58 '__va_list_tag'
+|-TypedefDecl 0x7fed55027138 <c_files/pr44063.c:1:1, col:21> col:21 referenced int8_t 'signed char'
+| `-BuiltinType 0x7fed55026580 'signed char'
+|-TypedefDecl 0x7fed550271a8 <line:2:1, col:15> col:15 referenced int16_t 'short'
+| `-BuiltinType 0x7fed550265a0 'short'
+|-TypedefDecl 0x7fed55077c18 <line:3:1, col:23> col:23 referenced uint8_t 'unsigned char'
+| `-BuiltinType 0x7fed55026620 'unsigned char'
+|-TypedefDecl 0x7fed55077c88 <line:4:1, col:22> col:22 referenced uint32_t 'unsigned int'
+| `-BuiltinType 0x7fed55026660 'unsigned int'
+|-RecordDecl 0x7fed55077ce0 <line:6:1, col:32> col:7 union unaligned_32 definition
+| |-MayAliasAttr 0x7fed55077e08 <col:73>
+| |-PackedAttr 0x7fed55077e50 <col:49>
+| `-FieldDecl 0x7fed55077dc0 <col:21, col:30> col:30 referenced l 'uint32_t':'unsigned int'
+|-FunctionDecl 0x7fed55078010 <line:7:1, col:77> col:24 used NEG_USR32 'uint32_t (uint32_t, int8_t)' static inline
+| |-ParmVarDecl 0x7fed55077e70 <col:34, col:43> col:43 used a 'uint32_t':'unsigned int'
+| |-ParmVarDecl 0x7fed55077f00 <col:46, col:53> col:53 used s 'int8_t':'signed char'
+| `-CompoundStmt 0x7fed55078238 <col:55, col:77>
+|   `-ReturnStmt 0x7fed55078220 <col:56, col:75>
+|     `-BinaryOperator 0x7fed550781f8 <col:63, col:75> 'uint32_t':'unsigned int' '<<'
+|       |-ImplicitCastExpr 0x7fed550781e0 <col:63> 'uint32_t':'unsigned int' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fed550780f8 <col:63> 'uint32_t':'unsigned int' lvalue ParmVar 0x7fed55077e70 'a' 'uint32_t':'unsigned int'
+|       `-ParenExpr 0x7fed550781c0 <col:68, col:75> 'int'
+|         `-BinaryOperator 0x7fed55078198 <col:69, col:74> 'int' '-'
+|           |-IntegerLiteral 0x7fed55078120 <col:69> 'int' 32
+|           `-ImplicitCastExpr 0x7fed55078180 <col:74> 'int' <IntegralCast>
+|             `-ImplicitCastExpr 0x7fed55078168 <col:74> 'int8_t':'signed char' <LValueToRValue>
+|               `-DeclRefExpr 0x7fed55078140 <col:74> 'int8_t':'signed char' lvalue ParmVar 0x7fed55077f00 's' 'int8_t':'signed char'
+|-RecordDecl 0x7fed55078258 <line:8:9, col:78> col:16 struct GetBitContext definition
+| |-FieldDecl 0x7fed55078388 <col:32, col:47> col:47 referenced buffer 'const uint8_t *'
+| |-FieldDecl 0x7fed550783e0 <col:32, col:56> col:56 buffer_end 'const uint8_t *'
+| `-FieldDecl 0x7fed55078440 <col:68, col:72> col:72 referenced index 'int'
+|-TypedefDecl 0x7fed550784e0 <col:1, col:79> col:79 referenced GetBitContext 'struct GetBitContext':'struct GetBitContext'
+| `-ElaboratedType 0x7fed55078490 'struct GetBitContext' sugar
+|   `-RecordType 0x7fed550782e0 'struct GetBitContext'
+|     `-Record 0x7fed55078258 'GetBitContext'
+|-RecordDecl 0x7fed55078550 <line:9:9, col:41> col:16 struct VLC definition
+| `-FieldDecl 0x7fed55078778 <col:21, col:39> col:31 referenced table 'int16_t (*)[2]'
+|-TypedefDecl 0x7fed55078810 <col:1, col:43> col:43 referenced VLC 'struct VLC':'struct VLC'
+| `-ElaboratedType 0x7fed550787c0 'struct VLC' sugar
+|   `-RecordType 0x7fed550785e0 'struct VLC'
+|     `-Record 0x7fed55078550 'VLC'
+|-FunctionDecl 0x7fed55079c00 <line:10:1, line:22:1> line:10:50 used get_vlc2 'int (GetBitContext *, int16_t (*)[2], int, int)' static inline
+| |-ParmVarDecl 0x7fed55078908 <col:59, col:74> col:74 used s 'GetBitContext *'
+| |-ParmVarDecl 0x7fed550789b8 <col:77, col:95> col:87 used table 'int16_t (*)[2]'
+| |-ParmVarDecl 0x7fed55078a30 <col:98, col:102> col:102 used bits 'int'
+| |-ParmVarDecl 0x7fed55078aa8 <col:108, col:112> col:112 used max_depth 'int'
+| |-CompoundStmt 0x7fed55080ee8 <col:123, line:22:1>
+| | |-DeclStmt 0x7fed55079e40 <line:11:5, col:38>
+| | | `-VarDecl 0x7fed55079d18 <col:5, col:33> col:18 used re_index 'unsigned int' cinit
+| | |   `-ImplicitCastExpr 0x7fed55079e28 <col:28, col:33> 'unsigned int' <IntegralCast>
+| | |     `-ImplicitCastExpr 0x7fed55079e10 <col:28, col:33> 'int' <LValueToRValue>
+| | |       `-MemberExpr 0x7fed55079dd8 <col:28, col:33> 'int' lvalue ->index 0x7fed55078440
+| | |         `-ImplicitCastExpr 0x7fed55079dc0 <col:28, col:30> 'GetBitContext *' <LValueToRValue>
+| | |           `-ParenExpr 0x7fed55079da0 <col:28, col:30> 'GetBitContext *' lvalue
+| | |             `-DeclRefExpr 0x7fed55079d78 <col:29> 'GetBitContext *' lvalue ParmVar 0x7fed55078908 's' 'GetBitContext *'
+| | |-DeclStmt 0x7fed55079ef0 <line:12:5, col:20>
+| | | `-VarDecl 0x7fed55079e70 <col:5, col:19> col:9 used re_cache 'int' cinit
+| | |   `-IntegerLiteral 0x7fed55079ed0 <col:19> 'int' 0
+| | `-CompoundStmt 0x7fed55080ea8 <line:13:5, line:21:5>
+| |   |-DeclStmt 0x7fed5507a010 <line:14:9, col:23>
+| |   | |-VarDecl 0x7fed55079f20 <col:9, col:13> col:13 used n 'int'
+| |   | `-VarDecl 0x7fed55079f98 <col:9, col:16> col:16 nb_bits 'int'
+| |   |-DeclStmt 0x7fed5507a0a0 <line:15:9, col:27>
+| |   | `-VarDecl 0x7fed5507a040 <col:9, col:22> col:22 used index 'unsigned int'
+| |   |-BinaryOperator 0x7fed5507a268 <line:16:9, col:40> 'unsigned int' '='
+| |   | |-DeclRefExpr 0x7fed5507a0b8 <col:9> 'unsigned int' lvalue Var 0x7fed5507a040 'index' 'unsigned int'
+| |   | `-CallExpr 0x7fed5507a1d0 <col:16, col:40> 'uint32_t':'unsigned int'
+| |   |   |-ImplicitCastExpr 0x7fed5507a1b8 <col:16> 'uint32_t (*)(uint32_t, int8_t)' <FunctionToPointerDecay>
+| |   |   | `-DeclRefExpr 0x7fed5507a0e0 <col:16> 'uint32_t (uint32_t, int8_t)' Function 0x7fed55078010 'NEG_USR32' 'uint32_t (uint32_t, int8_t)'
+| |   |   |-ImplicitCastExpr 0x7fed5507a220 <col:26> 'uint32_t':'unsigned int' <IntegralCast>
+| |   |   | `-ImplicitCastExpr 0x7fed5507a208 <col:26> 'int' <LValueToRValue>
+| |   |   |   `-DeclRefExpr 0x7fed5507a108 <col:26> 'int' lvalue Var 0x7fed55079e70 're_cache' 'int'
+| |   |   `-ImplicitCastExpr 0x7fed5507a250 <col:36> 'int8_t':'signed char' <IntegralCast>
+| |   |     `-ImplicitCastExpr 0x7fed5507a238 <col:36> 'int' <LValueToRValue>
+| |   |       `-DeclRefExpr 0x7fed5507a130 <col:36> 'int' lvalue ParmVar 0x7fed55078a30 'bits' 'int'
+| |   |-BinaryOperator 0x7fed5507a448 <line:17:9, col:27> 'int' '='
+| |   | |-DeclRefExpr 0x7fed5507a290 <col:9> 'int' lvalue Var 0x7fed55079f20 'n' 'int'
+| |   | `-ImplicitCastExpr 0x7fed5507a430 <col:13, col:27> 'int' <IntegralCast>
+| |   |   `-ImplicitCastExpr 0x7fed5507a418 <col:13, col:27> 'int16_t':'short' <LValueToRValue>
+| |   |     `-ArraySubscriptExpr 0x7fed5507a3f0 <col:13, col:27> 'int16_t':'short' lvalue
+| |   |       |-ImplicitCastExpr 0x7fed5507a3d8 <col:13, col:24> 'int16_t *' <ArrayToPointerDecay>
+| |   |       | `-ArraySubscriptExpr 0x7fed5507a338 <col:13, col:24> 'int16_t [2]':'int16_t [2]' lvalue
+| |   |       |   |-ImplicitCastExpr 0x7fed5507a308 <col:13> 'int16_t (*)[2]' <LValueToRValue>
+| |   |       |   | `-DeclRefExpr 0x7fed5507a2b8 <col:13> 'int16_t (*)[2]' lvalue ParmVar 0x7fed550789b8 'table' 'int16_t (*)[2]'
+| |   |       |   `-ImplicitCastExpr 0x7fed5507a320 <col:19> 'unsigned int' <LValueToRValue>
+| |   |       |     `-DeclRefExpr 0x7fed5507a2e0 <col:19> 'unsigned int' lvalue Var 0x7fed5507a040 'index' 'unsigned int'
+| |   |       `-IntegerLiteral 0x7fed5507a360 <col:26> 'int' 1
+| |   `-IfStmt 0x7fed55080e70 <line:18:9, line:20:9>
+| |     |-<<<NULL>>>
+| |     |-<<<NULL>>>
+| |     |-BinaryOperator 0x7fed5507a580 <line:18:12, col:33> 'int' '&&'
+| |     | |-BinaryOperator 0x7fed5507a4d0 <col:12, col:24> 'int' '>'
+| |     | | |-ImplicitCastExpr 0x7fed5507a4b8 <col:12> 'int' <LValueToRValue>
+| |     | | | `-DeclRefExpr 0x7fed5507a470 <col:12> 'int' lvalue ParmVar 0x7fed55078aa8 'max_depth' 'int'
+| |     | | `-IntegerLiteral 0x7fed5507a498 <col:24> 'int' 1
+| |     | `-BinaryOperator 0x7fed5507a558 <col:29, col:33> 'int' '<'
+| |     |   |-ImplicitCastExpr 0x7fed5507a540 <col:29> 'int' <LValueToRValue>
+| |     |   | `-DeclRefExpr 0x7fed5507a4f8 <col:29> 'int' lvalue Var 0x7fed55079f20 'n' 'int'
+| |     |   `-IntegerLiteral 0x7fed5507a520 <col:33> 'int' 0
+| |     |-CompoundStmt 0x7fed55080e50 <col:35, line:20:9>
+| |     | `-BinaryOperator 0x7fed55080e28 <line:19:13, col:133> 'int' '='
+| |     |   |-DeclRefExpr 0x7fed5507a5a8 <col:13> 'int' lvalue Var 0x7fed55079e70 're_cache' 'int'
+| |     |   `-BinaryOperator 0x7fed55080e00 <col:23, col:133> 'int' '<<'
+| |     |     |-CallExpr 0x7fed5507aaf0 <col:23, col:114> 'int'
+| |     |     | |-ImplicitCastExpr 0x7fed5507aad8 <col:23> 'int (*)()' <FunctionToPointerDecay>
+| |     |     | | `-DeclRefExpr 0x7fed5507a6b8 <col:23> 'int ()' Function 0x7fed5507a620 'bswap_32' 'int ()'
+| |     |     | `-ImplicitCastExpr 0x7fed5507ab20 <col:32, col:113> 'uint32_t':'unsigned int' <LValueToRValue>
+| |     |     |   `-ParenExpr 0x7fed5507aa90 <col:32, col:113> 'const uint32_t':'const unsigned int' lvalue
+| |     |     |     `-MemberExpr 0x7fed5507aa58 <col:33, col:112> 'const uint32_t':'const unsigned int' lvalue ->l 0x7fed55077dc0
+| |     |     |       `-ParenExpr 0x7fed5507aa38 <col:33, col:109> 'const union unaligned_32 *'
+| |     |     |         `-CStyleCastExpr 0x7fed5507aa10 <col:34, col:108> 'const union unaligned_32 *' <BitCast>
+| |     |     |           `-ParenExpr 0x7fed5507a9f0 <col:63, col:108> 'const uint8_t *'
+| |     |     |             `-BinaryOperator 0x7fed5507a8e8 <col:64, col:107> 'const uint8_t *' '+'
+| |     |     |               |-ParenExpr 0x7fed5507a820 <col:64, col:93> 'const uint8_t *'
+| |     |     |               | `-CStyleCastExpr 0x7fed5507a7f8 <col:65, col:87> 'const uint8_t *' <NoOp>
+| |     |     |               |   `-ImplicitCastExpr 0x7fed5507a7b8 <col:82, col:87> 'const uint8_t *' <LValueToRValue>
+| |     |     |               |     `-MemberExpr 0x7fed5507a770 <col:82, col:87> 'const uint8_t *' lvalue ->buffer 0x7fed55078388
+| |     |     |               |       `-ImplicitCastExpr 0x7fed5507a758 <col:82, col:84> 'GetBitContext *' <LValueToRValue>
+| |     |     |               |         `-ParenExpr 0x7fed5507a738 <col:82, col:84> 'GetBitContext *' lvalue
+| |     |     |               |           `-DeclRefExpr 0x7fed5507a6e0 <col:83> 'GetBitContext *' lvalue ParmVar 0x7fed55078908 's' 'GetBitContext *'
+| |     |     |               `-ParenExpr 0x7fed5507a8c8 <col:95, col:107> 'unsigned int'
+| |     |     |                 `-BinaryOperator 0x7fed5507a8a0 <col:96, col:106> 'unsigned int' '>>'
+| |     |     |                   |-ImplicitCastExpr 0x7fed5507a888 <col:96> 'unsigned int' <LValueToRValue>
+| |     |     |                   | `-DeclRefExpr 0x7fed5507a840 <col:96> 'unsigned int' lvalue Var 0x7fed55079d18 're_index' 'unsigned int'
+| |     |     |                   `-IntegerLiteral 0x7fed5507a868 <col:106> 'int' 3
+| |     |     `-ParenExpr 0x7fed5507abd8 <col:119, col:133> 'unsigned int'
+| |     |       `-BinaryOperator 0x7fed5507abb0 <col:120, col:129> 'unsigned int' '&'
+| |     |         |-ImplicitCastExpr 0x7fed5507ab80 <col:120> 'unsigned int' <LValueToRValue>
+| |     |         | `-DeclRefExpr 0x7fed5507ab38 <col:120> 'unsigned int' lvalue Var 0x7fed55079d18 're_index' 'unsigned int'
+| |     |         `-ImplicitCastExpr 0x7fed5507ab98 <col:129> 'unsigned int' <IntegralCast>
+| |     |           `-IntegerLiteral 0x7fed5507ab60 <col:129> 'int' 7
+| |     `-<<<NULL>>>
+| `-AlwaysInlineAttr 0x7fed55079cb8 <line:10:23> always_inline
+|-FunctionDecl 0x7fed5507a620 <<invalid sloc>> line:19:23 implicit used bswap_32 'int ()'
+|-RecordDecl 0x7fed55080f18 <line:23:9, col:111> col:16 struct HYuvContext definition
+| |-FieldDecl 0x7fed55080fd0 <col:28, col:42> col:42 referenced gb 'GetBitContext':'struct GetBitContext'
+| |-FieldDecl 0x7fed55081030 <col:46, col:50> col:50 referenced decorrelate 'int'
+| |-FieldDecl 0x7fed55081090 <col:63, col:67> col:67 referenced bitstream_bpp 'int'
+| |-FieldDecl 0x7fed550811f8 <col:82, col:97> col:91 referenced temp 'uint8_t *[3]'
+| `-FieldDecl 0x7fed55081368 <col:100, col:109> col:104 referenced vlc 'VLC [6]'
+|-TypedefDecl 0x7fed55081460 <col:1, col:113> col:113 referenced HYuvContext 'struct HYuvContext':'struct HYuvContext'
+| `-ElaboratedType 0x7fed55081410 'struct HYuvContext' sugar
+|   `-RecordType 0x7fed55080fa0 'struct HYuvContext'
+|     `-Record 0x7fed55080f18 'HYuvContext'
+|-FunctionDecl 0x7fed55081800 <line:24:1, line:32:1> line:24:51 used decode_bgr_1 'void (HYuvContext *, int, int, int)' static inline
+| |-ParmVarDecl 0x7fed55081558 <col:64, col:77> col:77 used s 'HYuvContext *'
+| |-ParmVarDecl 0x7fed550815d0 <col:80, col:84> col:84 count 'int'
+| |-ParmVarDecl 0x7fed55081648 <col:91, col:95> col:95 decorrelate 'int'
+| |-ParmVarDecl 0x7fed550816c0 <col:108, col:112> col:112 alpha 'int'
+| |-CompoundStmt 0x7fed55082cd8 <col:118, line:32:1>
+| | |-DeclStmt 0x7fed55081978 <line:25:5, col:10>
+| | | `-VarDecl 0x7fed55081918 <col:5, col:9> col:9 used i 'int'
+| | |-DeclStmt 0x7fed55081d40 <line:26:9, col:60>
+| | | `-VarDecl 0x7fed550819a8 <col:9, col:59> col:13 used code 'int' cinit
+| | |   `-CallExpr 0x7fed55081ce0 <col:20, col:59> 'int'
+| | |     |-ImplicitCastExpr 0x7fed55081cc8 <col:20> 'int (*)(GetBitContext *, int16_t (*)[2], int, int)' <FunctionToPointerDecay>
+| | |     | `-DeclRefExpr 0x7fed55081a08 <col:20> 'int (GetBitContext *, int16_t (*)[2], int, int)' Function 0x7fed55079c00 'get_vlc2' 'int (GetBitContext *, int16_t (*)[2], int, int)'
+| | |     |-UnaryOperator 0x7fed55081aa8 <col:29, col:33> 'GetBitContext *' prefix '&'
+| | |     | `-MemberExpr 0x7fed55081a70 <col:30, col:33> 'GetBitContext':'struct GetBitContext' lvalue ->gb 0x7fed55080fd0
+| | |     |   `-ImplicitCastExpr 0x7fed55081a58 <col:30> 'HYuvContext *' <LValueToRValue>
+| | |     |     `-DeclRefExpr 0x7fed55081a30 <col:30> 'HYuvContext *' lvalue ParmVar 0x7fed55081558 's' 'HYuvContext *'
+| | |     |-ImplicitCastExpr 0x7fed55081d28 <col:37, col:47> 'int16_t (*)[2]' <LValueToRValue>
+| | |     | `-MemberExpr 0x7fed55081bf8 <col:37, col:47> 'int16_t (*)[2]' lvalue .table 0x7fed55078778
+| | |     |   `-ArraySubscriptExpr 0x7fed55081bd0 <col:37, col:45> 'VLC':'struct VLC' lvalue
+| | |     |     |-ImplicitCastExpr 0x7fed55081bb8 <col:37, col:40> 'VLC *' <ArrayToPointerDecay>
+| | |     |     | `-MemberExpr 0x7fed55081b08 <col:37, col:40> 'VLC [6]' lvalue ->vlc 0x7fed55081368
+| | |     |     |   `-ImplicitCastExpr 0x7fed55081af0 <col:37> 'HYuvContext *' <LValueToRValue>
+| | |     |     |     `-DeclRefExpr 0x7fed55081ac8 <col:37> 'HYuvContext *' lvalue ParmVar 0x7fed55081558 's' 'HYuvContext *'
+| | |     |     `-IntegerLiteral 0x7fed55081b40 <col:44> 'int' 3
+| | |     |-IntegerLiteral 0x7fed55081c30 <col:54> 'int' 11
+| | |     `-IntegerLiteral 0x7fed55081c50 <col:58> 'int' 1
+| | `-IfStmt 0x7fed55082ca0 <line:27:9, line:31:9>
+| |   |-<<<NULL>>>
+| |   |-<<<NULL>>>
+| |   |-BinaryOperator 0x7fed55081dd8 <line:27:12, col:21> 'int' '!='
+| |   | |-ImplicitCastExpr 0x7fed55081dc0 <col:12> 'int' <LValueToRValue>
+| |   | | `-DeclRefExpr 0x7fed55081d58 <col:12> 'int' lvalue Var 0x7fed550819a8 'code' 'int'
+| |   | `-UnaryOperator 0x7fed55081da0 <col:20, col:21> 'int' prefix '-'
+| |   |   `-IntegerLiteral 0x7fed55081d80 <col:21> 'int' 1
+| |   |-CompoundStmt 0x7fed55082c70 <col:23, line:31:9>
+| |   | |-BinaryOperator 0x7fed550822e8 <line:28:13, col:72> 'uint8_t':'unsigned char' '='
+| |   | | |-ArraySubscriptExpr 0x7fed55082020 <col:13, col:29> 'uint8_t':'unsigned char' lvalue
+| |   | | | |-ImplicitCastExpr 0x7fed55082008 <col:13, col:22> 'uint8_t *' <LValueToRValue>
+| |   | | | | `-ArraySubscriptExpr 0x7fed55081f10 <col:13, col:22> 'uint8_t *' lvalue
+| |   | | | |   |-ImplicitCastExpr 0x7fed55081ef8 <col:13, col:16> 'uint8_t **' <ArrayToPointerDecay>
+| |   | | | |   | `-MemberExpr 0x7fed55081e40 <col:13, col:16> 'uint8_t *[3]' lvalue ->temp 0x7fed550811f8
+| |   | | | |   |   `-ImplicitCastExpr 0x7fed55081e28 <col:13> 'HYuvContext *' <LValueToRValue>
+| |   | | | |   |     `-DeclRefExpr 0x7fed55081e00 <col:13> 'HYuvContext *' lvalue ParmVar 0x7fed55081558 's' 'HYuvContext *'
+| |   | | | |   `-IntegerLiteral 0x7fed55081e78 <col:21> 'int' 0
+| |   | | | `-BinaryOperator 0x7fed55081fe0 <col:24, col:28> 'int' '+'
+| |   | | |   |-BinaryOperator 0x7fed55081f98 <col:24, col:26> 'int' '*'
+| |   | | |   | |-IntegerLiteral 0x7fed55081f38 <col:24> 'int' 4
+| |   | | |   | `-ImplicitCastExpr 0x7fed55081f80 <col:26> 'int' <LValueToRValue>
+| |   | | |   |   `-DeclRefExpr 0x7fed55081f58 <col:26> 'int' lvalue Var 0x7fed55081918 'i' 'int'
+| |   | | |   `-IntegerLiteral 0x7fed55081fc0 <col:28> 'int' 0
+| |   | | `-ImplicitCastExpr 0x7fed550822d0 <col:33, col:72> 'uint8_t':'unsigned char' <IntegralCast>
+| |   | |   `-CallExpr 0x7fed55082270 <col:33, col:72> 'int'
+| |   | |     |-ImplicitCastExpr 0x7fed55082258 <col:33> 'int (*)(GetBitContext *, int16_t (*)[2], int, int)' <FunctionToPointerDecay>
+| |   | |     | `-DeclRefExpr 0x7fed55082048 <col:33> 'int (GetBitContext *, int16_t (*)[2], int, int)' Function 0x7fed55079c00 'get_vlc2' 'int (GetBitContext *, int16_t (*)[2], int, int)'
+| |   | |     |-UnaryOperator 0x7fed550820e8 <col:42, col:46> 'GetBitContext *' prefix '&'
+| |   | |     | `-MemberExpr 0x7fed550820b0 <col:43, col:46> 'GetBitContext':'struct GetBitContext' lvalue ->gb 0x7fed55080fd0
+| |   | |     |   `-ImplicitCastExpr 0x7fed55082098 <col:43> 'HYuvContext *' <LValueToRValue>
+| |   | |     |     `-DeclRefExpr 0x7fed55082070 <col:43> 'HYuvContext *' lvalue ParmVar 0x7fed55081558 's' 'HYuvContext *'
+| |   | |     |-ImplicitCastExpr 0x7fed550822b8 <col:50, col:60> 'int16_t (*)[2]' <LValueToRValue>
+| |   | |     | `-MemberExpr 0x7fed550821e0 <col:50, col:60> 'int16_t (*)[2]' lvalue .table 0x7fed55078778
+| |   | |     |   `-ArraySubscriptExpr 0x7fed550821b8 <col:50, col:58> 'VLC':'struct VLC' lvalue
+| |   | |     |     |-ImplicitCastExpr 0x7fed550821a0 <col:50, col:53> 'VLC *' <ArrayToPointerDecay>
+| |   | |     |     | `-MemberExpr 0x7fed55082148 <col:50, col:53> 'VLC [6]' lvalue ->vlc 0x7fed55081368
+| |   | |     |     |   `-ImplicitCastExpr 0x7fed55082130 <col:50> 'HYuvContext *' <LValueToRValue>
+| |   | |     |     |     `-DeclRefExpr 0x7fed55082108 <col:50> 'HYuvContext *' lvalue ParmVar 0x7fed55081558 's' 'HYuvContext *'
+| |   | |     |     `-IntegerLiteral 0x7fed55082180 <col:57> 'int' 0
+| |   | |     |-IntegerLiteral 0x7fed55082218 <col:67> 'int' 11
+| |   | |     `-IntegerLiteral 0x7fed55082238 <col:71> 'int' 3
+| |   | |-BinaryOperator 0x7fed55082798 <line:29:13, col:72> 'uint8_t':'unsigned char' '='
+| |   | | |-ArraySubscriptExpr 0x7fed550824d0 <col:13, col:29> 'uint8_t':'unsigned char' lvalue
+| |   | | | |-ImplicitCastExpr 0x7fed550824b8 <col:13, col:22> 'uint8_t *' <LValueToRValue>
+| |   | | | | `-ArraySubscriptExpr 0x7fed550823c0 <col:13, col:22> 'uint8_t *' lvalue
+| |   | | | |   |-ImplicitCastExpr 0x7fed550823a8 <col:13, col:16> 'uint8_t **' <ArrayToPointerDecay>
+| |   | | | |   | `-MemberExpr 0x7fed55082350 <col:13, col:16> 'uint8_t *[3]' lvalue ->temp 0x7fed550811f8
+| |   | | | |   |   `-ImplicitCastExpr 0x7fed55082338 <col:13> 'HYuvContext *' <LValueToRValue>
+| |   | | | |   |     `-DeclRefExpr 0x7fed55082310 <col:13> 'HYuvContext *' lvalue ParmVar 0x7fed55081558 's' 'HYuvContext *'
+| |   | | | |   `-IntegerLiteral 0x7fed55082388 <col:21> 'int' 0
+| |   | | | `-BinaryOperator 0x7fed55082490 <col:24, col:28> 'int' '+'
+| |   | | |   |-BinaryOperator 0x7fed55082448 <col:24, col:26> 'int' '*'
+| |   | | |   | |-IntegerLiteral 0x7fed550823e8 <col:24> 'int' 4
+| |   | | |   | `-ImplicitCastExpr 0x7fed55082430 <col:26> 'int' <LValueToRValue>
+| |   | | |   |   `-DeclRefExpr 0x7fed55082408 <col:26> 'int' lvalue Var 0x7fed55081918 'i' 'int'
+| |   | | |   `-IntegerLiteral 0x7fed55082470 <col:28> 'int' 1
+| |   | | `-ImplicitCastExpr 0x7fed55082780 <col:33, col:72> 'uint8_t':'unsigned char' <IntegralCast>
+| |   | |   `-CallExpr 0x7fed55082720 <col:33, col:72> 'int'
+| |   | |     |-ImplicitCastExpr 0x7fed55082708 <col:33> 'int (*)(GetBitContext *, int16_t (*)[2], int, int)' <FunctionToPointerDecay>
+| |   | |     | `-DeclRefExpr 0x7fed550824f8 <col:33> 'int (GetBitContext *, int16_t (*)[2], int, int)' Function 0x7fed55079c00 'get_vlc2' 'int (GetBitContext *, int16_t (*)[2], int, int)'
+| |   | |     |-UnaryOperator 0x7fed55082598 <col:42, col:46> 'GetBitContext *' prefix '&'
+| |   | |     | `-MemberExpr 0x7fed55082560 <col:43, col:46> 'GetBitContext':'struct GetBitContext' lvalue ->gb 0x7fed55080fd0
+| |   | |     |   `-ImplicitCastExpr 0x7fed55082548 <col:43> 'HYuvContext *' <LValueToRValue>
+| |   | |     |     `-DeclRefExpr 0x7fed55082520 <col:43> 'HYuvContext *' lvalue ParmVar 0x7fed55081558 's' 'HYuvContext *'
+| |   | |     |-ImplicitCastExpr 0x7fed55082768 <col:50, col:60> 'int16_t (*)[2]' <LValueToRValue>
+| |   | |     | `-MemberExpr 0x7fed55082690 <col:50, col:60> 'int16_t (*)[2]' lvalue .table 0x7fed55078778
+| |   | |     |   `-ArraySubscriptExpr 0x7fed55082668 <col:50, col:58> 'VLC':'struct VLC' lvalue
+| |   | |     |     |-ImplicitCastExpr 0x7fed55082650 <col:50, col:53> 'VLC *' <ArrayToPointerDecay>
+| |   | |     |     | `-MemberExpr 0x7fed550825f8 <col:50, col:53> 'VLC [6]' lvalue ->vlc 0x7fed55081368
+| |   | |     |     |   `-ImplicitCastExpr 0x7fed550825e0 <col:50> 'HYuvContext *' <LValueToRValue>
+| |   | |     |     |     `-DeclRefExpr 0x7fed550825b8 <col:50> 'HYuvContext *' lvalue ParmVar 0x7fed55081558 's' 'HYuvContext *'
+| |   | |     |     `-IntegerLiteral 0x7fed55082630 <col:57> 'int' 1
+| |   | |     |-IntegerLiteral 0x7fed550826c8 <col:67> 'int' 11
+| |   | |     `-IntegerLiteral 0x7fed550826e8 <col:71> 'int' 3
+| |   | `-BinaryOperator 0x7fed55082c48 <line:30:13, col:72> 'uint8_t':'unsigned char' '='
+| |   |   |-ArraySubscriptExpr 0x7fed55082980 <col:13, col:29> 'uint8_t':'unsigned char' lvalue
+| |   |   | |-ImplicitCastExpr 0x7fed55082968 <col:13, col:22> 'uint8_t *' <LValueToRValue>
+| |   |   | | `-ArraySubscriptExpr 0x7fed55082870 <col:13, col:22> 'uint8_t *' lvalue
+| |   |   | |   |-ImplicitCastExpr 0x7fed55082858 <col:13, col:16> 'uint8_t **' <ArrayToPointerDecay>
+| |   |   | |   | `-MemberExpr 0x7fed55082800 <col:13, col:16> 'uint8_t *[3]' lvalue ->temp 0x7fed550811f8
+| |   |   | |   |   `-ImplicitCastExpr 0x7fed550827e8 <col:13> 'HYuvContext *' <LValueToRValue>
+| |   |   | |   |     `-DeclRefExpr 0x7fed550827c0 <col:13> 'HYuvContext *' lvalue ParmVar 0x7fed55081558 's' 'HYuvContext *'
+| |   |   | |   `-IntegerLiteral 0x7fed55082838 <col:21> 'int' 0
+| |   |   | `-BinaryOperator 0x7fed55082940 <col:24, col:28> 'int' '+'
+| |   |   |   |-BinaryOperator 0x7fed550828f8 <col:24, col:26> 'int' '*'
+| |   |   |   | |-IntegerLiteral 0x7fed55082898 <col:24> 'int' 4
+| |   |   |   | `-ImplicitCastExpr 0x7fed550828e0 <col:26> 'int' <LValueToRValue>
+| |   |   |   |   `-DeclRefExpr 0x7fed550828b8 <col:26> 'int' lvalue Var 0x7fed55081918 'i' 'int'
+| |   |   |   `-IntegerLiteral 0x7fed55082920 <col:28> 'int' 2
+| |   |   `-ImplicitCastExpr 0x7fed55082c30 <col:33, col:72> 'uint8_t':'unsigned char' <IntegralCast>
+| |   |     `-CallExpr 0x7fed55082bd0 <col:33, col:72> 'int'
+| |   |       |-ImplicitCastExpr 0x7fed55082bb8 <col:33> 'int (*)(GetBitContext *, int16_t (*)[2], int, int)' <FunctionToPointerDecay>
+| |   |       | `-DeclRefExpr 0x7fed550829a8 <col:33> 'int (GetBitContext *, int16_t (*)[2], int, int)' Function 0x7fed55079c00 'get_vlc2' 'int (GetBitContext *, int16_t (*)[2], int, int)'
+| |   |       |-UnaryOperator 0x7fed55082a48 <col:42, col:46> 'GetBitContext *' prefix '&'
+| |   |       | `-MemberExpr 0x7fed55082a10 <col:43, col:46> 'GetBitContext':'struct GetBitContext' lvalue ->gb 0x7fed55080fd0
+| |   |       |   `-ImplicitCastExpr 0x7fed550829f8 <col:43> 'HYuvContext *' <LValueToRValue>
+| |   |       |     `-DeclRefExpr 0x7fed550829d0 <col:43> 'HYuvContext *' lvalue ParmVar 0x7fed55081558 's' 'HYuvContext *'
+| |   |       |-ImplicitCastExpr 0x7fed55082c18 <col:50, col:60> 'int16_t (*)[2]' <LValueToRValue>
+| |   |       | `-MemberExpr 0x7fed55082b40 <col:50, col:60> 'int16_t (*)[2]' lvalue .table 0x7fed55078778
+| |   |       |   `-ArraySubscriptExpr 0x7fed55082b18 <col:50, col:58> 'VLC':'struct VLC' lvalue
+| |   |       |     |-ImplicitCastExpr 0x7fed55082b00 <col:50, col:53> 'VLC *' <ArrayToPointerDecay>
+| |   |       |     | `-MemberExpr 0x7fed55082aa8 <col:50, col:53> 'VLC [6]' lvalue ->vlc 0x7fed55081368
+| |   |       |     |   `-ImplicitCastExpr 0x7fed55082a90 <col:50> 'HYuvContext *' <LValueToRValue>
+| |   |       |     |     `-DeclRefExpr 0x7fed55082a68 <col:50> 'HYuvContext *' lvalue ParmVar 0x7fed55081558 's' 'HYuvContext *'
+| |   |       |     `-IntegerLiteral 0x7fed55082ae0 <col:57> 'int' 2
+| |   |       |-IntegerLiteral 0x7fed55082b78 <col:67> 'int' 11
+| |   |       `-IntegerLiteral 0x7fed55082b98 <col:71> 'int' 3
+| |   `-<<<NULL>>>
+| `-AlwaysInlineAttr 0x7fed550818b8 <line:24:23> always_inline
+`-FunctionDecl 0x7fed55082eb0 <line:33:1, line:38:1> line:33:6 decode_bgr_bitstream 'void (HYuvContext *, int)'
+  |-ParmVarDecl 0x7fed55082d18 <col:27, col:40> col:40 used s 'HYuvContext *'
+  |-ParmVarDecl 0x7fed55082d90 <col:43, col:47> col:47 used count 'int'
+  `-CompoundStmt 0x7fed55083440 <col:53, line:38:1>
+    `-IfStmt 0x7fed55083408 <line:34:5, line:37:5>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7fed55082fd0 <line:34:8, col:11> 'int' <LValueToRValue>
+      | `-MemberExpr 0x7fed55082f98 <col:8, col:11> 'int' lvalue ->decorrelate 0x7fed55081030
+      |   `-ImplicitCastExpr 0x7fed55082f80 <col:8> 'HYuvContext *' <LValueToRValue>
+      |     `-DeclRefExpr 0x7fed55082f58 <col:8> 'HYuvContext *' lvalue ParmVar 0x7fed55082d18 's' 'HYuvContext *'
+      |-CompoundStmt 0x7fed550833e8 <col:23, line:37:5>
+      | `-IfStmt 0x7fed550833b0 <line:35:9, line:36:53>
+      |   |-<<<NULL>>>
+      |   |-<<<NULL>>>
+      |   |-BinaryOperator 0x7fed55083098 <line:35:12, col:30> 'int' '=='
+      |   | |-ImplicitCastExpr 0x7fed55083080 <col:12, col:15> 'int' <LValueToRValue>
+      |   | | `-MemberExpr 0x7fed55083028 <col:12, col:15> 'int' lvalue ->bitstream_bpp 0x7fed55081090
+      |   | |   `-ImplicitCastExpr 0x7fed55083010 <col:12> 'HYuvContext *' <LValueToRValue>
+      |   | |     `-DeclRefExpr 0x7fed55082fe8 <col:12> 'HYuvContext *' lvalue ParmVar 0x7fed55082d18 's' 'HYuvContext *'
+      |   | `-IntegerLiteral 0x7fed55083060 <col:30> 'int' 24
+      |   |-CallExpr 0x7fed550831f0 <col:34, col:61> 'void'
+      |   | |-ImplicitCastExpr 0x7fed550831d8 <col:34> 'void (*)(HYuvContext *, int, int, int)' <FunctionToPointerDecay>
+      |   | | `-DeclRefExpr 0x7fed550830c0 <col:34> 'void (HYuvContext *, int, int, int)' Function 0x7fed55081800 'decode_bgr_1' 'void (HYuvContext *, int, int, int)'
+      |   | |-ImplicitCastExpr 0x7fed55083238 <col:47> 'HYuvContext *' <LValueToRValue>
+      |   | | `-DeclRefExpr 0x7fed550830e8 <col:47> 'HYuvContext *' lvalue ParmVar 0x7fed55082d18 's' 'HYuvContext *'
+      |   | |-ImplicitCastExpr 0x7fed55083250 <col:50> 'int' <LValueToRValue>
+      |   | | `-DeclRefExpr 0x7fed55083110 <col:50> 'int' lvalue ParmVar 0x7fed55082d90 'count' 'int'
+      |   | |-IntegerLiteral 0x7fed55083138 <col:57> 'int' 1
+      |   | `-IntegerLiteral 0x7fed55083158 <col:60> 'int' 0
+      |   `-CallExpr 0x7fed55083338 <line:36:26, col:53> 'void'
+      |     |-ImplicitCastExpr 0x7fed55083320 <col:26> 'void (*)(HYuvContext *, int, int, int)' <FunctionToPointerDecay>
+      |     | `-DeclRefExpr 0x7fed55083268 <col:26> 'void (HYuvContext *, int, int, int)' Function 0x7fed55081800 'decode_bgr_1' 'void (HYuvContext *, int, int, int)'
+      |     |-ImplicitCastExpr 0x7fed55083380 <col:39> 'HYuvContext *' <LValueToRValue>
+      |     | `-DeclRefExpr 0x7fed55083290 <col:39> 'HYuvContext *' lvalue ParmVar 0x7fed55082d18 's' 'HYuvContext *'
+      |     |-ImplicitCastExpr 0x7fed55083398 <col:42> 'int' <LValueToRValue>
+      |     | `-DeclRefExpr 0x7fed550832b8 <col:42> 'int' lvalue ParmVar 0x7fed55082d90 'count' 'int'
+      |     |-IntegerLiteral 0x7fed550832e0 <col:49> 'int' 1
+      |     `-IntegerLiteral 0x7fed55083300 <col:52> 'int' 1
+      `-<<<NULL>>>

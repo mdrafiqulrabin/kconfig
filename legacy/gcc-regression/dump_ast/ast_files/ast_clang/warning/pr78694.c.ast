@@ -1,0 +1,373 @@
+c_files/pr78694.c:116:18: warning: cast to 'struct gomp_taskgroup *' from smaller integer type 'int' [-Wint-to-pointer-cast]
+  v->taskgroup = (struct gomp_taskgroup *) m;
+                 ^
+c_files/pr78694.c:98:27: warning: variable 'x' is uninitialized when used within its own initialization [-Wuninitialized]
+            struct gomp_task x = x;
+                             ~   ^
+2 warnings generated.
+TranslationUnitDecl 0x7fe07a8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe07a826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe07a826740 '__int128'
+|-TypedefDecl 0x7fe07a826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe07a826760 'unsigned __int128'
+|-TypedefDecl 0x7fe07a826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe07a826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe07a826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe07a826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe07a826dc0 'char *'
+|   `-BuiltinType 0x7fe07a826560 'char'
+|-TypedefDecl 0x7fe07a8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe07a827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe07a826ee0 'struct __va_list_tag'
+|     `-Record 0x7fe07a826e58 '__va_list_tag'
+|-EnumDecl 0x7fe07a827120 <c_files/pr78694.c:3:1, line:8:1> line:3:1
+| |-EnumConstantDecl 0x7fe07a874c00 <line:5:3> col:3 MEMMODEL_RELAXED 'int'
+| |-EnumConstantDecl 0x7fe07a874c48 <line:6:3> col:3 referenced MEMMODEL_ACQUIRE 'int'
+| `-EnumConstantDecl 0x7fe07a874c90 <line:7:3> col:3 referenced PRIORITY_INSERT_END 'int'
+|-EnumDecl 0x7fe07a874cd8 <line:9:1, line:13:1> line:9:1
+| |-EnumConstantDecl 0x7fe07a874d90 <line:11:3> col:3 referenced PQ_CHILDREN 'int'
+| `-EnumConstantDecl 0x7fe07a874dd8 <line:12:3> col:3 referenced PQ_TASKGROUP 'int'
+|-RecordDecl 0x7fe07a874e20 <line:14:1, line:17:1> line:14:8 struct gomp_team_state definition
+| |-RecordDecl 0x7fe07a874ed0 parent 0x7fe07a8264d0 <line:16:3, col:10> col:10 struct gomp_team
+| `-FieldDecl 0x7fe07a875040 <col:3, col:21> col:21 referenced team 'struct gomp_team *'
+|-EnumDecl 0x7fe07a875088 <line:18:1, line:22:1> line:18:6 gomp_task_kind
+| |-EnumConstantDecl 0x7fe07a875140 <line:20:3> col:3 GOMP_TASK_UNDEFERRED 'int'
+| `-EnumConstantDecl 0x7fe07a875188 <line:21:3> col:3 referenced GOMP_TASK_WAITING 'int'
+|-RecordDecl 0x7fe07a8751d0 <line:23:1, line:26:1> line:23:8 struct gomp_taskwait definition
+| `-FieldDecl 0x7fe07a875290 <line:25:3, col:9> col:9 referenced in_taskwait '_Bool'
+|-RecordDecl 0x7fe07a8752d8 <line:27:1, line:36:1> line:27:8 struct gomp_task definition
+| |-FieldDecl 0x7fe07a875430 <line:29:3, col:21> col:21 parent 'struct gomp_task *'
+| |-FieldDecl 0x7fe07a875490 <line:30:3, col:7> col:7 children_queue 'int'
+| |-RecordDecl 0x7fe07a8754d8 parent 0x7fe07a8264d0 <line:31:3, col:10> col:10 struct gomp_taskgroup
+| |-FieldDecl 0x7fe07a875640 <col:3, col:26> col:26 referenced taskgroup 'struct gomp_taskgroup *'
+| |-FieldDecl 0x7fe07a8756a0 <line:32:3, col:7> col:7 dependers 'int'
+| |-FieldDecl 0x7fe07a875740 <line:33:3, col:24> col:24 referenced taskwait 'struct gomp_taskwait':'struct gomp_taskwait'
+| |-FieldDecl 0x7fe07a8757e0 <line:34:3, col:23> col:23 referenced kind 'enum gomp_task_kind':'enum gomp_task_kind'
+| `-FieldDecl 0x7fe07a875838 <line:35:3, col:9> col:9 in_tied_task '_Bool'
+|-VarDecl 0x7fe07a8758a0 <line:27:1, line:36:3> col:3 used j 'struct gomp_task':'struct gomp_task'
+|-VarDecl 0x7fe07a875960 <line:27:1, line:36:6> col:6 used q 'struct gomp_task':'struct gomp_task'
+|-VarDecl 0x7fe07a8759e8 <line:27:1, line:36:10> col:10 used n 'struct gomp_task *'
+|-RecordDecl 0x7fe07a875a70 prev 0x7fe07a8754d8 <line:37:1, line:41:1> line:37:8 struct gomp_taskgroup definition
+| |-FieldDecl 0x7fe07a875b08 <line:39:3, col:9> col:9 referenced in_taskgroup_wait '_Bool'
+| `-FieldDecl 0x7fe07a875b68 <line:40:3, col:7> col:7 referenced num_children 'int'
+|-VarDecl 0x7fe07a875c00 <line:37:1, line:41:3> col:3 used l 'struct gomp_taskgroup':'struct gomp_taskgroup'
+|-RecordDecl 0x7fe07a875c78 prev 0x7fe07a874ed0 <line:42:1, line:46:1> line:42:8 struct gomp_team definition
+| |-FieldDecl 0x7fe07a875d18 <line:44:3, col:7> col:7 referenced task_queue 'int'
+| `-FieldDecl 0x7fe07a875d78 <line:45:3, col:7> col:7 referenced task_running_count 'int'
+|-RecordDecl 0x7fe07a875dc0 <line:47:1, line:51:1> line:47:8 struct gomp_thread definition
+| |-FieldDecl 0x7fe07a875ec0 <line:49:3, col:26> col:26 referenced ts 'struct gomp_team_state':'struct gomp_team_state'
+| `-FieldDecl 0x7fe07a875f28 <line:50:3, col:20> col:20 referenced task 'struct gomp_task':'struct gomp_task'
+|-VarDecl 0x7fe07a876010 <line:47:1, line:51:19> col:19 used a 'struct gomp_thread':'struct gomp_thread' extern tls
+|-VarDecl 0x7fe07a8760a0 <line:53:1, col:5> col:5 used b 'int'
+|-VarDecl 0x7fe07a876118 <col:1, col:8> col:8 used c 'int'
+|-VarDecl 0x7fe07a876190 <col:1, col:11> col:11 used d 'int'
+|-VarDecl 0x7fe07a876208 <col:1, col:14> col:14 used e 'int'
+|-VarDecl 0x7fe07a876280 <col:1, col:17> col:17 used f 'int'
+|-VarDecl 0x7fe07a8762f8 <col:1, col:20> col:20 used g 'int'
+|-VarDecl 0x7fe07a876370 <col:1, col:23> col:23 used h 'int'
+|-VarDecl 0x7fe07a8763e8 <col:1, col:26> col:26 used i 'int'
+|-VarDecl 0x7fe07a876460 <col:1, col:29> col:29 used k 'int'
+|-VarDecl 0x7fe07a8764d8 <col:1, col:32> col:32 used m 'int'
+|-VarDecl 0x7fe07a876550 <col:1, col:35> col:35 used o 'int'
+|-VarDecl 0x7fe07a8765c8 <col:1, col:38> col:38 used p 'int'
+|-VarDecl 0x7fe07a876640 <col:1, col:41> col:41 used r 'int'
+|-FunctionDecl 0x7fe07a876960 <line:55:1, col:60> col:6 used priority_queue_next_task 'void (struct gomp_task *, int, int)'
+| |-ParmVarDecl 0x7fe07a876738 <col:32, col:49> col:50 'struct gomp_task *'
+| |-ParmVarDecl 0x7fe07a8767b0 <col:52> col:55 'int'
+| `-ParmVarDecl 0x7fe07a876828 <col:57> col:60 'int'
+|-FunctionDecl 0x7fe07a876c88 <line:56:1, col:78> col:5 used gomp_task_run_pre 'int (struct gomp_task *, struct gomp_task, struct gomp_team)'
+| |-ParmVarDecl 0x7fe07a876a38 <col:24, col:41> col:42 'struct gomp_task *'
+| |-ParmVarDecl 0x7fe07a876ab8 <col:44, col:51> col:60 'struct gomp_task':'struct gomp_task'
+| `-ParmVarDecl 0x7fe07a876b38 <col:62, col:69> col:78 'struct gomp_team':'struct gomp_team'
+|-FunctionDecl 0x7fe07a876ee0 <line:57:1, col:50> col:6 used priority_queue_insert 'void (int, struct gomp_task)'
+| |-ParmVarDecl 0x7fe07a876d50 <col:29> col:32 'int'
+| `-ParmVarDecl 0x7fe07a876dd0 <col:34, col:41> col:50 'struct gomp_task':'struct gomp_task'
+|-FunctionDecl 0x7fe07a8772f0 <line:58:1, col:66> col:6 used priority_queue_insert2 'void (int, struct gomp_task, int, int, int)'
+| |-ParmVarDecl 0x7fe07a876fa0 <col:30> col:33 'int'
+| |-ParmVarDecl 0x7fe07a877020 <col:35, col:42> col:51 'struct gomp_task':'struct gomp_task'
+| |-ParmVarDecl 0x7fe07a877098 <col:53> col:56 'int'
+| |-ParmVarDecl 0x7fe07a877110 <col:58> col:61 'int'
+| `-ParmVarDecl 0x7fe07a877188 <col:63> col:66 'int'
+|-FunctionDecl 0x7fe07a877658 <line:59:1, col:66> col:6 used priority_queue_insert3 'void (int, struct gomp_task, int, int, int)'
+| |-ParmVarDecl 0x7fe07a8773c8 <col:30> col:33 'int'
+| |-ParmVarDecl 0x7fe07a877448 <col:35, col:42> col:51 'struct gomp_task':'struct gomp_task'
+| |-ParmVarDecl 0x7fe07a8774c0 <col:53> col:56 'int'
+| |-ParmVarDecl 0x7fe07a877538 <col:58> col:61 'int'
+| `-ParmVarDecl 0x7fe07a8775b0 <col:63> col:66 'int'
+|-FunctionDecl 0x7fe07a8777f0 <line:60:1, col:24> col:6 used gomp_sem_post 'void (int)'
+| `-ParmVarDecl 0x7fe07a877730 <col:21> col:24 'int'
+|-FunctionDecl 0x7fe07a877970 <line:61:1, col:18> col:6 used free 'void (void *)'
+| `-ParmVarDecl 0x7fe07a8778a8 <col:12, col:17> col:18 'void *'
+|-VarDecl 0x7fe07a877a20 <line:63:1, col:7> col:7 used s '_Bool'
+|-FunctionDecl 0x7fe07a877ad0 <line:64:1, line:118:1> line:65:1 GOMP_taskgroup_end 'int ()'
+| `-CompoundStmt 0x7fe07a87ada8 <line:66:1, line:118:1>
+|   |-DeclStmt 0x7fe07a877ca8 <line:67:3, col:29>
+|   | `-VarDecl 0x7fe07a877c00 <col:3, col:28> col:23 used t 'struct gomp_thread *' cinit
+|   |   `-UnaryOperator 0x7fe07a877c88 <col:27, col:28> 'struct gomp_thread *' prefix '&'
+|   |     `-DeclRefExpr 0x7fe07a877c60 <col:28> 'struct gomp_thread':'struct gomp_thread' lvalue Var 0x7fe07a876010 'a' 'struct gomp_thread':'struct gomp_thread'
+|   |-DeclStmt 0x7fe07a877e40 <line:68:3, col:35>
+|   | `-VarDecl 0x7fe07a877ce0 <col:3, col:31> col:20 used u 'struct gomp_team':'struct gomp_team' cinit
+|   |   `-ImplicitCastExpr 0x7fe07a877e28 <col:24, col:31> 'struct gomp_team':'struct gomp_team' <LValueToRValue>
+|   |     `-UnaryOperator 0x7fe07a877e08 <col:24, col:31> 'struct gomp_team':'struct gomp_team' lvalue prefix '*'
+|   |       `-ImplicitCastExpr 0x7fe07a877df0 <col:25, col:31> 'struct gomp_team *' <LValueToRValue>
+|   |         `-MemberExpr 0x7fe07a877db8 <col:25, col:31> 'struct gomp_team *' lvalue .team 0x7fe07a875040
+|   |           `-MemberExpr 0x7fe07a877d80 <col:25, col:28> 'struct gomp_team_state':'struct gomp_team_state' lvalue ->ts 0x7fe07a875ec0
+|   |             `-ImplicitCastExpr 0x7fe07a877d68 <col:25> 'struct gomp_thread *' <LValueToRValue>
+|   |               `-DeclRefExpr 0x7fe07a877d40 <col:25> 'struct gomp_thread *' lvalue Var 0x7fe07a877c00 't' 'struct gomp_thread *'
+|   |-DeclStmt 0x7fe07a878018 <line:69:3, col:37>
+|   | |-VarDecl 0x7fe07a877e80 <col:3, col:29> col:21 used v 'struct gomp_task *' cinit
+|   | | `-UnaryOperator 0x7fe07a877f58 <col:25, col:29> 'struct gomp_task *' prefix '&'
+|   | |   `-MemberExpr 0x7fe07a877f20 <col:26, col:29> 'struct gomp_task':'struct gomp_task' lvalue ->task 0x7fe07a875f28
+|   | |     `-ImplicitCastExpr 0x7fe07a877f08 <col:26> 'struct gomp_thread *' <LValueToRValue>
+|   | |       `-DeclRefExpr 0x7fe07a877ee0 <col:26> 'struct gomp_thread *' lvalue Var 0x7fe07a877c00 't' 'struct gomp_thread *'
+|   | `-VarDecl 0x7fe07a877fa0 <col:3, col:36> col:36 used w 'struct gomp_task *'
+|   |-IfStmt 0x7fe07a87a858 <line:70:3, line:115:7>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-AtomicExpr 0x7fe07a878268 <line:70:7, col:57> 'int'
+|   | | |-UnaryOperator 0x7fe07a8781a8 <col:24, col:27> 'int *' prefix '&'
+|   | | | `-MemberExpr 0x7fe07a878140 <col:25, col:27> 'int' lvalue .num_children 0x7fe07a875b68
+|   | | |   `-DeclRefExpr 0x7fe07a878118 <col:25> 'struct gomp_taskgroup':'struct gomp_taskgroup' lvalue Var 0x7fe07a875c00 'l' 'struct gomp_taskgroup':'struct gomp_taskgroup'
+|   | | `-DeclRefExpr 0x7fe07a8781c8 <col:41> 'int' EnumConstant 0x7fe07a874c48 'MEMMODEL_ACQUIRE' 'int'
+|   | |-WhileStmt 0x7fe07a87a838 <line:71:5, line:115:7>
+|   | | |-<<<NULL>>>
+|   | | |-IntegerLiteral 0x7fe07a8782b8 <line:71:12> 'int' 1
+|   | | `-CompoundStmt 0x7fe07a87a7f8 <line:72:7, line:115:7>
+|   | |   |-IfStmt 0x7fe07a878698 <line:73:2, line:76:11>
+|   | |   | |-<<<NULL>>>
+|   | |   | |-<<<NULL>>>
+|   | |   | |-ImplicitCastExpr 0x7fe07a878338 <line:73:6, col:8> 'int' <LValueToRValue>
+|   | |   | | `-MemberExpr 0x7fe07a878300 <col:6, col:8> 'int' lvalue .num_children 0x7fe07a875b68
+|   | |   | |   `-DeclRefExpr 0x7fe07a8782d8 <col:6> 'struct gomp_taskgroup':'struct gomp_taskgroup' lvalue Var 0x7fe07a875c00 'l' 'struct gomp_taskgroup':'struct gomp_taskgroup'
+|   | |   | |-CallExpr 0x7fe07a8784a0 <line:74:4, col:48> 'void'
+|   | |   | | |-ImplicitCastExpr 0x7fe07a878488 <col:4> 'void (*)(struct gomp_task *, int, int)' <FunctionToPointerDecay>
+|   | |   | | | `-DeclRefExpr 0x7fe07a878350 <col:4> 'void (struct gomp_task *, int, int)' Function 0x7fe07a876960 'priority_queue_next_task' 'void (struct gomp_task *, int, int)'
+|   | |   | | |-ImplicitCastExpr 0x7fe07a8784e0 <col:30> 'struct gomp_task *' <LValueToRValue>
+|   | |   | | | `-DeclRefExpr 0x7fe07a878378 <col:30> 'struct gomp_task *' lvalue Var 0x7fe07a877e80 'v' 'struct gomp_task *'
+|   | |   | | |-ImplicitCastExpr 0x7fe07a8784f8 <col:33, col:35> 'int' <LValueToRValue>
+|   | |   | | | `-MemberExpr 0x7fe07a8783c8 <col:33, col:35> 'int' lvalue .task_queue 0x7fe07a875d18
+|   | |   | | |   `-DeclRefExpr 0x7fe07a8783a0 <col:33> 'struct gomp_team':'struct gomp_team' lvalue Var 0x7fe07a877ce0 'u' 'struct gomp_team':'struct gomp_team'
+|   | |   | | `-ImplicitCastExpr 0x7fe07a878510 <col:47> 'int' <LValueToRValue>
+|   | |   | |   `-DeclRefExpr 0x7fe07a878400 <col:47> 'int' lvalue Var 0x7fe07a876640 'r' 'int'
+|   | |   | `-IfStmt 0x7fe07a878660 <line:75:7, line:76:11>
+|   | |   |   |-<<<NULL>>>
+|   | |   |   |-<<<NULL>>>
+|   | |   |   |-ImplicitCastExpr 0x7fe07a878550 <line:75:11> 'struct gomp_task *' <LValueToRValue>
+|   | |   |   | `-DeclRefExpr 0x7fe07a878528 <col:11> 'struct gomp_task *' lvalue Var 0x7fe07a877fa0 'w' 'struct gomp_task *'
+|   | |   |   |-CallExpr 0x7fe07a878600 <line:76:4, col:11> 'void'
+|   | |   |   | |-ImplicitCastExpr 0x7fe07a8785e8 <col:4> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | |   |   | | `-DeclRefExpr 0x7fe07a878568 <col:4> 'void (void *)' Function 0x7fe07a877970 'free' 'void (void *)'
+|   | |   |   | `-ImplicitCastExpr 0x7fe07a878648 <col:10> 'void *' <BitCast>
+|   | |   |   |   `-ImplicitCastExpr 0x7fe07a878630 <col:10> 'struct gomp_task *' <LValueToRValue>
+|   | |   |   |     `-DeclRefExpr 0x7fe07a878590 <col:10> 'struct gomp_task *' lvalue Var 0x7fe07a877fa0 'w' 'struct gomp_task *'
+|   | |   |   `-<<<NULL>>>
+|   | |   |-IfStmt 0x7fe07a879500 <line:77:2, line:88:4>
+|   | |   | |-<<<NULL>>>
+|   | |   | |-<<<NULL>>>
+|   | |   | |-BinaryOperator 0x7fe07a8787b8 <line:77:6, col:17> 'int' '=='
+|   | |   | | |-ImplicitCastExpr 0x7fe07a878788 <col:6, col:9> 'unsigned int' <IntegralCast>
+|   | |   | | | `-ImplicitCastExpr 0x7fe07a878770 <col:6, col:9> 'enum gomp_task_kind':'enum gomp_task_kind' <LValueToRValue>
+|   | |   | | |   `-MemberExpr 0x7fe07a878710 <col:6, col:9> 'enum gomp_task_kind':'enum gomp_task_kind' lvalue ->kind 0x7fe07a8757e0
+|   | |   | | |     `-ImplicitCastExpr 0x7fe07a8786f8 <col:6> 'struct gomp_task *' <LValueToRValue>
+|   | |   | | |       `-DeclRefExpr 0x7fe07a8786d0 <col:6> 'struct gomp_task *' lvalue Var 0x7fe07a8759e8 'n' 'struct gomp_task *'
+|   | |   | | `-ImplicitCastExpr 0x7fe07a8787a0 <col:17> 'unsigned int' <IntegralCast>
+|   | |   | |   `-DeclRefExpr 0x7fe07a878748 <col:17> 'int' EnumConstant 0x7fe07a875188 'GOMP_TASK_WAITING' 'int'
+|   | |   | |-CompoundStmt 0x7fe07a8794c8 <line:78:4, line:88:4>
+|   | |   | | |-BinaryOperator 0x7fe07a8789c0 <line:79:6, col:36> '_Bool' '='
+|   | |   | | | |-DeclRefExpr 0x7fe07a8787e0 <col:6> '_Bool' lvalue Var 0x7fe07a877a20 's' '_Bool'
+|   | |   | | | `-ImplicitCastExpr 0x7fe07a8789a8 <col:10, col:36> '_Bool' <IntegralToBoolean>
+|   | |   | | |   `-CallExpr 0x7fe07a878920 <col:10, col:36> 'int'
+|   | |   | | |     |-ImplicitCastExpr 0x7fe07a878908 <col:10> 'int (*)(struct gomp_task *, struct gomp_task, struct gomp_team)' <FunctionToPointerDecay>
+|   | |   | | |     | `-DeclRefExpr 0x7fe07a878808 <col:10> 'int (struct gomp_task *, struct gomp_task, struct gomp_team)' Function 0x7fe07a876c88 'gomp_task_run_pre' 'int (struct gomp_task *, struct gomp_task, struct gomp_team)'
+|   | |   | | |     |-ImplicitCastExpr 0x7fe07a878960 <col:29> 'struct gomp_task *' <LValueToRValue>
+|   | |   | | |     | `-DeclRefExpr 0x7fe07a878830 <col:29> 'struct gomp_task *' lvalue Var 0x7fe07a8759e8 'n' 'struct gomp_task *'
+|   | |   | | |     |-ImplicitCastExpr 0x7fe07a878978 <col:32> 'struct gomp_task':'struct gomp_task' <LValueToRValue>
+|   | |   | | |     | `-DeclRefExpr 0x7fe07a878858 <col:32> 'struct gomp_task':'struct gomp_task' lvalue Var 0x7fe07a875960 'q' 'struct gomp_task':'struct gomp_task'
+|   | |   | | |     `-ImplicitCastExpr 0x7fe07a878990 <col:35> 'struct gomp_team':'struct gomp_team' <LValueToRValue>
+|   | |   | | |       `-DeclRefExpr 0x7fe07a878880 <col:35> 'struct gomp_team':'struct gomp_team' lvalue Var 0x7fe07a877ce0 'u' 'struct gomp_team':'struct gomp_team'
+|   | |   | | |-IfStmt 0x7fe07a8792f8 <line:80:6, line:85:8>
+|   | |   | | | |-<<<NULL>>>
+|   | |   | | | |-<<<NULL>>>
+|   | |   | | | |-CallExpr 0x7fe07a8790b0 <line:80:10, col:32> 'long'
+|   | |   | | | | |-ImplicitCastExpr 0x7fe07a879098 <col:10> 'long (*)(long, long)' <BuiltinFnToFnPtr>
+|   | |   | | | | | `-DeclRefExpr 0x7fe07a879000 <col:10> '<builtin fn type>' Function 0x7fe07a878a30 '__builtin_expect' 'long (long, long)'
+|   | |   | | | | |-ImplicitCastExpr 0x7fe07a879100 <col:28> 'long' <IntegralCast>
+|   | |   | | | | | `-ImplicitCastExpr 0x7fe07a8790e8 <col:28> '_Bool' <LValueToRValue>
+|   | |   | | | | |   `-DeclRefExpr 0x7fe07a879028 <col:28> '_Bool' lvalue Var 0x7fe07a877a20 's' '_Bool'
+|   | |   | | | | `-ImplicitCastExpr 0x7fe07a879118 <col:31> 'long' <IntegralCast>
+|   | |   | | | |   `-IntegerLiteral 0x7fe07a879050 <col:31> 'int' 0
+|   | |   | | | |-CompoundStmt 0x7fe07a8792d0 <line:81:8, line:85:8>
+|   | |   | | | | |-IfStmt 0x7fe07a879238 <line:82:3, line:83:12>
+|   | |   | | | | | |-<<<NULL>>>
+|   | |   | | | | | |-<<<NULL>>>
+|   | |   | | | | | |-ImplicitCastExpr 0x7fe07a879158 <line:82:7> 'struct gomp_task *' <LValueToRValue>
+|   | |   | | | | | | `-DeclRefExpr 0x7fe07a879130 <col:7> 'struct gomp_task *' lvalue Var 0x7fe07a877fa0 'w' 'struct gomp_task *'
+|   | |   | | | | | |-CallExpr 0x7fe07a8791d8 <line:83:5, col:12> 'void'
+|   | |   | | | | | | |-ImplicitCastExpr 0x7fe07a8791c0 <col:5> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | |   | | | | | | | `-DeclRefExpr 0x7fe07a879170 <col:5> 'void (void *)' Function 0x7fe07a877970 'free' 'void (void *)'
+|   | |   | | | | | | `-ImplicitCastExpr 0x7fe07a879220 <col:11> 'void *' <BitCast>
+|   | |   | | | | | |   `-ImplicitCastExpr 0x7fe07a879208 <col:11> 'struct gomp_task *' <LValueToRValue>
+|   | |   | | | | | |     `-DeclRefExpr 0x7fe07a879198 <col:11> 'struct gomp_task *' lvalue Var 0x7fe07a877fa0 'w' 'struct gomp_task *'
+|   | |   | | | | | `-<<<NULL>>>
+|   | |   | | | | `-GotoStmt 0x7fe07a8792b8 <line:84:3, col:8> 'finish_cancelled' 0x7fe07a879270
+|   | |   | | | `-<<<NULL>>>
+|   | |   | | |-BinaryOperator 0x7fe07a879390 <line:86:6, col:10> 'struct gomp_task *' '='
+|   | |   | | | |-DeclRefExpr 0x7fe07a879330 <col:6> 'struct gomp_task *' lvalue Var 0x7fe07a8759e8 'n' 'struct gomp_task *'
+|   | |   | | | `-ImplicitCastExpr 0x7fe07a879378 <col:10> 'struct gomp_task *' <NullToPointer>
+|   | |   | | |   `-IntegerLiteral 0x7fe07a879358 <col:10> 'int' 0
+|   | |   | | `-BinaryOperator 0x7fe07a879450 <line:87:6, col:28> '_Bool' '='
+|   | |   | |   |-MemberExpr 0x7fe07a8793e0 <col:6, col:8> '_Bool' lvalue .in_taskgroup_wait 0x7fe07a875b08
+|   | |   | |   | `-DeclRefExpr 0x7fe07a8793b8 <col:6> 'struct gomp_taskgroup':'struct gomp_taskgroup' lvalue Var 0x7fe07a875c00 'l' 'struct gomp_taskgroup':'struct gomp_taskgroup'
+|   | |   | |   `-ImplicitCastExpr 0x7fe07a879438 <col:28> '_Bool' <IntegralToBoolean>
+|   | |   | |     `-IntegerLiteral 0x7fe07a879418 <col:28> 'int' 1
+|   | |   | `-<<<NULL>>>
+|   | |   |-IfStmt 0x7fe07a879988 <line:89:2, line:95:4>
+|   | |   | |-<<<NULL>>>
+|   | |   | |-<<<NULL>>>
+|   | |   | |-ImplicitCastExpr 0x7fe07a879560 <line:89:6> 'struct gomp_task *' <LValueToRValue>
+|   | |   | | `-DeclRefExpr 0x7fe07a879538 <col:6> 'struct gomp_task *' lvalue Var 0x7fe07a877fa0 'w' 'struct gomp_task *'
+|   | |   | |-CompoundStmt 0x7fe07a879960 <line:90:4, line:95:4>
+|   | |   | | |-BinaryOperator 0x7fe07a879668 <line:91:6, col:17> 'struct gomp_task':'struct gomp_task' '='
+|   | |   | | | |-MemberExpr 0x7fe07a8795b8 <col:6, col:9> 'struct gomp_task':'struct gomp_task' lvalue ->task 0x7fe07a875f28
+|   | |   | | | | `-ImplicitCastExpr 0x7fe07a8795a0 <col:6> 'struct gomp_thread *' <LValueToRValue>
+|   | |   | | | |   `-DeclRefExpr 0x7fe07a879578 <col:6> 'struct gomp_thread *' lvalue Var 0x7fe07a877c00 't' 'struct gomp_thread *'
+|   | |   | | | `-ImplicitCastExpr 0x7fe07a879650 <col:16, col:17> 'struct gomp_task':'struct gomp_task' <LValueToRValue>
+|   | |   | | |   `-UnaryOperator 0x7fe07a879630 <col:16, col:17> 'struct gomp_task':'struct gomp_task' lvalue prefix '*'
+|   | |   | | |     `-ImplicitCastExpr 0x7fe07a879618 <col:17> 'struct gomp_task *' <LValueToRValue>
+|   | |   | | |       `-DeclRefExpr 0x7fe07a8795f0 <col:17> 'struct gomp_task *' lvalue Var 0x7fe07a8759e8 'n' 'struct gomp_task *'
+|   | |   | | `-IfStmt 0x7fe07a879928 <line:92:6, line:94:14>
+|   | |   | |   |-<<<NULL>>>
+|   | |   | |   |-<<<NULL>>>
+|   | |   | |   |-CallExpr 0x7fe07a879718 <line:92:10, col:32> 'long'
+|   | |   | |   | |-ImplicitCastExpr 0x7fe07a879700 <col:10> 'long (*)(long, long)' <BuiltinFnToFnPtr>
+|   | |   | |   | | `-DeclRefExpr 0x7fe07a879690 <col:10> '<builtin fn type>' Function 0x7fe07a878a30 '__builtin_expect' 'long (long, long)'
+|   | |   | |   | |-ImplicitCastExpr 0x7fe07a879768 <col:28> 'long' <IntegralCast>
+|   | |   | |   | | `-ImplicitCastExpr 0x7fe07a879750 <col:28> 'int' <LValueToRValue>
+|   | |   | |   | |   `-DeclRefExpr 0x7fe07a8796b8 <col:28> 'int' lvalue Var 0x7fe07a8765c8 'p' 'int'
+|   | |   | |   | `-ImplicitCastExpr 0x7fe07a879780 <col:31> 'long' <IntegralCast>
+|   | |   | |   |   `-IntegerLiteral 0x7fe07a8796e0 <col:31> 'int' 0
+|   | |   | |   |-IfStmt 0x7fe07a8798f0 <line:93:8, line:94:14>
+|   | |   | |   | |-<<<NULL>>>
+|   | |   | |   | |-<<<NULL>>>
+|   | |   | |   | |-ImplicitCastExpr 0x7fe07a8797c0 <line:93:12> 'int' <LValueToRValue>
+|   | |   | |   | | `-DeclRefExpr 0x7fe07a879798 <col:12> 'int' lvalue Var 0x7fe07a876550 'o' 'int'
+|   | |   | |   | |-BinaryOperator 0x7fe07a8798c8 <line:94:3, col:14> 'struct gomp_task':'struct gomp_task' '='
+|   | |   | |   | | |-MemberExpr 0x7fe07a879818 <col:3, col:6> 'struct gomp_task':'struct gomp_task' lvalue ->task 0x7fe07a875f28
+|   | |   | |   | | | `-ImplicitCastExpr 0x7fe07a879800 <col:3> 'struct gomp_thread *' <LValueToRValue>
+|   | |   | |   | | |   `-DeclRefExpr 0x7fe07a8797d8 <col:3> 'struct gomp_thread *' lvalue Var 0x7fe07a877c00 't' 'struct gomp_thread *'
+|   | |   | |   | | `-ImplicitCastExpr 0x7fe07a8798b0 <col:13, col:14> 'struct gomp_task':'struct gomp_task' <LValueToRValue>
+|   | |   | |   | |   `-UnaryOperator 0x7fe07a879890 <col:13, col:14> 'struct gomp_task':'struct gomp_task' lvalue prefix '*'
+|   | |   | |   | |     `-ImplicitCastExpr 0x7fe07a879878 <col:14> 'struct gomp_task *' <LValueToRValue>
+|   | |   | |   | |       `-DeclRefExpr 0x7fe07a879850 <col:14> 'struct gomp_task *' lvalue Var 0x7fe07a877e80 'v' 'struct gomp_task *'
+|   | |   | |   | `-<<<NULL>>>
+|   | |   | |   `-<<<NULL>>>
+|   | |   | `-<<<NULL>>>
+|   | |   |-IfStmt 0x7fe07a87a4b0 <line:96:2, line:112:4>
+|   | |   | |-<<<NULL>>>
+|   | |   | |-<<<NULL>>>
+|   | |   | |-ImplicitCastExpr 0x7fe07a8799e8 <line:96:6> 'struct gomp_task *' <LValueToRValue>
+|   | |   | | `-DeclRefExpr 0x7fe07a8799c0 <col:6> 'struct gomp_task *' lvalue Var 0x7fe07a8759e8 'n' 'struct gomp_task *'
+|   | |   | |-CompoundStmt 0x7fe07a87a488 <line:97:4, line:112:4>
+|   | |   | | |-DeclStmt 0x7fe07a879ac0 <line:98:6, col:28>
+|   | |   | | | `-VarDecl 0x7fe07a879a20 <col:6, col:27> col:23 used x 'struct gomp_task':'struct gomp_task' cinit
+|   | |   | | |   `-ImplicitCastExpr 0x7fe07a879aa8 <col:27> 'struct gomp_task':'struct gomp_task' <LValueToRValue>
+|   | |   | | |     `-DeclRefExpr 0x7fe07a879a80 <col:27> 'struct gomp_task':'struct gomp_task' lvalue Var 0x7fe07a879a20 'x' 'struct gomp_task':'struct gomp_task'
+|   | |   | | `-ForStmt 0x7fe07a87a450 <line:99:6, line:111:8>
+|   | |   | |   |-<<<NULL>>>
+|   | |   | |   |-<<<NULL>>>
+|   | |   | |   |-ImplicitCastExpr 0x7fe07a879b00 <line:99:13> 'int' <LValueToRValue>
+|   | |   | |   | `-DeclRefExpr 0x7fe07a879ad8 <col:13> 'int' lvalue Var 0x7fe07a8763e8 'i' 'int'
+|   | |   | |   |-UnaryOperator 0x7fe07a879b40 <col:16, col:17> 'int' postfix '++'
+|   | |   | |   | `-DeclRefExpr 0x7fe07a879b18 <col:16> 'int' lvalue Var 0x7fe07a8760a0 'b' 'int'
+|   | |   | |   `-CompoundStmt 0x7fe07a87a400 <line:100:8, line:111:8>
+|   | |   | |     |-DeclStmt 0x7fe07a879c20 <line:101:3, col:25>
+|   | |   | |     | `-VarDecl 0x7fe07a879b80 <col:3, col:24> col:20 used y 'struct gomp_task':'struct gomp_task' cinit
+|   | |   | |     |   `-ImplicitCastExpr 0x7fe07a879c08 <col:24> 'struct gomp_task':'struct gomp_task' <LValueToRValue>
+|   | |   | |     |     `-DeclRefExpr 0x7fe07a879be0 <col:24> 'struct gomp_task':'struct gomp_task' lvalue Var 0x7fe07a8758a0 'j' 'struct gomp_task':'struct gomp_task'
+|   | |   | |     |-IfStmt 0x7fe07a879c80 <line:102:3, line:103:5>
+|   | |   | |     | |-<<<NULL>>>
+|   | |   | |     | |-<<<NULL>>>
+|   | |   | |     | |-ImplicitCastExpr 0x7fe07a879c60 <line:102:7> 'int' <LValueToRValue>
+|   | |   | |     | | `-DeclRefExpr 0x7fe07a879c38 <col:7> 'int' lvalue Var 0x7fe07a8762f8 'g' 'int'
+|   | |   | |     | |-ContinueStmt 0x7fe07a879c78 <line:103:5>
+|   | |   | |     | `-<<<NULL>>>
+|   | |   | |     |-CallExpr 0x7fe07a879da0 <line:104:3, col:40> 'void'
+|   | |   | |     | |-ImplicitCastExpr 0x7fe07a879d88 <col:3> 'void (*)(int, struct gomp_task)' <FunctionToPointerDecay>
+|   | |   | |     | | `-DeclRefExpr 0x7fe07a879cb8 <col:3> 'void (int, struct gomp_task)' Function 0x7fe07a876ee0 'priority_queue_insert' 'void (int, struct gomp_task)'
+|   | |   | |     | |-DeclRefExpr 0x7fe07a879ce0 <col:26> 'int' EnumConstant 0x7fe07a874d90 'PQ_CHILDREN' 'int'
+|   | |   | |     | `-ImplicitCastExpr 0x7fe07a879dd8 <col:39> 'struct gomp_task':'struct gomp_task' <LValueToRValue>
+|   | |   | |     |   `-DeclRefExpr 0x7fe07a879d08 <col:39> 'struct gomp_task':'struct gomp_task' lvalue Var 0x7fe07a879a20 'x' 'struct gomp_task':'struct gomp_task'
+|   | |   | |     |-IfStmt 0x7fe07a87a098 <line:105:3, line:106:53>
+|   | |   | |     | |-<<<NULL>>>
+|   | |   | |     | |-<<<NULL>>>
+|   | |   | |     | |-ImplicitCastExpr 0x7fe07a879e88 <line:105:7, col:18> '_Bool' <LValueToRValue>
+|   | |   | |     | | `-MemberExpr 0x7fe07a879e50 <col:7, col:18> '_Bool' lvalue .in_taskwait 0x7fe07a875290
+|   | |   | |     | |   `-MemberExpr 0x7fe07a879e18 <col:7, col:9> 'struct gomp_taskwait':'struct gomp_taskwait' lvalue .taskwait 0x7fe07a875740
+|   | |   | |     | |     `-DeclRefExpr 0x7fe07a879df0 <col:7> 'struct gomp_task':'struct gomp_task' lvalue Var 0x7fe07a879a20 'x' 'struct gomp_task':'struct gomp_task'
+|   | |   | |     | |-CallExpr 0x7fe07a87a000 <line:106:5, col:53> 'void'
+|   | |   | |     | | |-ImplicitCastExpr 0x7fe07a879fe8 <col:5> 'void (*)(int, struct gomp_task, int, int, int)' <FunctionToPointerDecay>
+|   | |   | |     | | | `-DeclRefExpr 0x7fe07a879ea0 <col:5> 'void (int, struct gomp_task, int, int, int)' Function 0x7fe07a8772f0 'priority_queue_insert2' 'void (int, struct gomp_task, int, int, int)'
+|   | |   | |     | | |-DeclRefExpr 0x7fe07a879ec8 <col:29> 'int' EnumConstant 0x7fe07a874dd8 'PQ_TASKGROUP' 'int'
+|   | |   | |     | | |-ImplicitCastExpr 0x7fe07a87a050 <col:43> 'struct gomp_task':'struct gomp_task' <LValueToRValue>
+|   | |   | |     | | | `-DeclRefExpr 0x7fe07a879ef0 <col:43> 'struct gomp_task':'struct gomp_task' lvalue Var 0x7fe07a879b80 'y' 'struct gomp_task':'struct gomp_task'
+|   | |   | |     | | |-ImplicitCastExpr 0x7fe07a87a068 <col:46> 'int' <LValueToRValue>
+|   | |   | |     | | | `-DeclRefExpr 0x7fe07a879f18 <col:46> 'int' lvalue Var 0x7fe07a876208 'e' 'int'
+|   | |   | |     | | |-IntegerLiteral 0x7fe07a879f40 <col:49> 'int' 0
+|   | |   | |     | | `-ImplicitCastExpr 0x7fe07a87a080 <col:52> 'int' <LValueToRValue>
+|   | |   | |     | |   `-DeclRefExpr 0x7fe07a879f60 <col:52> 'int' lvalue Var 0x7fe07a876190 'd' 'int'
+|   | |   | |     | `-<<<NULL>>>
+|   | |   | |     |-IfStmt 0x7fe07a87a1e8 <line:107:3, line:108:21>
+|   | |   | |     | |-<<<NULL>>>
+|   | |   | |     | |-<<<NULL>>>
+|   | |   | |     | |-ImplicitCastExpr 0x7fe07a87a0f8 <line:107:7> 'int' <LValueToRValue>
+|   | |   | |     | | `-DeclRefExpr 0x7fe07a87a0d0 <col:7> 'int' lvalue Var 0x7fe07a876370 'h' 'int'
+|   | |   | |     | |-CallExpr 0x7fe07a87a1a0 <line:108:5, col:21> 'void'
+|   | |   | |     | | |-ImplicitCastExpr 0x7fe07a87a188 <col:5> 'void (*)(int)' <FunctionToPointerDecay>
+|   | |   | |     | | | `-DeclRefExpr 0x7fe07a87a110 <col:5> 'void (int)' Function 0x7fe07a8777f0 'gomp_sem_post' 'void (int)'
+|   | |   | |     | | `-ImplicitCastExpr 0x7fe07a87a1d0 <col:20> 'int' <LValueToRValue>
+|   | |   | |     | |   `-DeclRefExpr 0x7fe07a87a138 <col:20> 'int' lvalue Var 0x7fe07a876280 'f' 'int'
+|   | |   | |     | `-<<<NULL>>>
+|   | |   | |     |-CallExpr 0x7fe07a87a320 <line:109:3, col:58> 'void'
+|   | |   | |     | |-ImplicitCastExpr 0x7fe07a87a308 <col:3> 'void (*)(int, struct gomp_task, int, int, int)' <FunctionToPointerDecay>
+|   | |   | |     | | `-DeclRefExpr 0x7fe07a87a220 <col:3> 'void (int, struct gomp_task, int, int, int)' Function 0x7fe07a877658 'priority_queue_insert3' 'void (int, struct gomp_task, int, int, int)'
+|   | |   | |     | |-ImplicitCastExpr 0x7fe07a87a370 <col:27> 'int' <LValueToRValue>
+|   | |   | |     | | `-DeclRefExpr 0x7fe07a87a248 <col:27> 'int' lvalue Var 0x7fe07a876460 'k' 'int'
+|   | |   | |     | |-ImplicitCastExpr 0x7fe07a87a388 <col:30> 'struct gomp_task':'struct gomp_task' <LValueToRValue>
+|   | |   | |     | | `-DeclRefExpr 0x7fe07a87a270 <col:30> 'struct gomp_task':'struct gomp_task' lvalue Var 0x7fe07a879b80 'y' 'struct gomp_task':'struct gomp_task'
+|   | |   | |     | |-DeclRefExpr 0x7fe07a87a298 <col:33> 'int' EnumConstant 0x7fe07a874c90 'PRIORITY_INSERT_END' 'int'
+|   | |   | |     | |-IntegerLiteral 0x7fe07a87a2c0 <col:54> 'int' 0
+|   | |   | |     | `-ImplicitCastExpr 0x7fe07a87a3a0 <col:57> 'int' <LValueToRValue>
+|   | |   | |     |   `-DeclRefExpr 0x7fe07a87a2e0 <col:57> 'int' lvalue Var 0x7fe07a876190 'd' 'int'
+|   | |   | |     `-UnaryOperator 0x7fe07a87a3e0 <line:110:3, col:5> 'int' prefix '++'
+|   | |   | |       `-DeclRefExpr 0x7fe07a87a3b8 <col:5> 'int' lvalue Var 0x7fe07a876118 'c' 'int'
+|   | |   | `-<<<NULL>>>
+|   | |   `-LabelStmt 0x7fe07a87a7e0 <line:113:7, line:114:56> 'finish_cancelled'
+|   | |     `-BinaryOperator 0x7fe07a87a7b8 <col:2, col:56> 'struct gomp_task *' '='
+|   | |       |-DeclRefExpr 0x7fe07a87a4e8 <col:2> 'struct gomp_task *' lvalue Var 0x7fe07a877fa0 'w' 'struct gomp_task *'
+|   | |       `-CStyleCastExpr 0x7fe07a87a790 <col:6, col:56> 'struct gomp_task *' <IntegralToPointer>
+|   | |         `-ParenExpr 0x7fe07a87a770 <col:27, col:56> 'long'
+|   | |           `-BinaryOperator 0x7fe07a87a6f0 <col:28, col:55> 'long' '-'
+|   | |             |-BinaryOperator 0x7fe07a87a5c8 <col:28, col:34> 'struct gomp_task *' '-'
+|   | |             | |-ImplicitCastExpr 0x7fe07a87a598 <col:28> 'struct gomp_task *' <LValueToRValue>
+|   | |             | | `-DeclRefExpr 0x7fe07a87a510 <col:28> 'struct gomp_task *' lvalue Var 0x7fe07a8759e8 'n' 'struct gomp_task *'
+|   | |             | `-ImplicitCastExpr 0x7fe07a87a5b0 <col:32, col:34> 'int' <LValueToRValue>
+|   | |             |   `-MemberExpr 0x7fe07a87a560 <col:32, col:34> 'int' lvalue .task_running_count 0x7fe07a875d78
+|   | |             |     `-DeclRefExpr 0x7fe07a87a538 <col:32> 'struct gomp_team':'struct gomp_team' lvalue Var 0x7fe07a877ce0 'u' 'struct gomp_team':'struct gomp_team'
+|   | |             `-ImplicitCastExpr 0x7fe07a87a618 <col:55> 'struct gomp_task *' <LValueToRValue>
+|   | |               `-DeclRefExpr 0x7fe07a87a5f0 <col:55> 'struct gomp_task *' lvalue Var 0x7fe07a877e80 'v' 'struct gomp_task *'
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x7fe07a87ad48 <line:116:3, col:44> 'struct gomp_taskgroup *' '='
+|   | |-MemberExpr 0x7fe07a87a8d0 <col:3, col:6> 'struct gomp_taskgroup *' lvalue ->taskgroup 0x7fe07a875640
+|   | | `-ImplicitCastExpr 0x7fe07a87a8b8 <col:3> 'struct gomp_task *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7fe07a87a890 <col:3> 'struct gomp_task *' lvalue Var 0x7fe07a877e80 'v' 'struct gomp_task *'
+|   | `-CStyleCastExpr 0x7fe07a87ad20 <col:18, col:44> 'struct gomp_taskgroup *' <IntegralToPointer>
+|   |   `-ImplicitCastExpr 0x7fe07a87a958 <col:44> 'int' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fe07a87a908 <col:44> 'int' lvalue Var 0x7fe07a8764d8 'm' 'int'
+|   `-ReturnStmt 0x7fe07a87ad90 <line:117:3, col:10>
+|     `-IntegerLiteral 0x7fe07a87ad70 <col:10> 'int' 1
+|-FunctionDecl 0x7fe07a878058 <line:70:7> col:7 implicit used __atomic_load_n 'void ()' extern
+`-FunctionDecl 0x7fe07a878a30 <line:80:10> col:10 implicit used __builtin_expect 'long (long, long)' extern
+  |-ParmVarDecl 0x7fe07a878ac8 <<invalid sloc>> <invalid sloc> 'long'
+  |-ParmVarDecl 0x7fe07a878b28 <<invalid sloc>> <invalid sloc> 'long'
+  |-NoThrowAttr 0x7fe07a878b98 <col:10> Implicit
+  `-ConstAttr 0x7fe07a878be0 <col:10> Implicit

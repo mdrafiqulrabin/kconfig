@@ -1,0 +1,48 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: User
+      Decl: username, [], [], []
+        ArrayDecl: []
+          TypeDecl: username, []
+            IdentifierType: ['char']
+          Constant: int, 10
+  FuncDef: 
+    Decl: auth_set_username, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: user, [], [], []
+            PtrDecl: []
+              TypeDecl: user, []
+                Struct: User
+        TypeDecl: auth_set_username, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: d, [], [], []
+        PtrDecl: []
+          TypeDecl: d, []
+            IdentifierType: ['char']
+      Decl: ch, [], [], []
+        TypeDecl: ch, []
+          IdentifierType: ['char']
+      Assignment: =
+        ID: d
+        BinaryOp: +
+          StructRef: ->
+            ID: user
+            ID: username
+          BinaryOp: ==
+            ArrayRef: 
+              StructRef: ->
+                ID: user
+                ID: username
+              Constant: int, 0
+            Constant: char, '~'
+      While: 
+        BinaryOp: !=
+          Assignment: =
+            ID: ch
+            UnaryOp: *
+              UnaryOp: p++
+                ID: d
+          Constant: char, '\0'
+        EmptyStatement: 

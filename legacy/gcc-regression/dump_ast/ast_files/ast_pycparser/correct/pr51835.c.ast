@@ -1,0 +1,33 @@
+FileAST: 
+  FuncDef: 
+    Decl: func1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: d, [], [], []
+            TypeDecl: d, []
+              IdentifierType: ['double']
+        TypeDecl: func1, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        Cast: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['int']
+          ID: d
+  FuncDef: 
+    Decl: func2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: d, [], [], []
+            TypeDecl: d, []
+              IdentifierType: ['double']
+        TypeDecl: func2, []
+          IdentifierType: ['unsigned', 'int']
+    Compound: 
+      Return: 
+        Cast: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['unsigned', 'int']
+          ID: d

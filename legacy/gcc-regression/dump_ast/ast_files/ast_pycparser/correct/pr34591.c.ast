@@ -1,0 +1,46 @@
+FileAST: 
+  FuncDef: 
+    Decl: av_resample, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: filter_length, [], [], []
+            TypeDecl: filter_length, []
+              IdentifierType: ['int']
+          Decl: src, [], [], []
+            PtrDecl: []
+              TypeDecl: src, []
+                IdentifierType: ['short']
+          Decl: filter, [], [], []
+            PtrDecl: []
+              TypeDecl: filter, []
+                IdentifierType: ['short']
+        TypeDecl: av_resample, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: val, [], [], []
+        TypeDecl: val, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          ID: filter_length
+        UnaryOp: p++
+          ID: i
+        Assignment: +=
+          ID: val
+          BinaryOp: *
+            ArrayRef: 
+              ID: src
+              ID: i
+            ArrayRef: 
+              ID: filter
+              ID: i
+      Return: 
+        ID: val

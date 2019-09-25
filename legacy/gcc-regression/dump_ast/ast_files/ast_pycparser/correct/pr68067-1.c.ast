@@ -1,0 +1,39 @@
+FileAST: 
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: a, [], [], []
+        TypeDecl: a, []
+          IdentifierType: ['int']
+        UnaryOp: -
+          Constant: int, 1
+      Decl: b, [], ['static'], []
+        TypeDecl: b, []
+          IdentifierType: ['int']
+        BinaryOp: -
+          UnaryOp: -
+            Constant: int, 2147483647
+          Constant: int, 1
+      Decl: c, [], ['static'], []
+        TypeDecl: c, []
+          IdentifierType: ['int']
+        Constant: int, 0
+      Decl: t, [], [], []
+        TypeDecl: t, []
+          IdentifierType: ['int']
+        BinaryOp: -
+          ID: a
+          BinaryOp: -
+            ID: b
+            ID: c
+      If: 
+        BinaryOp: !=
+          ID: t
+          Constant: int, 2147483647
+        FuncCall: 
+          ID: __builtin_abort
+      Return: 
+        Constant: int, 0

@@ -1,0 +1,55 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: t, [], [], []
+        ArrayDecl: []
+          TypeDecl: t, []
+            IdentifierType: ['float']
+          Constant: int, 2
+        InitList: 
+          Constant: int, 1
+          Constant: int, 2
+      Decl: s, ['const'], [], []
+        PtrDecl: []
+          TypeDecl: s, ['const']
+            IdentifierType: ['int']
+        Constant: int, 0
+      BinaryOp: /
+        ArrayRef: 
+          ID: t
+          Constant: int, 1
+        ID: s
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        TypeDecl: bar, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: t, [], [], []
+        ArrayDecl: []
+          TypeDecl: t, []
+            IdentifierType: ['float']
+          Constant: int, 2
+        InitList: 
+          Constant: int, 1
+          Constant: int, 2
+      Decl: s, ['const'], [], []
+        ArrayDecl: []
+          PtrDecl: []
+            TypeDecl: s, ['const']
+              IdentifierType: ['int']
+          Constant: int, 2
+        InitList: 
+          Constant: int, 0
+          Constant: int, 0
+      BinaryOp: /
+        ArrayRef: 
+          ID: t
+          Constant: int, 1
+        ArrayRef: 
+          ID: s
+          Constant: int, 0

@@ -1,0 +1,25 @@
+FileAST: 
+  Decl: link_error, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: link_error, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: ==
+          BinaryOp: +
+            Constant: string, "<12ers"
+            Constant: int, 1
+          Constant: int, 0
+        FuncCall: 
+          ID: link_error
+      Return: 
+        Constant: int, 0

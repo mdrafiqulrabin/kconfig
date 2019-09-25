@@ -1,0 +1,85 @@
+FileAST: 
+  FuncDef: 
+    Decl: ec, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: n4, [], [], []
+            TypeDecl: n4, []
+              IdentifierType: ['int']
+          Decl: ea, [], [], []
+            TypeDecl: ea, []
+              IdentifierType: ['short', 'int']
+        TypeDecl: ec, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        Constant: int, 1
+        Compound: 
+          If: 
+            BinaryOp: !=
+              ID: ea
+              Constant: int, 0
+            Compound: 
+              Decl: c1, [], [], []
+                PtrDecl: []
+                  TypeDecl: c1, []
+                    IdentifierType: ['int']
+                Cast: 
+                  Typename: None, []
+                    PtrDecl: []
+                      TypeDecl: None, []
+                        IdentifierType: ['int']
+                  UnaryOp: &
+                    ID: ea
+              Label: nn
+                For: 
+                  UnaryOp: ++
+                    UnaryOp: *
+                      ID: c1
+        Compound: 
+          Decl: lq, [], [], []
+            PtrDecl: []
+              TypeDecl: lq, []
+                IdentifierType: ['int']
+            UnaryOp: &
+              ID: n4
+          Decl: md, [], [], []
+            PtrDecl: []
+              TypeDecl: md, []
+                IdentifierType: ['int']
+          Decl: da, [], [], []
+            TypeDecl: da, []
+              IdentifierType: ['int']
+          Goto: nn
+          Label: r1
+            Assignment: =
+              ID: md
+              ID: lq
+          For: 
+            Assignment: =
+              ID: da
+              Constant: int, 0
+            BinaryOp: <
+              ID: da
+              Constant: int, 1
+            UnaryOp: ++
+              ID: da
+            Compound: 
+              Label: ig
+                UnaryOp: ++
+                  ID: n4
+              Assignment: +=
+                UnaryOp: *
+                  ID: md
+                ID: n4
+      For: 
+        Assignment: =
+          ID: ea
+          Constant: int, 0
+        BinaryOp: <
+          ID: ea
+          Constant: int, 1
+        UnaryOp: ++
+          ID: ea
+        Goto: r1
+      Goto: ig

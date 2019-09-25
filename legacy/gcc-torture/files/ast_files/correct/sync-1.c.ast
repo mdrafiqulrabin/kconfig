@@ -1,0 +1,1972 @@
+FileAST: 
+  Decl: sc, [], [], []
+    TypeDecl: sc, []
+      IdentifierType: ['signed', 'char']
+  Decl: uc, [], [], []
+    TypeDecl: uc, []
+      IdentifierType: ['unsigned', 'char']
+  Decl: ss, [], [], []
+    TypeDecl: ss, []
+      IdentifierType: ['signed', 'short']
+  Decl: us, [], [], []
+    TypeDecl: us, []
+      IdentifierType: ['unsigned', 'short']
+  Decl: si, [], [], []
+    TypeDecl: si, []
+      IdentifierType: ['signed', 'int']
+  Decl: ui, [], [], []
+    TypeDecl: ui, []
+      IdentifierType: ['unsigned', 'int']
+  Decl: sl, [], [], []
+    TypeDecl: sl, []
+      IdentifierType: ['signed', 'long']
+  Decl: ul, [], [], []
+    TypeDecl: ul, []
+      IdentifierType: ['unsigned', 'long']
+  Decl: sll, [], [], []
+    TypeDecl: sll, []
+      IdentifierType: ['signed', 'long', 'long']
+  Decl: ull, [], [], []
+    TypeDecl: ull, []
+      IdentifierType: ['unsigned', 'long', 'long']
+  Decl: vp, [], [], []
+    PtrDecl: []
+      TypeDecl: vp, []
+        IdentifierType: ['void']
+  Decl: ip, [], [], []
+    PtrDecl: []
+      TypeDecl: ip, []
+        IdentifierType: ['int']
+  Decl: sp, [], [], []
+    PtrDecl: []
+      TypeDecl: sp, []
+        Struct: S
+          Decl: next, [], [], []
+            PtrDecl: []
+              TypeDecl: next, []
+                Struct: S
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+  FuncDef: 
+    Decl: test_op_ignore, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: test_op_ignore, []
+          IdentifierType: ['void']
+    Compound: 
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+        FuncCall: 
+          ID: __sync_fetch_and_add
+          ExprList: 
+            UnaryOp: &
+              ID: sc
+            Constant: int, 1
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+        FuncCall: 
+          ID: __sync_fetch_and_add
+          ExprList: 
+            UnaryOp: &
+              ID: uc
+            Constant: int, 1
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+        FuncCall: 
+          ID: __sync_fetch_and_add
+          ExprList: 
+            UnaryOp: &
+              ID: ss
+            Constant: int, 1
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+        FuncCall: 
+          ID: __sync_fetch_and_add
+          ExprList: 
+            UnaryOp: &
+              ID: us
+            Constant: int, 1
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+        FuncCall: 
+          ID: __sync_fetch_and_add
+          ExprList: 
+            UnaryOp: &
+              ID: si
+            Constant: int, 1
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+        FuncCall: 
+          ID: __sync_fetch_and_add
+          ExprList: 
+            UnaryOp: &
+              ID: ui
+            Constant: int, 1
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+        FuncCall: 
+          ID: __sync_fetch_and_add
+          ExprList: 
+            UnaryOp: &
+              ID: sl
+            Constant: int, 1
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+        FuncCall: 
+          ID: __sync_fetch_and_add
+          ExprList: 
+            UnaryOp: &
+              ID: ul
+            Constant: int, 1
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+        FuncCall: 
+          ID: __sync_fetch_and_add
+          ExprList: 
+            UnaryOp: &
+              ID: sll
+            Constant: int, 1
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+        FuncCall: 
+          ID: __sync_fetch_and_add
+          ExprList: 
+            UnaryOp: &
+              ID: ull
+            Constant: int, 1
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+        FuncCall: 
+          ID: __sync_fetch_and_sub
+          ExprList: 
+            UnaryOp: &
+              ID: sc
+            Constant: int, 1
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+        FuncCall: 
+          ID: __sync_fetch_and_sub
+          ExprList: 
+            UnaryOp: &
+              ID: uc
+            Constant: int, 1
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+        FuncCall: 
+          ID: __sync_fetch_and_sub
+          ExprList: 
+            UnaryOp: &
+              ID: ss
+            Constant: int, 1
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+        FuncCall: 
+          ID: __sync_fetch_and_sub
+          ExprList: 
+            UnaryOp: &
+              ID: us
+            Constant: int, 1
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+        FuncCall: 
+          ID: __sync_fetch_and_sub
+          ExprList: 
+            UnaryOp: &
+              ID: si
+            Constant: int, 1
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+        FuncCall: 
+          ID: __sync_fetch_and_sub
+          ExprList: 
+            UnaryOp: &
+              ID: ui
+            Constant: int, 1
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+        FuncCall: 
+          ID: __sync_fetch_and_sub
+          ExprList: 
+            UnaryOp: &
+              ID: sl
+            Constant: int, 1
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+        FuncCall: 
+          ID: __sync_fetch_and_sub
+          ExprList: 
+            UnaryOp: &
+              ID: ul
+            Constant: int, 1
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+        FuncCall: 
+          ID: __sync_fetch_and_sub
+          ExprList: 
+            UnaryOp: &
+              ID: sll
+            Constant: int, 1
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+        FuncCall: 
+          ID: __sync_fetch_and_sub
+          ExprList: 
+            UnaryOp: &
+              ID: ull
+            Constant: int, 1
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+        FuncCall: 
+          ID: __sync_fetch_and_or
+          ExprList: 
+            UnaryOp: &
+              ID: sc
+            Constant: int, 1
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+        FuncCall: 
+          ID: __sync_fetch_and_or
+          ExprList: 
+            UnaryOp: &
+              ID: uc
+            Constant: int, 1
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+        FuncCall: 
+          ID: __sync_fetch_and_or
+          ExprList: 
+            UnaryOp: &
+              ID: ss
+            Constant: int, 1
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+        FuncCall: 
+          ID: __sync_fetch_and_or
+          ExprList: 
+            UnaryOp: &
+              ID: us
+            Constant: int, 1
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+        FuncCall: 
+          ID: __sync_fetch_and_or
+          ExprList: 
+            UnaryOp: &
+              ID: si
+            Constant: int, 1
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+        FuncCall: 
+          ID: __sync_fetch_and_or
+          ExprList: 
+            UnaryOp: &
+              ID: ui
+            Constant: int, 1
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+        FuncCall: 
+          ID: __sync_fetch_and_or
+          ExprList: 
+            UnaryOp: &
+              ID: sl
+            Constant: int, 1
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+        FuncCall: 
+          ID: __sync_fetch_and_or
+          ExprList: 
+            UnaryOp: &
+              ID: ul
+            Constant: int, 1
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+        FuncCall: 
+          ID: __sync_fetch_and_or
+          ExprList: 
+            UnaryOp: &
+              ID: sll
+            Constant: int, 1
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+        FuncCall: 
+          ID: __sync_fetch_and_or
+          ExprList: 
+            UnaryOp: &
+              ID: ull
+            Constant: int, 1
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+        FuncCall: 
+          ID: __sync_fetch_and_xor
+          ExprList: 
+            UnaryOp: &
+              ID: sc
+            Constant: int, 1
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+        FuncCall: 
+          ID: __sync_fetch_and_xor
+          ExprList: 
+            UnaryOp: &
+              ID: uc
+            Constant: int, 1
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+        FuncCall: 
+          ID: __sync_fetch_and_xor
+          ExprList: 
+            UnaryOp: &
+              ID: ss
+            Constant: int, 1
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+        FuncCall: 
+          ID: __sync_fetch_and_xor
+          ExprList: 
+            UnaryOp: &
+              ID: us
+            Constant: int, 1
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+        FuncCall: 
+          ID: __sync_fetch_and_xor
+          ExprList: 
+            UnaryOp: &
+              ID: si
+            Constant: int, 1
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+        FuncCall: 
+          ID: __sync_fetch_and_xor
+          ExprList: 
+            UnaryOp: &
+              ID: ui
+            Constant: int, 1
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+        FuncCall: 
+          ID: __sync_fetch_and_xor
+          ExprList: 
+            UnaryOp: &
+              ID: sl
+            Constant: int, 1
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+        FuncCall: 
+          ID: __sync_fetch_and_xor
+          ExprList: 
+            UnaryOp: &
+              ID: ul
+            Constant: int, 1
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+        FuncCall: 
+          ID: __sync_fetch_and_xor
+          ExprList: 
+            UnaryOp: &
+              ID: sll
+            Constant: int, 1
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+        FuncCall: 
+          ID: __sync_fetch_and_xor
+          ExprList: 
+            UnaryOp: &
+              ID: ull
+            Constant: int, 1
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+        FuncCall: 
+          ID: __sync_fetch_and_and
+          ExprList: 
+            UnaryOp: &
+              ID: sc
+            Constant: int, 1
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+        FuncCall: 
+          ID: __sync_fetch_and_and
+          ExprList: 
+            UnaryOp: &
+              ID: uc
+            Constant: int, 1
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+        FuncCall: 
+          ID: __sync_fetch_and_and
+          ExprList: 
+            UnaryOp: &
+              ID: ss
+            Constant: int, 1
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+        FuncCall: 
+          ID: __sync_fetch_and_and
+          ExprList: 
+            UnaryOp: &
+              ID: us
+            Constant: int, 1
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+        FuncCall: 
+          ID: __sync_fetch_and_and
+          ExprList: 
+            UnaryOp: &
+              ID: si
+            Constant: int, 1
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+        FuncCall: 
+          ID: __sync_fetch_and_and
+          ExprList: 
+            UnaryOp: &
+              ID: ui
+            Constant: int, 1
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+        FuncCall: 
+          ID: __sync_fetch_and_and
+          ExprList: 
+            UnaryOp: &
+              ID: sl
+            Constant: int, 1
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+        FuncCall: 
+          ID: __sync_fetch_and_and
+          ExprList: 
+            UnaryOp: &
+              ID: ul
+            Constant: int, 1
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+        FuncCall: 
+          ID: __sync_fetch_and_and
+          ExprList: 
+            UnaryOp: &
+              ID: sll
+            Constant: int, 1
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+        FuncCall: 
+          ID: __sync_fetch_and_and
+          ExprList: 
+            UnaryOp: &
+              ID: ull
+            Constant: int, 1
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+        FuncCall: 
+          ID: __sync_fetch_and_nand
+          ExprList: 
+            UnaryOp: &
+              ID: sc
+            Constant: int, 1
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+        FuncCall: 
+          ID: __sync_fetch_and_nand
+          ExprList: 
+            UnaryOp: &
+              ID: uc
+            Constant: int, 1
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+        FuncCall: 
+          ID: __sync_fetch_and_nand
+          ExprList: 
+            UnaryOp: &
+              ID: ss
+            Constant: int, 1
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+        FuncCall: 
+          ID: __sync_fetch_and_nand
+          ExprList: 
+            UnaryOp: &
+              ID: us
+            Constant: int, 1
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+        FuncCall: 
+          ID: __sync_fetch_and_nand
+          ExprList: 
+            UnaryOp: &
+              ID: si
+            Constant: int, 1
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+        FuncCall: 
+          ID: __sync_fetch_and_nand
+          ExprList: 
+            UnaryOp: &
+              ID: ui
+            Constant: int, 1
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+        FuncCall: 
+          ID: __sync_fetch_and_nand
+          ExprList: 
+            UnaryOp: &
+              ID: sl
+            Constant: int, 1
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+        FuncCall: 
+          ID: __sync_fetch_and_nand
+          ExprList: 
+            UnaryOp: &
+              ID: ul
+            Constant: int, 1
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+        FuncCall: 
+          ID: __sync_fetch_and_nand
+          ExprList: 
+            UnaryOp: &
+              ID: sll
+            Constant: int, 1
+      Cast: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+        FuncCall: 
+          ID: __sync_fetch_and_nand
+          ExprList: 
+            UnaryOp: &
+              ID: ull
+            Constant: int, 1
+  FuncDef: 
+    Decl: test_fetch_and_op, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: test_fetch_and_op, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        ID: sc
+        FuncCall: 
+          ID: __sync_fetch_and_add
+          ExprList: 
+            UnaryOp: &
+              ID: sc
+            Constant: int, 11
+      Assignment: =
+        ID: uc
+        FuncCall: 
+          ID: __sync_fetch_and_add
+          ExprList: 
+            UnaryOp: &
+              ID: uc
+            Constant: int, 11
+      Assignment: =
+        ID: ss
+        FuncCall: 
+          ID: __sync_fetch_and_add
+          ExprList: 
+            UnaryOp: &
+              ID: ss
+            Constant: int, 11
+      Assignment: =
+        ID: us
+        FuncCall: 
+          ID: __sync_fetch_and_add
+          ExprList: 
+            UnaryOp: &
+              ID: us
+            Constant: int, 11
+      Assignment: =
+        ID: si
+        FuncCall: 
+          ID: __sync_fetch_and_add
+          ExprList: 
+            UnaryOp: &
+              ID: si
+            Constant: int, 11
+      Assignment: =
+        ID: ui
+        FuncCall: 
+          ID: __sync_fetch_and_add
+          ExprList: 
+            UnaryOp: &
+              ID: ui
+            Constant: int, 11
+      Assignment: =
+        ID: sl
+        FuncCall: 
+          ID: __sync_fetch_and_add
+          ExprList: 
+            UnaryOp: &
+              ID: sl
+            Constant: int, 11
+      Assignment: =
+        ID: ul
+        FuncCall: 
+          ID: __sync_fetch_and_add
+          ExprList: 
+            UnaryOp: &
+              ID: ul
+            Constant: int, 11
+      Assignment: =
+        ID: sll
+        FuncCall: 
+          ID: __sync_fetch_and_add
+          ExprList: 
+            UnaryOp: &
+              ID: sll
+            Constant: int, 11
+      Assignment: =
+        ID: ull
+        FuncCall: 
+          ID: __sync_fetch_and_add
+          ExprList: 
+            UnaryOp: &
+              ID: ull
+            Constant: int, 11
+      Assignment: =
+        ID: sc
+        FuncCall: 
+          ID: __sync_fetch_and_sub
+          ExprList: 
+            UnaryOp: &
+              ID: sc
+            Constant: int, 11
+      Assignment: =
+        ID: uc
+        FuncCall: 
+          ID: __sync_fetch_and_sub
+          ExprList: 
+            UnaryOp: &
+              ID: uc
+            Constant: int, 11
+      Assignment: =
+        ID: ss
+        FuncCall: 
+          ID: __sync_fetch_and_sub
+          ExprList: 
+            UnaryOp: &
+              ID: ss
+            Constant: int, 11
+      Assignment: =
+        ID: us
+        FuncCall: 
+          ID: __sync_fetch_and_sub
+          ExprList: 
+            UnaryOp: &
+              ID: us
+            Constant: int, 11
+      Assignment: =
+        ID: si
+        FuncCall: 
+          ID: __sync_fetch_and_sub
+          ExprList: 
+            UnaryOp: &
+              ID: si
+            Constant: int, 11
+      Assignment: =
+        ID: ui
+        FuncCall: 
+          ID: __sync_fetch_and_sub
+          ExprList: 
+            UnaryOp: &
+              ID: ui
+            Constant: int, 11
+      Assignment: =
+        ID: sl
+        FuncCall: 
+          ID: __sync_fetch_and_sub
+          ExprList: 
+            UnaryOp: &
+              ID: sl
+            Constant: int, 11
+      Assignment: =
+        ID: ul
+        FuncCall: 
+          ID: __sync_fetch_and_sub
+          ExprList: 
+            UnaryOp: &
+              ID: ul
+            Constant: int, 11
+      Assignment: =
+        ID: sll
+        FuncCall: 
+          ID: __sync_fetch_and_sub
+          ExprList: 
+            UnaryOp: &
+              ID: sll
+            Constant: int, 11
+      Assignment: =
+        ID: ull
+        FuncCall: 
+          ID: __sync_fetch_and_sub
+          ExprList: 
+            UnaryOp: &
+              ID: ull
+            Constant: int, 11
+      Assignment: =
+        ID: sc
+        FuncCall: 
+          ID: __sync_fetch_and_or
+          ExprList: 
+            UnaryOp: &
+              ID: sc
+            Constant: int, 11
+      Assignment: =
+        ID: uc
+        FuncCall: 
+          ID: __sync_fetch_and_or
+          ExprList: 
+            UnaryOp: &
+              ID: uc
+            Constant: int, 11
+      Assignment: =
+        ID: ss
+        FuncCall: 
+          ID: __sync_fetch_and_or
+          ExprList: 
+            UnaryOp: &
+              ID: ss
+            Constant: int, 11
+      Assignment: =
+        ID: us
+        FuncCall: 
+          ID: __sync_fetch_and_or
+          ExprList: 
+            UnaryOp: &
+              ID: us
+            Constant: int, 11
+      Assignment: =
+        ID: si
+        FuncCall: 
+          ID: __sync_fetch_and_or
+          ExprList: 
+            UnaryOp: &
+              ID: si
+            Constant: int, 11
+      Assignment: =
+        ID: ui
+        FuncCall: 
+          ID: __sync_fetch_and_or
+          ExprList: 
+            UnaryOp: &
+              ID: ui
+            Constant: int, 11
+      Assignment: =
+        ID: sl
+        FuncCall: 
+          ID: __sync_fetch_and_or
+          ExprList: 
+            UnaryOp: &
+              ID: sl
+            Constant: int, 11
+      Assignment: =
+        ID: ul
+        FuncCall: 
+          ID: __sync_fetch_and_or
+          ExprList: 
+            UnaryOp: &
+              ID: ul
+            Constant: int, 11
+      Assignment: =
+        ID: sll
+        FuncCall: 
+          ID: __sync_fetch_and_or
+          ExprList: 
+            UnaryOp: &
+              ID: sll
+            Constant: int, 11
+      Assignment: =
+        ID: ull
+        FuncCall: 
+          ID: __sync_fetch_and_or
+          ExprList: 
+            UnaryOp: &
+              ID: ull
+            Constant: int, 11
+      Assignment: =
+        ID: sc
+        FuncCall: 
+          ID: __sync_fetch_and_xor
+          ExprList: 
+            UnaryOp: &
+              ID: sc
+            Constant: int, 11
+      Assignment: =
+        ID: uc
+        FuncCall: 
+          ID: __sync_fetch_and_xor
+          ExprList: 
+            UnaryOp: &
+              ID: uc
+            Constant: int, 11
+      Assignment: =
+        ID: ss
+        FuncCall: 
+          ID: __sync_fetch_and_xor
+          ExprList: 
+            UnaryOp: &
+              ID: ss
+            Constant: int, 11
+      Assignment: =
+        ID: us
+        FuncCall: 
+          ID: __sync_fetch_and_xor
+          ExprList: 
+            UnaryOp: &
+              ID: us
+            Constant: int, 11
+      Assignment: =
+        ID: si
+        FuncCall: 
+          ID: __sync_fetch_and_xor
+          ExprList: 
+            UnaryOp: &
+              ID: si
+            Constant: int, 11
+      Assignment: =
+        ID: ui
+        FuncCall: 
+          ID: __sync_fetch_and_xor
+          ExprList: 
+            UnaryOp: &
+              ID: ui
+            Constant: int, 11
+      Assignment: =
+        ID: sl
+        FuncCall: 
+          ID: __sync_fetch_and_xor
+          ExprList: 
+            UnaryOp: &
+              ID: sl
+            Constant: int, 11
+      Assignment: =
+        ID: ul
+        FuncCall: 
+          ID: __sync_fetch_and_xor
+          ExprList: 
+            UnaryOp: &
+              ID: ul
+            Constant: int, 11
+      Assignment: =
+        ID: sll
+        FuncCall: 
+          ID: __sync_fetch_and_xor
+          ExprList: 
+            UnaryOp: &
+              ID: sll
+            Constant: int, 11
+      Assignment: =
+        ID: ull
+        FuncCall: 
+          ID: __sync_fetch_and_xor
+          ExprList: 
+            UnaryOp: &
+              ID: ull
+            Constant: int, 11
+      Assignment: =
+        ID: sc
+        FuncCall: 
+          ID: __sync_fetch_and_and
+          ExprList: 
+            UnaryOp: &
+              ID: sc
+            Constant: int, 11
+      Assignment: =
+        ID: uc
+        FuncCall: 
+          ID: __sync_fetch_and_and
+          ExprList: 
+            UnaryOp: &
+              ID: uc
+            Constant: int, 11
+      Assignment: =
+        ID: ss
+        FuncCall: 
+          ID: __sync_fetch_and_and
+          ExprList: 
+            UnaryOp: &
+              ID: ss
+            Constant: int, 11
+      Assignment: =
+        ID: us
+        FuncCall: 
+          ID: __sync_fetch_and_and
+          ExprList: 
+            UnaryOp: &
+              ID: us
+            Constant: int, 11
+      Assignment: =
+        ID: si
+        FuncCall: 
+          ID: __sync_fetch_and_and
+          ExprList: 
+            UnaryOp: &
+              ID: si
+            Constant: int, 11
+      Assignment: =
+        ID: ui
+        FuncCall: 
+          ID: __sync_fetch_and_and
+          ExprList: 
+            UnaryOp: &
+              ID: ui
+            Constant: int, 11
+      Assignment: =
+        ID: sl
+        FuncCall: 
+          ID: __sync_fetch_and_and
+          ExprList: 
+            UnaryOp: &
+              ID: sl
+            Constant: int, 11
+      Assignment: =
+        ID: ul
+        FuncCall: 
+          ID: __sync_fetch_and_and
+          ExprList: 
+            UnaryOp: &
+              ID: ul
+            Constant: int, 11
+      Assignment: =
+        ID: sll
+        FuncCall: 
+          ID: __sync_fetch_and_and
+          ExprList: 
+            UnaryOp: &
+              ID: sll
+            Constant: int, 11
+      Assignment: =
+        ID: ull
+        FuncCall: 
+          ID: __sync_fetch_and_and
+          ExprList: 
+            UnaryOp: &
+              ID: ull
+            Constant: int, 11
+      Assignment: =
+        ID: sc
+        FuncCall: 
+          ID: __sync_fetch_and_nand
+          ExprList: 
+            UnaryOp: &
+              ID: sc
+            Constant: int, 11
+      Assignment: =
+        ID: uc
+        FuncCall: 
+          ID: __sync_fetch_and_nand
+          ExprList: 
+            UnaryOp: &
+              ID: uc
+            Constant: int, 11
+      Assignment: =
+        ID: ss
+        FuncCall: 
+          ID: __sync_fetch_and_nand
+          ExprList: 
+            UnaryOp: &
+              ID: ss
+            Constant: int, 11
+      Assignment: =
+        ID: us
+        FuncCall: 
+          ID: __sync_fetch_and_nand
+          ExprList: 
+            UnaryOp: &
+              ID: us
+            Constant: int, 11
+      Assignment: =
+        ID: si
+        FuncCall: 
+          ID: __sync_fetch_and_nand
+          ExprList: 
+            UnaryOp: &
+              ID: si
+            Constant: int, 11
+      Assignment: =
+        ID: ui
+        FuncCall: 
+          ID: __sync_fetch_and_nand
+          ExprList: 
+            UnaryOp: &
+              ID: ui
+            Constant: int, 11
+      Assignment: =
+        ID: sl
+        FuncCall: 
+          ID: __sync_fetch_and_nand
+          ExprList: 
+            UnaryOp: &
+              ID: sl
+            Constant: int, 11
+      Assignment: =
+        ID: ul
+        FuncCall: 
+          ID: __sync_fetch_and_nand
+          ExprList: 
+            UnaryOp: &
+              ID: ul
+            Constant: int, 11
+      Assignment: =
+        ID: sll
+        FuncCall: 
+          ID: __sync_fetch_and_nand
+          ExprList: 
+            UnaryOp: &
+              ID: sll
+            Constant: int, 11
+      Assignment: =
+        ID: ull
+        FuncCall: 
+          ID: __sync_fetch_and_nand
+          ExprList: 
+            UnaryOp: &
+              ID: ull
+            Constant: int, 11
+  FuncDef: 
+    Decl: test_op_and_fetch, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: test_op_and_fetch, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        ID: sc
+        FuncCall: 
+          ID: __sync_add_and_fetch
+          ExprList: 
+            UnaryOp: &
+              ID: sc
+            ID: uc
+      Assignment: =
+        ID: uc
+        FuncCall: 
+          ID: __sync_add_and_fetch
+          ExprList: 
+            UnaryOp: &
+              ID: uc
+            ID: uc
+      Assignment: =
+        ID: ss
+        FuncCall: 
+          ID: __sync_add_and_fetch
+          ExprList: 
+            UnaryOp: &
+              ID: ss
+            ID: uc
+      Assignment: =
+        ID: us
+        FuncCall: 
+          ID: __sync_add_and_fetch
+          ExprList: 
+            UnaryOp: &
+              ID: us
+            ID: uc
+      Assignment: =
+        ID: si
+        FuncCall: 
+          ID: __sync_add_and_fetch
+          ExprList: 
+            UnaryOp: &
+              ID: si
+            ID: uc
+      Assignment: =
+        ID: ui
+        FuncCall: 
+          ID: __sync_add_and_fetch
+          ExprList: 
+            UnaryOp: &
+              ID: ui
+            ID: uc
+      Assignment: =
+        ID: sl
+        FuncCall: 
+          ID: __sync_add_and_fetch
+          ExprList: 
+            UnaryOp: &
+              ID: sl
+            ID: uc
+      Assignment: =
+        ID: ul
+        FuncCall: 
+          ID: __sync_add_and_fetch
+          ExprList: 
+            UnaryOp: &
+              ID: ul
+            ID: uc
+      Assignment: =
+        ID: sll
+        FuncCall: 
+          ID: __sync_add_and_fetch
+          ExprList: 
+            UnaryOp: &
+              ID: sll
+            ID: uc
+      Assignment: =
+        ID: ull
+        FuncCall: 
+          ID: __sync_add_and_fetch
+          ExprList: 
+            UnaryOp: &
+              ID: ull
+            ID: uc
+      Assignment: =
+        ID: sc
+        FuncCall: 
+          ID: __sync_sub_and_fetch
+          ExprList: 
+            UnaryOp: &
+              ID: sc
+            ID: uc
+      Assignment: =
+        ID: uc
+        FuncCall: 
+          ID: __sync_sub_and_fetch
+          ExprList: 
+            UnaryOp: &
+              ID: uc
+            ID: uc
+      Assignment: =
+        ID: ss
+        FuncCall: 
+          ID: __sync_sub_and_fetch
+          ExprList: 
+            UnaryOp: &
+              ID: ss
+            ID: uc
+      Assignment: =
+        ID: us
+        FuncCall: 
+          ID: __sync_sub_and_fetch
+          ExprList: 
+            UnaryOp: &
+              ID: us
+            ID: uc
+      Assignment: =
+        ID: si
+        FuncCall: 
+          ID: __sync_sub_and_fetch
+          ExprList: 
+            UnaryOp: &
+              ID: si
+            ID: uc
+      Assignment: =
+        ID: ui
+        FuncCall: 
+          ID: __sync_sub_and_fetch
+          ExprList: 
+            UnaryOp: &
+              ID: ui
+            ID: uc
+      Assignment: =
+        ID: sl
+        FuncCall: 
+          ID: __sync_sub_and_fetch
+          ExprList: 
+            UnaryOp: &
+              ID: sl
+            ID: uc
+      Assignment: =
+        ID: ul
+        FuncCall: 
+          ID: __sync_sub_and_fetch
+          ExprList: 
+            UnaryOp: &
+              ID: ul
+            ID: uc
+      Assignment: =
+        ID: sll
+        FuncCall: 
+          ID: __sync_sub_and_fetch
+          ExprList: 
+            UnaryOp: &
+              ID: sll
+            ID: uc
+      Assignment: =
+        ID: ull
+        FuncCall: 
+          ID: __sync_sub_and_fetch
+          ExprList: 
+            UnaryOp: &
+              ID: ull
+            ID: uc
+      Assignment: =
+        ID: sc
+        FuncCall: 
+          ID: __sync_or_and_fetch
+          ExprList: 
+            UnaryOp: &
+              ID: sc
+            ID: uc
+      Assignment: =
+        ID: uc
+        FuncCall: 
+          ID: __sync_or_and_fetch
+          ExprList: 
+            UnaryOp: &
+              ID: uc
+            ID: uc
+      Assignment: =
+        ID: ss
+        FuncCall: 
+          ID: __sync_or_and_fetch
+          ExprList: 
+            UnaryOp: &
+              ID: ss
+            ID: uc
+      Assignment: =
+        ID: us
+        FuncCall: 
+          ID: __sync_or_and_fetch
+          ExprList: 
+            UnaryOp: &
+              ID: us
+            ID: uc
+      Assignment: =
+        ID: si
+        FuncCall: 
+          ID: __sync_or_and_fetch
+          ExprList: 
+            UnaryOp: &
+              ID: si
+            ID: uc
+      Assignment: =
+        ID: ui
+        FuncCall: 
+          ID: __sync_or_and_fetch
+          ExprList: 
+            UnaryOp: &
+              ID: ui
+            ID: uc
+      Assignment: =
+        ID: sl
+        FuncCall: 
+          ID: __sync_or_and_fetch
+          ExprList: 
+            UnaryOp: &
+              ID: sl
+            ID: uc
+      Assignment: =
+        ID: ul
+        FuncCall: 
+          ID: __sync_or_and_fetch
+          ExprList: 
+            UnaryOp: &
+              ID: ul
+            ID: uc
+      Assignment: =
+        ID: sll
+        FuncCall: 
+          ID: __sync_or_and_fetch
+          ExprList: 
+            UnaryOp: &
+              ID: sll
+            ID: uc
+      Assignment: =
+        ID: ull
+        FuncCall: 
+          ID: __sync_or_and_fetch
+          ExprList: 
+            UnaryOp: &
+              ID: ull
+            ID: uc
+      Assignment: =
+        ID: sc
+        FuncCall: 
+          ID: __sync_xor_and_fetch
+          ExprList: 
+            UnaryOp: &
+              ID: sc
+            ID: uc
+      Assignment: =
+        ID: uc
+        FuncCall: 
+          ID: __sync_xor_and_fetch
+          ExprList: 
+            UnaryOp: &
+              ID: uc
+            ID: uc
+      Assignment: =
+        ID: ss
+        FuncCall: 
+          ID: __sync_xor_and_fetch
+          ExprList: 
+            UnaryOp: &
+              ID: ss
+            ID: uc
+      Assignment: =
+        ID: us
+        FuncCall: 
+          ID: __sync_xor_and_fetch
+          ExprList: 
+            UnaryOp: &
+              ID: us
+            ID: uc
+      Assignment: =
+        ID: si
+        FuncCall: 
+          ID: __sync_xor_and_fetch
+          ExprList: 
+            UnaryOp: &
+              ID: si
+            ID: uc
+      Assignment: =
+        ID: ui
+        FuncCall: 
+          ID: __sync_xor_and_fetch
+          ExprList: 
+            UnaryOp: &
+              ID: ui
+            ID: uc
+      Assignment: =
+        ID: sl
+        FuncCall: 
+          ID: __sync_xor_and_fetch
+          ExprList: 
+            UnaryOp: &
+              ID: sl
+            ID: uc
+      Assignment: =
+        ID: ul
+        FuncCall: 
+          ID: __sync_xor_and_fetch
+          ExprList: 
+            UnaryOp: &
+              ID: ul
+            ID: uc
+      Assignment: =
+        ID: sll
+        FuncCall: 
+          ID: __sync_xor_and_fetch
+          ExprList: 
+            UnaryOp: &
+              ID: sll
+            ID: uc
+      Assignment: =
+        ID: ull
+        FuncCall: 
+          ID: __sync_xor_and_fetch
+          ExprList: 
+            UnaryOp: &
+              ID: ull
+            ID: uc
+      Assignment: =
+        ID: sc
+        FuncCall: 
+          ID: __sync_and_and_fetch
+          ExprList: 
+            UnaryOp: &
+              ID: sc
+            ID: uc
+      Assignment: =
+        ID: uc
+        FuncCall: 
+          ID: __sync_and_and_fetch
+          ExprList: 
+            UnaryOp: &
+              ID: uc
+            ID: uc
+      Assignment: =
+        ID: ss
+        FuncCall: 
+          ID: __sync_and_and_fetch
+          ExprList: 
+            UnaryOp: &
+              ID: ss
+            ID: uc
+      Assignment: =
+        ID: us
+        FuncCall: 
+          ID: __sync_and_and_fetch
+          ExprList: 
+            UnaryOp: &
+              ID: us
+            ID: uc
+      Assignment: =
+        ID: si
+        FuncCall: 
+          ID: __sync_and_and_fetch
+          ExprList: 
+            UnaryOp: &
+              ID: si
+            ID: uc
+      Assignment: =
+        ID: ui
+        FuncCall: 
+          ID: __sync_and_and_fetch
+          ExprList: 
+            UnaryOp: &
+              ID: ui
+            ID: uc
+      Assignment: =
+        ID: sl
+        FuncCall: 
+          ID: __sync_and_and_fetch
+          ExprList: 
+            UnaryOp: &
+              ID: sl
+            ID: uc
+      Assignment: =
+        ID: ul
+        FuncCall: 
+          ID: __sync_and_and_fetch
+          ExprList: 
+            UnaryOp: &
+              ID: ul
+            ID: uc
+      Assignment: =
+        ID: sll
+        FuncCall: 
+          ID: __sync_and_and_fetch
+          ExprList: 
+            UnaryOp: &
+              ID: sll
+            ID: uc
+      Assignment: =
+        ID: ull
+        FuncCall: 
+          ID: __sync_and_and_fetch
+          ExprList: 
+            UnaryOp: &
+              ID: ull
+            ID: uc
+      Assignment: =
+        ID: sc
+        FuncCall: 
+          ID: __sync_nand_and_fetch
+          ExprList: 
+            UnaryOp: &
+              ID: sc
+            ID: uc
+      Assignment: =
+        ID: uc
+        FuncCall: 
+          ID: __sync_nand_and_fetch
+          ExprList: 
+            UnaryOp: &
+              ID: uc
+            ID: uc
+      Assignment: =
+        ID: ss
+        FuncCall: 
+          ID: __sync_nand_and_fetch
+          ExprList: 
+            UnaryOp: &
+              ID: ss
+            ID: uc
+      Assignment: =
+        ID: us
+        FuncCall: 
+          ID: __sync_nand_and_fetch
+          ExprList: 
+            UnaryOp: &
+              ID: us
+            ID: uc
+      Assignment: =
+        ID: si
+        FuncCall: 
+          ID: __sync_nand_and_fetch
+          ExprList: 
+            UnaryOp: &
+              ID: si
+            ID: uc
+      Assignment: =
+        ID: ui
+        FuncCall: 
+          ID: __sync_nand_and_fetch
+          ExprList: 
+            UnaryOp: &
+              ID: ui
+            ID: uc
+      Assignment: =
+        ID: sl
+        FuncCall: 
+          ID: __sync_nand_and_fetch
+          ExprList: 
+            UnaryOp: &
+              ID: sl
+            ID: uc
+      Assignment: =
+        ID: ul
+        FuncCall: 
+          ID: __sync_nand_and_fetch
+          ExprList: 
+            UnaryOp: &
+              ID: ul
+            ID: uc
+      Assignment: =
+        ID: sll
+        FuncCall: 
+          ID: __sync_nand_and_fetch
+          ExprList: 
+            UnaryOp: &
+              ID: sll
+            ID: uc
+      Assignment: =
+        ID: ull
+        FuncCall: 
+          ID: __sync_nand_and_fetch
+          ExprList: 
+            UnaryOp: &
+              ID: ull
+            ID: uc
+  FuncDef: 
+    Decl: test_compare_and_swap, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: test_compare_and_swap, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        ID: sc
+        FuncCall: 
+          ID: __sync_val_compare_and_swap
+          ExprList: 
+            UnaryOp: &
+              ID: sc
+            ID: uc
+            ID: sc
+      Assignment: =
+        ID: uc
+        FuncCall: 
+          ID: __sync_val_compare_and_swap
+          ExprList: 
+            UnaryOp: &
+              ID: uc
+            ID: uc
+            ID: sc
+      Assignment: =
+        ID: ss
+        FuncCall: 
+          ID: __sync_val_compare_and_swap
+          ExprList: 
+            UnaryOp: &
+              ID: ss
+            ID: uc
+            ID: sc
+      Assignment: =
+        ID: us
+        FuncCall: 
+          ID: __sync_val_compare_and_swap
+          ExprList: 
+            UnaryOp: &
+              ID: us
+            ID: uc
+            ID: sc
+      Assignment: =
+        ID: si
+        FuncCall: 
+          ID: __sync_val_compare_and_swap
+          ExprList: 
+            UnaryOp: &
+              ID: si
+            ID: uc
+            ID: sc
+      Assignment: =
+        ID: ui
+        FuncCall: 
+          ID: __sync_val_compare_and_swap
+          ExprList: 
+            UnaryOp: &
+              ID: ui
+            ID: uc
+            ID: sc
+      Assignment: =
+        ID: sl
+        FuncCall: 
+          ID: __sync_val_compare_and_swap
+          ExprList: 
+            UnaryOp: &
+              ID: sl
+            ID: uc
+            ID: sc
+      Assignment: =
+        ID: ul
+        FuncCall: 
+          ID: __sync_val_compare_and_swap
+          ExprList: 
+            UnaryOp: &
+              ID: ul
+            ID: uc
+            ID: sc
+      Assignment: =
+        ID: sll
+        FuncCall: 
+          ID: __sync_val_compare_and_swap
+          ExprList: 
+            UnaryOp: &
+              ID: sll
+            ID: uc
+            ID: sc
+      Assignment: =
+        ID: ull
+        FuncCall: 
+          ID: __sync_val_compare_and_swap
+          ExprList: 
+            UnaryOp: &
+              ID: ull
+            ID: uc
+            ID: sc
+      Assignment: =
+        ID: ui
+        FuncCall: 
+          ID: __sync_bool_compare_and_swap
+          ExprList: 
+            UnaryOp: &
+              ID: sc
+            ID: uc
+            ID: sc
+      Assignment: =
+        ID: ui
+        FuncCall: 
+          ID: __sync_bool_compare_and_swap
+          ExprList: 
+            UnaryOp: &
+              ID: uc
+            ID: uc
+            ID: sc
+      Assignment: =
+        ID: ui
+        FuncCall: 
+          ID: __sync_bool_compare_and_swap
+          ExprList: 
+            UnaryOp: &
+              ID: ss
+            ID: uc
+            ID: sc
+      Assignment: =
+        ID: ui
+        FuncCall: 
+          ID: __sync_bool_compare_and_swap
+          ExprList: 
+            UnaryOp: &
+              ID: us
+            ID: uc
+            ID: sc
+      Assignment: =
+        ID: ui
+        FuncCall: 
+          ID: __sync_bool_compare_and_swap
+          ExprList: 
+            UnaryOp: &
+              ID: si
+            ID: uc
+            ID: sc
+      Assignment: =
+        ID: ui
+        FuncCall: 
+          ID: __sync_bool_compare_and_swap
+          ExprList: 
+            UnaryOp: &
+              ID: ui
+            ID: uc
+            ID: sc
+      Assignment: =
+        ID: ui
+        FuncCall: 
+          ID: __sync_bool_compare_and_swap
+          ExprList: 
+            UnaryOp: &
+              ID: sl
+            ID: uc
+            ID: sc
+      Assignment: =
+        ID: ui
+        FuncCall: 
+          ID: __sync_bool_compare_and_swap
+          ExprList: 
+            UnaryOp: &
+              ID: ul
+            ID: uc
+            ID: sc
+      Assignment: =
+        ID: ui
+        FuncCall: 
+          ID: __sync_bool_compare_and_swap
+          ExprList: 
+            UnaryOp: &
+              ID: sll
+            ID: uc
+            ID: sc
+      Assignment: =
+        ID: ui
+        FuncCall: 
+          ID: __sync_bool_compare_and_swap
+          ExprList: 
+            UnaryOp: &
+              ID: ull
+            ID: uc
+            ID: sc
+  FuncDef: 
+    Decl: test_lock, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: test_lock, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        ID: sc
+        FuncCall: 
+          ID: __sync_lock_test_and_set
+          ExprList: 
+            UnaryOp: &
+              ID: sc
+            Constant: int, 1
+      Assignment: =
+        ID: uc
+        FuncCall: 
+          ID: __sync_lock_test_and_set
+          ExprList: 
+            UnaryOp: &
+              ID: uc
+            Constant: int, 1
+      Assignment: =
+        ID: ss
+        FuncCall: 
+          ID: __sync_lock_test_and_set
+          ExprList: 
+            UnaryOp: &
+              ID: ss
+            Constant: int, 1
+      Assignment: =
+        ID: us
+        FuncCall: 
+          ID: __sync_lock_test_and_set
+          ExprList: 
+            UnaryOp: &
+              ID: us
+            Constant: int, 1
+      Assignment: =
+        ID: si
+        FuncCall: 
+          ID: __sync_lock_test_and_set
+          ExprList: 
+            UnaryOp: &
+              ID: si
+            Constant: int, 1
+      Assignment: =
+        ID: ui
+        FuncCall: 
+          ID: __sync_lock_test_and_set
+          ExprList: 
+            UnaryOp: &
+              ID: ui
+            Constant: int, 1
+      Assignment: =
+        ID: sl
+        FuncCall: 
+          ID: __sync_lock_test_and_set
+          ExprList: 
+            UnaryOp: &
+              ID: sl
+            Constant: int, 1
+      Assignment: =
+        ID: ul
+        FuncCall: 
+          ID: __sync_lock_test_and_set
+          ExprList: 
+            UnaryOp: &
+              ID: ul
+            Constant: int, 1
+      Assignment: =
+        ID: sll
+        FuncCall: 
+          ID: __sync_lock_test_and_set
+          ExprList: 
+            UnaryOp: &
+              ID: sll
+            Constant: int, 1
+      Assignment: =
+        ID: ull
+        FuncCall: 
+          ID: __sync_lock_test_and_set
+          ExprList: 
+            UnaryOp: &
+              ID: ull
+            Constant: int, 1
+      FuncCall: 
+        ID: __sync_synchronize
+      FuncCall: 
+        ID: __sync_lock_release
+        ExprList: 
+          UnaryOp: &
+            ID: sc
+      FuncCall: 
+        ID: __sync_lock_release
+        ExprList: 
+          UnaryOp: &
+            ID: uc
+      FuncCall: 
+        ID: __sync_lock_release
+        ExprList: 
+          UnaryOp: &
+            ID: ss
+      FuncCall: 
+        ID: __sync_lock_release
+        ExprList: 
+          UnaryOp: &
+            ID: us
+      FuncCall: 
+        ID: __sync_lock_release
+        ExprList: 
+          UnaryOp: &
+            ID: si
+      FuncCall: 
+        ID: __sync_lock_release
+        ExprList: 
+          UnaryOp: &
+            ID: ui
+      FuncCall: 
+        ID: __sync_lock_release
+        ExprList: 
+          UnaryOp: &
+            ID: sl
+      FuncCall: 
+        ID: __sync_lock_release
+        ExprList: 
+          UnaryOp: &
+            ID: ul
+      FuncCall: 
+        ID: __sync_lock_release
+        ExprList: 
+          UnaryOp: &
+            ID: sll
+      FuncCall: 
+        ID: __sync_lock_release
+        ExprList: 
+          UnaryOp: &
+            ID: ull

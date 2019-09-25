@@ -1,0 +1,59 @@
+TranslationUnitDecl 0x7fe5c48264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe5c4826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe5c4826740 '__int128'
+|-TypedefDecl 0x7fe5c4826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe5c4826760 'unsigned __int128'
+|-TypedefDecl 0x7fe5c4826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe5c4826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fe5c4826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe5c4826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe5c4826dc0 'char *'
+|   `-BuiltinType 0x7fe5c4826560 'char'
+|-TypedefDecl 0x7fe5c48270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe5c4827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe5c4826ee0 'struct __va_list_tag'
+|     `-Record 0x7fe5c4826e58 '__va_list_tag'
+|-RecordDecl 0x7fe5c4827120 <c_files/pr44707.c:3:8, col:33> col:8 struct definition
+| |-FieldDecl 0x7fe5c5025a00 <col:17, col:21> col:21 referenced a 'int'
+| |-FieldDecl 0x7fe5c5025a60 <col:17, col:24> col:24 referenced b 'int'
+| |-FieldDecl 0x7fe5c5025ac0 <col:17, col:27> col:27 referenced c 'int'
+| `-FieldDecl 0x7fe5c5025b20 <col:17, col:30> col:30 referenced d 'int'
+|-VarDecl 0x7fe5c5025bc0 <col:1, col:35> col:35 used v 'struct (anonymous struct at c_files/pr44707.c:3:8)':'struct (anonymous at c_files/pr44707.c:3:8)' extern
+|-VarDecl 0x7fe5c5025c90 <line:4:1, col:12> col:12 used w 'int' extern
+`-FunctionDecl 0x7fe5c5025db0 <line:6:1, line:15:1> line:7:1 foo 'void (void)'
+  `-CompoundStmt 0x7fe5c50266c8 <line:8:1, line:15:1>
+    |-DeclStmt 0x7fe5c5025f38 <line:9:3, col:15>
+    | `-VarDecl 0x7fe5c5025e60 <col:3, col:14> col:7 used e1 'int' cinit
+    |   `-ImplicitCastExpr 0x7fe5c5025f20 <col:12, col:14> 'int' <LValueToRValue>
+    |     `-MemberExpr 0x7fe5c5025ee8 <col:12, col:14> 'int' lvalue .a 0x7fe5c5025a00
+    |       `-DeclRefExpr 0x7fe5c5025ec0 <col:12> 'struct (anonymous struct at c_files/pr44707.c:3:8)':'struct (anonymous at c_files/pr44707.c:3:8)' lvalue Var 0x7fe5c5025bc0 'v' 'struct (anonymous struct at c_files/pr44707.c:3:8)':'struct (anonymous at c_files/pr44707.c:3:8)'
+    |-DeclStmt 0x7fe5c5026008 <line:10:3, col:13>
+    | `-VarDecl 0x7fe5c5025f68 <col:3, col:12> col:7 used e2 'int' cinit
+    |   `-ImplicitCastExpr 0x7fe5c5025ff0 <col:12> 'int' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fe5c5025fc8 <col:12> 'int' lvalue Var 0x7fe5c5025c90 'w' 'int'
+    |-DeclStmt 0x7fe5c5026110 <line:11:3, col:15>
+    | `-VarDecl 0x7fe5c5026038 <col:3, col:14> col:7 used e3 'int' cinit
+    |   `-ImplicitCastExpr 0x7fe5c50260f8 <col:12, col:14> 'int' <LValueToRValue>
+    |     `-MemberExpr 0x7fe5c50260c0 <col:12, col:14> 'int' lvalue .b 0x7fe5c5025a60
+    |       `-DeclRefExpr 0x7fe5c5026098 <col:12> 'struct (anonymous struct at c_files/pr44707.c:3:8)':'struct (anonymous at c_files/pr44707.c:3:8)' lvalue Var 0x7fe5c5025bc0 'v' 'struct (anonymous struct at c_files/pr44707.c:3:8)':'struct (anonymous at c_files/pr44707.c:3:8)'
+    |-DeclStmt 0x7fe5c5026218 <line:12:3, col:15>
+    | `-VarDecl 0x7fe5c5026140 <col:3, col:14> col:7 used e4 'int' cinit
+    |   `-ImplicitCastExpr 0x7fe5c5026200 <col:12, col:14> 'int' <LValueToRValue>
+    |     `-MemberExpr 0x7fe5c50261c8 <col:12, col:14> 'int' lvalue .c 0x7fe5c5025ac0
+    |       `-DeclRefExpr 0x7fe5c50261a0 <col:12> 'struct (anonymous struct at c_files/pr44707.c:3:8)':'struct (anonymous at c_files/pr44707.c:3:8)' lvalue Var 0x7fe5c5025bc0 'v' 'struct (anonymous struct at c_files/pr44707.c:3:8)':'struct (anonymous at c_files/pr44707.c:3:8)'
+    |-DeclStmt 0x7fe5c5026320 <line:13:3, col:15>
+    | `-VarDecl 0x7fe5c5026248 <col:3, col:14> col:7 used e5 'int' cinit
+    |   `-ImplicitCastExpr 0x7fe5c5026308 <col:12, col:14> 'int' <LValueToRValue>
+    |     `-MemberExpr 0x7fe5c50262d0 <col:12, col:14> 'int' lvalue .d 0x7fe5c5025b20
+    |       `-DeclRefExpr 0x7fe5c50262a8 <col:12> 'struct (anonymous struct at c_files/pr44707.c:3:8)':'struct (anonymous at c_files/pr44707.c:3:8)' lvalue Var 0x7fe5c5025bc0 'v' 'struct (anonymous struct at c_files/pr44707.c:3:8)':'struct (anonymous at c_files/pr44707.c:3:8)'
+    `-GCCAsmStmt 0x7fe5c5026608 <line:14:3, col:86>
+      |-ImplicitCastExpr 0x7fe5c5026590 <col:35> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7fe5c5026408 <col:35> 'int' lvalue Var 0x7fe5c5025e60 'e1' 'int'
+      |-ImplicitCastExpr 0x7fe5c50265a8 <col:47> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7fe5c5026460 <col:47> 'int' lvalue Var 0x7fe5c5025f68 'e2' 'int'
+      |-ImplicitCastExpr 0x7fe5c50265c0 <col:59> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7fe5c50264b8 <col:59> 'int' lvalue Var 0x7fe5c5026038 'e3' 'int'
+      |-ImplicitCastExpr 0x7fe5c50265d8 <col:71> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7fe5c5026510 <col:71> 'int' lvalue Var 0x7fe5c5026140 'e4' 'int'
+      `-ImplicitCastExpr 0x7fe5c50265f0 <col:83> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7fe5c5026568 <col:83> 'int' lvalue Var 0x7fe5c5026248 'e5' 'int'

@@ -1,0 +1,94 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: _fat_ptr
+      Decl: curr, [], [], []
+        PtrDecl: []
+          TypeDecl: curr, []
+            IdentifierType: ['unsigned', 'char']
+      Decl: base, [], [], []
+        PtrDecl: []
+          TypeDecl: base, []
+            IdentifierType: ['unsigned', 'char']
+      Decl: last_plus_one, [], [], []
+        PtrDecl: []
+          TypeDecl: last_plus_one, []
+            IdentifierType: ['unsigned', 'char']
+  Decl: Cyc_string_ungetc, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: ignore, [], [], []
+          TypeDecl: ignore, []
+            IdentifierType: ['int']
+        Decl: sptr, [], [], []
+          PtrDecl: []
+            TypeDecl: sptr, []
+              Struct: _fat_ptr
+      TypeDecl: Cyc_string_ungetc, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: Cyc_string_ungetc, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: ignore, [], [], []
+            TypeDecl: ignore, []
+              IdentifierType: ['int']
+          Decl: sptr, [], [], []
+            PtrDecl: []
+              TypeDecl: sptr, []
+                Struct: _fat_ptr
+        TypeDecl: Cyc_string_ungetc, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: _T0, [], [], []
+        PtrDecl: []
+          TypeDecl: _T0, []
+            Struct: _fat_ptr
+      Decl: _T1, [], [], []
+        PtrDecl: []
+          TypeDecl: _T1, []
+            Struct: _fat_ptr
+      Decl: _T2, [], [], []
+        TypeDecl: _T2, []
+          Struct: _fat_ptr
+      Decl: _T3, [], [], []
+        TypeDecl: _T3, []
+          IdentifierType: ['int']
+      Decl: _ans, [], [], []
+        TypeDecl: _ans, []
+          Struct: _fat_ptr
+      Decl: _change, [], [], []
+        TypeDecl: _change, []
+          IdentifierType: ['int']
+      Compound: 
+        Assignment: =
+          ID: _T0
+          ID: sptr
+        Assignment: =
+          ID: _T1
+          ID: sptr
+        Assignment: =
+          ID: _T2
+          UnaryOp: *
+            ID: sptr
+        Assignment: =
+          ID: _T3
+          UnaryOp: -
+            Constant: int, 1
+        Assignment: =
+          ID: _ans
+          ID: _T2
+        Assignment: =
+          ID: _change
+          UnaryOp: -
+            Constant: int, 1
+        Assignment: +=
+          StructRef: .
+            ID: _ans
+            ID: curr
+          Constant: int, 4294967295U
+        Assignment: =
+          UnaryOp: *
+            ID: sptr
+          ID: _ans
+        Return: 
+          Constant: int, 0

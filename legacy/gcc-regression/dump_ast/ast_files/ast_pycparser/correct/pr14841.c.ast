@@ -1,0 +1,75 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: car
+      Decl: speed, [], [], []
+        TypeDecl: speed, []
+          IdentifierType: ['int']
+      Decl: tire_pressure, [], [], []
+        ArrayDecl: []
+          TypeDecl: tire_pressure, []
+            IdentifierType: ['int']
+          Constant: int, 4
+  Decl: cars, ['const'], ['static'], []
+    ArrayDecl: []
+      TypeDecl: cars, ['const']
+        Struct: car
+    InitList: 
+      InitList: 
+        Constant: int, 75
+        InitList: 
+          Constant: int, 10
+          Constant: int, 20
+          Constant: int, 30
+          Constant: int, 40
+      InitList: 
+        Constant: int, 35
+        InitList: 
+          Constant: int, 12
+          Constant: int, 34
+          Constant: int, 56
+          Constant: int, 78
+      InitList: 
+        Constant: int, 40
+        InitList: 
+          Constant: int, 19
+          Constant: int, 28
+          Constant: int, 37
+          Constant: int, 46
+  Decl: link_error, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['void']
+      TypeDecl: link_error, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: !=
+          ArrayRef: 
+            StructRef: .
+              ArrayRef: 
+                ID: cars
+                Constant: int, 1
+              ID: tire_pressure
+            Constant: int, 2
+          Constant: int, 56
+        FuncCall: 
+          ID: link_error
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        Constant: int, 0

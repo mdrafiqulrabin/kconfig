@@ -1,0 +1,33 @@
+FileAST: 
+  Decl: __setjmp, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            PtrDecl: []
+              TypeDecl: None, []
+                IdentifierType: ['void']
+      TypeDecl: __setjmp, []
+        IdentifierType: ['int']
+  Decl: buf, [], [], []
+    ArrayDecl: []
+      PtrDecl: []
+        TypeDecl: buf, []
+          IdentifierType: ['void']
+      Constant: int, 64
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      FuncCall: 
+        ID: __setjmp
+        ExprList: 
+          ID: buf
+      For: 
+        EmptyStatement: 

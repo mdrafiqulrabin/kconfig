@@ -1,0 +1,201 @@
+FileAST: 
+  FuncDef: 
+    Decl: f1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['float']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['unsigned', 'short']
+        TypeDecl: f1, []
+          IdentifierType: ['float']
+    Compound: 
+      Return: 
+        BinaryOp: *
+          ID: x
+          ID: y
+  FuncDef: 
+    Decl: f2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['float']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['short']
+        TypeDecl: f2, []
+          IdentifierType: ['float']
+    Compound: 
+      Return: 
+        BinaryOp: *
+          ID: x
+          ID: y
+  FuncDef: 
+    Decl: f3, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['float']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['char']
+        TypeDecl: f3, []
+          IdentifierType: ['float']
+    Compound: 
+      Return: 
+        BinaryOp: *
+          ID: x
+          ID: y
+  FuncDef: 
+    Decl: f4, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['float']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['unsigned', 'char']
+        TypeDecl: f4, []
+          IdentifierType: ['float']
+    Compound: 
+      Return: 
+        BinaryOp: *
+          ID: x
+          ID: y
+  FuncDef: 
+    Decl: f5, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['float']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['int']
+        TypeDecl: f5, []
+          IdentifierType: ['float']
+    Compound: 
+      Return: 
+        BinaryOp: *
+          ID: x
+          ID: y
+  FuncDef: 
+    Decl: c1, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['float']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['unsigned', 'short']
+          Decl: z, [], [], []
+            TypeDecl: z, []
+              IdentifierType: ['int']
+        TypeDecl: c1, []
+          IdentifierType: ['double']
+    Compound: 
+      Return: 
+        TernaryOp: 
+          ID: z
+          BinaryOp: +
+            ID: x
+            ID: x
+          ID: y
+  FuncDef: 
+    Decl: c2, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['float']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['short']
+          Decl: z, [], [], []
+            TypeDecl: z, []
+              IdentifierType: ['int']
+        TypeDecl: c2, []
+          IdentifierType: ['double']
+    Compound: 
+      Return: 
+        TernaryOp: 
+          ID: z
+          BinaryOp: +
+            ID: x
+            ID: x
+          ID: y
+  FuncDef: 
+    Decl: c3, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['float']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['char']
+          Decl: z, [], [], []
+            TypeDecl: z, []
+              IdentifierType: ['int']
+        TypeDecl: c3, []
+          IdentifierType: ['double']
+    Compound: 
+      Return: 
+        TernaryOp: 
+          ID: z
+          BinaryOp: +
+            ID: x
+            ID: x
+          ID: y
+  FuncDef: 
+    Decl: c4, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['float']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['unsigned', 'char']
+          Decl: z, [], [], []
+            TypeDecl: z, []
+              IdentifierType: ['int']
+        TypeDecl: c4, []
+          IdentifierType: ['double']
+    Compound: 
+      Return: 
+        TernaryOp: 
+          ID: z
+          BinaryOp: +
+            ID: x
+            ID: x
+          ID: y
+  FuncDef: 
+    Decl: c5, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['float']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['int']
+          Decl: z, [], [], []
+            TypeDecl: z, []
+              IdentifierType: ['int']
+        TypeDecl: c5, []
+          IdentifierType: ['double']
+    Compound: 
+      Return: 
+        TernaryOp: 
+          ID: z
+          BinaryOp: +
+            ID: x
+            ID: x
+          ID: y

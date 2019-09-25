@@ -1,0 +1,137 @@
+TranslationUnitDecl 0x7fa9ab0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa9ab026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa9ab026740 '__int128'
+|-TypedefDecl 0x7fa9ab026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa9ab026760 'unsigned __int128'
+|-TypedefDecl 0x7fa9ab026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa9ab026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa9ab026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa9ab026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa9ab026dc0 'char *'
+|   `-BuiltinType 0x7fa9ab026560 'char'
+|-TypedefDecl 0x7fa9ab0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa9ab027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa9ab026ee0 'struct __va_list_tag'
+|     `-Record 0x7fa9ab026e58 '__va_list_tag'
+|-TypedefDecl 0x7fa9ab0271a0 <c_files/pr68668.c:4:1, col:21> col:19 referenced T 'const int []'
+| `-IncompleteArrayType 0x7fa9ab027150 'const int []' 
+|   `-QualType 0x7fa9ab0265c1 'const int' const
+|     `-BuiltinType 0x7fa9ab0265c0 'int'
+|-TypedefDecl 0x7fa9ac00fac0 <line:5:1, col:22> col:19 referenced U 'const int [1]'
+| `-ConstantArrayType 0x7fa9ac00fa60 'const int [1]' 1 
+|   `-QualType 0x7fa9ab0265c1 'const int' const
+|     `-BuiltinType 0x7fa9ab0265c0 'int'
+|-FunctionDecl 0x7fa9ac00fc88 <line:7:1, line:11:1> line:8:1 fn1 'int (const int *)'
+| |-ParmVarDecl 0x7fa9ac00fb80 <col:6, col:8> col:8 used p 'const int *':'const int *'
+| `-CompoundStmt 0x7fa9ac00fe20 <line:9:1, line:11:1>
+|   `-ReturnStmt 0x7fa9ac00fe08 <line:10:3, col:13>
+|     `-ImplicitCastExpr 0x7fa9ac00fdf0 <col:10, col:13> 'int' <LValueToRValue>
+|       `-ArraySubscriptExpr 0x7fa9ac00fdc8 <col:10, col:13> 'const int' lvalue
+|         |-ImplicitCastExpr 0x7fa9ac00fdb0 <col:10> 'const int *':'const int *' <LValueToRValue>
+|         | `-DeclRefExpr 0x7fa9ac00fd68 <col:10> 'const int *':'const int *' lvalue ParmVar 0x7fa9ac00fb80 'p' 'const int *':'const int *'
+|         `-IntegerLiteral 0x7fa9ac00fd90 <col:12> 'int' 0
+|-FunctionDecl 0x7fa9ac0100b8 <line:13:1, line:17:1> line:14:1 fn2 'int (U *)'
+| |-ParmVarDecl 0x7fa9ac00ffb0 <col:6, col:11> col:8 used p 'U *':'U *'
+| `-CompoundStmt 0x7fa9ac010270 <line:15:1, line:17:1>
+|   `-ReturnStmt 0x7fa9ac010258 <line:16:3, col:16>
+|     `-ImplicitCastExpr 0x7fa9ac010240 <col:10, col:16> 'int' <LValueToRValue>
+|       `-ArraySubscriptExpr 0x7fa9ac010218 <col:10, col:16> 'const int' lvalue
+|         |-ImplicitCastExpr 0x7fa9ac010200 <col:10, col:13> 'const int *' <ArrayToPointerDecay>
+|         | `-ArraySubscriptExpr 0x7fa9ac0101b8 <col:10, col:13> 'U':'const int [1]' lvalue
+|         |   |-ImplicitCastExpr 0x7fa9ac0101a0 <col:10> 'U *':'U *' <LValueToRValue>
+|         |   | `-DeclRefExpr 0x7fa9ac010158 <col:10> 'U *':'U *' lvalue ParmVar 0x7fa9ac00ffb0 'p' 'U *':'U *'
+|         |   `-IntegerLiteral 0x7fa9ac010180 <col:12> 'int' 0
+|         `-IntegerLiteral 0x7fa9ac0101e0 <col:15> 'int' 0
+|-FunctionDecl 0x7fa9ac010598 <line:19:1, line:23:1> line:20:1 fn3 'int (U (*)[3])'
+| |-ParmVarDecl 0x7fa9ac010490 <col:6, col:14> col:8 used p 'U (*)[3]':'U (*)[3]'
+| `-CompoundStmt 0x7fa9ac0107b0 <line:21:1, line:23:1>
+|   `-ReturnStmt 0x7fa9ac010798 <line:22:3, col:19>
+|     `-ImplicitCastExpr 0x7fa9ac010780 <col:10, col:19> 'int' <LValueToRValue>
+|       `-ArraySubscriptExpr 0x7fa9ac010758 <col:10, col:19> 'const int' lvalue
+|         |-ImplicitCastExpr 0x7fa9ac010740 <col:10, col:16> 'const int *' <ArrayToPointerDecay>
+|         | `-ArraySubscriptExpr 0x7fa9ac0106f8 <col:10, col:16> 'U':'const int [1]' lvalue
+|         |   |-ImplicitCastExpr 0x7fa9ac0106e0 <col:10, col:13> 'U *' <ArrayToPointerDecay>
+|         |   | `-ArraySubscriptExpr 0x7fa9ac010698 <col:10, col:13> 'U [3]' lvalue
+|         |   |   |-ImplicitCastExpr 0x7fa9ac010680 <col:10> 'U (*)[3]':'U (*)[3]' <LValueToRValue>
+|         |   |   | `-DeclRefExpr 0x7fa9ac010638 <col:10> 'U (*)[3]':'U (*)[3]' lvalue ParmVar 0x7fa9ac010490 'p' 'U (*)[3]':'U (*)[3]'
+|         |   |   `-IntegerLiteral 0x7fa9ac010660 <col:12> 'int' 0
+|         |   `-IntegerLiteral 0x7fa9ac0106c0 <col:15> 'int' 0
+|         `-IntegerLiteral 0x7fa9ac010720 <col:18> 'int' 0
+|-FunctionDecl 0x7fa9ac0108a8 <line:25:1, line:29:1> line:26:1 fn4 'int (U *)'
+| |-ParmVarDecl 0x7fa9ac0107e0 <col:6, col:9> col:9 used p 'U *'
+| `-CompoundStmt 0x7fa9ac010a70 <line:27:1, line:29:1>
+|   `-ReturnStmt 0x7fa9ac010a58 <line:28:3, col:16>
+|     `-ImplicitCastExpr 0x7fa9ac010a40 <col:10, col:16> 'int' <LValueToRValue>
+|       `-ArraySubscriptExpr 0x7fa9ac010a18 <col:10, col:16> 'const int' lvalue
+|         |-ImplicitCastExpr 0x7fa9ac010a00 <col:10, col:13> 'const int *' <ArrayToPointerDecay>
+|         | `-ArraySubscriptExpr 0x7fa9ac0109a8 <col:10, col:13> 'U':'const int [1]' lvalue
+|         |   |-ImplicitCastExpr 0x7fa9ac010990 <col:10> 'U *' <LValueToRValue>
+|         |   | `-DeclRefExpr 0x7fa9ac010948 <col:10> 'U *' lvalue ParmVar 0x7fa9ac0107e0 'p' 'U *'
+|         |   `-IntegerLiteral 0x7fa9ac010970 <col:12> 'int' 0
+|         `-IntegerLiteral 0x7fa9ac0109d0 <col:15> 'int' 0
+|-FunctionDecl 0x7fa9ac010cf8 <line:31:1, line:35:1> line:32:1 fn5 'int (U (*)[1])'
+| |-ParmVarDecl 0x7fa9ac010be8 <col:6, col:14> col:10 used p 'U (*)[1]'
+| `-CompoundStmt 0x7fa9ac010f08 <line:33:1, line:35:1>
+|   `-ReturnStmt 0x7fa9ac010ef0 <line:34:3, col:19>
+|     `-ImplicitCastExpr 0x7fa9ac010ed8 <col:10, col:19> 'int' <LValueToRValue>
+|       `-ArraySubscriptExpr 0x7fa9ac010eb0 <col:10, col:19> 'const int' lvalue
+|         |-ImplicitCastExpr 0x7fa9ac010e98 <col:10, col:16> 'const int *' <ArrayToPointerDecay>
+|         | `-ArraySubscriptExpr 0x7fa9ac010e50 <col:10, col:16> 'U':'const int [1]' lvalue
+|         |   |-ImplicitCastExpr 0x7fa9ac010e38 <col:10, col:13> 'U *' <ArrayToPointerDecay>
+|         |   | `-ParenExpr 0x7fa9ac010df8 <col:10, col:13> 'U [1]':'U [1]' lvalue
+|         |   |   `-UnaryOperator 0x7fa9ac010dd8 <col:11, col:12> 'U [1]':'U [1]' lvalue prefix '*'
+|         |   |     `-ImplicitCastExpr 0x7fa9ac010dc0 <col:12> 'U (*)[1]' <LValueToRValue>
+|         |   |       `-DeclRefExpr 0x7fa9ac010d98 <col:12> 'U (*)[1]' lvalue ParmVar 0x7fa9ac010be8 'p' 'U (*)[1]'
+|         |   `-IntegerLiteral 0x7fa9ac010e18 <col:15> 'int' 0
+|         `-IntegerLiteral 0x7fa9ac010e78 <col:18> 'int' 0
+|-FunctionDecl 0x7fa9ac0111c8 <line:37:1, line:41:1> line:38:1 fn6 'int (U (*)[1][2])'
+| |-ParmVarDecl 0x7fa9ac0110b8 <col:6, col:17> col:10 used p 'U (*)[1][2]'
+| `-CompoundStmt 0x7fa9ac011498 <line:39:1, line:41:1>
+|   `-ReturnStmt 0x7fa9ac011480 <line:40:3, col:22>
+|     `-ImplicitCastExpr 0x7fa9ac011468 <col:10, col:22> 'int' <LValueToRValue>
+|       `-ArraySubscriptExpr 0x7fa9ac011440 <col:10, col:22> 'const int' lvalue
+|         |-ImplicitCastExpr 0x7fa9ac011428 <col:10, col:19> 'const int *' <ArrayToPointerDecay>
+|         | `-ArraySubscriptExpr 0x7fa9ac0113e0 <col:10, col:19> 'U':'const int [1]' lvalue
+|         |   |-ImplicitCastExpr 0x7fa9ac0113c8 <col:10, col:16> 'U *' <ArrayToPointerDecay>
+|         |   | `-ArraySubscriptExpr 0x7fa9ac011380 <col:10, col:16> 'U [2]' lvalue
+|         |   |   |-ImplicitCastExpr 0x7fa9ac011368 <col:10, col:13> 'U (*)[2]' <ArrayToPointerDecay>
+|         |   |   | `-ParenExpr 0x7fa9ac0112c8 <col:10, col:13> 'U [1][2]':'U [1][2]' lvalue
+|         |   |   |   `-UnaryOperator 0x7fa9ac0112a8 <col:11, col:12> 'U [1][2]':'U [1][2]' lvalue prefix '*'
+|         |   |   |     `-ImplicitCastExpr 0x7fa9ac011290 <col:12> 'U (*)[1][2]' <LValueToRValue>
+|         |   |   |       `-DeclRefExpr 0x7fa9ac011268 <col:12> 'U (*)[1][2]' lvalue ParmVar 0x7fa9ac0110b8 'p' 'U (*)[1][2]'
+|         |   |   `-IntegerLiteral 0x7fa9ac0112e8 <col:15> 'int' 0
+|         |   `-IntegerLiteral 0x7fa9ac0113a8 <col:18> 'int' 0
+|         `-IntegerLiteral 0x7fa9ac011408 <col:21> 'int' 0
+|-FunctionDecl 0x7fa9ac011638 <line:43:1, line:47:1> line:44:1 fn7 'int (U **)'
+| |-ParmVarDecl 0x7fa9ac011530 <col:6, col:10> col:10 used p 'U **'
+| `-CompoundStmt 0x7fa9ac011850 <line:45:1, line:47:1>
+|   `-ReturnStmt 0x7fa9ac011838 <line:46:3, col:19>
+|     `-ImplicitCastExpr 0x7fa9ac011820 <col:10, col:19> 'int' <LValueToRValue>
+|       `-ArraySubscriptExpr 0x7fa9ac0117f8 <col:10, col:19> 'const int' lvalue
+|         |-ImplicitCastExpr 0x7fa9ac0117e0 <col:10, col:16> 'const int *' <ArrayToPointerDecay>
+|         | `-ArraySubscriptExpr 0x7fa9ac011798 <col:10, col:16> 'U':'const int [1]' lvalue
+|         |   |-ImplicitCastExpr 0x7fa9ac011780 <col:10, col:13> 'U *' <LValueToRValue>
+|         |   | `-ArraySubscriptExpr 0x7fa9ac011738 <col:10, col:13> 'U *' lvalue
+|         |   |   |-ImplicitCastExpr 0x7fa9ac011720 <col:10> 'U **' <LValueToRValue>
+|         |   |   | `-DeclRefExpr 0x7fa9ac0116d8 <col:10> 'U **' lvalue ParmVar 0x7fa9ac011530 'p' 'U **'
+|         |   |   `-IntegerLiteral 0x7fa9ac011700 <col:12> 'int' 0
+|         |   `-IntegerLiteral 0x7fa9ac011760 <col:15> 'int' 0
+|         `-IntegerLiteral 0x7fa9ac0117c0 <col:18> 'int' 0
+`-FunctionDecl 0x7fa9ac011a30 <line:49:1, line:53:1> line:50:1 fn8 'int (U (**)[1])'
+  |-ParmVarDecl 0x7fa9ac011918 <col:6, col:15> col:11 used p 'U (**)[1]'
+  `-CompoundStmt 0x7fa9ac011ca0 <line:51:1, line:53:1>
+    `-ReturnStmt 0x7fa9ac011c88 <line:52:3, col:22>
+      `-ImplicitCastExpr 0x7fa9ac011c70 <col:10, col:22> 'int' <LValueToRValue>
+        `-ArraySubscriptExpr 0x7fa9ac011c48 <col:10, col:22> 'const int' lvalue
+          |-ImplicitCastExpr 0x7fa9ac011c30 <col:10, col:19> 'const int *' <ArrayToPointerDecay>
+          | `-ArraySubscriptExpr 0x7fa9ac011be8 <col:10, col:19> 'U':'const int [1]' lvalue
+          |   |-ImplicitCastExpr 0x7fa9ac011bd0 <col:10, col:16> 'U *' <ArrayToPointerDecay>
+          |   | `-ArraySubscriptExpr 0x7fa9ac011b88 <col:10, col:16> 'U [1]':'U [1]' lvalue
+          |   |   |-ImplicitCastExpr 0x7fa9ac011b70 <col:10, col:13> 'U (*)[1]' <LValueToRValue>
+          |   |   | `-ParenExpr 0x7fa9ac011b30 <col:10, col:13> 'U (*)[1]' lvalue
+          |   |   |   `-UnaryOperator 0x7fa9ac011b10 <col:11, col:12> 'U (*)[1]' lvalue prefix '*'
+          |   |   |     `-ImplicitCastExpr 0x7fa9ac011af8 <col:12> 'U (**)[1]' <LValueToRValue>
+          |   |   |       `-DeclRefExpr 0x7fa9ac011ad0 <col:12> 'U (**)[1]' lvalue ParmVar 0x7fa9ac011918 'p' 'U (**)[1]'
+          |   |   `-IntegerLiteral 0x7fa9ac011b50 <col:15> 'int' 0
+          |   `-IntegerLiteral 0x7fa9ac011bb0 <col:18> 'int' 0
+          `-IntegerLiteral 0x7fa9ac011c10 <col:21> 'int' 0

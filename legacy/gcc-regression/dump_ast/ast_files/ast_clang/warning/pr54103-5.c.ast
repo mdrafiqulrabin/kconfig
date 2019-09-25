@@ -1,0 +1,29 @@
+c_files/pr54103-5.c:4:3: warning: expression result unused [-Wunused-value]
+  !(0 / 0);
+  ^~~~~~~~
+c_files/pr54103-5.c:4:7: warning: division by zero is undefined [-Wdivision-by-zero]
+  !(0 / 0);
+      ^ ~
+2 warnings generated.
+TranslationUnitDecl 0x7fb138825ad0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb138826020 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb138825d40 '__int128'
+|-TypedefDecl 0x7fb138826090 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb138825d60 'unsigned __int128'
+|-TypedefDecl 0x7fb138826368 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb138826170 'struct __NSConstantString_tag'
+|   `-Record 0x7fb1388260e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb138826400 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb1388263c0 'char *'
+|   `-BuiltinType 0x7fb138825b60 'char'
+|-TypedefDecl 0x7fb1388266c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb138826670 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb1388264e0 'struct __va_list_tag'
+|     `-Record 0x7fb138826458 '__va_list_tag'
+`-FunctionDecl 0x7fb139025a00 <c_files/pr54103-5.c:1:1, line:5:1> line:2:1 f 'void (void)'
+  `-CompoundStmt 0x7fb139025b80 <line:3:1, line:5:1>
+    `-UnaryOperator 0x7fb139025b60 <line:4:3, col:10> 'int' prefix '!'
+      `-ParenExpr 0x7fb139025b40 <col:4, col:10> 'int'
+        `-BinaryOperator 0x7fb139025b18 <col:5, col:9> 'int' '/'
+          |-IntegerLiteral 0x7fb139025ad8 <col:5> 'int' 0
+          `-IntegerLiteral 0x7fb139025af8 <col:9> 'int' 0

@@ -1,0 +1,74 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['short', 'int']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['short', 'int']
+          Decl: z, [], [], []
+            TypeDecl: z, []
+              IdentifierType: ['short', 'int']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: !=
+          ID: y
+          Constant: int, 0
+        Compound: 
+          Decl: b, ['const'], [], []
+            TypeDecl: b, ['const']
+              IdentifierType: ['short', 'int']
+            Constant: int, 37
+          Assignment: =
+            ID: y
+            Constant: int, 0
+          While: 
+            BinaryOp: <
+              ID: y
+              ID: b
+            Compound: 
+              While: 
+                BinaryOp: <
+                  ID: y
+                  ID: b
+                Compound: 
+                  Label: lab
+                    UnaryOp: ++
+                      ID: y
+              For: 
+                Assignment: =
+                  ID: y
+                  Constant: int, 0
+                BinaryOp: <
+                  ID: y
+                  BinaryOp: -
+                    ID: b
+                    Constant: int, 1
+                UnaryOp: ++
+                  ID: y
+                EmptyStatement: 
+              If: 
+                BinaryOp: !=
+                  ID: z
+                  Constant: int, 0
+                Compound: 
+                  UnaryOp: --
+                    ID: a
+                  Assignment: *=
+                    ID: y
+                    ID: a
+              Assignment: =
+                ID: z
+                ID: x
+          Assignment: =
+            ID: x
+            Constant: int, 0
+      Goto: lab

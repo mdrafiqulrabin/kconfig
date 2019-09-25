@@ -1,0 +1,5 @@
+pr71280.c: In function ‘foo’:
+pr71280.c:12:3: error: ‘for’ loop initial declarations are only allowed in C99 mode
+   for (int i = 0; i < 64; i++)
+   ^
+pr71280.c:12:3: note: use option -std=c99 or -std=gnu99 to compile your code

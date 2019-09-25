@@ -1,0 +1,98 @@
+FileAST: 
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['unsigned']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['unsigned', 'short']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['unsigned']
+        TypeDecl: foo, []
+          IdentifierType: ['unsigned']
+    Compound: 
+      Assignment: =
+        ID: b
+        ID: x
+      Assignment: >>=
+        ID: a
+        BinaryOp: &
+          ID: b
+          Constant: int, 1
+      Assignment: =
+        ID: b
+        BinaryOp: |
+          Constant: int, 1
+          BinaryOp: <<
+            ID: b
+            Constant: int, 5
+      Assignment: >>=
+        ID: b
+        Constant: int, 15
+      Assignment: =
+        ID: x
+        BinaryOp: >
+          Cast: 
+            Typename: None, []
+              TypeDecl: None, []
+                IdentifierType: ['unsigned', 'char']
+            ID: b
+          BinaryOp: &
+            BinaryOp: -
+              Constant: int, 2
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['unsigned', 'char']
+                ID: b
+            Constant: int, 1
+      Assignment: =
+        ID: b
+        Constant: int, 0
+      Return: 
+        ID: x
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: ||
+          BinaryOp: ||
+            BinaryOp: !=
+              ID: __CHAR_BIT__
+              Constant: int, 8
+            BinaryOp: !=
+              UnaryOp: sizeof
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['short']
+              Constant: int, 2
+          BinaryOp: <
+            UnaryOp: sizeof
+              Typename: None, []
+                TypeDecl: None, []
+                  IdentifierType: ['int']
+            Constant: int, 4
+        Return: 
+          Constant: int, 0
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['unsigned']
+        FuncCall: 
+          ID: foo
+          ExprList: 
+            Constant: int, 12345
+      If: 
+        BinaryOp: !=
+          ID: x
+          Constant: int, 0
+        FuncCall: 
+          ID: __builtin_abort
+      Return: 
+        Constant: int, 0

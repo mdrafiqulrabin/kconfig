@@ -1,0 +1,47 @@
+c_files/pr47364-1.c:3:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+arc4_init(void)
+^
+c_files/pr47364-1.c:9:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+2 warnings generated.
+TranslationUnitDecl 0x7fdf150264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fdf15026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fdf15026740 '__int128'
+|-TypedefDecl 0x7fdf15026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fdf15026760 'unsigned __int128'
+|-TypedefDecl 0x7fdf15026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fdf15026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fdf15026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fdf15026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fdf15026dc0 'char *'
+|   `-BuiltinType 0x7fdf15026560 'char'
+|-TypedefDecl 0x7fdf150270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fdf15027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fdf15026ee0 'struct __va_list_tag'
+|     `-Record 0x7fdf15026e58 '__va_list_tag'
+|-VarDecl 0x7fdf150271a0 <c_files/pr47364-1.c:1:1, col:29> col:22 used foo 'unsigned char [256]' static
+`-FunctionDecl 0x7fdf15825b08 <line:3:1, line:9:1> line:3:1 arc4_init 'int (void)'
+  `-CompoundStmt 0x7fdf15825ef8 <line:4:1, line:9:1>
+    |-DeclStmt 0x7fdf15825c18 <line:5:3, col:8>
+    | `-VarDecl 0x7fdf15825bb8 <col:3, col:7> col:7 used n 'int'
+    `-ForStmt 0x7fdf15825ec0 <line:7:3, line:8:14>
+      |-BinaryOperator 0x7fdf15825c78 <line:7:8, col:12> 'int' '='
+      | |-DeclRefExpr 0x7fdf15825c30 <col:8> 'int' lvalue Var 0x7fdf15825bb8 'n' 'int'
+      | `-IntegerLiteral 0x7fdf15825c58 <col:12> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fdf15825d00 <col:15, col:19> 'int' '<'
+      | |-ImplicitCastExpr 0x7fdf15825ce8 <col:15> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fdf15825ca0 <col:15> 'int' lvalue Var 0x7fdf15825bb8 'n' 'int'
+      | `-IntegerLiteral 0x7fdf15825cc8 <col:19> 'int' 256
+      |-UnaryOperator 0x7fdf15825d50 <col:24, col:25> 'int' postfix '++'
+      | `-DeclRefExpr 0x7fdf15825d28 <col:24> 'int' lvalue Var 0x7fdf15825bb8 'n' 'int'
+      `-BinaryOperator 0x7fdf15825e98 <line:8:5, col:14> 'unsigned char' '='
+        |-ArraySubscriptExpr 0x7fdf15825e18 <col:5, col:10> 'unsigned char' lvalue
+        | |-ImplicitCastExpr 0x7fdf15825de8 <col:5> 'unsigned char *' <ArrayToPointerDecay>
+        | | `-DeclRefExpr 0x7fdf15825d70 <col:5> 'unsigned char [256]' lvalue Var 0x7fdf150271a0 'foo' 'unsigned char [256]'
+        | `-ImplicitCastExpr 0x7fdf15825e00 <col:9> 'int' <LValueToRValue>
+        |   `-DeclRefExpr 0x7fdf15825d98 <col:9> 'int' lvalue Var 0x7fdf15825bb8 'n' 'int'
+        `-ImplicitCastExpr 0x7fdf15825e80 <col:14> 'unsigned char' <IntegralCast>
+          `-ImplicitCastExpr 0x7fdf15825e68 <col:14> 'int' <LValueToRValue>
+            `-DeclRefExpr 0x7fdf15825e40 <col:14> 'int' lvalue Var 0x7fdf15825bb8 'n' 'int'

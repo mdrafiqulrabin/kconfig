@@ -1,9 +1,0 @@
-FileAST: 
-  FuncDef: 
-    Decl: trap, [], [], []
-      FuncDecl: 
-        TypeDecl: trap, []
-          IdentifierType: ['void']
-    Compound: 
-      FuncCall: 
-        ID: __builtin_trap

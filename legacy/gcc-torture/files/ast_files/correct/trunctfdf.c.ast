@@ -1,0 +1,47 @@
+FileAST: 
+  FuncDef: 
+    Decl: copy, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: first, [], [], []
+            PtrDecl: []
+              TypeDecl: first, []
+                IdentifierType: ['long', 'double']
+          Decl: last, [], [], []
+            PtrDecl: []
+              TypeDecl: last, []
+                IdentifierType: ['long', 'double']
+          Decl: result, [], [], []
+            PtrDecl: []
+              TypeDecl: result, []
+                IdentifierType: ['double']
+        PtrDecl: []
+          TypeDecl: copy, []
+            IdentifierType: ['double']
+    Compound: 
+      Decl: n, [], [], []
+        TypeDecl: n, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: n
+          BinaryOp: -
+            ID: last
+            ID: first
+        BinaryOp: >
+          ID: n
+          Constant: int, 0
+        UnaryOp: --
+          ID: n
+        Compound: 
+          Assignment: =
+            UnaryOp: *
+              ID: result
+            UnaryOp: *
+              ID: first
+          UnaryOp: ++
+            ID: first
+          UnaryOp: ++
+            ID: result
+      Return: 
+        ID: result

@@ -1,0 +1,110 @@
+TranslationUnitDecl 0x7fa2668264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa266826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa266826740 '__int128'
+|-TypedefDecl 0x7fa266826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa266826760 'unsigned __int128'
+|-TypedefDecl 0x7fa266826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa266826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa266826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa266826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa266826dc0 'char *'
+|   `-BuiltinType 0x7fa266826560 'char'
+|-TypedefDecl 0x7fa2668270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa266827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa266826ee0 'struct __va_list_tag'
+|     `-Record 0x7fa266826e58 '__va_list_tag'
+|-RecordDecl 0x7fa266827120 <c_files/pr38786.c:3:9, line:6:1> line:3:9 struct definition
+| `-FieldDecl 0x7fa2668774b0 <line:5:3, col:11> col:11 referenced cofAC 'int ****'
+|-TypedefDecl 0x7fa266877550 <line:3:1, line:6:3> col:3 referenced ImageParameters 'struct ImageParameters':'ImageParameters'
+| `-ElaboratedType 0x7fa266877500 'struct ImageParameters' sugar
+|   `-RecordType 0x7fa2668271b0 'ImageParameters'
+|     `-Record 0x7fa266827120 ''
+|-RecordDecl 0x7fa2668775c0 <line:7:9, line:10:1> line:7:9 struct definition
+| `-FieldDecl 0x7fa266877698 <line:9:3, col:11> col:11 referenced cofAC 'int ****'
+|-TypedefDecl 0x7fa266877730 <line:7:1, line:10:3> col:3 referenced RD_DATA 'struct RD_DATA':'RD_DATA'
+| `-ElaboratedType 0x7fa2668776e0 'struct RD_DATA' sugar
+|   `-RecordType 0x7fa266877650 'RD_DATA'
+|     `-Record 0x7fa2668775c0 ''
+|-VarDecl 0x7fa266877828 <line:11:1, col:17> col:17 used rdopt 'RD_DATA *' extern
+|-VarDecl 0x7fa266877958 <line:12:1, col:25> col:25 used img 'ImageParameters *' extern
+`-FunctionDecl 0x7fa266877a90 <line:13:1, line:21:1> line:14:1 dummy_slice_too_big 'void (int)'
+  |-ParmVarDecl 0x7fa2668779d0 <col:22, col:26> col:26 bits_slice 'int'
+  `-CompoundStmt 0x7fa2668786e8 <line:15:1, line:21:1>
+    |-DeclStmt 0x7fa266877d38 <line:16:3, col:17>
+    | |-VarDecl 0x7fa266877b48 <col:3, col:7> col:7 used i 'int'
+    | |-VarDecl 0x7fa266877bc0 <col:3, col:10> col:10 used j 'int'
+    | |-VarDecl 0x7fa266877c38 <col:3, col:13> col:13 used k 'int'
+    | `-VarDecl 0x7fa266877cb0 <col:3, col:16> col:16 used l 'int'
+    `-ForStmt 0x7fa2668786b0 <line:17:3, line:20:50>
+      |-BinaryOperator 0x7fa266877d98 <line:17:8, col:12> 'int' '='
+      | |-DeclRefExpr 0x7fa266877d50 <col:8> 'int' lvalue Var 0x7fa266877bc0 'j' 'int'
+      | `-IntegerLiteral 0x7fa266877d78 <col:12> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fa266877e20 <col:15, col:19> 'int' '<'
+      | |-ImplicitCastExpr 0x7fa266877e08 <col:15> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fa266877dc0 <col:15> 'int' lvalue Var 0x7fa266877bc0 'j' 'int'
+      | `-IntegerLiteral 0x7fa266877de8 <col:19> 'int' 4
+      |-UnaryOperator 0x7fa266877e70 <col:22, col:23> 'int' postfix '++'
+      | `-DeclRefExpr 0x7fa266877e48 <col:22> 'int' lvalue Var 0x7fa266877bc0 'j' 'int'
+      `-ForStmt 0x7fa266878678 <line:18:5, line:20:50>
+        |-BinaryOperator 0x7fa266877ed8 <line:18:10, col:14> 'int' '='
+        | |-DeclRefExpr 0x7fa266877e90 <col:10> 'int' lvalue Var 0x7fa266877c38 'k' 'int'
+        | `-IntegerLiteral 0x7fa266877eb8 <col:14> 'int' 0
+        |-<<<NULL>>>
+        |-BinaryOperator 0x7fa266877f60 <col:17, col:21> 'int' '<'
+        | |-ImplicitCastExpr 0x7fa266877f48 <col:17> 'int' <LValueToRValue>
+        | | `-DeclRefExpr 0x7fa266877f00 <col:17> 'int' lvalue Var 0x7fa266877c38 'k' 'int'
+        | `-IntegerLiteral 0x7fa266877f28 <col:21> 'int' 2
+        |-UnaryOperator 0x7fa266877fb0 <col:24, col:25> 'int' postfix '++'
+        | `-DeclRefExpr 0x7fa266877f88 <col:24> 'int' lvalue Var 0x7fa266877c38 'k' 'int'
+        `-ForStmt 0x7fa266878640 <line:19:7, line:20:50>
+          |-BinaryOperator 0x7fa266878018 <line:19:12, col:16> 'int' '='
+          | |-DeclRefExpr 0x7fa266877fd0 <col:12> 'int' lvalue Var 0x7fa266877cb0 'l' 'int'
+          | `-IntegerLiteral 0x7fa266877ff8 <col:16> 'int' 0
+          |-<<<NULL>>>
+          |-BinaryOperator 0x7fa2668780a0 <col:19, col:23> 'int' '<'
+          | |-ImplicitCastExpr 0x7fa266878088 <col:19> 'int' <LValueToRValue>
+          | | `-DeclRefExpr 0x7fa266878040 <col:19> 'int' lvalue Var 0x7fa266877cb0 'l' 'int'
+          | `-IntegerLiteral 0x7fa266878068 <col:23> 'int' 65
+          |-UnaryOperator 0x7fa2668780f0 <col:27, col:28> 'int' postfix '++'
+          | `-DeclRefExpr 0x7fa2668780c8 <col:27> 'int' lvalue Var 0x7fa266877cb0 'l' 'int'
+          `-BinaryOperator 0x7fa266878618 <line:20:2, col:50> 'int' '='
+            |-ArraySubscriptExpr 0x7fa266878360 <col:2, col:23> 'int' lvalue
+            | |-ImplicitCastExpr 0x7fa266878330 <col:2, col:20> 'int *' <LValueToRValue>
+            | | `-ArraySubscriptExpr 0x7fa2668782e0 <col:2, col:20> 'int *' lvalue
+            | |   |-ImplicitCastExpr 0x7fa2668782b0 <col:2, col:17> 'int **' <LValueToRValue>
+            | |   | `-ArraySubscriptExpr 0x7fa266878260 <col:2, col:17> 'int **' lvalue
+            | |   |   |-ImplicitCastExpr 0x7fa266878230 <col:2, col:14> 'int ***' <LValueToRValue>
+            | |   |   | `-ArraySubscriptExpr 0x7fa2668781e0 <col:2, col:14> 'int ***' lvalue
+            | |   |   |   |-ImplicitCastExpr 0x7fa2668781b0 <col:2, col:7> 'int ****' <LValueToRValue>
+            | |   |   |   | `-MemberExpr 0x7fa266878150 <col:2, col:7> 'int ****' lvalue ->cofAC 0x7fa2668774b0
+            | |   |   |   |   `-ImplicitCastExpr 0x7fa266878138 <col:2> 'ImageParameters *' <LValueToRValue>
+            | |   |   |   |     `-DeclRefExpr 0x7fa266878110 <col:2> 'ImageParameters *' lvalue Var 0x7fa266877958 'img' 'ImageParameters *'
+            | |   |   |   `-ImplicitCastExpr 0x7fa2668781c8 <col:13> 'int' <LValueToRValue>
+            | |   |   |     `-DeclRefExpr 0x7fa266878188 <col:13> 'int' lvalue Var 0x7fa266877b48 'i' 'int'
+            | |   |   `-ImplicitCastExpr 0x7fa266878248 <col:16> 'int' <LValueToRValue>
+            | |   |     `-DeclRefExpr 0x7fa266878208 <col:16> 'int' lvalue Var 0x7fa266877bc0 'j' 'int'
+            | |   `-ImplicitCastExpr 0x7fa2668782c8 <col:19> 'int' <LValueToRValue>
+            | |     `-DeclRefExpr 0x7fa266878288 <col:19> 'int' lvalue Var 0x7fa266877c38 'k' 'int'
+            | `-ImplicitCastExpr 0x7fa266878348 <col:22> 'int' <LValueToRValue>
+            |   `-DeclRefExpr 0x7fa266878308 <col:22> 'int' lvalue Var 0x7fa266877cb0 'l' 'int'
+            `-ImplicitCastExpr 0x7fa266878600 <col:27, col:50> 'int' <LValueToRValue>
+              `-ArraySubscriptExpr 0x7fa2668785d8 <col:27, col:50> 'int' lvalue
+                |-ImplicitCastExpr 0x7fa2668785a8 <col:27, col:47> 'int *' <LValueToRValue>
+                | `-ArraySubscriptExpr 0x7fa266878558 <col:27, col:47> 'int *' lvalue
+                |   |-ImplicitCastExpr 0x7fa266878528 <col:27, col:44> 'int **' <LValueToRValue>
+                |   | `-ArraySubscriptExpr 0x7fa2668784d8 <col:27, col:44> 'int **' lvalue
+                |   |   |-ImplicitCastExpr 0x7fa2668784a8 <col:27, col:41> 'int ***' <LValueToRValue>
+                |   |   | `-ArraySubscriptExpr 0x7fa266878458 <col:27, col:41> 'int ***' lvalue
+                |   |   |   |-ImplicitCastExpr 0x7fa266878428 <col:27, col:34> 'int ****' <LValueToRValue>
+                |   |   |   | `-MemberExpr 0x7fa2668783c8 <col:27, col:34> 'int ****' lvalue ->cofAC 0x7fa266877698
+                |   |   |   |   `-ImplicitCastExpr 0x7fa2668783b0 <col:27> 'RD_DATA *' <LValueToRValue>
+                |   |   |   |     `-DeclRefExpr 0x7fa266878388 <col:27> 'RD_DATA *' lvalue Var 0x7fa266877828 'rdopt' 'RD_DATA *'
+                |   |   |   `-ImplicitCastExpr 0x7fa266878440 <col:40> 'int' <LValueToRValue>
+                |   |   |     `-DeclRefExpr 0x7fa266878400 <col:40> 'int' lvalue Var 0x7fa266877b48 'i' 'int'
+                |   |   `-ImplicitCastExpr 0x7fa2668784c0 <col:43> 'int' <LValueToRValue>
+                |   |     `-DeclRefExpr 0x7fa266878480 <col:43> 'int' lvalue Var 0x7fa266877bc0 'j' 'int'
+                |   `-ImplicitCastExpr 0x7fa266878540 <col:46> 'int' <LValueToRValue>
+                |     `-DeclRefExpr 0x7fa266878500 <col:46> 'int' lvalue Var 0x7fa266877c38 'k' 'int'
+                `-ImplicitCastExpr 0x7fa2668785c0 <col:49> 'int' <LValueToRValue>
+                  `-DeclRefExpr 0x7fa266878580 <col:49> 'int' lvalue Var 0x7fa266877cb0 'l' 'int'

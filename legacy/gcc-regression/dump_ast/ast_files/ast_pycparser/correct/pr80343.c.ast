@@ -1,0 +1,135 @@
+FileAST: 
+  Decl: vi, [], [], []
+    TypeDecl: vi, []
+      IdentifierType: ['long', 'long', 'int']
+  Decl: ls, [], [], []
+    TypeDecl: ls, []
+      IdentifierType: ['long', 'long', 'int']
+  Decl: wq, [], [], []
+    TypeDecl: wq, []
+      IdentifierType: ['int']
+  Decl: oa, [], [], []
+    TypeDecl: oa, []
+      IdentifierType: ['int']
+  Decl: to, [], [], []
+    TypeDecl: to, []
+      IdentifierType: ['int']
+  Decl: fv, [], [], []
+    TypeDecl: fv, []
+      IdentifierType: ['int']
+  Decl: zo, [], [], []
+    TypeDecl: zo, []
+      IdentifierType: ['signed', 'char']
+  FuncDef: 
+    Decl: ai, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: ip, [], [], []
+            TypeDecl: ip, []
+              IdentifierType: ['long', 'long', 'int']
+          Decl: jc, [], [], []
+            TypeDecl: jc, []
+              IdentifierType: ['long', 'long', 'int']
+          Decl: gt, [], [], []
+            TypeDecl: gt, []
+              IdentifierType: ['int']
+        TypeDecl: ai, []
+          IdentifierType: ['long', 'long', 'int']
+    Compound: 
+      Assignment: /=
+        ID: ip
+        Constant: int, 3
+      Assignment: +=
+        ID: jc
+        ID: ip
+      If: 
+        BinaryOp: !=
+          ID: ip
+          Constant: int, 0
+        Assignment: =
+          ID: vi
+          Constant: int, 0
+      Assignment: +=
+        ID: vi
+        ID: ls
+      If: 
+        BinaryOp: !=
+          ID: wq
+          ID: oa
+        Compound: 
+          Decl: tz, [], [], []
+            TypeDecl: tz, []
+              IdentifierType: ['int']
+          For: 
+            Assignment: =
+              ID: tz
+              Constant: int, 0
+            BinaryOp: <
+              ID: tz
+              Constant: int, 32
+            UnaryOp: ++
+              ID: tz
+            Assignment: -=
+              ID: zo
+              BinaryOp: &
+                ID: wq
+                ID: gt
+          If: 
+            BinaryOp: >
+              BinaryOp: &
+                ID: gt
+                Constant: int, 5
+              ID: oa
+            Compound: 
+              Assignment: +=
+                ID: zo
+                ID: gt
+              Assignment: +=
+                ID: fv
+                BinaryOp: +
+                  ID: zo
+                  ID: to
+          If: 
+            BinaryOp: !=
+              ID: gt
+              Constant: int, 0
+            Assignment: =
+              ID: oa
+              Constant: int, 0
+          If: 
+            BinaryOp: !=
+              ID: fv
+              Constant: int, 0
+            Compound: 
+              Assignment: +=
+                ID: vi
+                ID: wq
+              Assignment: +=
+                ID: ls
+                ID: ip
+              Assignment: +=
+                ID: jc
+                TernaryOp: 
+                  BinaryOp: !=
+                    ID: vi
+                    Constant: int, 0
+                  ID: ip
+                  ID: ls
+          While: 
+            BinaryOp: !=
+              ID: tz
+              Constant: int, 0
+            Compound: 
+              Assignment: =
+                ID: zo
+                ID: wq
+              Assignment: =
+                ID: tz
+                ID: zo
+          UnaryOp: ++
+            ID: to
+          Assignment: =
+            ID: wq
+            ID: ip
+      Return: 
+        ID: jc

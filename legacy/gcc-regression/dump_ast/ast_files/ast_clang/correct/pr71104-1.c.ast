@@ -1,0 +1,33 @@
+TranslationUnitDecl 0x7fc5ef0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc5ef026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc5ef026740 '__int128'
+|-TypedefDecl 0x7fc5ef026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc5ef026760 'unsigned __int128'
+|-TypedefDecl 0x7fc5ef026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc5ef026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fc5ef026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc5ef026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc5ef026dc0 'char *'
+|   `-BuiltinType 0x7fc5ef026560 'char'
+|-TypedefDecl 0x7fc5ef0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc5ef027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc5ef026ee0 'struct __va_list_tag'
+|     `-Record 0x7fc5ef026e58 '__va_list_tag'
+|-FunctionDecl 0x7fc5ef825a00 <c_files/pr71104-1.c:3:1, col:14> col:6 used foo 'void (void)'
+|-FunctionDecl 0x7fc5ef825ba8 <line:4:5> col:5 implicit used vfork 'int (void)' extern
+| `-ReturnsTwiceAttr 0x7fc5ef825c40 <col:5> Implicit
+|-FunctionDecl 0x7fc5ef825c88 prev 0x7fc5ef825ba8 <col:1, col:15> col:5 used vfork 'int (void)'
+| `-ReturnsTwiceAttr 0x7fc5ef825d58 <col:5> Inherited Implicit
+|-VarDecl 0x7fc5ef825db0 <line:5:1, col:6> col:6 used p 'int *'
+`-FunctionDecl 0x7fc5ef825ea0 <line:7:1, line:11:1> line:7:6 bar 'void (void)'
+  `-CompoundStmt 0x7fc5ef8260e0 <line:8:1, line:11:1>
+    |-CallExpr 0x7fc5ef825fa0 <line:9:3, col:7> 'void'
+    | `-ImplicitCastExpr 0x7fc5ef825f88 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7fc5ef825f38 <col:3> 'void (void)' Function 0x7fc5ef825a00 'foo' 'void (void)'
+    `-BinaryOperator 0x7fc5ef8260b8 <line:10:3, col:14> 'int' '='
+      |-UnaryOperator 0x7fc5ef826008 <col:3, col:4> 'int' lvalue prefix '*'
+      | `-ImplicitCastExpr 0x7fc5ef825ff0 <col:4> 'int *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fc5ef825fc8 <col:4> 'int *' lvalue Var 0x7fc5ef825db0 'p' 'int *'
+      `-CallExpr 0x7fc5ef826090 <col:8, col:14> 'int'
+        `-ImplicitCastExpr 0x7fc5ef826078 <col:8> 'int (*)(void)' <FunctionToPointerDecay>
+          `-DeclRefExpr 0x7fc5ef826028 <col:8> 'int (void)' Function 0x7fc5ef825c88 'vfork' 'int (void)'

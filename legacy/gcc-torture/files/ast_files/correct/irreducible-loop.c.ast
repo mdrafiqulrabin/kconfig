@@ -1,0 +1,91 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: n, [], [], []
+            TypeDecl: n, []
+              IdentifierType: ['int']
+          Decl: a, [], [], []
+            TypeDecl: a, []
+              IdentifierType: ['double']
+          Decl: b, [], [], []
+            PtrDecl: []
+              TypeDecl: b, []
+                IdentifierType: ['double']
+          Decl: x, [], [], []
+            PtrDecl: []
+              TypeDecl: x, []
+                IdentifierType: ['double']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['int']
+      If: 
+        BinaryOp: <=
+          ID: n
+          Constant: int, 0
+        Return: 
+      If: 
+        BinaryOp: ==
+          ID: a
+          Constant: float, 0.0e0
+        Return: 
+      If: 
+        BinaryOp: >
+          ID: a
+          Constant: float, 5.0
+        Compound: 
+          Assignment: =
+            ID: i
+            Constant: int, 0
+          Goto: sec
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 1024
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          Decl: y, [], [], []
+            TypeDecl: y, []
+              IdentifierType: ['double']
+            ArrayRef: 
+              ID: b
+              ID: i
+          Label: sec
+            Assignment: =
+              ArrayRef: 
+                ID: b
+                BinaryOp: +
+                  ID: i
+                  Constant: int, 1
+              BinaryOp: +
+                ID: y
+                Constant: float, 5.0
+          For: 
+            Assignment: =
+              ID: j
+              Constant: int, 0
+            BinaryOp: <
+              ID: j
+              ID: n
+            UnaryOp: p++
+              ID: j
+            Assignment: =
+              ArrayRef: 
+                ID: x
+                ID: j
+              BinaryOp: +
+                ArrayRef: 
+                  ID: x
+                  ID: j
+                ID: a

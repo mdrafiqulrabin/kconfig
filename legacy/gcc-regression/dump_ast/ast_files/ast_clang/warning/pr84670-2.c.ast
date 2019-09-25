@@ -1,0 +1,90 @@
+c_files/pr84670-2.c:33:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+1 warning generated.
+TranslationUnitDecl 0x7fc219825ad0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc219826020 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc219825d40 '__int128'
+|-TypedefDecl 0x7fc219826090 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc219825d60 'unsigned __int128'
+|-TypedefDecl 0x7fc219826368 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc219826170 'struct __NSConstantString_tag'
+|   `-Record 0x7fc2198260e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc219826400 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc2198263c0 'char *'
+|   `-BuiltinType 0x7fc219825b60 'char'
+|-TypedefDecl 0x7fc2198266c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc219826670 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc2198264e0 'struct __va_list_tag'
+|     `-Record 0x7fc219826458 '__va_list_tag'
+|-EnumDecl 0x7fc219826720 <c_files/pr84670-2.c:4:1, line:8:1> line:4:6 b
+| |-EnumConstantDecl 0x7fc219026400 <line:6:3> col:3 referenced c 'int'
+| `-EnumConstantDecl 0x7fc219026448 <line:7:3> col:3 referenced d 'int'
+|-RecordDecl 0x7fc219026490 <line:9:1, line:12:1> line:9:8 struct e definition
+| `-FieldDecl 0x7fc219026590 <line:11:3, col:10> col:10 referenced code 'enum b':'enum b'
+|-RecordDecl 0x7fc2190265d8 <line:13:1, line:16:1> line:13:8 struct f definition
+| `-FieldDecl 0x7fc219026698 <line:15:3, col:12> col:12 referenced g 'unsigned int'
+|-VarDecl 0x7fc2190266f8 <line:17:1, col:5> col:5 used h 'int'
+|-VarDecl 0x7fc2190267b0 <col:1, col:8> col:8 used i 'int'
+|-RecordDecl 0x7fc219026828 <line:18:1, line:22:1> line:18:8 struct a definition
+| |-FieldDecl 0x7fc219026920 <line:20:3, col:12> col:12 referenced common 'struct e':'struct e'
+| `-FieldDecl 0x7fc2190269c0 <line:21:3, col:12> col:12 referenced j 'struct f':'struct f'
+`-FunctionDecl 0x7fc219026b80 <line:24:1, line:33:1> line:24:10 k 'struct a (void)'
+  `-CompoundStmt 0x7fc2190274a0 <line:25:1, line:33:1>
+    |-DeclStmt 0x7fc219026d00 <line:26:3, col:14>
+    | `-VarDecl 0x7fc219026ca0 <col:3, col:13> col:13 used l 'struct a *'
+    `-DoStmt 0x7fc219027480 <line:27:3, line:32:34>
+      |-IfStmt 0x7fc219027298 <line:28:5, line:31:40>
+      | |-<<<NULL>>>
+      | |-<<<NULL>>>
+      | |-BinaryOperator 0x7fc219026f88 <line:28:9, col:41> 'int' '&&'
+      | | |-BinaryOperator 0x7fc219026e38 <col:9, col:27> 'int' '=='
+      | | | |-ImplicitCastExpr 0x7fc219026e08 <col:9, col:19> 'unsigned int' <IntegralCast>
+      | | | | `-ImplicitCastExpr 0x7fc219026df0 <col:9, col:19> 'enum b':'enum b' <LValueToRValue>
+      | | | |   `-MemberExpr 0x7fc219026d90 <col:9, col:19> 'enum b':'enum b' lvalue .code 0x7fc219026590
+      | | | |     `-MemberExpr 0x7fc219026d58 <col:9, col:12> 'struct e':'struct e' lvalue ->common 0x7fc219026920
+      | | | |       `-ImplicitCastExpr 0x7fc219026d40 <col:9> 'struct a *' <LValueToRValue>
+      | | | |         `-DeclRefExpr 0x7fc219026d18 <col:9> 'struct a *' lvalue Var 0x7fc219026ca0 'l' 'struct a *'
+      | | | `-ImplicitCastExpr 0x7fc219026e20 <col:27> 'unsigned int' <IntegralCast>
+      | | |   `-DeclRefExpr 0x7fc219026dc8 <col:27> 'int' EnumConstant 0x7fc219026448 'd' 'int'
+      | | `-BinaryOperator 0x7fc219026f60 <col:32, col:41> 'unsigned int' '*'
+      | |   |-ImplicitCastExpr 0x7fc219026f30 <col:32, col:37> 'unsigned int' <LValueToRValue>
+      | |   | `-MemberExpr 0x7fc219026ed8 <col:32, col:37> 'unsigned int' lvalue .g 0x7fc219026698
+      | |   |   `-MemberExpr 0x7fc219026ea0 <col:32, col:35> 'struct f':'struct f' lvalue ->j 0x7fc2190269c0
+      | |   |     `-ImplicitCastExpr 0x7fc219026e88 <col:32> 'struct a *' <LValueToRValue>
+      | |   |       `-DeclRefExpr 0x7fc219026e60 <col:32> 'struct a *' lvalue Var 0x7fc219026ca0 'l' 'struct a *'
+      | |   `-ImplicitCastExpr 0x7fc219026f48 <col:41> 'unsigned int' <IntegralCast>
+      | |     `-IntegerLiteral 0x7fc219026f10 <col:41> 'int' 4
+      | |-NullStmt 0x7fc219026fb0 <line:29:7>
+      | `-BinaryOperator 0x7fc219027270 <line:31:7, col:40> 'int' '='
+      |   |-DeclRefExpr 0x7fc219026fc0 <col:7> 'int' lvalue Var 0x7fc2190267b0 'i' 'int'
+      |   `-ImplicitCastExpr 0x7fc219027258 <col:11, col:40> 'int' <IntegralCast>
+      |     `-BinaryOperator 0x7fc219027230 <col:11, col:40> 'unsigned int' '|'
+      |       |-ImplicitCastExpr 0x7fc219027200 <col:11, col:16> 'unsigned int' <LValueToRValue>
+      |       | `-MemberExpr 0x7fc219027060 <col:11, col:16> 'unsigned int' lvalue .g 0x7fc219026698
+      |       |   `-MemberExpr 0x7fc219027028 <col:11, col:14> 'struct f':'struct f' lvalue ->j 0x7fc2190269c0
+      |       |     `-ImplicitCastExpr 0x7fc219027010 <col:11> 'struct a *' <LValueToRValue>
+      |       |       `-DeclRefExpr 0x7fc219026fe8 <col:11> 'struct a *' lvalue Var 0x7fc219026ca0 'l' 'struct a *'
+      |       `-ImplicitCastExpr 0x7fc219027218 <col:20, col:40> 'unsigned int' <IntegralCast>
+      |         `-ParenExpr 0x7fc2190271e0 <col:20, col:40> 'int'
+      |           `-BinaryOperator 0x7fc2190271b8 <col:21, col:39> 'int' '&&'
+      |             |-ImplicitCastExpr 0x7fc219027188 <col:21, col:31> 'unsigned int' <IntegralCast>
+      |             | `-ImplicitCastExpr 0x7fc219027170 <col:21, col:31> 'enum b':'enum b' <LValueToRValue>
+      |             |   `-MemberExpr 0x7fc219027110 <col:21, col:31> 'enum b':'enum b' lvalue .code 0x7fc219026590
+      |             |     `-MemberExpr 0x7fc2190270d8 <col:21, col:24> 'struct e':'struct e' lvalue ->common 0x7fc219026920
+      |             |       `-ImplicitCastExpr 0x7fc2190270c0 <col:21> 'struct a *' <LValueToRValue>
+      |             |         `-DeclRefExpr 0x7fc219027098 <col:21> 'struct a *' lvalue Var 0x7fc219026ca0 'l' 'struct a *'
+      |             `-ImplicitCastExpr 0x7fc2190271a0 <col:39> 'struct a *' <LValueToRValue>
+      |               `-DeclRefExpr 0x7fc219027148 <col:39> 'struct a *' lvalue Var 0x7fc219026ca0 'l' 'struct a *'
+      `-BinaryOperator 0x7fc219027458 <line:32:10, col:33> 'int' '&&'
+        |-ImplicitCastExpr 0x7fc219027440 <col:10> 'int' <LValueToRValue>
+        | `-DeclRefExpr 0x7fc2190272d0 <col:10> 'int' lvalue Var 0x7fc2190266f8 'h' 'int'
+        `-BinaryOperator 0x7fc219027418 <col:15, col:33> 'int' '=='
+          |-ImplicitCastExpr 0x7fc2190273e8 <col:15, col:25> 'unsigned int' <IntegralCast>
+          | `-ImplicitCastExpr 0x7fc2190273d0 <col:15, col:25> 'enum b':'enum b' <LValueToRValue>
+          |   `-MemberExpr 0x7fc219027370 <col:15, col:25> 'enum b':'enum b' lvalue .code 0x7fc219026590
+          |     `-MemberExpr 0x7fc219027338 <col:15, col:18> 'struct e':'struct e' lvalue ->common 0x7fc219026920
+          |       `-ImplicitCastExpr 0x7fc219027320 <col:15> 'struct a *' <LValueToRValue>
+          |         `-DeclRefExpr 0x7fc2190272f8 <col:15> 'struct a *' lvalue Var 0x7fc219026ca0 'l' 'struct a *'
+          `-ImplicitCastExpr 0x7fc219027400 <col:33> 'unsigned int' <IntegralCast>
+            `-DeclRefExpr 0x7fc2190273a8 <col:33> 'int' EnumConstant 0x7fc219026400 'c' 'int'

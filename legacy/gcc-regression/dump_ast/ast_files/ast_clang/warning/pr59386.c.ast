@@ -1,0 +1,59 @@
+c_files/pr59386.c:16:1: warning: control may reach end of non-void function [-Wreturn-type]
+}
+^
+1 warning generated.
+TranslationUnitDecl 0x7fcfa38264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fcfa3826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fcfa3826740 '__int128'
+|-TypedefDecl 0x7fcfa3826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fcfa3826760 'unsigned __int128'
+|-TypedefDecl 0x7fcfa3826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fcfa3826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fcfa3826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fcfa3826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fcfa3826dc0 'char *'
+|   `-BuiltinType 0x7fcfa3826560 'char'
+|-TypedefDecl 0x7fcfa38270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fcfa3827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fcfa3826ee0 'struct __va_list_tag'
+|     `-Record 0x7fcfa3826e58 '__va_list_tag'
+|-RecordDecl 0x7fcfa3827120 <c_files/pr59386.c:3:1, col:19> col:8 struct S definition
+| `-FieldDecl 0x7fcfa4025a00 <col:12, col:16> col:16 s 'int'
+|-RecordDecl 0x7fcfa4025a48 <line:4:1, col:31> col:8 struct T definition
+| |-FieldDecl 0x7fcfa4025b08 <col:12, col:16> col:16 referenced t 'int'
+| `-FieldDecl 0x7fcfa4025ba0 <col:19, col:28> col:28 referenced u 'struct S':'struct S'
+|-VarDecl 0x7fcfa4025c40 <col:1, col:33> col:33 used c 'struct T':'struct T'
+|-VarDecl 0x7fcfa4025d10 <line:5:1, col:5> col:5 used b 'int'
+|-FunctionDecl 0x7fcfa4025df8 <line:7:1, line:16:1> line:8:1 used foo 'struct S ()'
+| `-CompoundStmt 0x7fcfa40260d8 <line:9:1, line:16:1>
+|   |-DeclStmt 0x7fcfa4025f10 <line:10:3, col:13>
+|   | `-VarDecl 0x7fcfa4025eb0 <col:3, col:12> col:12 used d 'struct T':'struct T'
+|   `-IfStmt 0x7fcfa40260a0 <line:11:3, line:15:14>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-ImplicitCastExpr 0x7fcfa4025f50 <line:11:7> 'int' <LValueToRValue>
+|     | `-DeclRefExpr 0x7fcfa4025f28 <col:7> 'int' lvalue Var 0x7fcfa4025d10 'b' 'int'
+|     |-WhileStmt 0x7fcfa4025ff0 <line:12:5, line:13:7>
+|     | |-<<<NULL>>>
+|     | |-ImplicitCastExpr 0x7fcfa4025fc8 <line:12:12, col:14> 'int' <LValueToRValue>
+|     | | `-MemberExpr 0x7fcfa4025f90 <col:12, col:14> 'int' lvalue .t 0x7fcfa4025b08
+|     | |   `-DeclRefExpr 0x7fcfa4025f68 <col:12> 'struct T':'struct T' lvalue Var 0x7fcfa4025c40 'c' 'struct T':'struct T'
+|     | `-NullStmt 0x7fcfa4025fe0 <line:13:7>
+|     `-ReturnStmt 0x7fcfa4026088 <line:15:5, col:14>
+|       `-ImplicitCastExpr 0x7fcfa4026070 <col:12, col:14> 'struct S':'struct S' <LValueToRValue>
+|         `-MemberExpr 0x7fcfa4026038 <col:12, col:14> 'struct S':'struct S' lvalue .u 0x7fcfa4025ba0
+|           `-DeclRefExpr 0x7fcfa4026010 <col:12> 'struct T':'struct T' lvalue Var 0x7fcfa4025eb0 'd' 'struct T':'struct T'
+`-FunctionDecl 0x7fcfa40261c8 <line:18:1, line:24:1> line:19:1 bar 'struct S ()'
+  `-CompoundStmt 0x7fcfa40264d0 <line:20:1, line:24:1>
+    |-DeclStmt 0x7fcfa40262e0 <line:21:3, col:13>
+    | `-VarDecl 0x7fcfa4026280 <col:3, col:12> col:12 used a 'struct T':'struct T'
+    |-BinaryOperator 0x7fcfa4026418 <line:22:3, col:14> 'struct S':'struct S' '='
+    | |-MemberExpr 0x7fcfa4026320 <col:3, col:5> 'struct S':'struct S' lvalue .u 0x7fcfa4025ba0
+    | | `-DeclRefExpr 0x7fcfa40262f8 <col:3> 'struct T':'struct T' lvalue Var 0x7fcfa4026280 'a' 'struct T':'struct T'
+    | `-CallExpr 0x7fcfa40263f0 <col:9, col:14> 'struct S':'struct S'
+    |   `-ImplicitCastExpr 0x7fcfa40263d8 <col:9> 'struct S (*)()' <FunctionToPointerDecay>
+    |     `-DeclRefExpr 0x7fcfa4026358 <col:9> 'struct S ()' Function 0x7fcfa4025df8 'foo' 'struct S ()'
+    `-ReturnStmt 0x7fcfa40264b8 <line:23:3, col:12>
+      `-ImplicitCastExpr 0x7fcfa40264a0 <col:10, col:12> 'struct S':'struct S' <LValueToRValue>
+        `-MemberExpr 0x7fcfa4026468 <col:10, col:12> 'struct S':'struct S' lvalue .u 0x7fcfa4025ba0
+          `-DeclRefExpr 0x7fcfa4026440 <col:10> 'struct T':'struct T' lvalue Var 0x7fcfa4026280 'a' 'struct T':'struct T'

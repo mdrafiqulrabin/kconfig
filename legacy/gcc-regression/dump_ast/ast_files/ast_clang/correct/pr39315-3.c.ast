@@ -1,0 +1,36 @@
+TranslationUnitDecl 0x7ff7b38264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff7b3826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff7b3826740 '__int128'
+|-TypedefDecl 0x7ff7b3826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff7b3826760 'unsigned __int128'
+|-TypedefDecl 0x7ff7b3826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff7b3826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7ff7b3826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff7b3826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff7b3826dc0 'char *'
+|   `-BuiltinType 0x7ff7b3826560 'char'
+|-TypedefDecl 0x7ff7b38270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff7b3827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff7b3826ee0 'struct __va_list_tag'
+|     `-Record 0x7ff7b3826e58 '__va_list_tag'
+|-TypedefDecl 0x7ff7b3827178 <c_files/pr39315-3.c:10:1, col:15> col:15 referenced __m128 '__attribute__((__vector_size__(4 * sizeof(float)))) float'
+| `-VectorType 0x7ff7b3827140 '__attribute__((__vector_size__(4 * sizeof(float)))) float' 4
+|   `-BuiltinType 0x7ff7b38266c0 'float'
+|-FunctionDecl 0x7ff7b4026b70 <line:12:1, col:26> col:13 used bar 'void (__m128 *)' extern
+| `-ParmVarDecl 0x7ff7b4026a68 <col:18, col:25> col:26 '__m128 *'
+`-FunctionDecl 0x7ff7b4026ce8 <line:14:1, line:19:1> line:15:1 foo 'void (__m128 *)'
+  |-ParmVarDecl 0x7ff7b4026c60 <col:6, col:14> col:14 used x '__m128 *'
+  `-CompoundStmt 0x7ff7b4027010 <line:16:1, line:19:1>
+    |-DeclStmt 0x7ff7b4026ee0 <line:17:3, col:48>
+    | `-VarDecl 0x7ff7b4026db8 <col:3, col:47> col:10 used b '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float' cinit
+    |   |-ImplicitCastExpr 0x7ff7b4026ec8 <col:46, col:47> '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float' <LValueToRValue>
+    |   | `-UnaryOperator 0x7ff7b4026ea8 <col:46, col:47> '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue prefix '*'
+    |   |   `-ImplicitCastExpr 0x7ff7b4026e90 <col:47> '__m128 *' <LValueToRValue>
+    |   |     `-DeclRefExpr 0x7ff7b4026e68 <col:47> '__m128 *' lvalue ParmVar 0x7ff7b4026c60 'x' '__m128 *'
+    |   `-AlignedAttr 0x7ff7b4026e18 <col:29, col:40> aligned
+    |     `-IntegerLiteral 0x7ff7b4026d88 <col:37> 'int' 128
+    `-CallExpr 0x7ff7b4026fe0 <line:18:3, col:10> 'void'
+      |-ImplicitCastExpr 0x7ff7b4026fc8 <col:3> 'void (*)(__m128 *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7ff7b4026ef8 <col:3> 'void (__m128 *)' Function 0x7ff7b4026b70 'bar' 'void (__m128 *)'
+      `-UnaryOperator 0x7ff7b4026f48 <col:8, col:9> '__m128 *' prefix '&'
+        `-DeclRefExpr 0x7ff7b4026f20 <col:9> '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue Var 0x7ff7b4026db8 'b' '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float'

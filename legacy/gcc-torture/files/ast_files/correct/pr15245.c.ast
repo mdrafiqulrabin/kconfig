@@ -1,0 +1,63 @@
+FileAST: 
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            PtrDecl: []
+              TypeDecl: x, []
+                IdentifierType: ['char']
+          Decl: flag, [], [], []
+            TypeDecl: flag, []
+              IdentifierType: ['int']
+        PtrDecl: []
+          TypeDecl: f, []
+            IdentifierType: ['char']
+    Compound: 
+      Decl: ret, [], [], []
+        PtrDecl: []
+          TypeDecl: ret, []
+            IdentifierType: ['char']
+        Cast: 
+          Typename: None, []
+            PtrDecl: []
+              TypeDecl: None, []
+                IdentifierType: ['char']
+          Constant: int, 0
+      If: 
+        BinaryOp: >
+          ID: x
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['char']
+            Constant: int, 1
+        Compound: 
+          If: 
+            ID: x
+            Return: 
+              Cast: 
+                Typename: None, []
+                  PtrDecl: []
+                    TypeDecl: None, []
+                      IdentifierType: ['char']
+                Constant: int, 0
+        Compound: 
+          If: 
+            BinaryOp: &
+              ID: flag
+              Constant: int, 1
+            Assignment: =
+              ID: ret
+              Cast: 
+                Typename: None, []
+                  PtrDecl: []
+                    TypeDecl: None, []
+                      IdentifierType: ['char']
+                Constant: int, 1
+          Assignment: |=
+            ID: flag
+            Constant: int, 2
+      Return: 
+        ID: ret

@@ -1,0 +1,27 @@
+c_files/pr51106-1.c:8:7: error: 'asm goto' constructs are not supported yet
+  asm goto ("" : : "i" (x) : : lab); /* { dg-error "impossible constraint" } */
+      ^
+1 error generated.
+TranslationUnitDecl 0x7f9a568264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9a56826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9a56826740 '__int128'
+|-TypedefDecl 0x7f9a56826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9a56826760 'unsigned __int128'
+|-TypedefDecl 0x7f9a56826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9a56826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f9a56826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9a56826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9a56826dc0 'char *'
+|   `-BuiltinType 0x7f9a56826560 'char'
+|-TypedefDecl 0x7f9a568270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9a56827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9a56826ee0 'struct __va_list_tag'
+|     `-Record 0x7f9a56826e58 '__va_list_tag'
+`-FunctionDecl 0x7f9a57025a30 <c_files/pr51106-1.c:5:1, line:13:1> line:6:1 foo 'int (int)'
+  |-ParmVarDecl 0x7f9a56827138 <col:6, col:10> col:10 x 'int'
+  `-CompoundStmt 0x7f9a57025be0 <line:7:1, line:13:1>
+    |-ReturnStmt 0x7f9a57025b30 <line:10:3, col:10>
+    | `-IntegerLiteral 0x7f9a57025b10 <col:10> 'int' 1
+    `-LabelStmt 0x7f9a57025bc8 <line:11:1, line:12:10> 'lab'
+      `-ReturnStmt 0x7f9a57025b68 <col:3, col:10>
+        `-IntegerLiteral 0x7f9a57025b48 <col:10> 'int' 0

@@ -1,4 +1,0 @@
-pr59401-1.c: In function ‘test_00’:
-pr59401-1.c:15:62: error: __builtin_thread_pointer is not supported on this target
-   tcb_t* tcb = (a & 5) ? (tcb_t*)__builtin_thread_pointer () : b;
-                                                              ^

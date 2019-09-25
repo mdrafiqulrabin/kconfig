@@ -1,0 +1,79 @@
+FileAST: 
+  Typedef: T, [], ['typedef']
+    PtrDecl: []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        PtrDecl: []
+          TypeDecl: T, []
+            IdentifierType: ['void']
+  FuncDef: 
+    Decl: f1, [], [], []
+      FuncDecl: 
+        TypeDecl: f1, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        Cast: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['T']
+          Constant: int, 0
+  FuncDef: 
+    Decl: f2, [], [], []
+      FuncDecl: 
+        TypeDecl: f2, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        Cast: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['T']
+          Constant: int, 1000
+  FuncDef: 
+    Decl: f3, [], [], []
+      FuncDecl: 
+        TypeDecl: f3, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        Cast: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['T']
+          Constant: int, 10000000
+  FuncDef: 
+    Decl: f4, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: r
+        TypeDecl: f4, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        Cast: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['T']
+          ID: r
+  FuncDef: 
+    Decl: f5, [], [], []
+      FuncDecl: 
+        TypeDecl: f5, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: r, [], [], []
+        PtrDecl: []
+          FuncDecl: 
+            TypeDecl: r, []
+              IdentifierType: ['int']
+        ID: f3
+      FuncCall: 
+        Cast: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['T']
+          ID: r

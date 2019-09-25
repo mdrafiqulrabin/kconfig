@@ -1,0 +1,27 @@
+FileAST: 
+  Decl: bar, [], [], []
+    FuncDecl: 
+      TypeDecl: bar, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: v, [], [], []
+        TypeDecl: v, []
+          Struct: S
+            Decl: a, [], [], []
+              ArrayDecl: []
+                TypeDecl: a, []
+                  IdentifierType: ['char']
+                ID: x
+      FuncCall: 
+        ID: bar
+        ExprList: 
+          ID: v

@@ -1,0 +1,691 @@
+FileAST: 
+  Decl: None, [], [], []
+    Struct: glyph
+      Decl: foo, [], [], []
+        TypeDecl: foo, []
+          IdentifierType: ['long']
+      Decl: bar, [], [], []
+        TypeDecl: bar, []
+          IdentifierType: ['long']
+      Decl: baz, [], [], []
+        TypeDecl: baz, []
+          IdentifierType: ['long']
+  Decl: fatal, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, ['const']
+          PtrDecl: []
+            TypeDecl: None, ['const']
+              IdentifierType: ['char']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: fatal, []
+        IdentifierType: ['int']
+  FuncDef: 
+    Decl: check_image_width, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: width, [], [], []
+            TypeDecl: width, []
+              IdentifierType: ['int']
+          Decl: height, [], [], []
+            TypeDecl: height, []
+              IdentifierType: ['int']
+        TypeDecl: check_image_width, []
+          IdentifierType: ['int']
+    Compound: 
+      If: 
+        BinaryOp: ||
+          BinaryOp: ||
+            TernaryOp: 
+              BinaryOp: <
+                TernaryOp: 
+                  BinaryOp: <
+                    BinaryOp: -
+                      BinaryOp: *
+                        Constant: int, 0
+                        BinaryOp: +
+                          BinaryOp: *
+                            Constant: int, 0
+                            Constant: int, 2
+                          ID: width
+                      Constant: int, 1
+                    Constant: int, 0
+                  BinaryOp: -
+                    UnaryOp: -
+                      BinaryOp: ==
+                        UnaryOp: ~
+                          BinaryOp: +
+                            BinaryOp: *
+                              Constant: int, 0
+                              BinaryOp: +
+                                BinaryOp: *
+                                  Constant: int, 0
+                                  Constant: int, 2
+                                ID: width
+                            Constant: int, 0
+                        UnaryOp: -
+                          Constant: int, 1
+                    BinaryOp: +
+                      BinaryOp: *
+                        BinaryOp: -
+                          BinaryOp: <<
+                            BinaryOp: +
+                              BinaryOp: *
+                                Constant: int, 0
+                                BinaryOp: +
+                                  BinaryOp: *
+                                    Constant: int, 0
+                                    Constant: int, 2
+                                  ID: width
+                              Constant: int, 1
+                            BinaryOp: -
+                              BinaryOp: *
+                                UnaryOp: sizeof
+                                  BinaryOp: +
+                                    BinaryOp: +
+                                      BinaryOp: *
+                                        Constant: int, 0
+                                        Constant: int, 2
+                                      ID: width
+                                    Constant: int, 0
+                                Constant: int, 8
+                              Constant: int, 2
+                          Constant: int, 1
+                        Constant: int, 2
+                      Constant: int, 1
+                  BinaryOp: +
+                    BinaryOp: *
+                      Constant: int, 0
+                      BinaryOp: +
+                        BinaryOp: *
+                          Constant: int, 0
+                          Constant: int, 2
+                        ID: width
+                    Constant: int, 0
+                Constant: int, 0
+              TernaryOp: 
+                BinaryOp: <
+                  Constant: int, 2
+                  Constant: int, 0
+                BinaryOp: <
+                  ID: width
+                  BinaryOp: -
+                    TernaryOp: 
+                      BinaryOp: <
+                        BinaryOp: -
+                          BinaryOp: *
+                            Constant: int, 0
+                            BinaryOp: +
+                              BinaryOp: *
+                                Constant: int, 0
+                                Constant: int, 2
+                              ID: width
+                          Constant: int, 1
+                        Constant: int, 0
+                      BinaryOp: -
+                        UnaryOp: -
+                          BinaryOp: ==
+                            UnaryOp: ~
+                              BinaryOp: +
+                                BinaryOp: *
+                                  Constant: int, 0
+                                  BinaryOp: +
+                                    BinaryOp: *
+                                      Constant: int, 0
+                                      Constant: int, 2
+                                    ID: width
+                                Constant: int, 0
+                            UnaryOp: -
+                              Constant: int, 1
+                        BinaryOp: +
+                          BinaryOp: *
+                            BinaryOp: -
+                              BinaryOp: <<
+                                BinaryOp: +
+                                  BinaryOp: *
+                                    Constant: int, 0
+                                    BinaryOp: +
+                                      BinaryOp: *
+                                        Constant: int, 0
+                                        Constant: int, 2
+                                      ID: width
+                                  Constant: int, 1
+                                BinaryOp: -
+                                  BinaryOp: *
+                                    UnaryOp: sizeof
+                                      BinaryOp: +
+                                        BinaryOp: +
+                                          BinaryOp: *
+                                            Constant: int, 0
+                                            Constant: int, 2
+                                          ID: width
+                                        Constant: int, 0
+                                    Constant: int, 8
+                                  Constant: int, 2
+                              Constant: int, 1
+                            Constant: int, 2
+                          Constant: int, 1
+                      BinaryOp: +
+                        BinaryOp: *
+                          Constant: int, 0
+                          BinaryOp: +
+                            BinaryOp: *
+                              Constant: int, 0
+                              Constant: int, 2
+                            ID: width
+                        Constant: int, 0
+                    Constant: int, 2
+                BinaryOp: <
+                  BinaryOp: -
+                    TernaryOp: 
+                      BinaryOp: <
+                        BinaryOp: -
+                          BinaryOp: *
+                            Constant: int, 0
+                            BinaryOp: +
+                              BinaryOp: *
+                                Constant: int, 0
+                                Constant: int, 2
+                              ID: width
+                          Constant: int, 1
+                        Constant: int, 0
+                      BinaryOp: +
+                        BinaryOp: *
+                          BinaryOp: -
+                            BinaryOp: <<
+                              BinaryOp: +
+                                BinaryOp: *
+                                  Constant: int, 0
+                                  BinaryOp: +
+                                    BinaryOp: *
+                                      Constant: int, 0
+                                      Constant: int, 2
+                                    ID: width
+                                Constant: int, 1
+                              BinaryOp: -
+                                BinaryOp: *
+                                  UnaryOp: sizeof
+                                    BinaryOp: +
+                                      BinaryOp: +
+                                        BinaryOp: *
+                                          Constant: int, 0
+                                          Constant: int, 2
+                                        ID: width
+                                      Constant: int, 0
+                                  Constant: int, 8
+                                Constant: int, 2
+                            Constant: int, 1
+                          Constant: int, 2
+                        Constant: int, 1
+                      BinaryOp: -
+                        BinaryOp: *
+                          Constant: int, 0
+                          BinaryOp: +
+                            BinaryOp: *
+                              Constant: int, 0
+                              Constant: int, 2
+                            ID: width
+                        Constant: int, 1
+                    Constant: int, 2
+                  ID: width
+              TernaryOp: 
+                BinaryOp: <
+                  ID: width
+                  Constant: int, 0
+                BinaryOp: <=
+                  Constant: int, 2
+                  BinaryOp: +
+                    ID: width
+                    Constant: int, 2
+                TernaryOp: 
+                  BinaryOp: <
+                    Constant: int, 2
+                    Constant: int, 0
+                  BinaryOp: <=
+                    ID: width
+                    BinaryOp: +
+                      ID: width
+                      Constant: int, 2
+                  BinaryOp: <
+                    BinaryOp: +
+                      ID: width
+                      Constant: int, 2
+                    Constant: int, 2
+            BinaryOp: ||
+              BinaryOp: &&
+                BinaryOp: ==
+                  TernaryOp: 
+                    BinaryOp: <
+                      BinaryOp: -
+                        BinaryOp: *
+                          Constant: int, 0
+                          BinaryOp: +
+                            BinaryOp: *
+                              Constant: int, 0
+                              ID: height
+                            BinaryOp: +
+                              ID: width
+                              Constant: int, 2
+                        Constant: int, 1
+                      Constant: int, 0
+                    BinaryOp: -
+                      UnaryOp: -
+                        BinaryOp: ==
+                          UnaryOp: ~
+                            BinaryOp: +
+                              BinaryOp: *
+                                Constant: int, 0
+                                BinaryOp: +
+                                  BinaryOp: *
+                                    Constant: int, 0
+                                    ID: height
+                                  BinaryOp: +
+                                    ID: width
+                                    Constant: int, 2
+                              Constant: int, 0
+                          UnaryOp: -
+                            Constant: int, 1
+                      BinaryOp: +
+                        BinaryOp: *
+                          BinaryOp: -
+                            BinaryOp: <<
+                              BinaryOp: +
+                                BinaryOp: *
+                                  Constant: int, 0
+                                  BinaryOp: +
+                                    BinaryOp: *
+                                      Constant: int, 0
+                                      ID: height
+                                    BinaryOp: +
+                                      ID: width
+                                      Constant: int, 2
+                                Constant: int, 1
+                              BinaryOp: -
+                                BinaryOp: *
+                                  UnaryOp: sizeof
+                                    BinaryOp: +
+                                      BinaryOp: +
+                                        BinaryOp: *
+                                          Constant: int, 0
+                                          ID: height
+                                        BinaryOp: +
+                                          ID: width
+                                          Constant: int, 2
+                                      Constant: int, 0
+                                  Constant: int, 8
+                                Constant: int, 2
+                            Constant: int, 1
+                          Constant: int, 2
+                        Constant: int, 1
+                    BinaryOp: +
+                      BinaryOp: *
+                        Constant: int, 0
+                        BinaryOp: +
+                          BinaryOp: *
+                            Constant: int, 0
+                            ID: height
+                          BinaryOp: +
+                            ID: width
+                            Constant: int, 2
+                      Constant: int, 0
+                  Constant: int, 0
+                BinaryOp: ||
+                  BinaryOp: &&
+                    BinaryOp: <
+                      BinaryOp: +
+                        ID: width
+                        Constant: int, 2
+                      Constant: int, 0
+                    BinaryOp: <
+                      Constant: int, 0
+                      ID: height
+                  BinaryOp: &&
+                    BinaryOp: <
+                      ID: height
+                      Constant: int, 0
+                    BinaryOp: <
+                      Constant: int, 0
+                      BinaryOp: +
+                        ID: width
+                        Constant: int, 2
+              TernaryOp: 
+                BinaryOp: <
+                  ID: height
+                  Constant: int, 0
+                TernaryOp: 
+                  BinaryOp: <
+                    BinaryOp: +
+                      ID: width
+                      Constant: int, 2
+                    Constant: int, 0
+                  BinaryOp: <
+                    BinaryOp: +
+                      ID: width
+                      Constant: int, 2
+                    BinaryOp: /
+                      TernaryOp: 
+                        BinaryOp: <
+                          BinaryOp: -
+                            BinaryOp: *
+                              Constant: int, 0
+                              BinaryOp: +
+                                BinaryOp: *
+                                  Constant: int, 0
+                                  ID: height
+                                BinaryOp: +
+                                  ID: width
+                                  Constant: int, 2
+                            Constant: int, 1
+                          Constant: int, 0
+                        BinaryOp: +
+                          BinaryOp: *
+                            BinaryOp: -
+                              BinaryOp: <<
+                                BinaryOp: +
+                                  BinaryOp: *
+                                    Constant: int, 0
+                                    BinaryOp: +
+                                      BinaryOp: *
+                                        Constant: int, 0
+                                        ID: height
+                                      BinaryOp: +
+                                        ID: width
+                                        Constant: int, 2
+                                  Constant: int, 1
+                                BinaryOp: -
+                                  BinaryOp: *
+                                    UnaryOp: sizeof
+                                      BinaryOp: +
+                                        BinaryOp: +
+                                          BinaryOp: *
+                                            Constant: int, 0
+                                            ID: height
+                                          BinaryOp: +
+                                            ID: width
+                                            Constant: int, 2
+                                        Constant: int, 0
+                                    Constant: int, 8
+                                  Constant: int, 2
+                              Constant: int, 1
+                            Constant: int, 2
+                          Constant: int, 1
+                        BinaryOp: -
+                          BinaryOp: *
+                            Constant: int, 0
+                            BinaryOp: +
+                              BinaryOp: *
+                                Constant: int, 0
+                                ID: height
+                              BinaryOp: +
+                                ID: width
+                                Constant: int, 2
+                          Constant: int, 1
+                      ID: height
+                  TernaryOp: 
+                    BinaryOp: ==
+                      ID: height
+                      UnaryOp: -
+                        Constant: int, 1
+                    Constant: int, 0
+                    BinaryOp: <
+                      BinaryOp: /
+                        TernaryOp: 
+                          BinaryOp: <
+                            BinaryOp: -
+                              BinaryOp: *
+                                Constant: int, 0
+                                BinaryOp: +
+                                  BinaryOp: *
+                                    Constant: int, 0
+                                    ID: height
+                                  BinaryOp: +
+                                    ID: width
+                                    Constant: int, 2
+                              Constant: int, 1
+                            Constant: int, 0
+                          BinaryOp: -
+                            UnaryOp: -
+                              BinaryOp: ==
+                                UnaryOp: ~
+                                  BinaryOp: +
+                                    BinaryOp: *
+                                      Constant: int, 0
+                                      BinaryOp: +
+                                        BinaryOp: *
+                                          Constant: int, 0
+                                          ID: height
+                                        BinaryOp: +
+                                          ID: width
+                                          Constant: int, 2
+                                    Constant: int, 0
+                                UnaryOp: -
+                                  Constant: int, 1
+                            BinaryOp: +
+                              BinaryOp: *
+                                BinaryOp: -
+                                  BinaryOp: <<
+                                    BinaryOp: +
+                                      BinaryOp: *
+                                        Constant: int, 0
+                                        BinaryOp: +
+                                          BinaryOp: *
+                                            Constant: int, 0
+                                            ID: height
+                                          BinaryOp: +
+                                            ID: width
+                                            Constant: int, 2
+                                      Constant: int, 1
+                                    BinaryOp: -
+                                      BinaryOp: *
+                                        UnaryOp: sizeof
+                                          BinaryOp: +
+                                            BinaryOp: +
+                                              BinaryOp: *
+                                                Constant: int, 0
+                                                ID: height
+                                              BinaryOp: +
+                                                ID: width
+                                                Constant: int, 2
+                                            Constant: int, 0
+                                        Constant: int, 8
+                                      Constant: int, 2
+                                  Constant: int, 1
+                                Constant: int, 2
+                              Constant: int, 1
+                          BinaryOp: +
+                            BinaryOp: *
+                              Constant: int, 0
+                              BinaryOp: +
+                                BinaryOp: *
+                                  Constant: int, 0
+                                  ID: height
+                                BinaryOp: +
+                                  ID: width
+                                  Constant: int, 2
+                            Constant: int, 0
+                        ID: height
+                      BinaryOp: +
+                        ID: width
+                        Constant: int, 2
+                TernaryOp: 
+                  BinaryOp: ==
+                    ID: height
+                    Constant: int, 0
+                  Constant: int, 0
+                  TernaryOp: 
+                    BinaryOp: <
+                      BinaryOp: +
+                        ID: width
+                        Constant: int, 2
+                      Constant: int, 0
+                    BinaryOp: <
+                      BinaryOp: +
+                        ID: width
+                        Constant: int, 2
+                      BinaryOp: /
+                        TernaryOp: 
+                          BinaryOp: <
+                            BinaryOp: -
+                              BinaryOp: *
+                                Constant: int, 0
+                                BinaryOp: +
+                                  BinaryOp: *
+                                    Constant: int, 0
+                                    ID: height
+                                  BinaryOp: +
+                                    ID: width
+                                    Constant: int, 2
+                              Constant: int, 1
+                            Constant: int, 0
+                          BinaryOp: -
+                            UnaryOp: -
+                              BinaryOp: ==
+                                UnaryOp: ~
+                                  BinaryOp: +
+                                    BinaryOp: *
+                                      Constant: int, 0
+                                      BinaryOp: +
+                                        BinaryOp: *
+                                          Constant: int, 0
+                                          ID: height
+                                        BinaryOp: +
+                                          ID: width
+                                          Constant: int, 2
+                                    Constant: int, 0
+                                UnaryOp: -
+                                  Constant: int, 1
+                            BinaryOp: +
+                              BinaryOp: *
+                                BinaryOp: -
+                                  BinaryOp: <<
+                                    BinaryOp: +
+                                      BinaryOp: *
+                                        Constant: int, 0
+                                        BinaryOp: +
+                                          BinaryOp: *
+                                            Constant: int, 0
+                                            ID: height
+                                          BinaryOp: +
+                                            ID: width
+                                            Constant: int, 2
+                                      Constant: int, 1
+                                    BinaryOp: -
+                                      BinaryOp: *
+                                        UnaryOp: sizeof
+                                          BinaryOp: +
+                                            BinaryOp: +
+                                              BinaryOp: *
+                                                Constant: int, 0
+                                                ID: height
+                                              BinaryOp: +
+                                                ID: width
+                                                Constant: int, 2
+                                            Constant: int, 0
+                                        Constant: int, 8
+                                      Constant: int, 2
+                                  Constant: int, 1
+                                Constant: int, 2
+                              Constant: int, 1
+                          BinaryOp: +
+                            BinaryOp: *
+                              Constant: int, 0
+                              BinaryOp: +
+                                BinaryOp: *
+                                  Constant: int, 0
+                                  ID: height
+                                BinaryOp: +
+                                  ID: width
+                                  Constant: int, 2
+                            Constant: int, 0
+                        ID: height
+                    BinaryOp: <
+                      BinaryOp: /
+                        TernaryOp: 
+                          BinaryOp: <
+                            BinaryOp: -
+                              BinaryOp: *
+                                Constant: int, 0
+                                BinaryOp: +
+                                  BinaryOp: *
+                                    Constant: int, 0
+                                    ID: height
+                                  BinaryOp: +
+                                    ID: width
+                                    Constant: int, 2
+                              Constant: int, 1
+                            Constant: int, 0
+                          BinaryOp: +
+                            BinaryOp: *
+                              BinaryOp: -
+                                BinaryOp: <<
+                                  BinaryOp: +
+                                    BinaryOp: *
+                                      Constant: int, 0
+                                      BinaryOp: +
+                                        BinaryOp: *
+                                          Constant: int, 0
+                                          ID: height
+                                        BinaryOp: +
+                                          ID: width
+                                          Constant: int, 2
+                                    Constant: int, 1
+                                  BinaryOp: -
+                                    BinaryOp: *
+                                      UnaryOp: sizeof
+                                        BinaryOp: +
+                                          BinaryOp: +
+                                            BinaryOp: *
+                                              Constant: int, 0
+                                              ID: height
+                                            BinaryOp: +
+                                              ID: width
+                                              Constant: int, 2
+                                          Constant: int, 0
+                                      Constant: int, 8
+                                    Constant: int, 2
+                                Constant: int, 1
+                              Constant: int, 2
+                            Constant: int, 1
+                          BinaryOp: -
+                            BinaryOp: *
+                              Constant: int, 0
+                              BinaryOp: +
+                                BinaryOp: *
+                                  Constant: int, 0
+                                  ID: height
+                                BinaryOp: +
+                                  ID: width
+                                  Constant: int, 2
+                            Constant: int, 1
+                        ID: height
+                      BinaryOp: +
+                        ID: width
+                        Constant: int, 2
+          BinaryOp: <
+            BinaryOp: /
+              TernaryOp: 
+                BinaryOp: <
+                  Constant: int, 9223372036854775807L
+                  Constant: int, 18446744073709551615UL
+                Constant: int, 9223372036854775807L
+                Constant: int, 18446744073709551615UL
+              UnaryOp: sizeof
+                Typename: None, []
+                  TypeDecl: None, []
+                    Struct: glyph
+            BinaryOp: *
+              BinaryOp: +
+                ID: width
+                Constant: int, 2
+              ID: height
+        FuncCall: 
+          ID: fatal
+          ExprList: 
+            Constant: string, "screen size %dx%d too big"
+            ID: width
+            ID: height

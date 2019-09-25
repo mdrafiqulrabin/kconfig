@@ -1,0 +1,65 @@
+TranslationUnitDecl 0x7f826f0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f826f026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f826f026740 '__int128'
+|-TypedefDecl 0x7f826f026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f826f026760 'unsigned __int128'
+|-TypedefDecl 0x7f826f026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f826f026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f826f026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f826f026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f826f026dc0 'char *'
+|   `-BuiltinType 0x7f826f026560 'char'
+|-TypedefDecl 0x7f826f0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f826f027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f826f026ee0 'struct __va_list_tag'
+|     `-Record 0x7f826f026e58 '__va_list_tag'
+|-RecordDecl 0x7f826f027120 <c_files/pr14814.c:4:1, line:5:17> line:4:8 struct YY definition
+| `-FieldDecl 0x7f826f825a60 <line:5:3, col:13> col:10 referenced e 'double [3]'
+|-FunctionDecl 0x7f826f825c98 <line:7:1, col:68> col:23 used y 'double *(struct YY *)' static inline
+| |-ParmVarDecl 0x7f826f825b60 <col:25, col:36> col:36 used this_1 'struct YY *'
+| `-CompoundStmt 0x7f826f825e88 <col:44, col:68>
+|   `-ReturnStmt 0x7f826f825e70 <col:46, col:65>
+|     `-UnaryOperator 0x7f826f825e50 <col:53, col:65> 'double *' prefix '&'
+|       `-ArraySubscriptExpr 0x7f826f825e28 <col:54, col:65> 'double' lvalue
+|         |-ImplicitCastExpr 0x7f826f825e10 <col:54, col:62> 'double *' <ArrayToPointerDecay>
+|         | `-MemberExpr 0x7f826f825db8 <col:54, col:62> 'double [3]' lvalue ->e 0x7f826f825a60
+|         |   `-ImplicitCastExpr 0x7f826f825da0 <col:54> 'struct YY *' <LValueToRValue>
+|         |     `-DeclRefExpr 0x7f826f825d78 <col:54> 'struct YY *' lvalue ParmVar 0x7f826f825b60 'this_1' 'struct YY *'
+|         `-IntegerLiteral 0x7f826f825df0 <col:64> 'int' 1
+|-RecordDecl 0x7f826f825ea8 <line:9:1, line:11:2> line:9:8 struct XX definition
+| `-FieldDecl 0x7f826f825f70 <line:10:3, col:13> col:13 referenced v 'struct YY':'struct YY'
+|-FunctionDecl 0x7f826f8261c0 <line:13:1, col:81> col:25 used direction 'struct YY (const struct XX *)' static inline
+| |-ParmVarDecl 0x7f826f8260b0 <col:36, col:54> col:54 used this_1 'const struct XX *'
+| `-CompoundStmt 0x7f826f826308 <col:62, col:81>
+|   `-ReturnStmt 0x7f826f8262f0 <col:64, col:79>
+|     `-ImplicitCastExpr 0x7f826f8262d8 <col:71, col:79> 'struct YY':'struct YY' <LValueToRValue>
+|       `-MemberExpr 0x7f826f8262a0 <col:71, col:79> 'const struct YY':'const struct YY' lvalue ->v 0x7f826f825f70
+|         `-ImplicitCastExpr 0x7f826f826288 <col:71> 'const struct XX *' <LValueToRValue>
+|           `-DeclRefExpr 0x7f826f826260 <col:71> 'const struct XX *' lvalue ParmVar 0x7f826f8260b0 'this_1' 'const struct XX *'
+`-FunctionDecl 0x7f826f826458 <line:15:1, line:19:1> line:15:5 foo 'int (const struct XX *)'
+  |-ParmVarDecl 0x7f826f826350 <col:9, col:26> col:26 used r 'const struct XX *'
+  `-CompoundStmt 0x7f826f8268d8 <col:29, line:19:1>
+    |-DeclStmt 0x7f826f826688 <line:16:3, col:29>
+    | `-VarDecl 0x7f826f826518 <col:3, col:28> col:13 used t 'struct YY':'struct YY' cinit
+    |   `-CallExpr 0x7f826f826640 <col:17, col:28> 'struct YY':'struct YY'
+    |     |-ImplicitCastExpr 0x7f826f826628 <col:17> 'struct YY (*)(const struct XX *)' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x7f826f826578 <col:17> 'struct YY (const struct XX *)' Function 0x7f826f8261c0 'direction' 'struct YY (const struct XX *)'
+    |     `-ImplicitCastExpr 0x7f826f826670 <col:27> 'const struct XX *' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f826f8265a0 <col:27> 'const struct XX *' lvalue ParmVar 0x7f826f826350 'r' 'const struct XX *'
+    |-IfStmt 0x7f826f826868 <line:17:3, col:33>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f826f826808 <col:7, col:16> 'int' '<'
+    | | |-ImplicitCastExpr 0x7f826f8267f0 <col:7, col:12> 'double' <LValueToRValue>
+    | | | `-UnaryOperator 0x7f826f8267b0 <col:7, col:12> 'double' lvalue prefix '*'
+    | | |   `-CallExpr 0x7f826f826780 <col:8, col:12> 'double *'
+    | | |     |-ImplicitCastExpr 0x7f826f826768 <col:8> 'double *(*)(struct YY *)' <FunctionToPointerDecay>
+    | | |     | `-DeclRefExpr 0x7f826f8266a0 <col:8> 'double *(struct YY *)' Function 0x7f826f825c98 'y' 'double *(struct YY *)'
+    | | |     `-UnaryOperator 0x7f826f8266f0 <col:10, col:11> 'struct YY *' prefix '&'
+    | | |       `-DeclRefExpr 0x7f826f8266c8 <col:11> 'struct YY':'struct YY' lvalue Var 0x7f826f826518 't' 'struct YY':'struct YY'
+    | | `-FloatingLiteral 0x7f826f8267d0 <col:16> 'double' 1.000000e-06
+    | |-ReturnStmt 0x7f826f826850 <col:26, col:33>
+    | | `-IntegerLiteral 0x7f826f826830 <col:33> 'int' 0
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7f826f8268c0 <line:18:3, col:10>
+      `-IntegerLiteral 0x7f826f8268a0 <col:10> 'int' 1

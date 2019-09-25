@@ -1,0 +1,300 @@
+FileAST: 
+  Typedef: qi, [], ['typedef']
+    TypeDecl: qi, []
+      IdentifierType: ['unsigned', 'char']
+  Typedef: hi, [], ['typedef']
+    TypeDecl: hi, []
+      IdentifierType: ['unsigned', 'short']
+  Typedef: si, [], ['typedef']
+    TypeDecl: si, []
+      IdentifierType: ['unsigned', 'long']
+  Typedef: di, [], ['typedef']
+    TypeDecl: di, []
+      IdentifierType: ['unsigned', 'long', 'long']
+  FuncDef: 
+    Decl: subi, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: a
+        TypeDecl: subi, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        BinaryOp: -
+          Constant: int, 100
+          ID: a
+  FuncDef: 
+    Decl: add, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: a
+          ID: b
+        TypeDecl: add, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        BinaryOp: +
+          ID: a
+          ID: b
+  FuncDef: 
+    Decl: mul, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: a
+        TypeDecl: mul, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        BinaryOp: *
+          Constant: int, 85
+          ID: a
+  FuncDef: 
+    Decl: memshift, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: p
+        TypeDecl: memshift, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['unsigned']
+      For: 
+        Compound: 
+          Assignment: =
+            ID: x
+            BinaryOp: >>
+              UnaryOp: *
+                UnaryOp: p++
+                  ID: p
+              Constant: int, 16
+          If: 
+            ID: x
+            Return: 
+              ID: x
+    Decl: p, [], [], []
+      PtrDecl: []
+        TypeDecl: p, []
+          IdentifierType: ['unsigned']
+  FuncDef: 
+    Decl: ldw, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: xp
+        TypeDecl: ldw, []
+          IdentifierType: ['int']
+    Compound: 
+      Return: 
+        ArrayRef: 
+          ID: xp
+          Constant: int, 4
+    Decl: xp, [], [], []
+      PtrDecl: []
+        TypeDecl: xp, []
+          IdentifierType: ['si']
+  FuncDef: 
+    Decl: ldws_m, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: xp
+        TypeDecl: ldws_m, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['si']
+      DoWhile: 
+        ID: x
+        Compound: 
+          Assignment: =
+            ID: x
+            ArrayRef: 
+              ID: xp
+              Constant: int, 3
+          Assignment: +=
+            ID: xp
+            Constant: int, 3
+    Decl: xp, [], [], []
+      PtrDecl: []
+        TypeDecl: xp, []
+          IdentifierType: ['si']
+  FuncDef: 
+    Decl: postinc_si, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: p
+        TypeDecl: postinc_si, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['si']
+      For: 
+        Compound: 
+          Assignment: =
+            ID: x
+            UnaryOp: *
+              UnaryOp: p++
+                ID: p
+          If: 
+            ID: x
+            Return: 
+              ID: x
+    Decl: p, [], [], []
+      PtrDecl: []
+        TypeDecl: p, []
+          IdentifierType: ['si']
+  FuncDef: 
+    Decl: preinc_si, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: p
+        TypeDecl: preinc_si, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['si']
+      For: 
+        Compound: 
+          Assignment: =
+            ID: x
+            UnaryOp: *
+              UnaryOp: ++
+                ID: p
+          If: 
+            ID: x
+            Return: 
+              ID: x
+    Decl: p, [], [], []
+      PtrDecl: []
+        TypeDecl: p, []
+          IdentifierType: ['si']
+  FuncDef: 
+    Decl: postinc_di, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: p
+        TypeDecl: postinc_di, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['di']
+      For: 
+        Compound: 
+          Assignment: =
+            ID: x
+            UnaryOp: *
+              UnaryOp: p++
+                ID: p
+          If: 
+            ID: x
+            Return: 
+              ID: x
+    Decl: p, [], [], []
+      PtrDecl: []
+        TypeDecl: p, []
+          IdentifierType: ['di']
+  FuncDef: 
+    Decl: preinc_di, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: p
+        TypeDecl: preinc_di, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['di']
+      For: 
+        Compound: 
+          Assignment: =
+            ID: x
+            UnaryOp: *
+              UnaryOp: ++
+                ID: p
+          If: 
+            ID: x
+            Return: 
+              ID: x
+    Decl: p, [], [], []
+      PtrDecl: []
+        TypeDecl: p, []
+          IdentifierType: ['di']
+  FuncDef: 
+    Decl: inc_overlap, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: p
+          ID: a
+        TypeDecl: inc_overlap, []
+          IdentifierType: ['int']
+    Compound: 
+      DoWhile: 
+        UnaryOp: *
+          ID: p
+        Compound: 
+          Assignment: =
+            ID: p
+            UnaryOp: *
+              Cast: 
+                Typename: None, []
+                  PtrDecl: []
+                    PtrDecl: []
+                      TypeDecl: None, []
+                        IdentifierType: ['di']
+                ID: p
+          Assignment: =
+            ID: p
+            Cast: 
+              Typename: None, []
+                PtrDecl: []
+                  TypeDecl: None, []
+                    IdentifierType: ['di']
+              BinaryOp: +
+                Cast: 
+                  Typename: None, []
+                    TypeDecl: None, []
+                      IdentifierType: ['int']
+                  ID: p
+                Constant: int, 4
+    Decl: p, [], [], []
+      PtrDecl: []
+        TypeDecl: p, []
+          IdentifierType: ['di']
+  FuncDef: 
+    Decl: move_di, [], [], []
+      FuncDecl: 
+        ParamList: 
+          ID: p
+          ID: p2
+        TypeDecl: move_di, []
+          IdentifierType: ['di']
+    Compound: 
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['di']
+        ID: p
+      Assignment: =
+        ID: p2
+        ArrayRef: 
+          Cast: 
+            Typename: None, []
+              PtrDecl: []
+                TypeDecl: None, []
+                  IdentifierType: ['di']
+            ID: x
+          Constant: int, 1
+      Return: 
+        ArrayRef: 
+          ID: p2
+          Constant: int, 1
+    Decl: p, [], [], []
+      PtrDecl: []
+        TypeDecl: p, []
+          IdentifierType: ['di']
+    Decl: p2, [], [], []
+      PtrDecl: []
+        TypeDecl: p2, []
+          IdentifierType: ['di']

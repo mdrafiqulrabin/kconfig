@@ -1,0 +1,198 @@
+FileAST: 
+  Typedef: UChar, [], ['typedef']
+    TypeDecl: UChar, []
+      IdentifierType: ['unsigned', 'char']
+  Typedef: Int32, [], ['typedef']
+    TypeDecl: Int32, []
+      IdentifierType: ['int']
+  Typedef: UInt32, [], ['typedef']
+    TypeDecl: UInt32, []
+      IdentifierType: ['unsigned', 'int']
+  Decl: VPrintf0, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, ['const']
+          PtrDecl: []
+            TypeDecl: None, ['const']
+              IdentifierType: ['char']
+      TypeDecl: VPrintf0, []
+        IdentifierType: ['void']
+  Decl: AssertH, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: AssertH, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: fallbackSort, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: fmap, [], [], []
+            PtrDecl: []
+              TypeDecl: fmap, []
+                IdentifierType: ['UInt32']
+          Decl: eclass, [], [], []
+            PtrDecl: []
+              TypeDecl: eclass, []
+                IdentifierType: ['UInt32']
+          Decl: nblock, [], [], []
+            TypeDecl: nblock, []
+              IdentifierType: ['Int32']
+          Decl: verb, [], [], []
+            TypeDecl: verb, []
+              IdentifierType: ['Int32']
+        TypeDecl: fallbackSort, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: ftab, [], [], []
+        ArrayDecl: []
+          TypeDecl: ftab, []
+            IdentifierType: ['Int32']
+          Constant: int, 257
+      Decl: ftabCopy, [], [], []
+        ArrayDecl: []
+          TypeDecl: ftabCopy, []
+            IdentifierType: ['Int32']
+          Constant: int, 256
+      Decl: H, [], [], []
+        TypeDecl: H, []
+          IdentifierType: ['Int32']
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['Int32']
+      Decl: j, [], [], []
+        TypeDecl: j, []
+          IdentifierType: ['Int32']
+      Decl: k, [], [], []
+        TypeDecl: k, []
+          IdentifierType: ['Int32']
+      Decl: l, [], [], []
+        TypeDecl: l, []
+          IdentifierType: ['Int32']
+      Decl: r, [], [], []
+        TypeDecl: r, []
+          IdentifierType: ['Int32']
+      Decl: cc, [], [], []
+        TypeDecl: cc, []
+          IdentifierType: ['Int32']
+      Decl: cc1, [], [], []
+        TypeDecl: cc1, []
+          IdentifierType: ['Int32']
+      Decl: nNotDone, [], [], []
+        TypeDecl: nNotDone, []
+          IdentifierType: ['Int32']
+      Decl: nBhtab, [], [], []
+        TypeDecl: nBhtab, []
+          IdentifierType: ['Int32']
+      Decl: eclass8, [], [], []
+        PtrDecl: []
+          TypeDecl: eclass8, []
+            IdentifierType: ['UChar']
+        Cast: 
+          Typename: None, []
+            PtrDecl: []
+              TypeDecl: None, []
+                IdentifierType: ['UChar']
+          ID: eclass
+      If: 
+        BinaryOp: >=
+          ID: verb
+          Constant: int, 4
+        FuncCall: 
+          ID: VPrintf0
+          ExprList: 
+            Constant: string, "        bucket sorting ...\n"
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 257
+        UnaryOp: p++
+          ID: i
+        Assignment: =
+          ArrayRef: 
+            ID: ftab
+            ID: i
+          Constant: int, 0
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          ID: nblock
+        UnaryOp: p++
+          ID: i
+        UnaryOp: p++
+          ArrayRef: 
+            ID: ftab
+            ArrayRef: 
+              ID: eclass8
+              ID: i
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 256
+        UnaryOp: p++
+          ID: i
+        Assignment: =
+          ArrayRef: 
+            ID: ftabCopy
+            ID: i
+          ArrayRef: 
+            ID: ftab
+            ID: i
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 1
+        BinaryOp: <
+          ID: i
+          Constant: int, 257
+        UnaryOp: p++
+          ID: i
+        Assignment: +=
+          ArrayRef: 
+            ID: ftab
+            ID: i
+          ArrayRef: 
+            ID: ftab
+            BinaryOp: -
+              ID: i
+              Constant: int, 1
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          ID: nblock
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          Assignment: =
+            ID: j
+            BinaryOp: +
+              ArrayRef: 
+                ID: eclass8
+                ID: i
+              ArrayRef: 
+                ID: ftab
+                ID: i
+      FuncCall: 
+        ID: AssertH
+        ExprList: 
+          BinaryOp: <
+            ID: j
+            Constant: int, 256
+          Constant: int, 1005

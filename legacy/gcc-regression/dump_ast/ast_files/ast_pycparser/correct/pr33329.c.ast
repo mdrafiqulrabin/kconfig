@@ -1,0 +1,62 @@
+FileAST: 
+  Decl: g, [], ['extern'], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          PtrDecl: []
+            TypeDecl: None, []
+              IdentifierType: ['int']
+      TypeDecl: g, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: f, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: tabs, [], [], []
+        ArrayDecl: []
+          TypeDecl: tabs, []
+            IdentifierType: ['int']
+          Constant: int, 1024
+      Decl: tabcount, [], [], []
+        TypeDecl: tabcount, []
+          IdentifierType: ['int']
+      For: 
+        Assignment: =
+          ID: tabcount
+          Constant: int, 1
+        BinaryOp: <=
+          ID: tabcount
+          Constant: int, 8
+        Assignment: +=
+          ID: tabcount
+          Constant: int, 7
+        Compound: 
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+          For: 
+            Assignment: =
+              ID: i
+              Constant: int, 0
+            BinaryOp: <
+              ID: i
+              Constant: int, 1024
+            UnaryOp: p++
+              ID: i
+            Assignment: =
+              ArrayRef: 
+                ID: tabs
+                ID: i
+              BinaryOp: *
+                ID: i
+                Constant: int, 12345
+          FuncCall: 
+            ID: g
+            ExprList: 
+              ID: tabs

@@ -1,0 +1,35 @@
+c_files/pr52555.c:6:21: warning: unknown attribute 'optimize' ignored [-Wunknown-attributes]
+void __attribute__((optimize("O")))
+                    ^
+1 warning generated.
+TranslationUnitDecl 0x7fb3858264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb385826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb385826740 '__int128'
+|-TypedefDecl 0x7fb385826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb385826760 'unsigned __int128'
+|-TypedefDecl 0x7fb385826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb385826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb385826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb385826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb385826dc0 'char *'
+|   `-BuiltinType 0x7fb385826560 'char'
+|-TypedefDecl 0x7fb3858270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb385827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb385826ee0 'struct __va_list_tag'
+|     `-Record 0x7fb385826e58 '__va_list_tag'
+|-VarDecl 0x7fb385827138 <c_files/pr52555.c:3:1, col:7> col:7 used farg 'float'
+|-VarDecl 0x7fb385877400 <line:4:1, col:10> col:10 used val 'unsigned int'
+|-FunctionDecl 0x7fb385877518 <line:6:1, line:10:1> line:7:1 test 'void ()'
+| `-CompoundStmt 0x7fb385877888 <line:8:1, line:10:1>
+|   `-BinaryOperator 0x7fb385877860 <line:9:3, col:29> 'unsigned int' '='
+|     |-DeclRefExpr 0x7fb3858775b0 <col:3> 'unsigned int' lvalue Var 0x7fb385877400 'val' 'unsigned int'
+|     `-ImplicitCastExpr 0x7fb385877848 <col:9, col:29> 'unsigned int' <FloatingToIntegral>
+|       `-CallExpr 0x7fb385877800 <col:9, col:29> 'float'
+|         |-ImplicitCastExpr 0x7fb3858777e8 <col:9> 'float (*)(float)' <BuiltinFnToFnPtr>
+|         | `-DeclRefExpr 0x7fb385877770 <col:9> '<builtin fn type>' Function 0x7fb385877618 '__builtin_ceilf' 'float (float)'
+|         `-ImplicitCastExpr 0x7fb385877830 <col:25> 'float' <LValueToRValue>
+|           `-DeclRefExpr 0x7fb385877798 <col:25> 'float' lvalue Var 0x7fb385827138 'farg' 'float'
+`-FunctionDecl 0x7fb385877618 <col:9> col:9 implicit used __builtin_ceilf 'float (float)' extern
+  |-ParmVarDecl 0x7fb3858776b0 <<invalid sloc>> <invalid sloc> 'float'
+  |-NoThrowAttr 0x7fb385877718 <col:9> Implicit
+  `-ConstAttr 0x7fb385877760 <col:9> Implicit

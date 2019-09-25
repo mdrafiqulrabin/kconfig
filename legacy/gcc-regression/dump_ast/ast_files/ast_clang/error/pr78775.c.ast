@@ -1,0 +1,59 @@
+c_files/pr78775.c:15:11: error: use of unknown builtin '__builtin_malloc' [-Wimplicit-function-declaration]
+      c = __builtin_malloc (d);
+          ^
+c_files/pr78775.c:15:9: warning: incompatible integer to pointer conversion assigning to 'int *' from 'int' [-Wint-conversion]
+      c = __builtin_malloc (d);
+        ^ ~~~~~~~~~~~~~~~~~~~~
+1 warning and 1 error generated.
+TranslationUnitDecl 0x7fb2c3815ed0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb2c3816420 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb2c3816140 '__int128'
+|-TypedefDecl 0x7fb2c3816490 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb2c3816160 'unsigned __int128'
+|-TypedefDecl 0x7fb2c3816768 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb2c3816570 'struct __NSConstantString_tag'
+|   `-Record 0x7fb2c38164e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb2c3816800 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb2c38167c0 'char *'
+|   `-BuiltinType 0x7fb2c3815f60 'char'
+|-TypedefDecl 0x7fb2c3816ac8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb2c3816a70 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb2c38168e0 'struct __va_list_tag'
+|     `-Record 0x7fb2c3816858 '__va_list_tag'
+|-VarDecl 0x7fb2c3816b38 <c_files/pr78775.c:5:1, col:5> col:5 used a 'int'
+|-VarDecl 0x7fb2c3866400 <col:1, col:8> col:8 used b 'int'
+|-VarDecl 0x7fb2c38664a0 <col:1, col:12> col:12 used c 'int *'
+|-FunctionDecl 0x7fb2c38665e8 <line:7:1, line:19:1> line:7:5 main 'int (void)'
+| `-CompoundStmt 0x7fb2c3866f78 <line:8:1, line:19:1>
+|   |-DeclStmt 0x7fb2c3866758 <line:9:3, col:22>
+|   | `-VarDecl 0x7fb2c38666c0 <col:3, col:21> col:17 used d 'unsigned long' cinit
+|   |   `-ImplicitCastExpr 0x7fb2c3866740 <col:21> 'unsigned long' <IntegralCast>
+|   |     `-IntegerLiteral 0x7fb2c3866720 <col:21> 'int' 0
+|   |-WhileStmt 0x7fb2c3866f20 <line:10:3, line:16:5>
+|   | |-<<<NULL>>>
+|   | |-IntegerLiteral 0x7fb2c3866770 <line:10:10> 'int' 1
+|   | `-CompoundStmt 0x7fb2c3866ef8 <line:11:5, line:16:5>
+|   |   |-SwitchStmt 0x7fb2c38667d0 <line:12:7, line:14:6>
+|   |   | |-<<<NULL>>>
+|   |   | |-<<<NULL>>>
+|   |   | |-ImplicitCastExpr 0x7fb2c38667b8 <line:12:15> 'int' <LValueToRValue>
+|   |   | | `-DeclRefExpr 0x7fb2c3866790 <col:15> 'int' lvalue Var 0x7fb2c3866400 'b' 'int'
+|   |   | `-CaseStmt 0x7fb2c3866818 <line:13:7, line:14:6>
+|   |   |   |-CharacterLiteral 0x7fb2c3866800 <line:13:12> 'int' 83
+|   |   |   |-<<<NULL>>>
+|   |   |   `-BinaryOperator 0x7fb2c38668d0 <line:14:2, col:6> 'unsigned long' '='
+|   |   |     |-DeclRefExpr 0x7fb2c3866850 <col:2> 'unsigned long' lvalue Var 0x7fb2c38666c0 'd' 'unsigned long'
+|   |   |     `-ImplicitCastExpr 0x7fb2c38668b8 <col:6> 'unsigned long' <IntegralCast>
+|   |   |       `-ImplicitCastExpr 0x7fb2c38668a0 <col:6> 'int' <LValueToRValue>
+|   |   |         `-DeclRefExpr 0x7fb2c3866878 <col:6> 'int' lvalue Var 0x7fb2c3816b38 'a' 'int'
+|   |   `-BinaryOperator 0x7fb2c3866ed0 <line:15:7, col:30> 'int *' '='
+|   |     |-DeclRefExpr 0x7fb2c38668f8 <col:7> 'int *' lvalue Var 0x7fb2c38664a0 'c' 'int *'
+|   |     `-ImplicitCastExpr 0x7fb2c3866b08 <col:11, col:30> 'int *' <IntegralToPointer>
+|   |       `-CallExpr 0x7fb2c3866ac0 <col:11, col:30> 'int'
+|   |         |-ImplicitCastExpr 0x7fb2c3866aa8 <col:11> 'int (*)()' <FunctionToPointerDecay>
+|   |         | `-DeclRefExpr 0x7fb2c3866a28 <col:11> 'int ()' Function 0x7fb2c3866990 '__builtin_malloc' 'int ()'
+|   |         `-ImplicitCastExpr 0x7fb2c3866af0 <col:29> 'unsigned long' <LValueToRValue>
+|   |           `-DeclRefExpr 0x7fb2c3866a50 <col:29> 'unsigned long' lvalue Var 0x7fb2c38666c0 'd' 'unsigned long'
+|   `-ReturnStmt 0x7fb2c3866f60 <line:18:3, col:10>
+|     `-IntegerLiteral 0x7fb2c3866f40 <col:10> 'int' 0
+`-FunctionDecl 0x7fb2c3866990 <<invalid sloc>> line:15:11 implicit used __builtin_malloc 'int ()'

@@ -1,0 +1,42 @@
+TranslationUnitDecl 0x7fa0240264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa024026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa024026740 '__int128'
+|-TypedefDecl 0x7fa024026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa024026760 'unsigned __int128'
+|-TypedefDecl 0x7fa024026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa024026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fa024026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa024026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa024026dc0 'char *'
+|   `-BuiltinType 0x7fa024026560 'char'
+|-TypedefDecl 0x7fa0240270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa024027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa024026ee0 'struct __va_list_tag'
+|     `-Record 0x7fa024026e58 '__va_list_tag'
+`-FunctionDecl 0x7fa024077430 <c_files/pr57331.c:3:1, line:11:1> line:4:1 foo 'int (int)'
+  |-ParmVarDecl 0x7fa024027138 <col:6, col:10> col:10 used x 'int'
+  `-CompoundStmt 0x7fa0240778c8 <line:5:1, line:11:1>
+    |-DeclStmt 0x7fa0240776b8 <line:6:3, col:40>
+    | `-VarDecl 0x7fa024077528 <col:3, col:39> col:9 used p 'void *' cinit
+    |   `-ConditionalOperator 0x7fa024077688 <col:13, col:39> 'void *'
+    |     |-ImplicitCastExpr 0x7fa024077670 <col:13> 'int' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7fa024077588 <col:13> 'int' lvalue ParmVar 0x7fa024027138 'x' 'int'
+    |     |-CStyleCastExpr 0x7fa0240775e8 <col:17, col:26> 'void *' <IntegralToPointer>
+    |     | `-IntegerLiteral 0x7fa0240775b0 <col:26> 'int' 1
+    |     `-CStyleCastExpr 0x7fa024077648 <col:30, col:39> 'void *' <NullToPointer>
+    |       `-IntegerLiteral 0x7fa024077610 <col:39> 'int' 0
+    |-DeclStmt 0x7fa0240777c8 <<built-in>:71:25, c_files/pr57331.c:7:42>
+    | `-VarDecl 0x7fa0240776e8 <<built-in>:71:25, c_files/pr57331.c:7:41> col:19 used b 'long' cinit
+    |   `-CStyleCastExpr 0x7fa0240777a0 <col:23, col:41> 'long' <PointerToIntegral>
+    |     `-ImplicitCastExpr 0x7fa024077788 <col:41> 'void *' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fa024077748 <col:41> 'void *' lvalue Var 0x7fa024077528 'p' 'void *'
+    |-IfStmt 0x7fa024077858 <line:8:3, line:9:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7fa024077808 <line:8:7> 'long' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fa0240777e0 <col:7> 'long' lvalue Var 0x7fa0240776e8 'b' 'long'
+    | |-ReturnStmt 0x7fa024077840 <line:9:5, col:12>
+    | | `-IntegerLiteral 0x7fa024077820 <col:12> 'int' 0
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fa0240778b0 <line:10:3, col:10>
+      `-IntegerLiteral 0x7fa024077890 <col:10> 'int' 1

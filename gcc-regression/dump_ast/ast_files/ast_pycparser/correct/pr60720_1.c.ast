@@ -1,4 +1,0 @@
-FileAST: 
-  Decl: x, [], [], []
-    TypeDecl: x, []
-      IdentifierType: ['int']

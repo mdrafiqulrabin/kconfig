@@ -1,0 +1,42 @@
+c_files/pr82333.c:10:1: warning: plain '_Complex' requires a type specifier; assuming '_Complex double'
+_Complex _Float128 vf128;
+^
+         double
+c_files/pr82333.c:10:19: error: expected ';' after top level declarator
+_Complex _Float128 vf128;
+                  ^
+                  ;
+c_files/pr82333.c:18:1: warning: plain '_Complex' requires a type specifier; assuming '_Complex double'
+_Complex _Float128
+^
+         double
+c_files/pr82333.c:18:19: error: expected ';' after top level declarator
+_Complex _Float128
+                  ^
+                  ;
+2 warnings and 2 errors generated.
+TranslationUnitDecl 0x7fdf6700e4d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fdf6700ea20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fdf6700e740 '__int128'
+|-TypedefDecl 0x7fdf6700ea90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fdf6700e760 'unsigned __int128'
+|-TypedefDecl 0x7fdf6700ed68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fdf6700eb70 'struct __NSConstantString_tag'
+|   `-Record 0x7fdf6700eae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fdf6700ee00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fdf6700edc0 'char *'
+|   `-BuiltinType 0x7fdf6700e560 'char'
+|-TypedefDecl 0x7fdf6700f0c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fdf6700f070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fdf6700eee0 'struct __va_list_tag'
+|     `-Record 0x7fdf6700ee58 '__va_list_tag'
+|-VarDecl 0x7fdf6700f130 <c_files/pr82333.c:9:1, col:22> col:22 vld '_Complex long double'
+|-VarDecl 0x7fdf67825a00 <line:10:1, col:10> col:10 _Float128 '_Complex double'
+|-FunctionDecl 0x7fdf67825b30 <line:12:1, line:16:1> line:13:1 fld '_Complex long double (_Complex long double)'
+| |-ParmVarDecl 0x7fdf67825a70 <col:6, col:27> col:27 arg0 '_Complex long double'
+| `-CompoundStmt 0x7fdf67825c38 <line:14:1, line:16:1>
+|   `-ReturnStmt 0x7fdf67825c20 <line:15:3, col:10>
+|     `-ImplicitCastExpr 0x7fdf67825c08 <col:10> '_Complex long double' <FloatingRealToComplex>
+|       `-ImplicitCastExpr 0x7fdf67825bf0 <col:10> 'long double' <IntegralToFloating>
+|         `-IntegerLiteral 0x7fdf67825bd0 <col:10> 'int' 0
+`-VarDecl 0x7fdf67825c68 prev 0x7fdf67825a00 <line:18:1, col:10> col:10 _Float128 '_Complex double'

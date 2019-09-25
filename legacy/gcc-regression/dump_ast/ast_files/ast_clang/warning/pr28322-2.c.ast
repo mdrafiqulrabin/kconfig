@@ -1,0 +1,29 @@
+c_files/pr28322-2.c:7:12: warning: division by zero is undefined [-Wdivision-by-zero]
+  int i = 1/0;  /* { dg-warning "division by zero" } */
+           ^~
+1 warning generated.
+TranslationUnitDecl 0x7fd0808166d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd080816c20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd080816940 '__int128'
+|-TypedefDecl 0x7fd080816c90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd080816960 'unsigned __int128'
+|-TypedefDecl 0x7fd080816f68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd080816d70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd080816ce8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd080817000 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd080816fc0 'char *'
+|   `-BuiltinType 0x7fd080816760 'char'
+|-TypedefDecl 0x7fd0808172c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd080817270 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd0808170e0 'struct __va_list_tag'
+|     `-Record 0x7fd080817058 '__va_list_tag'
+`-FunctionDecl 0x7fd080036400 <c_files/pr28322-2.c:5:1, line:9:1> line:5:5 foo 'int (void)'
+  `-CompoundStmt 0x7fd080036628 <line:6:1, line:9:1>
+    |-DeclStmt 0x7fd0800365b8 <line:7:3, col:14>
+    | `-VarDecl 0x7fd0800364f0 <col:3, col:13> col:7 used i 'int' cinit
+    |   `-BinaryOperator 0x7fd080036590 <col:11, col:13> 'int' '/'
+    |     |-IntegerLiteral 0x7fd080036550 <col:11> 'int' 1
+    |     `-IntegerLiteral 0x7fd080036570 <col:13> 'int' 0
+    `-ReturnStmt 0x7fd080036610 <line:8:3, col:10>
+      `-ImplicitCastExpr 0x7fd0800365f8 <col:10> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7fd0800365d0 <col:10> 'int' lvalue Var 0x7fd0800364f0 'i' 'int'

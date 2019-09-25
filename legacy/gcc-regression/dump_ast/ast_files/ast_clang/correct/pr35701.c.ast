@@ -1,0 +1,82 @@
+TranslationUnitDecl 0x7fb5940264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb594026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb594026740 '__int128'
+|-TypedefDecl 0x7fb594026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb594026760 'unsigned __int128'
+|-TypedefDecl 0x7fb594026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb594026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fb594026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb594026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb594026dc0 'char *'
+|   `-BuiltinType 0x7fb594026560 'char'
+|-TypedefDecl 0x7fb5940270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb594027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb594026ee0 'struct __va_list_tag'
+|     `-Record 0x7fb594026e58 '__va_list_tag'
+|-RecordDecl 0x7fb594027120 <c_files/pr35701.c:6:9, line:9:1> line:6:16 struct _my_struct_t definition
+| |-FieldDecl 0x7fb594825a18 <line:7:3, col:22> col:16 referenced small 'unsigned int'
+| | `-IntegerLiteral 0x7fb5940271d0 <col:22> 'int' 1
+| `-FieldDecl 0x7fb594825a98 <line:8:3, col:20> col:16 referenced big 'unsigned int'
+|   `-IntegerLiteral 0x7fb594825a60 <col:20> 'int' 31
+|-TypedefDecl 0x7fb594825b30 <line:6:1, line:9:3> col:3 my_struct_t 'struct _my_struct_t':'struct _my_struct_t'
+| `-ElaboratedType 0x7fb594825ae0 'struct _my_struct_t' sugar
+|   `-RecordType 0x7fb5940271b0 'struct _my_struct_t'
+|     `-Record 0x7fb594027120 '_my_struct_t'
+|-TypedefDecl 0x7fb594825c10 <line:6:1, line:9:17> col:17 referenced my_struct_p_t 'struct _my_struct_t *'
+| `-PointerType 0x7fb594825bc0 'struct _my_struct_t *'
+|   `-ElaboratedType 0x7fb594825ae0 'struct _my_struct_t' sugar
+|     `-RecordType 0x7fb5940271b0 'struct _my_struct_t'
+|       `-Record 0x7fb594027120 '_my_struct_t'
+|-FunctionDecl 0x7fb594825ee0 <line:11:1, line:16:1> line:12:1 my_func1 'void (unsigned int, unsigned int, my_struct_p_t)'
+| |-ParmVarDecl 0x7fb594825ca0 <col:10, col:23> col:23 used sm 'unsigned int'
+| |-ParmVarDecl 0x7fb594825d18 <col:27, col:40> col:40 used bi 'unsigned int'
+| |-ParmVarDecl 0x7fb594825db0 <col:44, col:58> col:58 used msp 'my_struct_p_t':'struct _my_struct_t *'
+| `-CompoundStmt 0x7fb594826190 <line:13:1, line:16:1>
+|   |-BinaryOperator 0x7fb594826088 <line:14:3, col:16> 'unsigned int' '='
+|   | |-MemberExpr 0x7fb594826010 <col:3, col:8> 'unsigned int' lvalue bitfield ->small 0x7fb594825a18
+|   | | `-ImplicitCastExpr 0x7fb594825ff8 <col:3> 'my_struct_p_t':'struct _my_struct_t *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7fb594825fd0 <col:3> 'my_struct_p_t':'struct _my_struct_t *' lvalue ParmVar 0x7fb594825db0 'msp' 'my_struct_p_t':'struct _my_struct_t *'
+|   | `-ImplicitCastExpr 0x7fb594826070 <col:16> 'unsigned int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fb594826048 <col:16> 'unsigned int' lvalue ParmVar 0x7fb594825ca0 'sm' 'unsigned int'
+|   `-BinaryOperator 0x7fb594826168 <line:15:3, col:14> 'unsigned int' '='
+|     |-MemberExpr 0x7fb5948260f0 <col:3, col:8> 'unsigned int' lvalue bitfield ->big 0x7fb594825a98
+|     | `-ImplicitCastExpr 0x7fb5948260d8 <col:3> 'my_struct_p_t':'struct _my_struct_t *' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7fb5948260b0 <col:3> 'my_struct_p_t':'struct _my_struct_t *' lvalue ParmVar 0x7fb594825db0 'msp' 'my_struct_p_t':'struct _my_struct_t *'
+|     `-ImplicitCastExpr 0x7fb594826150 <col:14> 'unsigned int' <LValueToRValue>
+|       `-DeclRefExpr 0x7fb594826128 <col:14> 'unsigned int' lvalue ParmVar 0x7fb594825d18 'bi' 'unsigned int'
+|-FunctionDecl 0x7fb594826350 <line:18:1, line:23:1> line:19:1 my_func2 'void (unsigned int, unsigned int, my_struct_p_t)'
+| |-ParmVarDecl 0x7fb5948261d0 <col:10, col:23> col:23 used sm 'unsigned int'
+| |-ParmVarDecl 0x7fb594826248 <col:27, col:40> col:40 used bi 'unsigned int'
+| |-ParmVarDecl 0x7fb5948262b8 <col:44, col:58> col:58 used msp 'my_struct_p_t':'struct _my_struct_t *'
+| `-CompoundStmt 0x7fb594826650 <line:20:1, line:23:1>
+|   |-BinaryOperator 0x7fb594826500 <line:21:3, col:21> 'unsigned int' '='
+|   | |-MemberExpr 0x7fb594826440 <col:3, col:8> 'unsigned int' lvalue bitfield ->small 0x7fb594825a18
+|   | | `-ImplicitCastExpr 0x7fb594826428 <col:3> 'my_struct_p_t':'struct _my_struct_t *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7fb594826400 <col:3> 'my_struct_p_t':'struct _my_struct_t *' lvalue ParmVar 0x7fb5948262b8 'msp' 'my_struct_p_t':'struct _my_struct_t *'
+|   | `-BinaryOperator 0x7fb5948264d8 <col:16, col:21> 'unsigned int' '&'
+|   |   |-ImplicitCastExpr 0x7fb5948264c0 <col:16> 'unsigned int' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7fb594826478 <col:16> 'unsigned int' lvalue ParmVar 0x7fb5948261d0 'sm' 'unsigned int'
+|   |   `-IntegerLiteral 0x7fb5948264a0 <col:21> 'unsigned int' 1
+|   `-BinaryOperator 0x7fb594826628 <line:22:3, col:19> 'unsigned int' '='
+|     |-MemberExpr 0x7fb594826568 <col:3, col:8> 'unsigned int' lvalue bitfield ->big 0x7fb594825a98
+|     | `-ImplicitCastExpr 0x7fb594826550 <col:3> 'my_struct_p_t':'struct _my_struct_t *' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7fb594826528 <col:3> 'my_struct_p_t':'struct _my_struct_t *' lvalue ParmVar 0x7fb5948262b8 'msp' 'my_struct_p_t':'struct _my_struct_t *'
+|     `-BinaryOperator 0x7fb594826600 <col:14, col:19> 'unsigned int' '&'
+|       |-ImplicitCastExpr 0x7fb5948265e8 <col:14> 'unsigned int' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fb5948265a0 <col:14> 'unsigned int' lvalue ParmVar 0x7fb594826248 'bi' 'unsigned int'
+|       `-IntegerLiteral 0x7fb5948265c8 <col:19> 'unsigned int' 2147483647
+`-FunctionDecl 0x7fb594826758 <line:25:1, line:31:1> line:26:1 my_func3 'unsigned short (unsigned int)'
+  |-ParmVarDecl 0x7fb594826690 <col:10, col:23> col:23 used sm 'unsigned int'
+  `-CompoundStmt 0x7fb5948269d0 <line:27:1, line:31:1>
+    |-DeclStmt 0x7fb594826870 <line:28:3, col:21>
+    | `-VarDecl 0x7fb594826810 <col:3, col:18> col:18 used res 'unsigned short'
+    |-BinaryOperator 0x7fb594826950 <line:29:3, col:14> 'unsigned short' '='
+    | |-DeclRefExpr 0x7fb594826888 <col:3> 'unsigned short' lvalue Var 0x7fb594826810 'res' 'unsigned short'
+    | `-ImplicitCastExpr 0x7fb594826938 <col:9, col:14> 'unsigned short' <IntegralCast>
+    |   `-BinaryOperator 0x7fb594826910 <col:9, col:14> 'unsigned int' '&'
+    |     |-ImplicitCastExpr 0x7fb5948268f8 <col:9> 'unsigned int' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7fb5948268b0 <col:9> 'unsigned int' lvalue ParmVar 0x7fb594826690 'sm' 'unsigned int'
+    |     `-IntegerLiteral 0x7fb5948268d8 <col:14> 'unsigned int' 65312
+    `-ReturnStmt 0x7fb5948269b8 <line:30:3, col:10>
+      `-ImplicitCastExpr 0x7fb5948269a0 <col:10> 'unsigned short' <LValueToRValue>
+        `-DeclRefExpr 0x7fb594826978 <col:10> 'unsigned short' lvalue Var 0x7fb594826810 'res' 'unsigned short'

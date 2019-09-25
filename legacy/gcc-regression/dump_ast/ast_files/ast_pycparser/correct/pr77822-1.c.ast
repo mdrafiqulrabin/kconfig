@@ -1,0 +1,67 @@
+FileAST: 
+  Decl: m_fn1, [], [], []
+    FuncDecl: 
+      TypeDecl: m_fn1, []
+        IdentifierType: ['void']
+  Decl: m_datawidth, [], [], []
+    TypeDecl: m_datawidth, []
+      IdentifierType: ['char']
+  Decl: m_subunits, [], [], []
+    TypeDecl: m_subunits, []
+      IdentifierType: ['char']
+  Decl: m_subunit_infos, [], [], []
+    ArrayDecl: []
+      TypeDecl: m_subunit_infos, []
+        IdentifierType: ['int']
+      Constant: int, 1
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['long']
+  FuncDef: 
+    Decl: m_fn1, [], [], []
+      FuncDecl: 
+        TypeDecl: m_fn1, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: c, [], [], []
+        TypeDecl: c, []
+          IdentifierType: ['int']
+        Constant: int, 32
+      Decl: d, [], [], []
+        TypeDecl: d, []
+          IdentifierType: ['int']
+        BinaryOp: /
+          ID: m_datawidth
+          ID: c
+      For: 
+        DeclList: 
+          Decl: e, [], [], []
+            TypeDecl: e, []
+              IdentifierType: ['int']
+            Constant: int, 0
+        BinaryOp: <
+          ID: e
+          ID: d
+        UnaryOp: p++
+          ID: e
+        Compound: 
+          Decl: f, [], [], []
+            TypeDecl: f, []
+              IdentifierType: ['int']
+            BinaryOp: *
+              ID: e
+              Constant: int, 32
+          If: 
+            BinaryOp: &
+              BinaryOp: >>
+                ID: b
+                ID: f
+              Constant: int, 1
+            Assignment: =
+              ArrayRef: 
+                ID: m_subunit_infos
+                ID: m_subunits
+              ID: a

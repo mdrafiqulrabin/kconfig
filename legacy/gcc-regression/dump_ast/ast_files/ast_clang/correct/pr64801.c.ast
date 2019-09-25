@@ -1,0 +1,38 @@
+TranslationUnitDecl 0x7f840c0264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f840c026a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f840c026740 '__int128'
+|-TypedefDecl 0x7f840c026a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f840c026760 'unsigned __int128'
+|-TypedefDecl 0x7f840c026d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f840c026b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f840c026ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f840c026e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f840c026dc0 'char *'
+|   `-BuiltinType 0x7f840c026560 'char'
+|-TypedefDecl 0x7f840c0270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f840c027070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f840c026ee0 'struct __va_list_tag'
+|     `-Record 0x7f840c026e58 '__va_list_tag'
+|-VarDecl 0x7f840c027138 <c_files/pr64801.c:3:1, col:5> col:5 used a 'int'
+|-FunctionDecl 0x7f840c0774b8 <line:4:1, line:8:1> line:5:1 elantech_detect 'int (void)'
+| `-CompoundStmt 0x7f840c0775a8 <line:6:1, line:8:1>
+|   `-ReturnStmt 0x7f840c077590 <line:7:3, col:11>
+|     `-UnaryOperator 0x7f840c077570 <col:10, col:11> 'int' prefix '-'
+|       `-IntegerLiteral 0x7f840c077550 <col:11> 'int' 38
+|-FunctionDecl 0x7f840c077660 <line:9:1, line:13:1> line:10:1 used fsp_detect 'int (void)' inline
+| `-CompoundStmt 0x7f840c077750 <line:11:1, line:13:1>
+|   `-ReturnStmt 0x7f840c077738 <line:12:3, col:11>
+|     `-UnaryOperator 0x7f840c077718 <col:10, col:11> 'int' prefix '-'
+|       `-IntegerLiteral 0x7f840c0776f8 <col:11> 'int' 38
+`-FunctionDecl 0x7f840c077830 <line:14:1, line:19:1> line:15:1 psmouse_extensions 'void (void)'
+  `-CompoundStmt 0x7f840c077b78 <line:16:1, line:19:1>
+    |-DeclStmt 0x7f840c077aa8 <line:17:3, col:26>
+    | `-VarDecl 0x7f840c0779c0 <col:3, col:16> col:9 used b 'int (*)()' cinit
+    |   `-ImplicitCastExpr 0x7f840c077a90 <col:16> 'int (*)()' <BitCast>
+    |     `-ImplicitCastExpr 0x7f840c077a78 <col:16> 'int (*)(void)' <FunctionToPointerDecay>
+    |       `-DeclRefExpr 0x7f840c077a20 <col:16> 'int (void)' Function 0x7f840c077660 'fsp_detect' 'int (void)'
+    `-BinaryOperator 0x7f840c077b50 <line:18:3, col:10> 'int' '='
+      |-DeclRefExpr 0x7f840c077ac0 <col:3> 'int' lvalue Var 0x7f840c027138 'a' 'int'
+      `-CallExpr 0x7f840c077b28 <col:7, col:10> 'int'
+        `-ImplicitCastExpr 0x7f840c077b10 <col:7> 'int (*)()' <LValueToRValue>
+          `-DeclRefExpr 0x7f840c077ae8 <col:7> 'int (*)()' lvalue Var 0x7f840c0779c0 'b' 'int (*)()'

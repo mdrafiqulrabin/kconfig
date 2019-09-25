@@ -1,6 +1,0 @@
- 
- 
- 
-
-;int foezis = sizeof tni;  
-

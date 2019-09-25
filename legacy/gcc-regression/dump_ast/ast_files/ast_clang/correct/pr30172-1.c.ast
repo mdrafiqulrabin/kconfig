@@ -1,0 +1,85 @@
+TranslationUnitDecl 0x7f93bd8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f93bd826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f93bd826740 '__int128'
+|-TypedefDecl 0x7f93bd826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f93bd826760 'unsigned __int128'
+|-TypedefDecl 0x7f93bd826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f93bd826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7f93bd826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7f93bd826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f93bd826dc0 'char *'
+|   `-BuiltinType 0x7f93bd826560 'char'
+|-TypedefDecl 0x7f93bd8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f93bd827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f93bd826ee0 'struct __va_list_tag'
+|     `-Record 0x7f93bd826e58 '__va_list_tag'
+|-FunctionDecl 0x7f93be025a00 <c_files/pr30172-1.c:4:1, col:52> col:17 test1 '_Complex double (double)'
+| |-ParmVarDecl 0x7f93bd827138 <col:24, col:31> col:31 used x 'double'
+| `-CompoundStmt 0x7f93be025b98 <col:34, col:52>
+|   `-ReturnStmt 0x7f93be025b80 <col:36, col:47>
+|     `-BinaryOperator 0x7f93be025b58 <col:43, col:47> '_Complex double' '+'
+|       |-ImplicitCastExpr 0x7f93be025b40 <col:43> 'double' <LValueToRValue>
+|       | `-DeclRefExpr 0x7f93be025ae0 <col:43> 'double' lvalue ParmVar 0x7f93bd827138 'x' 'double'
+|       `-ImaginaryLiteral 0x7f93be025b28 <col:47> '_Complex double'
+|         `-FloatingLiteral 0x7f93be025b08 <col:47> 'double' 1.000000e+00
+|-FunctionDecl 0x7f93be025c58 <line:5:1, col:56> col:17 test2 '_Complex double (double)'
+| |-ParmVarDecl 0x7f93be025bd0 <col:24, col:31> col:31 used x 'double'
+| `-CompoundStmt 0x7f93be025e28 <col:34, col:56>
+|   `-ReturnStmt 0x7f93be025e10 <col:36, col:51>
+|     `-BinaryOperator 0x7f93be025de8 <col:43, col:51> '_Complex double' '+'
+|       |-ImplicitCastExpr 0x7f93be025dd0 <col:43> '_Complex double' <FloatingRealToComplex>
+|       | `-ImplicitCastExpr 0x7f93be025db8 <col:43> 'double' <IntegralToFloating>
+|       |   `-IntegerLiteral 0x7f93be025cf8 <col:43> 'int' 1
+|       `-BinaryOperator 0x7f93be025d90 <col:47, col:51> '_Complex double' '*'
+|         |-ImplicitCastExpr 0x7f93be025d78 <col:47> 'double' <LValueToRValue>
+|         | `-DeclRefExpr 0x7f93be025d18 <col:47> 'double' lvalue ParmVar 0x7f93be025bd0 'x' 'double'
+|         `-ImaginaryLiteral 0x7f93be025d60 <col:51> '_Complex double'
+|           `-FloatingLiteral 0x7f93be025d40 <col:51> 'double' 1.000000e+00
+|-FunctionDecl 0x7f93be025fb0 <line:6:1, col:66> col:17 test3 '_Complex double (double, double)'
+| |-ParmVarDecl 0x7f93be025e60 <col:24, col:31> col:31 used x 'double'
+| |-ParmVarDecl 0x7f93be025ed8 <col:34, col:41> col:41 used y 'double'
+| `-CompoundStmt 0x7f93be026178 <col:44, col:66>
+|   `-ReturnStmt 0x7f93be026160 <col:46, col:61>
+|     `-BinaryOperator 0x7f93be026138 <col:53, col:61> '_Complex double' '+'
+|       |-ImplicitCastExpr 0x7f93be026120 <col:53> 'double' <LValueToRValue>
+|       | `-DeclRefExpr 0x7f93be026058 <col:53> 'double' lvalue ParmVar 0x7f93be025e60 'x' 'double'
+|       `-BinaryOperator 0x7f93be0260f8 <col:57, col:61> '_Complex double' '*'
+|         |-ImplicitCastExpr 0x7f93be0260e0 <col:57> 'double' <LValueToRValue>
+|         | `-DeclRefExpr 0x7f93be026080 <col:57> 'double' lvalue ParmVar 0x7f93be025ed8 'y' 'double'
+|         `-ImaginaryLiteral 0x7f93be0260c8 <col:61> '_Complex double'
+|           `-FloatingLiteral 0x7f93be0260a8 <col:61> 'double' 1.000000e+00
+|-FunctionDecl 0x7f93be0262b8 <line:7:1, col:74> col:17 test4 '_Complex double (double, double)'
+| |-ParmVarDecl 0x7f93be0261b0 <col:24, col:31> col:31 used x 'double'
+| |-ParmVarDecl 0x7f93be026228 <col:34, col:41> col:41 used y 'double'
+| `-CompoundStmt 0x7f93be026500 <col:44, col:74>
+|   `-ReturnStmt 0x7f93be0264e8 <col:46, col:69>
+|     `-BinaryOperator 0x7f93be0264c0 <col:53, col:69> '_Complex double' '*'
+|       |-ParenExpr 0x7f93be026468 <col:53, col:65> '_Complex double'
+|       | `-BinaryOperator 0x7f93be026440 <col:54, col:62> '_Complex double' '+'
+|       |   |-ImplicitCastExpr 0x7f93be026428 <col:54> 'double' <LValueToRValue>
+|       |   | `-DeclRefExpr 0x7f93be026360 <col:54> 'double' lvalue ParmVar 0x7f93be0261b0 'x' 'double'
+|       |   `-BinaryOperator 0x7f93be026400 <col:58, col:62> '_Complex double' '*'
+|       |     |-ImplicitCastExpr 0x7f93be0263e8 <col:58> 'double' <LValueToRValue>
+|       |     | `-DeclRefExpr 0x7f93be026388 <col:58> 'double' lvalue ParmVar 0x7f93be026228 'y' 'double'
+|       |     `-ImaginaryLiteral 0x7f93be0263d0 <col:62> '_Complex double'
+|       |       `-FloatingLiteral 0x7f93be0263b0 <col:62> 'double' 1.000000e+00
+|       `-ImaginaryLiteral 0x7f93be0264a8 <col:69> '_Complex double'
+|         `-FloatingLiteral 0x7f93be026488 <col:69> 'double' 1.000000e+00
+`-FunctionDecl 0x7f93be026640 <line:8:1, col:75> col:17 test5 '_Complex double (double, double)'
+  |-ParmVarDecl 0x7f93be026538 <col:24, col:31> col:31 used x 'double'
+  |-ParmVarDecl 0x7f93be0265b0 <col:34, col:41> col:41 used y 'double'
+  `-CompoundStmt 0x7f93be0268a8 <col:44, col:75>
+    `-ReturnStmt 0x7f93be026890 <col:46, col:70>
+      `-BinaryOperator 0x7f93be026868 <col:53, col:70> '_Complex double' '*'
+        |-ParenExpr 0x7f93be0267f0 <col:53, col:65> '_Complex double'
+        | `-BinaryOperator 0x7f93be0267c8 <col:54, col:62> '_Complex double' '+'
+        |   |-ImplicitCastExpr 0x7f93be0267b0 <col:54> 'double' <LValueToRValue>
+        |   | `-DeclRefExpr 0x7f93be0266e8 <col:54> 'double' lvalue ParmVar 0x7f93be026538 'x' 'double'
+        |   `-BinaryOperator 0x7f93be026788 <col:58, col:62> '_Complex double' '*'
+        |     |-ImplicitCastExpr 0x7f93be026770 <col:58> 'double' <LValueToRValue>
+        |     | `-DeclRefExpr 0x7f93be026710 <col:58> 'double' lvalue ParmVar 0x7f93be0265b0 'y' 'double'
+        |     `-ImaginaryLiteral 0x7f93be026758 <col:62> '_Complex double'
+        |       `-FloatingLiteral 0x7f93be026738 <col:62> 'double' 1.000000e+00
+        `-UnaryOperator 0x7f93be026848 <col:69, col:70> '_Complex double' prefix '-'
+          `-ImaginaryLiteral 0x7f93be026830 <col:70> '_Complex double'
+            `-FloatingLiteral 0x7f93be026810 <col:70> 'double' 1.000000e+00

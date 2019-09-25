@@ -1,0 +1,27 @@
+FileAST: 
+  Decl: f, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Typename: None, []
+          TypeDecl: None, []
+            IdentifierType: ['int']
+      TypeDecl: f, []
+        IdentifierType: ['int']
+  Decl: glob, [], [], []
+    TypeDecl: glob, []
+      IdentifierType: ['unsigned', 'int']
+  FuncDef: 
+    Decl: g, [], [], []
+      FuncDecl: 
+        TypeDecl: g, []
+          IdentifierType: ['void']
+    Compound: 
+      While: 
+        FuncCall: 
+          ID: f
+          ExprList: 
+            ID: glob
+        EmptyStatement: 
+      Assignment: =
+        ID: glob
+        Constant: int, 5

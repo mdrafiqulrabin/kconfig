@@ -1,0 +1,36 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: str, [], [], []
+            PtrDecl: []
+              TypeDecl: str, []
+                IdentifierType: ['char']
+          Decl: i, [], [], []
+            TypeDecl: i, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: text, ['const'], ['static'], []
+        ArrayDecl: []
+          TypeDecl: text, ['const']
+            IdentifierType: ['char']
+        Constant: string, ""
+      Assignment: =
+        ArrayRef: 
+          ID: str
+          ID: i
+        Constant: int, 0
+      If: 
+        BinaryOp: &
+          ID: i
+          Constant: int, 1
+        FuncCall: 
+          ID: __builtin_strcpy
+          ExprList: 
+            BinaryOp: +
+              ID: str
+              ID: i
+            ID: text

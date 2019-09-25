@@ -1,0 +1,87 @@
+FileAST: 
+  Decl: decode, [], [], []
+    FuncDecl: 
+      ParamList: 
+        Decl: d, [], [], []
+          PtrDecl: []
+            TypeDecl: d, []
+              IdentifierType: ['char']
+        Decl: len, [], [], []
+          TypeDecl: len, []
+            IdentifierType: ['int']
+      TypeDecl: decode, []
+        IdentifierType: ['void']
+  FuncDef: 
+    Decl: decode, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: d, [], [], []
+            PtrDecl: []
+              TypeDecl: d, []
+                IdentifierType: ['char']
+          Decl: len, [], [], []
+            TypeDecl: len, []
+              IdentifierType: ['int']
+        TypeDecl: decode, []
+          IdentifierType: ['void']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+        BinaryOp: -
+          ID: len
+          Constant: int, 1
+      While: 
+        BinaryOp: >=
+          ID: i
+          Constant: int, 0
+        Compound: 
+          ArrayRef: 
+            ID: d
+            ID: i
+          If: 
+            BinaryOp: ==
+              ArrayRef: 
+                ID: d
+                ID: i
+              Constant: int, 0
+            Assignment: =
+              ArrayRef: 
+                ID: d
+                ID: i
+              Constant: char, ' '
+          If: 
+            BinaryOp: ==
+              ArrayRef: 
+                ID: d
+                ID: i
+              Constant: int, 1
+            Assignment: =
+              ArrayRef: 
+                ID: d
+                ID: i
+              Constant: char, 'x'
+          UnaryOp: p--
+            ID: i
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: argc, [], [], []
+            TypeDecl: argc, []
+              IdentifierType: ['int']
+          Decl: argv, [], [], []
+            PtrDecl: []
+              PtrDecl: []
+                TypeDecl: argv, []
+                  IdentifierType: ['char']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: decode
+        ExprList: 
+          Constant: string, "this bug is really weird"
+          Constant: int, 24
+      Return: 
+        Constant: int, 0

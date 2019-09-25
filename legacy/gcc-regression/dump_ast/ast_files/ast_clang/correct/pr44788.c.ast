@@ -1,0 +1,58 @@
+TranslationUnitDecl 0x7fc020823ed0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc020824420 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc020824140 '__int128'
+|-TypedefDecl 0x7fc020824490 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc020824160 'unsigned __int128'
+|-TypedefDecl 0x7fc020824768 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc020824570 'struct __NSConstantString_tag'
+|   `-Record 0x7fc0208244e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc020824800 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc0208247c0 'char *'
+|   `-BuiltinType 0x7fc020823f60 'char'
+|-TypedefDecl 0x7fc020824ac8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc020824a70 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc0208248e0 'struct __va_list_tag'
+|     `-Record 0x7fc020824858 '__va_list_tag'
+|-FunctionDecl 0x7fc020028428 <c_files/pr44788.c:5:1, col:25> col:13 used foo 'void (float *)' extern
+| `-ParmVarDecl 0x7fc020824b60 <col:18, col:24> col:25 'float *'
+`-FunctionDecl 0x7fc020028670 <line:7:1, line:14:1> line:7:6 joint_decode 'void (float *, int)'
+  |-ParmVarDecl 0x7fc020028520 <col:19, col:26> col:26 used mlt_buffer1 'float *'
+  |-ParmVarDecl 0x7fc020028598 <col:39, col:43> col:43 used t 'int'
+  `-CompoundStmt 0x7fc020028d30 <col:46, line:14:1>
+    |-DeclStmt 0x7fc020028790 <line:8:5, col:10>
+    | `-VarDecl 0x7fc020028730 <col:5, col:9> col:9 used i 'int'
+    |-DeclStmt 0x7fc020028890 <line:9:5, col:30>
+    | `-VarDecl 0x7fc020028830 <col:5, col:29> col:11 used decode_buffer 'float [1060]'
+    |-CallExpr 0x7fc020028940 <line:10:5, col:22> 'void'
+    | |-ImplicitCastExpr 0x7fc020028928 <col:5> 'void (*)(float *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fc0200288a8 <col:5> 'void (float *)' Function 0x7fc020028428 'foo' 'void (float *)'
+    | `-ImplicitCastExpr 0x7fc020028970 <col:9> 'float *' <ArrayToPointerDecay>
+    |   `-DeclRefExpr 0x7fc0200288d0 <col:9> 'float [1060]' lvalue Var 0x7fc020028830 'decode_buffer' 'float [1060]'
+    `-ForStmt 0x7fc020028cf8 <line:11:5, line:13:5>
+      |-BinaryOperator 0x7fc0200289d0 <line:11:10, col:12> 'int' '='
+      | |-DeclRefExpr 0x7fc020028988 <col:10> 'int' lvalue Var 0x7fc020028730 'i' 'int'
+      | `-IntegerLiteral 0x7fc0200289b0 <col:12> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fc020028a58 <col:15, col:17> 'int' '<'
+      | |-ImplicitCastExpr 0x7fc020028a40 <col:15> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fc0200289f8 <col:15> 'int' lvalue Var 0x7fc020028730 'i' 'int'
+      | `-IntegerLiteral 0x7fc020028a20 <col:17> 'int' 10
+      |-UnaryOperator 0x7fc020028aa8 <col:22, col:23> 'int' postfix '++'
+      | `-DeclRefExpr 0x7fc020028a80 <col:22> 'int' lvalue Var 0x7fc020028730 'i' 'int'
+      `-CompoundStmt 0x7fc020028cd8 <col:27, line:13:5>
+        `-BinaryOperator 0x7fc020028cb0 <line:12:9, col:45> 'float' '='
+          |-ArraySubscriptExpr 0x7fc020028b48 <col:9, col:22> 'float' lvalue
+          | |-ImplicitCastExpr 0x7fc020028b18 <col:9> 'float *' <LValueToRValue>
+          | | `-DeclRefExpr 0x7fc020028ac8 <col:9> 'float *' lvalue ParmVar 0x7fc020028520 'mlt_buffer1' 'float *'
+          | `-ImplicitCastExpr 0x7fc020028b30 <col:21> 'int' <LValueToRValue>
+          |   `-DeclRefExpr 0x7fc020028af0 <col:21> 'int' lvalue Var 0x7fc020028730 'i' 'int'
+          `-BinaryOperator 0x7fc020028c88 <col:26, col:45> 'float' '*'
+            |-ImplicitCastExpr 0x7fc020028c70 <col:26> 'float' <IntegralToFloating>
+            | `-ImplicitCastExpr 0x7fc020028c40 <col:26> 'int' <LValueToRValue>
+            |   `-DeclRefExpr 0x7fc020028b70 <col:26> 'int' lvalue Var 0x7fc020028730 'i' 'int'
+            `-ImplicitCastExpr 0x7fc020028c58 <col:30, col:45> 'float' <LValueToRValue>
+              `-ArraySubscriptExpr 0x7fc020028c18 <col:30, col:45> 'float' lvalue
+                |-ImplicitCastExpr 0x7fc020028be8 <col:30> 'float *' <ArrayToPointerDecay>
+                | `-DeclRefExpr 0x7fc020028b98 <col:30> 'float [1060]' lvalue Var 0x7fc020028830 'decode_buffer' 'float [1060]'
+                `-ImplicitCastExpr 0x7fc020028c00 <col:44> 'int' <LValueToRValue>
+                  `-DeclRefExpr 0x7fc020028bc0 <col:44> 'int' lvalue ParmVar 0x7fc020028598 't' 'int'

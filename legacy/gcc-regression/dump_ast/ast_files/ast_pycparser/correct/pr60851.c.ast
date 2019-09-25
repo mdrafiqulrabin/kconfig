@@ -1,0 +1,13 @@
+FileAST: 
+  FuncDef: 
+    Decl: ld, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: c, [], [], []
+            TypeDecl: c, []
+              IdentifierType: ['char']
+        TypeDecl: ld, []
+          IdentifierType: ['long', 'double']
+    Compound: 
+      Return: 
+        ID: c

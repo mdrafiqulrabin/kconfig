@@ -1,0 +1,57 @@
+TranslationUnitDecl 0x7fce8d018ad0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fce8d019020 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fce8d018d40 '__int128'
+|-TypedefDecl 0x7fce8d019090 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fce8d018d60 'unsigned __int128'
+|-TypedefDecl 0x7fce8d019368 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fce8d019170 'struct __NSConstantString_tag'
+|   `-Record 0x7fce8d0190e8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fce8d019400 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fce8d0193c0 'char *'
+|   `-BuiltinType 0x7fce8d018b60 'char'
+|-TypedefDecl 0x7fce8d0196c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fce8d019670 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fce8d0194e0 'struct __va_list_tag'
+|     `-Record 0x7fce8d019458 '__va_list_tag'
+|-RecordDecl 0x7fce8d019720 <c_files/pr84265.c:3:1, line:10:1> line:3:8 struct a definition
+| |-FieldDecl 0x7fce8c02b000 <line:5:3, col:17> col:17 referenced b 'unsigned long'
+| |-FieldDecl 0x7fce8c02b060 <line:6:3, col:17> col:17 referenced c 'unsigned long'
+| |-FieldDecl 0x7fce8c02b0c0 <line:7:3, col:7> col:7 d 'int'
+| |-FieldDecl 0x7fce8c02b150 <line:8:3, col:8> col:8 e 'int *'
+| `-FieldDecl 0x7fce8c02b1a8 <line:9:3, col:8> col:8 f 'char'
+|-RecordDecl 0x7fce8c02b1f0 <line:12:1, line:16:1> line:12:1 struct definition
+| |-FieldDecl 0x7fce8c02b2b8 <line:14:3, col:7> col:7 g 'int'
+| `-FieldDecl 0x7fce8c02b3b8 <line:15:3, col:14> col:12 referenced h 'struct a []'
+|-VarDecl 0x7fce8c02b450 <line:12:1, line:16:3> col:3 used i 'struct (anonymous struct at c_files/pr84265.c:12:1)':'struct (anonymous at c_files/pr84265.c:12:1)'
+|-VarDecl 0x7fce8c02b520 <line:18:1, col:5> col:5 used j 'int'
+|-VarDecl 0x7fce8c02b598 <col:1, col:8> col:8 used k 'int'
+`-FunctionDecl 0x7fce8c02b658 <line:19:1, line:23:1> line:19:6 l 'void ()'
+  `-CompoundStmt 0x7fce8c02bc40 <line:20:1, line:23:1>
+    `-ForStmt 0x7fce8c02bc08 <line:21:3, line:22:36>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7fce8c02b718 <line:21:10> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7fce8c02b6f0 <col:10> 'int' lvalue Var 0x7fce8c02b598 'k' 'int'
+      |-UnaryOperator 0x7fce8c02b758 <col:13, col:14> 'int' postfix '++'
+      | `-DeclRefExpr 0x7fce8c02b730 <col:13> 'int' lvalue Var 0x7fce8c02b598 'k' 'int'
+      `-CompoundAssignOperator 0x7fce8c02bb18 <line:22:5, col:36> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+        |-DeclRefExpr 0x7fce8c02b778 <col:5> 'int' lvalue Var 0x7fce8c02b520 'j' 'int'
+        `-CStyleCastExpr 0x7fce8c02baf0 <col:10, col:36> 'int' <IntegralCast>
+          `-ParenExpr 0x7fce8c02bad0 <col:16, col:36> 'unsigned long'
+            `-BinaryOperator 0x7fce8c02ba60 <col:17, col:35> 'unsigned long' '-'
+              |-ImplicitCastExpr 0x7fce8c02ba30 <col:17, col:24> 'unsigned long' <LValueToRValue>
+              | `-MemberExpr 0x7fce8c02b8e0 <col:17, col:24> 'unsigned long' lvalue .c 0x7fce8c02b060
+              |   `-ArraySubscriptExpr 0x7fce8c02b8b8 <col:17, col:22> 'struct a':'struct a' lvalue
+              |     |-ImplicitCastExpr 0x7fce8c02b888 <col:17, col:19> 'struct a *' <ArrayToPointerDecay>
+              |     | `-MemberExpr 0x7fce8c02b7c8 <col:17, col:19> 'struct a []' lvalue .h 0x7fce8c02b3b8
+              |     |   `-DeclRefExpr 0x7fce8c02b7a0 <col:17> 'struct (anonymous struct at c_files/pr84265.c:12:1)':'struct (anonymous at c_files/pr84265.c:12:1)' lvalue Var 0x7fce8c02b450 'i' 'struct (anonymous struct at c_files/pr84265.c:12:1)':'struct (anonymous at c_files/pr84265.c:12:1)'
+              |     `-ImplicitCastExpr 0x7fce8c02b8a0 <col:21> 'int' <LValueToRValue>
+              |       `-DeclRefExpr 0x7fce8c02b800 <col:21> 'int' lvalue Var 0x7fce8c02b598 'k' 'int'
+              `-ImplicitCastExpr 0x7fce8c02ba48 <col:28, col:35> 'unsigned long' <LValueToRValue>
+                `-MemberExpr 0x7fce8c02b9f8 <col:28, col:35> 'unsigned long' lvalue .b 0x7fce8c02b000
+                  `-ArraySubscriptExpr 0x7fce8c02b9d0 <col:28, col:33> 'struct a':'struct a' lvalue
+                    |-ImplicitCastExpr 0x7fce8c02b9a0 <col:28, col:30> 'struct a *' <ArrayToPointerDecay>
+                    | `-MemberExpr 0x7fce8c02b940 <col:28, col:30> 'struct a []' lvalue .h 0x7fce8c02b3b8
+                    |   `-DeclRefExpr 0x7fce8c02b918 <col:28> 'struct (anonymous struct at c_files/pr84265.c:12:1)':'struct (anonymous at c_files/pr84265.c:12:1)' lvalue Var 0x7fce8c02b450 'i' 'struct (anonymous struct at c_files/pr84265.c:12:1)':'struct (anonymous at c_files/pr84265.c:12:1)'
+                    `-ImplicitCastExpr 0x7fce8c02b9b8 <col:32> 'int' <LValueToRValue>
+                      `-DeclRefExpr 0x7fce8c02b978 <col:32> 'int' lvalue Var 0x7fce8c02b598 'k' 'int'

@@ -1,0 +1,64 @@
+c_files/pr9001184797.c:10:9: warning: expected ';' at end of declaration list
+  long d
+        ^
+        ;
+c_files/pr9001184797.c:13:19: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+  static __thread g;
+  ~~~~~~~~~~~~~~~ ^
+c_files/pr9001184797.c:15:3: warning: implicit declaration of function 'h' is invalid in C99 [-Wimplicit-function-declaration]
+  h();
+  ^
+c_files/pr9001184797.c:19:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+4 warnings generated.
+TranslationUnitDecl 0x7fd13a8264d0 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd13a826a20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd13a826740 '__int128'
+|-TypedefDecl 0x7fd13a826a90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd13a826760 'unsigned __int128'
+|-TypedefDecl 0x7fd13a826d68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd13a826b70 'struct __NSConstantString_tag'
+|   `-Record 0x7fd13a826ae8 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd13a826e00 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd13a826dc0 'char *'
+|   `-BuiltinType 0x7fd13a826560 'char'
+|-TypedefDecl 0x7fd13a8270c8 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd13a827070 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd13a826ee0 'struct __va_list_tag'
+|     `-Record 0x7fd13a826e58 '__va_list_tag'
+|-RecordDecl 0x7fd13a827120 <c_files/pr9001184797.c:7:1, col:8> col:8 struct a
+|-VarDecl 0x7fd13b025a20 <col:1, col:10> col:10 used b 'struct a':'struct a'
+|-RecordDecl 0x7fd13b025ad8 prev 0x7fd13a827120 <line:8:1, line:11:1> line:8:8 struct a definition
+| |-FieldDecl 0x7fd13b025b78 <line:9:3, col:8> col:8 referenced c 'long'
+| `-FieldDecl 0x7fd13b025bd8 <line:10:3, col:8> col:8 d 'long'
+|-FunctionDecl 0x7fd13b025ca8 <line:8:1, line:19:1> line:11:3 e 'struct a ()'
+| `-CompoundStmt 0x7fd13b026270 <col:7, line:19:1>
+|   |-DeclStmt 0x7fd13b025dc0 <line:12:3, col:29>
+|   | `-VarDecl 0x7fd13b025d60 <col:3, col:28> col:28 used f 'struct a':'struct a' static tls
+|   |-DeclStmt 0x7fd13b025e50 <line:13:3, col:20>
+|   | `-VarDecl 0x7fd13b025df0 <col:3, col:19> col:19 used g 'int' static tls
+|   |-BinaryOperator 0x7fd13b025eb0 <line:14:3, col:7> 'int' '='
+|   | |-DeclRefExpr 0x7fd13b025e68 <col:3> 'int' lvalue Var 0x7fd13b025df0 'g' 'int'
+|   | `-IntegerLiteral 0x7fd13b025e90 <col:7> 'int' 5
+|   |-CallExpr 0x7fd13b026030 <line:15:3, col:5> 'int'
+|   | `-ImplicitCastExpr 0x7fd13b026018 <col:3> 'int (*)()' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7fd13b025fc8 <col:3> 'int ()' Function 0x7fd13b025f30 'h' 'int ()'
+|   |-IfStmt 0x7fd13b0261a8 <line:16:3, line:17:13>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7fd13b0260b8 <line:16:7, col:9> 'long' <LValueToRValue>
+|   | | `-MemberExpr 0x7fd13b026080 <col:7, col:9> 'long' lvalue .c 0x7fd13b025b78
+|   | |   `-DeclRefExpr 0x7fd13b026058 <col:7> 'struct a':'struct a' lvalue Var 0x7fd13b025d60 'f' 'struct a':'struct a'
+|   | |-BinaryOperator 0x7fd13b026180 <line:17:5, col:13> 'int' '='
+|   | | |-DeclRefExpr 0x7fd13b0260d0 <col:5> 'int' lvalue Var 0x7fd13b025df0 'g' 'int'
+|   | | `-BinaryOperator 0x7fd13b026158 <col:9, col:13> 'int' '&'
+|   | |   |-ImplicitCastExpr 0x7fd13b026140 <col:9> 'int' <LValueToRValue>
+|   | |   | `-DeclRefExpr 0x7fd13b0260f8 <col:9> 'int' lvalue Var 0x7fd13b025df0 'g' 'int'
+|   | |   `-IntegerLiteral 0x7fd13b026120 <col:13> 'int' 5
+|   | `-<<<NULL>>>
+|   `-BinaryOperator 0x7fd13b026248 <line:18:3, col:7> 'struct a':'struct a' '='
+|     |-DeclRefExpr 0x7fd13b0261e0 <col:3> 'struct a':'struct a' lvalue Var 0x7fd13b025d60 'f' 'struct a':'struct a'
+|     `-ImplicitCastExpr 0x7fd13b026230 <col:7> 'struct a':'struct a' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd13b026208 <col:7> 'struct a':'struct a' lvalue Var 0x7fd13b025a20 'b' 'struct a':'struct a'
+`-FunctionDecl 0x7fd13b025f30 <<invalid sloc>> line:15:3 implicit used h 'int ()'

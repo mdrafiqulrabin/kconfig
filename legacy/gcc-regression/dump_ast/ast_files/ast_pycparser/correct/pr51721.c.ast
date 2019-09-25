@@ -1,0 +1,120 @@
+FileAST: 
+  Decl: a, [], ['static'], []
+    ArrayDecl: []
+      TypeDecl: a, []
+        IdentifierType: ['int']
+      Constant: int, 10
+  Decl: b, [], ['static'], []
+    ArrayDecl: []
+      TypeDecl: b, []
+        IdentifierType: ['int']
+      Constant: int, 10
+  Decl: c, [], ['static'], []
+    ArrayDecl: []
+      TypeDecl: c, []
+        IdentifierType: ['int']
+      Constant: int, 10
+  Decl: d, [], ['static'], []
+    ArrayDecl: []
+      TypeDecl: d, []
+        IdentifierType: ['int']
+      Constant: int, 10
+  FuncDef: 
+    Decl: f, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: v, [], [], []
+            TypeDecl: v, []
+              IdentifierType: ['unsigned', 'int']
+        TypeDecl: f, []
+          IdentifierType: ['unsigned', 'int']
+    Compound: 
+      Return: 
+        TernaryOp: 
+          BinaryOp: ==
+            ID: v
+            Constant: int, 17
+          Constant: int, 11
+          ID: v
+  FuncDef: 
+    Decl: g, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: v, [], [], []
+            TypeDecl: v, []
+              IdentifierType: ['unsigned', 'int']
+        TypeDecl: g, []
+          IdentifierType: ['unsigned', 'int']
+    Compound: 
+      Return: 
+        TernaryOp: 
+          BinaryOp: ==
+            ID: v
+            Constant: int, 17
+          Constant: int, 17
+          ID: v
+  FuncDef: 
+    Decl: t, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: s, [], [], []
+            TypeDecl: s, []
+              IdentifierType: ['unsigned', 'int']
+        TypeDecl: t, []
+          IdentifierType: ['void']
+    Compound: 
+      If: 
+        BinaryOp: ==
+          BinaryOp: >>
+            ID: s
+            Constant: int, 1
+          Constant: int, 0
+        Compound: 
+          Assignment: =
+            ArrayRef: 
+              ID: a
+              FuncCall: 
+                ID: f
+                ExprList: 
+                  ID: s
+            Constant: int, 0
+          Assignment: =
+            ArrayRef: 
+              ID: a
+              FuncCall: 
+                ID: f
+                ExprList: 
+                  ID: s
+            Constant: int, 0
+          Assignment: =
+            ArrayRef: 
+              ID: b
+              FuncCall: 
+                ID: f
+                ExprList: 
+                  ID: s
+            Constant: int, 0
+          Assignment: =
+            ArrayRef: 
+              ID: c
+              FuncCall: 
+                ID: g
+                ExprList: 
+                  ID: s
+            Constant: int, 0
+          Assignment: =
+            ArrayRef: 
+              ID: c
+              FuncCall: 
+                ID: g
+                ExprList: 
+                  ID: s
+            Constant: int, 0
+          Assignment: =
+            ArrayRef: 
+              ID: d
+              FuncCall: 
+                ID: f
+                ExprList: 
+                  ID: s
+            Constant: int, 0

@@ -1,0 +1,99 @@
+FileAST: 
+  Typedef: u128, [], ['typedef']
+    TypeDecl: u128, []
+      IdentifierType: ['unsigned', '__int128']
+  Decl: a, [], [], []
+    TypeDecl: a, []
+      IdentifierType: ['int']
+  Decl: c, [], [], []
+    TypeDecl: c, []
+      IdentifierType: ['int']
+  Decl: d, [], [], []
+    TypeDecl: d, []
+      IdentifierType: ['int']
+  Decl: b, [], [], []
+    TypeDecl: b, []
+      IdentifierType: ['u128']
+  Decl: g0, [], [], []
+    TypeDecl: g0, []
+      IdentifierType: ['unsigned', 'long', 'long']
+  Decl: g1, [], [], []
+    TypeDecl: g1, []
+      IdentifierType: ['unsigned', 'long', 'long']
+  FuncDef: 
+    Decl: store, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: a0, [], [], []
+            TypeDecl: a0, []
+              IdentifierType: ['unsigned', 'long', 'long']
+          Decl: a1, [], [], []
+            TypeDecl: a1, []
+              IdentifierType: ['unsigned', 'long', 'long']
+        TypeDecl: store, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        ID: g0
+        ID: a0
+      Assignment: =
+        ID: g1
+        ID: a1
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: +=
+        ID: b
+        ID: a
+      Assignment: =
+        ID: c
+        BinaryOp: !=
+          ID: d
+          Constant: int, 84347
+      Assignment: /=
+        ID: b
+        ID: c
+      Decl: x, [], [], []
+        TypeDecl: x, []
+          IdentifierType: ['u128']
+        ID: b
+      FuncCall: 
+        ID: store
+        ExprList: 
+          BinaryOp: >>
+            ID: x
+            Constant: int, 0
+          BinaryOp: >>
+            ID: x
+            Constant: int, 64
+  FuncDef: 
+    Decl: main, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Typename: None, []
+            TypeDecl: None, []
+              IdentifierType: ['void']
+        TypeDecl: main, []
+          IdentifierType: ['int']
+    Compound: 
+      FuncCall: 
+        ID: foo
+      If: 
+        BinaryOp: ||
+          BinaryOp: !=
+            ID: g0
+            Constant: int, 0
+          BinaryOp: !=
+            ID: g1
+            Constant: int, 0
+        FuncCall: 
+          ID: __builtin_abort
+      Return: 
+        Constant: int, 0

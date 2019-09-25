@@ -1,6 +1,0 @@
-pr69819.c:5:5: error: ‘foo’ redeclared as different kind of symbol
- int foo[] = { 0 };  
-     ^
-pr69819.c:4:6: note: previous definition of ‘foo’ was here
- void foo () { }
-      ^

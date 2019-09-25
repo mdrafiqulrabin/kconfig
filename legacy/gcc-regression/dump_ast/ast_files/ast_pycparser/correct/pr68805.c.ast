@@ -1,0 +1,32 @@
+FileAST: 
+  Typedef: TYPE, [], ['typedef']
+    TypeDecl: TYPE, []
+      Struct: bar
+        Decl: a, [], [], []
+          PtrDecl: []
+            TypeDecl: a, []
+              IdentifierType: ['void']
+        Decl: b, [], [], []
+          PtrDecl: []
+            TypeDecl: b, []
+              IdentifierType: ['void']
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: p, [], [], []
+            PtrDecl: []
+              TypeDecl: p, []
+                IdentifierType: ['TYPE']
+          Decl: q, [], [], []
+            PtrDecl: []
+              TypeDecl: q, []
+                IdentifierType: ['TYPE']
+        TypeDecl: foo, []
+          IdentifierType: ['void']
+    Compound: 
+      Assignment: =
+        UnaryOp: *
+          ID: p
+        UnaryOp: *
+          ID: q

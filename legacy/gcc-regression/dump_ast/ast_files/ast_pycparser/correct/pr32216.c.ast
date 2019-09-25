@@ -1,0 +1,37 @@
+FileAST: 
+  Decl: wlookup2, [], [], []
+    ArrayDecl: []
+      TypeDecl: wlookup2, []
+        IdentifierType: ['unsigned', 'int']
+      Constant: int, 203
+  FuncDef: 
+    Decl: SetSoundVariables, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: x, [], [], []
+            TypeDecl: x, []
+              IdentifierType: ['int']
+        TypeDecl: SetSoundVariables, []
+          IdentifierType: ['void']
+    Compound: 
+      For: 
+        Assignment: =
+          ID: x
+          Constant: int, 1
+        BinaryOp: <
+          ID: x
+          Constant: int, 32
+        UnaryOp: p++
+          ID: x
+        Compound: 
+          Assignment: =
+            ArrayRef: 
+              ID: wlookup2
+              ID: x
+            BinaryOp: /
+              Cast: 
+                Typename: None, []
+                  TypeDecl: None, []
+                    IdentifierType: ['double']
+                Constant: int, 16
+              ID: x

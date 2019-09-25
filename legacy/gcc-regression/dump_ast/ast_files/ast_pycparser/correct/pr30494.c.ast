@@ -1,0 +1,101 @@
+FileAST: 
+  FuncDef: 
+    Decl: foo, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: n, [], [], []
+            TypeDecl: n, []
+              IdentifierType: ['int']
+        TypeDecl: foo, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Pragma: omp for
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 6
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          Decl: v, [], [], []
+            ArrayDecl: []
+              TypeDecl: v, []
+                IdentifierType: ['int']
+              ID: n
+          Decl: w, [], [], []
+            ArrayDecl: []
+              TypeDecl: w, []
+                IdentifierType: ['int']
+              BinaryOp: +
+                BinaryOp: *
+                  ID: n
+                  Constant: int, 3
+                ID: i
+          Assignment: =
+            ArrayRef: 
+              ID: v
+              Constant: int, 0
+            Constant: int, 1
+          Assignment: =
+            ArrayRef: 
+              ID: w
+              Constant: int, 0
+            Constant: int, 2
+      Return: 
+        Constant: int, 0
+  FuncDef: 
+    Decl: bar, [], [], []
+      FuncDecl: 
+        ParamList: 
+          Decl: n, [], [], []
+            TypeDecl: n, []
+              IdentifierType: ['int']
+        TypeDecl: bar, []
+          IdentifierType: ['int']
+    Compound: 
+      Decl: i, [], [], []
+        TypeDecl: i, []
+          IdentifierType: ['int']
+      Pragma: parallel omp for
+      For: 
+        Assignment: =
+          ID: i
+          Constant: int, 0
+        BinaryOp: <
+          ID: i
+          Constant: int, 6
+        UnaryOp: p++
+          ID: i
+        Compound: 
+          Decl: v, [], [], []
+            ArrayDecl: []
+              TypeDecl: v, []
+                IdentifierType: ['int']
+              ID: n
+          Decl: w, [], [], []
+            ArrayDecl: []
+              TypeDecl: w, []
+                IdentifierType: ['int']
+              BinaryOp: +
+                BinaryOp: *
+                  ID: n
+                  Constant: int, 3
+                ID: i
+          Assignment: =
+            ArrayRef: 
+              ID: v
+              Constant: int, 0
+            Constant: int, 1
+          Assignment: =
+            ArrayRef: 
+              ID: w
+              Constant: int, 0
+            Constant: int, 2
+      Return: 
+        Constant: int, 0
