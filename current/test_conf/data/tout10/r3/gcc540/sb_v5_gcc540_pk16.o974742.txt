@@ -1,0 +1,2 @@
+/var/spool/slurm/slurmd/job974742/slurm_script: line 26: 13460 Floating point exceptiontimeout $tout ./$out2 > "$out2.txt" 2> /dev/null
+pk16(r3)&9915&0&0&0&0&6&1&1399&1406&37  \\
