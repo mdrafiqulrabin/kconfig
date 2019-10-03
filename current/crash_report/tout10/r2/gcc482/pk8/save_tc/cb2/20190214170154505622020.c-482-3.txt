@@ -1,0 +1,22 @@
+20190214170154505622020.c: In function ‘main’:
+20190214170154505622020.c:513:1: error: unrecognizable insn:
+ }
+ ^
+(insn 153 152 154 15 (set (reg:QI 358)
+        (const_int 184 [0xb8])) 20190214170154505622020.c:437 -1
+     (nil))
+20190214170154505622020.c:513:1: internal compiler error: in extract_insn, at recog.c:2154
+0xc05df8 _fatal_insn(char const*, rtx_def const*, char const*, int, char const*)
+	../../gcc/rtl-error.c:109
+0xc05e4b _fatal_insn_not_found(rtx_def const*, char const*, int, char const*)
+	../../gcc/rtl-error.c:117
+0xb8b99a extract_insn(rtx_def*)
+	../../gcc/recog.c:2154
+0x8fec83 instantiate_virtual_regs_in_insn
+	../../gcc/function.c:1561
+0x90088c instantiate_virtual_regs
+	../../gcc/function.c:1928
+Please submit a full bug report,
+with preprocessed source if appropriate.
+Please include the complete backtrace with any bug report.
+See <http://gcc.gnu.org/bugs.html> for instructions.

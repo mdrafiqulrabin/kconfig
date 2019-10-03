@@ -1,0 +1,22 @@
+20190214155925764824481.c: In function ‘func_31’:
+20190214155925764824481.c:53:1: error: unrecognizable insn:
+ }
+ ^
+(insn 80 79 81 7 (set (reg:QI 122)
+        (const_int 255 [0xff])) 20190214155925764824481.c:51 -1
+     (nil))
+20190214155925764824481.c:53:1: internal compiler error: in extract_insn, at recog.c:2154
+0xc05df8 _fatal_insn(char const*, rtx_def const*, char const*, int, char const*)
+	../../gcc/rtl-error.c:109
+0xc05e4b _fatal_insn_not_found(rtx_def const*, char const*, int, char const*)
+	../../gcc/rtl-error.c:117
+0xb8b99a extract_insn(rtx_def*)
+	../../gcc/recog.c:2154
+0x8fec83 instantiate_virtual_regs_in_insn
+	../../gcc/function.c:1561
+0x90088c instantiate_virtual_regs
+	../../gcc/function.c:1928
+Please submit a full bug report,
+with preprocessed source if appropriate.
+Please include the complete backtrace with any bug report.
+See <http://gcc.gnu.org/bugs.html> for instructions.
