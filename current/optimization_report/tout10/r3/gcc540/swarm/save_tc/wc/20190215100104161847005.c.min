@@ -1,0 +1,8 @@
+#include "csmith.h"
+a, b;
+main() {
+  crc32_gentab();
+  a = safe_div_func_float_f_f;
+  transparent_crc(a, "", b);
+  platform_main_end(crc32_context, b);
+}

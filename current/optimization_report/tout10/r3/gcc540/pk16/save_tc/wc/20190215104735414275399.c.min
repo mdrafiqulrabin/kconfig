@@ -1,0 +1,10 @@
+#include "csmith.h"
+a, b;
+main() {
+  int32_t c;
+  int32_t *d = &b;
+  *d = c;
+  uint32_t *e = &a;
+  *e = d;
+  printf(a);
+}

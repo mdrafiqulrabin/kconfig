@@ -1,0 +1,7 @@
+#include "csmith.h"
+main() {
+  int a;
+  int32_t b;
+  uint32_t c = b;
+  transparent_crc(0, "", a);
+}

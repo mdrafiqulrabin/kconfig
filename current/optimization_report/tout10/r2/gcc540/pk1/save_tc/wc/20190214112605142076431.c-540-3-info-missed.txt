@@ -1,0 +1,99 @@
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:73:25: note: not consecutive access _10 = crc32_tab[_9];
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:73:25: note: not consecutive access _15 = crc32_tab[_14];
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:73:25: note: not consecutive access _20 = crc32_tab[_19];
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:73:25: note: not consecutive access _26 = crc32_tab[_25];
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:73:25: note: not consecutive access crc32_context.157_22 = crc32_context;
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:73:25: note: not consecutive access crc32_context = crc32_context.158_11;
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:73:25: note: Failed to SLP the basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:73:25: note: not vectorized: failed to find SLP opportunities in basic block.
+20190214112605142076431.c:417:5: note: not vectorized: control flow in loop.
+20190214112605142076431.c:417:5: note: bad loop form.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57:2: note: misalign = 0 bytes of ref crc32_tab[i_181]
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57:2: note: virtual phi. skip.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57:2: note: no optab.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57:2: note: not ssa-name.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57:2: note: use not simple.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57:2: note: not ssa-name.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57:2: note: use not simple.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57:2: note: not ssa-name.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57:2: note: use not simple.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57:2: note: not ssa-name.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57:2: note: use not simple.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57:2: note: not ssa-name.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57:2: note: use not simple.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57:2: note: not ssa-name.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57:2: note: use not simple.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57:2: note: not ssa-name.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57:2: note: use not simple.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57:2: note: not ssa-name.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57:2: note: use not simple.
+20190214112605142076431.c:498:5: note: not vectorized: not enough data-refs in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:58:7: note: not vectorized: no vectype for stmt: MEM[(unsigned int *)vectp_crc32_tab.280_223] = vect_crc_277.278_221;
+ scalar_type: vector(4) unsigned int
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:58:7: note: not vectorized: not enough data-refs in basic block.
+20190214112605142076431.c:498:5: note: not vectorized: not enough data-refs in basic block.
+20190214112605142076431.c:416:16: note: not consecutive access g_70.117_119 = g_70;
+
+20190214112605142076431.c:416:16: note: not consecutive access _121 = g_92;
+
+20190214112605142076431.c:416:16: note: not consecutive access g_92 = _122;
+
+20190214112605142076431.c:416:16: note: not consecutive access g_93.125_126 = g_93;
+
+20190214112605142076431.c:416:16: note: not consecutive access g_93 = g_93.126_127;
+
+20190214112605142076431.c:416:16: note: not consecutive access g_95 = _129;
+
+20190214112605142076431.c:416:16: note: Failed to SLP the basic block.
+20190214112605142076431.c:416:16: note: not vectorized: failed to find SLP opportunities in basic block.
+20190214112605142076431.c:423:31: note: not vectorized: not enough data-refs in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:309:22: note: not vectorized: not enough data-refs in basic block.
+20190214112605142076431.c:230:209: note: not consecutive access g_70 = -9;
+
+20190214112605142076431.c:230:209: note: not consecutive access g_70 = 0;
+
+20190214112605142076431.c:230:209: note: not consecutive access g_92 = g_93.126_127;
+
+20190214112605142076431.c:230:209: note: not consecutive access g_95 = g_95_lsm.207_145;
+
+20190214112605142076431.c:230:209: note: not consecutive access g_95 = 0;
+
+20190214112605142076431.c:230:209: note: not consecutive access g_98 = pretmp_218;
+
+20190214112605142076431.c:230:209: note: not consecutive access g_119 = pretmp_217;
+
+20190214112605142076431.c:230:209: note: not consecutive access g_119 = _116;
+
+20190214112605142076431.c:230:209: note: not consecutive access g_120 = pretmp_155;
+
+20190214112605142076431.c:230:209: note: not consecutive access g_120 = _103;
+
+20190214112605142076431.c:230:209: note: not consecutive access g_231.45_85 = g_231;
+
+20190214112605142076431.c:230:209: note: not consecutive access g_231 = g_231.47_88;
+
+20190214112605142076431.c:230:209: note: not consecutive access _89 = g_401;
+
+20190214112605142076431.c:230:209: note: not consecutive access g_401 = _90;
+
+20190214112605142076431.c:230:209: note: not consecutive access _98 = g_404;
+
+20190214112605142076431.c:230:209: note: not consecutive access g_404 = _99;
+
+20190214112605142076431.c:230:209: note: Failed to SLP the basic block.
+20190214112605142076431.c:230:209: note: not vectorized: failed to find SLP opportunities in basic block.
+20190214112605142076431.c:180:14: note: not consecutive access g_576.42_104 = g_576;
+
+20190214112605142076431.c:180:14: note: not consecutive access g_576 = g_576.43_105;
+
+20190214112605142076431.c:180:14: note: Failed to SLP the basic block.
+20190214112605142076431.c:180:14: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:90:2: note: not vectorized: not enough data-refs in basic block.
+20190214112605142076431.c:423:358: note: not vectorized: not enough data-refs in basic block.
+20190214112605142076431.c:498:5: note: not vectorized: not enough data-refs in basic block.

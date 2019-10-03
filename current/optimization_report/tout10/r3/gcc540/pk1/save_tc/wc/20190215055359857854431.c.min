@@ -1,0 +1,9 @@
+#include "csmith.h"
+struct {
+  int32_t a
+} b;
+main() {
+  int32_t *c = &b;
+  *c = safe_rshift_func_uint16_t_u_s;
+  printf(b.a);
+}

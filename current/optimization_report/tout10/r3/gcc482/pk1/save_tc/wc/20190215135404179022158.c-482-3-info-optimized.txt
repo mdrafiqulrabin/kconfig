@@ -1,0 +1,67 @@
+
+20190215135404179022158.c:1183: note: Completely unroll loop 2 times
+
+Analyzing loop at 20190215135404179022158.c:1257
+
+Analyzing loop at 20190215135404179022158.c:1267
+
+20190215135404179022158.c:1071: note: vectorized 0 loops in function.
+
+20190215135404179022158.c:1262: note: Completely unroll loop 2 times
+
+20190215135404179022158.c:1257: note: Completely unroll loop 2 times
+
+20190215135404179022158.c:1273: note: vect_recog_bool_pattern: detected: 
+20190215135404179022158.c:1273: note: pattern recognized: patt_68 = patt_212;
+
+20190215135404179022158.c:1273: note: additional pattern stmt: patt_212 = g_3.473_238 != 0 ? 1 : 0;
+
+20190215135404179022158.c:1478: note: Completely unroll loop 1 times
+
+20190215135404179022158.c:148: note: Completely unroll loop 1 times
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:59: note: Completely unroll loop 8 times
+
+Analyzing loop at 20190215135404179022158.c:1499
+
+Analyzing loop at 20190215135404179022158.c:1501
+
+Analyzing loop at 20190215135404179022158.c:1487
+
+Analyzing loop at 20190215135404179022158.c:1489
+
+Analyzing loop at 20190215135404179022158.c:1480
+
+Analyzing loop at 20190215135404179022158.c:1470
+
+Analyzing loop at 20190215135404179022158.c:1464
+
+Analyzing loop at 20190215135404179022158.c:1456
+
+Analyzing loop at 20190215135404179022158.c:1433
+
+Analyzing loop at 20190215135404179022158.c:323
+
+Analyzing loop at 20190215135404179022158.c:327
+
+Analyzing loop at 20190215135404179022158.c:329
+
+Analyzing loop at /project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57
+
+
+Vectorizing loop at /project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: LOOP VECTORIZED.
+20190215135404179022158.c:1423: note: vectorized 1 loops in function.
+
+20190215135404179022158.c:1480: note: Completely unroll loop 4 times
+
+20190215135404179022158.c:1433: note: Completely unroll loop 1 times
+
+20190215135404179022158.c:329: note: Completely unroll loop 8 times
+
+20190215135404179022158.c:327: note: Completely unroll loop 4 times
+
+20190215135404179022158.c:323: note: Completely unroll loop 1 times
+
+20190215135404179022158.c:1491: note: created pattern stmt: patt_331 = _111 >> 8;

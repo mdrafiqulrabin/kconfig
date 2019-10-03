@@ -1,0 +1,58 @@
+
+20190212201304365230671.c:115: note: Completely unroll loop 1 times
+
+20190212201304365230671.c:113: note: Completely unroll loop 2 times
+
+20190212201304365230671.c:111: note: Completely unroll loop 1 times
+
+Analyzing loop at 20190212201304365230671.c:687
+
+Analyzing loop at 20190212201304365230671.c:638
+
+Analyzing loop at 20190212201304365230671.c:656
+
+Analyzing loop at 20190212201304365230671.c:648
+
+Analyzing loop at 20190212201304365230671.c:644
+
+Analyzing loop at 20190212201304365230671.c:613
+
+Analyzing loop at 20190212201304365230671.c:120
+
+20190212201304365230671.c:89: note: vectorized 0 loops in function.
+
+20190212201304365230671.c:687: note: Completely unroll loop 4 times
+
+20190212201304365230671.c:648: note: Completely unroll loop 5 times
+
+20190212201304365230671.c:644: note: Completely unroll loop 5 times
+
+20190212201304365230671.c:613: note: Completely unroll loop 5 times
+
+20190212201304365230671.c:702: note: vect_recog_bool_pattern: detected: 
+20190212201304365230671.c:702: note: pattern recognized: patt_27 = (int) patt_268;
+
+20190212201304365230671.c:702: note: additional pattern stmt: patt_268 = _197 == 0 ? 1 : 0;
+
+20190212201304365230671.c:711: note: vect_recog_bool_pattern: detected: 
+20190212201304365230671.c:711: note: pattern recognized: patt_35 = (int) patt_32;
+
+20190212201304365230671.c:711: note: additional pattern stmt: patt_32 = _211 >= -914944404 ? 1 : 0;
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:59: note: Completely unroll loop 8 times
+
+Analyzing loop at 20190212201304365230671.c:745
+
+Analyzing loop at 20190212201304365230671.c:747
+
+Analyzing loop at 20190212201304365230671.c:749
+
+Analyzing loop at /project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57
+
+
+Vectorizing loop at /project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: LOOP VECTORIZED.
+20190212201304365230671.c:738: note: vectorized 1 loops in function.
+
+20190212201304365230671.c:749: note: Completely unroll loop 4 times

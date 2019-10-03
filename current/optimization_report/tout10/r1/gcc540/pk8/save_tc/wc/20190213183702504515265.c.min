@@ -1,0 +1,2 @@
+#include "csmith.h"
+main() { printf(safe_mod_func_uint32_t_u_u); }

@@ -1,0 +1,46 @@
+
+Analyzing loop at 20190212061148246632850.c:486
+
+20190212061148246632850.c:283: note: vectorized 0 loops in function.
+
+20190212061148246632850.c:322: note: vect_recog_bool_pattern: detected: 
+20190212061148246632850.c:322: note: pattern recognized: patt_281 = patt_415;
+
+20190212061148246632850.c:322: note: additional pattern stmt: patt_415 = g_46.95_78 > 4294939626 ? 1 : 0;
+
+20190212061148246632850.c:322: note: vect_recog_bool_pattern: detected: 
+20190212061148246632850.c:322: note: pattern recognized: patt_276 = (unsigned int) patt_275;
+
+20190212061148246632850.c:322: note: additional pattern stmt: patt_275 = _83 != 0 ? 1 : 0;
+
+20190212061148246632850.c:289: note: vect_recog_bool_pattern: detected: 
+20190212061148246632850.c:289: note: pattern recognized: patt_392 = (int) patt_277;
+
+20190212061148246632850.c:289: note: additional pattern stmt: patt_277 = _3 != 0 ? 1 : 0;
+
+20190212061148246632850.c:336: note: vect_recog_bool_pattern: detected: 
+20190212061148246632850.c:336: note: pattern recognized: patt_306 = (int) patt_323;
+
+20190212061148246632850.c:336: note: additional pattern stmt: patt_323 = g_398.152_272 != 0 ? 1 : 0;
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:59: note: Completely unroll loop 8 times
+
+Analyzing loop at 20190212061148246632850.c:264
+
+Analyzing loop at /project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57
+
+
+Vectorizing loop at /project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: LOOP VECTORIZED.
+20190212061148246632850.c:639: note: vectorized 1 loops in function.
+
+20190212061148246632850.c:103: note: vect_recog_bool_pattern: detected: 
+20190212061148246632850.c:103: note: pattern recognized: patt_333 = (int) patt_317;
+
+20190212061148246632850.c:103: note: additional pattern stmt: patt_317 = g_367.252_304 < iftmp.257_305 ? 1 : 0;
+
+20190212061148246632850.c:103: note: vect_recog_bool_pattern: detected: 
+20190212061148246632850.c:103: note: pattern recognized: patt_563 = (int) patt_581;
+
+20190212061148246632850.c:103: note: additional pattern stmt: patt_581 = iftmp.207_315 <= g_335.260_316 ? 1 : 0;

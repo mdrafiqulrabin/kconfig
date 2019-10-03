@@ -1,0 +1,46 @@
+
+Analyzing loop at 20190213025918986487264.c:575
+
+20190213025918986487264.c:569: note: vectorized 0 loops in function.
+
+20190213025918986487264.c:575: note: Completely unroll loop 3 times
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:59: note: Completely unroll loop 8 times
+
+Analyzing loop at 20190213025918986487264.c:180
+
+Analyzing loop at 20190213025918986487264.c:509
+
+Analyzing loop at 20190213025918986487264.c:600
+
+Analyzing loop at /project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57
+
+
+Vectorizing loop at /project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: LOOP VECTORIZED.
+20190213025918986487264.c:654: note: vectorized 1 loops in function.
+
+20190213025918986487264.c:509: note: Completely unroll loop 4 times
+
+20190213025918986487264.c:600: note: Completely unroll loop 2 times
+
+20190213025918986487264.c:477: note: vect_recog_bool_pattern: detected: 
+20190213025918986487264.c:477: note: pattern recognized: patt_116 = (short unsigned int) patt_409;
+
+20190213025918986487264.c:477: note: additional pattern stmt: patt_409 = g_145.149_383 >= iftmp.173_384 ? 1 : 0;
+
+20190213025918986487264.c:477: note: vect_recog_bool_pattern: detected: 
+20190213025918986487264.c:477: note: pattern recognized: patt_437 = (int) patt_565;
+
+20190213025918986487264.c:477: note: additional pattern stmt: patt_565 = l_201.168_430 == 0 ? 1 : 0;
+
+20190213025918986487264.c:282: note: vect_recog_bool_pattern: detected: 
+20190213025918986487264.c:282: note: pattern recognized: patt_760 = (int) patt_762;
+
+20190213025918986487264.c:282: note: additional pattern stmt: patt_762 = _208 > 1 ? 1 : 0;
+
+20190213025918986487264.c:91: note: vect_recog_bool_pattern: detected: 
+20190213025918986487264.c:91: note: pattern recognized: patt_753 = (int) patt_756;
+
+20190213025918986487264.c:91: note: additional pattern stmt: patt_756 = g_145.34_110 == 0 ? 1 : 0;

@@ -1,0 +1,46 @@
+
+20190212053556143400483.c:353: note: vect_recog_bool_pattern: detected: 
+20190212053556143400483.c:353: note: pattern recognized: patt_293 = (int) patt_295;
+
+20190212053556143400483.c:353: note: additional pattern stmt: patt_295 = _21 == _23 ? 1 : 0;
+
+20190212053556143400483.c:353: note: vect_recog_bool_pattern: detected: 
+20190212053556143400483.c:353: note: pattern recognized: patt_255 = (int) patt_283;
+
+20190212053556143400483.c:353: note: additional pattern stmt: patt_283 = _25 > _27 ? 1 : 0;
+
+20190212053556143400483.c:489: note: vect_recog_bool_pattern: detected: 
+20190212053556143400483.c:489: note: pattern recognized: patt_217 = (int) patt_247;
+
+20190212053556143400483.c:489: note: additional pattern stmt: patt_247 = _104 != g_163.108_105 ? 1 : 0;
+
+Analyzing loop at /project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:124
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:121: note: vectorized 0 loops in function.
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:124: note: Completely unroll loop 3 times
+
+Analyzing loop at 20190212053556143400483.c:332
+
+20190212053556143400483.c:325: note: vectorized 0 loops in function.
+
+20190212053556143400483.c:332: note: Completely unroll loop 5 times
+
+Analyzing loop at 20190212053556143400483.c:174
+
+20190212053556143400483.c:162: note: vectorized 0 loops in function.
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:59: note: Completely unroll loop 8 times
+
+Analyzing loop at /project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57
+
+
+Vectorizing loop at /project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: LOOP VECTORIZED.
+20190212053556143400483.c:505: note: vectorized 1 loops in function.
+
+20190212053556143400483.c:90: note: vect_recog_bool_pattern: detected: 
+20190212053556143400483.c:90: note: pattern recognized: patt_429 = (int) patt_184;
+
+20190212053556143400483.c:90: note: additional pattern stmt: patt_184 = g_6.36_180 <= 49330 ? 1 : 0;

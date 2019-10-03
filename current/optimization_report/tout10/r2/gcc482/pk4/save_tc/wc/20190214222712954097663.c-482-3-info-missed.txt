@@ -1,0 +1,280 @@
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:73: note: misalign = 0 bytes of ref crc32_context
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:73: note: Unknown alignment for access: crc32_tab
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:73: note: Unknown alignment for access: crc32_tab
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:73: note: Unknown alignment for access: crc32_tab
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:73: note: Unknown alignment for access: crc32_tab
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:73: note: misalign = 0 bytes of ref crc32_context
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:73: note: not consecutive access crc32_context.471_12 = crc32_context;
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:73: note: not consecutive access _16 = crc32_tab[_15];
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:73: note: not consecutive access _21 = crc32_tab[_20];
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:73: note: not consecutive access _26 = crc32_tab[_25];
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:73: note: not consecutive access _31 = crc32_tab[_30];
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:73: note: not consecutive access crc32_context = crc32_context.472_32;
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:73: note: Failed to SLP the basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:73: note: not vectorized: failed to find SLP opportunities in basic block.
+
+20190214222712954097663.c:2149: note: misalign = 0 bytes of ref g_134
+20190214222712954097663.c:2149: note: misalign = 0 bytes of ref g_134
+20190214222712954097663.c:2149: note: misalign = 0 bytes of ref g_138
+20190214222712954097663.c:2149: note: misalign = 0 bytes of ref g_34
+20190214222712954097663.c:2149: note: not consecutive access _36 = g_134;
+
+20190214222712954097663.c:2149: note: not consecutive access g_134 = _37;
+
+20190214222712954097663.c:2149: note: not consecutive access g_138 = 0;
+
+20190214222712954097663.c:2149: note: not consecutive access g_34 = -91648835;
+
+20190214222712954097663.c:2149: note: Failed to SLP the basic block.
+20190214222712954097663.c:2149: note: not vectorized: failed to find SLP opportunities in basic block.
+
+20190214222712954097663.c:1001: note: can't determine dependence between g_1157 and *g_1157.368_3
+20190214222712954097663.c:1001: note: can't determine dependence between *g_1157.368_3 and g_34
+20190214222712954097663.c:1001: note: not vectorized: unhandled data dependence in basic block.
+
+Analyzing loop at /project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: misalign = 0 bytes of ref crc32_tab[i_790]
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: virtual phi. skip.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: no optab.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: not ssa-name.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: use not simple.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: not ssa-name.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: use not simple.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: not ssa-name.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: use not simple.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: not ssa-name.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: use not simple.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: not ssa-name.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: use not simple.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: not ssa-name.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: use not simple.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: not ssa-name.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: use not simple.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: not ssa-name.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: use not simple.
+
+Vectorizing loop at /project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57
+
+20190214222712954097663.c:2191: note: vectorized 1 loops in function.
+
+20190214222712954097663.c:2191: note: not vectorized: not enough data-refs in basic block.
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:58: note: not vectorized: no vectype for stmt: MEM[(uint32_t[256] *)vect_pcrc32_tab.592_1839] = vect_crc.590_1843;
+ scalar_type: vector(4) unsigned int
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:58: note: Failed to SLP the basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:58: note: not vectorized: failed to find SLP opportunities in basic block.
+
+20190214222712954097663.c:2191: note: not vectorized: not enough data-refs in basic block.
+
+20190214222712954097663.c:133: note: misalign = 0 bytes of ref g_6
+20190214222712954097663.c:133: note: not consecutive access g_6.72_220 = g_6;
+
+20190214222712954097663.c:133: note: Failed to SLP the basic block.
+20190214222712954097663.c:133: note: not vectorized: failed to find SLP opportunities in basic block.
+
+20190214222712954097663.c:133: note: misalign = 0 bytes of ref g_34
+20190214222712954097663.c:133: note: not consecutive access g_34 = _222;
+
+20190214222712954097663.c:133: note: Failed to SLP the basic block.
+20190214222712954097663.c:133: note: not vectorized: failed to find SLP opportunities in basic block.
+
+20190214222712954097663.c:201: note: misalign = 0 bytes of ref g_34
+20190214222712954097663.c:201: note: not consecutive access g_34 = -91648835;
+
+20190214222712954097663.c:201: note: Failed to SLP the basic block.
+20190214222712954097663.c:201: note: not vectorized: failed to find SLP opportunities in basic block.
+
+20190214222712954097663.c:217: note: misalign = 0 bytes of ref g_2131
+20190214222712954097663.c:217: note: misalign = 0 bytes of ref g_1686
+20190214222712954097663.c:217: note: misalign = 0 bytes of ref g_6
+20190214222712954097663.c:217: note: misalign = 0 bytes of ref l_800
+20190214222712954097663.c:217: note: misalign = 0 bytes of ref l_1103
+20190214222712954097663.c:217: note: misalign = 0 bytes of ref g_105
+20190214222712954097663.c:217: note: not consecutive access _250 = g_2131;
+
+20190214222712954097663.c:217: note: not consecutive access _270 = g_1686;
+
+20190214222712954097663.c:217: note: not consecutive access g_6 = 3431100961;
+
+20190214222712954097663.c:217: note: not consecutive access l_800 = 1326781056;
+
+20190214222712954097663.c:217: note: not consecutive access l_1103 = &l_800;
+
+20190214222712954097663.c:217: note: not consecutive access _286 = g_105;
+
+20190214222712954097663.c:217: note: Failed to SLP the basic block.
+20190214222712954097663.c:217: note: not vectorized: failed to find SLP opportunities in basic block.
+
+20190214222712954097663.c:1037: note: misalign = 0 bytes of ref g_395
+20190214222712954097663.c:1037: note: misalign = 0 bytes of ref g_664
+20190214222712954097663.c:1037: note: not consecutive access g_395 = 0;
+
+20190214222712954097663.c:1037: note: not consecutive access g_664 = &l_1577;
+
+20190214222712954097663.c:1037: note: Failed to SLP the basic block.
+20190214222712954097663.c:1037: note: not vectorized: failed to find SLP opportunities in basic block.
+
+20190214222712954097663.c:1309: note: misalign = 0 bytes of ref g_1202
+20190214222712954097663.c:1309: note: not consecutive access g_1202 = 64;
+
+20190214222712954097663.c:1309: note: Failed to SLP the basic block.
+20190214222712954097663.c:1309: note: not vectorized: failed to find SLP opportunities in basic block.
+
+20190214222712954097663.c:2191: note: misalign = 0 bytes of ref l_1577
+20190214222712954097663.c:2191: note: misalign = 0 bytes of ref g_1686
+20190214222712954097663.c:2191: note: misalign = 0 bytes of ref g_34
+20190214222712954097663.c:2191: note: not consecutive access l_1577 ={v} {CLOBBER};
+
+20190214222712954097663.c:2191: note: not consecutive access g_1686 = _270;
+
+20190214222712954097663.c:2191: note: not consecutive access g_34 = -91648835;
+
+20190214222712954097663.c:2191: note: Failed to SLP the basic block.
+20190214222712954097663.c:2191: note: not vectorized: failed to find SLP opportunities in basic block.
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:710: note: not vectorized: not enough data-refs in basic block.
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:713: note: misalign = 0 bytes of ref l_1759
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:713: note: misalign = 0 bytes of ref g_655
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:713: note: not consecutive access l_1759 = 5;
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:713: note: not consecutive access g_655 = &g_656;
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:713: note: Failed to SLP the basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:713: note: not vectorized: failed to find SLP opportunities in basic block.
+
+20190214222712954097663.c:2191: note: not vectorized: not enough data-refs in basic block.
+
+20190214222712954097663.c:382: note: misalign = 0 bytes of ref g_1137
+20190214222712954097663.c:382: note: misalign = 0 bytes of ref g_34
+20190214222712954097663.c:382: note: not consecutive access g_1137 = 4294967295;
+
+20190214222712954097663.c:382: note: not consecutive access l_1701_1165 = g_34;
+
+20190214222712954097663.c:382: note: Failed to SLP the basic block.
+20190214222712954097663.c:382: note: not vectorized: failed to find SLP opportunities in basic block.
+
+20190214222712954097663.c:382: note: misalign = 0 bytes of ref g_1686
+20190214222712954097663.c:382: note: not consecutive access g_1686 = 1;
+
+20190214222712954097663.c:382: note: Failed to SLP the basic block.
+20190214222712954097663.c:382: note: not vectorized: failed to find SLP opportunities in basic block.
+
+20190214222712954097663.c:382: note: not vectorized: not enough data-refs in basic block.
+
+20190214222712954097663.c:497: note: misalign = 0 bytes of ref g_1086
+20190214222712954097663.c:497: note: misalign = 0 bytes of ref g_1837
+20190214222712954097663.c:497: note: misalign = 0 bytes of ref g_1837
+20190214222712954097663.c:497: note: misalign = 0 bytes of ref g_105
+20190214222712954097663.c:497: note: not consecutive access g_1086 = 18446744073709551604;
+
+20190214222712954097663.c:497: note: not consecutive access g_1837.383_1172 = g_1837;
+
+20190214222712954097663.c:497: note: not consecutive access g_1837 = g_1837.384_1173;
+
+20190214222712954097663.c:497: note: not consecutive access g_105 = 54662;
+
+20190214222712954097663.c:497: note: Failed to SLP the basic block.
+20190214222712954097663.c:497: note: not vectorized: failed to find SLP opportunities in basic block.
+
+20190214222712954097663.c:619: note: misalign = 0 bytes of ref g_664
+20190214222712954097663.c:619: note: misalign = 0 bytes of ref l_1759
+20190214222712954097663.c:619: note: not consecutive access g_664 = &l_1759;
+
+20190214222712954097663.c:619: note: not consecutive access l_1759 = 0;
+
+20190214222712954097663.c:619: note: Failed to SLP the basic block.
+20190214222712954097663.c:619: note: not vectorized: failed to find SLP opportunities in basic block.
+
+20190214222712954097663.c:634: note: misalign = 0 bytes of ref g_1975
+20190214222712954097663.c:634: note: not consecutive access g_1975 = 12;
+
+20190214222712954097663.c:634: note: Failed to SLP the basic block.
+20190214222712954097663.c:634: note: not vectorized: failed to find SLP opportunities in basic block.
+
+20190214222712954097663.c:823: note: misalign = 0 bytes of ref g_1975
+20190214222712954097663.c:823: note: not consecutive access g_1975 = 11;
+
+20190214222712954097663.c:823: note: Failed to SLP the basic block.
+20190214222712954097663.c:823: note: not vectorized: failed to find SLP opportunities in basic block.
+
+20190214222712954097663.c:2191: note: misalign = 0 bytes of ref l_1759
+20190214222712954097663.c:2191: note: misalign = 0 bytes of ref g_34
+20190214222712954097663.c:2191: note: misalign = 0 bytes of ref g_664
+20190214222712954097663.c:2191: note: misalign = 0 bytes of ref l_2402
+20190214222712954097663.c:2191: note: misalign = 0 bytes of ref g_585
+20190214222712954097663.c:2191: note: not consecutive access l_1759 ={v} {CLOBBER};
+
+20190214222712954097663.c:2191: note: not consecutive access g_34 = -91648835;
+
+20190214222712954097663.c:2191: note: not consecutive access g_664 = &g_34;
+
+20190214222712954097663.c:2191: note: not consecutive access l_2402 = 0;
+
+20190214222712954097663.c:2191: note: not consecutive access g_585 = -13196;
+
+20190214222712954097663.c:2191: note: Failed to SLP the basic block.
+20190214222712954097663.c:2191: note: not vectorized: failed to find SLP opportunities in basic block.
+
+20190214222712954097663.c:248: note: not consecutive access _1375 = *_250;
+
+20190214222712954097663.c:248: note: Failed to SLP the basic block.
+20190214222712954097663.c:248: note: not vectorized: failed to find SLP opportunities in basic block.
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:701: note: not vectorized: not enough data-refs in basic block.
+
+20190214222712954097663.c:248: note: misalign = 0 bytes of ref g_34
+20190214222712954097663.c:248: note: not consecutive access g_34 = _1380;
+
+20190214222712954097663.c:248: note: Failed to SLP the basic block.
+20190214222712954097663.c:248: note: not vectorized: failed to find SLP opportunities in basic block.
+
+20190214222712954097663.c:289: note: misalign = 0 bytes of ref g_1310
+20190214222712954097663.c:289: note: not consecutive access g_1310 = &l_2402;
+
+20190214222712954097663.c:289: note: Failed to SLP the basic block.
+20190214222712954097663.c:289: note: not vectorized: failed to find SLP opportunities in basic block.
+
+20190214222712954097663.c:2191: note: misalign = 0 bytes of ref l_2402
+20190214222712954097663.c:2191: note: misalign = 0 bytes of ref g_9
+20190214222712954097663.c:2191: note: misalign = 0 bytes of ref g_2412
+20190214222712954097663.c:2191: note: misalign = 0 bytes of ref g_664
+20190214222712954097663.c:2191: note: misalign = 0 bytes of ref g_34
+20190214222712954097663.c:2191: note: misalign = 0 bytes of ref g_801
+20190214222712954097663.c:2191: note: misalign = 0 bytes of ref g_34
+20190214222712954097663.c:2191: note: misalign = 0 bytes of ref g_6
+20190214222712954097663.c:2191: note: not consecutive access l_2402 ={v} {CLOBBER};
+
+20190214222712954097663.c:2191: note: not consecutive access g_9 = 26307;
+
+20190214222712954097663.c:2191: note: not consecutive access g_2412 = 1568214504;
+
+20190214222712954097663.c:2191: note: not consecutive access g_664 = &g_162;
+
+20190214222712954097663.c:2191: note: not consecutive access _234 = g_34;
+
+20190214222712954097663.c:2191: note: not consecutive access _236 = g_801;
+
+20190214222712954097663.c:2191: note: not consecutive access g_34 = _244;
+
+20190214222712954097663.c:2191: note: not consecutive access g_6.0_4 = g_6;
+
+20190214222712954097663.c:2191: note: Failed to SLP the basic block.
+20190214222712954097663.c:2191: note: not vectorized: failed to find SLP opportunities in basic block.
+
+20190214222712954097663.c:370: note: misalign = 0 bytes of ref l_1759
+20190214222712954097663.c:370: note: misalign = 0 bytes of ref g_655
+20190214222712954097663.c:370: note: not consecutive access l_1759 = 5;
+
+20190214222712954097663.c:370: note: not consecutive access g_655 = &g_656;
+
+20190214222712954097663.c:370: note: Failed to SLP the basic block.
+20190214222712954097663.c:370: note: not vectorized: failed to find SLP opportunities in basic block.

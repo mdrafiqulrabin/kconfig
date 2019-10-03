@@ -1,0 +1,382 @@
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:73:25: note: not consecutive access _10 = crc32_tab[_9];
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:73:25: note: not consecutive access _15 = crc32_tab[_14];
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:73:25: note: not consecutive access _20 = crc32_tab[_19];
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:73:25: note: not consecutive access _26 = crc32_tab[_25];
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:73:25: note: not consecutive access crc32_context.178_22 = crc32_context;
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:73:25: note: not consecutive access crc32_context = crc32_context.179_11;
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:73:25: note: Failed to SLP the basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:73:25: note: not vectorized: failed to find SLP opportunities in basic block.
+20190211145743842561453.c:922:13: note: not vectorized: no vectype for stmt: <retval> = g_75.f4.f0;
+ scalar_type: struct S0
+20190211145743842561453.c:922:13: note: interleaved store with gaps
+20190211145743842561453.c:922:13: note: not vectorized: complicated access pattern.
+20190211145743842561453.c:922:13: note: misalign = 12 bytes of ref g_75.f7
+20190211145743842561453.c:922:13: note: Failed to SLP the basic block.
+20190211145743842561453.c:922:13: note: not vectorized: failed to find SLP opportunities in basic block.
+20190211145743842561453.c:756:99: note: not consecutive access l_220$12_1 = MEM[(struct S0 *)&g_75 + 48B];
+
+20190211145743842561453.c:756:99: note: not consecutive access g_75.f0 = _3;
+
+20190211145743842561453.c:756:99: note: interleaved store with gaps
+20190211145743842561453.c:756:99: note: not vectorized: complicated access pattern.
+20190211145743842561453.c:756:99: note: not consecutive access _3 = p_69.f4.f0.f2;
+
+20190211145743842561453.c:756:99: note: misalign = 12 bytes of ref g_75.f7
+20190211145743842561453.c:756:99: note: Failed to SLP the basic block.
+20190211145743842561453.c:756:99: note: not vectorized: failed to find SLP opportunities in basic block.
+20190211145743842561453.c:319:15: note: not consecutive access l_771.f0 = 4294967295;
+
+20190211145743842561453.c:319:15: note: not consecutive access l_771.f1 = -1030356293;
+
+20190211145743842561453.c:319:15: note: not consecutive access MEM[(struct S4 *)&l_771 + 20B] = 213786574;
+
+20190211145743842561453.c:319:15: note: interleaved store with gaps
+20190211145743842561453.c:319:15: note: not vectorized: complicated access pattern.
+20190211145743842561453.c:319:15: note: not consecutive access l_771.f4.f0.f1 = 0;
+
+20190211145743842561453.c:319:15: note: not consecutive access l_771.f4.f0.f8 = 3167408523;
+
+20190211145743842561453.c:319:15: note: not consecutive access l_771.f5 = 642825053;
+
+20190211145743842561453.c:319:15: note: not consecutive access l_771.f6 = 3063231080;
+
+20190211145743842561453.c:319:15: note: not consecutive access l_771.f7 = -3;
+
+20190211145743842561453.c:319:15: note: not consecutive access l_771.f8 = 2099695196;
+
+20190211145743842561453.c:319:15: note: not consecutive access l_771.f3 = 1;
+
+20190211145743842561453.c:319:15: note: misalign = 4 bytes of ref l_771.f4.f0.f0
+20190211145743842561453.c:319:15: note: misalign = 12 bytes of ref l_771.f4.f0.f2
+20190211145743842561453.c:319:15: note: misalign = 0 bytes of ref l_771.f4.f0.f3
+20190211145743842561453.c:319:15: note: misalign = 4 bytes of ref l_771.f4.f0.f4
+20190211145743842561453.c:319:15: note: misalign = 6 bytes of ref l_771.f4.f0.f5
+20190211145743842561453.c:319:15: note: misalign = 8 bytes of ref l_771.f4.f0.f6
+20190211145743842561453.c:319:15: note: misalign = 12 bytes of ref l_771.f4.f0.f7
+20190211145743842561453.c:319:15: note: misalign = 8 bytes of ref MEM[(struct S4 *)&l_771 + 8B]
+20190211145743842561453.c:319:15: note: misalign = 12 bytes of ref MEM[(struct S4 *)&l_771 + 12B]
+20190211145743842561453.c:319:15: note: misalign = 0 bytes of ref MEM[(struct S4 *)&l_771 + 16B]
+20190211145743842561453.c:319:15: note: misalign = 12 bytes of ref MEM[(struct S4 *)&l_771 + 28B]
+20190211145743842561453.c:319:15: note: Build SLP failed: unrolling required in basic block SLP
+20190211145743842561453.c:319:15: note: Build SLP failed: unrolling required in basic block SLP
+20190211145743842561453.c:319:15: note: Build SLP failed: unrolling required in basic block SLP
+20190211145743842561453.c:319:15: note: Build SLP failed: unrolling required in basic block SLP
+20190211145743842561453.c:319:15: note: Failed to SLP the basic block.
+20190211145743842561453.c:319:15: note: not vectorized: failed to find SLP opportunities in basic block.
+20190211145743842561453.c:602:15: note: not consecutive access l_275.f0.f0 = 8;
+
+20190211145743842561453.c:602:15: note: not consecutive access l_275.f0.f1 = 0;
+
+20190211145743842561453.c:602:15: note: interleaved store with gaps
+20190211145743842561453.c:602:15: note: not vectorized: complicated access pattern.
+20190211145743842561453.c:602:15: note: not consecutive access l_276.f0 = 243042702;
+
+20190211145743842561453.c:602:15: note: not consecutive access l_276.f1 = 346660863;
+
+20190211145743842561453.c:602:15: note: not consecutive access l_276.f2.f3 = -10;
+
+20190211145743842561453.c:602:15: note: not consecutive access l_276.f4.f0.f1 = 5;
+
+20190211145743842561453.c:602:15: note: not consecutive access l_276.f4.f0.f8 = 1204508009;
+
+20190211145743842561453.c:602:15: note: not consecutive access l_276.f5 = -1424997733;
+
+20190211145743842561453.c:602:15: note: not consecutive access l_276.f6 = 1;
+
+20190211145743842561453.c:602:15: note: not consecutive access l_276.f7 = 0;
+
+20190211145743842561453.c:602:15: note: not consecutive access l_276.f8 = 2003420554;
+
+20190211145743842561453.c:602:15: note: not consecutive access l_276.f3 = 28740;
+
+20190211145743842561453.c:602:15: note: not consecutive access l_276.f4.f0.f4 = 1;
+
+20190211145743842561453.c:602:15: note: not consecutive access p_62$f0$f5_140 = MEM[(struct S3 *)&p_62 + 18B];
+
+20190211145743842561453.c:602:15: note: misalign = 12 bytes of ref l_275.f0.f3
+20190211145743842561453.c:602:15: note: misalign = 0 bytes of ref l_275.f0.f4
+20190211145743842561453.c:602:15: note: misalign = 2 bytes of ref l_275.f0.f5
+20190211145743842561453.c:602:15: note: misalign = 12 bytes of ref l_275.f0.f8
+20190211145743842561453.c:602:15: note: misalign = 8 bytes of ref l_276.f2.f0
+20190211145743842561453.c:602:15: note: misalign = 12 bytes of ref l_276.f2.f1
+20190211145743842561453.c:602:15: note: misalign = 0 bytes of ref l_276.f2.f2
+20190211145743842561453.c:602:15: note: misalign = 8 bytes of ref l_276.f2.f4
+20190211145743842561453.c:602:15: note: misalign = 12 bytes of ref l_276.f2.f5
+20190211145743842561453.c:602:15: note: misalign = 12 bytes of ref l_276.f4.f0.f2
+20190211145743842561453.c:602:15: note: misalign = 0 bytes of ref l_276.f4.f0.f3
+20190211145743842561453.c:602:15: note: misalign = 8 bytes of ref l_276.f4.f0.f6
+20190211145743842561453.c:602:15: note: misalign = 12 bytes of ref l_276.f4.f0.f7
+20190211145743842561453.c:602:15: note: Build SLP failed: unrolling required in basic block SLP
+20190211145743842561453.c:602:15: note: Build SLP failed: unrolling required in basic block SLP
+20190211145743842561453.c:602:15: note: Build SLP failed: unrolling required in basic block SLP
+20190211145743842561453.c:602:15: note: Build SLP failed: unrolling required in basic block SLP
+20190211145743842561453.c:602:15: note: Build SLP failed: unrolling required in basic block SLP
+20190211145743842561453.c:602:15: note: Failed to SLP the basic block.
+20190211145743842561453.c:602:15: note: not vectorized: failed to find SLP opportunities in basic block.
+20190211145743842561453.c:609:189: note: not consecutive access _40 = g_75.f5;
+
+20190211145743842561453.c:609:189: note: misalign = 4 bytes of ref MEM[(struct S3 *)&l_275 + 20B]
+20190211145743842561453.c:609:189: note: misalign = 8 bytes of ref MEM[(struct S3 *)&l_275 + 24B]
+20190211145743842561453.c:609:189: note: Build SLP failed: unrolling required in basic block SLP
+20190211145743842561453.c:609:189: note: Failed to SLP the basic block.
+20190211145743842561453.c:609:189: note: not vectorized: failed to find SLP opportunities in basic block.
+20190211145743842561453.c:609:10: note: not consecutive access MEM[(struct S4 *)&l_276 + 36B] = 4294967287;
+
+20190211145743842561453.c:609:10: note: not consecutive access MEM[(struct S4 *)&l_276 + 54B] = 38303;
+
+20190211145743842561453.c:609:10: note: Failed to SLP the basic block.
+20190211145743842561453.c:609:10: note: not vectorized: failed to find SLP opportunities in basic block.
+20190211145743842561453.c:612:19: note: not consecutive access MEM[(struct S4 *)&l_279 + 36B] = 1156090138;
+
+20190211145743842561453.c:612:19: note: not consecutive access MEM[(struct S4 *)&l_279 + 40B] = -598795130;
+
+20190211145743842561453.c:612:19: note: not consecutive access MEM[(struct S4 *)&l_279 + 64B] = 606274946;
+
+20190211145743842561453.c:612:19: note: not consecutive access l_280.f1.f0 = 2930379813;
+
+20190211145743842561453.c:612:19: note: not consecutive access l_280.f1.f1 = -1;
+
+20190211145743842561453.c:612:19: note: not consecutive access l_280.f1.f8 = 4294967295;
+
+20190211145743842561453.c:612:19: note: not consecutive access l_280.f2 = -1;
+
+20190211145743842561453.c:612:19: note: not consecutive access l_280.f3.f0 = 1;
+
+20190211145743842561453.c:612:19: note: not consecutive access l_280.f3.f1 = 817548344;
+
+20190211145743842561453.c:612:19: note: not consecutive access l_280.f3.f8 = 1;
+
+20190211145743842561453.c:612:19: note: interleaved store with gaps
+20190211145743842561453.c:612:19: note: not vectorized: complicated access pattern.
+20190211145743842561453.c:612:19: note: misalign = 12 bytes of ref l_280.f1.f2
+20190211145743842561453.c:612:19: note: misalign = 0 bytes of ref l_280.f1.f3
+20190211145743842561453.c:612:19: note: misalign = 4 bytes of ref l_280.f1.f4
+20190211145743842561453.c:612:19: note: misalign = 6 bytes of ref l_280.f1.f5
+20190211145743842561453.c:612:19: note: misalign = 8 bytes of ref l_280.f1.f6
+20190211145743842561453.c:612:19: note: misalign = 12 bytes of ref l_280.f1.f7
+20190211145743842561453.c:612:19: note: misalign = 0 bytes of ref l_280.f3.f2
+20190211145743842561453.c:612:19: note: misalign = 4 bytes of ref l_280.f3.f3
+20190211145743842561453.c:612:19: note: misalign = 8 bytes of ref l_280.f3.f4
+20190211145743842561453.c:612:19: note: misalign = 10 bytes of ref l_280.f3.f5
+20190211145743842561453.c:612:19: note: misalign = 12 bytes of ref l_280.f3.f6
+20190211145743842561453.c:612:19: note: misalign = 0 bytes of ref l_280.f3.f7
+20190211145743842561453.c:612:19: note: misalign = 12 bytes of ref MEM[(struct S4 *)&l_279 + 44B]
+20190211145743842561453.c:612:19: note: misalign = 0 bytes of ref MEM[(struct S4 *)&l_279 + 48B]
+20190211145743842561453.c:612:19: note: misalign = 4 bytes of ref MEM[(struct S4 *)&l_279 + 52B]
+20190211145743842561453.c:612:19: note: misalign = 6 bytes of ref MEM[(struct S4 *)&l_279 + 54B]
+20190211145743842561453.c:612:19: note: misalign = 8 bytes of ref MEM[(struct S4 *)&l_279 + 56B]
+20190211145743842561453.c:612:19: note: misalign = 12 bytes of ref MEM[(struct S4 *)&l_279 + 60B]
+20190211145743842561453.c:612:19: note: Build SLP failed: unrolling required in basic block SLP
+20190211145743842561453.c:612:19: note: Build SLP failed: unrolling required in basic block SLP
+20190211145743842561453.c:612:19: note: Build SLP failed: unrolling required in basic block SLP
+20190211145743842561453.c:612:19: note: Build SLP failed: unrolling required in basic block SLP
+20190211145743842561453.c:612:19: note: Build SLP failed: unrolling required in basic block SLP
+20190211145743842561453.c:612:19: note: Build SLP failed: unrolling required in basic block SLP
+20190211145743842561453.c:612:19: note: Build SLP failed: unrolling required in basic block SLP
+20190211145743842561453.c:612:19: note: Failed to SLP the basic block.
+20190211145743842561453.c:612:19: note: not vectorized: failed to find SLP opportunities in basic block.
+20190211145743842561453.c:643:162: note: not vectorized: no vectype for stmt: <retval> = g_75;
+ scalar_type: struct S4
+20190211145743842561453.c:643:162: note: not consecutive access g_75.f3 = 27928;
+
+20190211145743842561453.c:643:162: note: not consecutive access g_274.f3.f1 = 64;
+
+20190211145743842561453.c:643:162: note: not consecutive access g_312 = 0;
+
+20190211145743842561453.c:643:162: note: Failed to SLP the basic block.
+20190211145743842561453.c:643:162: note: not vectorized: failed to find SLP opportunities in basic block.
+20190211145743842561453.c:553:9: note: virtual phi. skip.
+20190211145743842561453.c:553:9: note: not vectorized: value used after loop.
+20190211145743842561453.c:553:9: note: bad operation or unsupported loop bound.
+20190211145743842561453.c:468:9: note: not vectorized: control flow in loop.
+20190211145743842561453.c:468:9: note: bad loop form.
+20190211145743842561453.c:112:174: note: not vectorized: not enough data-refs in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:737:11: note: not vectorized: not enough data-refs in basic block.
+20190211145743842561453.c:429:120: note: not consecutive access MEM[(struct S2 *)&l_488 + 8B] = 0;
+
+20190211145743842561453.c:429:120: note: not consecutive access MEM[(struct S2 *)&l_488 + 52B] = 4294967291;
+
+20190211145743842561453.c:429:120: note: not consecutive access MEM[(struct S2 *)&l_488 + 20B] = 7;
+
+20190211145743842561453.c:429:120: note: not consecutive access MEM[(struct S3 *)&l_500] = 4294967295;
+
+20190211145743842561453.c:429:120: note: not consecutive access MEM[(struct S3 *)&l_500 + 4B] = 3;
+
+20190211145743842561453.c:429:120: note: not consecutive access MEM[(struct S3 *)&l_500 + 28B] = 3468913070;
+
+20190211145743842561453.c:429:120: note: misalign = 8 bytes of ref MEM[(struct S3 *)&l_500 + 8B]
+20190211145743842561453.c:429:120: note: misalign = 12 bytes of ref MEM[(struct S3 *)&l_500 + 12B]
+20190211145743842561453.c:429:120: note: misalign = 0 bytes of ref MEM[(struct S3 *)&l_500 + 16B]
+20190211145743842561453.c:429:120: note: misalign = 2 bytes of ref MEM[(struct S3 *)&l_500 + 18B]
+20190211145743842561453.c:429:120: note: misalign = 4 bytes of ref MEM[(struct S3 *)&l_500 + 20B]
+20190211145743842561453.c:429:120: note: misalign = 8 bytes of ref MEM[(struct S3 *)&l_500 + 24B]
+20190211145743842561453.c:429:120: note: Build SLP failed: unrolling required in basic block SLP
+20190211145743842561453.c:429:120: note: Build SLP failed: unrolling required in basic block SLP
+20190211145743842561453.c:429:120: note: Build SLP failed: unrolling required in basic block SLP
+20190211145743842561453.c:429:120: note: Failed to SLP the basic block.
+20190211145743842561453.c:429:120: note: not vectorized: failed to find SLP opportunities in basic block.
+20190211145743842561453.c:435:26: note: not consecutive access g_75.f2.f2 = 0;
+
+20190211145743842561453.c:435:26: note: not consecutive access g_75.f4.f0.f6 = -415040138;
+
+20190211145743842561453.c:435:26: note: not consecutive access _212 = g_354.f2;
+
+20190211145743842561453.c:435:26: note: not consecutive access g_479.f3.f8 = 0;
+
+20190211145743842561453.c:435:26: note: Failed to SLP the basic block.
+20190211145743842561453.c:435:26: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:336:22: note: not vectorized: not enough data-refs in basic block.
+20190211145743842561453.c:441:39: note: not consecutive access g_75.f2.f3 = iftmp.50_225;
+
+20190211145743842561453.c:441:39: note: not consecutive access MEM[(struct S2 *)&g_274 + 4B] = 1;
+
+20190211145743842561453.c:441:39: note: not consecutive access MEM[(struct S2 *)&g_274 + 8B] = -704522978;
+
+20190211145743842561453.c:441:39: note: not consecutive access MEM[(struct S2 *)&g_274 + 32B] = 0;
+
+20190211145743842561453.c:441:39: note: not consecutive access MEM[(struct S2 *)&g_274 + 36B] = -1500894164;
+
+20190211145743842561453.c:441:39: note: not consecutive access MEM[(struct S2 *)&g_274 + 40B] = 4062448587;
+
+20190211145743842561453.c:441:39: note: not consecutive access MEM[(struct S2 *)&g_274 + 44B] = -1;
+
+20190211145743842561453.c:441:39: note: not consecutive access MEM[(struct S2 *)&g_274 + 64B] = 1886496343;
+
+20190211145743842561453.c:441:39: note: not consecutive access MEM[(struct S2 *)&g_274 + 68B] = 1335180256;
+
+20190211145743842561453.c:441:39: note: interleaved store with gaps
+20190211145743842561453.c:441:39: note: not vectorized: complicated access pattern.
+20190211145743842561453.c:441:39: note: not consecutive access g_479.f3.f6 = -1195110287;
+
+20190211145743842561453.c:441:39: note: misalign = 12 bytes of ref MEM[(struct S2 *)&g_274 + 12B]
+20190211145743842561453.c:441:39: note: misalign = 0 bytes of ref MEM[(struct S2 *)&g_274 + 16B]
+20190211145743842561453.c:441:39: note: misalign = 4 bytes of ref MEM[(struct S2 *)&g_274 + 20B]
+20190211145743842561453.c:441:39: note: misalign = 6 bytes of ref MEM[(struct S2 *)&g_274 + 22B]
+20190211145743842561453.c:441:39: note: misalign = 8 bytes of ref MEM[(struct S2 *)&g_274 + 24B]
+20190211145743842561453.c:441:39: note: misalign = 12 bytes of ref MEM[(struct S2 *)&g_274 + 28B]
+20190211145743842561453.c:441:39: note: misalign = 0 bytes of ref MEM[(struct S2 *)&g_274 + 48B]
+20190211145743842561453.c:441:39: note: misalign = 4 bytes of ref MEM[(struct S2 *)&g_274 + 52B]
+20190211145743842561453.c:441:39: note: misalign = 8 bytes of ref MEM[(struct S2 *)&g_274 + 56B]
+20190211145743842561453.c:441:39: note: misalign = 10 bytes of ref MEM[(struct S2 *)&g_274 + 58B]
+20190211145743842561453.c:441:39: note: Build SLP failed: unrolling required in basic block SLP
+20190211145743842561453.c:441:39: note: Build SLP failed: unrolling required in basic block SLP
+20190211145743842561453.c:441:39: note: Build SLP failed: unrolling required in basic block SLP
+20190211145743842561453.c:441:39: note: Failed to SLP the basic block.
+20190211145743842561453.c:441:39: note: not vectorized: failed to find SLP opportunities in basic block.
+20190211145743842561453.c:101:18: note: not vectorized: not enough data-refs in basic block.
+20190211145743842561453.c:477:45: note: not vectorized: no vectype for stmt: l_556 = g_75;
+ scalar_type: struct S4
+20190211145743842561453.c:477:45: note: not consecutive access _226 = g_75.f4.f0.f2;
+
+20190211145743842561453.c:477:45: note: not consecutive access _229 = g_479.f1.f2;
+
+20190211145743842561453.c:477:45: note: not consecutive access g_479.f1.f1 = pretmp_479;
+
+20190211145743842561453.c:477:45: note: Failed to SLP the basic block.
+20190211145743842561453.c:477:45: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:241:59: note: not vectorized: not enough data-refs in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:244:11: note: not vectorized: not enough data-refs in basic block.
+20190211145743842561453.c:478:136: note: not vectorized: not enough data-refs in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:710:45: note: not vectorized: not enough data-refs in basic block.
+20190211145743842561453.c:478:80: note: not vectorized: not enough data-refs in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:777:22: note: not vectorized: not enough data-refs in basic block.
+20190211145743842561453.c:478:22: note: not vectorized: not enough data-refs in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:268:11: note: not vectorized: not enough data-refs in basic block.
+20190211145743842561453.c:101:18: note: not vectorized: not enough data-refs in basic block.
+20190211145743842561453.c:486:33: note: not vectorized: not enough data-refs in basic block.
+20190211145743842561453.c:488:34: note: not vectorized: not enough data-refs in basic block.
+20190211145743842561453.c:499:16: note: not vectorized: not enough data-refs in basic block.
+20190211145743842561453.c:504:200: note: not consecutive access g_175 = 25844;
+
+20190211145743842561453.c:504:200: note: not consecutive access MEM[(struct S2 *)&p_57 + 4B] = p_57$4_63;
+
+20190211145743842561453.c:504:200: note: not consecutive access MEM[(struct S2 *)&p_57 + 8B] = p_57$8_65;
+
+20190211145743842561453.c:504:200: note: not consecutive access MEM[(struct S2 *)&p_57 + 12B] = p_57$12_9;
+
+20190211145743842561453.c:504:200: note: not consecutive access MEM[(struct S2 *)&p_57 + 28B] = p_57$28_11;
+
+20190211145743842561453.c:504:200: note: not consecutive access MEM[(struct S2 *)&p_57 + 52B] = p_57$52_455;
+
+20190211145743842561453.c:504:200: note: not consecutive access MEM[(struct S2 *)&p_57 + 68B] = p_57$68_451;
+
+20190211145743842561453.c:504:200: note: interleaved store with gaps
+20190211145743842561453.c:504:200: note: not vectorized: complicated access pattern.
+20190211145743842561453.c:504:200: note: misalign = 6 bytes of ref MEM[(struct S2 *)&p_57 + 22B]
+20190211145743842561453.c:504:200: note: misalign = 10 bytes of ref MEM[(struct S2 *)&p_57 + 58B]
+20190211145743842561453.c:504:200: note: misalign = 12 bytes of ref MEM[(struct S2 *)&p_57 + 60B]
+20190211145743842561453.c:504:200: note: misalign = 0 bytes of ref MEM[(struct S2 *)&p_57 + 64B]
+20190211145743842561453.c:504:200: note: Build SLP failed: unrolling required in basic block SLP
+20190211145743842561453.c:504:200: note: Failed to SLP the basic block.
+20190211145743842561453.c:504:200: note: not vectorized: failed to find SLP opportunities in basic block.
+20190211145743842561453.c:537:23: note: not vectorized: no vectype for stmt: g_354 = g_75.f2;
+ scalar_type: struct S1
+20190211145743842561453.c:537:23: note: not vectorized: not enough data-refs in basic block.
+20190211145743842561453.c:101:18: note: not vectorized: not enough data-refs in basic block.
+20190211145743842561453.c:101:18: note: not vectorized: not enough data-refs in basic block.
+20190211145743842561453.c:552:191: note: not vectorized: not enough data-refs in basic block.
+20190211145743842561453.c:101:18: note: not consecutive access g_274.f3.f6 = 3;
+
+20190211145743842561453.c:101:18: note: not consecutive access _132 = g_642.f7;
+
+20190211145743842561453.c:101:18: note: not consecutive access MEM[(struct S3 *)&p_50] = 4294967295;
+
+20190211145743842561453.c:101:18: note: not consecutive access MEM[(struct S3 *)&p_50 + 4B] = -8;
+
+20190211145743842561453.c:101:18: note: not consecutive access MEM[(struct S3 *)&p_50 + 28B] = 4294967295;
+
+20190211145743842561453.c:101:18: note: misalign = 8 bytes of ref MEM[(struct S3 *)&p_50 + 8B]
+20190211145743842561453.c:101:18: note: misalign = 12 bytes of ref MEM[(struct S3 *)&p_50 + 12B]
+20190211145743842561453.c:101:18: note: misalign = 0 bytes of ref MEM[(struct S3 *)&p_50 + 16B]
+20190211145743842561453.c:101:18: note: misalign = 2 bytes of ref MEM[(struct S3 *)&p_50 + 18B]
+20190211145743842561453.c:101:18: note: misalign = 4 bytes of ref MEM[(struct S3 *)&p_50 + 20B]
+20190211145743842561453.c:101:18: note: misalign = 8 bytes of ref MEM[(struct S3 *)&p_50 + 24B]
+20190211145743842561453.c:101:18: note: Build SLP failed: unrolling required in basic block SLP
+20190211145743842561453.c:101:18: note: Build SLP failed: unrolling required in basic block SLP
+20190211145743842561453.c:101:18: note: Build SLP failed: unrolling required in basic block SLP
+20190211145743842561453.c:101:18: note: Failed to SLP the basic block.
+20190211145743842561453.c:101:18: note: not vectorized: failed to find SLP opportunities in basic block.
+20190211145743842561453.c:398:17: note: not consecutive access _148 = g_479.f3.f1;
+
+20190211145743842561453.c:398:17: note: misalign = 4 bytes of ref g_479.f1.f0
+20190211145743842561453.c:398:17: note: misalign = 0 bytes of ref g_479.f1.f3
+20190211145743842561453.c:398:17: note: Failed to SLP the basic block.
+20190211145743842561453.c:398:17: note: not vectorized: failed to find SLP opportunities in basic block.
+20190211145743842561453.c:112:46: note: not vectorized: not enough data-refs in basic block.
+20190211145743842561453.c:488:34: note: not consecutive access pretmp_70 = g_479.f1.f6;
+
+20190211145743842561453.c:488:34: note: not consecutive access g_479.f3.f5 = 9;
+
+20190211145743842561453.c:488:34: note: Failed to SLP the basic block.
+20190211145743842561453.c:488:34: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57:2: note: misalign = 0 bytes of ref crc32_tab[i_377]
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57:2: note: virtual phi. skip.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57:2: note: no optab.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57:2: note: not ssa-name.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57:2: note: use not simple.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57:2: note: not ssa-name.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57:2: note: use not simple.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57:2: note: not ssa-name.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57:2: note: use not simple.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57:2: note: not ssa-name.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57:2: note: use not simple.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57:2: note: not ssa-name.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57:2: note: use not simple.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57:2: note: not ssa-name.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57:2: note: use not simple.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57:2: note: not ssa-name.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57:2: note: use not simple.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57:2: note: not ssa-name.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57:2: note: use not simple.
+20190211145743842561453.c:931:5: note: not vectorized: not enough data-refs in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:58:7: note: not vectorized: no vectype for stmt: MEM[(unsigned int *)vectp_crc32_tab.753_448] = vect_crc_406.751_446;
+ scalar_type: vector(4) unsigned int
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:58:7: note: not vectorized: not enough data-refs in basic block.
+20190211145743842561453.c:931:5: note: not vectorized: not enough data-refs in basic block.
+20190211145743842561453.c:936:5: note: not vectorized: not enough data-refs in basic block.

@@ -1,0 +1,183 @@
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:99: note: misalign = 0 bytes of ref crc32_context
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:99: note: Unknown alignment for access: crc32_tab
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:99: note: Unknown alignment for access: crc32_tab
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:99: note: Unknown alignment for access: crc32_tab
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:99: note: Unknown alignment for access: crc32_tab
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:99: note: Unknown alignment for access: crc32_tab
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:99: note: Unknown alignment for access: crc32_tab
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:99: note: Unknown alignment for access: crc32_tab
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:99: note: Unknown alignment for access: crc32_tab
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:99: note: misalign = 0 bytes of ref crc32_context
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:99: note: not consecutive access crc32_context.145_26 = crc32_context;
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:99: note: not consecutive access _31 = crc32_tab[_30];
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:99: note: not consecutive access _37 = crc32_tab[_36];
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:99: note: not consecutive access _43 = crc32_tab[_42];
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:99: note: not consecutive access _49 = crc32_tab[_48];
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:99: note: not consecutive access _55 = crc32_tab[_54];
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:99: note: not consecutive access _61 = crc32_tab[_60];
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:99: note: not consecutive access _67 = crc32_tab[_66];
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:99: note: not consecutive access _73 = crc32_tab[_72];
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:99: note: not consecutive access crc32_context = crc32_context.146_74;
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:99: note: Failed to SLP the basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:99: note: not vectorized: failed to find SLP opportunities in basic block.
+
+Analyzing loop at /project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:124
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:124: note: not vectorized: not suitable for gather load _12 = crc32_tab[_11];
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:124: note: bad data references.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:121: note: vectorized 0 loops in function.
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:125: note: misalign = 0 bytes of ref crc32_context
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:125: note: Unknown alignment for access: crc32_tab
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:125: note: Unknown alignment for access: crc32_tab
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:125: note: Unknown alignment for access: crc32_tab
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:125: note: Unknown alignment for access: crc32_tab
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:125: note: misalign = 0 bytes of ref crc32_context
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:125: note: not consecutive access pretmp_39 = crc32_context;
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:125: note: not consecutive access _33 = crc32_tab[_34];
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:125: note: not consecutive access _52 = crc32_tab[_38];
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:125: note: not consecutive access _68 = crc32_tab[_67];
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:125: note: not consecutive access _12 = crc32_tab[_11];
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:125: note: not consecutive access crc32_context = crc32_context.146_13;
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:125: note: Failed to SLP the basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:125: note: not vectorized: failed to find SLP opportunities in basic block.
+
+Analyzing loop at 20190211232426704511125.c:236
+
+20190211232426704511125.c:236: note: not vectorized: unsupported data-type
+20190211232426704511125.c:236: note: can't determine vectorization factor.
+Analyzing loop at 20190211232426704511125.c:364
+
+20190211232426704511125.c:364: note: virtual phi. skip.
+20190211232426704511125.c:364: note: not vectorized: value used after loop.
+20190211232426704511125.c:364: note: bad operation or unsupported loop bound.
+Analyzing loop at /project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: misalign = 0 bytes of ref crc32_tab[i_229]
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: virtual phi. skip.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: no optab.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: not ssa-name.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: use not simple.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: not ssa-name.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: use not simple.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: not ssa-name.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: use not simple.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: not ssa-name.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: use not simple.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: not ssa-name.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: use not simple.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: not ssa-name.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: use not simple.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: not ssa-name.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: use not simple.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: not ssa-name.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: use not simple.
+
+Vectorizing loop at /project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57
+
+20190211232426704511125.c:680: note: vectorized 1 loops in function.
+
+20190211232426704511125.c:680: note: not vectorized: not enough data-refs in basic block.
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:58: note: not vectorized: no vectype for stmt: MEM[(uint32_t[256] *)vect_pcrc32_tab.270_206] = vect_crc.268_208;
+ scalar_type: vector(4) unsigned int
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:58: note: Failed to SLP the basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:58: note: not vectorized: failed to find SLP opportunities in basic block.
+
+20190211232426704511125.c:680: note: not vectorized: not enough data-refs in basic block.
+
+20190211232426704511125.c:112: note: misalign = 0 bytes of ref g_251
+20190211232426704511125.c:112: note: misalign = 0 bytes of ref g_43
+20190211232426704511125.c:112: note: misalign = 0 bytes of ref g_196
+20190211232426704511125.c:112: note: not consecutive access _121 = g_251;
+
+20190211232426704511125.c:112: note: not consecutive access g_43 = 0;
+
+20190211232426704511125.c:112: note: not consecutive access g_196.55_233 = g_196;
+
+20190211232426704511125.c:112: note: not consecutive access _234 = *g_196.55_233;
+
+20190211232426704511125.c:112: note: not consecutive access _235 = *_234;
+
+20190211232426704511125.c:112: note: Failed to SLP the basic block.
+20190211232426704511125.c:112: note: not vectorized: failed to find SLP opportunities in basic block.
+
+20190211232426704511125.c:362: note: misalign = 0 bytes of ref g_265.f4
+20190211232426704511125.c:362: note: not consecutive access _236 = g_265.f4;
+
+20190211232426704511125.c:362: note: Failed to SLP the basic block.
+20190211232426704511125.c:362: note: not vectorized: failed to find SLP opportunities in basic block.
+
+20190211232426704511125.c:362: note: misalign = 0 bytes of ref g_43
+20190211232426704511125.c:362: note: not consecutive access g_43 = iftmp.53_248;
+
+20190211232426704511125.c:362: note: Failed to SLP the basic block.
+20190211232426704511125.c:362: note: not vectorized: failed to find SLP opportunities in basic block.
+
+20190211232426704511125.c:364: note: not vectorized: not enough data-refs in basic block.
+
+20190211232426704511125.c:680: note: not vectorized: not enough data-refs in basic block.
+
+20190211232426704511125.c:236: note: not vectorized: not enough data-refs in basic block.
+
+20190211232426704511125.c:680: note: not vectorized: not enough data-refs in basic block.
+
+20190211232426704511125.c:252: note: can't determine dependence between g_265.f4 and g_265.f3
+20190211232426704511125.c:252: note: not vectorized: unhandled data dependence in basic block.
+
+20190211232426704511125.c:362: note: can't determine dependence between g_296 and *g_296.58_458
+20190211232426704511125.c:362: note: can't determine dependence between *g_295.59_481 and *g_296.58_458
+20190211232426704511125.c:362: note: can't determine dependence between *_148 and *g_296.58_458
+20190211232426704511125.c:362: note: misalign = 0 bytes of ref g_296
+20190211232426704511125.c:362: note: misalign = 0 bytes of ref g_295
+20190211232426704511125.c:362: note: not consecutive access g_296.58_458 = g_296;
+
+20190211232426704511125.c:362: note: not consecutive access g_295.59_481 = g_295;
+
+20190211232426704511125.c:362: note: not consecutive access _148 = *g_295.59_481;
+
+20190211232426704511125.c:362: note: not consecutive access _492 = *_148;
+
+20190211232426704511125.c:362: note: not consecutive access *g_296.58_458 = _492;
+
+20190211232426704511125.c:362: note: Failed to SLP the basic block.
+20190211232426704511125.c:362: note: not vectorized: failed to find SLP opportunities in basic block.
+
+20190211232426704511125.c:362: note: can't determine dependence between g_296 and *g_296.58_147
+20190211232426704511125.c:362: note: can't determine dependence between *g_295.59_243 and *g_296.58_147
+20190211232426704511125.c:362: note: can't determine dependence between *_333 and *g_296.58_147
+20190211232426704511125.c:362: note: misalign = 0 bytes of ref g_296
+20190211232426704511125.c:362: note: misalign = 0 bytes of ref g_295
+20190211232426704511125.c:362: note: not consecutive access g_296.58_147 = g_296;
+
+20190211232426704511125.c:362: note: not consecutive access g_295.59_243 = g_295;
+
+20190211232426704511125.c:362: note: not consecutive access _333 = *g_295.59_243;
+
+20190211232426704511125.c:362: note: not consecutive access _183 = *_333;
+
+20190211232426704511125.c:362: note: not consecutive access *g_296.58_147 = _183;
+
+20190211232426704511125.c:362: note: Failed to SLP the basic block.
+20190211232426704511125.c:362: note: not vectorized: failed to find SLP opportunities in basic block.
+
+20190211232426704511125.c:680: note: can't determine dependence between g_374.f3 and *g_197.100_293
+20190211232426704511125.c:680: note: not vectorized: unhandled data dependence in basic block.

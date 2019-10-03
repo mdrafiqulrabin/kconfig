@@ -1,0 +1,7 @@
+#include "csmith.h"
+a;
+main() {
+  uint32_t *b = &a;
+  *b = safe_lshift_func_uint16_t_u_s;
+  printf(a);
+}

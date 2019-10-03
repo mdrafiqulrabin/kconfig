@@ -1,0 +1,46 @@
+
+Analyzing loop at 20190212072721365326393.c:169
+
+Analyzing loop at 20190212072721365326393.c:377
+
+Analyzing loop at 20190212072721365326393.c:383
+
+20190212072721365326393.c:118: note: vectorized 0 loops in function.
+
+20190212072721365326393.c:418: note: vect_recog_bool_pattern: detected: 
+20190212072721365326393.c:418: note: pattern recognized: patt_229 = (int) patt_306;
+
+20190212072721365326393.c:418: note: additional pattern stmt: patt_306 = g_161.113_80 > 65529 ? 1 : 0;
+
+20190212072721365326393.c:428: note: vect_recog_bool_pattern: detected: 
+20190212072721365326393.c:428: note: pattern recognized: patt_136 = (short unsigned int) patt_207;
+
+20190212072721365326393.c:428: note: additional pattern stmt: patt_207 = prephitmp_61 != 0 ? 1 : 0;
+
+20190212072721365326393.c:428: note: vect_recog_bool_pattern: detected: 
+20190212072721365326393.c:428: note: pattern recognized: patt_230 = (int) patt_232;
+
+20190212072721365326393.c:428: note: additional pattern stmt: patt_232 = l_112_102 > 45162 ? 1 : 0;
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:59: note: Completely unroll loop 8 times
+
+Analyzing loop at 20190212072721365326393.c:100
+
+Analyzing loop at 20190212072721365326393.c:100
+
+Analyzing loop at /project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57
+
+
+Vectorizing loop at /project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: LOOP VECTORIZED.
+20190212072721365326393.c:813: note: vectorized 1 loops in function.
+
+20190212072721365326393.c:100: note: Completely unroll loop 4 times
+
+20190212072721365326393.c:100: note: Completely unroll loop 4 times
+
+20190212072721365326393.c:79: note: vect_recog_bool_pattern: detected: 
+20190212072721365326393.c:79: note: pattern recognized: patt_175 = patt_160;
+
+20190212072721365326393.c:79: note: additional pattern stmt: patt_160 = l_27_132 > 20706 ? 1 : 0;

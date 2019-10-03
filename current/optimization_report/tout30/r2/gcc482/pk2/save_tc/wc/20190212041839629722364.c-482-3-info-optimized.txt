@@ -1,0 +1,46 @@
+
+20190212041839629722364.c:1024: note: Completely unroll loop 1 times
+
+20190212041839629722364.c:977: note: Completely unroll loop 2 times
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:59: note: Completely unroll loop 8 times
+
+Analyzing loop at 20190212041839629722364.c:1038
+
+Analyzing loop at 20190212041839629722364.c:1026
+
+Analyzing loop at 20190212041839629722364.c:1028
+
+Analyzing loop at 20190212041839629722364.c:1010
+
+Analyzing loop at 20190212041839629722364.c:998
+
+Analyzing loop at 20190212041839629722364.c:1000
+
+Analyzing loop at 20190212041839629722364.c:1002
+
+Analyzing loop at 20190212041839629722364.c:989
+
+Analyzing loop at 20190212041839629722364.c:973
+
+Analyzing loop at 20190212041839629722364.c:975
+
+Analyzing loop at /project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57
+
+
+Vectorizing loop at /project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: LOOP VECTORIZED.
+20190212041839629722364.c:960: note: vectorized 1 loops in function.
+
+20190212041839629722364.c:1038: note: Completely unroll loop 3 times
+
+20190212041839629722364.c:1002: note: Completely unroll loop 4 times
+
+20190212041839629722364.c:989: note: Completely unroll loop 4 times
+
+20190212041839629722364.c:979: note: created pattern stmt: patt_505 = _437 >> 8;
+
+20190212041839629722364.c:979: note: created pattern stmt: patt_1322 = _473 >> 8;
+
+20190212041839629722364.c:1012: note: created pattern stmt: patt_92 = _82 >> 8;

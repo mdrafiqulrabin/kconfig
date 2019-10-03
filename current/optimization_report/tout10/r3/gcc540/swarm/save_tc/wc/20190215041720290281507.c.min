@@ -1,0 +1,7 @@
+#include "csmith.h"
+a, b;
+main() {
+  for (; a != -17; a = safe_sub_func_uint32_t_u_u(a, 1))
+    b = safe_add_func_float_f_f;
+  printf(b);
+}

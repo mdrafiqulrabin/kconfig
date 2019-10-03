@@ -1,0 +1,16 @@
+#include "csmith.h"
+struct a {
+  uint16_t b
+};
+struct c {
+  struct a d
+};
+e, f;
+main() {
+  int aj;
+  struct c ae;
+  for (; ae.d.b <= 4; ae.d.b = safe_add_func_int16_t_s_s) {
+    float *ag = f;
+  }
+  transparent_crc_bytes(e, e, "", aj);
+}

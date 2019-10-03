@@ -1,0 +1,6 @@
+#include "csmith.h"
+a;
+main() {
+  a = safe_add_func_int32_t_s_s;
+  printf(a);
+}

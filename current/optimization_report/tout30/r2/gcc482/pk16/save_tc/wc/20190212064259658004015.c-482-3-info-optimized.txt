@@ -1,0 +1,44 @@
+
+20190212064259658004015.c:282: note: vect_recog_bool_pattern: detected: 
+20190212064259658004015.c:282: note: pattern recognized: patt_17 = (int) patt_19;
+
+20190212064259658004015.c:282: note: additional pattern stmt: patt_19 = _5 == 0B ? 1 : 0;
+
+20190212064259658004015.c:282: note: vect_recog_bool_pattern: detected: 
+20190212064259658004015.c:282: note: pattern recognized: patt_15 = (short unsigned int) patt_16;
+
+20190212064259658004015.c:282: note: additional pattern stmt: patt_16 = ISRA.156_36(D) != 482152680 ? 1 : 0;
+
+20190212064259658004015.c:282: note: vect_recog_bool_pattern: detected: 
+20190212064259658004015.c:282: note: pattern recognized: patt_12 = (int) patt_14;
+
+20190212064259658004015.c:282: note: additional pattern stmt: patt_14 = _7 > iftmp.80_27 ? 1 : 0;
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:59: note: Completely unroll loop 8 times
+
+Analyzing loop at 20190212064259658004015.c:243
+
+Analyzing loop at 20190212064259658004015.c:243
+
+Analyzing loop at /project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57
+
+
+Vectorizing loop at /project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: LOOP VECTORIZED.
+20190212064259658004015.c:379: note: vectorized 1 loops in function.
+
+20190212064259658004015.c:81: note: vect_recog_bool_pattern: detected: 
+20190212064259658004015.c:81: note: pattern recognized: patt_304 = (int) patt_79;
+
+20190212064259658004015.c:81: note: additional pattern stmt: patt_79 = _97 > 2944856669 ? 1 : 0;
+
+20190212064259658004015.c:220: note: vect_recog_bool_pattern: detected: 
+20190212064259658004015.c:220: note: pattern recognized: patt_330 = (int) patt_325;
+
+20190212064259658004015.c:220: note: additional pattern stmt: patt_325 = iftmp.103_155 != 3 ? 1 : 0;
+
+20190212064259658004015.c:223: note: vect_recog_bool_pattern: detected: 
+20190212064259658004015.c:223: note: pattern recognized: patt_113 = (int) patt_231;
+
+20190212064259658004015.c:223: note: additional pattern stmt: patt_231 = _173 != &g_242 ? 1 : 0;

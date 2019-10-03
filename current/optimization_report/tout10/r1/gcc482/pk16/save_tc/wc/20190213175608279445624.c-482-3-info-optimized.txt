@@ -1,0 +1,50 @@
+
+20190213175608279445624.c:427: note: Completely unroll loop 4 times
+
+Analyzing loop at 20190213175608279445624.c:395
+
+Analyzing loop at 20190213175608279445624.c:395
+
+Analyzing loop at 20190213175608279445624.c:356
+
+Analyzing loop at 20190213175608279445624.c:388
+
+20190213175608279445624.c:388: note: vect_recog_bool_pattern: detected: 
+20190213175608279445624.c:388: note: pattern recognized: patt_18 = patt_19;
+
+20190213175608279445624.c:388: note: additional pattern stmt: patt_19 = _75 == g_101_lsm.326_93 ? 1 : 0;
+
+20190213175608279445624.c:388: note: vect_recog_bool_pattern: detected: 
+20190213175608279445624.c:388: note: pattern recognized: patt_14 = patt_17;
+
+20190213175608279445624.c:388: note: additional pattern stmt: patt_17 = pretmp_25 != _163 ? 1 : 0;
+
+20190213175608279445624.c:349: note: vectorized 0 loops in function.
+
+20190213175608279445624.c:395: note: Completely unroll loop 10 times
+
+20190213175608279445624.c:395: note: Completely unroll loop 10 times
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:59: note: Completely unroll loop 8 times
+
+Analyzing loop at 20190213175608279445624.c:264
+
+Analyzing loop at /project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57
+
+
+Vectorizing loop at /project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: LOOP VECTORIZED.
+20190213175608279445624.c:471: note: vectorized 1 loops in function.
+
+20190213175608279445624.c:264: note: Completely unroll loop 6 times
+
+20190213175608279445624.c:72: note: vect_recog_bool_pattern: detected: 
+20190213175608279445624.c:72: note: pattern recognized: patt_162 = (int) patt_27;
+
+20190213175608279445624.c:72: note: additional pattern stmt: patt_27 = g_3.30_95 != 1 ? 1 : 0;
+
+20190213175608279445624.c:141: note: vect_recog_bool_pattern: detected: 
+20190213175608279445624.c:141: note: pattern recognized: patt_357 = (unsigned int) patt_359;
+
+20190213175608279445624.c:141: note: additional pattern stmt: patt_359 = iftmp.192_179 != 8 ? 1 : 0;

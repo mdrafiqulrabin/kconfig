@@ -1,0 +1,6 @@
+#include "csmith.h"
+a;
+main() {
+  a = __builtin_ffsll;
+  printf(a);
+}

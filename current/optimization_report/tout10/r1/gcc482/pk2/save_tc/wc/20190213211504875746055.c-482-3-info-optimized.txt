@@ -1,0 +1,86 @@
+
+20190213211504875746055.c:575: note: vect_recog_bool_pattern: detected: 
+20190213211504875746055.c:575: note: pattern recognized: patt_18 = (int) patt_95;
+
+20190213211504875746055.c:575: note: additional pattern stmt: patt_95 = p_90_5(D) == iftmp.308_31 ? 1 : 0;
+
+Analyzing loop at 20190213211504875746055.c:393
+
+20190213211504875746055.c:386: note: vectorized 0 loops in function.
+
+20190213211504875746055.c:393: note: Completely unroll loop 3 times
+
+20190213211504875746055.c:402: note: created pattern stmt: patt_25 = _107 & 65535;
+
+20190213211504875746055.c:402: note: vect_recog_over_widening_pattern: detected: patt_25 = _107 & 65535;
+
+20190213211504875746055.c:402: note: pattern recognized: patt_25 = _107 & 65535;
+
+20190213211504875746055.c:402: note: created pattern stmt: patt_29 = _13 & 65535;
+
+20190213211504875746055.c:402: note: vect_recog_over_widening_pattern: detected: patt_29 = _13 & 65535;
+
+20190213211504875746055.c:402: note: pattern recognized: patt_29 = _13 & 65535;
+
+20190213211504875746055.c:402: note: created pattern stmt: patt_72 = _113 & 65535;
+
+20190213211504875746055.c:402: note: vect_recog_over_widening_pattern: detected: patt_72 = _113 & 65535;
+
+20190213211504875746055.c:402: note: pattern recognized: patt_72 = _113 & 65535;
+
+20190213211504875746055.c:555: note: vect_recog_bool_pattern: detected: 
+20190213211504875746055.c:555: note: pattern recognized: patt_177 = (int) patt_178;
+
+20190213211504875746055.c:555: note: additional pattern stmt: patt_178 = l_102_30 > g_12.318_80 ? 1 : 0;
+
+20190213211504875746055.c:575: note: vect_recog_bool_pattern: detected: 
+20190213211504875746055.c:575: note: pattern recognized: patt_238 = (int) patt_156;
+
+20190213211504875746055.c:575: note: additional pattern stmt: patt_156 = iftmp.308_120 == 1 ? 1 : 0;
+
+20190213211504875746055.c:575: note: vect_recog_bool_pattern: detected: 
+20190213211504875746055.c:575: note: pattern recognized: patt_231 = (int) patt_234;
+
+20190213211504875746055.c:575: note: additional pattern stmt: patt_234 = l_158_24 == iftmp.308_169 ? 1 : 0;
+
+Analyzing loop at 20190213211504875746055.c:305
+
+Analyzing loop at 20190213211504875746055.c:355
+
+20190213211504875746055.c:289: note: vectorized 0 loops in function.
+
+20190213211504875746055.c:333: note: vect_recog_bool_pattern: detected: 
+20190213211504875746055.c:333: note: pattern recognized: patt_337 = (short unsigned int) patt_96;
+
+20190213211504875746055.c:333: note: additional pattern stmt: patt_96 = _113 > 3678533927 ? 1 : 0;
+
+20190213211504875746055.c:333: note: vect_recog_bool_pattern: detected: 
+20190213211504875746055.c:333: note: pattern recognized: patt_56 = (int) patt_55;
+
+20190213211504875746055.c:333: note: additional pattern stmt: patt_55 = l_169_54 == 0 ? 1 : 0;
+
+20190213211504875746055.c:351: note: vect_recog_bool_pattern: detected: 
+20190213211504875746055.c:351: note: pattern recognized: patt_129 = (unsigned int) patt_64;
+
+20190213211504875746055.c:351: note: additional pattern stmt: patt_64 = iftmp.306_226 <= 8563 ? 1 : 0;
+
+20190213211504875746055.c:367: note: vect_recog_bool_pattern: detected: 
+20190213211504875746055.c:367: note: pattern recognized: patt_267 = (short int) patt_17;
+
+20190213211504875746055.c:367: note: additional pattern stmt: patt_174 = _166 <= 351330114 ? 1 : 0;
+
+20190213211504875746055.c:367: note: additional pattern stmt: patt_172 = p_44.288_162 > 744507550 ? 1 : 0;
+
+20190213211504875746055.c:367: note: additional pattern stmt: patt_17 = patt_174 ^ patt_172;
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:59: note: Completely unroll loop 8 times
+
+Analyzing loop at 20190213211504875746055.c:97
+
+Analyzing loop at /project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57
+
+
+Vectorizing loop at /project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: LOOP VECTORIZED.
+20190213211504875746055.c:625: note: vectorized 1 loops in function.

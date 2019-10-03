@@ -1,0 +1,7 @@
+#include "csmith.h"
+a;
+main() {
+  for (; a <= 0; a = safe_sub_func_int32_t_s_s)
+    ;
+  printf(a);
+}

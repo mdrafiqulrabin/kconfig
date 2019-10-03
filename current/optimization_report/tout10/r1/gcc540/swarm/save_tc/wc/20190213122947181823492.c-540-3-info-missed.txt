@@ -1,0 +1,1374 @@
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:73:25: note: not consecutive access _10 = crc32_tab[_9];
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:73:25: note: not consecutive access _15 = crc32_tab[_14];
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:73:25: note: not consecutive access _20 = crc32_tab[_19];
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:73:25: note: not consecutive access _26 = crc32_tab[_25];
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:73:25: note: not consecutive access crc32_context.356_22 = crc32_context;
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:73:25: note: not consecutive access crc32_context = crc32_context.357_11;
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:73:25: note: Failed to SLP the basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:73:25: note: not vectorized: failed to find SLP opportunities in basic block.
+20190213122947181823492.c:501:5: note: not vectorized: control flow in loop.
+20190213122947181823492.c:501:5: note: bad loop form.
+20190213122947181823492.c:501:5: note: not vectorized: control flow in loop.
+20190213122947181823492.c:501:5: note: bad loop form.
+20190213122947181823492.c:484:18: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:515:17: note: not consecutive access _264 = *p_50_260;
+
+20190213122947181823492.c:515:17: note: not consecutive access *p_50_260 = _265;
+
+20190213122947181823492.c:515:17: note: Failed to SLP the basic block.
+20190213122947181823492.c:515:17: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = g_42.336_273;
+
+20190213122947181823492.c:516:15: note: not consecutive access _280 = MEM[(int32_t *)&g_152];
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_270;
+
+20190213122947181823492.c:516:15: note: not consecutive access MEM[(int32_t *)&g_152] = _281;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = g_42.336_289;
+
+20190213122947181823492.c:516:15: note: not consecutive access _296 = MEM[(int32_t *)&g_152];
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_286;
+
+20190213122947181823492.c:516:15: note: not consecutive access MEM[(int32_t *)&g_152] = _297;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = g_42.336_305;
+
+20190213122947181823492.c:516:15: note: not consecutive access _312 = MEM[(int32_t *)&g_152];
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_302;
+
+20190213122947181823492.c:516:15: note: not consecutive access MEM[(int32_t *)&g_152] = _313;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = g_42.336_321;
+
+20190213122947181823492.c:516:15: note: not consecutive access _328 = MEM[(int32_t *)&g_152];
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_318;
+
+20190213122947181823492.c:516:15: note: not consecutive access MEM[(int32_t *)&g_152] = _329;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = g_42.336_337;
+
+20190213122947181823492.c:516:15: note: not consecutive access _344 = MEM[(int32_t *)&g_152];
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_334;
+
+20190213122947181823492.c:516:15: note: not consecutive access MEM[(int32_t *)&g_152] = _345;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = g_42.336_353;
+
+20190213122947181823492.c:516:15: note: not consecutive access _360 = MEM[(int32_t *)&g_152];
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_350;
+
+20190213122947181823492.c:516:15: note: not consecutive access MEM[(int32_t *)&g_152] = _361;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = g_42.336_369;
+
+20190213122947181823492.c:516:15: note: not consecutive access _376 = MEM[(int32_t *)&g_152];
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_366;
+
+20190213122947181823492.c:516:15: note: not consecutive access MEM[(int32_t *)&g_152] = _377;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = g_42.336_385;
+
+20190213122947181823492.c:516:15: note: not consecutive access _392 = MEM[(int32_t *)&g_152];
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_382;
+
+20190213122947181823492.c:516:15: note: not consecutive access MEM[(int32_t *)&g_152] = _393;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = g_42.336_401;
+
+20190213122947181823492.c:516:15: note: not consecutive access _408 = MEM[(int32_t *)&g_152];
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_398;
+
+20190213122947181823492.c:516:15: note: not consecutive access MEM[(int32_t *)&g_152] = _409;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = g_42.336_417;
+
+20190213122947181823492.c:516:15: note: not consecutive access _424 = MEM[(int32_t *)&g_152];
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_414;
+
+20190213122947181823492.c:516:15: note: not consecutive access MEM[(int32_t *)&g_152] = _425;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = g_42.336_433;
+
+20190213122947181823492.c:516:15: note: not consecutive access _440 = MEM[(int32_t *)&g_152];
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_430;
+
+20190213122947181823492.c:516:15: note: not consecutive access MEM[(int32_t *)&g_152] = _441;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = g_42.336_449;
+
+20190213122947181823492.c:516:15: note: not consecutive access _12 = MEM[(int32_t *)&g_152];
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_446;
+
+20190213122947181823492.c:516:15: note: not consecutive access MEM[(int32_t *)&g_152] = _13;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+20190213122947181823492.c:515:17: note: not consecutive access _26 = *p_50_2;
+
+20190213122947181823492.c:515:17: note: not consecutive access *p_50_2 = _49;
+
+20190213122947181823492.c:515:17: note: Failed to SLP the basic block.
+20190213122947181823492.c:515:17: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = g_42.336_59;
+
+20190213122947181823492.c:516:15: note: not consecutive access _66 = MEM[(int32_t *)&g_152];
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_56;
+
+20190213122947181823492.c:516:15: note: not consecutive access MEM[(int32_t *)&g_152] = _67;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = g_42.336_77;
+
+20190213122947181823492.c:516:15: note: not consecutive access _84 = MEM[(int32_t *)&g_152];
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_74;
+
+20190213122947181823492.c:516:15: note: not consecutive access MEM[(int32_t *)&g_152] = _85;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = g_42.336_95;
+
+20190213122947181823492.c:516:15: note: not consecutive access _102 = MEM[(int32_t *)&g_152];
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_92;
+
+20190213122947181823492.c:516:15: note: not consecutive access MEM[(int32_t *)&g_152] = _103;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = g_42.336_113;
+
+20190213122947181823492.c:516:15: note: not consecutive access _120 = MEM[(int32_t *)&g_152];
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_110;
+
+20190213122947181823492.c:516:15: note: not consecutive access MEM[(int32_t *)&g_152] = _121;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = g_42.336_131;
+
+20190213122947181823492.c:516:15: note: not consecutive access _138 = MEM[(int32_t *)&g_152];
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_128;
+
+20190213122947181823492.c:516:15: note: not consecutive access MEM[(int32_t *)&g_152] = _139;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = g_42.336_149;
+
+20190213122947181823492.c:516:15: note: not consecutive access _156 = MEM[(int32_t *)&g_152];
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_146;
+
+20190213122947181823492.c:516:15: note: not consecutive access MEM[(int32_t *)&g_152] = _157;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = g_42.336_167;
+
+20190213122947181823492.c:516:15: note: not consecutive access _174 = MEM[(int32_t *)&g_152];
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_164;
+
+20190213122947181823492.c:516:15: note: not consecutive access MEM[(int32_t *)&g_152] = _175;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = g_42.336_185;
+
+20190213122947181823492.c:516:15: note: not consecutive access _192 = MEM[(int32_t *)&g_152];
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_182;
+
+20190213122947181823492.c:516:15: note: not consecutive access MEM[(int32_t *)&g_152] = _193;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = g_42.336_203;
+
+20190213122947181823492.c:516:15: note: not consecutive access _210 = MEM[(int32_t *)&g_152];
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_200;
+
+20190213122947181823492.c:516:15: note: not consecutive access MEM[(int32_t *)&g_152] = _211;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = g_42.336_221;
+
+20190213122947181823492.c:516:15: note: not consecutive access _228 = MEM[(int32_t *)&g_152];
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_218;
+
+20190213122947181823492.c:516:15: note: not consecutive access MEM[(int32_t *)&g_152] = _229;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = g_42.336_239;
+
+20190213122947181823492.c:516:15: note: not consecutive access _246 = MEM[(int32_t *)&g_152];
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_236;
+
+20190213122947181823492.c:516:15: note: not consecutive access MEM[(int32_t *)&g_152] = _247;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = g_42.336_257;
+
+20190213122947181823492.c:516:15: note: not consecutive access _7 = MEM[(int32_t *)&g_152];
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_254;
+
+20190213122947181823492.c:516:15: note: not consecutive access MEM[(int32_t *)&g_152] = _11;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = g_42.336_25;
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_32;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = g_42.336_22;
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_16;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+20190213122947181823492.c:519:16: note: not vectorized: not enough data-refs in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:124:5: note: not vectorized: not suitable for gather load _12 = crc32_tab[_11];
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:124:5: note: bad data references.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:125:23: note: not consecutive access _51 = crc32_tab[_7];
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:125:23: note: not consecutive access _12 = crc32_tab[_11];
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:125:23: note: not consecutive access _31 = crc32_tab[_32];
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:125:23: note: not consecutive access _67 = crc32_tab[_66];
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:125:23: note: not consecutive access pretmp_38 = crc32_context;
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:125:23: note: not consecutive access crc32_context = crc32_context.357_13;
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:125:23: note: Failed to SLP the basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:125:23: note: not vectorized: failed to find SLP opportunities in basic block.
+20190213122947181823492.c:1425:5: note: not vectorized: not suitable for gather load _630 = crc32_tab[_629];
+
+20190213122947181823492.c:1425:5: note: bad data references.
+20190213122947181823492.c:1413:5: note: not vectorized: volatile type _27 ={v} g_734[i_165][j_1470][0];
+
+20190213122947181823492.c:1413:5: note: bad data references.
+20190213122947181823492.c:1415:9: note: not vectorized: volatile type _27 ={v} g_734[i_165][j_1470][0];
+
+20190213122947181823492.c:1415:9: note: bad data references.
+20190213122947181823492.c:1387:5: note: not vectorized: data ref analysis failed _1066 = crc32_tab[_1065];
+
+20190213122947181823492.c:1387:5: note: bad data references.
+20190213122947181823492.c:1389:9: note: not vectorized: not suitable for gather load _1066 = crc32_tab[_1065];
+
+20190213122947181823492.c:1389:9: note: bad data references.
+20190213122947181823492.c:1376:5: note: not vectorized: volatile type _49 ={v} g_123[i_386];
+
+20190213122947181823492.c:1376:5: note: bad data references.
+20190213122947181823492.c:1366:5: note: not vectorized: not suitable for gather load _1318 = crc32_tab[_1317];
+
+20190213122947181823492.c:1366:5: note: bad data references.
+20190213122947181823492.c:1360:5: note: not vectorized: not suitable for gather load _500 = crc32_tab[_499];
+
+20190213122947181823492.c:1360:5: note: bad data references.
+20190213122947181823492.c:164:29: note: not vectorized: multiple nested loops.
+20190213122947181823492.c:164:29: note: bad loop form.
+20190213122947181823492.c:165:17: note: not vectorized: multiple nested loops.
+20190213122947181823492.c:165:17: note: bad loop form.
+20190213122947181823492.c:194:21: note: not vectorized: multiple nested loops.
+20190213122947181823492.c:194:21: note: bad loop form.
+20190213122947181823492.c:501:5: note: not vectorized: control flow in loop.
+20190213122947181823492.c:501:5: note: bad loop form.
+20190213122947181823492.c:501:5: note: not vectorized: control flow in loop.
+20190213122947181823492.c:501:5: note: bad loop form.
+20190213122947181823492.c:187:21: note: not vectorized: number of iterations cannot be computed.
+20190213122947181823492.c:187:21: note: bad loop form.
+20190213122947181823492.c:168:21: note: not vectorized: unsupported data-type
+20190213122947181823492.c:168:21: note: can't determine vectorization factor.
+20190213122947181823492.c:1349:5: note: not vectorized: multiple nested loops.
+20190213122947181823492.c:1349:5: note: bad loop form.
+20190213122947181823492.c:268:13: note: not vectorized: multiple nested loops.
+20190213122947181823492.c:268:13: note: bad loop form.
+20190213122947181823492.c:282:17: note: not vectorized: multiple nested loops.
+20190213122947181823492.c:282:17: note: bad loop form.
+20190213122947181823492.c:308:21: note: not vectorized: multiple nested loops.
+20190213122947181823492.c:308:21: note: bad loop form.
+20190213122947181823492.c:548:5: note: not vectorized: volatile type _457 ={v} MEM[(volatile int32_t *)&g_123 + 4B];
+
+20190213122947181823492.c:548:5: note: bad data references.
+20190213122947181823492.c:555:9: note: not vectorized: volatile type _457 ={v} MEM[(volatile int32_t *)&g_123 + 4B];
+
+20190213122947181823492.c:555:9: note: bad data references.
+20190213122947181823492.c:501:5: note: not vectorized: control flow in loop.
+20190213122947181823492.c:501:5: note: bad loop form.
+20190213122947181823492.c:501:5: note: not vectorized: control flow in loop.
+20190213122947181823492.c:501:5: note: bad loop form.
+20190213122947181823492.c:360:5: note: not vectorized: volatile type _393 ={v} MEM[(volatile int32_t *)&g_123 + 20B];
+
+20190213122947181823492.c:360:5: note: bad data references.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57:2: note: misalign = 0 bytes of ref crc32_tab[i_1468]
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57:2: note: virtual phi. skip.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57:2: note: no optab.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57:2: note: not ssa-name.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57:2: note: use not simple.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57:2: note: not ssa-name.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57:2: note: use not simple.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57:2: note: not ssa-name.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57:2: note: use not simple.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57:2: note: not ssa-name.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57:2: note: use not simple.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57:2: note: not ssa-name.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57:2: note: use not simple.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57:2: note: not ssa-name.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57:2: note: use not simple.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57:2: note: not ssa-name.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57:2: note: use not simple.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57:2: note: not ssa-name.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57:2: note: use not simple.
+20190213122947181823492.c:1349:5: note: not vectorized: not enough data-refs in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:58:7: note: not vectorized: no vectype for stmt: MEM[(unsigned int *)vectp_crc32_tab.521_2822] = vect_crc_1616.519_2824;
+ scalar_type: vector(4) unsigned int
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:58:7: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:1349:5: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:472:16: note: not vectorized: volatile type _3133 ={v} MEM[(volatile int32_t *)&g_123 + 20B];
+
+20190213122947181823492.c:472:16: note: not consecutive access g_42 = 3;
+
+20190213122947181823492.c:472:16: note: not consecutive access g_503 = 3.2e+1;
+
+20190213122947181823492.c:472:16: note: not consecutive access p_37_164 = g_560;
+
+20190213122947181823492.c:472:16: note: Failed to SLP the basic block.
+20190213122947181823492.c:472:16: note: not vectorized: failed to find SLP opportunities in basic block.
+20190213122947181823492.c:369:80: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:125:91: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:1349:5: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:125:175: note: not consecutive access g_177 = 1;
+
+20190213122947181823492.c:125:175: note: not consecutive access g_1236.45_187 = g_1236;
+
+20190213122947181823492.c:125:175: note: not consecutive access *_166 = _189;
+
+20190213122947181823492.c:125:175: note: Failed to SLP the basic block.
+20190213122947181823492.c:125:175: note: not vectorized: failed to find SLP opportunities in basic block.
+20190213122947181823492.c:141:27: note: not consecutive access _1457 = g_790[1];
+
+20190213122947181823492.c:141:27: note: not consecutive access _1471 = g_790[1];
+
+20190213122947181823492.c:141:27: note: not consecutive access *_166 = _1461;
+
+20190213122947181823492.c:141:27: note: Failed to SLP the basic block.
+20190213122947181823492.c:141:27: note: not vectorized: failed to find SLP opportunities in basic block.
+20190213122947181823492.c:141:27: note: not consecutive access g_29 = _195;
+
+20190213122947181823492.c:141:27: note: SLP: step doesn't divide the vector-size.
+20190213122947181823492.c:141:27: note: Unknown alignment for access: g_790[_192]
+20190213122947181823492.c:141:27: note: SLP: step doesn't divide the vector-size.
+20190213122947181823492.c:141:27: note: Unknown alignment for access: g_790[_192]
+20190213122947181823492.c:141:27: note: Failed to SLP the basic block.
+20190213122947181823492.c:141:27: note: not vectorized: failed to find SLP opportunities in basic block.
+20190213122947181823492.c:1349:5: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:145:21: note: not consecutive access g_1101 = 0;
+
+20190213122947181823492.c:145:21: note: not consecutive access l_1360 = 533344804;
+
+20190213122947181823492.c:145:21: note: Failed to SLP the basic block.
+20190213122947181823492.c:145:21: note: not vectorized: failed to find SLP opportunities in basic block.
+20190213122947181823492.c:1349:5: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:164:29: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:164:29: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:1349:5: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:185:26: note: not consecutive access g_376 = 6;
+
+20190213122947181823492.c:185:26: note: not consecutive access *_174 = 0;
+
+20190213122947181823492.c:185:26: note: not consecutive access _220 = *prephitmp_3025;
+
+20190213122947181823492.c:185:26: note: Failed to SLP the basic block.
+20190213122947181823492.c:185:26: note: not vectorized: failed to find SLP opportunities in basic block.
+20190213122947181823492.c:187:32: note: not consecutive access pretmp_3035 = g_177;
+
+20190213122947181823492.c:187:32: note: not consecutive access g_593 = 5;
+
+20190213122947181823492.c:187:32: note: Failed to SLP the basic block.
+20190213122947181823492.c:187:32: note: not vectorized: failed to find SLP opportunities in basic block.
+20190213122947181823492.c:191:35: note: not consecutive access _225 = g_560;
+
+20190213122947181823492.c:191:35: note: not consecutive access g_560 = _228;
+
+20190213122947181823492.c:191:35: note: not consecutive access g_593.54_231 = g_593;
+
+20190213122947181823492.c:191:35: note: not consecutive access g_593 = g_593.56_234;
+
+20190213122947181823492.c:191:35: note: not consecutive access _230 = MEM[(int32_t *)&g_790][pretmp_3037];
+
+20190213122947181823492.c:191:35: note: not consecutive access *_174 = _230;
+
+20190213122947181823492.c:191:35: note: Failed to SLP the basic block.
+20190213122947181823492.c:191:35: note: not vectorized: failed to find SLP opportunities in basic block.
+20190213122947181823492.c:1349:5: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:194:33: note: not consecutive access g_630 = g_630_lsm.438_2853;
+
+20190213122947181823492.c:194:33: note: not consecutive access g_1356 = 0;
+
+20190213122947181823492.c:194:33: note: Failed to SLP the basic block.
+20190213122947181823492.c:194:33: note: not vectorized: failed to find SLP opportunities in basic block.
+20190213122947181823492.c:202:81: note: not consecutive access g_189.58_238 = g_189;
+
+20190213122947181823492.c:202:81: note: not consecutive access _243 = g_790[_242];
+
+20190213122947181823492.c:202:81: note: not consecutive access _239 = *g_189.58_238;
+
+20190213122947181823492.c:202:81: note: not consecutive access _240 = *_239;
+
+20190213122947181823492.c:202:81: note: Failed to SLP the basic block.
+20190213122947181823492.c:202:81: note: not vectorized: failed to find SLP opportunities in basic block.
+20190213122947181823492.c:515:17: note: not consecutive access _1770 = *p_50_1774;
+
+20190213122947181823492.c:515:17: note: not consecutive access *p_50_1774 = _1769;
+
+20190213122947181823492.c:515:17: note: Failed to SLP the basic block.
+20190213122947181823492.c:515:17: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = 1;
+
+20190213122947181823492.c:516:15: note: not consecutive access _1754 = MEM[(int32_t *)&g_152];
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_1764;
+
+20190213122947181823492.c:516:15: note: not consecutive access MEM[(int32_t *)&g_152] = _1753;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = 2;
+
+20190213122947181823492.c:516:15: note: not consecutive access _1738 = MEM[(int32_t *)&g_152];
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_1748;
+
+20190213122947181823492.c:516:15: note: not consecutive access MEM[(int32_t *)&g_152] = _1737;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = 3;
+
+20190213122947181823492.c:516:15: note: not consecutive access _1722 = MEM[(int32_t *)&g_152];
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_1732;
+
+20190213122947181823492.c:516:15: note: not consecutive access MEM[(int32_t *)&g_152] = _1721;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = 4;
+
+20190213122947181823492.c:516:15: note: not consecutive access _1706 = MEM[(int32_t *)&g_152];
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_1716;
+
+20190213122947181823492.c:516:15: note: not consecutive access MEM[(int32_t *)&g_152] = _1705;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = 5;
+
+20190213122947181823492.c:516:15: note: not consecutive access _1690 = MEM[(int32_t *)&g_152];
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_1700;
+
+20190213122947181823492.c:516:15: note: not consecutive access MEM[(int32_t *)&g_152] = _1689;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = 6;
+
+20190213122947181823492.c:516:15: note: not consecutive access _1674 = MEM[(int32_t *)&g_152];
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_1684;
+
+20190213122947181823492.c:516:15: note: not consecutive access MEM[(int32_t *)&g_152] = _1673;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = 7;
+
+20190213122947181823492.c:516:15: note: not consecutive access _1658 = MEM[(int32_t *)&g_152];
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_1668;
+
+20190213122947181823492.c:516:15: note: not consecutive access MEM[(int32_t *)&g_152] = _1657;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = 8;
+
+20190213122947181823492.c:516:15: note: not consecutive access _1642 = MEM[(int32_t *)&g_152];
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_1652;
+
+20190213122947181823492.c:516:15: note: not consecutive access MEM[(int32_t *)&g_152] = _1641;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = 9;
+
+20190213122947181823492.c:516:15: note: not consecutive access _1626 = MEM[(int32_t *)&g_152];
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_1636;
+
+20190213122947181823492.c:516:15: note: not consecutive access MEM[(int32_t *)&g_152] = _1625;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = 10;
+
+20190213122947181823492.c:516:15: note: not consecutive access _1595 = MEM[(int32_t *)&g_152];
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_1620;
+
+20190213122947181823492.c:516:15: note: not consecutive access MEM[(int32_t *)&g_152] = _1594;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = 11;
+
+20190213122947181823492.c:516:15: note: not consecutive access _1554 = MEM[(int32_t *)&g_152];
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_1579;
+
+20190213122947181823492.c:516:15: note: not consecutive access MEM[(int32_t *)&g_152] = _1553;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = 12;
+
+20190213122947181823492.c:516:15: note: not consecutive access _412 = MEM[(int32_t *)&g_152];
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_1546;
+
+20190213122947181823492.c:516:15: note: not consecutive access MEM[(int32_t *)&g_152] = _413;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+20190213122947181823492.c:515:17: note: not consecutive access _1986 = *p_50_1990;
+
+20190213122947181823492.c:515:17: note: not consecutive access *p_50_1990 = _1985;
+
+20190213122947181823492.c:515:17: note: Failed to SLP the basic block.
+20190213122947181823492.c:515:17: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = 1;
+
+20190213122947181823492.c:516:15: note: not consecutive access _1968 = MEM[(int32_t *)&g_152];
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_1978;
+
+20190213122947181823492.c:516:15: note: not consecutive access MEM[(int32_t *)&g_152] = _1967;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = 2;
+
+20190213122947181823492.c:516:15: note: not consecutive access _1950 = MEM[(int32_t *)&g_152];
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_1960;
+
+20190213122947181823492.c:516:15: note: not consecutive access MEM[(int32_t *)&g_152] = _1949;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = 3;
+
+20190213122947181823492.c:516:15: note: not consecutive access _1932 = MEM[(int32_t *)&g_152];
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_1942;
+
+20190213122947181823492.c:516:15: note: not consecutive access MEM[(int32_t *)&g_152] = _1931;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = 4;
+
+20190213122947181823492.c:516:15: note: not consecutive access _1914 = MEM[(int32_t *)&g_152];
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_1924;
+
+20190213122947181823492.c:516:15: note: not consecutive access MEM[(int32_t *)&g_152] = _1913;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = 5;
+
+20190213122947181823492.c:516:15: note: not consecutive access _1896 = MEM[(int32_t *)&g_152];
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_1906;
+
+20190213122947181823492.c:516:15: note: not consecutive access MEM[(int32_t *)&g_152] = _1895;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = 6;
+
+20190213122947181823492.c:516:15: note: not consecutive access _1878 = MEM[(int32_t *)&g_152];
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_1888;
+
+20190213122947181823492.c:516:15: note: not consecutive access MEM[(int32_t *)&g_152] = _1877;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = 7;
+
+20190213122947181823492.c:516:15: note: not consecutive access _1860 = MEM[(int32_t *)&g_152];
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_1870;
+
+20190213122947181823492.c:516:15: note: not consecutive access MEM[(int32_t *)&g_152] = _1859;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = 8;
+
+20190213122947181823492.c:516:15: note: not consecutive access _1842 = MEM[(int32_t *)&g_152];
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_1852;
+
+20190213122947181823492.c:516:15: note: not consecutive access MEM[(int32_t *)&g_152] = _1841;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = 9;
+
+20190213122947181823492.c:516:15: note: not consecutive access _1824 = MEM[(int32_t *)&g_152];
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_1834;
+
+20190213122947181823492.c:516:15: note: not consecutive access MEM[(int32_t *)&g_152] = _1823;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = 10;
+
+20190213122947181823492.c:516:15: note: not consecutive access _1806 = MEM[(int32_t *)&g_152];
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_1816;
+
+20190213122947181823492.c:516:15: note: not consecutive access MEM[(int32_t *)&g_152] = _1805;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = 11;
+
+20190213122947181823492.c:516:15: note: not consecutive access _1788 = MEM[(int32_t *)&g_152];
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_1798;
+
+20190213122947181823492.c:516:15: note: not consecutive access MEM[(int32_t *)&g_152] = _1787;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = 12;
+
+20190213122947181823492.c:516:15: note: not consecutive access _2517 = MEM[(int32_t *)&g_152];
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_1780;
+
+20190213122947181823492.c:516:15: note: not consecutive access MEM[(int32_t *)&g_152] = _2514;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = 13;
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_2895;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = 13;
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_423;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+20190213122947181823492.c:519:16: note: not consecutive access _251 = g_148;
+
+20190213122947181823492.c:519:16: note: not consecutive access g_376 = _254;
+
+20190213122947181823492.c:519:16: note: not consecutive access g_593 = 4294967272;
+
+20190213122947181823492.c:519:16: note: not consecutive access g_1356 = g_1356.66_256;
+
+20190213122947181823492.c:519:16: note: not consecutive access *_240 = &g_29;
+
+20190213122947181823492.c:519:16: note: not consecutive access *_251 = _254;
+
+20190213122947181823492.c:519:16: note: Failed to SLP the basic block.
+20190213122947181823492.c:519:16: note: not vectorized: failed to find SLP opportunities in basic block.
+20190213122947181823492.c:1349:5: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:1349:5: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:165:53: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:1349:5: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:205:22: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:1349:5: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:218:35: note: not consecutive access g_152 = _1421;
+
+20190213122947181823492.c:218:35: note: not consecutive access g_630 = &l_1360;
+
+20190213122947181823492.c:218:35: note: not consecutive access g_1101.71_273 = g_1101;
+
+20190213122947181823492.c:218:35: note: not consecutive access g_1101 = g_1101.72_274;
+
+20190213122947181823492.c:218:35: note: not consecutive access _1420 = l_1360;
+
+20190213122947181823492.c:218:35: note: Failed to SLP the basic block.
+20190213122947181823492.c:218:35: note: not vectorized: failed to find SLP opportunities in basic block.
+20190213122947181823492.c:1349:5: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:225:24: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:1349:5: note: not consecutive access pretmp_2367 = g_42;
+
+20190213122947181823492.c:1349:5: note: not consecutive access pretmp_2369 = g_169;
+
+20190213122947181823492.c:1349:5: note: not consecutive access pretmp_2371 = g_175;
+
+20190213122947181823492.c:1349:5: note: not consecutive access pretmp_2377 = g_1077;
+
+20190213122947181823492.c:1349:5: note: Failed to SLP the basic block.
+20190213122947181823492.c:1349:5: note: not vectorized: failed to find SLP opportunities in basic block.
+20190213122947181823492.c:1349:5: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:1349:5: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:666:14: note: not vectorized: volatile type MEM[(volatile int32_t *)&g_123 + 4B] ={v} 65533;
+
+20190213122947181823492.c:666:14: note: not vectorized: not enough data-refs in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:960:20: note: not consecutive access g_29 = 0;
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:960:20: note: not consecutive access g_503 = iftmp.332_305;
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:960:20: note: Failed to SLP the basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:960:20: note: not vectorized: failed to find SLP opportunities in basic block.
+20190213122947181823492.c:1349:5: note: not consecutive access pretmp_2977 = g_700;
+
+20190213122947181823492.c:1349:5: note: not consecutive access pretmp_2979 = *pretmp_2977;
+
+20190213122947181823492.c:1349:5: note: not consecutive access pretmp_2981 = *pretmp_2979;
+
+20190213122947181823492.c:1349:5: note: not consecutive access pretmp_2983 = *pretmp_2981;
+
+20190213122947181823492.c:1349:5: note: Failed to SLP the basic block.
+20190213122947181823492.c:1349:5: note: not vectorized: failed to find SLP opportunities in basic block.
+20190213122947181823492.c:291:57: note: not vectorized: volatile type g_1288.86_311 ={v} g_1288;
+
+20190213122947181823492.c:291:57: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:1349:5: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:666:14: note: not vectorized: volatile type MEM[(volatile int32_t *)&g_123 + 4B] ={v} 65533;
+
+20190213122947181823492.c:666:14: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:1349:5: note: not vectorized: not enough data-refs in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:959:18: note: not vectorized: not enough data-refs in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:960:20: note: not vectorized: not enough data-refs in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = 13;
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_486;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+20190213122947181823492.c:1349:5: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:515:17: note: not consecutive access _539 = *p_50_543;
+
+20190213122947181823492.c:515:17: note: not consecutive access *p_50_543 = _538;
+
+20190213122947181823492.c:515:17: note: Failed to SLP the basic block.
+20190213122947181823492.c:515:17: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = 1;
+
+20190213122947181823492.c:516:15: note: not consecutive access _493 = MEM[(int32_t *)&g_152];
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_531;
+
+20190213122947181823492.c:516:15: note: not consecutive access MEM[(int32_t *)&g_152] = _492;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = 2;
+
+20190213122947181823492.c:516:15: note: not consecutive access _429 = MEM[(int32_t *)&g_152];
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_472;
+
+20190213122947181823492.c:516:15: note: not consecutive access MEM[(int32_t *)&g_152] = _428;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = 3;
+
+20190213122947181823492.c:516:15: note: not consecutive access _375 = MEM[(int32_t *)&g_152];
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_408;
+
+20190213122947181823492.c:516:15: note: not consecutive access MEM[(int32_t *)&g_152] = _372;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = 4;
+
+20190213122947181823492.c:516:15: note: not consecutive access _317 = MEM[(int32_t *)&g_152];
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_361;
+
+20190213122947181823492.c:516:15: note: not consecutive access MEM[(int32_t *)&g_152] = _315;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = 5;
+
+20190213122947181823492.c:516:15: note: not consecutive access _277 = MEM[(int32_t *)&g_152];
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_289;
+
+20190213122947181823492.c:516:15: note: not consecutive access MEM[(int32_t *)&g_152] = _276;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = 6;
+
+20190213122947181823492.c:516:15: note: not consecutive access _212 = MEM[(int32_t *)&g_152];
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_264;
+
+20190213122947181823492.c:516:15: note: not consecutive access MEM[(int32_t *)&g_152] = _208;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = 7;
+
+20190213122947181823492.c:516:15: note: not consecutive access _169 = MEM[(int32_t *)&g_152];
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_191;
+
+20190213122947181823492.c:516:15: note: not consecutive access MEM[(int32_t *)&g_152] = _168;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = 8;
+
+20190213122947181823492.c:516:15: note: not consecutive access _63 = MEM[(int32_t *)&g_152];
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_121;
+
+20190213122947181823492.c:516:15: note: not consecutive access MEM[(int32_t *)&g_152] = _62;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = 9;
+
+20190213122947181823492.c:516:15: note: not consecutive access _11 = MEM[(int32_t *)&g_152];
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_35;
+
+20190213122947181823492.c:516:15: note: not consecutive access MEM[(int32_t *)&g_152] = _10;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = 10;
+
+20190213122947181823492.c:516:15: note: not consecutive access _3014 = MEM[(int32_t *)&g_152];
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_2;
+
+20190213122947181823492.c:516:15: note: not consecutive access MEM[(int32_t *)&g_152] = _3011;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = 11;
+
+20190213122947181823492.c:516:15: note: not consecutive access _2585 = MEM[(int32_t *)&g_152];
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_2975;
+
+20190213122947181823492.c:516:15: note: not consecutive access MEM[(int32_t *)&g_152] = _2583;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = 12;
+
+20190213122947181823492.c:516:15: note: not consecutive access _2584 = MEM[(int32_t *)&g_152];
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_2572;
+
+20190213122947181823492.c:516:15: note: not consecutive access MEM[(int32_t *)&g_152] = _2586;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = 13;
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_2519;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+20190213122947181823492.c:515:17: note: not consecutive access _2562 = *p_50_2566;
+
+20190213122947181823492.c:515:17: note: not consecutive access *p_50_2566 = _2561;
+
+20190213122947181823492.c:515:17: note: Failed to SLP the basic block.
+20190213122947181823492.c:515:17: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = 1;
+
+20190213122947181823492.c:516:15: note: not consecutive access _2546 = MEM[(int32_t *)&g_152];
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_2556;
+
+20190213122947181823492.c:516:15: note: not consecutive access MEM[(int32_t *)&g_152] = _2545;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = 2;
+
+20190213122947181823492.c:516:15: note: not consecutive access _2530 = MEM[(int32_t *)&g_152];
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_2540;
+
+20190213122947181823492.c:516:15: note: not consecutive access MEM[(int32_t *)&g_152] = _2529;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = 3;
+
+20190213122947181823492.c:516:15: note: not consecutive access _2372 = MEM[(int32_t *)&g_152];
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_2518;
+
+20190213122947181823492.c:516:15: note: not consecutive access MEM[(int32_t *)&g_152] = _2363;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = 4;
+
+20190213122947181823492.c:516:15: note: not consecutive access _2984 = MEM[(int32_t *)&g_152];
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_2344;
+
+20190213122947181823492.c:516:15: note: not consecutive access MEM[(int32_t *)&g_152] = _800;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = 5;
+
+20190213122947181823492.c:516:15: note: not consecutive access _449 = MEM[(int32_t *)&g_152];
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_479;
+
+20190213122947181823492.c:516:15: note: not consecutive access MEM[(int32_t *)&g_152] = _450;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = 6;
+
+20190213122947181823492.c:516:15: note: not consecutive access _419 = MEM[(int32_t *)&g_152];
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_219;
+
+20190213122947181823492.c:516:15: note: not consecutive access MEM[(int32_t *)&g_152] = _252;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = 7;
+
+20190213122947181823492.c:516:15: note: not consecutive access _102 = MEM[(int32_t *)&g_152];
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_1313;
+
+20190213122947181823492.c:516:15: note: not consecutive access MEM[(int32_t *)&g_152] = _103;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = 8;
+
+20190213122947181823492.c:516:15: note: not consecutive access _3067 = MEM[(int32_t *)&g_152];
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_3057;
+
+20190213122947181823492.c:516:15: note: not consecutive access MEM[(int32_t *)&g_152] = _3068;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = 9;
+
+20190213122947181823492.c:516:15: note: not consecutive access _3083 = MEM[(int32_t *)&g_152];
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_3073;
+
+20190213122947181823492.c:516:15: note: not consecutive access MEM[(int32_t *)&g_152] = _3084;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = 10;
+
+20190213122947181823492.c:516:15: note: not consecutive access _3099 = MEM[(int32_t *)&g_152];
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_3089;
+
+20190213122947181823492.c:516:15: note: not consecutive access MEM[(int32_t *)&g_152] = _3100;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = 11;
+
+20190213122947181823492.c:516:15: note: not consecutive access _3115 = MEM[(int32_t *)&g_152];
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_3105;
+
+20190213122947181823492.c:516:15: note: not consecutive access MEM[(int32_t *)&g_152] = _3116;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:972:20: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:516:15: note: not consecutive access g_42 = 12;
+
+20190213122947181823492.c:516:15: note: not consecutive access _475 = MEM[(int32_t *)&g_152];
+
+20190213122947181823492.c:516:15: note: not consecutive access g_152 = iftmp.327_3121;
+
+20190213122947181823492.c:516:15: note: not consecutive access MEM[(int32_t *)&g_152] = _476;
+
+20190213122947181823492.c:516:15: note: Failed to SLP the basic block.
+20190213122947181823492.c:516:15: note: not vectorized: failed to find SLP opportunities in basic block.
+20190213122947181823492.c:519:16: note: not vectorized: volatile type g_1468.101_1453 ={v} g_1468;
+
+20190213122947181823492.c:519:16: note: not consecutive access g_28 = &g_29;
+
+20190213122947181823492.c:519:16: note: not consecutive access g_593 = 4294967272;
+
+20190213122947181823492.c:519:16: note: Failed to SLP the basic block.
+20190213122947181823492.c:519:16: note: not vectorized: failed to find SLP opportunities in basic block.
+20190213122947181823492.c:554:19: note: not vectorized: volatile type _1500 ={v} MEM[(volatile int32_t *)&g_123 + 4B];
+
+20190213122947181823492.c:554:19: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:1349:5: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:318:35: note: not consecutive access g_104 = 0;
+
+20190213122947181823492.c:318:35: note: not consecutive access g_179 = g_179.76_363;
+
+20190213122947181823492.c:318:35: note: Failed to SLP the basic block.
+20190213122947181823492.c:318:35: note: not vectorized: failed to find SLP opportunities in basic block.
+20190213122947181823492.c:282:45: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:1349:5: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:321:26: note: not vectorized: volatile type MEM[(volatile int32_t *)&g_123 + 4B] ={v} 32606;
+
+20190213122947181823492.c:321:26: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:1349:5: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:326:18: note: not vectorized: volatile type _376 ={v} MEM[(volatile int32_t *)&g_123 + 4B];
+
+20190213122947181823492.c:326:18: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:327:17: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:1349:5: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:126:41: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:1349:5: note: not consecutive access pretmp_3051 = g_376;
+
+20190213122947181823492.c:1349:5: note: not consecutive access pretmp_2375 = g_394;
+
+20190213122947181823492.c:1349:5: note: Failed to SLP the basic block.
+20190213122947181823492.c:1349:5: note: not vectorized: failed to find SLP opportunities in basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:90:2: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:1349:5: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:1393:44: note: not consecutive access _1066 = crc32_tab[_1065];
+
+20190213122947181823492.c:1393:44: note: not consecutive access _1074 = crc32_tab[_1073];
+
+20190213122947181823492.c:1393:44: note: not consecutive access _1082 = crc32_tab[_1081];
+
+20190213122947181823492.c:1393:44: note: not consecutive access _1089 = crc32_tab[_1088];
+
+20190213122947181823492.c:1393:44: note: not consecutive access _1102 = crc32_tab[_1101];
+
+20190213122947181823492.c:1393:44: note: not consecutive access _1110 = crc32_tab[_1109];
+
+20190213122947181823492.c:1393:44: note: not consecutive access _1118 = crc32_tab[_1117];
+
+20190213122947181823492.c:1393:44: note: not consecutive access _1125 = crc32_tab[_1124];
+
+20190213122947181823492.c:1393:44: note: not consecutive access _1138 = crc32_tab[_1137];
+
+20190213122947181823492.c:1393:44: note: not consecutive access _1146 = crc32_tab[_1145];
+
+20190213122947181823492.c:1393:44: note: not consecutive access _1154 = crc32_tab[_1153];
+
+20190213122947181823492.c:1393:44: note: not consecutive access _1161 = crc32_tab[_1160];
+
+20190213122947181823492.c:1393:44: note: not consecutive access _1174 = crc32_tab[_1173];
+
+20190213122947181823492.c:1393:44: note: not consecutive access _1182 = crc32_tab[_1181];
+
+20190213122947181823492.c:1393:44: note: not consecutive access _1190 = crc32_tab[_1189];
+
+20190213122947181823492.c:1393:44: note: not consecutive access _1197 = crc32_tab[_1196];
+
+20190213122947181823492.c:1393:44: note: not consecutive access _1210 = crc32_tab[_1209];
+
+20190213122947181823492.c:1393:44: note: not consecutive access _1218 = crc32_tab[_1217];
+
+20190213122947181823492.c:1393:44: note: not consecutive access _1226 = crc32_tab[_1225];
+
+20190213122947181823492.c:1393:44: note: not consecutive access _1233 = crc32_tab[_1232];
+
+20190213122947181823492.c:1393:44: note: not consecutive access _1246 = crc32_tab[_1245];
+
+20190213122947181823492.c:1393:44: note: not consecutive access _1254 = crc32_tab[_1253];
+
+20190213122947181823492.c:1393:44: note: not consecutive access _1262 = crc32_tab[_1261];
+
+20190213122947181823492.c:1393:44: note: not consecutive access _1269 = crc32_tab[_1268];
+
+20190213122947181823492.c:1393:44: note: not consecutive access _1282 = crc32_tab[_1281];
+
+20190213122947181823492.c:1393:44: note: not consecutive access _1290 = crc32_tab[_1289];
+
+20190213122947181823492.c:1393:44: note: not consecutive access _1298 = crc32_tab[_1297];
+
+20190213122947181823492.c:1393:44: note: not consecutive access _1305 = crc32_tab[_1304];
+
+20190213122947181823492.c:1393:44: note: SLP: step doesn't divide the vector-size.
+20190213122947181823492.c:1393:44: note: Unknown alignment for access: g_178[i_237][j_750][0]
+20190213122947181823492.c:1393:44: note: SLP: step doesn't divide the vector-size.
+20190213122947181823492.c:1393:44: note: Unknown alignment for access: g_178[i_237][j_750][1]
+20190213122947181823492.c:1393:44: note: SLP: step doesn't divide the vector-size.
+20190213122947181823492.c:1393:44: note: Unknown alignment for access: g_178[i_237][j_750][2]
+20190213122947181823492.c:1393:44: note: SLP: step doesn't divide the vector-size.
+20190213122947181823492.c:1393:44: note: Unknown alignment for access: g_178[i_237][j_750][3]
+20190213122947181823492.c:1393:44: note: SLP: step doesn't divide the vector-size.
+20190213122947181823492.c:1393:44: note: Unknown alignment for access: g_178[i_237][j_750][4]
+20190213122947181823492.c:1393:44: note: SLP: step doesn't divide the vector-size.
+20190213122947181823492.c:1393:44: note: Unknown alignment for access: g_178[i_237][j_750][5]
+20190213122947181823492.c:1393:44: note: SLP: step doesn't divide the vector-size.
+20190213122947181823492.c:1393:44: note: Unknown alignment for access: g_178[i_237][j_750][6]
+20190213122947181823492.c:1393:44: note: Failed to SLP the basic block.
+20190213122947181823492.c:1393:44: note: not vectorized: failed to find SLP opportunities in basic block.
+20190213122947181823492.c:1387:25: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:1349:5: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:1349:5: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:1399:5: note: not consecutive access crc32_context = crc32_context_lsm.430_2861;
+
+20190213122947181823492.c:1399:5: note: not consecutive access g_179.12_66 = g_179;
+
+20190213122947181823492.c:1399:5: note: Failed to SLP the basic block.
+20190213122947181823492.c:1399:5: note: not vectorized: failed to find SLP opportunities in basic block.
+20190213122947181823492.c:1349:5: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:1419:44: note: not vectorized: volatile type _27 ={v} g_734[i_165][j_1470][0];
+
+20190213122947181823492.c:1419:44: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:1413:25: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:1349:5: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:1349:5: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:1427:30: note: not vectorized: volatile type g_936.26_97 ={v} g_936;
+
+20190213122947181823492.c:1427:30: note: not consecutive access _1556 = crc32_tab[_33];
+
+20190213122947181823492.c:1427:30: note: not consecutive access _373 = crc32_tab[_371];
+
+20190213122947181823492.c:1427:30: note: not consecutive access _630 = crc32_tab[_629];
+
+20190213122947181823492.c:1427:30: note: not consecutive access _637 = crc32_tab[_636];
+
+20190213122947181823492.c:1427:30: note: not consecutive access _644 = crc32_tab[_643];
+
+20190213122947181823492.c:1427:30: note: not consecutive access _650 = crc32_tab[_649];
+
+20190213122947181823492.c:1427:30: note: not consecutive access _1567 = crc32_tab[_1566];
+
+20190213122947181823492.c:1427:30: note: not consecutive access _1576 = crc32_tab[_1573];
+
+20190213122947181823492.c:1427:30: note: not consecutive access _1588 = crc32_tab[_1584];
+
+20190213122947181823492.c:1427:30: note: not consecutive access _1608 = crc32_tab[_1605];
+
+20190213122947181823492.c:1427:30: note: not consecutive access _2709 = crc32_tab[_2710];
+
+20190213122947181823492.c:1427:30: note: not consecutive access _2715 = crc32_tab[_2716];
+
+20190213122947181823492.c:1427:30: note: not consecutive access _2722 = crc32_tab[_2723];
+
+20190213122947181823492.c:1427:30: note: not consecutive access _2729 = crc32_tab[_2730];
+
+20190213122947181823492.c:1427:30: note: not consecutive access _2743 = crc32_tab[_2744];
+
+20190213122947181823492.c:1427:30: note: not consecutive access _2749 = crc32_tab[_2750];
+
+20190213122947181823492.c:1427:30: note: not consecutive access _2756 = crc32_tab[_2757];
+
+20190213122947181823492.c:1427:30: note: not consecutive access _2763 = crc32_tab[_2764];
+
+20190213122947181823492.c:1427:30: note: not consecutive access _2777 = crc32_tab[_2778];
+
+20190213122947181823492.c:1427:30: note: not consecutive access _2783 = crc32_tab[_2784];
+
+20190213122947181823492.c:1427:30: note: not consecutive access _2790 = crc32_tab[_2791];
+
+20190213122947181823492.c:1427:30: note: not consecutive access _2797 = crc32_tab[_2798];
+
+20190213122947181823492.c:1427:30: note: not consecutive access _2811 = crc32_tab[_2812];
+
+20190213122947181823492.c:1427:30: note: not consecutive access _120 = crc32_tab[_2819];
+
+20190213122947181823492.c:1427:30: note: not consecutive access crc32_context = crc32_context_lsm.428_2865;
+
+20190213122947181823492.c:1427:30: note: not consecutive access crc32_context = crc32_context.357_651;
+
+20190213122947181823492.c:1427:30: note: misalign = 0 bytes of ref g_790[0]
+20190213122947181823492.c:1427:30: note: misalign = 4 bytes of ref g_790[i_1591]
+20190213122947181823492.c:1427:30: note: misalign = 8 bytes of ref g_790[i_2809]
+20190213122947181823492.c:1427:30: note: misalign = 12 bytes of ref g_790[i_2775]
+20190213122947181823492.c:1427:30: note: misalign = 0 bytes of ref g_790[i_2741]
+20190213122947181823492.c:1427:30: note: misalign = 4 bytes of ref g_790[i_2707]
+20190213122947181823492.c:1427:30: note: Failed to SLP the basic block.
+20190213122947181823492.c:1427:30: note: not vectorized: failed to find SLP opportunities in basic block.
+20190213122947181823492.c:125:113: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:125:175: note: not consecutive access g_177 = 1;
+
+20190213122947181823492.c:125:175: note: not consecutive access g_1236.45_1497 = g_1236;
+
+20190213122947181823492.c:125:175: note: not consecutive access *_166 = _1498;
+
+20190213122947181823492.c:125:175: note: Failed to SLP the basic block.
+20190213122947181823492.c:125:175: note: not vectorized: failed to find SLP opportunities in basic block.
+20190213122947181823492.c:145:21: note: not consecutive access pretmp_3017 = g_630;
+
+20190213122947181823492.c:145:21: note: not consecutive access g_1101 = 0;
+
+20190213122947181823492.c:145:21: note: not consecutive access l_1360 = 533344804;
+
+20190213122947181823492.c:145:21: note: not consecutive access pretmp_3019 = *pretmp_3017;
+
+20190213122947181823492.c:145:21: note: Failed to SLP the basic block.
+20190213122947181823492.c:145:21: note: not vectorized: failed to find SLP opportunities in basic block.
+20190213122947181823492.c:164:29: note: not vectorized: not enough data-refs in basic block.
+20190213122947181823492.c:281:23: note: not consecutive access g_29 = 0;
+
+20190213122947181823492.c:281:23: note: not consecutive access g_503 = _300;
+
+20190213122947181823492.c:281:23: note: Failed to SLP the basic block.
+20190213122947181823492.c:281:23: note: not vectorized: failed to find SLP opportunities in basic block.
+20190213122947181823492.c:315:88: note: not vectorized: not enough data-refs in basic block.

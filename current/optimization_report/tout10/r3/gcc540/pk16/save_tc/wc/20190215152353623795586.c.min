@@ -1,0 +1,9 @@
+#include "csmith.h"
+struct {
+  int32_t a
+} b;
+main() {
+  int32_t *c = &b;
+  *c = safe_mul_func_uint16_t_u_u;
+  printf(b.a);
+}

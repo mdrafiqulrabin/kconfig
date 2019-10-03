@@ -1,0 +1,108 @@
+
+20190212153928688317729.c:878: note: vect_recog_bool_pattern: detected: 
+20190212153928688317729.c:878: note: pattern recognized: patt_10 = (int) patt_12;
+
+20190212153928688317729.c:878: note: additional pattern stmt: patt_12 = pretmp_117 > 1 ? 1 : 0;
+
+20190212153928688317729.c:955: note: vect_recog_bool_pattern: detected: 
+20190212153928688317729.c:955: note: pattern recognized: patt_26 = (int) patt_603;
+
+20190212153928688317729.c:955: note: additional pattern stmt: patt_603 = _93 > _94 ? 1 : 0;
+
+20190212153928688317729.c:955: note: vect_recog_bool_pattern: detected: 
+20190212153928688317729.c:955: note: pattern recognized: patt_76 = patt_69;
+
+20190212153928688317729.c:955: note: additional pattern stmt: patt_69 = _98 <= 0 ? 1 : 0;
+
+20190212153928688317729.c:955: note: vect_recog_bool_pattern: detected: 
+20190212153928688317729.c:955: note: pattern recognized: patt_78 = (int) patt_77;
+
+20190212153928688317729.c:955: note: additional pattern stmt: patt_77 = _102 == 1 ? 1 : 0;
+
+20190212153928688317729.c:955: note: vect_recog_bool_pattern: detected: 
+20190212153928688317729.c:955: note: pattern recognized: patt_154 = (signed short) patt_203;
+
+20190212153928688317729.c:955: note: additional pattern stmt: patt_203 = g_179.120_79 > _106 ? 1 : 0;
+
+20190212153928688317729.c:969: note: vect_recog_bool_pattern: detected: 
+20190212153928688317729.c:969: note: pattern recognized: patt_169 = patt_152;
+
+20190212153928688317729.c:969: note: additional pattern stmt: patt_152 = _70 != 0 ? 1 : 0;
+
+20190212153928688317729.c:986: note: vect_recog_bool_pattern: detected: 
+20190212153928688317729.c:986: note: pattern recognized: patt_174 = (int) patt_173;
+
+20190212153928688317729.c:986: note: additional pattern stmt: patt_173 = _162 != 0 ? 1 : 0;
+
+20190212153928688317729.c:986: note: vect_recog_bool_pattern: detected: 
+20190212153928688317729.c:986: note: pattern recognized: patt_136 = (int) patt_51;
+
+20190212153928688317729.c:986: note: additional pattern stmt: patt_51 = g_53.156_168 == 1 ? 1 : 0;
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:753: note: vect_recog_bool_pattern: detected: 
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:753: note: pattern recognized: patt_181 = (uint16_t) patt_139;
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:753: note: additional pattern stmt: patt_139 = prephitmp_90 < _172 ? 1 : 0;
+
+20190212153928688317729.c:986: note: vect_recog_bool_pattern: detected: 
+20190212153928688317729.c:986: note: pattern recognized: patt_593 = (unsigned int) patt_518;
+
+20190212153928688317729.c:986: note: additional pattern stmt: patt_518 = prephitmp_124 >= iftmp.76_525 ? 1 : 0;
+
+20190212153928688317729.c:995: note: vect_recog_bool_pattern: detected: 
+20190212153928688317729.c:995: note: pattern recognized: patt_220 = patt_200;
+
+20190212153928688317729.c:995: note: additional pattern stmt: patt_200 = p_112_491(D) != 3 ? 1 : 0;
+
+20190212153928688317729.c:1075: note: vect_recog_bool_pattern: detected: 
+20190212153928688317729.c:1075: note: pattern recognized: patt_237 = (int) patt_235;
+
+20190212153928688317729.c:1075: note: additional pattern stmt: patt_235 = p_113.164_210 > 0 ? 1 : 0;
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:59: note: Completely unroll loop 8 times
+
+Analyzing loop at 20190212153928688317729.c:855
+
+Analyzing loop at 20190212153928688317729.c:1588
+
+Analyzing loop at 20190212153928688317729.c:1592
+
+Analyzing loop at /project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57
+
+
+Vectorizing loop at /project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: LOOP VECTORIZED.
+20190212153928688317729.c:1608: note: vectorized 1 loops in function.
+
+20190212153928688317729.c:1592: note: Completely unroll loop 2 times
+
+20190212153928688317729.c:101: note: vect_recog_bool_pattern: detected: 
+20190212153928688317729.c:101: note: pattern recognized: patt_641 = (short unsigned int) patt_379;
+
+20190212153928688317729.c:101: note: additional pattern stmt: patt_379 = _236 > 20277 ? 1 : 0;
+
+20190212153928688317729.c:867: note: vect_recog_bool_pattern: detected: 
+20190212153928688317729.c:867: note: pattern recognized: patt_933 = patt_944;
+
+20190212153928688317729.c:867: note: additional pattern stmt: patt_944 = iftmp.364_283 == -9 ? 1 : 0;
+
+20190212153928688317729.c:101: note: vect_recog_bool_pattern: detected: 
+20190212153928688317729.c:101: note: pattern recognized: patt_807 = (int) patt_764;
+
+20190212153928688317729.c:101: note: additional pattern stmt: patt_764 = g_293.48_151 != 0 ? 1 : 0;
+
+20190212153928688317729.c:292: note: vect_recog_bool_pattern: detected: 
+20190212153928688317729.c:292: note: pattern recognized: patt_824 = (int) patt_314;
+
+20190212153928688317729.c:292: note: additional pattern stmt: patt_314 = g_361.43_139 == 0 ? 1 : 0;
+
+20190212153928688317729.c:292: note: vect_recog_bool_pattern: detected: 
+20190212153928688317729.c:292: note: pattern recognized: patt_322 = (int) patt_819;
+
+20190212153928688317729.c:292: note: additional pattern stmt: patt_819 = iftmp.72_600 != 0 ? 1 : 0;
+
+20190212153928688317729.c:106: note: vect_recog_bool_pattern: detected: 
+20190212153928688317729.c:106: note: pattern recognized: patt_320 = (int) patt_321;
+
+20190212153928688317729.c:106: note: additional pattern stmt: patt_321 = _172 <= 65526 ? 1 : 0;

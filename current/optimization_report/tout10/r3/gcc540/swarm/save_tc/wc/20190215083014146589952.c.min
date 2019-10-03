@@ -1,0 +1,10 @@
+#include "csmith.h"
+a;
+main() {
+  int b;
+  int64_t c;
+  uint64_t *d = &a;
+  *d = c;
+  for (; b < 10; b++)
+    printf(a);
+}

@@ -1,0 +1,9 @@
+#include "csmith.h"
+a, b;
+c() {}
+main() {
+  int32_t *d = &a;
+  for (b = 27; b != 20; b = safe_sub_func_uint32_t_u_u(b, 7))
+    *d = c;
+  printf(a);
+}

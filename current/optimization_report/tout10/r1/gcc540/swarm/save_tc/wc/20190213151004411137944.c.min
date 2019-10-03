@@ -1,0 +1,9 @@
+#include "csmith.h"
+uint32_t a[][1][1];
+b;
+main() {
+  int64_t c = 1;
+  a[8][3][0] = safe_mul_func_float_f_f(-0x1F1, c);
+  if (a[8][3][0])
+    platform_main_end(crc32_context, b);
+}

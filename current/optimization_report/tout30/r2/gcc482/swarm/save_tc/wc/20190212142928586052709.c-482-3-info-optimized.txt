@@ -1,0 +1,26 @@
+
+Analyzing loop at /project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:124
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:121: note: vectorized 0 loops in function.
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:124: note: Completely unroll loop 3 times
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:59: note: Completely unroll loop 8 times
+
+Analyzing loop at /project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57
+
+
+Vectorizing loop at /project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: LOOP VECTORIZED.
+20190212142928586052709.c:769: note: vectorized 1 loops in function.
+
+20190212142928586052709.c:132: note: vect_recog_bool_pattern: detected: 
+20190212142928586052709.c:132: note: pattern recognized: patt_472 = (int) patt_515;
+
+20190212142928586052709.c:132: note: additional pattern stmt: patt_515 = g_28.58_278 == 0 ? 1 : 0;
+
+20190212142928586052709.c:159: note: vect_recog_bool_pattern: detected: 
+20190212142928586052709.c:159: note: pattern recognized: patt_144 = (int) patt_485;
+
+20190212142928586052709.c:159: note: additional pattern stmt: patt_485 = iftmp.272_471 != 0 ? 1 : 0;

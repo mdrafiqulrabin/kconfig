@@ -1,0 +1,807 @@
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:73: note: misalign = 0 bytes of ref crc32_context
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:73: note: Unknown alignment for access: crc32_tab
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:73: note: Unknown alignment for access: crc32_tab
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:73: note: Unknown alignment for access: crc32_tab
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:73: note: Unknown alignment for access: crc32_tab
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:73: note: misalign = 0 bytes of ref crc32_context
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:73: note: not consecutive access crc32_context.293_12 = crc32_context;
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:73: note: not consecutive access _16 = crc32_tab[_15];
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:73: note: not consecutive access _21 = crc32_tab[_20];
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:73: note: not consecutive access _26 = crc32_tab[_25];
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:73: note: not consecutive access _31 = crc32_tab[_30];
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:73: note: not consecutive access crc32_context = crc32_context.294_32;
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:73: note: Failed to SLP the basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:73: note: not vectorized: failed to find SLP opportunities in basic block.
+
+Analyzing loop at 20190214171012364946107.c:903
+
+20190214171012364946107.c:903: note: not vectorized: control flow in loop.
+20190214171012364946107.c:903: note: bad loop form.
+Analyzing loop at 20190214171012364946107.c:903
+
+20190214171012364946107.c:903: note: not vectorized: control flow in loop.
+20190214171012364946107.c:903: note: bad loop form.
+Analyzing loop at 20190214171012364946107.c:903
+
+20190214171012364946107.c:903: note: not vectorized: control flow in loop.
+20190214171012364946107.c:903: note: bad loop form.
+Analyzing loop at 20190214171012364946107.c:903
+
+20190214171012364946107.c:903: note: not vectorized: control flow in loop.
+20190214171012364946107.c:903: note: bad loop form.
+Analyzing loop at 20190214171012364946107.c:903
+
+20190214171012364946107.c:903: note: not vectorized: control flow in loop.
+20190214171012364946107.c:903: note: bad loop form.
+Analyzing loop at 20190214171012364946107.c:903
+
+20190214171012364946107.c:903: note: not vectorized: control flow in loop.
+20190214171012364946107.c:903: note: bad loop form.
+Analyzing loop at 20190214171012364946107.c:903
+
+20190214171012364946107.c:903: note: not vectorized: control flow in loop.
+20190214171012364946107.c:903: note: bad loop form.
+Analyzing loop at 20190214171012364946107.c:903
+
+20190214171012364946107.c:903: note: not vectorized: control flow in loop.
+20190214171012364946107.c:903: note: bad loop form.
+Analyzing loop at 20190214171012364946107.c:907
+
+20190214171012364946107.c:907: note: not vectorized: control flow in loop.
+20190214171012364946107.c:907: note: bad loop form.
+Analyzing loop at 20190214171012364946107.c:907
+
+20190214171012364946107.c:907: note: not vectorized: control flow in loop.
+20190214171012364946107.c:907: note: bad loop form.
+Analyzing loop at 20190214171012364946107.c:907
+
+20190214171012364946107.c:907: note: not vectorized: control flow in loop.
+20190214171012364946107.c:907: note: bad loop form.
+Analyzing loop at 20190214171012364946107.c:907
+
+20190214171012364946107.c:907: note: not vectorized: control flow in loop.
+20190214171012364946107.c:907: note: bad loop form.
+Analyzing loop at 20190214171012364946107.c:907
+
+20190214171012364946107.c:907: note: not vectorized: control flow in loop.
+20190214171012364946107.c:907: note: bad loop form.
+Analyzing loop at 20190214171012364946107.c:907
+
+20190214171012364946107.c:907: note: not vectorized: control flow in loop.
+20190214171012364946107.c:907: note: bad loop form.
+Analyzing loop at 20190214171012364946107.c:907
+
+20190214171012364946107.c:907: note: not vectorized: control flow in loop.
+20190214171012364946107.c:907: note: bad loop form.
+Analyzing loop at 20190214171012364946107.c:907
+
+20190214171012364946107.c:907: note: not vectorized: control flow in loop.
+20190214171012364946107.c:907: note: bad loop form.
+Analyzing loop at 20190214171012364946107.c:870
+
+20190214171012364946107.c:870: note: not vectorized: number of iterations cannot be computed.
+20190214171012364946107.c:870: note: bad loop form.
+20190214171012364946107.c:779: note: vectorized 0 loops in function.
+
+20190214171012364946107.c:786: note: misalign = 8 bytes of ref g_52.f2.f0
+20190214171012364946107.c:786: note: misalign = 12 bytes of ref g_52.f2.f1
+20190214171012364946107.c:786: note: misalign = 8 bytes of ref g_52.f2.f0
+20190214171012364946107.c:786: note: not consecutive access p_77$4_348 = MEM[(struct S0 *)&p_77 + 4B];
+
+20190214171012364946107.c:786: note: not consecutive access p_77$f2_215 = MEM[(struct S0 *)&p_77 + 8B];
+
+20190214171012364946107.c:786: note: not consecutive access _31 = g_52.f2.f0;
+
+20190214171012364946107.c:786: note: not consecutive access _32 = g_52.f2.f1;
+
+20190214171012364946107.c:786: note: not consecutive access g_52.f2.f0 = _34;
+
+20190214171012364946107.c:786: note: Failed to SLP the basic block.
+20190214171012364946107.c:786: note: not vectorized: failed to find SLP opportunities in basic block.
+
+20190214171012364946107.c:815: note: not vectorized: no vectype for stmt: g_118 = g_52;
+ scalar_type: struct S1
+20190214171012364946107.c:815: note: Failed to SLP the basic block.
+20190214171012364946107.c:815: note: not vectorized: failed to find SLP opportunities in basic block.
+
+20190214171012364946107.c:824: note: misalign = 8 bytes of ref g_118.f2.f0
+20190214171012364946107.c:824: note: not consecutive access l_112$f2$f0_45 = g_118.f2.f0;
+
+20190214171012364946107.c:824: note: Failed to SLP the basic block.
+20190214171012364946107.c:824: note: not vectorized: failed to find SLP opportunities in basic block.
+
+20190214171012364946107.c:827: note: misalign = 12 bytes of ref g_118.f2.f1
+20190214171012364946107.c:827: note: misalign = 4 bytes of ref g_52.f1
+20190214171012364946107.c:827: note: not consecutive access g_118.f2.f1 = 31895;
+
+20190214171012364946107.c:827: note: not consecutive access g_52.f1 = 0;
+
+20190214171012364946107.c:827: note: Failed to SLP the basic block.
+20190214171012364946107.c:827: note: not vectorized: failed to find SLP opportunities in basic block.
+
+20190214171012364946107.c:829: note: not vectorized: no vectype for stmt: <retval> = g_212;
+ scalar_type: struct S1
+20190214171012364946107.c:829: note: misalign = 8 bytes of ref g_118.f2.f0
+20190214171012364946107.c:829: note: not consecutive access g_118.f2.f0 = _50;
+
+20190214171012364946107.c:829: note: Failed to SLP the basic block.
+20190214171012364946107.c:829: note: not vectorized: failed to find SLP opportunities in basic block.
+
+20190214171012364946107.c:838: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:838: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:838: note: misalign = 8 bytes of ref g_118.f2.f0
+20190214171012364946107.c:838: note: misalign = 0 bytes of ref g_52.f2.f2
+20190214171012364946107.c:838: note: not consecutive access g_118.f2.f0 = iftmp.233_2;
+
+20190214171012364946107.c:838: note: not consecutive access _63 = g_52.f2.f2;
+
+20190214171012364946107.c:838: note: Failed to SLP the basic block.
+20190214171012364946107.c:838: note: not vectorized: failed to find SLP opportunities in basic block.
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:777: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:856: note: misalign = 0 bytes of ref g_118.f2.f2
+20190214171012364946107.c:856: note: not consecutive access _67 = g_118.f2.f2;
+
+20190214171012364946107.c:856: note: Failed to SLP the basic block.
+20190214171012364946107.c:856: note: not vectorized: failed to find SLP opportunities in basic block.
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:710: note: not vectorized: not enough data-refs in basic block.
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:713: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:856: note: misalign = 0 bytes of ref g_3
+20190214171012364946107.c:856: note: not consecutive access g_3.239_77 = g_3;
+
+20190214171012364946107.c:856: note: Failed to SLP the basic block.
+20190214171012364946107.c:856: note: not vectorized: failed to find SLP opportunities in basic block.
+
+20190214171012364946107.c:856: note: not vectorized: no vectype for stmt: g_118.f2 = p_77;
+ scalar_type: struct S0
+20190214171012364946107.c:856: note: interleaved store with gaps
+20190214171012364946107.c:856: note: not vectorized: complicated access pattern.
+20190214171012364946107.c:856: note: Failed to SLP the basic block.
+20190214171012364946107.c:856: note: not vectorized: failed to find SLP opportunities in basic block.
+
+20190214171012364946107.c:870: note: misalign = 8 bytes of ref g_118.f2.f0
+20190214171012364946107.c:870: note: misalign = 10 bytes of ref g_52.f5
+20190214171012364946107.c:870: note: not consecutive access g_118.f2.f0 = 8;
+
+20190214171012364946107.c:870: note: not consecutive access pretmp_14 = g_52.f5;
+
+20190214171012364946107.c:870: note: Failed to SLP the basic block.
+20190214171012364946107.c:870: note: not vectorized: failed to find SLP opportunities in basic block.
+
+20190214171012364946107.c:874: note: not vectorized: no vectype for stmt: g_207 = p_77;
+ scalar_type: struct S0
+20190214171012364946107.c:874: note: misalign = 12 bytes of ref g_118.f2.f1
+20190214171012364946107.c:874: note: misalign = 8 bytes of ref g_52.f2.f0
+20190214171012364946107.c:874: note: not consecutive access g_118.f2.f1 = _93;
+
+20190214171012364946107.c:874: note: not consecutive access g_52.f2.f0 = _98;
+
+20190214171012364946107.c:874: note: interleaved store with gaps
+20190214171012364946107.c:874: note: not vectorized: complicated access pattern.
+20190214171012364946107.c:874: note: not consecutive access MEM[(struct S0 *)&p_77 + 4B] = p_77$4_348;
+
+20190214171012364946107.c:874: note: Failed to SLP the basic block.
+20190214171012364946107.c:874: note: not vectorized: failed to find SLP opportunities in basic block.
+
+20190214171012364946107.c:779: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:893: note: misalign = 8 bytes of ref g_118.f4
+20190214171012364946107.c:893: note: not consecutive access _106 = g_118.f4;
+
+20190214171012364946107.c:893: note: Failed to SLP the basic block.
+20190214171012364946107.c:893: note: not vectorized: failed to find SLP opportunities in basic block.
+
+20190214171012364946107.c:893: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:893: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:898: note: not vectorized: unhandled data dependence in basic block.
+
+20190214171012364946107.c:779: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:779: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:779: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:779: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:913: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:919: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:779: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:919: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:921: note: not vectorized: not enough data-refs in basic block.
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:651: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:779: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:779: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:913: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:919: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:919: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:921: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:779: note: not vectorized: not enough data-refs in basic block.
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:651: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:779: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:779: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:779: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:913: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:919: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:919: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:921: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:779: note: not vectorized: not enough data-refs in basic block.
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:651: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:779: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:779: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:913: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:919: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:779: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:919: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:921: note: not vectorized: not enough data-refs in basic block.
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:651: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:779: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:779: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:779: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:779: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:913: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:919: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:919: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:921: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:779: note: not vectorized: not enough data-refs in basic block.
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:651: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:779: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:779: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:913: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:919: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:779: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:919: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:921: note: not vectorized: not enough data-refs in basic block.
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:651: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:779: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:779: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:779: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:913: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:919: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:779: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:919: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:921: note: not vectorized: not enough data-refs in basic block.
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:651: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:779: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:779: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:913: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:919: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:919: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:921: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:779: note: not vectorized: not enough data-refs in basic block.
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:651: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:779: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:779: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:779: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:779: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:779: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:907: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:913: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:919: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:919: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:921: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:779: note: not vectorized: not enough data-refs in basic block.
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:651: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:779: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:779: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:907: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:913: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:919: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:779: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:919: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:921: note: not vectorized: not enough data-refs in basic block.
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:651: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:779: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:779: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:779: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:907: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:913: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:919: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:779: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:919: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:921: note: not vectorized: not enough data-refs in basic block.
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:651: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:779: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:779: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:907: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:913: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:919: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:919: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:921: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:779: note: not vectorized: not enough data-refs in basic block.
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:651: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:779: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:779: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:779: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:779: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:907: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:913: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:919: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:779: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:919: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:921: note: not vectorized: not enough data-refs in basic block.
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:651: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:779: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:779: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:907: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:913: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:919: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:919: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:921: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:779: note: not vectorized: not enough data-refs in basic block.
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:651: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:779: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:779: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:779: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:907: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:913: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:919: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:919: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:921: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:779: note: not vectorized: not enough data-refs in basic block.
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:651: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:779: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:779: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:907: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:909: note: misalign = 4 bytes of ref g_118.f1
+20190214171012364946107.c:909: note: misalign = 0 bytes of ref g_118.f2.f2
+20190214171012364946107.c:909: note: misalign = 8 bytes of ref g_207.f2
+20190214171012364946107.c:909: note: misalign = 0 bytes of ref g_118.f0
+20190214171012364946107.c:909: note: not consecutive access g_118.f2.f2 = g_118_f2_f2_lsm.497_364;
+
+20190214171012364946107.c:909: note: not consecutive access g_207.f2 = g_207_f2_lsm.498_369;
+
+20190214171012364946107.c:909: note: interleaved store with gaps
+20190214171012364946107.c:909: note: not vectorized: complicated access pattern.
+20190214171012364946107.c:909: note: interleaved store with gaps
+20190214171012364946107.c:909: note: not vectorized: complicated access pattern.
+20190214171012364946107.c:909: note: not consecutive access MEM[(struct S1 *)&<retval> + 24B] = 39650;
+
+20190214171012364946107.c:909: note: Build SLP failed: unrolling required in basic block SLP
+20190214171012364946107.c:909: note: Build SLP failed: unrolling required in basic block SLP
+20190214171012364946107.c:909: note: Failed to SLP the basic block.
+20190214171012364946107.c:909: note: not vectorized: failed to find SLP opportunities in basic block.
+
+20190214171012364946107.c:913: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:919: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:779: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:919: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:921: note: not vectorized: not enough data-refs in basic block.
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:651: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:779: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:931: note: misalign = 4 bytes of ref g_118.f1
+20190214171012364946107.c:931: note: misalign = 0 bytes of ref g_118.f2.f2
+20190214171012364946107.c:931: note: misalign = 8 bytes of ref g_207.f2
+20190214171012364946107.c:931: note: misalign = 0 bytes of ref g_118.f0
+20190214171012364946107.c:931: note: misalign = 8 bytes of ref g_212.f2.f0
+20190214171012364946107.c:931: note: misalign = 8 bytes of ref g_212.f4
+20190214171012364946107.c:931: note: misalign = 4 bytes of ref g_52.f3
+20190214171012364946107.c:931: note: not consecutive access g_118.f2.f2 = g_118_f2_f2_lsm.497_367;
+
+20190214171012364946107.c:931: note: not consecutive access g_207.f2 = g_207_f2_lsm.498_338;
+
+20190214171012364946107.c:931: note: not consecutive access g_212.f2.f0 = _206;
+
+20190214171012364946107.c:931: note: not consecutive access _208 = g_212.f4;
+
+20190214171012364946107.c:931: note: not consecutive access _211 = g_52.f3;
+
+20190214171012364946107.c:931: note: Build SLP failed: unrolling required in basic block SLP
+20190214171012364946107.c:931: note: Failed to SLP the basic block.
+20190214171012364946107.c:931: note: not vectorized: failed to find SLP opportunities in basic block.
+
+20190214171012364946107.c:932: note: not vectorized: not enough data-refs in basic block.
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:701: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:932: note: misalign = 0 bytes of ref g_207.f0
+20190214171012364946107.c:932: note: not consecutive access g_207.f0 = _218;
+
+20190214171012364946107.c:932: note: Failed to SLP the basic block.
+20190214171012364946107.c:932: note: not vectorized: failed to find SLP opportunities in basic block.
+
+20190214171012364946107.c:937: note: misalign = 4 bytes of ref g_212.f1
+20190214171012364946107.c:937: note: misalign = 0 bytes of ref g_212.f2.f2
+20190214171012364946107.c:937: note: misalign = 4 bytes of ref g_52.f3
+20190214171012364946107.c:937: note: not consecutive access g_212.f1 = _228;
+
+20190214171012364946107.c:937: note: not consecutive access g_212.f2.f2 = _233;
+
+20190214171012364946107.c:937: note: not consecutive access pretmp_392 = g_52.f3;
+
+20190214171012364946107.c:937: note: Failed to SLP the basic block.
+20190214171012364946107.c:937: note: not vectorized: failed to find SLP opportunities in basic block.
+
+20190214171012364946107.c:941: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:941: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:941: note: not vectorized: not enough data-refs in basic block.
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:294: note: not vectorized: not enough data-refs in basic block.
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:294: note: not vectorized: not enough data-refs in basic block.
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:294: note: not vectorized: not enough data-refs in basic block.
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:295: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:941: note: not vectorized: no vectype for stmt: <retval> = g_52;
+ scalar_type: struct S1
+20190214171012364946107.c:941: note: misalign = 8 bytes of ref g_52.f4
+20190214171012364946107.c:941: note: misalign = 8 bytes of ref g_207.f2
+20190214171012364946107.c:941: note: misalign = 8 bytes of ref g_207.f2
+20190214171012364946107.c:941: note: not consecutive access g_52.f4 = _246;
+
+20190214171012364946107.c:941: note: not consecutive access _250 = g_207.f2;
+
+20190214171012364946107.c:941: note: not consecutive access g_207.f2 = _254;
+
+20190214171012364946107.c:941: note: Failed to SLP the basic block.
+20190214171012364946107.c:941: note: not vectorized: failed to find SLP opportunities in basic block.
+
+20190214171012364946107.c:779: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:838: note: not vectorized: not enough data-refs in basic block.
+
+Analyzing loop at 20190214171012364946107.c:83
+
+20190214171012364946107.c:83: note: not vectorized: control flow in loop.
+20190214171012364946107.c:83: note: bad loop form.
+Analyzing loop at /project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: misalign = 0 bytes of ref crc32_tab[i_288]
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: virtual phi. skip.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: no optab.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: not ssa-name.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: use not simple.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: not ssa-name.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: use not simple.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: not ssa-name.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: use not simple.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: not ssa-name.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: use not simple.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: not ssa-name.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: use not simple.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: not ssa-name.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: use not simple.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: not ssa-name.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: use not simple.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: not ssa-name.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: use not simple.
+
+Vectorizing loop at /project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57
+
+20190214171012364946107.c:964: note: vectorized 1 loops in function.
+
+20190214171012364946107.c:964: note: not vectorized: not enough data-refs in basic block.
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:58: note: not vectorized: no vectype for stmt: MEM[(uint32_t[256] *)vect_pcrc32_tab.676_468] = vect_crc.674_471;
+ scalar_type: vector(4) unsigned int
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:58: note: Failed to SLP the basic block.
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:58: note: not vectorized: failed to find SLP opportunities in basic block.
+
+20190214171012364946107.c:964: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:83: note: misalign = 0 bytes of ref g_3
+20190214171012364946107.c:83: note: misalign = 10 bytes of ref g_52.f5
+20190214171012364946107.c:83: note: not consecutive access g_3 = 0;
+
+20190214171012364946107.c:83: note: not consecutive access pretmp_524 = g_52.f5;
+
+20190214171012364946107.c:83: note: Failed to SLP the basic block.
+20190214171012364946107.c:83: note: not vectorized: failed to find SLP opportunities in basic block.
+
+20190214171012364946107.c:87: note: misalign = 0 bytes of ref g_30
+20190214171012364946107.c:87: note: misalign = 0 bytes of ref l_84.f0
+20190214171012364946107.c:87: note: misalign = 10 bytes of ref g_52.f5
+20190214171012364946107.c:87: note: misalign = 4 bytes of ref MEM[(struct S0 *)&l_84 + 4B]
+20190214171012364946107.c:87: note: misalign = 8 bytes of ref MEM[(struct S0 *)&l_84 + 8B]
+20190214171012364946107.c:87: note: not consecutive access g_30 = g_30.14_189;
+
+20190214171012364946107.c:87: note: interleaved store with gaps
+20190214171012364946107.c:87: note: not vectorized: complicated access pattern.
+20190214171012364946107.c:87: note: not consecutive access g_52.f5 = _353;
+
+20190214171012364946107.c:87: note: not consecutive access MEM[(struct S0 *)&l_84 + 4B] = -10;
+
+20190214171012364946107.c:87: note: Failed to SLP the basic block.
+20190214171012364946107.c:87: note: not vectorized: failed to find SLP opportunities in basic block.
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:713: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:330: note: misalign = 8 bytes of ref g_212.f4
+20190214171012364946107.c:330: note: not consecutive access _414 = g_212.f4;
+
+20190214171012364946107.c:330: note: Failed to SLP the basic block.
+20190214171012364946107.c:330: note: not vectorized: failed to find SLP opportunities in basic block.
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:725: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:330: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:338: note: misalign = 12 bytes of ref MEM[(struct S1 *)&g_212 + 12B]
+20190214171012364946107.c:338: note: misalign = 4 bytes of ref g_212.f1
+20190214171012364946107.c:338: note: misalign = 8 bytes of ref g_52.f2.f0
+20190214171012364946107.c:338: note: not consecutive access p_57$12_486 = MEM[(struct S1 *)&g_212 + 12B];
+
+20190214171012364946107.c:338: note: not consecutive access p_57$4_422 = g_212.f1;
+
+20190214171012364946107.c:338: note: not consecutive access _373 = g_52.f2.f0;
+
+20190214171012364946107.c:338: note: Failed to SLP the basic block.
+20190214171012364946107.c:338: note: not vectorized: failed to find SLP opportunities in basic block.
+
+20190214171012364946107.c:511: note: misalign = 8 bytes of ref g_52.f2.f0
+20190214171012364946107.c:511: note: not consecutive access _423 = g_52.f2.f0;
+
+20190214171012364946107.c:511: note: Failed to SLP the basic block.
+20190214171012364946107.c:511: note: not vectorized: failed to find SLP opportunities in basic block.
+
+20190214171012364946107.c:512: note: misalign = 8 bytes of ref g_52.f2.f0
+20190214171012364946107.c:512: note: misalign = 0 bytes of ref g_581
+20190214171012364946107.c:512: note: misalign = 4 bytes of ref g_52.f1
+20190214171012364946107.c:512: note: misalign = 8 bytes of ref g_212.f4
+20190214171012364946107.c:512: note: misalign = 8 bytes of ref g_118.f2.f0
+20190214171012364946107.c:512: note: misalign = 0 bytes of ref g_212.f2.f2
+20190214171012364946107.c:512: note: misalign = 10 bytes of ref g_52.f5
+20190214171012364946107.c:512: note: misalign = 4 bytes of ref g_118.f3
+20190214171012364946107.c:512: note: misalign = 10 bytes of ref g_52.f5
+20190214171012364946107.c:512: note: misalign = 0 bytes of ref g_368
+20190214171012364946107.c:512: note: not consecutive access g_52.f2.f0 = cstore_500;
+
+20190214171012364946107.c:512: note: not consecutive access g_581 = -7550;
+
+20190214171012364946107.c:512: note: not consecutive access g_52.f1 = _431;
+
+20190214171012364946107.c:512: note: not consecutive access g_212.f4 = 0;
+
+20190214171012364946107.c:512: note: not consecutive access g_212.f2.f2 = 9;
+
+20190214171012364946107.c:512: note: not consecutive access _448 = g_52.f5;
+
+20190214171012364946107.c:512: note: not consecutive access g_52.f5 = _452;
+
+20190214171012364946107.c:512: note: not consecutive access g_368 = _454;
+
+20190214171012364946107.c:512: note: Failed to SLP the basic block.
+20190214171012364946107.c:512: note: not vectorized: failed to find SLP opportunities in basic block.
+
+20190214171012364946107.c:301: note: misalign = 8 bytes of ref g_118.f4
+20190214171012364946107.c:301: note: not consecutive access _381 = g_118.f4;
+
+20190214171012364946107.c:301: note: Failed to SLP the basic block.
+20190214171012364946107.c:301: note: not vectorized: failed to find SLP opportunities in basic block.
+
+20190214171012364946107.c:964: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:301: note: misalign = 8 bytes of ref MEM[(struct S0 *)&l_84 + 8B]
+20190214171012364946107.c:301: note: not consecutive access MEM[(struct S0 *)&l_84 + 8B] = g_30.17_190;
+
+20190214171012364946107.c:301: note: Failed to SLP the basic block.
+20190214171012364946107.c:301: note: not vectorized: failed to find SLP opportunities in basic block.
+
+20190214171012364946107.c:964: note: not vectorized: not enough data-refs in basic block.
+
+20190214171012364946107.c:91: note: misalign = 0 bytes of ref g_118.f2.f2
+20190214171012364946107.c:91: note: not consecutive access _205 = g_118.f2.f2;
+
+20190214171012364946107.c:91: note: Failed to SLP the basic block.
+20190214171012364946107.c:91: note: not vectorized: failed to find SLP opportunities in basic block.
+
+20190214171012364946107.c:768: note: misalign = 8 bytes of ref g_212.f2.f0
+20190214171012364946107.c:768: note: misalign = 10 bytes of ref g_212.f5
+20190214171012364946107.c:768: note: misalign = 0 bytes of ref g_368
+20190214171012364946107.c:768: note: misalign = 8 bytes of ref g_52.f2.f0
+20190214171012364946107.c:768: note: misalign = 8 bytes of ref MEM[(struct S1 *)&g_960 + 8B]
+20190214171012364946107.c:768: note: misalign = 12 bytes of ref MEM[(struct S1 *)&g_960 + 12B]
+20190214171012364946107.c:768: note: misalign = 4 bytes of ref g_118.f1
+20190214171012364946107.c:768: note: misalign = 0 bytes of ref g_960.f2.f2
+20190214171012364946107.c:768: note: not consecutive access g_212.f2.f0 = 1;
+
+20190214171012364946107.c:768: note: not consecutive access _215 = g_212.f5;
+
+20190214171012364946107.c:768: note: not consecutive access g_368 = _226;
+
+20190214171012364946107.c:768: note: not consecutive access g_52.f2.f0 = 0;
+
+20190214171012364946107.c:768: note: interleaved store with gaps
+20190214171012364946107.c:768: note: not vectorized: complicated access pattern.
+20190214171012364946107.c:768: note: not consecutive access MEM[(struct S1 *)&g_960 + 12B] = -30267;
+
+20190214171012364946107.c:768: note: not consecutive access g_118.f1 = 0;
+
+20190214171012364946107.c:768: note: Failed to SLP the basic block.
+20190214171012364946107.c:768: note: not vectorized: failed to find SLP opportunities in basic block.
+
+20190214171012364946107.c:227: note: misalign = 8 bytes of ref g_118.f2.f0
+20190214171012364946107.c:227: note: misalign = 0 bytes of ref g_52.f2.f2
+20190214171012364946107.c:227: note: not consecutive access g_118.f2.f0 = -148171355;
+
+20190214171012364946107.c:227: note: not consecutive access g_52.f2.f2 = 1;
+
+20190214171012364946107.c:227: note: Failed to SLP the basic block.
+20190214171012364946107.c:227: note: not vectorized: failed to find SLP opportunities in basic block.
+
+20190214171012364946107.c:230: note: misalign = 0 bytes of ref g_581
+20190214171012364946107.c:230: note: misalign = 0 bytes of ref g_118.f2.f2
+20190214171012364946107.c:230: note: misalign = 8 bytes of ref g_212.f2.f0
+20190214171012364946107.c:230: note: misalign = 4 bytes of ref g_212.f1
+20190214171012364946107.c:230: note: misalign = 8 bytes of ref g_212.f2.f0
+20190214171012364946107.c:230: note: misalign = 0 bytes of ref g_368
+20190214171012364946107.c:230: note: not consecutive access g_581 = 5541;
+
+20190214171012364946107.c:230: note: not consecutive access g_118.f2.f2 = 0;
+
+20190214171012364946107.c:230: note: not consecutive access g_368.81_330 = g_212.f2.f0;
+
+20190214171012364946107.c:230: note: not consecutive access _332 = g_212.f1;
+
+20190214171012364946107.c:230: note: not consecutive access g_212.f2.f0 = _334;
+
+20190214171012364946107.c:230: note: not consecutive access g_368 = _334;
+
+20190214171012364946107.c:230: note: Failed to SLP the basic block.
+20190214171012364946107.c:230: note: not vectorized: failed to find SLP opportunities in basic block.
+
+20190214171012364946107.c:970: note: not vectorized: not enough data-refs in basic block.

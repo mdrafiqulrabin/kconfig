@@ -1,0 +1,57 @@
+
+Analyzing loop at 20190212203311566887610.c:1090
+
+20190212203311566887610.c:1066: note: vectorized 0 loops in function.
+
+20190212203311566887610.c:1020: note: vect_recog_bool_pattern: detected: 
+20190212203311566887610.c:1020: note: pattern recognized: patt_21 = (int) patt_13;
+
+20190212203311566887610.c:1020: note: additional pattern stmt: patt_13 = p_80_8(D) <= 4 ? 1 : 0;
+
+Analyzing loop at 20190212203311566887610.c:815
+
+20190212203311566887610.c:780: note: vectorized 0 loops in function.
+
+20190212203311566887610.c:819: note: vect_recog_bool_pattern: detected: 
+20190212203311566887610.c:819: note: pattern recognized: patt_23 = (unsigned char) patt_43;
+
+20190212203311566887610.c:819: note: additional pattern stmt: patt_43 = _45 > 3328079372 ? 1 : 0;
+
+Analyzing loop at 20190212203311566887610.c:815
+
+20190212203311566887610.c:701: note: vectorized 0 loops in function.
+
+20190212203311566887610.c:819: note: vect_recog_bool_pattern: detected: 
+20190212203311566887610.c:819: note: pattern recognized: patt_262 = (int) patt_267;
+
+20190212203311566887610.c:819: note: additional pattern stmt: patt_267 = _315 != 0 ? 1 : 0;
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:59: note: Completely unroll loop 8 times
+
+Analyzing loop at 20190212203311566887610.c:639
+
+Analyzing loop at 20190212203311566887610.c:649
+
+Analyzing loop at 20190212203311566887610.c:815
+
+Analyzing loop at 20190212203311566887610.c:440
+
+Analyzing loop at 20190212203311566887610.c:815
+
+Analyzing loop at /project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57
+
+
+Vectorizing loop at /project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: LOOP VECTORIZED.
+20190212203311566887610.c:1108: note: vectorized 1 loops in function.
+
+20190212203311566887610.c:1108: note: vect_recog_bool_pattern: detected: 
+20190212203311566887610.c:1108: note: pattern recognized: patt_960 = (unsigned char) patt_988;
+
+20190212203311566887610.c:1108: note: additional pattern stmt: patt_988 = pretmp_1502 > 3328079372 ? 1 : 0;
+
+20190212203311566887610.c:402: note: vect_recog_bool_pattern: detected: 
+20190212203311566887610.c:402: note: pattern recognized: patt_1555 = (int) patt_1676;
+
+20190212203311566887610.c:402: note: additional pattern stmt: patt_1676 = _1511 > _1513 ? 1 : 0;

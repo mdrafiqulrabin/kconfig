@@ -1,0 +1,9 @@
+#include "csmith.h"
+a;
+b() {}
+d(int32_t *e) { *e = b; }
+c() { return &a; }
+main() {
+  d(c());
+  printf(a);
+}

@@ -1,0 +1,6 @@
+#include "csmith.h"
+a;
+main() {
+  a = safe_add_func_uint64_t_u_u;
+  printf(a);
+}

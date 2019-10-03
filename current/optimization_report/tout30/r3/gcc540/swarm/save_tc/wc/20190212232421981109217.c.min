@@ -1,0 +1,10 @@
+#include "csmith.h"
+a[3];
+b;
+main() {
+  int c;
+  crc32_gentab();
+  for (; c < 10; c = c + 1)
+    transparent_crc_bytes(&c, sizeof(a), "", 0);
+  platform_main_end(crc32_context, b);
+}

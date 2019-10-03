@@ -1,0 +1,14 @@
+#include "csmith.h"
+a, b, c, d;
+uint32_t e(int32_t, int32_t, uint16_t, int16_t);
+g(uint16_t, uint32_t);
+f(uint16_t h, int16_t i, int32_t m) { e(0, i, b, c); }
+uint32_t e(int32_t j, int32_t k, uint16_t l, int16_t q) {
+  uint32_t n;
+  g(n, n);
+}
+g(uint16_t o, uint32_t p) { d = __builtin_ffs; }
+main() {
+  int32_t r = f(a, a, r);
+  printf(d);
+}

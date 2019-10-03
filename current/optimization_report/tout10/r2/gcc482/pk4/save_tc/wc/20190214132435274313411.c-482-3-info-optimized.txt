@@ -1,0 +1,160 @@
+
+Analyzing loop at 20190214132435274313411.c:211
+
+20190214132435274313411.c:191: note: vectorized 0 loops in function.
+
+20190214132435274313411.c:1256: note: Completely unroll loop 6 times
+
+20190214132435274313411.c:1415: note: Completely unroll loop 6 times
+
+20190214132435274313411.c:1118: note: Completely unroll loop 3 times
+
+20190214132435274313411.c:1072: note: Completely unroll loop 1 times
+
+20190214132435274313411.c:1069: note: Completely unroll loop 6 times
+
+20190214132435274313411.c:1253: note: Completely unroll loop 3 times
+
+Analyzing loop at 20190214132435274313411.c:1067
+
+20190214132435274313411.c:1067: note: Decided to SLP 1 instances. Unrolling factor 4
+
+Vectorizing loop at 20190214132435274313411.c:1067
+
+20190214132435274313411.c:1067: note: === vect_do_peeling_for_loop_bound ===Setting upper bound of nb iterations for epilogue loop to 2
+
+20190214132435274313411.c:1067: note: LOOP VECTORIZED.
+20190214132435274313411.c:1049: note: vectorized 1 loops in function.
+
+20190214132435274313411.c:1291: note: Completely unroll loop 4 times
+
+20190214132435274313411.c:1067: note: Completely unroll loop 2 times
+
+20190214132435274313411.c:1049: note: Turned loop into non-loop; it never loops.
+
+20190214132435274313411.c:1641: note: Completely unroll loop 1 times
+
+20190214132435274313411.c:1567: note: Completely unroll loop 1 times
+
+20190214132435274313411.c:1553: note: Completely unroll loop 3 times
+
+20190214132435274313411.c:490: note: Completely unroll loop 1 times
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:59: note: Completely unroll loop 8 times
+
+20190214132435274313411.c:488: note: Completely unroll loop 1 times
+
+Analyzing loop at 20190214132435274313411.c:1634
+
+Analyzing loop at 20190214132435274313411.c:1617
+
+Analyzing loop at 20190214132435274313411.c:1619
+
+Analyzing loop at 20190214132435274313411.c:1610
+
+Analyzing loop at 20190214132435274313411.c:1584
+
+Analyzing loop at 20190214132435274313411.c:1575
+
+Analyzing loop at 20190214132435274313411.c:1577
+
+Analyzing loop at 20190214132435274313411.c:1563
+
+Analyzing loop at 20190214132435274313411.c:1565
+
+Analyzing loop at 20190214132435274313411.c:1549
+
+Analyzing loop at 20190214132435274313411.c:1551
+
+Analyzing loop at 20190214132435274313411.c:1533
+
+Analyzing loop at 20190214132435274313411.c:1535
+
+Analyzing loop at 20190214132435274313411.c:1537
+
+Analyzing loop at 20190214132435274313411.c:1521
+
+Analyzing loop at 20190214132435274313411.c:1523
+
+Analyzing loop at 20190214132435274313411.c:1525
+
+Analyzing loop at 20190214132435274313411.c:1498
+
+Analyzing loop at 20190214132435274313411.c:1500
+
+Analyzing loop at 20190214132435274313411.c:165
+
+Analyzing loop at 20190214132435274313411.c:433
+
+Analyzing loop at 20190214132435274313411.c:449
+
+Analyzing loop at 20190214132435274313411.c:162
+
+
+Vectorizing loop at 20190214132435274313411.c:162
+
+20190214132435274313411.c:162: note: === vect_do_peeling_for_loop_bound ===Setting upper bound of nb iterations for epilogue loop to 2
+
+20190214132435274313411.c:162: note: LOOP VECTORIZED.
+Analyzing loop at /project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57
+
+
+Vectorizing loop at /project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: LOOP VECTORIZED.
+20190214132435274313411.c:1487: note: vectorized 2 loops in function.
+
+20190214132435274313411.c:1634: note: Completely unroll loop 3 times
+
+20190214132435274313411.c:1610: note: Completely unroll loop 2 times
+
+20190214132435274313411.c:1584: note: Completely unroll loop 1 times
+
+20190214132435274313411.c:1565: note: Completely unroll loop 4 times
+
+20190214132435274313411.c:1525: note: Completely unroll loop 4 times
+
+20190214132435274313411.c:165: note: Completely unroll loop 3 times
+
+20190214132435274313411.c:162: note: Completely unroll loop 2 times
+
+20190214132435274313411.c:1487: note: Turned loop into non-loop; it never loops.
+
+20190214132435274313411.c:582: note: vect_recog_bool_pattern: detected: 
+20190214132435274313411.c:582: note: pattern recognized: patt_4644 = patt_4623;
+
+20190214132435274313411.c:582: note: additional pattern stmt: patt_4623 = g_105.84_573 > iftmp.295_574 ? 1 : 0;
+
+20190214132435274313411.c:582: note: vect_recog_bool_pattern: detected: 
+20190214132435274313411.c:582: note: pattern recognized: patt_1175 = (uint16_t) patt_511;
+
+20190214132435274313411.c:582: note: additional pattern stmt: patt_511 = _427 != 0 ? 1 : 0;
+
+20190214132435274313411.c:582: note: vect_recog_bool_pattern: detected: 
+20190214132435274313411.c:582: note: pattern recognized: patt_4511 = (int) patt_4510;
+
+20190214132435274313411.c:582: note: additional pattern stmt: patt_4510 = p_61.55_434 > 0 ? 1 : 0;
+
+20190214132435274313411.c:428: note: vect_recog_bool_pattern: detected: 
+20190214132435274313411.c:428: note: pattern recognized: patt_4513 = (uint32_t) patt_4512;
+
+20190214132435274313411.c:428: note: additional pattern stmt: patt_4512 = iftmp.292_445 >= 0 ? 1 : 0;
+
+20190214132435274313411.c:1569: note: created pattern stmt: patt_1505 = _4371 >> 8;
+
+20190214132435274313411.c:1569: note: created pattern stmt: patt_1501 = _4338 >> 8;
+
+20190214132435274313411.c:1569: note: created pattern stmt: patt_1498 = _4304 >> 8;
+
+20190214132435274313411.c:1569: note: created pattern stmt: patt_1500 = _4275 >> 8;
+
+20190214132435274313411.c:1569: note: created pattern stmt: patt_6 = _1318 >> 8;
+
+20190214132435274313411.c:1586: note: created pattern stmt: patt_4428 = _4400 >> 8;
+
+20190214132435274313411.c:1586: note: created pattern stmt: patt_506 = _156 >> 8;
+
+20190214132435274313411.c:528: note: vect_recog_bool_pattern: detected: 
+20190214132435274313411.c:528: note: pattern recognized: patt_4439 = (int) patt_1174;
+
+20190214132435274313411.c:528: note: additional pattern stmt: patt_1174 = _531 != 0 ? 1 : 0;

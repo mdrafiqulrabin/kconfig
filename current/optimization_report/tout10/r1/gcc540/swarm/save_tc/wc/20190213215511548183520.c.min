@@ -1,0 +1,6 @@
+#include "csmith.h"
+a;
+main() {
+  a = safe_div_func_float_f_f;
+  printf(a);
+}

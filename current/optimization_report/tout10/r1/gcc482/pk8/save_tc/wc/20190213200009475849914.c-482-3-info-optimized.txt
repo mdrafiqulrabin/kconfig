@@ -1,0 +1,48 @@
+
+20190213200009475849914.c:310: note: vect_recog_bool_pattern: detected: 
+20190213200009475849914.c:310: note: pattern recognized: patt_6 = (uint16_t) patt_5;
+
+20190213200009475849914.c:310: note: additional pattern stmt: patt_5 = p_61_17(D) != 0 ? 1 : 0;
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:59: note: Completely unroll loop 8 times
+
+Analyzing loop at /project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:124
+
+Analyzing loop at 20190213200009475849914.c:137
+
+Analyzing loop at 20190213200009475849914.c:176
+
+Analyzing loop at 20190213200009475849914.c:184
+
+Analyzing loop at 20190213200009475849914.c:184
+
+Analyzing loop at 20190213200009475849914.c:184
+
+Analyzing loop at 20190213200009475849914.c:184
+
+Analyzing loop at /project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57
+
+
+Vectorizing loop at /project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: LOOP VECTORIZED.
+20190213200009475849914.c:464: note: vectorized 1 loops in function.
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:124: note: Completely unroll loop 3 times
+
+20190213200009475849914.c:137: note: Completely unroll loop 5 times
+
+20190213200009475849914.c:71: note: vect_recog_bool_pattern: detected: 
+20190213200009475849914.c:71: note: pattern recognized: patt_222 = patt_539;
+
+20190213200009475849914.c:71: note: additional pattern stmt: patt_539 = _106 >= _107 ? 1 : 0;
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:713: note: vect_recog_bool_pattern: detected: 
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:713: note: pattern recognized: patt_470 = patt_231;
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:713: note: additional pattern stmt: patt_231 = _180 >= g_180.82_181 ? 1 : 0;
+
+20190213200009475849914.c:167: note: vect_recog_bool_pattern: detected: 
+20190213200009475849914.c:167: note: pattern recognized: patt_622 = patt_623;
+
+20190213200009475849914.c:167: note: additional pattern stmt: patt_623 = _172 >= g_180.82_346 ? 1 : 0;

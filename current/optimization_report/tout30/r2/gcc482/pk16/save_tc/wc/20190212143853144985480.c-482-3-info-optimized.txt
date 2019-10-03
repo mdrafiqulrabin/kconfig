@@ -1,0 +1,45 @@
+
+Analyzing loop at 20190212143853144985480.c:388
+
+20190212143853144985480.c:268: note: vectorized 0 loops in function.
+
+20190212143853144985480.c:388: note: Completely unroll loop 16 times
+
+20190212143853144985480.c:277: note: vect_recog_bool_pattern: detected: 
+20190212143853144985480.c:277: note: pattern recognized: patt_156 = (int) patt_155;
+
+20190212143853144985480.c:277: note: additional pattern stmt: patt_155 = _34 >= prephitmp_152 ? 1 : 0;
+
+20190212143853144985480.c:277: note: vect_recog_bool_pattern: detected: 
+20190212143853144985480.c:277: note: pattern recognized: patt_167 = (short int) patt_158;
+
+20190212143853144985480.c:277: note: additional pattern stmt: patt_158 = _37 <= 1 ? 1 : 0;
+
+20190212143853144985480.c:277: note: vect_recog_bool_pattern: detected: 
+20190212143853144985480.c:277: note: pattern recognized: patt_365 = (short int) patt_285;
+
+20190212143853144985480.c:277: note: additional pattern stmt: patt_285 = _64 <= 56902 ? 1 : 0;
+
+20190212143853144985480.c:277: note: vect_recog_bool_pattern: detected: 
+20190212143853144985480.c:277: note: pattern recognized: patt_464 = (short int) patt_462;
+
+20190212143853144985480.c:277: note: additional pattern stmt: patt_462 = g_165.174_23 != 0 ? 1 : 0;
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:59: note: Completely unroll loop 8 times
+
+Analyzing loop at 20190212143853144985480.c:106
+
+Analyzing loop at /project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57
+
+
+Vectorizing loop at /project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: LOOP VECTORIZED.
+20190212143853144985480.c:681: note: vectorized 1 loops in function.
+
+20190212143853144985480.c:106: note: Completely unroll loop 11 times
+
+20190212143853144985480.c:80: note: vect_recog_bool_pattern: detected: 
+20190212143853144985480.c:80: note: pattern recognized: patt_764 = (int) patt_748;
+
+20190212143853144985480.c:80: note: additional pattern stmt: patt_748 = g_61.151_561 != 2 ? 1 : 0;

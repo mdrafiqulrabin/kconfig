@@ -1,0 +1,45 @@
+
+Analyzing loop at /project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:124
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:121: note: vectorized 0 loops in function.
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:124: note: Completely unroll loop 3 times
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:59: note: Completely unroll loop 8 times
+
+Analyzing loop at 20190211141436163649765.c:292
+
+Analyzing loop at /project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57
+
+
+Vectorizing loop at /project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: LOOP VECTORIZED.
+20190211141436163649765.c:655: note: vectorized 1 loops in function.
+
+20190211141436163649765.c:292: note: Completely unroll loop 5 times
+
+20190211141436163649765.c:440: note: vect_recog_bool_pattern: detected: 
+20190211141436163649765.c:440: note: pattern recognized: patt_224 = (int) patt_961;
+
+20190211141436163649765.c:440: note: additional pattern stmt: patt_961 = g_233.326_681 != 1 ? 1 : 0;
+
+20190211141436163649765.c:107: note: vect_recog_bool_pattern: detected: 
+20190211141436163649765.c:107: note: pattern recognized: patt_523 = patt_630;
+
+20190211141436163649765.c:107: note: additional pattern stmt: patt_630 = g_202.63_166 > 4 ? 1 : 0;
+
+20190211141436163649765.c:107: note: vect_recog_bool_pattern: detected: 
+20190211141436163649765.c:107: note: pattern recognized: patt_1073 = (int) patt_1075;
+
+20190211141436163649765.c:107: note: additional pattern stmt: patt_1075 = _192 == 1 ? 1 : 0;
+
+20190211141436163649765.c:252: note: vect_recog_bool_pattern: detected: 
+20190211141436163649765.c:252: note: pattern recognized: patt_1066 = (int) patt_1069;
+
+20190211141436163649765.c:252: note: additional pattern stmt: patt_1069 = _516 > g_389.48_517 ? 1 : 0;
+
+20190211141436163649765.c:261: note: vect_recog_bool_pattern: detected: 
+20190211141436163649765.c:261: note: pattern recognized: patt_1060 = patt_1058;
+
+20190211141436163649765.c:261: note: additional pattern stmt: patt_1058 = g_16.44_574 > 4294967286 ? 1 : 0;

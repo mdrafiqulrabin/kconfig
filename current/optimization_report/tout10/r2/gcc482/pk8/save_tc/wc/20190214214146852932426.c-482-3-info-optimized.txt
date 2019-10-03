@@ -1,0 +1,67 @@
+
+20190214214146852932426.c:1459: note: Completely unroll loop 4 times
+
+20190214214146852932426.c:1440: note: Completely unroll loop 1 times
+
+20190214214146852932426.c:1301: note: Completely unroll loop 2 times
+
+20190214214146852932426.c:1272: note: Completely unroll loop 2 times
+
+20190214214146852932426.c:150: note: Completely unroll loop 3 times
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:59: note: Completely unroll loop 8 times
+
+Analyzing loop at 20190214214146852932426.c:1506
+
+Analyzing loop at 20190214214146852932426.c:1494
+
+Analyzing loop at 20190214214146852932426.c:1496
+
+Analyzing loop at 20190214214146852932426.c:1498
+
+Analyzing loop at 20190214214146852932426.c:1486
+
+Analyzing loop at 20190214214146852932426.c:1469
+
+Analyzing loop at 20190214214146852932426.c:1471
+
+Analyzing loop at 20190214214146852932426.c:1455
+
+Analyzing loop at 20190214214146852932426.c:1457
+
+Analyzing loop at 20190214214146852932426.c:1449
+
+Analyzing loop at 20190214214146852932426.c:1436
+
+Analyzing loop at 20190214214146852932426.c:1438
+
+Analyzing loop at 20190214214146852932426.c:1427
+
+Analyzing loop at 20190214214146852932426.c:1429
+
+Analyzing loop at 20190214214146852932426.c:1411
+
+Analyzing loop at 20190214214146852932426.c:1413
+
+Analyzing loop at 20190214214146852932426.c:1415
+
+Analyzing loop at 20190214214146852932426.c:192
+
+Analyzing loop at /project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57
+
+
+Vectorizing loop at /project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: LOOP VECTORIZED.
+20190214214146852932426.c:1396: note: vectorized 1 loops in function.
+
+20190214214146852932426.c:1506: note: Completely unroll loop 4 times
+
+20190214214146852932426.c:1415: note: Completely unroll loop 4 times
+
+20190214214146852932426.c:192: note: Completely unroll loop 8 times
+
+20190214214146852932426.c:132: note: vect_recog_bool_pattern: detected: 
+20190214214146852932426.c:132: note: pattern recognized: patt_2743 = (int) patt_45;
+
+20190214214146852932426.c:132: note: additional pattern stmt: patt_45 = g_150.177_461 == 1 ? 1 : 0;

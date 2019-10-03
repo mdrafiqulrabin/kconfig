@@ -1,0 +1,15 @@
+#include "csmith.h"
+struct a {
+  int32_t b;
+  int32_t c
+} d;
+e() {
+  for (; d.c <= 1; d.c = safe_add_func_uint32_t_u_u)
+    ;
+}
+main() {
+  struct a f;
+  for (; f.b; f.b = safe_sub_func_int16_t_s_s(f.b, 7))
+    e();
+  printf(d.c);
+}

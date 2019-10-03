@@ -1,0 +1,63 @@
+
+20190212155715903525943.c:1412: note: Completely unroll loop 2 times
+
+20190212155715903525943.c:1197: note: Completely unroll loop 6 times
+
+20190212155715903525943.c:102: note: Completely unroll loop 8 times
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:59: note: Completely unroll loop 8 times
+
+Analyzing loop at 20190212155715903525943.c:1476
+
+Analyzing loop at 20190212155715903525943.c:1463
+
+Analyzing loop at 20190212155715903525943.c:1465
+
+Analyzing loop at 20190212155715903525943.c:1467
+
+Analyzing loop at 20190212155715903525943.c:1457
+
+Analyzing loop at 20190212155715903525943.c:1443
+
+Analyzing loop at 20190212155715903525943.c:1445
+
+Analyzing loop at 20190212155715903525943.c:1435
+
+Analyzing loop at 20190212155715903525943.c:1425
+
+Analyzing loop at 20190212155715903525943.c:1408
+
+Analyzing loop at 20190212155715903525943.c:1410
+
+Analyzing loop at /project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57
+
+
+Vectorizing loop at /project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: LOOP VECTORIZED.
+20190212155715903525943.c:1401: note: vectorized 1 loops in function.
+
+20190212155715903525943.c:1467: note: Completely unroll loop 4 times
+
+20190212155715903525943.c:1445: note: Completely unroll loop 6 times
+
+20190212155715903525943.c:1435: note: Completely unroll loop 2 times
+
+20190212155715903525943.c:1447: note: created pattern stmt: patt_1400 = _1251 >> 8;
+
+20190212155715903525943.c:1447: note: created pattern stmt: patt_179 = _1215 >> 8;
+
+20190212155715903525943.c:1447: note: created pattern stmt: patt_1331 = _1144 >> 8;
+
+20190212155715903525943.c:1447: note: created pattern stmt: patt_1332 = _1089 >> 8;
+
+20190212155715903525943.c:1447: note: created pattern stmt: patt_1367 = _1060 >> 8;
+
+20190212155715903525943.c:1447: note: created pattern stmt: patt_1368 = _1031 >> 8;
+
+20190212155715903525943.c:1447: note: created pattern stmt: patt_1302 = _72 >> 8;
+
+20190212155715903525943.c:377: note: vect_recog_bool_pattern: detected: 
+20190212155715903525943.c:377: note: pattern recognized: patt_1324 = (short int) patt_1298;
+
+20190212155715903525943.c:377: note: additional pattern stmt: patt_1298 = prephitmp_429 < -1154436808 ? 1 : 0;

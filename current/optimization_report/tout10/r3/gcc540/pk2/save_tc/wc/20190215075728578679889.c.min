@@ -1,0 +1,18 @@
+#include "csmith.h"
+struct a {
+  unsigned b;
+  signed j
+} r;
+c, q, d, e;
+f(struct a, uint32_t, uint32_t, uint32_t, uint16_t);
+struct a g(uint32_t, int16_t);
+h(int16_t, uint32_t, uint16_t);
+s(int32_t t, int32_t i, uint16_t u) { f(g(0, d), e, t, q, i); }
+f(struct a v, uint32_t w, uint32_t k, uint32_t x, uint16_t l) { h(l, r.j, 0); }
+struct a g(uint32_t y, int16_t m) {}
+h(int16_t n, uint32_t o, uint16_t p) { r.b = safe_add_func_uint16_t_u_u; }
+main() {
+  int32_t z;
+  s(c, z, 0);
+  printf(r.b);
+}

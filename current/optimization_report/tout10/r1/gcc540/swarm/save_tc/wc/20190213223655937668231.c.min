@@ -1,0 +1,10 @@
+#include "csmith.h"
+a = 1, b, c;
+main() {
+  crc32_gentab();
+  int32_t d;
+  float *e = &b;
+  *e = safe_mul_func_float_f_f(d, a);
+  transparent_crc_bytes(&b, sizeof(0), "", 0);
+  platform_main_end(crc32_context, c);
+}

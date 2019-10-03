@@ -1,0 +1,48 @@
+
+Analyzing loop at 20190213022419966963164.c:944
+
+20190213022419966963164.c:931: note: vectorized 0 loops in function.
+
+20190213022419966963164.c:944: note: Completely unroll loop 2 times
+
+Analyzing loop at 20190213022419966963164.c:846
+
+Analyzing loop at 20190213022419966963164.c:852
+
+20190213022419966963164.c:644: note: vectorized 0 loops in function.
+
+20190213022419966963164.c:852: note: Completely unroll loop 10 times
+
+20190213022419966963164.c:846: note: Completely unroll loop 3 times
+
+20190213022419966963164.c:663: note: vect_recog_bool_pattern: detected: 
+20190213022419966963164.c:663: note: pattern recognized: patt_196 = (short int) patt_115;
+
+20190213022419966963164.c:663: note: additional pattern stmt: patt_115 = p_50_1(D) == 1 ? 1 : 0;
+
+20190213022419966963164.c:850: note: vect_recog_bool_pattern: detected: 
+20190213022419966963164.c:850: note: pattern recognized: patt_198 = (int16_t) patt_140;
+
+20190213022419966963164.c:850: note: additional pattern stmt: patt_140 = pretmp_154 == 65531 ? 1 : 0;
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:59: note: Completely unroll loop 8 times
+
+Analyzing loop at 20190213022419966963164.c:238
+
+Analyzing loop at /project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57
+
+
+Vectorizing loop at /project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: LOOP VECTORIZED.
+20190213022419966963164.c:1035: note: vectorized 1 loops in function.
+
+20190213022419966963164.c:115: note: vect_recog_bool_pattern: detected: 
+20190213022419966963164.c:115: note: pattern recognized: patt_415 = (int) patt_557;
+
+20190213022419966963164.c:115: note: additional pattern stmt: patt_557 = g_106.428_176 > 24264 ? 1 : 0;
+
+20190213022419966963164.c:115: note: vect_recog_bool_pattern: detected: 
+20190213022419966963164.c:115: note: pattern recognized: patt_241 = (int32_t) patt_562;
+
+20190213022419966963164.c:115: note: additional pattern stmt: patt_562 = _178 > g_576.429_179 ? 1 : 0;

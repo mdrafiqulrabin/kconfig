@@ -1,0 +1,7 @@
+a;
+*b = &a;
+c() {}
+main() {
+  *b = c;
+  printf(a);
+}

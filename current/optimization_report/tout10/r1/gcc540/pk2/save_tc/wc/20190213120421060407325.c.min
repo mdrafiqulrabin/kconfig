@@ -1,0 +1,14 @@
+#include "csmith.h"
+a, b;
+int16_t d(int16_t, int32_t, uint32_t, float, int16_t);
+c(uint32_t e, uint32_t g, int16_t h, uint16_t i, int32_t j) {
+  uint32_t k = d(0, k, a, i, i);
+}
+int16_t d(int16_t n, int32_t l, uint32_t m, float p, int16_t o) {
+  b = safe_add_func_float_f_f;
+}
+main() {
+  int32_t f;
+  c(a, f, a, a, f);
+  printf(b);
+}

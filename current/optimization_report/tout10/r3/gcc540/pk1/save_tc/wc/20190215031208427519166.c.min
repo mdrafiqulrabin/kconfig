@@ -1,0 +1,8 @@
+#include "csmith.h"
+struct {
+  int32_t a
+} b;
+main() {
+  b.a = safe_mod_func_uint16_t_u_u;
+  printf(b.a);
+}

@@ -1,0 +1,42 @@
+
+20190212082807617273292.c:563: note: vect_recog_bool_pattern: detected: 
+20190212082807617273292.c:563: note: pattern recognized: patt_26 = (int) patt_7;
+
+20190212082807617273292.c:563: note: additional pattern stmt: patt_7 = g_105.141_6 != 0 ? 1 : 0;
+
+20190212082807617273292.c:292: note: vect_recog_bool_pattern: detected: 
+20190212082807617273292.c:292: note: pattern recognized: patt_109 = (int) patt_5;
+
+20190212082807617273292.c:292: note: additional pattern stmt: patt_5 = p_44_8(D) <= 2409142192 ? 1 : 0;
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:161: note: vect_recog_bool_pattern: detected: 
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:161: note: pattern recognized: patt_106 = patt_108;
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/safe_math.h:161: note: additional pattern stmt: patt_108 = _33 <= g_8.202_34 ? 1 : 0;
+
+20190212082807617273292.c:305: note: vect_recog_bool_pattern: detected: 
+20190212082807617273292.c:305: note: pattern recognized: patt_104 = (signed short) patt_105;
+
+20190212082807617273292.c:305: note: additional pattern stmt: patt_105 = iftmp.155_85 == 0 ? 1 : 0;
+
+20190212082807617273292.c:305: note: vect_recog_divmod_pattern: detected: patt_91 = _56 - patt_93;
+
+20190212082807617273292.c:305: note: pattern recognized: patt_91 = _56 - patt_93;
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:59: note: Completely unroll loop 8 times
+
+Analyzing loop at 20190212082807617273292.c:498
+
+Analyzing loop at 20190212082807617273292.c:501
+
+Analyzing loop at /project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57
+
+
+Vectorizing loop at /project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: LOOP VECTORIZED.
+20190212082807617273292.c:590: note: vectorized 1 loops in function.
+
+20190212082807617273292.c:501: note: Completely unroll loop 13 times
+
+20190212082807617273292.c:498: note: Completely unroll loop 3 times

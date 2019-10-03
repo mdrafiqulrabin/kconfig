@@ -1,0 +1,12 @@
+#include "csmith.h"
+struct {
+  int32_t a
+} b;
+c, d;
+main() {
+  crc32_gentab();
+  for (b.a = -26; b.a < 0; b.a = safe_add_func_uint64_t_u_u)
+    c = safe_sub_func_float_f_f;
+  transparent_crc_bytes(c, sizeof(0), "", 0);
+  platform_main_end(crc32_context, d);
+}

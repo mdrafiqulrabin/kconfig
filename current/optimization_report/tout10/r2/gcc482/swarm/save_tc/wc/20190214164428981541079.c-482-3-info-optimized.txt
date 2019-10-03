@@ -1,0 +1,51 @@
+
+Analyzing loop at 20190214164428981541079.c:816
+
+20190214164428981541079.c:794: note: vectorized 0 loops in function.
+
+20190214164428981541079.c:806: note: vect_recog_bool_pattern: detected: 
+20190214164428981541079.c:806: note: pattern recognized: patt_30 = (int) patt_31;
+
+20190214164428981541079.c:806: note: additional pattern stmt: patt_31 = p_127_32 != 0 ? 1 : 0;
+
+Analyzing loop at /project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:124
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:121: note: vectorized 0 loops in function.
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:124: note: Completely unroll loop 3 times
+
+Analyzing loop at 20190214164428981541079.c:434
+
+Analyzing loop at 20190214164428981541079.c:816
+
+Analyzing loop at 20190214164428981541079.c:386
+
+Analyzing loop at 20190214164428981541079.c:392
+
+Analyzing loop at 20190214164428981541079.c:375
+
+20190214164428981541079.c:352: note: vectorized 0 loops in function.
+
+20190214164428981541079.c:411: note: vect_recog_divmod_pattern: detected: patt_101 = _538 - patt_495;
+
+20190214164428981541079.c:411: note: pattern recognized: patt_101 = _538 - patt_495;
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:59: note: Completely unroll loop 8 times
+
+Analyzing loop at /project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57
+
+
+Vectorizing loop at /project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: LOOP VECTORIZED.
+20190214164428981541079.c:833: note: vectorized 1 loops in function.
+
+20190214164428981541079.c:85: note: vect_recog_bool_pattern: detected: 
+20190214164428981541079.c:85: note: pattern recognized: patt_326 = (long long unsigned int) patt_635;
+
+20190214164428981541079.c:85: note: additional pattern stmt: patt_635 = _257 > 4 ? 1 : 0;
+
+20190214164428981541079.c:104: note: vect_recog_bool_pattern: detected: 
+20190214164428981541079.c:104: note: pattern recognized: patt_205 = (unsigned short) patt_485;
+
+20190214164428981541079.c:104: note: additional pattern stmt: patt_485 = _288 <= 0 ? 1 : 0;

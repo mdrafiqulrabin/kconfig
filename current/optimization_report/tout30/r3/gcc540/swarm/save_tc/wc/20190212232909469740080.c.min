@@ -1,0 +1,13 @@
+#include "csmith.h"
+struct {
+  unsigned a
+} b;
+c, d;
+int8_t e(int16_t, float, uint32_t);
+f(int32_t g, int16_t h, uint32_t i, uint16_t j, int8_t k) { e(0, g, k); }
+int8_t e(int16_t l, float m, uint32_t n) { d = safe_mul_func_float_f_f; }
+main() {
+  uint16_t o;
+  f(b.a, c, 0, 0, o);
+  printf(d);
+}

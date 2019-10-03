@@ -1,0 +1,43 @@
+
+20190214203718858919279.c:352: note: vect_recog_bool_pattern: detected: 
+20190214203718858919279.c:352: note: pattern recognized: patt_30 = (int) patt_29;
+
+20190214203718858919279.c:352: note: additional pattern stmt: patt_29 = _3 == _5 ? 1 : 0;
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:59: note: Completely unroll loop 8 times
+
+Analyzing loop at 20190214203718858919279.c:111
+
+Analyzing loop at 20190214203718858919279.c:309
+
+Analyzing loop at /project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57
+
+
+Vectorizing loop at /project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57
+
+/project/alipour/rabin/bin/csmith230-bin/include/csmith-2.3.0/csmith.h:57: note: LOOP VECTORIZED.
+20190214203718858919279.c:377: note: vectorized 1 loops in function.
+
+20190214203718858919279.c:111: note: Completely unroll loop 10 times
+
+20190214203718858919279.c:309: note: Completely unroll loop 11 times
+
+20190214203718858919279.c:247: note: vect_recog_bool_pattern: detected: 
+20190214203718858919279.c:247: note: pattern recognized: patt_213 = (unsigned int) patt_259;
+
+20190214203718858919279.c:247: note: additional pattern stmt: patt_259 = iftmp.92_161 < -545 ? 1 : 0;
+
+20190214203718858919279.c:247: note: vect_recog_bool_pattern: detected: 
+20190214203718858919279.c:247: note: pattern recognized: patt_323 = patt_194;
+
+20190214203718858919279.c:247: note: additional pattern stmt: patt_194 = _125 >= _165 ? 1 : 0;
+
+20190214203718858919279.c:247: note: vect_recog_bool_pattern: detected: 
+20190214203718858919279.c:247: note: pattern recognized: patt_339 = (unsigned short) patt_331;
+
+20190214203718858919279.c:247: note: additional pattern stmt: patt_331 = g_90.89_175 == 0 ? 1 : 0;
+
+20190214203718858919279.c:117: note: vect_recog_bool_pattern: detected: 
+20190214203718858919279.c:117: note: pattern recognized: patt_192 = (int) patt_314;
+
+20190214203718858919279.c:117: note: additional pattern stmt: patt_314 = l_340.40_110 == -1 ? 1 : 0;

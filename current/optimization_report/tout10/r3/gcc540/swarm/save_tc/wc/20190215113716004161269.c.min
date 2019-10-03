@@ -1,0 +1,25 @@
+#include "csmith.h"
+struct a {
+  float d
+} e;
+struct c {
+  uint16_t d;
+  uint64_t f
+};
+struct g {
+  struct c f
+};
+struct h {
+  struct a f;
+  struct g i
+} l;
+j() {
+  struct h b;
+  l.f.d = safe_div_func_float_f_f(safe_add_func_float_f_f(b.i.f.f, 0), e.d);
+}
+main() {
+  int k;
+  j();
+  transparent_crc_bytes(&l, l.f.d, "", k);
+  platform_main_end(crc32_context, k);
+}

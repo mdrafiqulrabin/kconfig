@@ -1,0 +1,21 @@
+#include "csmith.h"
+struct {
+  int32_t a;
+  uint16_t d
+} f;
+e, a;
+*r = &e;
+g(int16_t, float **, int16_t, uint16_t);
+h(float *i, float *j, float k, uint16_t l, float m) {
+  float *q;
+  g(l, q, f.a, f.d);
+}
+t() {}
+g(int16_t s, float **a, int16_t b, uint16_t c) { *r = t; }
+main() {
+  crc32_gentab();
+  float *n, *o;
+  uint16_t p = h(o, n, 0, p, f.a);
+  transparent_crc_bytes(e, sizeof(0), "", 0);
+  platform_main_end(crc32_context, a);
+}

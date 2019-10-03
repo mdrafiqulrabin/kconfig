@@ -1,0 +1,6 @@
+#include "csmith.h"
+a;
+main() {
+  a = safe_rshift_func_uint16_t_u_s;
+  printf(a);
+}

@@ -1,0 +1,13 @@
+#include "csmith.h"
+a, b;
+*c = &b;
+d() {
+  int32_t e = &a;
+  return e;
+}
+main() {
+  int32_t **f = &b;
+  *c = d();
+  **f = safe_sub_func_int16_t_s_s;
+  printf(a);
+}

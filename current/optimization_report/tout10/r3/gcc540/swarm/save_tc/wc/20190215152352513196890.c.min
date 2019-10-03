@@ -1,0 +1,8 @@
+#include "csmith.h"
+a() {}
+main() {
+  int b, c, d;
+  b = 0;
+  for (; c < 5; c++)
+    transparent_crc(a, "", d);
+}

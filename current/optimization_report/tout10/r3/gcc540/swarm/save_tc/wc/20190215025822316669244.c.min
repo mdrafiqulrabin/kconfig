@@ -1,0 +1,10 @@
+#include "csmith.h"
+a, b;
+main() {
+  crc32_gentab();
+  uint32_t c;
+  for (; c <= 2; c = a = safe_div_func_uint64_t_u_u)
+    ;
+  transparent_crc(a, "", b);
+  platform_main_end(crc32_context, b);
+}
